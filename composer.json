@@ -5,31 +5,31 @@
 	"type":"contao-module",
 	"homepage":"http://now.metamodel.me/",
 	"license":"LGPL-3.0+",
-    "authors":[
-        {
-            "name":"Christian Schiffler",
-            "email":"c.schiffler@cyberspectrum.de",
-            "homepage":"http://www.cyberspectrum.de",
-            "role":"Developer"
-        },
-        {
-            "name":"Andreas Isaak",
-            "email":"info@andreas-isaak.de",
-            "homepage":"http://www.andreas-isaak.de",
-            "role":"Developer"
-        },
-        {
-            "name":"Stefan Heimes",
-            "email":"stefan_heimes@hotmail.com",
-            "role":"Developer"
-        },
-        {
-            "name":"Christian de la Haye",
-            "email":"service@delahaye.de",
-            "homepage":"http://www.delahaye.de/",
-            "role":"Developer"
-        }
-    ],
+	"authors":[
+		{
+			"name":"Christian Schiffler",
+			"email":"c.schiffler@cyberspectrum.de",
+			"homepage":"http://www.cyberspectrum.de",
+			"role":"Developer"
+		},
+		{
+			"name":"Andreas Isaak",
+			"email":"info@andreas-isaak.de",
+			"homepage":"http://www.andreas-isaak.de",
+			"role":"Developer"
+		},
+		{
+			"name":"Stefan Heimes",
+			"email":"stefan_heimes@hotmail.com",
+			"role":"Developer"
+		},
+		{
+			"name":"Christian de la Haye",
+			"email":"service@delahaye.de",
+			"homepage":"http://www.delahaye.de/",
+			"role":"Developer"
+		}
+	],
 	"support":{
 		"email":"mail@metamodel.me",
 		"issues":"https://github.com/MetaModels/attribute_tabletext/issues",
