@@ -15,5 +15,9 @@
  * @filesource
  */
 
-$GLOBALS['METAMODELS']['attributes']['tabletext']['class'] = 'MetaModelAttributeTableText';
+$GLOBALS['METAMODELS']['attributes']['tabletext']['class'] = 'MetaModels\Attribute\TableText\TableText';
 $GLOBALS['METAMODELS']['attributes']['tabletext']['image'] = 'system/modules/metamodelsattribute_tabletext/html/tabletext.png';
+
+// non composerized Contao 2.X autoload support.
+$GLOBALS['MM_AUTOLOAD'][] = dirname(__DIR__);
+$GLOBALS['MM_AUTOLOAD'][] = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'deprecated';

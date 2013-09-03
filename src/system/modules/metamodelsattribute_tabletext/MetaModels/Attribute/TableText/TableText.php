@@ -15,15 +15,22 @@
  * @filesource
  */
 
+namespace MetaModels\Attribute\TableText;
+
+use MetaModels\Attribute\BaseComplex;
+
 /**
- * This is the MetaModelAttribute class for handling translated text fields.
+ * This is the MetaModelAttribute class for handling table text fields.
  *
  * @package	   MetaModels
  * @subpackage AttributeTableText
  * @author     David Maack <david.maack@arcor.de>
  */
-class MetaModelAttributeTableText extends MetaModelAttributeComplex
+class TableText extends BaseComplex
 {
+	/**
+	 * {@inheritdoc}
+	 */
 	public function getAttributeSettingNames()
 	{
 		return array_merge(parent::getAttributeSettingNames(), array(
@@ -31,11 +38,19 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 		));
 	}
 
+	/**
+	 * Return the table we are operating on.
+	 *
+	 * @return string
+	 */
 	protected function getValueTable()
 	{
 		return 'tl_metamodel_tabletext';
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function getFieldDefinition($arrOverrides = array())
 	{
 		$arrColLabels = deserialize($this->get('tabletext_cols'), true);
@@ -46,11 +61,11 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 		for ($i = 0; $i < count($arrColLabels); $i++)
 		{
 			$arrFieldDef['eval']['columnFields']['col_'.$i] = array
-				(
-					'label'			=> $arrColLabels[$i]['rowLabel'],
-					'inputType'		=> 'text',
-					'eval'			=> array(),
-				);
+			(
+				'label'			=> $arrColLabels[$i]['rowLabel'],
+				'inputType'		=> 'text',
+				'eval'			=> array(),
+			);
 			if ($arrColLabels[$i]['rowStyle']) {
 				$arrFieldDef['eval']['columnFields']['col_'.$i]['eval']['style'] = 'width:'.$arrColLabels[$i]['rowStyle'];
 			}
@@ -59,6 +74,9 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 		return $arrFieldDef;
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function setDataFor($arrValues)
 	{
 		// Check if we have an array.
@@ -66,12 +84,12 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 		{
 			return;
 		}
-		
-		$objDB = Database::getInstance();
+
+		$objDB = \Database::getInstance();
 		// get the ids
 		$arrIds = array_keys($arrValues);
 		$strQueryUpdate = 'UPDATE %s';
-		
+
 		// insert or Update the cells
 		$strQuery = 'INSERT INTO ' . $this->getValueTable() . ' %s';
 		foreach ($arrIds as $intId)
@@ -79,12 +97,12 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 			//delete missing rows
 			if (empty($arrValues[$intId]))
 			{
-				// No values give, delete all values.				
+				// No values give, delete all values.
 				$strDelQuery = 'DELETE FROM ' . $this->getValueTable() . ' WHERE att_id=? AND item_id=?';
 
-				$res2 = $objDB
-						->prepare($strDelQuery)
-						->execute(intval($this->get('id')), $intId);
+				$objDB
+					->prepare($strDelQuery)
+					->execute(intval($this->get('id')), $intId);
 				continue;
 			}
 
@@ -92,9 +110,9 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 			$rowIds		 = array_keys($arrValues[$intId]);
 			$strDelQuery = 'DELETE FROM ' . $this->getValueTable() . ' WHERE att_id=? AND item_id=? AND row NOT IN (' . implode(',', $rowIds) . ')';
 
-			$res2 = $objDB
-					->prepare($strDelQuery)
-					->execute(intval($this->get('id')), $intId);
+			$objDB
+				->prepare($strDelQuery)
+				->execute(intval($this->get('id')), $intId);
 
 			//walk every row
 			foreach ($arrValues[$intId] as $k => $row)
@@ -114,43 +132,45 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 	 * {@inheritdoc}
 	 *
 	 * Fetch filter options from foreign table.
-	 *
 	 */
 	public function getFilterOptions($arrIds, $usedOnly, &$arrCount = null)
 	{
 		return array();
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function getDataFor($arrIds)
 	{
-		$objDB = Database::getInstance();
+		$objDB = \Database::getInstance();
 
 		$arrWhere = $this->getWhere($arrIds);
 		$strQuery = 'SELECT * FROM ' . $this->getValueTable() . ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : ''). ' ORDER BY row ASC, col ASC';
 		$objValue = $objDB->prepare($strQuery)
-					->executeUncached(($arrWhere ? $arrWhere['params'] : null));
+			->executeUncached(($arrWhere ? $arrWhere['params'] : null));
 
 		$arrReturn = array();
 		while ($objValue->next())
 		{
 			$arrReturn[$objValue->item_id][$objValue->row][] = $objValue->row();
 		}
-		return $arrReturn;
 
+		return $arrReturn;
 	}
 
 	/**
-	 * Remove values for items 
+	 * {@inheritdoc}
 	 */
 	public function unsetDataFor($arrIds)
 	{
-		$objDB = Database::getInstance();
+		$objDB = \Database::getInstance();
 
 		$arrWhere = $this->getWhere($arrIds);
 		$strQuery = 'DELETE FROM ' . $this->getValueTable() . ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : '');
 
 		$objDB->prepare($strQuery)
-				->execute(($arrWhere ? $arrWhere['params'] : null));
+			->execute(($arrWhere ? $arrWhere['params'] : null));
 	}
 
 
@@ -159,8 +179,8 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 	 * Build a where clause for the given id(s) and rows/cols.
 	 *
 	 * @param mixed  $mixIds        one, none or many ids to use.
-	 * @param type   $intRow        the row number, optional
-	 * @param type   $intCol        the col number, optional
+	 * @param int    $intRow        the row number, optional
+	 * @param int    $intCol        the col number, optional
 	 * @return string
 	 */
 	protected function getWhere($mixIds, $intRow = null, $intCol = null)
@@ -190,7 +210,7 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 		return $arrReturn;
 	}
 
-	
+
 	/**
 	 * {@inheritdoc}
 	 */

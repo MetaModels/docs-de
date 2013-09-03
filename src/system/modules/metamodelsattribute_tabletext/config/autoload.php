@@ -20,7 +20,9 @@
  */
 ClassLoader::addClasses(array
 (
-	'MetaModelAttributeTableText'              => 'system/modules/metamodelsattribute_tabletext/MetaModelAttributeTableText.php',
+	'MetaModels\Attribute\TableText\TableText' => 'system/modules/metamodelsattribute_tabletext/MetaModels/Attribute/TableText/TableText.php',
+
+	'MetaModelAttributeTableText'              => 'system/modules/metamodelsattribute_tabletext/deprecated/MetaModelAttributeTableText.php',
 ));
 
 
