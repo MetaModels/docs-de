@@ -29,5 +29,5 @@ CREATE TABLE `tl_metamodel_tabletext` (
 -- 
 
 CREATE TABLE `tl_metamodel_attribute` (
-  `tabletext_cols` blob NULL,
+  `tabletext_cols` blob NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
