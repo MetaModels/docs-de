@@ -41,7 +41,7 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 				$this->get('id')
 			);
 
-		return $objValue->fetchEach('id');
+		return $objValue->fetchEach('item_id');
 	}
 
 	public function getAttributeSettingNames()
@@ -168,12 +168,14 @@ class MetaModelAttributeTableText extends MetaModelAttributeComplex
 		$arrResult = array();
 		while ($objRow->next())
 		{
+			$strValue = $objRow->value;
+
 			if (is_array($arrCount))
 			{
-				$arrCount[$objRow->value] = $objRow->mm_count;
+				$arrCount[$strValue] = $objRow->mm_count;
 			}
 
-			$arrResult[$objRow->value] = $objRow->value;
+			$arrResult[$strValue] = $strValue;
 		}
 
 		return $arrResult;
