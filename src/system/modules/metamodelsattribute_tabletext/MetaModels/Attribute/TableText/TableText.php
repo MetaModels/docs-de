@@ -31,6 +31,23 @@ class TableText extends BaseComplex
 	/**
 	 * {@inheritdoc}
 	 */
+	public function searchFor($strPattern)
+	{
+		// Base implementation, do a simple search on given column.
+		$strQuery = 'SELECT DISTINCT item_id
+			FROM ' . $this->getValueTable() . '
+			WHERE value LIKE ? AND att_id = ?';
+
+		$objValue = Database::getInstance()
+			->prepare($strQuery)
+			->executeUncached(
+				str_replace(array('*', '?'), array('%', '_'), $strPattern),
+				$this->get('id')
+			);
+
+		return $objValue->fetchEach('item_id');
+	}
+
 	public function getAttributeSettingNames()
 	{
 		return array_merge(parent::getAttributeSettingNames(), array(
@@ -135,7 +152,47 @@ class TableText extends BaseComplex
 	 */
 	public function getFilterOptions($arrIds, $usedOnly, &$arrCount = null)
 	{
-		return array();
+		if ($arrIds)
+		{
+			// Ensure proper integer ids for SQL injection safety reasons.
+			$strIdList = implode(',', array_map('intval', $arrIds));
+
+			$strSql = 'SELECT value, COUNT(value) as mm_count
+				FROM ' . $this->getValueTable() . '
+				WHERE item_id IN (' . $strIdList . ') AND att_id = ?
+				GROUP BY value
+				ORDER BY FIELD(id,' . $strIdList . ')';
+
+			$objRow = Database::getInstance()
+				->prepare($strSql)
+				->executeUncached($this->get('id'));
+		}
+		else
+		{
+			$strSql = 'SELECT value, COUNT(value) as mm_count
+				FROM ' . $this->getValueTable() . '
+				WHERE att_id = ?
+				GROUP BY value';
+
+			$objRow = Database::getInstance()
+				->prepare($strSql)
+				->executeUncached($this->get('id'));
+		}
+
+		$arrResult = array();
+		while ($objRow->next())
+		{
+			$strValue = $objRow->value;
+
+			if (is_array($arrCount))
+			{
+				$arrCount[$strValue] = $objRow->mm_count;
+			}
+
+			$arrResult[$strValue] = $strValue;
+		}
+
+		return $arrResult;
 	}
 
 	/**
