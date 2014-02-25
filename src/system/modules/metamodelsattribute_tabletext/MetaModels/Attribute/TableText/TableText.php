@@ -48,6 +48,9 @@ class TableText extends BaseComplex
 		return $objValue->fetchEach('item_id');
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function getAttributeSettingNames()
 	{
 		return array_merge(parent::getAttributeSettingNames(), array(
