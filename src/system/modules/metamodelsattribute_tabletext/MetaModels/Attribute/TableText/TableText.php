@@ -38,7 +38,7 @@ class TableText extends BaseComplex
 			FROM ' . $this->getValueTable() . '
 			WHERE value LIKE ? AND att_id = ?';
 
-		$objValue = Database::getInstance()
+		$objValue = \Database::getInstance()
 			->prepare($strQuery)
 			->executeUncached(
 				str_replace(array('*', '?'), array('%', '_'), $strPattern),
@@ -166,7 +166,7 @@ class TableText extends BaseComplex
 				GROUP BY value
 				ORDER BY FIELD(id,' . $strIdList . ')';
 
-			$objRow = Database::getInstance()
+			$objRow = \Database::getInstance()
 				->prepare($strSql)
 				->executeUncached($this->get('id'));
 		}
@@ -177,7 +177,7 @@ class TableText extends BaseComplex
 				WHERE att_id = ?
 				GROUP BY value';
 
-			$objRow = Database::getInstance()
+			$objRow = \Database::getInstance()
 				->prepare($strSql)
 				->executeUncached($this->get('id'));
 		}
