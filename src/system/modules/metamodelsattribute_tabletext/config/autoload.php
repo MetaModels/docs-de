@@ -16,17 +16,6 @@
  */
 
 /**
- * Register the classes
- */
-ClassLoader::addClasses(array
-(
-	'MetaModels\Attribute\TableText\TableText' => 'system/modules/metamodelsattribute_tabletext/MetaModels/Attribute/TableText/TableText.php',
-
-	'MetaModelAttributeTableText'              => 'system/modules/metamodelsattribute_tabletext/deprecated/MetaModelAttributeTableText.php',
-));
-
-
-/**
  * Register the templates
  */
 TemplateLoader::addFiles(array
