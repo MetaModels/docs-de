@@ -44,8 +44,9 @@
 		"metamodels/core":"~2.0.0"
 	},
 	"require-dev": {
-		"metamodels/php-coding-standard":"dev-master",
-		"cyberspectrum/contao-toolbox": "dev-master"
+		"metamodels/php-coding-standard": "dev-master",
+		"cyberspectrum/contao-toolbox": "dev-master",
+		"phpunit/phpunit": ">=3.7.10,<4-dev"
 	},
 	"conflict": {
 		"contao/core": "3.0.*"
@@ -70,5 +71,7 @@
 		"branch-alias": {
 			"dev-tng": "2.0.x-dev"
 		}
-	}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
