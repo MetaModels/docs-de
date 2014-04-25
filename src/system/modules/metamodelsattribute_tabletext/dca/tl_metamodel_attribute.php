@@ -21,8 +21,7 @@
 
 $GLOBALS['TL_DCA']['tl_metamodel_attribute']['metapalettes']['tabletext extends _complexattribute_'] = array
 (
-//	'+display' => array('titleField after name')
-    '+advanced' => array('tabletext_cols'),
+	'+advanced' => array('tabletext_cols'),
 );
 
 $GLOBALS['TL_DCA']['tl_metamodel_attribute']['fields']['tabletext_cols'] = array
@@ -32,22 +31,22 @@ $GLOBALS['TL_DCA']['tl_metamodel_attribute']['fields']['tabletext_cols'] = array
 	'inputType'             => 'multiColumnWizard',
 	'eval'                  => array
 	(
-		'rgxp'=>'digit',
-        'mandatory' => true,
-		'columnFields' => array(
-			'rowLabel' => array
+		'rgxp'              => 'digit',
+		'mandatory'         => true,
+		'columnFields'      => array(
+			'rowLabel'      => array
 			(
 				'label'     => &$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel'],
 				'inputType' => 'text',
 				'eval'      => array('allowHtml' => false, 'style' => 'width: 500px;'),
 			),
-			'rowStyle' => array
+			'rowStyle'      => array
 			(
 				'label'     => &$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowStyle'],
 				'inputType' => 'text',
 				'eval'      => array('allowHtml' => false, 'style' => 'width: 90px;'),
 			)
 		),
-		'tl_class' => 'clr'
+		'tl_class'          => 'clr'
 	)
 );

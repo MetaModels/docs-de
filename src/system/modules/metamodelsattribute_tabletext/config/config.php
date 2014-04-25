@@ -16,4 +16,5 @@
  */
 
 $GLOBALS['METAMODELS']['attributes']['tabletext']['class'] = 'MetaModels\Attribute\TableText\TableText';
-$GLOBALS['METAMODELS']['attributes']['tabletext']['image'] = 'system/modules/metamodelsattribute_tabletext/html/tabletext.png';
+$GLOBALS['METAMODELS']['attributes']['tabletext']['image'] =
+	'system/modules/metamodelsattribute_tabletext/html/tabletext.png';

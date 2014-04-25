@@ -73,20 +73,22 @@ class TableText extends BaseComplex
 	 */
 	public function getFieldDefinition($arrOverrides = array())
 	{
-		$arrColLabels = deserialize($this->get('tabletext_cols'), true);
-		$arrFieldDef=parent::getFieldDefinition($arrOverrides);
-		$arrFieldDef['inputType'] = 'multiColumnWizard';
+		$arrColLabels                        = deserialize($this->get('tabletext_cols'), true);
+		$arrFieldDef                         = parent::getFieldDefinition($arrOverrides);
+		$arrFieldDef['inputType']            = 'multiColumnWizard';
 		$arrFieldDef['eval']['columnFields'] = array();
 
-		for ($i = 0; $i < count($arrColLabels); $i++)
+		$count = count($arrColLabels);
+		for ($i = 0; $i < $count; $i++)
 		{
 			$arrFieldDef['eval']['columnFields']['col_'.$i] = array
 			(
-				'label'			=> $arrColLabels[$i]['rowLabel'],
-				'inputType'		=> 'text',
-				'eval'			=> array(),
+				'label'     => $arrColLabels[$i]['rowLabel'],
+				'inputType' => 'text',
+				'eval'      => array(),
 			);
-			if ($arrColLabels[$i]['rowStyle']) {
+			if ($arrColLabels[$i]['rowStyle'])
+			{
 				$arrFieldDef['eval']['columnFields']['col_'.$i]['eval']['style'] = 'width:'.$arrColLabels[$i]['rowStyle'];
 			}
 
@@ -100,21 +102,22 @@ class TableText extends BaseComplex
 	public function setDataFor($arrValues)
 	{
 		// Check if we have an array.
-		if(empty($arrValues))
+		if (empty($arrValues))
 		{
 			return;
 		}
 
 		$objDB = \Database::getInstance();
-		// get the ids
+		// Get the ids.
 		$arrIds = array_keys($arrValues);
+
 		$strQueryUpdate = 'UPDATE %s';
 
-		// insert or Update the cells
+		// Insert or update the cells.
 		$strQuery = 'INSERT INTO ' . $this->getValueTable() . ' %s';
 		foreach ($arrIds as $intId)
 		{
-			//delete missing rows
+			// Delete missing rows.
 			if (empty($arrValues[$intId]))
 			{
 				// No values give, delete all values.
@@ -127,20 +130,36 @@ class TableText extends BaseComplex
 			}
 
 			// We have some values, delete the missing ones.
-			$rowIds		 = array_keys($arrValues[$intId]);
-			$strDelQuery = 'DELETE FROM ' . $this->getValueTable() . ' WHERE att_id=? AND item_id=? AND row NOT IN (' . implode(',', $rowIds) . ')';
+			$rowIds      = array_keys($arrValues[$intId]);
+			$strDelQuery = sprintf('
+				DELETE
+				FROM %1$s
+				WHERE att_id=?
+				AND item_id=?
+				AND row NOT IN (%2$s)',
+				$this->getValueTable(),
+				implode(',', $rowIds)
+			);
 
 			$objDB
 				->prepare($strDelQuery)
 				->execute(intval($this->get('id')), $intId);
 
-			//walk every row
-			foreach ($arrValues[$intId] as $k => $row)
+			// Walk every row.
+			foreach ($arrValues[$intId] as $row)
 			{
-				//walk every column and update / insert the value
-				foreach ($row as $kk => $col)
+				// Walk every column and update / insert the value.
+				foreach ($row as $col)
 				{
-					$objDB->prepare($strQuery . ' ON DUPLICATE KEY ' . str_replace('SET ', '', $objDB->prepare($strQueryUpdate)->set($this->getSetValues($col, $intId))->query))
+					$objDB
+						->prepare(
+							$strQuery .
+							' ON DUPLICATE KEY ' .
+							str_replace('SET ', '', $objDB
+								->prepare($strQueryUpdate)
+								->set($this->getSetValues($col, $intId))
+								->query)
+						)
 						->set($this->getSetValues($col, $intId))
 						->execute();
 				}
@@ -206,8 +225,13 @@ class TableText extends BaseComplex
 		$objDB = \Database::getInstance();
 
 		$arrWhere = $this->getWhere($arrIds);
-		$strQuery = 'SELECT * FROM ' . $this->getValueTable() . ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : ''). ' ORDER BY row ASC, col ASC';
-		$objValue = $objDB->prepare($strQuery)
+		$strQuery = sprintf(
+			'SELECT * FROM %1$s%2$s ORDER BY row ASC, col ASC',
+			$this->getValueTable(),
+			($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : '')
+		);
+		$objValue = $objDB
+			->prepare($strQuery)
 			->executeUncached(($arrWhere ? $arrWhere['params'] : null));
 
 		$arrReturn = array();
@@ -233,20 +257,21 @@ class TableText extends BaseComplex
 			->execute(($arrWhere ? $arrWhere['params'] : null));
 	}
 
-
-
 	/**
 	 * Build a where clause for the given id(s) and rows/cols.
 	 *
-	 * @param mixed  $mixIds        one, none or many ids to use.
-	 * @param int    $intRow        the row number, optional
-	 * @param int    $intCol        the col number, optional
+	 * @param mixed $mixIds One, none or many ids to use.
+	 *
+	 * @param int   $intRow The row number, optional.
+	 *
+	 * @param int   $intCol The col number, optional.
+	 *
 	 * @return string
 	 */
 	protected function getWhere($mixIds, $intRow = null, $intCol = null)
 	{
 		$strWhereIds = '';
-		$strRowCol = '';
+		$strRowCol   = '';
 		if ($mixIds)
 		{
 			if (is_array($mixIds))
@@ -276,7 +301,11 @@ class TableText extends BaseComplex
 	 */
 	public function valueToWidget($varValue)
 	{
-		if (!is_array($varValue)) return array();
+		if (!is_array($varValue))
+		{
+			return array();
+		}
+
 		$widgetValue = array();
 		foreach ($varValue as $row)
 		{
@@ -285,6 +314,7 @@ class TableText extends BaseComplex
 				$widgetValue[$col['row']]['col_'.$key] = $col['value'];
 			}
 		}
+
 		return $widgetValue;
 	}
 
@@ -293,30 +323,44 @@ class TableText extends BaseComplex
 	 */
 	public function widgetToValue($varValue, $intId)
 	{
-		if (!is_array($varValue)) return null;
+		if (!is_array($varValue))
+		{
+			return array();
+		}
+
 		$newValue = array();
 		foreach ($varValue as $k => $row)
 		{
 			foreach ($row as $kk => $col)
 			{
 				$kk = str_replace('col_', '', $kk);
+
 				$newValue[$k][$kk]['value'] = $col;
-				$newValue[$k][$kk]['col'] = $kk;
-				$newValue[$k][$kk]['row'] = $k;
+				$newValue[$k][$kk]['col']   = $kk;
+				$newValue[$k][$kk]['row']   = $k;
 			}
 		}
 		return $newValue;
 	}
 
+	/**
+	 * Calculate the array of query parameters for the given cell.
+	 *
+	 * @param array $arrCell The cell to calculate.
+	 *
+	 * @param int   $intId   The data set id.
+	 *
+	 * @return array
+	 */
 	protected function getSetValues($arrCell, $intId)
 	{
 		return array
 		(
-			'tstamp' => time(),
-			'value' => (string)$arrCell['value'],
-			'att_id' => $this->get('id'),
-			'row' => (int)$arrCell['row'],
-			'col' => (int)$arrCell['col'],
+			'tstamp'  => time(),
+			'value'   => (string)$arrCell['value'],
+			'att_id'  => $this->get('id'),
+			'row'     => (int)$arrCell['row'],
+			'col'     => (int)$arrCell['col'],
 			'item_id' => $intId,
 		);
 	}
