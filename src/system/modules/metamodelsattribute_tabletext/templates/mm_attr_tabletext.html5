@@ -1,4 +1,4 @@
-<table>
+<table class="tabletext<?php echo $this->additional_class; ?>">
 	<?php foreach ($this->raw as $k => $row) : ?><tr>
 		<?php foreach ($row as $kk =>$col): ?><td><?php echo $col['value']; ?></td><?php endforeach; ?>
 	</tr><?php endforeach;?>
