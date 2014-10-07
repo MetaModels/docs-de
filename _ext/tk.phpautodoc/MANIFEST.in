@@ -1,0 +1,8 @@
+include MANIFEST.in
+include README.txt
+include LICENSE
+include bootstrap.py
+include buildout.cfg
+include tox.ini
+recursive-include src *.py
+recursive-include tests *.py *.php *.rst
