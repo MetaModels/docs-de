@@ -18,7 +18,7 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['tabletext']	= 'Text table';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_cols']				= array('Column config', '');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']			= array('Label', 'Please enter ther labels for the columns');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowStyle']			= array('Width', 'Please enter the width of the columns (e.g. 200px)');
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['tabletext']    = 'Text table';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_cols']                = array('Column config', '');
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']            = array('Label', 'Please enter ther labels for the columns');
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowStyle']            = array('Width', 'Please enter the width of the columns (e.g. 200px)');

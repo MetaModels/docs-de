@@ -18,7 +18,6 @@
 /**
  * Register the templates
  */
-TemplateLoader::addFiles(array
-(
-	'mm_attr_tabletext'              => 'system/modules/metamodelsattribute_tabletext/templates',
+TemplateLoader::addFiles(array(
+    'mm_attr_tabletext'              => 'system/modules/metamodelsattribute_tabletext/templates',
 ));
