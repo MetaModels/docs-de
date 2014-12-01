@@ -20,4 +20,4 @@
  */
 
 $GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['simplelookup_palettes']['tabletext'] =
-	&$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['simplelookup_palettes']['_translated_'];
+    &$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['simplelookup_palettes']['_translated_'];

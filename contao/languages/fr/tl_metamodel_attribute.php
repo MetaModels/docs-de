@@ -11,7 +11,6 @@
  * last-updated: 2013-06-24T12:11:54+02:00
  */
 
-
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_cols']['0']      = 'Configuration des colonnes';
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']['0']  = 'Libellé';
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']['1']  = 'Saisir les libellés des colonnes';

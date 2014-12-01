@@ -11,7 +11,6 @@
  * last-updated: 2013-06-24T12:11:54+02:00
  */
 
-
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_cols']['0']      = 'Configuraziun da las colonnas';
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']['0']  = 'Label';
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']['1']  = 'Endatescha ils labels per las colonnas';
