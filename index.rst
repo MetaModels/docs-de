@@ -13,6 +13,12 @@ This documentation is split into three sections:
 
     In the :ref:`reference` you find reference information like a list of events.
 
+
+If you want to contribute, too, please click the „Edit on GitHub“ link in the upper right corner or visit our
+`GitHub project page`_.
+
+.. _GitHub project page: https://github.com/MetaModels/docs
+
 .. _manual:
 
 Manual
