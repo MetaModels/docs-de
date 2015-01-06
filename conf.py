@@ -8,15 +8,15 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath('_ext/phpdomain'))
-sys.path.append(os.path.abspath('_ext/tk.phpautodoc/src'))
+#sys.path.append(os.path.abspath('_ext/phpdomain'))
+#sys.path.append(os.path.abspath('_ext/tk.phpautodoc/src'))
 
 # -- General configuration ------------------------------------------------
 
 extensions = [
     'sphinx.ext.intersphinx',
-    'sphinxcontrib.phpdomain',
-    'sphinxcontrib_phpautodoc',
+    #'sphinxcontrib-phpdomain',
+    #'sphinxcontrib_phpautodoc',
 ]
 
 templates_path = ['_templates']
