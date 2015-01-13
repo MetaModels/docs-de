@@ -10,7 +10,7 @@ You’ll need the MetaModels core and some attributes / filter to get MetaModels
 Don’t forget to run composer install through „Update packages“.
 When installed, run the database update and your MetaModels installation is done.
 
-|*Hint: If you know that you don’t need all attributes and / or filter you can install every single package by it’s own.*
+.. note:: If you know that you don’t need all attributes and / or filter you can install every single package by it’s own.*
 
 Your first MetaModel
 =====================
@@ -133,13 +133,13 @@ For now, we have two MetaModel with some attributes and a link between booth. Bu
 A render setting contains some global settings, attributes you like to display and there settings.
 No matter if you like to display data in the backend or fronted you need at least one render setting. But we recommend to create at least one setting for the backend and one for the frontend.
 
-|*Hint: Prefix your render setting name with BE / FE for easy relocating*.
+.. note:: Prefix your render setting name with BE / FE for easy relocating*.
 
-|*Info: It’s necessary to define one render setting as default one*
+.. info:: It’s necessary to define one render setting as default one*
 
 **Basic-settings**
 
-|*Template*: MetaModels provides a set of well organized, solid templates. There are templates for each render setting ( e.g. metamodel_prerendered). You can create your own templates the contao why (Backend > Templates > Create > select the template you like to overwrite > Save (maybe with a new / name addition) > Edit > Choose)
+.. note:: MetaModels provides a set of well organized, solid templates. There are templates for each render setting ( e.g. metamodel_prerendered). You can create your own templates the contao why (Backend > Templates > Create > select the template you like to overwrite > Save (maybe with a new / name addition) > Edit > Choose)
 
 metamodel_prerendered - All attributes are rendered with there template and settings (if available)
 metamodel_unrendered - All attributes are rendered in „raw“ to the frontend (the settings of the child attributes are ignored)
@@ -156,7 +156,7 @@ So you need to define a jump-to-page where the user gets redirected if he clicks
 
 The filter setting define the rules for the target, your detail page. 
 
-*Info: Set filter settings for list views*
+.. note:: Set filter settings for list views*
 
 (todo: MetaModel Advanced, just one jump-to-page for multiple languages) 
 
@@ -168,7 +168,7 @@ Go to the „render settings“ of „reference“.
 * Add „all attributes“ 
 * After adding, activate „name“ + „category“
 
-*Info: When you (later) add attributes to your MetaModel you need to add them also in your render setting.*
+.. note:: When you (later) add attributes to your MetaModel you need to add them also in your render setting.*
 
 Create a rendersetting (frontend list)
 ---------------------------------------
