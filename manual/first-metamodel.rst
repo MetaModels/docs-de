@@ -1,6 +1,9 @@
-# MetaModels
+---------------
+MetaModels
+---------------
 
-## Install with composer
+Install with composer
+=====================
 
 You’ll need metamodels core and some attributes / filter to get metamodels running. So choose in you composer
 ```metamodels/core``` an ```metamodels/bundle_all``` to install the core and all bundles and filters. Don’t forget to run the composer install through „Update packages“. 
@@ -8,9 +11,11 @@ When installed, run the database update and your MetaModels installation is done
 
 Hint: If you know that you don’t need all attributes and / or filter you can install every single  package by it’s own.
 
-## Your first MetaModel
+Your first MetaModel
+=====================
 
-### Create MetaModels
+Create MetaModels
+-----------------
 To get started with MetaModels we need at least one MetaModel, jai! We will build a small MetaModel, non translated, MetaModel for real estate references.
 
 In our example we need two MetaModels:
@@ -20,13 +25,15 @@ In our example we need two MetaModels:
 
 Create reference and category metamodels.
 
-### Create attributes
+Create attributes
+-----------------
 
 An (empty) MetaModel is just a container for your data objects. But before you can store data in your MetaModel, you need to define some types of data which you like to store.
 
 In MetaModels there are several „attributes“ to store different kind of data. Most of the time you need at least a text attribute (e.g. to store a name).
 
-#### mm_reference
+mm_reference
+^^^^^^^^^^^^^
 Our reference will contain these attributes:
 
 * Name (text)
@@ -90,7 +97,8 @@ Customize filetree (optional): select a „content“ folder where the reference
 
 multiselect: yes
 
-#### mm_category
+mm_category
+^^^^^^^^^^^^^
 
 For our categorie MetaModel we just need three attributes:
 
@@ -100,7 +108,8 @@ For our categorie MetaModel we just need three attributes:
 
 Create the attributes as learned in the reference MetaModel.
 
-#### Select configuration
+Select configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Early, we introduced in our „reference“ MetaModel a select attribute but leaved it’s configuration nearly blank.
 
@@ -115,12 +124,12 @@ Name: name - text
 Alias: alias - alias
 Sorting: sorting
 
-## Create Rendersettings
+Create Rendersettings
+======================
 
 For now, we have two MetaModel with some attributes and a link between booth. But we didn’t want just to store some data, we also like to display them.
 
 A render setting contains some global settings, attributes you like to display and there settings.
-s
 No matter if you like to display data in the backend or fronted you need at least one render setting. But we recommend to create at least one setting for the backend and one for the frontend.
 
 *Hint: Prefix your render setting name with BE / FE for easy relocating*.
@@ -150,7 +159,8 @@ The filter setting define the rules for the target, your detail page.
 
 (todo: MetaModel Advanced, just one jump-to-page for multiple languages) 
 
-### Create a rendersetting (backend)
+Create a rendersetting (backend)
+-------------------------------------
 
 Go to the „render settings“ of „reference“.
 * Create a render setting called „BE: references“
@@ -159,18 +169,31 @@ Go to the „render settings“ of „reference“.
 
 *Info: When you (later) add attributes to your MetaModel you need to add them also in your render setting.*
 
-### Create a rendersetting (frontend list)
+Create a rendersetting (frontend list)
+---------------------------------------
 
 Go to the „render settings“ of „reference“.
 * Create a render setting called „FE: references list“
 * Add „all attributes“ 
 * After adding, activate „name“, „category“, „picture_highlight“
 
-### Create a rendersetting (frontend detail)
+Create a rendersetting (frontend detail)
+-----------------------------------------
 
 Go to the „render settings“ of „reference“.
 * Create a render setting called „FE: reference detail“
 * Add „all attributes“ 
 * After adding, activate „name“, „description“, „category“, „picture_highlight“, „picture_gallery“
 
-## Input Screens
+Input Screens
+==============
+(Todo)
+
+Filter Setting
+===============
+(Todo)
+
+View conditions
+===============
+
+(Todo)
