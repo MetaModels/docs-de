@@ -145,8 +145,8 @@ metamodel_prerendered - All attributes are rendered with there template and sett
 metamodel_unrendered - All attributes are rendered in „raw“ to the frontend (the settings of the child attributes are ignored)
 
 *Output Format:*
-* HTML 5 - 
-* XHTML - 
+* HTML 5 - ?
+* XHTML - ?
 * Text - Just the „content“
 
 **Jump-to-Page**
@@ -156,7 +156,7 @@ So you need to define a jump-to-page where the user gets redirected if he clicks
 
 The filter setting define the rules for the target, your detail page. 
 
-.. note:: Set filter settings for list views*
+Set filter settings for list views
 
 (todo: MetaModel Advanced, just one jump-to-page for multiple languages) 
 
