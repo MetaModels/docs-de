@@ -175,9 +175,12 @@ So you need to define a jump-to-page where the user gets redirected if he clicks
 
 The filter setting define the rules for the target, your detail page. 
 
-Set filter settings for list views
+.. info:: In list views, you need to set a filter (which includes the conditions of your detail page)
 
-(todo: MetaModel Advanced, just one jump-to-page for multiple languages) 
+**Expert-settings**
+
+hide empty entries: yes
+hide labels: yes
 
 Create a rendersetting (backend)
 -------------------------------------
