@@ -39,7 +39,9 @@ Our reference will contain these attributes:
 
 * Name (text)
 * Alias (alias)
+* Published (checkbox)
 * Description (longtext)
+* Keyfacts (tabletext)
 * Category (multiple select)
 * Highlight-Picture (file)
 * Picture Gallery (file, multiselect)
@@ -62,12 +64,28 @@ Unique: Yes
 Description: Alias of reference
 Alias-Fields: Name [text]
 
+**Published**
+
+Attribute Type: checkbox
+Column Name: published
+Name: Published
+Published: yes
+
 **Description**
 
 Attribute Type: longtext 
 Column Name: description
 Name: Description
 Description: Description of reference
+
+**Keyfacts**
+
+Attribute Type: tabletext
+Column Name: keyfacts
+Name: Keyfacts
+
+Label: Entry
+Width: 500
 
 **Category**
 
@@ -105,6 +123,7 @@ For our categorie MetaModel we just need three attributes:
 
 * name (text; „name“)
 * alias (alias; „alias“)
+* published (checkbox; „published“)
 * description (longtext; „description“)
 
 Create the attributes as learned in the reference MetaModel.
