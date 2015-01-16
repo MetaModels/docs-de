@@ -188,13 +188,75 @@ Go to the „render settings“ of „reference“.
 
 Input Screens
 ==============
-(Todo)
+
+For now there are two MetaModels with some Attributes and Rendersetting. But how do we get data in our MetaModels?
+With input screens!
+
+Input Screens could hold a collection of these attributes which are necessary to grep some data.
+Most times you just add all attributes in one Input Screen, but with the power of different input screen you can create different edit masks for different kind of user(groups).
+
+But in our tutorial we just need one input screen for our users.
+
+**Basic-settings**
+So create a Input Screen with the following settings:
+
+Name: BE: Referenzen
+Standard: yes
+Panel-Layout: -
+Integration: standalone
+Backend-Section: Content
+
+Render mode: Flat
+
+Data manipulation permission: We want to allow editing, creating and deleting items - so chosse all three.
+
+Select configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Okay. Now we got the empty Input Screen container with a few settings. But to get things working, we need (remember the render setting!) some attributes in it.
+
+Switch to the „settings“ of your currently created Input Screen and choose „add all“.
+
+Define Attribute settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Our input screen is ready. But we need tweak the attributes a little bit. For example we always want a name, description and Highlight Picture.
+
+To get this done, we choose in these attribute settings the „mandatory“. 
+
+.. info:: Input Screens are very powerful. Take a coffee and explore the viability conditions and attribute settings.
+
+Grouping and sorting settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[Todo]
+
+View conditions
+================
+
+View conditions are the easy part in MetaModels. But, you might guess that you also need here at least one to get things work.
+
+The view conditions define who could see and use which render setting and input screen.
+
+.. info:: In most cases you like to show your metamodel data to all of your visitors. So you can leave the „member group“ blank. 
+
+Define a view condition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Define one view condition with following settings:
+
+* member-group: - 
+* user-group: administrator
+* input screen: BE: Referenz
+* Rendersetting: BE: Referenz
+
+.. info:: Wasn’t it a good Idea to prefix our input screens and render setting? ;-)
+
+We are ready to enter Data
+-----------------------------------------
+Some time ago, we started with just a MetaModels package and already arrived to create data. Easy, hm?
+
+Continue to the new „Referenz“ entry in your „content“ navigation and add a first item.
 
 Filter Setting
 ===============
-(Todo)
-
-View conditions
-===============
-
 (Todo)
