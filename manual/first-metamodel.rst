@@ -139,10 +139,10 @@ Edit the „multi select“ attribute in your „References“.
 
 Choose: 
 
-table: mm_category
-Name: name - text
-Alias: alias - alias
-Sorting: sorting
+* table: mm_category
+* Name: name - text
+* Alias: alias - alias
+* Sorting: sorting
 
 Create Rendersettings
 ======================
@@ -179,8 +179,8 @@ The filter setting define the rules for the target, your detail page.
 
 **Expert-settings**
 
-hide empty entries: yes
-hide labels: yes
+* hide empty entries: yes
+* hide labels: yes
 
 Create a rendersetting (backend)
 -------------------------------------
@@ -222,11 +222,11 @@ But in our tutorial we just need one input screen for our users.
 **Basic-settings**
 So create a Input Screen with the following settings:
 
-Name: BE: Referenzen
-Standard: yes
-Panel-Layout: -
-Integration: standalone
-Backend-Section: Content
+* Name: BE: Referenzen
+* Standard: yes
+* Panel-Layout: -
+* Integration: standalone
+* Backend-Section: Content
 
 Render mode: Flat
 
@@ -251,7 +251,9 @@ To get this done, we choose in these attribute settings the „mandatory“.
 Grouping and sorting settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-[Todo]
+In the grouping & sorting section you need to create at least one object to sort & maybe group your entries.
+
+For example: "Enable manual sorting" without grouping.
 
 View conditions
 ================
