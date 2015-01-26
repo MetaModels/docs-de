@@ -233,14 +233,14 @@ Render mode: Flat
 Data manipulation permission: We want to allow editing, creating and deleting items - so chosse all three.
 
 Select configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 Okay. Now we got the empty Input Screen container with a few settings. But to get things working, we need (remember the render setting!) some attributes in it.
 
 Switch to the „settings“ of your currently created Input Screen and choose „add all“.
 
 Define Attribute settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Our input screen is ready. But we need tweak the attributes a little bit. For example we always want a name, description and Highlight Picture.
 
@@ -249,7 +249,7 @@ To get this done, we choose in these attribute settings the „mandatory“.
 .. info:: Input Screens are very powerful. Take a coffee and explore the viability conditions and attribute settings.
 
 Grouping and sorting settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 In the grouping & sorting section you need to create at least one object to sort & maybe group your entries.
 
@@ -265,7 +265,7 @@ The view conditions define who could see and use which render setting and input 
 .. info:: In most cases you like to show your metamodel data to all of your visitors. So you can leave the „member group“ blank. 
 
 Define a view condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 Define one view condition with following settings:
 
 * member-group: - 
