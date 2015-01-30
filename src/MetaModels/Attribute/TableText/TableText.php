@@ -169,11 +169,11 @@ class TableText extends BaseComplex
      *
      * Fetch filter options from foreign table.
      */
-    public function getFilterOptions($arrIds, $usedOnly, &$arrCount = null)
+    public function getFilterOptions($idList, $usedOnly, &$arrCount = null)
     {
-        if ($arrIds) {
+        if ($idList) {
             // Ensure proper integer ids for SQL injection safety reasons.
-            $strIdList = implode(',', array_map('intval', $arrIds));
+            $strIdList = implode(',', array_map('intval', $idList));
 
             $strSql = 'SELECT value, COUNT(value) as mm_count
 				FROM '.$this->getValueTable().'
@@ -307,7 +307,7 @@ class TableText extends BaseComplex
     /**
      * {@inheritdoc}
      */
-    public function widgetToValue($varValue, $intId)
+    public function widgetToValue($varValue, $itemId)
     {
         if (!is_array($varValue)) {
             return array();
