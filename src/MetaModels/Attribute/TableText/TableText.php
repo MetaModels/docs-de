@@ -276,13 +276,13 @@ class TableText extends BaseComplex
     /**
      * Build a where clause for the given id(s) and rows/cols.
      *
-     * @param mixed $mixIds One, none or many ids to use.
+     * @param mixed    $mixIds One, none or many ids to use.
      *
-     * @param int   $intRow The row number, optional.
+     * @param int|null $intRow The row number, optional.
      *
-     * @param int   $intCol The col number, optional.
+     * @param int|null $intCol The col number, optional.
      *
-     * @return string
+     * @return array<string,string|array>
      */
     protected function getWhere($mixIds, $intRow = null, $intCol = null)
     {
@@ -303,8 +303,8 @@ class TableText extends BaseComplex
         $arrReturn = array(
             'procedure' => 'att_id=?' . $strWhereIds . $strRowCol,
             'params' => ($strRowCol)
-                ? array(intval($this->get('id')), $intRow, $intCol)
-                : array(intval($this->get('id'))),
+                ? array($this->get('id'), $intRow, $intCol)
+                : array($this->get('id')),
         );
 
         return $arrReturn;
