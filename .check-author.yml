@@ -1,6 +1,6 @@
 ignore:
-  "Mini Model <minimodel@metamodel.me>"
-  "Scrutinizer Auto-Fixer <auto-fixer@scrutinizer-ci.com>"
+  - "Mini Model <minimodel@metamodel.me>"
+  - "Scrutinizer Auto-Fixer <auto-fixer@scrutinizer-ci.com>"
 
 exclude:
   languages
