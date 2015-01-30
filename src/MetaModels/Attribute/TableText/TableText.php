@@ -9,7 +9,11 @@
  * PHP version 5
  * @package     MetaModels
  * @subpackage  AttributeTableText
+ * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author      Andreas Isaak <info@andreas-isaak.de>
  * @author      David Maack <david.maack@arcor.de>
+ * @author      David Greminger <david.greminger@1up.io>
+ * @author      Stefan Heimes <stefan_heimes@hotmail.com>
  * @copyright   The MetaModels team.
  * @license     LGPL.
  * @filesource

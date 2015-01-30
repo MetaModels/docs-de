@@ -9,6 +9,7 @@
  * @package    MetaModels
  * @subpackage Tests
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author     David Greminger <david.greminger@1up.io>
  * @copyright  The MetaModels team.
  * @license    LGPL.
  * @filesource

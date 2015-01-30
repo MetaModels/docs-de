@@ -1,0 +1,17 @@
+ignore:
+#  Mini Model <minimodel@metamodel.me>
+
+exclude:
+  languages
+
+mapping:
+  "Andreas Isaak <info@andreas-isaak.de>": "Andreas Isaak <andy.jared@googlemail.com>"
+
+copy-left:
+   "David Maack <david.maack@arcor.de>":
+     - contao/config/config.php
+     - contao/config/autoload.php
+     - contao/dca/tl_metamodel_attribute.php
+     - contao/dca/tl_metamodel_dcasetting.php
+     - contao/dca/tl_metamodel_filtersetting.php
+     - contao/dca/tl_metamodel_rendersetting.php
