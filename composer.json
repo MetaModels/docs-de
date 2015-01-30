@@ -40,8 +40,7 @@
   },
   "require-dev": {
     "cyberspectrum/contao-toolbox": "~0.6",
-    "contao-community-alliance/build-system-all-tasks": "~1.0",
-    "contao-community-alliance/coding-standard": "~1.0",
+    "phpcq/all-tasks": "~1.0",
     "metamodels/base-unit-tests": "~1.0"
   },
   "conflict": {
