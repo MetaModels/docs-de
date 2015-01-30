@@ -87,13 +87,13 @@ class TableText extends BaseComplex
 
         $count = count($arrColLabels);
         for ($i = 0; $i < $count; $i++) {
-            $arrFieldDef['eval']['columnFields']['col_'.$i] = array(
+            $arrFieldDef['eval']['columnFields']['col_' . $i] = array(
                 'label'     => $arrColLabels[$i]['rowLabel'],
                 'inputType' => 'text',
                 'eval'      => array(),
             );
             if ($arrColLabels[$i]['rowStyle']) {
-                $arrFieldDef['eval']['columnFields']['col_'.$i]['eval']['style'] =
+                $arrFieldDef['eval']['columnFields']['col_' . $i]['eval']['style'] =
                     'width:' . $arrColLabels[$i]['rowStyle'];
             }
         }
@@ -152,8 +152,8 @@ class TableText extends BaseComplex
                 foreach ($row as $col) {
                     $objDB
                         ->prepare(
-                            $strQuery.
-                            ' ON DUPLICATE KEY '.
+                            $strQuery .
+                            ' ON DUPLICATE KEY ' .
                             str_replace(
                                 'SET ',
                                 '',
@@ -239,7 +239,7 @@ class TableText extends BaseComplex
                 sprintf(
                     'SELECT * FROM %1$s%2$s ORDER BY row ASC, col ASC',
                     $this->getValueTable(),
-                    ($arrWhere ? ' WHERE '.$arrWhere['procedure'] : '')
+                    ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : '')
                 )
             )
             ->execute(($arrWhere ? $arrWhere['params'] : null));
@@ -267,7 +267,7 @@ class TableText extends BaseComplex
                 sprintf(
                     'DELETE FROM %1$s%2$s',
                     $this->getValueTable(),
-                    ($arrWhere ? ' WHERE '.$arrWhere['procedure'] : '')
+                    ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : '')
                 )
             )
             ->execute(($arrWhere ? $arrWhere['params'] : null));
@@ -290,9 +290,9 @@ class TableText extends BaseComplex
         $strRowCol   = '';
         if ($mixIds) {
             if (is_array($mixIds)) {
-                $strWhereIds = ' AND item_id IN ('.implode(',', $mixIds).')';
+                $strWhereIds = ' AND item_id IN (' . implode(',', $mixIds) . ')';
             } else {
-                $strWhereIds = ' AND item_id='.$mixIds;
+                $strWhereIds = ' AND item_id=' . $mixIds;
             }
         }
 
@@ -301,7 +301,7 @@ class TableText extends BaseComplex
         }
 
         $arrReturn = array(
-            'procedure' => 'att_id=?'.$strWhereIds.$strRowCol,
+            'procedure' => 'att_id=?' . $strWhereIds . $strRowCol,
             'params' => ($strRowCol)
                 ? array(intval($this->get('id')), $intRow, $intCol)
                 : array(intval($this->get('id'))),
@@ -322,7 +322,7 @@ class TableText extends BaseComplex
         $widgetValue = array();
         foreach ($varValue as $row) {
             foreach ($row as $key => $col) {
-                $widgetValue[$col['row']]['col_'.$key] = $col['value'];
+                $widgetValue[$col['row']]['col_' . $key] = $col['value'];
             }
         }
 
