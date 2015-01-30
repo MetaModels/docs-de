@@ -33,14 +33,17 @@ class TableText extends BaseComplex
      */
     public function searchFor($strPattern)
     {
-        // Base implementation, do a simple search on given column.
-        $strQuery = 'SELECT DISTINCT item_id
-			FROM '.$this->getValueTable().'
-			WHERE value LIKE ? AND att_id = ?';
-
-        $objValue = \Database::getInstance()
-            ->prepare($strQuery)
-            ->executeUncached(
+        $objValue = $this
+            ->getMetaModel()
+            ->getServiceContainer()
+            ->getDatabase()
+            ->prepare(
+                sprintf(
+                    'SELECT DISTINCT item_id FROM %1$s WHERE value LIKE ? AND att_id = ?',
+                    $this->getValueTable()
+                )
+            )
+            ->execute(
                 str_replace(array('*', '?'), array('%', '_'), $strPattern),
                 $this->get('id')
             );
@@ -104,41 +107,40 @@ class TableText extends BaseComplex
             return;
         }
 
-        $objDB = \Database::getInstance();
         // Get the ids.
         $arrIds = array_keys($arrValues);
+        $objDB  = $this->getMetaModel()->getServiceContainer()->getDatabase();
 
         $strQueryUpdate = 'UPDATE %s';
 
         // Insert or update the cells.
-        $strQuery = 'INSERT INTO '.$this->getValueTable().' %s';
+        $strQuery = 'INSERT INTO ' . $this->getValueTable() . ' %s';
         foreach ($arrIds as $intId) {
             // Delete missing rows.
             if (empty($arrValues[$intId])) {
                 // No values give, delete all values.
-                $strDelQuery = 'DELETE FROM '.$this->getValueTable().' WHERE att_id=? AND item_id=?';
-
                 $objDB
-                    ->prepare($strDelQuery)
-                    ->execute(intval($this->get('id')), $intId);
+                    ->prepare(sprintf('DELETE FROM %1$s WHERE att_id=? AND item_id=?', $this->getValueTable()))
+                    ->execute($this->get('id'), $intId);
+
                 continue;
             }
 
             // We have some values, delete the missing ones.
-            $rowIds      = array_keys($arrValues[$intId]);
-            $strDelQuery = sprintf(
-                'DELETE
-				FROM %1$s
-				WHERE att_id=?
-				AND item_id=?
-				AND row NOT IN (%2$s)',
-                $this->getValueTable(),
-                implode(',', $rowIds)
-            );
-
+            $rowIds = array_keys($arrValues[$intId]);
             $objDB
-                ->prepare($strDelQuery)
-                ->execute(intval($this->get('id')), $intId);
+                ->prepare(
+                    sprintf(
+                        'DELETE
+                        FROM %1$s
+                        WHERE att_id=?
+                        AND item_id=?
+                        AND row NOT IN (%2$s)',
+                        $this->getValueTable(),
+                        implode(',', $rowIds)
+                    )
+                )
+                ->execute($this->get('id'), $intId);
 
             // Walk every row.
             foreach ($arrValues[$intId] as $row) {
@@ -172,27 +174,37 @@ class TableText extends BaseComplex
     public function getFilterOptions($idList, $usedOnly, &$arrCount = null)
     {
         if ($idList) {
-            // Ensure proper integer ids for SQL injection safety reasons.
-            $strIdList = implode(',', array_map('intval', $idList));
-
-            $strSql = 'SELECT value, COUNT(value) as mm_count
-				FROM '.$this->getValueTable().'
-				WHERE item_id IN ('.$strIdList.') AND att_id = ?
-				GROUP BY value
-				ORDER BY FIELD(id,'.$strIdList.')';
-
-            $objRow = \Database::getInstance()
-                ->prepare($strSql)
-                ->executeUncached($this->get('id'));
+            $objRow = $this
+                ->getMetaModel()
+                ->getServiceContainer()
+                ->getDatabase()
+                ->prepare(
+                    sprintf(
+                        'SELECT value, COUNT(value) as mm_count
+                        FROM %1$s
+                        WHERE item_id IN (%2$s) AND att_id = ?
+                        GROUP BY value
+                        ORDER BY FIELD(id,%2$s)',
+                        $this->getValueTable(),
+                        $this->parameterMask($idList)
+                    )
+                )
+                ->execute(array_merge($idList, array($this->get('id')), $idList));
         } else {
-            $strSql = 'SELECT value, COUNT(value) as mm_count
-				FROM '.$this->getValueTable().'
-				WHERE att_id = ?
-				GROUP BY value';
-
-            $objRow = \Database::getInstance()
-                ->prepare($strSql)
-                ->executeUncached($this->get('id'));
+            $objRow = $this
+                ->getMetaModel()
+                ->getServiceContainer()
+                ->getDatabase()
+                ->prepare(
+                    sprintf(
+                        'SELECT value, COUNT(value) as mm_count
+                        FROM %s
+                        WHERE att_id = ?
+                        GROUP BY value',
+                        $this->getValueTable()
+                    )
+                )
+                ->execute($this->get('id'));
         }
 
         $arrResult = array();
@@ -214,17 +226,19 @@ class TableText extends BaseComplex
      */
     public function getDataFor($arrIds)
     {
-        $objDB = \Database::getInstance();
-
         $arrWhere = $this->getWhere($arrIds);
-        $strQuery = sprintf(
-            'SELECT * FROM %1$s%2$s ORDER BY row ASC, col ASC',
-            $this->getValueTable(),
-            ($arrWhere ? ' WHERE '.$arrWhere['procedure'] : '')
-        );
-        $objValue = $objDB
-            ->prepare($strQuery)
-            ->executeUncached(($arrWhere ? $arrWhere['params'] : null));
+        $objValue = $this
+            ->getMetaModel()
+            ->getServiceContainer()
+            ->getDatabase()
+            ->prepare(
+                sprintf(
+                    'SELECT * FROM %1$s%2$s ORDER BY row ASC, col ASC',
+                    $this->getValueTable(),
+                    ($arrWhere ? ' WHERE '.$arrWhere['procedure'] : '')
+                )
+            )
+            ->execute(($arrWhere ? $arrWhere['params'] : null));
 
         $arrReturn = array();
         while ($objValue->next()) {
@@ -239,12 +253,19 @@ class TableText extends BaseComplex
      */
     public function unsetDataFor($arrIds)
     {
-        $objDB = \Database::getInstance();
-
         $arrWhere = $this->getWhere($arrIds);
-        $strQuery = 'DELETE FROM '.$this->getValueTable().($arrWhere ? ' WHERE '.$arrWhere['procedure'] : '');
 
-        $objDB->prepare($strQuery)
+        $this
+            ->getMetaModel()
+            ->getServiceContainer()
+            ->getDatabase()
+            ->prepare(
+                sprintf(
+                    'DELETE FROM %1$s%2$s',
+                    $this->getValueTable(),
+                    ($arrWhere ? ' WHERE '.$arrWhere['procedure'] : '')
+                )
+            )
             ->execute(($arrWhere ? $arrWhere['params'] : null));
     }
 
@@ -253,9 +274,9 @@ class TableText extends BaseComplex
      *
      * @param mixed $mixIds One, none or many ids to use.
      *
-     * @param int $intRow The row number, optional.
+     * @param int   $intRow The row number, optional.
      *
-     * @param int $intCol The col number, optional.
+     * @param int   $intCol The col number, optional.
      *
      * @return string
      */
@@ -332,7 +353,7 @@ class TableText extends BaseComplex
      *
      * @param array $arrCell The cell to calculate.
      *
-     * @param int $intId The data set id.
+     * @param int   $intId   The data set id.
      *
      * @return array
      */
