@@ -34,7 +34,7 @@
   },
   "require": {
     "php": ">=5.3",
-    "contao/core": ">=3.2,<3.5",
+    "contao/core": ">=3.2,<3.6",
     "contao-community-alliance/composer-plugin": "~2.0",
     "metamodels/core": "~2.0"
   },
@@ -44,7 +44,7 @@
     "metamodels/base-unit-tests": "~1.0"
   },
   "conflict": {
-    "contao/core": "3.0.*"
+    "contao/core": "3.4.0"
   },
   "autoload": {
     "psr-0": {
