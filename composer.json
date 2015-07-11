@@ -69,7 +69,8 @@
       }
     },
     "branch-alias": {
-      "dev-tng": "2.0.x-dev"
+      "dev-master": "2.0.x-dev",
+      "dev-develop": "2.1.x-dev"
     }
   },
   "minimum-stability": "dev",
