@@ -28,4 +28,4 @@ Was macht was:
 **Wichtig!**
     Custom URL’s die nicht von MetaModels stammen, sondern von einem Entwickler selber im Template hinterlegt wurden, werden nicht unterstützt.
 
-Für mehr Informationen, gibt es den :ref:`FAQ Beriech <faq:search>`
+Für mehr Informationen, gibt es den :ref:`FAQ Bereich. <faq-searchable-pages>`
