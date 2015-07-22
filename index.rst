@@ -31,6 +31,7 @@ Manual
     manual/introduction
     manual/install
     manual/first-metamodel
+    manual/features
 
 .. _cookbook:
 
