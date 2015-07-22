@@ -25,7 +25,6 @@ Was macht was:
     Das Rendersetting wird benutzt um die Detailseite zu ermitteln. Es werden damit keine Ausgaben gerändert.
     Die Filter werden benutzt um die URL zu erstellen. Also die eigentlichen Parameter.
 
-**Wichtig!**
-    Custom URL’s die nicht von MetaModels stammen, sondern von einem Entwickler selber im Template hinterlegt wurden, werden nicht unterstützt.
+.. note:: Custom URL’s die nicht von MetaModels stammen, sondern von einem Entwickler selber im Template hinterlegt wurden, werden nicht unterstützt.
 
-Für mehr Informationen, gibt es den :ref:`FAQ Bereich. <faq-searchable-pages>`
+.. info:: Für mehr Informationen, gibt es den :ref:`FAQ Bereich. <faq-searchable-pages>`
