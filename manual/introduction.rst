@@ -20,9 +20,15 @@ conditions i.e.) and be of various nature.
 History of MetaModels
 ---------------------
 
-Metamodels started out as the next generation of the famous Catalog extension.
+MetaModels wurde unter dem Aspekt entwickelt, den "in die Jahre gekommen" Catalog zu ersetzten.
 
-As the Catalog extension was growing too complex too maintain and most
+Der alte Catalog, war durch die Vielzahl von Maintainer gewachsen. Dies führte dazu,
+dass es nicht mehr einfach war den Code zu erweitern oder zu warten. Daher entschlossen
+wir uns alles, was wir aus dem Catalog 1 und dem Catalog 2 gelernt hatte zu nehmen und
+daraus einen neuen Catalog 3 zu erstellen. Die Hauptziele dabei waren, ein flexibles System
+zu schaffen welches auch einfach zu erweitern sein sollte.
+
+As the Catalog extension as growing too complex too maintain and most
 support for extendability was rather hacky, we decided it was time to
 take everything we learned during the development of Catalog 1 and
 Catalog 2 and then start from scratch to provide you with Catalog 3
