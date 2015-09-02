@@ -26,7 +26,7 @@ project = u'MetaModels'
 copyright = u'2015, Team MetaModels'
 version = '2.0'
 release = '2.0.0'
-language = 'en'
+language = 'de'
 exclude_patterns = ['_build', '_ext']
 pygments_style = 'sphinx'
 
