@@ -1,22 +1,22 @@
-How to install
---------------
+MetaModels installieren
+-----------------------
 
 via Composer
 ^^^^^^^^^^^^
 
-MetaModels and all its dependencies are available through the great `composer extension <https://c-c-a.org/ueber-composer>`_
+MetaModels und alle seine Abhängigkeiten können mit der großartigen `Composer Erweiterung <https://c-c-a.org/ueber-composer>`_ geladen werden.
 
-When your Contao Installation is composerized, you can simply installing metamodels by requiring following packages:
+Wenn euer Contao Installation bereits mit der neuen Paketverwaltung Composer versehen ist, könnt ihr MetaModels
+einfach installieren indem ihr folgende Pakete auswählt:
 
 * `MetaModels/core <https://packagist.org/packages/MetaModels/core>`_ (~2.0)
 * `MetaModels/bundle_all <https://packagist.org/packages/MetaModels/bundle_all>`_ (~1.0)
 
-If you do not need all attributes & filters, feel free to just install the core and grab some filter and attributes of
-your choice. (Or another `bundle <https://github.com/MetaModels?query=bundle>`_ of your choice).
+Solltet ihr nicht alle Attribute oder Filter brauchen, könnt ihr diese auch einzeln Installieren oder eins unseren anderen
+`Pakete <https://github.com/MetaModels?query=bundle>`_ auswählen. Die Pakete sind in Gruppen zusammen gefasst und
+sollten für jeden das richtige bieten.
 
-We have prepared some of them to separate all the things into groups.
-
-Example composer.json:
+Beispiel der composer.json:
 
 .. code-block:: javascript
 
@@ -30,4 +30,5 @@ Example composer.json:
 via Nightly build
 ^^^^^^^^^^^^^^^^^
 
-Use the nightly package from our project website: `http://now.metamodel.me/ <http://now.metamodel.me/>`_
+Alternativ könnt ihr auch die aktuelle MetaModels Version von unserer `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_ laden.
+

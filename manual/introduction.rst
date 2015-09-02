@@ -1,8 +1,8 @@
-Introduction to MetaModels
+Vorstellung von MetaModels
 ==========================
 
-What are MetaModels?
---------------------
+Was ist MetaModels?
+-------------------
 
 MetaModels are data models you can configure in the Contao Backend.
 Every MetaModel consists of various attributes of certain data types

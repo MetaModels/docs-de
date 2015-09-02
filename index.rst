@@ -1,61 +1,63 @@
-Welcome to MetaModels!
-======================
+Willkommen zu MetaModels!
+=========================
 
-This is the official documentation of *MetaModels*, an extension for the `Contao Content Management System`_.
+Dies ist die offizielle Dokumentation von *MetaModels*, eine Erweiterung für das `Contao Content Management System`_.
 
 .. _Contao Content Management System: https://contao.org
 
-This documentation is split into three sections:
+Diese Dokumentation gliedert sich in drei Bereiche:
 
-    In the :ref:`manual` you find general documentation about MetaModels.
+    :ref:`manual` - Hier werden generelle Sachen von MetaModels dokumentiert.
 
-    In the :ref:`cookbook` you find specific solutions for specific needs.
+    :ref:`cookbook` - Workflows und 'Best practice' Beispiele um mit MetaModels zu arbeiten.
 
-    In the :ref:`reference` you find reference information like a list of events.
+    :ref:`reference` - Dokumentation über Events, Schnittstellen und vielem mehr.
 
 
-If you want to contribute, too, please click the „Edit on GitHub“ link in the upper right corner or visit our
-`GitHub project page`_.
+Wenn Ihr einen Fehler gefunden habt oder einen Workflow habt, den ihr anderen nahebringen wollt, könnt ihr uns gerne
+unterstützen. Hierfür müsst ihr nur auf den „Edit on GitHub“ Link in der oberen rechte Ecke klicken oder uns
+auf `GitHub Projekt Seite`_ besuchen.
 
-.. _GitHub project page: https://github.com/MetaModels/docs
+.. _GitHub Projekt Seite: https://github.com/MetaModels/docs
 
 .. _manual:
 
 Manual
 ------
 
-.. toctree::
-    :glob:
-    :maxdepth: 2
+    .. toctree::
+        :glob:
+        :maxdepth: 2
 
-    manual/introduction
-    manual/install
-    manual/first-metamodel
-    manual/features
+        manual/introduction
+        manual/install
+        manual/first-metamodel
+        manual/features
 
 .. _cookbook:
 
 Cookbook
 --------
 
-.. toctree::
-    :glob:
-    :maxdepth: 2
+    .. toctree::
+        :glob:
+        :maxdepth: 2
 
-    cookbook/*
+        cookbook/*
 
 .. _reference:
 
 Reference
 ---------
 
-.. toctree::
-    :glob:
-    :maxdepth: 2
+    .. toctree::
+        :glob:
+        :maxdepth: 2
 
-    reference/*
+        reference/*
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
+
