@@ -1,8 +1,11 @@
-MetaModels reference
-====================
+MetaModels Referenz
+===================
 
-This reference is mainly intended for developers that want to enhance MetaModels with own attributes and/or filters etc.
+Die Referenzen sind hauptsächlich für Entwickler gedacht, die MetaModels erweitern wollen oder eigene Attribute, Filter
+oder mehr erstellen wollen.
 
-.. toctree::
-    :maxdepth: 2
-    api
+    .. toctree::
+        :maxdepth: 2
+
+        api
+        faq
