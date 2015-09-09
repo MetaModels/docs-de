@@ -27,10 +27,6 @@ Datensätze einzeln oder als Liste auf der Webseite ausgegeben werden und mit de
 Inhaltselement/Modul "MetaModel-Frontendfilter" steht ein Filter für das Frontend
 zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
 
-
-Übersicht
-^^^^^^^^^
-
 .. toctree::
     :hidden:
     :maxdepth: 1
