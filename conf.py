@@ -26,7 +26,7 @@ project = u'MetaModels'
 copyright = u'2015, Team MetaModels'
 version = '2.0'
 release = '2.0.0'
-language = 'en'
+language = 'de'
 exclude_patterns = ['_build', '_ext']
 pygments_style = 'sphinx'
 
@@ -38,6 +38,7 @@ html_theme_path = ["_themes", ]
 html_static_path = ['_static']
 html_use_modindex = False
 htmlhelp_basename = 'MetaModelsdoc'
+html_favicon = '_img/favicon.ico'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -61,8 +62,8 @@ man_pages = [
 # -- Options for Texinfo output -------------------------------------------
 
 texinfo_documents = [
-  ('index', 'MetaModels', u'MetaModels Documentation',
-   u'Team MetaModels', 'MetaModels', 'One line description of project.',
+  ('index', 'MetaModels', u'MetaModels Dokumentation',
+   u'Team MetaModels', 'MetaModels', 'Online-Handbuch des Projektes.',
    'Miscellaneous'),
 ]
 

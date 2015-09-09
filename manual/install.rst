@@ -1,34 +1,47 @@
-MetaModels installieren
------------------------
+MetaModels installieren und aktualisieren
+-----------------------------------------
 
-via Composer
-^^^^^^^^^^^^
+Installieren via Composer
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-MetaModels und alle seine Abhängigkeiten können mit der großartigen `Composer Erweiterung <https://c-c-a.org/ueber-composer>`_ geladen werden.
+MetaModels und alle seine Abhängigkeiten können mit der `Composer Erweiterung <https://c-c-a.org/ueber-composer>`_
+im Contao-Backend geladen bzw. installiert werden.
 
-Wenn euer Contao Installation bereits mit der neuen Paketverwaltung Composer versehen ist, könnt ihr MetaModels
-einfach installieren indem ihr folgende Pakete auswählt:
+Wenn die Contao Installation bereits mit der neuen Paketverwaltung Composer versehen ist,
+kann man MetaModels
+einfach installieren in dem folgende Pakete auswählt werden:
 
 * `MetaModels/core <https://packagist.org/packages/MetaModels/core>`_ (~2.0)
 * `MetaModels/bundle_all <https://packagist.org/packages/MetaModels/bundle_all>`_ (~1.0)
 
-Solltet ihr nicht alle Attribute oder Filter brauchen, könnt ihr diese auch einzeln Installieren oder eins unseren anderen
-`Pakete <https://github.com/MetaModels?query=bundle>`_ auswählen. Die Pakete sind in Gruppen zusammen gefasst und
-sollten für jeden das richtige bieten.
+Werden nicht alle Attribute oder Filter gebraucht, können diese auch einzeln installiert
+oder anderes `Bundle-Paket <https://github.com/MetaModels?query=bundle>`_ ausgewählt
+werden. Die Pakete sind in Gruppen zusammen gefasst und sollten den meisten Ansprüchen genügen.
 
-Beispiel der composer.json:
+Installieren via Nightly build
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: javascript
+Alternativ zur Installation via Composer ist die manuelle Installation per FTP möglich. Dazu wird
+die aktuelle Version von MetaModels von der `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_
+geladen, entpackt und per FTP auf den Server hoch geladen. Die meisten Ordner des Zip-Paketes
+kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionem
+müssen in das Hauptverzeichnis (Root) von Contao.
 
-    {
-        "require": {
-            "metamodels/core": "~2.0",
-            "metamodels/bundle_all": "~1.0"
-        }
-    }
+MetaModels aktualisieren
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-via Nightly build
-^^^^^^^^^^^^^^^^^
+Wurde MetaModels über den Composer installiert, ist darüber auch die Aktualisierung durchzuführen.
 
-Alternativ könnt ihr auch die aktuelle MetaModels Version von unserer `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_ laden.
+Bei der manuellen Installation von MetaModels sind für ein Update verschiedene Aspekte zu beachten.
+Das folgende Vorgehen hat sich bisher bewährt:
 
+* alle alten Ordner von MetaModels löschen (welche das waren, kann im vorhergehenden Download des
+  Nightly build ermittelt werden) - wirklich **ALLE**
+* Contao Cache leeren -> /system/cache (alles da in dem Ordner)
+* **KEIN** DB update machen (sonst ist alles weg)
+* neue Nightly-build-Dateien wie bei Erstinstallation downloaden, entpacken und hoch laden (per FTP)
+* DB-Update machen über die /contao/install.php
+
+Aktuelle Informationen sind im
+`Forum <https://community.contao.org/de/showthread.php?56725-MetaModels-aktualisieren-%28ohne-Composer%29>`_
+zu finden.

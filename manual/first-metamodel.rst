@@ -1,9 +1,8 @@
----------------
-The first MetaModel
----------------
+Das erste MetaModel
+===================
 
 Install with composer
-=====================
+---------------------
 
 You’ll need the MetaModels core and some attributes / filter to get MetaModels running. In you composer search
 ``metamodels/core`` an ``metamodels/bundle_all`` to install the core and all bundles and filters. 
@@ -13,7 +12,7 @@ When installed, run the database update and your MetaModels installation is done
 .. note:: If you know that you don’t need all attributes and / or filter you can install every single package by it’s own.*
 
 Your first MetaModel
-=====================
+---------------------
 
 Create MetaModels
 -----------------
@@ -145,7 +144,7 @@ Choose:
 * Sorting: sorting
 
 Create Rendersettings
-======================
+----------------------
 
 For now, we have two MetaModel with some attributes and a link between booth. But we didn’t want just to store some data, we also like to display them.
 
@@ -209,7 +208,7 @@ Go to the „render settings“ of „reference“.
 * After adding, activate „name“, „description“, „category“, „picture_highlight“, „picture_gallery“
 
 Input Screens
-==============
+--------------
 
 For now there are two MetaModels with some Attributes and Rendersetting. But how do we get data in our MetaModels?
 With input screens!
@@ -256,7 +255,7 @@ In the grouping & sorting section you need to create at least one object to sort
 For example: "Enable manual sorting" without grouping.
 
 View conditions
-================
+----------------
 
 View conditions are the easy part in MetaModels. But, you might guess that you also need here at least one to get things work.
 
@@ -282,5 +281,5 @@ Some time ago, we started with just a MetaModels package and already arrived to 
 Continue to the new „Referenz“ entry in your „content“ navigation and add a first item.
 
 Filter Setting
-===============
+---------------
 (Todo)
