@@ -58,7 +58,7 @@ Mit der aktuellen Version 2.0 von MetaModels liegt nun das Ergebnis von vielen S
 der Diskussion um die "beste Lösung" und harter Programmierung vor.
 
 MetaModels im Vergleich zu anderen Tools
------------------------------------------
+----------------------------------------
 
 MetaModels eignet sich sehr gut für die in vielen Bereichen eingesetzte Arbeitsteilung
 zwischen "Administrator" und "Redakteuren" - soll heißen: der Administrator oder Entwickler
