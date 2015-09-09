@@ -1,9 +1,6 @@
 Komponenten eines MetaModel
 ===========================
 
-Einleitung
-----------
-
 In den folgenen Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"
 des Aufbaus der Erweiterung zu verstehen. Zunächst eine Einordnung von zwei Begriffen:
 mit MetaModel (Singular) soll im Folgenden eine Datentabelle mit ihren Attributen, Ein-/Ausgabe
@@ -35,6 +32,7 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
 ^^^^^^^^^
 
 .. toctree::
+    :hidden:
     :maxdepth: 1
     
     new-mm
