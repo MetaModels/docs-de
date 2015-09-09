@@ -66,7 +66,6 @@ erstellt das oder die MetaModels mit den Eingabemasken und Ausgabefunktionen und
 Redakteur(e) können die Inhalte pflegen, wie sie das von anderen Bereichen von Contao
 gewöhnt sind.
 
-<<<<<<< HEAD
 Mit den Eingabemasken kann sehr genau festgelegt werden, wie und welche Daten eingeben 
 werden können oder müssen. Ähnliche Funktionen gibt es z.B. bei den Erweiterungen des
 "[dma_elementgenerator]" oder der "[rocksolid-custom-elements]". Der Unterschied zu 
@@ -90,34 +89,6 @@ kann MetaModels seine Stärken hervorragend ausspielen. Mit MetaModels können a
 Benutzer Lösungen erarbeiten, die ohne Programmierung auskommen wollen oder müssen. Es ist
 aber dennoch anzumerken, dass nur mit einem Grundwissen an PHP, HTML und SQL/Datenbankschema
 die Möglichkeiten von MetaModels ausgeschöpft werden können.
-=======
-Die Geschichte von MetaModels
------------------------------
-
-MetaModels wurde entwickelt, um den in den Jahren gekommen Catalog zu ersetzten.
-
-Dadurch das der Catalog von "vielen" Programmieren weiterentwickelt wurde
-und jeder dieser Programmiere einen eigenen Style hatte Quellcode zu schreiben wurde
-es immer schwerer den Catalog, so wie es war, weiterzuentwickeln bzw. zu warten.
-
-Daher haben wir uns entschlossen, alles was wir aus dem Catalog 1 und dem Catalog 2
-gelernt hatten zu nehmen, in einen großen Topf zu schmeißen und daraus einen ganz
-neuen Catalog 3 zu erstellen.
-
-Diese neue, bessere Catalog sollte nicht nur mit den alten Funktionen daher kommen,
-sondern auch neue Möglichkeiten bieten, wie ein modular erweiterbares, flexibles System.
-
-Währen der Entwicklung von dieser neuen Erweiterung wurde uns aber klar, dass es nicht einfach
-werden würde eine Migration das alte System auf diese neue Erweiterung zu vollziehen. Dies galt nicht
-nur für den Quellcode sondern auch für die Lernkurve.
-
-Die Flexibilität, welches das neue System nun besaß, ging mit viele Einstellungsmöglichkeiten daher. Dies zu lernen
-und einen richtigen Workflow zu entwickeln würde dauern.
-
-Daher haben wir uns dazu entschlossen, neben dem neuen Quellcode auch einen neuen Name für die
-Erweiterung zu finden. So entstand MetaModels. Wie der Phönix aus der Asche der alten Catalogs.
-
->>>>>>> origin/de-2.0
 
 Resourcen
 ---------

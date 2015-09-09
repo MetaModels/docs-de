@@ -30,6 +30,7 @@ Handbuch
 --------
 
     .. toctree::
+        :glob:
         :maxdepth: 1
 
         manual/introduction
