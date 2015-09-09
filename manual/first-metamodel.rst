@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 Das erste MetaModel
 ===================
+=======
+-------------------
+The first MetaModel
+-------------------
+>>>>>>> origin/de-2.0
 
 Install with composer
 ---------------------
