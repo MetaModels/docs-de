@@ -4,15 +4,15 @@ http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 
 
 Verlinkungen:
-oberhalb der zu verlinkenden Überschrift
+oberhalb der zu verlinkenden Ãœberschrift
 
 .. _rst_features:
 
-als Link einfügen z.B. per
+als Link einfÃ¼gen z.B. per
 
 :ref:`rst_features`
 
-Bei den neueren Verlinkungen habe ich die Form <dateiname>_<überschrift-mit-bindestrich> gewählt - z.B.
+Bei den neueren Verlinkungen habe ich die Form <dateiname>_<Ã¼berschrift-mit-bindestrich> gewÃ¤hlt - z.B.
 
 .. _introdution_was-ist-metamodels:
 
