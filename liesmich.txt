@@ -2,7 +2,6 @@ Anmerkungen zur Arbeit mit Sphinx:
 
 http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 
-
 Verlinkungen:
 oberhalb der zu verlinkenden Überschrift
 
