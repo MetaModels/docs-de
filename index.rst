@@ -60,7 +60,7 @@ Referenz
         :glob:
         :maxdepth: 1
 
-        reference/*
+        reference/index
 
 Indizes und Tabellen
 ====================
