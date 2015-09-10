@@ -31,8 +31,9 @@ spezifischen Optionen:
 * **Alias**: Alias-Feld z.B. für URLs |br|
   der Alias kann als Kombination von verschiednenen (vorhandenen) Attributen erstellt
   werden; als Option kann die Neuerstellung des Alias bei Änderungen der Urspungs-Attribute 
-  erzwungen werden (Neuerstellung des Alias erzwingen); ein Alias wird automatisch als 
-  eindeutiger Wert erstellt (???)
+  erzwungen werden (Neuerstellung des Alias erzwingen); ein Alias wird nicht automatisch
+  als eindeutiger Wert erstellt - dafür ist eine Aktivierungd er Checkbox "Eindeutige Werte"
+  notwendig
 * **Kontrollkästchen (Checkbox)**: einzelne Checkbox für Boolsche-Werte |br|
   mit der Checkbox können Boolsche-Werte (0|1) gesetzt werden; eine spezielle Variante
   ist das   "Veröffentlichen" - damit erscheint im Backend das Icon "Auge" wobei die
@@ -57,8 +58,11 @@ spezifischen Optionen:
   wenn die Option "Mehrfachauswahl" gesetzt ist von mehreren Dateien zur Verfügung;
   mit der Option "Passen Sie den Dateibaum an" können während der Auswahl weitere
   Dateioptionen gesetzt werden.
-* **Sprachschlüssel**: ???
-* **Langtext**: Texteingabe per WYSIWYG-Editor
+* **Sprachschlüssel**: Auswahl von ISO-Sprachcodes |br|
+  mit dem Attribut steht eine Auswahl von Sprachcodes zur Verfügung; die Sprachcodes
+  können per Checkbox ausgewählt werden
+* **Langtext**: Texteingabe |br|
+  Attribut für längere Texteingaben
 * **Numerisch**: Eingabe von ganzzahligen Werten (Integer)
 * **Bewertung**: Bewertungsmodul mit Sternen |br|
   das Attributmodul dient zur Ausgabe ein "Sternchen-Bewertung" im Frontend;

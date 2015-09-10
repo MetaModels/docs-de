@@ -59,7 +59,8 @@ Optionen der Sortierung und Gruppierung
   Gruppierungstyp wie nach Anfangsbuchstabe oder auch nach Zeitraum wie Woche,
   Monat
 * **rendersortattr**: |br|
-  ???
+  Auswahl des Attributes, nach dem Sortiert werden soll (ggf. innerhalb einer
+  Gruppierung)
 * **rendersort**: |br|
   Sortierrichtung: Aufsteigend (ASC) oder Absteigend (DESC)
 

@@ -19,9 +19,10 @@ Der Name des Metamodel dient der Bezeichnung im Backend und kann frei gewählt w
 Bezeichnung sollte jedoch für die weitere Arbeit sinnvoll auf den Inhalt schließen z.B.
 "Adressen".
 
-Gleiches gilt für den Tabellenname, wobei sich der Präfix "mm\_" im Tabellennamen bewährt hat -
-die Tabelle könnte dann z.B. "mm_addresses" heißen. Mit dem Präfix können die zu MetaModels zugehörigen
-Tabellen leichter in Datenbanktools wie phpMyAdmin ausfindig gemacht werden.
+Gleiches gilt für den Tabellenname, wobei der Präfix "mm\_" im Tabellennamen mit eingegeben
+werden kann bzw. automatisch angefügt wird. Die Tabelle könnte dann z.B. "mm_address"
+heißen - ob der Name im Singular oder Plural stehen sollte, gibt es unterschiedliche
+"Meinungslager".
 
 Mit der Erstellung der Tabelle werden in dieser nur einige, für das Zusammenspiel mit der Erweiterung
 MetaModels notwendige, Spalten wie id, pid, timestamp usw. angelegt. Die weiteren, individuellen Spalten
@@ -34,8 +35,9 @@ Optionen
 Bei der Erstellung eines neuen MetaModel gibt es die weiteren Optionen "Übersetzung" und "Varianten".
 
 Wurde die Option "Übersetzung" ausgewählt, stehen nach einem Neuladen der Seite mehrere Sprachen als
-Auswahl zur Verfügung. Eine der Sprachen sollte als "Fallback" aktiviert werden. Ist die Option
-aktiviert, werden spezielle, mehrsprachige Attribute zur Auswahl angeboten.
+Auswahl zur Verfügung. Eine der Sprachen sollte als "Fallback" aktiviert werden - erfolgt dies nicht,
+wird die als erste ausgewählte Sprache als Fallback verwendet. Ist die Option "Übersetzung" im 
+MetaModel aktiviert, werden spezielle, mehrsprachige Attribute zusätzlich als Auswahl angeboten.
 
 Bei einer nachträglichen Aktivierung der Mehrsprachigkeit, werden die vorhandenen Attribute
 bzw. die eingegeben Werte nicht austomatisch übernommen. Ob eine Mehrsprachigkeit notwendig ist,
@@ -45,7 +47,7 @@ Wurde die Option "Varianten" ausgewählt, sieht man zunächste keine weiter Ver�
 die Option gesetzt, ist bei den Attributen die Aktivierung der Option "Varianten überschreiben" möglich.
 Mit allen Attributen, bei denen die Option "Varianten überschreiben" gesetzt ist, können weitere Eingabe-
 Masken für die Varianteneigabe, z.B. zum "Überschreiben" von "Elternwerten", erstellt werden. Die 
-Eingabemasken der Varianten erreicht man über das Icon "|img_variants| |nbsp| Neue Variante" in der
+Eingabemasken der Varianten erreicht man über das Icon "|img_variants| Neue Variante" in der
 Listendarstellung der Eltern-Elemente.
 
 Mit den Varianten entsteht eine "Eltern-Kind-Beziehung" innerhalb einer MetaModel-Datenbanktabelle, die

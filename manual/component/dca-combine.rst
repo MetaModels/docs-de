@@ -4,7 +4,8 @@
 =========================================
 
 .. note:: Zugriffsoptionen auf die Rendereinstellungen und Eingabemasken definieren;
-  Zugriff der BE-Eingabe(n) sollte mindestens für Admins freigeschaltet sein
+  Zugriff der BE-Eingabe(n) sollte mindestens für Benutzergruppe 'Administrator'
+  freigeschaltet sein
 
 Einleitung
 ----------

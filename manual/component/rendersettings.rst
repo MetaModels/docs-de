@@ -87,7 +87,7 @@ das Icon "|img_rendersettings_add| Alle hinzufügen" erfolgen - alternativ über
 Bei dem Weg über "Alle hinzufügen" muss zwei mal eine Bestätigung erfolgen.
 
 Anschließend stehen die Attribute der Rendereinstellung zur Verfügung und müssen ggf. noch aktiviert
-werden.
+werden bzw. es müssen nur die aktiviert sein, die in der Listenansicht angezeigt werden sollen.
 
 Bei den einzelnen Attributen kann das zu verwendende Template geändert und/oder eine spezielle
 CSS-Klasse eingetragen werden ("|img_edit| Bearbeiten").
