@@ -37,10 +37,12 @@ Filterattribute
 ---------------
 
 * **Vordefiniertes Filterset**: |br|
-  ???
+  Eingabe einer Liste mit IDs, nach denen gefiltert werden soll
 * **Einfache Abfrage**: |br|
-  Attribut:  |br|
-  URL-Parameter:  |br|
+  erzeugt eine Filterung nach einem Attribut; für die Filterung
+  kann ein URL-Parameter angegeben werden; mit Option "Statischer Parameter"
+  kann in den Inhaltselementen/FR-Modulen aus einer Select-Liste ein Wert
+  zum Filtern aktiviert werden
 * **Eigenes SQL**: |br|
   eigene SQL-Bedingungen zur Filterung; den Hilfe-Assistenten (Popup) beachten
 * **UND-Bedingung (AND)**: |br|
@@ -50,7 +52,8 @@ Filterattribute
 * **Veröffentlichungsstatus**: |br|
   prüft ein Attributwert auf 1; kann Attribut "published" sein
 * **Übersetzter Veröffentlichungsstatus**: |br|
-  ???
+  prüft ein übersetzten Attributwert auf 1; kann Attribut
+  "published" sein
 * **Ja / Nein**: |br|
   Ja/Nein-Auswahl z.B. als Radio-Buttons
 * **Wert von/bis**: |br|
