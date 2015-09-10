@@ -20,6 +20,24 @@ Tabellen:
 http://www.tablesgenerator.com/markdown_tables
 
 
+Bilder:
+Im Text per "Ersetungstoken" z.B. Lorem ipsum |img_filter| bla bla...
+
+und unten 
+.. |img_filter| image:: /_img/filter.png
+
+
 Hinweise:
 .. warning:: 
 .. note::
+
+
+HTML-Sonderzeichen usw.:
+per "Ersetungstoken" z.B. kostet 2.000 |nbsp| EUR
+
+.. |nbsp| unicode:: 0xA0 
+   :trim:
+   
+.. |br| raw:: html
+
+   <br />

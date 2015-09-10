@@ -129,6 +129,14 @@ Option "Varianten" gesetzt ist.
 Mit der Option "Eindeutige Werte" werden die Attributeingaben auf Eindeutigkeit
 (unique) geprüft.
 
+Ablauf
+------
+
+Ein neues Attribut wird über "|img_new| Neues Attribut" geöffnet. Nachdem 
+alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird die Einstellung
+gespeichert und es erscheint in der Attributliste der vorhandenen Metamodels.
+Die Reihenfolge in der Liste hat keinen weiteren Einfluß.
+
 
 .. |img_fields| image:: /_img/fields.png
 .. |img_new| image:: /_img/new.gif
