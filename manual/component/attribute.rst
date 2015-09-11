@@ -10,14 +10,15 @@ Einleitung
 ----------
 
 Die Komponente "Attribute" ist eine der grundlegensten Einstellung in einem MetaModel.
-Mit den Attributen werden die eigene, spezifischen Datenfelder definiert und in der
+Mit den Attributen werden die eigenen, spezifischen Datenfelder definiert und in der
 Datenbanktabelle als Spalten angelegt.
 
 Bei der Erstellung eines Attributs "|img_new| Neues Attribut" sind als Pflichtfelder 
 die Auswahl des Attributtyps sowie die Eingabe des Spaltennamens definiert - der
 Spaltenname definiert, wie der Name schon sagt, die Bezeichnung der Spalte in der
 Datenbanktabelle. Als zusätzliche Eingaben können ein Name und eine Beschreibung
-ausgefüllt werden.
+ausgefüllt werden, die auch als Bezeichnung und Beschreibung in der Eingabemaske
+erscheinen.
 
 .. warning:: Beim Ändern des Attributtyps werden, wie auch beim Löschen des Attributs,
   die bisher eingegebenen Werte in der Datenbank gelöscht! Muss dennoch ein Attributtyp
@@ -86,7 +87,7 @@ spezifischen Optionen:
   die Daten werden als Unix-Timestamp gespeichert; bei eigenen SQL-Filterungen müssen
   ggf. Konvertierungen vorgenommen werden
 * **URL**: Linktext und URL |br|
-  Eingabe von externen Links (inkl. "http://" eingeben) oder über den Seitenpicker
+  Eingabe von externen Links (inkl. "\http://" eingeben) oder über den Seitenpicker
   interne Links; optional kann mit "Titel entfernen" nur die URL ausgegeben werden
   
 Ist im MetaModel die Option "Übersetzung" aktiviert, sind die folgenden Attribute
@@ -111,7 +112,7 @@ auch weitere Attributtypen zur Verfügung stehen.
 
 Die Reihenfolge, wie die Attribute angelegt werden, ist frei wählbar -
 lediglich bei Attributen, die sich auf andere Attribute beziehen wie z.B.
-der "Alias" oder "Kombinierte Einträge" können erst nachfolgend angelegt werden.
+der "Alias" oder "Kombinierte Einträge" ist eine nachfolgende Erstellung sinnvoll.
 
 Bei den Attributen "Auswahl" und "Mehrfachauswahl" müssen zudem erst die zu
 referenzierenden MetaModel erstellt sein.

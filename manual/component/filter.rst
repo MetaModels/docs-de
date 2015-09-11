@@ -13,16 +13,18 @@ Einleitung
 Mit der Komponente "Filter" steht ein umfangreiches Werkzeug zur Verfügung,
 um die Ansicht und Auswahl der Datensätze (Items) eines MetaModel zu beeinflussen.
 Die Filter reduzieren die Gesamtmenge der Items, d.h. nach einer Filterung steht
-eine Teilmenge für die Ausgabe bereit. Es gilt zu beachten, dass jeder Filter
-immer nur eine Liste mit IDs (der Items) ausgibt - eine Änderung der Itemwerte
-ist z.B. über eine SQL-Query nicht möglich.
+eine Teilmenge von diesen für die Ausgabe bereit. Es gilt zu beachten, dass 
+jeder Filter immer nur eine Liste mit IDs (der Items) ausgibt bzw. ein 
+Filterattribut eine Liste mit IDs an ein nächstes Filterattribut weiter reicht
+- eine Änderung der Itemwerte ist z.B. über eine SQL-Query nicht möglich.
 
 Die Erstellung der Filter erfolgt in einer zweistufigen Hierarchie, in dem
 zunächst ein bezeichneter Filter "als Container" erstellt wird, der wiederum
-ein oder mehrere Filtereinstellungen (Attribute) beinhalten kann. sind mehrere
+ein oder mehrere Filtereinstellungen (Attribute) beinhalten kann. Sind mehrere
 Filterattribute auf dieser Ebene vorhanden, sind diese per UND verknüpft. Für
 eine ODER-Verknüpfung muss ein Filterattribut ODER erstellt werden welchens wiederum
-weitere Filterattribute aufnehmen kann.
+weitere Filterattribute aufnehmen kann. Mit den Möglichkeiten der Verschachtelung
+können nahezu alle UND/ODER-Angaben eines nativen SQL-Query nachgebildet werden.
 
 Einige Filterattribute haben die auswählbare Option, nur zugeordnete bzw. nur
 verbleibende Filtereinträge anzuzeigen, um eine dynamische Anzeige der Filter zu
@@ -44,7 +46,7 @@ Filterattribute
   kann in den Inhaltselementen/FR-Modulen aus einer Select-Liste ein Wert
   zum Filtern aktiviert werden
 * **Eigenes SQL**: |br|
-  eigene SQL-Bedingungen zur Filterung; den Hilfe-Assistenten (Popup) beachten
+  eigene SQL-Bedingungen zur Filterung; den |img_about| Hilfe-Assistenten (Popup) beachten
 * **UND-Bedingung (AND)**: |br|
   Container für weitere Filterattribute mit UND-Verknüpfung
 * **ODER-Bedingung (OR)**: |br|
@@ -86,6 +88,7 @@ eingefügt werden.
 .. |img_filter| image:: /_img/filter.png
 .. |img_filter_setting| image:: /_img/filter_setting.png
 .. |img_new| image:: /_img/new.gif
+.. |img_about| image:: /_img/about.png
 
 .. |br| raw:: html
 

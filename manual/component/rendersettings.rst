@@ -10,9 +10,9 @@ Einleitung
 ----------
 
 Mit den "Rendereinstellungen" werden die grundlegenden Parameter für die Auflistung bzw.
-Anzeige der einzugebenden bzw. auszugebenden Datensätze festgelegt - die einzelnen
-Datensätze, die in einem MetaModel eingespeichert werden, werden auch als "Items"
-bezeichnet.
+Anzeige der einzugebenden bzw. auszugebenden Datensätze sowohl für das Backend als auch
+für das Frontend - jeweils separat - festgelegt. Die einzelnen Datensätze, die in einem
+MetaModel eingespeichert werden, werden auch als "Items" bezeichnet.
 
 Im Backend müssen die Items zur weiteren Eingabe oder Änderung aufgelistet werden und
 im Frontend für eine Anzeige bzw. Ausgabe. Auch wenn verschiedene Aspekte zwischen
@@ -22,17 +22,19 @@ so dass die Einstellungen in der Komponente "Rendereinstellungen" zusammengefass
 Für das Backend benötigt jedes MetaModel eine Rendereinstellung, da nur über diese eine
 Eingabemaske für die Dateneingabe und -änderung aufgerufen werden kann.
 
-Für das Frontend sind nur bei den MetaModel Rendersettings anzulegen, deren Items auch
+Für das Frontend sind nur bei den MetaModel Rendereinstellungen anzulegen, deren Items auch
 als solche aufgelistet bzw. angezeigt werden sollen. MetaModel, welche über eine Relation
 (Attribute "Auswahl" oder "Mehrfachauswahl") an ein anderen MetaModel angebunden sind,
-benötigen somit keine Rendereinstellung für das Frontend.
+benötigen somit nicht zwingend eine Rendereinstellung für das Frontend.
 
 Neben unterschiedlichen Anforderungen für Backend und Frontend, können mit den
 Rendereinstellungen auch weitere Anforderungen abgedeckt werden. Für jedes MetaModel
 kann eine Vielzahl von unterschiedlichen Rendereinstellungen angelegt werden, um
 zum Beispiel differenzierte Ausgaben zu erzeugen. So könnte eine Rendereinstellung
 eine Liste mit grundlegenden Informationen aufbereiten und eine weitere Rendereinstellung
-eine Detailausgabe (eine Detailausgabe ist "eine Liste mit einem Item").
+eine Detailausgabe (eine Detailausgabe ist "eine Liste mit einem Item"). Weiterhin
+kann einzelnen Rendereinstellungen der Zugriff von Benutzer und/oder Mitgliedergruppen
+über die :ref:`component_dca-combine` gewährt werden.
 
 Ist eine Rendereinstellung erzeugt und die Grundeinstellungen eingetragen, muss
 als weiterer Schritt die Attribute für die Einstellung aktiviert werden. Mehr dazu
@@ -43,9 +45,6 @@ z.B. zur Hervorhebung im Backenend.
 
 Optionen
 --------
-
-Mit "|img_new| Neu" wird eine neue Rendereinstellung geöffnet und es stehen die
-folgenden Optionen für die Eingabe zur Verfügung:
 
 * **Name** |br|
   der Name kann frei gewählt werden; zur besseren Unterscheidung werden häufig die

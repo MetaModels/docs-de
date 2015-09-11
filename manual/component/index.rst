@@ -2,9 +2,11 @@ Komponenten eines MetaModel
 ===========================
 
 In den folgenen Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"
-des Aufbaus der Erweiterung zu verstehen. Zunächst eine Einordnung von zwei Begriffen:
-mit MetaModel (Singular) soll im Folgenden eine Datentabelle mit ihren Attributen, Ein-/Ausgabe
--Möglichkeiten, Filtern usw. bezeichnet werden und mit MetaModels (Plural) der komplette Aufbau
+des Aufbaus der Erweiterung zu verstehen.
+
+Zunächst eine Einordnung von zwei Begriffen: mit **MetaModel** (Singular) soll im
+Folgenden eine Datentabelle mit ihren Attributen, Ein-/Ausgabe-Möglichkeiten,
+Filtern usw. bezeichnet werden und mit **MetaModels** (Plural) der komplette Aufbau
 mit dem Zusammenspiel mehrerer MetaModel untereinander.
 
 Nach dem Erstellen eines MetaModel stehen die folgenden Komponenten zur Bearbeitung zur Verfügung:
@@ -17,9 +19,9 @@ Nach dem Erstellen eines MetaModel stehen die folgenden Komponenten zur Bearbeit
 * |img_dca_combine| Eingabe- und Ausgabe-Optionen
 
 Bei der Erstellung eines (einfachen) MetaModel können die Komponenten in der aufgeführten 
-Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels kommt man
-nicht umhin, einzelne Eingaben in einem vorhandenen MetaModel weiter zu ergänzen
-oder abzuändern.
+Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels - also im
+Zusammenspiel mehrerer MetaModel miteinander - kommt man nicht umhin, einzelne Eingaben
+in einem vorhandenen MetaModel weiter zu ergänzen oder abzuändern.
 
 Mit der Erweiterung MetaModels erhält Contao jeweils zwei neue Inhaltselemente und Module
 für die Frontendausgabe. Mit dem Inhaltselement/Modul "MetaModel-Liste" können
