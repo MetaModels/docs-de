@@ -19,7 +19,7 @@ auf diese Parameter aus MetaModels nicht zurückgreifen und benötigen somit ent
 Unterstützung.
 
 Die "normalen Listenansichten" benötigen diese Sonderbehandlung nicht und die Seiten werden
-automatisch über die Contao-Funktionen orrekt in die Suche oder Sitemap aufgenommen.
+automatisch über die Contao-Funktionen korrekt in die Suche oder Sitemap aufgenommen.
 
 Optionen
 --------
@@ -37,7 +37,7 @@ Ablauf
 Eine neue Seitensuche kann über das Icon "|img_new| New searchable page" angelegt und die
 nach der Eingabe des Namens die Optionen für den Filter und das Rendering ausgewählt werden.
 Die Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder über
-die Neuerstellungen über die Systemwartung.
+die Neuerstellungen der Systemwartung.
 
 
 .. |img_searchable_pages| image:: /_img/searchable_pages.png
