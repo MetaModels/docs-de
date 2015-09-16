@@ -52,7 +52,7 @@ Screenshot).
 
 |img_attribute_03|
 
-Die Liste der erstellten Attribute sollte nun, wie im Screenshot zu sehen, aufgelistet
+Die Liste der erstellten Attribute sollte nun, wie im Screenshot zu sehen, aufgeführt
 werden.
 
 |img_attribute_04|

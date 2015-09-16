@@ -3,7 +3,7 @@
 Inhaltselemente/Module für die Frontendausgabe
 ==============================================
 
-Nachdem Alle Komponenten für die Dateneingabe konfiguriert sind,
+Nachdem alle Komponenten für die Dateneingabe konfiguriert sind,
 kann die Datenausgabe bearbeitet werden. Für die Datenausgabe
 stehen verschiedene Möglichkeiten zur Verfügung - in dem
 Beispiel soll die Ausgabe über das Artikel-Inhaltselement
@@ -13,6 +13,7 @@ Als Vorbereitung für die Ausgabe muss eine entsprechende Seite
 in Contao angelegt sein mit einem Artikel, der das Inhaltelement
 auf nimmt. Ein neues Inhaltselement wird angelegt und folgende
 Einstellungen aktiviert (siehe Screenshot):
+
 * Elementtyp: MetaModel-Liste
 * Sortieren nach: Name
 * Anzuwendenede Filtereinstellungen: Veröffentlicht
@@ -48,7 +49,7 @@ Die Ausgabe im Frontend sollte nun etwa wie folgt aussehen (Screenshot).
 
 |img_contentelements_04|
 
-Spielt man einige Testdaten in die Datenbank - oder gibt diese Manuell ein - sieht die
+Spielt man einige Testdaten in die Datenbank - oder gibt diese manuell ein - sieht die
 Telefonliste im Backend in etwa so wie in dem Screenshot aus
 
 |img_contentelements_05|
