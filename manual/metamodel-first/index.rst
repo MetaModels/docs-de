@@ -39,6 +39,7 @@ Die Umsetzung orientiert sich an den :ref:`component_index`.
     filter
     dca-combine
     contentelements
+    conclusion
 
 .. |img_fields| image:: /_img/icons/fields.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
