@@ -92,11 +92,11 @@ Bei den einzelnen Attributen kann das zu verwendende Template geändert und/oder
 CSS-Klasse eingetragen werden ("|img_edit| Bearbeiten").
 
 
-.. |img_rendersettings| image:: /_img/rendersettings.png
-.. |img_rendersetting| image:: /_img/rendersetting.png
-.. |img_rendersettings_add| image:: /_img/rendersettings_add.png
-.. |img_new| image:: /_img/new.gif
-.. |img_edit| image:: /_img/edit.gif
+.. |img_rendersettings| image:: /_img/icons/rendersettings.png
+.. |img_rendersetting| image:: /_img/icons/rendersetting.png
+.. |img_rendersettings_add| image:: /_img/icons/rendersettings_add.png
+.. |img_new| image:: /_img/icons/new.gif
+.. |img_edit| image:: /_img/icons/edit.gif
 
 .. |br| raw:: html
 

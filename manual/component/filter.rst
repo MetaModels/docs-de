@@ -85,10 +85,10 @@ die Hierachie beeinflusst werden und das Attribut z.B. innerhalb eines ODER-Filt
 eingefügt werden.
 
 
-.. |img_filter| image:: /_img/filter.png
-.. |img_filter_setting| image:: /_img/filter_setting.png
-.. |img_new| image:: /_img/new.gif
-.. |img_about| image:: /_img/about.png
+.. |img_filter| image:: /_img/icons/filter.png
+.. |img_filter_setting| image:: /_img/icons/filter_setting.png
+.. |img_new| image:: /_img/icons/new.gif
+.. |img_about| image:: /_img/icons/about.png
 
 .. |br| raw:: html
 

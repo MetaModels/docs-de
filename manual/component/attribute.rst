@@ -139,8 +139,8 @@ gespeichert und es erscheint in der Attributliste der vorhandenen Metamodels.
 Die Reihenfolge in der Liste hat keinen weiteren Einfluß.
 
 
-.. |img_fields| image:: /_img/fields.png
-.. |img_new| image:: /_img/new.gif
+.. |img_fields| image:: /_img/icons/fields.png
+.. |img_new| image:: /_img/icons/new.gif
 
 .. |br| raw:: html
 

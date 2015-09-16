@@ -3,19 +3,19 @@
 |img_searchable_pages| Seitensuche
 ==================================
 
-.. note:: Detailseiten eines MetaModel in der Suche, Sitemap und sitemap.xml von Contao einbinden
+.. note:: Detailseiten eines MetaModel in der Suche und sitemap.xml von Contao einbinden
 
 Einleitung
 ----------
 
-Mit der Seitensuche können die Detailseiten eines MetaModel-Renderings (Liste)in die
-Suche und Sitemap der Frontendmodule und in die Generierung der sitemap.xml eingebunden werden.
+Mit der Seitensuche können die Detailseiten eines MetaModel-Renderings (Liste) in das
+Frontendmodule der Suche und in die Generierung der sitemap.xml eingebunden werden.
 
 Diese "Sonderbehandlung" der Detailseiten gegenüber den normalen Listenanzeigen ergibt sich aus
 dem Seitenaufruf selbiger. Die im Contao-Seitenbaum angelegten Detailseiten müssen immer mit
 spezifischen GET- bzw. URL-Routing-Parameter aufgerufen werden, um eine (sinnvolle) Detailseite
-mit Werten auszugeben. Die Contao-Funktionen zur Generierung der Suche oder der Sitemap können
-auf diese Parameter aus MetaModels nicht zurückgreifen und benötigen somit entsprechende
+mit Werten auszugeben. Die Contao-Funktionen zur Generierung der Suche oder der sitemap.xml
+können auf diese Parameter aus MetaModels nicht zurückgreifen und benötigen somit entsprechende
 Unterstützung.
 
 Die "normalen Listenansichten" benötigen diese Sonderbehandlung nicht und die Seiten werden
@@ -40,8 +40,8 @@ Die Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus C
 die Neuerstellungen der Systemwartung.
 
 
-.. |img_searchable_pages| image:: /_img/searchable_pages.png
-.. |img_new| image:: /_img/new.gif
+.. |img_searchable_pages| image:: /_img/icons/searchable_pages.png
+.. |img_new| image:: /_img/icons/new.gif
 
 
 .. |br| raw:: html

@@ -57,8 +57,8 @@ die Werte für varbase gleich 1 und vargroup gleich der eigenen ID haben. Die Ki
 die Werte varbase gleich 0 und vargroup gleich der ID des Eltern-Datensatzes.
 
 
-.. |img_variants| image:: /_img/variants.png
-.. |img_new| image:: /_img/new.gif
+.. |img_variants| image:: /_img/icons/variants.png
+.. |img_new| image:: /_img/icons/new.gif
 
    
 .. |nbsp| unicode:: 0xA0 

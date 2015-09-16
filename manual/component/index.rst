@@ -1,3 +1,5 @@
+.. _component_index:
+
 Komponenten eines MetaModel
 ===========================
 
@@ -42,9 +44,9 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
     dca-combine
     contentelements
 
-.. |img_fields| image:: /_img/fields.png
-.. |img_rendersettings| image:: /_img/rendersettings.png
-.. |img_dca| image:: /_img/dca.png
-.. |img_searchable_pages| image:: /_img/searchable_pages.png
-.. |img_filter| image:: /_img/filter.png
-.. |img_dca_combine| image:: /_img/dca_combine.png
+.. |img_fields| image:: /_img/icons/fields.png
+.. |img_rendersettings| image:: /_img/icons/rendersettings.png
+.. |img_dca| image:: /_img/icons/dca.png
+.. |img_searchable_pages| image:: /_img/icons/searchable_pages.png
+.. |img_filter| image:: /_img/icons/filter.png
+.. |img_dca_combine| image:: /_img/icons/dca_combine.png

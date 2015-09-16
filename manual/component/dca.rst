@@ -126,13 +126,13 @@ Anschließend können in der Listenansicht der Eingabemasken über das Icon
 für die Sortierung und Gruppierung der gespeicherten Items angelegt werden.
 
 
-.. |img_dca| image:: /_img/dca.png
-.. |img_dca_setting| image:: /_img/dca_setting.png
-.. |img_dca_setting_add| image:: /_img/dca.png
-.. |img_dca_groupsortsettings| image:: /_img/dca_groupsortsettings.png
-.. |img_dca_condition| image:: /_img/dca_condition.png
-.. |img_new| image:: /_img/new.gif
-.. |img_edit| image:: /_img/edit.gif
+.. |img_dca| image:: /_img/icons/dca.png
+.. |img_dca_setting| image:: /_img/icons/dca_setting.png
+.. |img_dca_setting_add| image:: /_img/icons/dca.png
+.. |img_dca_groupsortsettings| image:: /_img/icons/dca_groupsortsettings.png
+.. |img_dca_condition| image:: /_img/icons/dca_condition.png
+.. |img_new| image:: /_img/icons/new.gif
+.. |img_edit| image:: /_img/icons/edit.gif
 
 .. |br| raw:: html
 

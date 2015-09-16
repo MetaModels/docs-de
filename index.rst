@@ -37,7 +37,9 @@ Handbuch
         manual/features
         manual/install
         manual/component/index
-        manual/first-metamodel
+        manual/metamodel-first/index
+        manual/metamodel-second/index
+        manual/metamodel-special/index
         manual/extended
 
 .. _index_cookbook:

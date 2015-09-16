@@ -1,3 +1,5 @@
+.. _manual_install:
+
 MetaModels installieren und aktualisieren
 =========================================
 

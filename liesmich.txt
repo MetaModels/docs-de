@@ -1,8 +1,19 @@
 Anmerkungen zur Arbeit mit Sphinx:
 
+Doku:
 http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 
+Online-Editor:
+http://rst.ninjs.org/
+
+Online Tabellengenerator:
+http://www.tablesgenerator.com/markdown_tables
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Verlinkungen:
+
 oberhalb der zu verlinkenden Überschrift
 
 .. _rst_features:

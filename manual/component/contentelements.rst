@@ -67,7 +67,7 @@ den klassischen Elementen von Contao inklusive der üblichen Möglichkeiten,
 wie den Zugriffsschutz zu aktivieren oder CSS-ID/Klassen anzugeben.
 
 
-.. |img_filter| image:: /_img/filter.png
+.. |img_filter| image:: /_img/icons/filter.png
 
 .. |br| raw:: html
 

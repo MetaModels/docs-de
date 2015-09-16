@@ -28,4 +28,4 @@ Ablauf
 In den vorgebenen Spalten der Ein- / Ausgabe-Optionen die Auswahlen treffen und speichern. Nun
 sollten die Eingabemöglichkeiten der MetaModel im Backend sichtbar sein.
 
-.. |img_dca_combine| image:: /_img/dca_combine.png
+.. |img_dca_combine| image:: /_img/icons/dca_combine.png
