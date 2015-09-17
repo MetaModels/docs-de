@@ -9,7 +9,7 @@ geschaltet. Eine Freischaltung für eine Frontendausgabe der Rendereinstellung
 ist nicht notwendig.
 
 Zum Aufruf der Ein- / Ausgabe-Optionen wird wieder die Übersicht MetaModels
-aktiviert, so dass der Eintrag der "Telefonliste" zu sehen ist. Nun erfolgt
+aktiviert, so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt
 ein Klick auf das Icon "|img_dca_combine| Ein- / Ausgabe-Optionen" und die
 Ansicht wechselt zur Options-Übersicht.
 
@@ -23,7 +23,7 @@ Screenshot.
 
 Nach dem "Speichern und schließen" wechselt die Ansicht zur Übersicht
 der MetaModels - gleichzeitig sollte in der linken Contao-Navigation
-ein neues Icon mit der Beschriftung "Telefonliste" erschienen sein
+ein neues Icon mit der Beschriftung "Mitarbeiterliste" erschienen sein
 (siehe Screenshot).
 
 |img_dca-combine_02|

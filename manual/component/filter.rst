@@ -43,7 +43,7 @@ Filterattribute
 * **Einfache Abfrage**: |br|
   erzeugt eine Filterung nach einem Attribut; für die Filterung
   kann ein URL-Parameter angegeben werden; mit Option "Statischer Parameter"
-  kann in den Inhaltselementen/FR-Modulen aus einer Select-Liste ein Wert
+  kann in den Inhaltselementen/FE-Modulen aus einer Select-Liste ein Wert
   zum Filtern aktiviert werden
 * **Eigenes SQL**: |br|
   eigene SQL-Bedingungen zur Filterung; den |img_about| Hilfe-Assistenten (Popup) beachten

@@ -4,11 +4,11 @@
 =========================
 
 In diesem Schritt wird die Eingabemasken für das MetaModel
-"Telefonliste" angelegt, über welche die Daten der Attribute in der
+"Mitarbeiterliste" angelegt, über welche die Daten der Attribute in der
 Datenbank gespeichert werden.
 
 Zum Aufruf der Eingabemasken wird wieder die Übersicht MetaModels aktiviert,
-so dass der Eintrag der "Telefonliste" zu sehen ist. Nun erfolgt ein Klick
+so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
 auf das Icon "|img_dca| Eingabemasken" und die Ansicht wechselt zur 
 Übersicht der Eingabemasken - diese ist aktuell noch leer.
 

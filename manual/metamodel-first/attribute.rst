@@ -3,7 +3,7 @@
 |img_fields| Attribute
 =========================
 
-Nachdem die Tabelle "mm_telefonliste" in der Datenbank erstellt wurde, muss in dieser
+Nachdem die Tabelle "mm_mitarbeiterliste" in der Datenbank erstellt wurde, muss in dieser
 nun die Felder bzw. Tabellenspalten zur Speicherung der Daten erzeugt werden - sprich
 die Attribute. Dieser Schritt erfolgt über die gleichnamige Komponente
 "|img_fields| Attribute".
@@ -24,7 +24,7 @@ Anhand der Aufgabenstellung werden die folgenden Felder benötigt:
 | Veröffentlicht  | published      | Checkbox |
 +-----------------+----------------+----------+
 
-Im ersten Schritt wechselt man in dem MetaModel "Telefonliste" in die Komponente
+Im ersten Schritt wechselt man in dem MetaModel "Mitarbeiterliste" in die Komponente
 "Attribute", in dem auf das Icon |img_fields| geklickt wird. Anschließend kann über
 "|img_new| Neues Attribut" das erste Attribut erstellt werden. Mit dem Klick auf
 "|img_new| Neues Attribut" wird nicht sofort die Eingabemaske geöffnet, sondern

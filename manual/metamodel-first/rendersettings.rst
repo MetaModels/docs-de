@@ -4,11 +4,11 @@
 ========================================
 
 In diesem Schritt werden die Rendereinstellungen für das MetaModel
-"Telefonliste" angelegt. Es wird eine Renderingeinstellung für das Backend
+"Mitarbeiterliste" angelegt. Es wird eine Renderingeinstellung für das Backend
 (Dateneingabe) und für das Frontend (Datenausgabe) benötigt.
 
 Zum Aufruf der Rendereinstellungen wird die Übersicht MetaModels aktiviert,
-so dass der Eintrag der "Telefonliste" zu sehen ist. Nun erfolgt ein Klick
+so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
 auf das Icon "|img_rendersettings| Rendereinstellungen" und die Ansicht
 wechselt zur Übersicht der Rendereinstellungen - diese ist aktuell noch leer.
 

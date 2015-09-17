@@ -8,7 +8,7 @@ Optionen der Ausgabe. In unserem Beispiel soll ein Filter angelegt werden,
 der für die Frontendausgabe nur die Einträge mit aktiviertem "Veröffentlicht".
 
 Zum Aufruf der Filter wird wieder die Übersicht MetaModels aktiviert,
-so dass der Eintrag der "Telefonliste" zu sehen ist. Nun erfolgt ein Klick
+so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
 auf das Icon "|img_filter| Filter" und die Ansicht wechselt zur 
 Übersicht der Filter - diese ist aktuell noch leer.
 
