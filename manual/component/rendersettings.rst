@@ -3,7 +3,7 @@
 |img_rendersettings| Rendereinstellungen
 ========================================
 
-.. note:: Listenansichen für Backend und Frontend erstellen;
+.. note:: Listenansichten für Backend und Frontend erstellen;
   Attribute hinzufügen und aktivieren
 
 Einleitung
@@ -16,7 +16,7 @@ MetaModel eingespeichert werden, werden auch als "Items" bezeichnet.
 
 Im Backend müssen die Items zur weiteren Eingabe oder Änderung aufgelistet werden und
 im Frontend für eine Anzeige bzw. Ausgabe. Auch wenn verschiedene Aspekte zwischen
-Backenend und Frontend unterschiedlich sind, gleichen sich dennoch sehr viele Sachen,
+Backend und Frontend unterschiedlich sind, gleichen sich dennoch sehr viele Sachen,
 so dass die Einstellungen in der Komponente "Rendereinstellungen" zusammengefasst sind.
 
 Für das Backend benötigt jedes MetaModel eine Rendereinstellung, da nur über diese eine
@@ -41,7 +41,7 @@ als weiterer Schritt die Attribute für die Einstellung aktiviert werden. Mehr d
 unter dem Punkt "Ablauf". Als weitere Einstellungsmöglichkeit kann bei jedem 
 Attribut in einer Rendereinstellung ein individuelles Template angewählt 
 werden (wenn dies vorher angelegt wurde) und eine eigene CSS-Klasse
-z.B. zur Hervorhebung im Backenend.
+z.B. zur Hervorhebung im Backend.
 
 Optionen
 --------
@@ -52,17 +52,17 @@ Optionen
   "BE Liste", "BE Erfassung" oder "FE Liste komplett"
 * **Template** |br|
   an dieser Stelle wird ein Template ausgewählt, in dem alle Items in einer Schleife
-  ausgebene werden; das Template ist sehr leicht in der Contao-üblichen Art übberschreibbar
+  ausgegeben werden; das Template ist sehr leicht in der Contao-üblichen Art überschreibbar
   zu beachten ist lediglich, dass Templates für das Backend nicht in einem Template-
   Unterordner angelegt werden dürfen; dem Template werden alle Attribute im Typ "raw" und
   nur die aktiven Attribute im Typ "html" und "text" übergeben
 * **Ausgabeformat** |br|
-  mögliche Auswahl ist HTML5, XHTML und Text; sofern keine speziellen Anfroderungen bestehen,
+  mögliche Auswahl ist HTML5, XHTML und Text; sofern keine speziellen Anforderungen bestehen,
   kann die Auswahl leer gelassen werden
 * **Weiterleitungsseite** |br|
   die Weiterleitungsseite ist für die Frontendausgabe, um z.B. auf eine Detailseite zu verlinken;
-  auf der Detailseite sollte ein Listenelemnt mit einem entsprechenden Filter vorhanden sein; bei
-  mehrsprachingen MetaModel gibt es je Sprache eine einstellung für Link und Filter
+  auf der Detailseite sollte ein Listenelement mit einem entsprechenden Filter vorhanden sein; bei
+  mehrsprachigen MetaModel gibt es je Sprache eine Einstellung für Link und Filter
 * **Leere Einträge verbergen** |br|
   leere Einträge der Attribute werden übersprungen - wichtig im Zusammenspiel, wenn die 
   Label der Attribute mit ausgeben werden
@@ -77,13 +77,13 @@ Ablauf
 
 Eine neue Eingabe für die Rendereinstellung wird über "|img_new| Neu" geöffnet. Nachdem 
 alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird die Einstellung gespeichert
-und erscheint in der Liste der vorhandenen Rendereinstellungen eines Metamodels.
+und erscheint in der Liste der vorhandenen Rendereinstellungen eines MetaModels.
 
 Neben dem "|img_edit| Stifticon" existiert das Icon für die "|img_rendersetting| Attributeinstellungen".
 Mit Kick auf das Icon öffnet sich eine Auflistung mit den zu den Rendereinstellungen aktivierten
 Attributen. Sind keine Attribute vorhanden, bzw. müssen welche hinzugefügt werden, kann das über
 das Icon "|img_rendersettings_add| Alle hinzufügen" erfolgen - alternativ über "|img_new| Neu". 
-Bei dem Weg über "Alle hinzufügen" muss zwei mal eine Bestätigung erfolgen.
+Bei dem Weg über "Alle hinzufügen" muss zweimal eine Bestätigung erfolgen.
 
 Anschließend stehen die Attribute der Rendereinstellung zur Verfügung und müssen ggf. noch aktiviert
 werden bzw. es müssen nur die aktiviert sein, die in der Listenansicht angezeigt werden sollen.

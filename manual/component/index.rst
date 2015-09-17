@@ -5,7 +5,7 @@ Komponenten eines MetaModel
 
 .. warning:: Noch im Aufbau!
 
-In den folgenen Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"
+In den folgenden Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"
 des Aufbaus der Erweiterung zu verstehen.
 
 Zunächst eine Einordnung von zwei Begriffen: mit **MetaModel** (Singular) soll im

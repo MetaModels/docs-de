@@ -17,7 +17,7 @@ Nach dem Speichern und Schließen der Eingabemaske gelangt man wieder zur MetaMo
 Mit dem Anlegen des MetaModel "Telefonliste" wurde eine Tabelle "mm_telefonliste" in
 der Datenbank erstellt. Mit den Icons der MetaModel-Komponenten kann die weitere
 Bearbeitung fortgeführt werden. Alle :ref:`component_index` die nicht konfiguriert
-werden müssen, werden ausgelassen bzw. es erfolgt ein entsprechnder Hinweis.
+werden müssen, werden ausgelassen bzw. es erfolgt ein entsprechender Hinweis.
 
 
 .. |img_new| image:: /_img/icons/new.gif

@@ -5,7 +5,7 @@ Inhaltselemente/Module für die Frontendausgabe
 
 .. note:: zur Anzeige im Fontend die eine MetaModel-Liste
   als Contentelement oder FE-Modul erstellen; optional kann
-  ebenfalls als Contentelement oder FE-Modul ein Filtzer
+  ebenfalls als Contentelement oder FE-Modul ein Filter
   erzeugt werden
 
 Einleitung
@@ -44,7 +44,7 @@ Optionen Liste
   Filter "Auswahl" die Option "Statischer Parameter" gesetzt,
   erscheint hier ein Selectfeld zur Wertauswahl
 * **Template-Einstellungen**: |br|
-  Auswahl der Renderingeinstellung; möchte man Einfluß auf
+  Auswahl der Renderingeinstellung; möchte man Einfluss auf
   die Ausgabe der Items der Ausgabeliste haben, dann bietet sich
   das Template der Renderingeinstellung an und nicht das 
   "Template der Ausgabe"

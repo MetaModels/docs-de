@@ -9,7 +9,7 @@
 Einleitung
 ----------
 
-Die Komponente "Attribute" ist eine der grundlegensten Einstellung in einem MetaModel.
+Die Komponente "Attribute" ist eine der grundlegendsten Einstellung in einem MetaModel.
 Mit den Attributen werden die eigenen, spezifischen Datenfelder definiert und in der
 Datenbanktabelle als Spalten angelegt.
 
@@ -25,15 +25,15 @@ erscheinen.
   bei Behalt der Werte geändert werden, sollte dies direkt auf der Datenbankebene z.B. über 
   Export/Import der Attribut-Spalte per CSV begleitet werden.
 
-Je nach Attributtyp stehen nach einem Neuladen der Seite weitere Eingabemöglichkeiten bzw.
+Je nach Attributtyp stehen nach einem Neu laden der Seite weitere Eingabemöglichkeiten bzw.
 Optionen zur Verfügung. Folgend eine Aufstellung der Attributtypen mit Hinweisen zu den 
 spezifischen Optionen:
 
 * **Alias**: Alias-Feld z.B. für URLs |br|
-  der Alias kann als Kombination von verschiednenen (vorhandenen) Attributen erstellt
-  werden; als Option kann die Neuerstellung des Alias bei Änderungen der Urspungs-Attribute 
+  der Alias kann als Kombination von verschiedenen (vorhandenen) Attributen erstellt
+  werden; als Option kann die Neuerstellung des Alias bei Änderungen der Ursprungs-Attribute 
   erzwungen werden (Neuerstellung des Alias erzwingen); ein Alias wird nicht automatisch
-  als eindeutiger Wert erstellt - dafür ist eine Aktivierungd er Checkbox "Eindeutige Werte"
+  als eindeutiger Wert erstellt - dafür ist eine Aktivierung der Checkbox "Eindeutige Werte"
   notwendig
 * **Kontrollkästchen (Checkbox)**: einzelne Checkbox für Boolsche-Werte |br|
   mit der Checkbox können Boolsche-Werte (0|1) gesetzt werden; eine spezielle Variante
@@ -67,7 +67,7 @@ spezifischen Optionen:
 * **Numerisch**: Eingabe von ganzzahligen Werten (Integer)
 * **Bewertung**: Bewertungsmodul mit Sternen |br|
   das Attributmodul dient zur Ausgabe ein "Sternchen-Bewertung" im Frontend;
-  im Backend können verschiedne Optionen wie Anzahl der Sterne usw. gesetzt
+  im Backend können verschiedene Optionen wie Anzahl der Sterne usw. gesetzt
   werden
 * **Auswahl**: Relation (1:n) zu einem weiteren MetaModel |br|
   mit dem Attribut "Auswahl" wird eine 1:n-Relation zu einem weiteren MetaModel
@@ -107,7 +107,7 @@ die Eingabe der mehrsprachigen Angaben für Name und Beschreibung. Für die übe
 Attribute werden spezielle Tabellen der Erweiterung verwendet und nicht die von der
 MetaModel-Erstellung erzeugten Tabelle. 
 
-Neben den aufgeführten Attributen könnenüber zusätzliche Erweiterungen von MetaModels
+Neben den aufgeführten Attributen können über zusätzliche Erweiterungen von MetaModels
 auch weitere Attributtypen zur Verfügung stehen.
 
 Die Reihenfolge, wie die Attribute angelegt werden, ist frei wählbar -
@@ -135,8 +135,8 @@ Ablauf
 
 Ein neues Attribut wird über "|img_new| Neues Attribut" geöffnet. Nachdem 
 alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird die Einstellung
-gespeichert und es erscheint in der Attributliste der vorhandenen Metamodels.
-Die Reihenfolge in der Liste hat keinen weiteren Einfluß.
+gespeichert und es erscheint in der Attributliste der vorhandenen MetaModels.
+Die Reihenfolge in der Liste hat keinen weiteren Einfluss.
 
 
 .. |img_fields| image:: /_img/icons/fields.png

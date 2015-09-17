@@ -11,13 +11,13 @@ Beispiel soll die Ausgabe über das Artikel-Inhaltselement
 
 Als Vorbereitung für die Ausgabe muss eine entsprechende Seite
 in Contao angelegt sein mit einem Artikel, der das Inhaltelement
-auf nimmt. Ein neues Inhaltselement wird angelegt und folgende
+aufnimmt. Ein neues Inhaltselement wird angelegt und folgende
 Einstellungen aktiviert (siehe Screenshot):
 
 * Elementtyp: MetaModel-Liste
 * Sortieren nach: Name
-* Anzuwendenede Filtereinstellungen: Veröffentlicht
-* Anzuwendenede Renderingeinstellungen: FE Liste
+* Anzuwendende  Filtereinstellungen: Veröffentlicht
+* Anzuwendende Renderingeinstellungen: FE Liste
 
 |img_contentelements_01|
 
@@ -42,8 +42,8 @@ der Renderingeinstellung "BE Liste" (Name und Vorname) zu sehen (siehe Screensho
 
 |img_contentelements_03|
 
-Der Datensatz kann über das Stift-Icon wieder bearbeitet werden und über das "Ausge"
-wid der Status "Veröffenlicht" gewechselt (alternativ zur Checkbox der Eingabemaske).
+Der Datensatz kann über das Stift-Icon wieder bearbeitet werden und über das "Auge"
+wird der Status "Veröffentlicht" gewechselt (alternativ zur Checkbox der Eingabemaske).
 
 Die Ausgabe im Frontend sollte nun etwa wie folgt aussehen (Screenshot).
 

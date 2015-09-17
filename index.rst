@@ -18,7 +18,7 @@ Diese Dokumentation gliedert sich in drei Bereiche:
 
 
 Die Erweiterung MetaModels ist eine kostenfreie Erweiterung auf der Basis von OpenSource und benötigt 
-für eine kontinuierliche Weiterentwicklung die Unterstüzung einer aktiven Community. Eine finanzielle 
+für eine kontinuierliche Weiterentwicklung die Unterstützung einer aktiven Community. Eine finanzielle 
 Unterstüzung, Programmierungen oder die Meldung von Fehlern und eigenen Workflows werden gern angenommen.
 Informationen sind auf der `Projektwebseite von MetaModels <https://now.metamodel.me>`_ unter `Github 
 <https://github.com/MetaModels>`_ oder im `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_

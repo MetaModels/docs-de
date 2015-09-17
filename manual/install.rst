@@ -26,7 +26,7 @@ Installieren via Nightly build
 Alternativ zur Installation via Composer ist die manuelle Installation per FTP möglich. Dazu wird
 die aktuelle Version von MetaModels von der `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_
 geladen, entpackt und per FTP auf den Server hoch geladen. Die meisten Ordner des Zip-Paketes
-kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionem
+kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionen
 müssen in das Hauptverzeichnis (Root) von Contao.
 
 MetaModels aktualisieren

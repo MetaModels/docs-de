@@ -20,7 +20,7 @@ Dateiauswahlen usw.
 
 Die Möglichkeiten dieser Dateninhalte erstecken sich von Produktkatalogen,
 Veranstaltungen/Events, Speisenpläne, Adress- oder Mitarbeiterlisten, Häuser, 
-Mietobjekte bis zu Bildergalerien oder mehrsprachingen Text/Bild-Inhalten.
+Mietobjekte bis zu Bildergalerien oder mehrsprachigen Text/Bild-Inhalten.
 
 Die Datenmodelle können in MetaModels im Contao komplett über das Backend erstellt
 werden und es bedarf keiner Programmierung wie für eine dezidierte Erweiterung.
@@ -31,7 +31,7 @@ einzusetzenden Filtern.
 Die MetaModels-Erweiterung zeichnet sich durch eine hohe Flexibilität in den
 Möglichkeiten der Ein- und Ausgabe von Daten aus und deckt damit viele individuelle
 Wünsche ab. Weitere Einzelheiten sind in der :ref:`rst_features` zu finden.
-Was man mit MetaModels alles umsezten kann, ist zum Beispiel auf der Webseite
+Was man mit MetaModels alles umsetzen kann, ist zum Beispiel auf der Webseite
 `MetaModels Showcase <https://now.metamodel.me/de/showcase>`_ oder im `Contao
 Forum <https://community.contao.org/de/showthread.php?40208-Stellt-eure-MetaModel-Websites-vor/>`_
 zu finden.
@@ -79,19 +79,19 @@ Einsatz von MetaModels?". Die Frage kann nicht pauschal beantwortet werden, denn
 **Pro eigene Erweiterung:** Besteht der Wunsch oder die Forderung ein "vertreibbares Paket" zu
 erstellen z.B. um eine kommerzielle Erweiterung zu entwickeln bzw. diese anderen Contao-Benutzern
 "per Knopfdruck" zur Verfügung zu stellen, sollte eher über eine eigene dezidierte Erweiterung
-nachgedacht werden. Für die Erstellung einer eigenen Erweiterungen sind aber entsprechende Kentnisse
+nachgedacht werden. Für die Erstellung einer eigenen Erweiterung sind aber entsprechende Kenntnisse
 der PHP-Programmierung und der Contao-API Grundvoraussetzung.
 
 **Pro MetaModels:** Besteht der Wunsch oder die Forderung eine sehr individuelle und schnell
 anpassbare Lösung in Contao zu implementieren, ist MetaModels eine gute Wahl. Wenn zudem
-spezifische Funktionen wie die sehr gute Unterstütung der Mehrsprachingkeit gefordert sind,
+spezifische Funktionen wie die sehr gute Unterstützung der Mehrsprachigkeit gefordert sind,
 kann MetaModels seine Stärken hervorragend ausspielen. Mit MetaModels können auch diejenigen
 Benutzer Lösungen erarbeiten, die ohne Programmierung auskommen wollen oder müssen. Es ist
 aber dennoch anzumerken, dass nur mit einem Grundwissen an PHP, HTML und SQL/Datenbankschema
 die Möglichkeiten von MetaModels ausgeschöpft werden können.
 
-Resourcen
----------
+Ressourcen
+----------
 
 * `MetaModels Projektseite <https://now.metamodel.me>`_
 * `MetaModels auf Github <https://github.com/MetaModels>`_

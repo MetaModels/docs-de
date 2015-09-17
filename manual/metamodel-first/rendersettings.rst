@@ -25,7 +25,7 @@ In der Übersicht der Rendereinstellungen sollte nun der erste Eintrag mit
 |img_rendersettings_02|
 
 Über einen Klick auf das Icon "|img_rendersetting| Attributeinstellungen"
-wird die nächste Ebene für die Attribute geöffent. An dieser Stelle werden 
+wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
 die in der jeweiligen Liste der Rendereinstellungen die anzuzeigenden
 Attribute ausgewählt bzw. aktiviert.
 
@@ -50,7 +50,7 @@ Screenshot).
 |img_rendersettings_04|
 
 Für die Anzeige im Frontend werden alle notwendigen Attribute aktiviert
-also alle bis auf das Attribut "Veröffentlicht", welches für den Fiter
+also alle bis auf das Attribut "Veröffentlicht", welches für den Filter
 benötigt wird und nicht mit ausgegeben werden muss bzw. soll (siehe
 Screenshot).
 

@@ -28,13 +28,13 @@ Im ersten Schritt wechseln wir in dem MetaModel "Telefonliste" in die Komponente
 "Attribute" in dem auf das Icon |img_fields| geklickt wird. Anschließend kann über
 "|img_new| Neues Attribut" das erste Attribut erstellt werden. Mit dem Klick auf
 "|img_new| Neues Attribut" wird nicht sofort die Eingabemaske geöffnet, sondern
-ein Klemmappenicon |img_pasteafter| - auf dieses wird geklickt (siehe Screenshot).
+ein Klemmmappenicon |img_pasteafter| - auf dieses wird geklickt (siehe Screenshot).
 
 |img_attribute_01|
 
-Mit dem Klick auf das Klemmappenicon |img_pasteafter| öffnet sich die Eingabemaske
+Mit dem Klick auf das Klemmmappenicon |img_pasteafter| öffnet sich die Eingabemaske
 für das Attribut. Hier wird zunächst der Attributtyp "Text" aus der Auswahlliste
-ausgewält und nach der Aktualisierung der Eingabemaske stehen die notwendigen Felder
+ausgewählt und nach der Aktualisierung der Eingabemaske stehen die notwendigen Felder
 zur Eingabe bereit. Diese werden für das erste Attribut "Name" wie im Screenshot
 zu sehen ausgefüllt.
 

@@ -22,7 +22,7 @@ Die Erstellung der Filter erfolgt in einer zweistufigen Hierarchie, in dem
 zunächst ein bezeichneter Filter "als Container" erstellt wird, der wiederum
 ein oder mehrere Filtereinstellungen (Attribute) beinhalten kann. Sind mehrere
 Filterattribute auf dieser Ebene vorhanden, sind diese per UND verknüpft. Für
-eine ODER-Verknüpfung muss ein Filterattribut ODER erstellt werden welchens wiederum
+eine ODER-Verknüpfung muss ein Filterattribut ODER erstellt werden welches wiederum
 weitere Filterattribute aufnehmen kann. Mit den Möglichkeiten der Verschachtelung
 können nahezu alle UND/ODER-Angaben eines nativen SQL-Query nachgebildet werden.
 
@@ -81,7 +81,7 @@ Ein neuer Filter wird über "|img_new| Neu" geöffnet und es muss ein Name verge
 Über das Icon "|img_filter_setting| Filterattribute" gelangt man zur Eingabeliste der
 Filterattribute, wo wiederum über "|img_new| Neu" ein neues Filterattribut eingerichtet
 werden kann. Über die "Klemmmappen-Icons" kann während der Erstellung eines Filterattributes
-die Hierachie beeinflusst werden und das Attribut z.B. innerhalb eines ODER-Filters
+die Hierarchie beeinflusst werden und das Attribut z.B. innerhalb eines ODER-Filters
 eingefügt werden.
 
 

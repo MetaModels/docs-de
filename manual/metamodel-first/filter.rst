@@ -20,22 +20,22 @@ für den Filter im Eingabefeld "Name" eingetragen - z.B. "Veröffentlicht"
 |img_filter_01|
 
 In der Übersicht der Filter sollte nun der erste Eintrag mit
-"Veröffenlicht" zu sehen sein - siehe Screenshot.
+"Veröffentlicht" zu sehen sein - siehe Screenshot.
 
 |img_filter_02|
 
 Über einen Klick auf das Icon "|img_filter_setting| Attribute"
-wird die nächste Ebene für die Filtzerattribute geöffent. An dieser Stelle
+wird die nächste Ebene für die Filterattribute geöffnet. An dieser Stelle
 wird der Filter mit seinen Filterattributen konfiguriert. Die Filterattribute
 können in verschiedener Kombination und Verschachtelung miteinander verknüpft
 werden. Für das Beispiel wird nur ein Filterattribut dem Filter hinzugefügt,
 in dem in der Kopfzeile auf das Icon "|img_new| Neu" geklickt wird.
 
-Nach dem Klick ist zunächst nur das Klemmappenicon |img_pasteinto| zu sehen -
-mit einem Klick auf das Icon öffent sich die Konfigurationsmaske.
+Nach dem Klick ist zunächst nur das Klemmmappenicon |img_pasteinto| zu sehen -
+mit einem Klick auf das Icon öffnet sich die Konfigurationsmaske.
 
-Zum Filtern des Veröffenlicht-Status gibt es unter "Typ" einen speziellen
-Filter, der ausgewählt wird. Als Attribut wird "Veröffenlicht" ausgewählt
+Zum Filtern des Veröffentlicht-Status gibt es unter "Typ" einen speziellen
+Filter, der ausgewählt wird. Als Attribut wird "Veröffentlicht" ausgewählt
 (siehe Screenshot).
 
 |img_filter_03|

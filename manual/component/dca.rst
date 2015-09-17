@@ -21,8 +21,8 @@ erstellt werden, die mit unterschiedlichen Attribut-Eingabefeldern bestückt sin
 Damit können verschiedene Berechtigungen oder Workflows abgedeckt werden.
 
 Die Erstellung der Eingabemasken teilt sich auch hier in die Grundeinstellungen
-der Eingabemaske, der Aktivierung der Attribute sowie der Auswahl der spezifishen
-Optionen der einzelnen Attribute wie z.B. Pflichtfeld, Anordung, Validierung o.ä.
+der Eingabemaske, der Aktivierung der Attribute sowie der Auswahl der spezifischen
+Optionen der einzelnen Attribute wie z.B. Pflichtfeld, Anordnung, Validierung o.ä.
 Die meisten Einstellungsoptionen spiegeln die Möglichkeiten des "DCA" des
 "Contao-Frameworks" wieder (siehe `DCA <https://docs.contao.org/books/api/dca/index.html>`_)
 Mehr zu den Optionen unter dem Punkt "Ablauf".
@@ -34,7 +34,7 @@ eingegliedert und mit "Kind-Tabelle" einer vorhandenen MetaModel- oder
 Contao-Tabelle zugeordnet.
 
 Die Anzeige des Eingabewidgets kann über weitere Steuerungsparameter beeinflusst
-werden. Jedes Eingabewidget hat ein Bearbeitungsicon zur Erstellung von Abhängikeiten
+werden. Jedes Eingabewidget hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
 der Anzeige bzw. Sichtbarkeit ("Anzeigebedingungen"). So kann ein oder mehrere
 Eingabewidgets in der Eingabemaske nur sichtbar sein, wenn eine bestimmte
 Checkbox gesetzt ist.
@@ -75,16 +75,16 @@ Optionen der Anzeigebedingungen des Eingabewidgets
 --------------------------------------------------
 * **Typ**: |br|
   Typ der Anzeigebedingungen: UND/ODER/NOT zur Verknüpfung bzw.
-  Abhängikeit per Eigenschaft von anderen Attributen
+  Abhängigkeit per Eigenschaft von anderen Attributen
 * **Attribut/Wert** |br|
-  Auswahl bei Abgängigkeit zu einem anderen Attribut
+  Auswahl bei Abhängigkeit zu einem anderen Attribut
 
 Optionen der Sortierung und Gruppierung
 ---------------------------------------
 * **Name**: |br|
   Bezeichnung
 * **Enable manual sorting**: |br|
-  wenn der Wert gesezt ist, können die Items manuell sortiert werden; ist
+  wenn der Wert gesetzt ist, können die Items manuell sortiert werden; ist
   die Checkbox nicht gesetzt, können folgende Optionen gesetzt werden:
 * **Grouping attribute**: |br|
   Auswahl des Attributes, nach dem Gruppiert werden soll
@@ -103,14 +103,14 @@ Ablauf
 Eine neue Eingabe für die Einstellung der Eingabemaske wird über "|img_new| Neue Eingabemaske"
 geöffnet. Nachdem alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird
 die Einstellung gespeichert und erscheint in der Liste der vorhandenen Eingabemasken
-eines Metamodels.
+eines MetaModels.
 
 Neben dem "|img_edit| Stifticon" existiert das Icon für die "|img_dca_setting| Einstellungen der
 Eingabemaske". Mit Kick auf das Icon öffnet sich eine Auflistung mit den zur Eingabemaske
 aktivierten Attributen. Sind keine Attribute vorhanden, bzw. müssen welche hinzugefügt
 werden, kann das über das Icon "|img_dca_setting_add| Alle hinzufügen" erfolgen
 - alternativ über "|img_new| Neu". Bei dem Weg über "Alle hinzufügen"
-muss zwei mal eine Bestätigung erfolgen.
+muss zweimal eine Bestätigung erfolgen.
 
 Anschließend stehen die Attribute der Eingabemaske zur Verfügung und müssen ggf.
 noch aktiviert werden.
@@ -118,7 +118,7 @@ noch aktiviert werden.
 Bei den einzelnen Attributen kann das zu verwendende Template geändert und/oder
 eine spezielle CSS-Klasse eingetragen werden ("|img_edit| Bearbeiten").
 
-Über "|img_dca_condition| Anzeigebedingungen" ist die Sichbarkeit des Eingabewidgets
+Über "|img_dca_condition| Anzeigebedingungen" ist die Sichtbarkeit des Eingabewidgets
 in der Eingabemaske einstellbar.
 
 Anschließend können in der Listenansicht der Eingabemasken über das Icon

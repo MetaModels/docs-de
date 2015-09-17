@@ -36,7 +36,7 @@ in der gewählten Sprache bearbeiten.
 
 Das Beste hierbei ist, das Attribute die nicht übersetzbar sind, auch nicht
 übersetzt werden. Dies ermöglicht es beispielsweise lediglich die Namen und
-Beschreibungstexte von Produkten übersetzbar zu machen, die EAN und Massangaben
+Beschreibungstexte von Produkten übersetzbar zu machen, die EAN und Maßangaben
 jedoch nicht. Diese Arbeitsweise verringert enorm die Redundanz der einzugebenden
 Daten.
 
@@ -57,10 +57,10 @@ welche verwendet werden können um Frontent-Filter-Eingabefelder wie beispielswe
 Auswahlboxen, Bereichsfilter, Freitext-Suche usw. zu erzeugen. Kombiniert man
 dieses Filter mit Filtereinstellungen, welche keine Eingabefelder erzeugen können,
 mittels UND/ODER Bedingungen ermöglichen es Individuelle SQL Abfragen und andere
-vordefinierte Filtereinstellungen äusserst komplexe, interaktive Filter zu definieren
-jedoch ohne dass man auf die hochperformante Auswertung der Filterung verzichten muss.
+vordefinierte Filtereinstellungen äußerst komplexe, interaktive Filter zu definieren
+jedoch ohne dass man auf die hoch performante Auswertung der Filterung verzichten muss.
 
-Es versteht sich von selbst, dass Filtereinstellungen die Frontent-Filter-Eingabefelder
+Es versteht sich von selbst, dass Filtereinstellungen die Frontend-Filter-Eingabefelder
 bereit stellen ähnlich einfach zu implementieren sind, wie diejenigen die dies nicht
 tun, was die Lernkurve für Anpassungen an die eigenen Anforderungen flach hält.
 
@@ -69,15 +69,16 @@ Dynamische Ansichten
 
 Mittels der Ausgabeeinstellungen wurde in MetaModels das "partial"-Template Konzept von
 Contao in einer erweiterten Form umgesetzt. Der Anwender kann jeglichen Aspekt
-der Ansichten auf Attributsebene und Datensatzebene anpassen.
+der Ansichten auf der Ebene der Attribute und Datensätze anpassen.
 
 Etliche allgemeine Einstellungen können in der Backend-Konfiguration festgelegt
-werden. Diese können jedoch auch überschrieben, feingranual angepasst oder gar gänzlich
-ignoriert werden, indem man ein eigenes Template auf Attributsebene oder Datensatzebene festlegt.
-Diese Ausgabeeinstellungen bieten den flexibelsten Weg 'Daten-Views' zu definieren.
+werden. Diese können jedoch auch überschrieben, feingranular angepasst oder gar gänzlich
+ignoriert werden, indem man ein eigenes Template auf Ebene der Attribute oder Datensätze
+festlegt. Diese Ausgabeeinstellungen bieten den flexibelsten Weg 'Daten-Views' zu
+definieren.
 
 Der Designer kann für jeden Zweck eine komplett andere Ansicht definieren, sei es eine
-simple Listenausgabe, einen Anreisser für die Startseite oder eine Detailansicht eines
+simple Listenausgabe, einen "Anreißer" für die Startseite oder eine Detailansicht eines
 Datensatzes, und ebenso wann und wo sie eingesetzt werden soll.
 
 Die Ausgabe eines RSS-Feeds und andere Syndications-Formen sind in Planung und werden

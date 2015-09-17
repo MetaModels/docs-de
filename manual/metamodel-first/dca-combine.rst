@@ -4,7 +4,7 @@
 =========================================
 
 In dem Schritt "Ein- / Ausgabe-Optionen" wird bei dem einfachen Beispiel
-die Rendereinstellung mit der Eingabemaske für das Backenend frei
+die Rendereinstellung mit der Eingabemaske für das Backend frei
 geschaltet. Eine Freischaltung für eine Frontendausgabe der Rendereinstellung
 ist nicht notwendig.
 
@@ -29,7 +29,7 @@ ein neues Icon mit der Beschriftung "Telefonliste" erschienen sein
 |img_dca-combine_02|
 
 Mit dem Schritt sind die Einstellungen der Komponenten für das Backend
-abgeschlossen und Daten können eingebenen  bzw. die Frontendausgabe
+abgeschlossen und Daten können eingegeben bzw. die Frontendausgabe
 konfiguriert werden.
 
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png

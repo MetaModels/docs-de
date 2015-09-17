@@ -29,11 +29,11 @@ In der Übersicht der Eingabemasken sollte nun der erste Eintrag mit
 |img_dca_02|
 
 Über einen Klick auf das Icon "|img_dca_setting| Einstellungen"
-wird die nächste Ebene für die Attribute geöffent. An dieser Stelle werden 
+wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
 die in der Eingabemaske anzuzeigenden Attribute ausgewählt bzw. aktiviert.
 
 Wie bei den Rendereinstellungen können auch hier die angelegten Attribute
-in einem Schritt hinzu gefügt werden. Dazu ist das Icon in der Kopfzeile
+in einem Schritt hinzugefügt werden. Dazu ist das Icon in der Kopfzeile
 "|img_dca_add| Alle hinzufügen" zu klicken und anschließend die Buttons
 "Weiter" und "Speichern und schließen" zu bestätigen. Nun sind alle
 vorhandenen Attribute der Eingabemaske hinzu gefügt. Per Standard sind die

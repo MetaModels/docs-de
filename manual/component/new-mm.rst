@@ -34,16 +34,16 @@ Optionen
 
 Bei der Erstellung eines neuen MetaModel gibt es die weiteren Optionen "Übersetzung" und "Varianten".
 
-Wurde die Option "Übersetzung" ausgewählt, stehen nach einem Neuladen der Seite mehrere Sprachen als
+Wurde die Option "Übersetzung" ausgewählt, stehen nach einem Neu laden der Seite mehrere Sprachen als
 Auswahl zur Verfügung. Eine der Sprachen sollte als "Fallback" aktiviert werden - erfolgt dies nicht,
 wird die als erste ausgewählte Sprache als Fallback verwendet. Ist die Option "Übersetzung" im 
 MetaModel aktiviert, werden spezielle, mehrsprachige Attribute zusätzlich als Auswahl angeboten.
 
 Bei einer nachträglichen Aktivierung der Mehrsprachigkeit, werden die vorhandenen Attribute
-bzw. die eingegeben Werte nicht austomatisch übernommen. Ob eine Mehrsprachigkeit notwendig ist,
+bzw. die eingegeben Werte nicht automatisch übernommen. Ob eine Mehrsprachigkeit notwendig ist,
 sollte daher möglichst im Vorfeld geklärt werden.
 
-Wurde die Option "Varianten" ausgewählt, sieht man zunächste keine weiter Veränderung des MetaModel. Ist
+Wurde die Option "Varianten" ausgewählt, sieht man zunächst keine weitere Veränderung des MetaModel. Ist
 die Option gesetzt, ist bei den Attributen die Aktivierung der Option "Varianten überschreiben" möglich.
 Mit allen Attributen, bei denen die Option "Varianten überschreiben" gesetzt ist, können weitere Eingabe-
 Masken für die Varianteneigabe, z.B. zum "Überschreiben" von "Elternwerten", erstellt werden. Die 
