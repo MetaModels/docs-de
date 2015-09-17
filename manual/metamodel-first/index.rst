@@ -3,6 +3,8 @@
 Das erste MetaModel(s)
 ======================
 
+.. warning:: Noch im Aufbau!
+
 Mit dem Aufbau des ersten Metamodels soll ein leichter Einstieg in die Umsetzung
 ermöglicht werden. Die Aufgabe für die Umsetzung soll eine einfache Telefonliste
 mit nur wenigen Inhaltsangaben sein. Die Liste soll im Backend zu befüllen sein
