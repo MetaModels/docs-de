@@ -14,11 +14,11 @@ selbst dieses einfache Beispiel kann weiter ausgebaut werden.
 
 Folgend eine kleine Aufzählung an Möglichkeiten:
 
-* Datenstruktur ändern - Abteilung in eigenes MetaModel und Relation
-  zur Telefonliste
+* Datenstruktur ändern - Abteilung in eigenes MetaModel und Verbindung
+  (Relation) zur Telefonliste
 * im Backend können Filterungen, Sortierungen und Suchfunktionen
   hinzugefügt werden
-* im Frontend können ebenfalls der Ausbau mit Filterungen,
+* im Frontend wäre ebenfalls der Ausbau mit Filterungen,
   Sortierungen und Suchfunktionen möglich
   
 In dem zweiten Beispiel wird eine komplexere Datenstruktur umgesetzt und in
