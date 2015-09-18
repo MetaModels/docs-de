@@ -96,20 +96,17 @@ Der Designer kann für jeden Zweck eine komplett andere Ansicht definieren, sei 
 simple Listenausgabe, einen "Anreißer" für die Startseite oder eine Detailansicht eines
 Datensatzes, und ebenso wann und wo sie eingesetzt werden soll.
 
-Die Ausgabe eines RSS-Feeds und andere Syndications-Formen sind in Planung und werden
-das Konzept der Ausgabeeinstellungen erweitern.
+Ausblick
+--------
 
-Export/Import
--------------
+An der Funktionsvielfalt von MetaModels wird kontinuierlich weiter gearbeitet. Folgend
+einige Punkte, die in der Planung sind:
 
-Demnächst...
+* erweiterte Ausgaben wie RSS-Feeds und andere Syndications-Formen, XML, CSV
+* Export/Import-Funktion
+* Front-End-Editing
+* Schnittstelle zum Online-Shop-Modul 'Isotope'
 
-Front-End-Editing
------------------
-
-Demnächst...
-
-Schnittstelle zu Online-Shop-Modul 'Isotope'
---------------------------------------------
-
-Demnächst...
+Eine schnelle Umsetzung von weiteren Funktionen ist nur mit finanzieller Unterstüzung
+oder der Freigabe von Auftrags-Programmierungen möglich - Informationen dazu auf der 
+`Projektwebseite von MetaModels <https://now.metamodel.me>`_.
