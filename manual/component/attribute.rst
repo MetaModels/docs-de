@@ -23,7 +23,9 @@ erscheinen.
 .. warning:: Beim Ändern des Attributtyps werden, wie auch beim Löschen des Attributs,
   die bisher eingegebenen Werte in der Datenbank gelöscht! Muss dennoch ein Attributtyp
   bei Behalt der Werte geändert werden, sollte dies direkt auf der Datenbankebene z.B. über 
-  Export/Import der Attribut-Spalte per CSV begleitet werden.
+  Export/Import der Attribut-Spalte per CSV begleitet werden. Ein geändertes Attribut
+  sollte bei den Renderingeinstellungen und Eingabemasken anschließend nochmal neu
+  hinzugefügt werden.
 
 Je nach Attributtyp stehen nach einem Neu laden der Seite weitere Eingabemöglichkeiten bzw.
 Optionen zur Verfügung. Folgend eine Aufstellung der Attributtypen mit Hinweisen zu den 
