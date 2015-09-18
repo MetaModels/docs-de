@@ -7,13 +7,26 @@ Flexible Datenmodelle
 ---------------------
 
 MetaModels ermöglichen es Datenmodelle komfortabel und (nahezu)
-ohne Beschränkungen im Backend von Contao zu definieren.
+ohne Beschränkungen im Backend von Contao zu definieren und das ohne
+Programmierung.
 
-In den Datenmodellen stehen verschiedene vom Datentypen für die Datenfelder
-(Attribute) zur Verfügung: sei es Reintext, Bilder, Zahlen oder gar Tags
-- alles ist möglich. Sollte eine Beschränkung erreicht werden in dem der
-gewünschter Datentyp nicht verfügbar ist, kann dieser mit minimalem Aufwand
-implementieret werden.
+In den Datenmodellen stehen verschiedene Datentypen für die Datenfelder
+(Attribute) zur Verfügung wie z.B. Text, Bilder, Zahlen, Datum, Dateien.
+Sollte eine Beschränkung erreicht werden, in dem der gewünschter
+Datentyp nicht verfügbar ist, ist eine Implementierung möglich.
+
+Die erstellten Tabellen können untereinander mit Relationen (1:n, m:n)
+verknüpft werden. Es ist auch möglich, die Tabellen an andere Tabellen
+Contao Core anzuknüpfen, "Eltern-Kind-Verbindungen" herzustellen oder
+die Umsetzung von Varianteneingaben.
+
+Umfangreiche Eingabemasken
+--------------------------
+
+Für das Backend können komplexe Eingabemasken definiert werden, welche die
+"Redakteure" im gewohnten "Look&Feel" von Contao belassen. Innerhalb einer
+Eingabemaske kann auf die Eingabe von Werten oder Checkboxen reagiert werden
+um wahlweise verschiedene Sub-Paletten einzublenden.
 
 Das flexible Rechtesystem welches für MetaModels entwickelt wurde, gestattet
 es, unterschiedliche Backendansichten für Redakteur- und Administrator-Benutzergruppen
