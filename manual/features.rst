@@ -3,8 +3,8 @@
 Funktionsübersicht
 ==================
 
-Flexible Datenmodelle
----------------------
+Datenmodelle
+-------------
 
 MetaModels ermöglichen es Datenmodelle komfortabel und (nahezu)
 ohne Beschränkungen im Backend von Contao zu definieren und das ohne
@@ -20,8 +20,8 @@ verknüpft werden. Es ist auch möglich, die Tabellen an andere Tabellen
 Contao Core anzuknüpfen, "Eltern-Kind-Verbindungen" herzustellen oder
 die Umsetzung von Varianteneingaben.
 
-Umfangreiche Eingabemasken
---------------------------
+Eingabemasken
+-------------
 
 Für das Backend können komplexe Eingabemasken definiert werden, welche die
 "Redakteure" im gewohnten "Look&Feel" von Contao belassen. Innerhalb einer
