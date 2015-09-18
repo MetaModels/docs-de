@@ -6,7 +6,7 @@ Das erste MetaModel(s)
 .. warning:: Noch im Aufbau!
 
 Mit dem Aufbau des ersten MetaModels soll ein leichter Einstieg in die Umsetzung
-ermöglicht werden. Die Aufgabe für die Umsetzung soll eine einfache Telefonliste
+ermöglicht werden. Die Aufgabe für die Umsetzung soll eine einfache Mitarbeiterliste
 mit nur wenigen Inhaltsangaben sein. Die Liste soll im Backend zu befüllen sein
 und kann im Frontend in als Tabelle ausgegeben werden.
 
@@ -17,8 +17,8 @@ Die Umsetzung orientiert sich an den :ref:`component_index`.
 
 **Aufgabenstellung:**
 
-* Erstellung einer im Backend pflegbaren Telefonliste
-* Speicherung der Werte: Name, Vorname, E-Mail, Abteilung, Telefon
+* Erstellung einer im Backend pflegbaren Mitarbeiterliste
+* Speicherung der Werte: Name, Vorname, E-Mail, Abteilung
 * zusätzliches Feld für die Veröffentlichung eines Datensatzes
 * Ausgabe der Liste als Tabelle im Frontend
 

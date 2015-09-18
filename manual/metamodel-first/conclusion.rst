@@ -15,7 +15,7 @@ selbst dieses einfache Beispiel kann weiter ausgebaut werden.
 Folgend eine kleine Aufzählung an Möglichkeiten:
 
 * Datenstruktur ändern - Abteilung in eigenes MetaModel und Verbindung
-  (Relation) zur Telefonliste
+  (Relation) zur Mitarbeiterliste
 * im Backend können Filterungen, Sortierungen und Suchfunktionen
   hinzugefügt werden
 * im Frontend wäre ebenfalls der Ausbau mit Filterungen,

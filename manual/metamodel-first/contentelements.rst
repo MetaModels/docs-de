@@ -27,9 +27,9 @@ und die Anzeige kann im Frontend geprüft werden.
 Die Anzeige sollte nun den Satz "Ihre Suche lieferte keine passenden
 Ergebnisse." hervorbringen, da noch keine Daten eingeben wurden.
 
-Für den Test der Anzeige ist es notwendig, einige Datensätze in der Telefonliste
+Für den Test der Anzeige ist es notwendig, einige Datensätze in der Mitarbeiterliste
 anzulegen. Dazu klickt man in der linken Navigation des Backends unter "MetaModels"
-auf das Icon "|img_metamodels| Telefonliste" und anschließend auf das Icon
+auf das Icon "|img_metamodels| Mitarbeiterliste" und anschließend auf das Icon
 "|img_new| Neuer Datensatz".
 
 Es öffnet sich die Eingabemaske mit den vorgegebenen Feldern (Attributen), welche
@@ -50,7 +50,7 @@ Die Ausgabe im Frontend sollte nun etwa wie folgt aussehen (Screenshot).
 |img_contentelements_04|
 
 Spielt man einige Testdaten in die Datenbank - oder gibt diese manuell ein - sieht die
-Telefonliste im Backend in etwa so wie in dem Screenshot aus
+Mitarbeiterliste im Backend in etwa so wie in dem Screenshot aus
 
 |img_contentelements_05|
 
