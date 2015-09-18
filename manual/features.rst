@@ -57,15 +57,15 @@ Daten.
 Filter
 ------
 
-MetaModels verwenden ein vollkommen neuartiges und einzigartiges Filterkonzept.
-Der Administrator der Webseite kann die Filterinteraktionen vollkommen frei an
-seine Bedürfnisse anpassen. Dies gelingt durch die Konfiguration und Kombination
-von Filtereinstellungen und deren Parametern.
+MetaModels verfügt über ein mächtiges Filterkonzept, mit dem sich auch komplexe
+Aufgabenstellungen umsetzen lassen. Der Administrator der Webseite kann die
+Filterinteraktionen vollkommen frei an seine Bedürfnisse anpassen. Dies 
+gelingt durch die Konfiguration und Kombination von Filtereinstellungen
+und deren Parametern.
 
 MetaModels legt keine Beschränkungen hinsichtlich der Kombination von
 Filtern auf und beherrscht auch äußerst komplexe Filterszenarien. Dank der offenen
 Struktur der API, können eigene Filter mit geringem Aufwand programmiert werden.
-Die Filter stehen sowohl im Backend als auch im Frontend zur Verfügung.
 
 MetaModels wird mit verschiedenen Filtereinstellungen ausgeliefert,
 um Filter-Eingabefelder im Frontend wie beispielsweise Auswahlboxen, 
