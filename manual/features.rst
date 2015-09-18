@@ -28,10 +28,12 @@ Für das Backend können komplexe Eingabemasken definiert werden, welche die
 Eingabemaske kann auf die Eingabe von Werten oder Checkboxen reagiert werden
 um wahlweise verschiedene Sub-Paletten einzublenden.
 
+Für eine leichte Orientierung in den Daten kann die Anzeige mit verschiedenen
+Filtern, Such- und Gruppierungsfunktionen ausgebaut werden.
+
 Das flexible Rechtesystem welches für MetaModels entwickelt wurde, gestattet
 es, unterschiedliche Backendansichten für Redakteur- und Administrator-Benutzergruppen
-zu definieren. Die Eingabemasken verwenden weiterhin das aus Contao bekannte
-'Look und Feel'.
+zu definieren.
 
 Das Backend kann weiterhin dahingehend angepasst werden, dass nur bestimmte
 Gruppen Zugriff auf einzelne Eingabefelder erhalten und obendrein kann auch
