@@ -32,8 +32,8 @@ die Filterwahl (welche Filterung soll zum Einsatz kommen).
 Zusätzlich gibt es für die Filter ein Inhaltselement/Modul "Filterreset"
 zum Zurücksetzen aller Filtereinstellungen im Frontend.
 
-Optionen Liste
---------------
+Optionen CE Liste
+-----------------
 
 * **MetaModel**: |br|
   Auswahl des MetaModel für die Datenherkunft
@@ -42,15 +42,18 @@ Optionen Liste
 * **Filter-Einstellungen**: |br|
   Auswahl des Filters sowie der Sortierung; ist bei einem
   Filter "Auswahl" die Option "Statischer Parameter" gesetzt,
-  erscheint hier ein Selectfeld zur Wertauswahl
-* **Template-Einstellungen**: |br|
+  erscheint hier ein Selectfeld zur Wertauswahl; ist der
+  Parameter "Überschreiben der Sortierung erlauben" gesetzt,
+  kann die Sortierung per URL nach dem Schema /orderBy/<Attributname>/orderDir/<DESC || ASC>.html
+  überschrieben werden
+* **Rendering-Einstellungen**: |br|
   Auswahl der Renderingeinstellung; möchte man Einfluss auf
   die Ausgabe der Items der Ausgabeliste haben, dann bietet sich
-  das Template der Renderingeinstellung an und nicht das 
-  "Template der Ausgabe"
+  das Template der Renderingeinstellung (metamodel_prerendered)
+  an und nicht das "Template der Ausgabe" (ce_metamodel_list)
 
-Optionen Filter
----------------
+Optionen CE Filter
+------------------
 
 * **MetaModel**: |br|
   Auswahl des MetaModel welche die Grundlage der Filterung darstellt
