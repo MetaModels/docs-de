@@ -44,8 +44,8 @@ Optionen CE Liste
   Filter "Auswahl" die Option "Statischer Parameter" gesetzt,
   erscheint hier ein Selectfeld zur Wertauswahl; ist der
   Parameter "Überschreiben der Sortierung erlauben" gesetzt,
-  kann die Sortierung per URL nach dem Schema /orderBy/<Attributname>/orderDir/<DESC || ASC>.html
-  überschrieben werden
+  kann die Sortierung per URL nach dem Schema /orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>.html
+  bzw. als GET-Parameter überschrieben werden
 * **Rendering-Einstellungen**: |br|
   Auswahl der Renderingeinstellung; möchte man Einfluss auf
   die Ausgabe der Items der Ausgabeliste haben, dann bietet sich

@@ -20,7 +20,7 @@ http://www.generatedata.com/#generator
 
 Hinweise für das Dokument:
 
-Verlinkungen:
+interne Verlinkungen:
 
 oberhalb der zu verlinkenden Überschrift
 .. _rst_features:
@@ -30,6 +30,23 @@ als Link einfügen z.B. per
 
 Bei den neueren Verlinkungen habe ich die Form <dateiname>_<überschrift-mit-bindestrich> gewählt - z.B.
 .. _introdution_was-ist-metamodels:
+
+
+externe Verlinkungen:
+`Google <https://www.google.de>`_
+offensichtlich gibt es keine Möglichkeit das Attribut "target" anzugeben :-(
+
+
+Überschriften:
+
+H1 Überschrift
+==============
+
+H2 Überschrift
+--------------
+
+H3 Überschrift
+..............
 
 
 Tabellen:
