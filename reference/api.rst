@@ -291,7 +291,7 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
 .. code-block:: php
    :linenos:
    
-   // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s))
+   // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s)")
    $strModelName = 'mm_telefonliste';
    // Id der Renderingeinstellungen "FE-Liste"
    $intRenderingId = 2;
