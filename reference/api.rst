@@ -233,13 +233,11 @@ Mit dem Item-Interface können Eigenschaften eines Item abgefragt werden.
 Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
 erzeugt und anschließend z.B. über einen Filter eine Liste von Items ermittelt werden.
 
-``$objItems = $objMetaModel->findByFilter($objFilter);``
-
+``$objItems = $objMetaModel->findByFilter($objFilter);``  |br|
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
 
-``$valAttribute = $objItems->get($strAttributeName);``
-
+``$valAttribute = $objItems->get($strAttributeName);``  |br|
 Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
 
 ``get($strAttributeName)``  |br|
@@ -263,14 +261,13 @@ ermittelt, ob das Item eine Variantenbasis ist
 ``getVariants($objFilter)``  |br|
 gibt ein Array mit den Varianten des Items zurück
 
-``save()``  |br|
-speichert den aktuellen Wert bzw. Werte für das Item
-
 ``parseValue($strOutputFormat = 'text', $objSettings = null)``  |br|
-rendert das Item im vorgegebenen Format
+rendert das Item im vorgegebenen Format; als Rohdaten [raw]
+werden die Daten immer mit ausgegeben inl. Attribute referenzierter MetaModel
 
 ``parseAttribute($strAttributeName, $strOutputFormat = 'text', $objSettings = null)``  |br|
-rendert ein einzelnes Attribut des Item im vorgegebenen Format
+rendert ein einzelnes Attribut des Item im vorgegebenen Format; als Rohdaten [raw]
+werden die Daten immer mit ausgegeben inl. Attribute referenzierter MetaModel
 
 ``copy()``  |br|
 erstellt ein neues Item als Kopie eines vorhandenem Items
@@ -278,11 +275,14 @@ erstellt ein neues Item als Kopie eines vorhandenem Items
 ``varCopy()``  |br|
 erstellt ein neues Item als Kopie eines vorhandenem Items als Variante
 
+``save()``  |br|
+speichert den aktuellen Wert bzw. Werte für das Item
+
 Beispiel
 ........
 
 Das folgende Beispiel soll einen kleinen Einstieg in die Arbeit mit den
-Interfaces demonstrieren. Das beispiel kann z.B. in eine Template-Datei
+Interfaces demonstrieren. Das Beispiel kann z.B. in eine Template-Datei
 eingefügt und per Inserttag ``{{file::mm_interfaces.html5}}`` in einem 
 Artikel-Inhaltselement ausgegeben werden. 
 
@@ -291,30 +291,41 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
 .. code-block:: php
    :linenos:
    
-   // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s)")
-   $strModelName = 'mm_telefonliste';
-   // Id der Renderingeinstellungen "FE-Liste"
-   $intRenderingId = 2;
+   /* Parameter */
    
+   // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s)")
+   $strModelName = 'mm_mitarbeiterliste';
+   // ID der Renderingeinstellungen "FE-Liste"
+   $intRenderId = 2;
+   
+   /* Interface */
+
    // Den 'service container' kann man erhalten, wenn man ihn aus dem globalen Scope holt,
    // oder aber indem man auf das Event \MetaModelsEvents::SUBSYSTEM_BOOT (oder eines der
-   // konkretisierten Events für Backend/Frontend) horcht.
+   // konkretisierten Events für Backend/Frontend) lauscht.
+   // (Container nur notwendig, wenn außerhalb des MM-Zugriffs)
    /** @var \MetaModels\IMetaModelsServiceContainer $container */ 
-   $container = $GLOBALS['container']['metamodels-service-container'];
-   
+   $container = $GLOBALS['container']['metamodels-service-container']; 
    // MM Factory
    $factory = $container->getFactory();
-   // MM aus Tabellen/MM-Name
+   // MM aus Tabellen/MM-Name (außerhalb eines MM-Templates)
    $objMetaModel = $factory->byTableName($strModelName);
+   // MM aus Tabellen/MM-Name (in einem MM-Template)
+   //$objMetaModel = \MetaModels\Factory::byTableName($strModelName);
    // leerer Filter
    $objFilter = $objMetaModel->getEmptyFilter();
    // alle Items
    $objItems = $objMetaModel->findByFilter($objFilter);
    // alle Items geparst zu Array
-   $arrItems = $objItems->parseAll($strOutputFormat = 'html5', $objMetaModel->getView($intRenderingId));
+   $arrItems = $objItems->parseAll($strOutputFormat = 'html5', $objMetaModel->getView($intRenderId));
    //print_r($arrItems);
    
-   // Variante 1
+   /* Ausgabe */
+   
+   // Anzahl der Items
+   echo 'Anzahl: '.$objItems->getCount()."<br>\n";;
+   
+   // Variante 1 - Items-Objekt
    /*
    foreach ($objItems as $objItem)
    {
@@ -322,7 +333,7 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    }
    */
    
-   // Variante 2
+   // Variante 2 - Items-Array
    foreach ($arrItems as $arrItem)
    {
    	echo $arrItem['html5']['name']."<br>\n";
