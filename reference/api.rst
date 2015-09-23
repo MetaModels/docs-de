@@ -317,7 +317,8 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    // alle Items
    $objItems = $objMetaModel->findByFilter($objFilter);
    // alle Items geparst zu Array
-   $arrItems = $objItems->parseAll($strOutputFormat = 'html5', $objMetaModel->getView($intRenderId));
+   $arrItems = $objItems->parseAll($strOutputFormat = 'html5',
+                                   $objMetaModel->getView($intRenderId));
    //print_r($arrItems);
    
    /* Ausgabe */
