@@ -6,6 +6,7 @@ MetaModels API
 Die MetaModels API bildet die Schnittstelle zur eigenen Programmierung und
 Erweiterung.
 
+
 .. _reference_api_interfaces:
 
 Core Interfaces
@@ -21,15 +22,20 @@ Die meisten Arbeiten bei dem Einsatz bzw. Verwendung der Interfaces konzentriene
 sich auf die Abfrage vorhandenener Daten. Hier folgt der Aufbau analog dem Aufbau
 einer Abfrage oder Auflistung über das Contentelement bzw. Frontend-Modul mit
 
-* Verbindung zum MetaModel
-* Abfrage eines MetaModels unter Berücksichtigung von Filterregeln
-* Zugriff auf alle Items; ggf. Parsing der Items mit Angabe des Ausgabeformats(Text, HTML5) und der Renderingeinstellung)
-* Zugriff auf ein Item
+* Verbindung zum MetaModel - siehe :ref:`reference_api_interfaces_factory`
+* Abfrage eines MetaModels unter Berücksichtigung von Filterregeln 
+  - siehe :ref:`reference_api_interfaces_metamodel`
+* Zugriff auf alle Items; ggf. Parsing der Items mit Angabe des Ausgabeformats
+  (Text, HTML5) und der Renderingeinstellung) - siehe :ref:`reference_api_interfaces_items`
+* Zugriff auf ein Item bzw. Ausgabe (Raw, Text, HTML5) - siehe :ref:`reference_api_interfaces_item`
 
-Zudem können über die Interfaces auch verschiedene Objekte (MetaModel, Item)
-auch erstellt oder die Werte verändert werden.
+Zudem können über die Interfaces auch verschiedene Objekte (MetaModel, Attribut,
+Item) auch erstellt oder die Werte verändert werden.
 
 Beispiele zum Einsatz von Interfaces werden im "Cookbook" folgen.
+
+
+.. _reference_api_interfaces_factory:
 
 Factory Interface:
 ..................
@@ -38,6 +44,8 @@ Mit dem Factory Interface können Instanzen eines MetaModel erstellt und bestimm
 Eigenschafen abgefragt werden.
 
 Aktuelle Informationen unter: `IFactory <https://github.com/MetaModels/core/blob/master/src/MetaModels/IFactory.php>`_
+
+**Interfaces:**
 
 ``\MetaModels\IFactory::getMetaModel($metaModelName);`` |br|
 erstellt eine MetaModel-Instanz mit dem übergebenen Namen
@@ -60,6 +68,9 @@ gibt den übersetzen Namen zu einer MetaModel-Id zurück
 ``\MetaModels\IFactory::getServiceContainer();`` |br|
 ermittelt den Event-Dispatcher   
 
+
+.. _reference_api_interfaces_metamodel:
+
 MetaModel Interface:
 ....................
 
@@ -67,7 +78,7 @@ Mit dem MetaModel-Interface können Eigenschaften einer MetaModel-Instanz abgefr
 beeinfusst werden.
 
 Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
-erzeugt werden:
+erzeugt werden (siehe :ref:`reference_api_interfaces_factory`)
 
 ``$objMetaModel = \MetaModels\IFactory::byId($metaModelId);`` 
 ``$objMetaModel = \MetaModels\IFactory::byTableName($metaModelName);``
@@ -79,6 +90,7 @@ aller vorhandenen Attribute:
 
 Aktuelle Informationen unter: `IMetaModel <https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModel.php>`_
 
+**Interfaces:**
 
 ``getServiceContainer()`` |br|
 gibt den Service-Container zurück
@@ -189,6 +201,8 @@ speichert ein gegebenes Item
 gibt die Instanz der Renderingeinstellungen des instanzierten MetaModel zurück
 
 
+.. _reference_api_inteface_items:
+
 Items Interface
 ...............
 
@@ -205,6 +219,8 @@ zur Anzahl aller vorhandenen Items:
 ``$intAmountItems = $objItems->getCount();``
 
 Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItems.php>`_
+
+**Interfaces:**
 
 ``getItem()``  |br|
 gibt das aktuelle Item zurück
@@ -236,6 +252,7 @@ parst alle Items und gibt das Ergebnis als Array der Items mit dessen Attributen
 optional können die Renderingeinstellungen übergeben werden z.B. $objMetaModel->getView(3)
 
 
+.. _reference_api_interfaces_item:
 
 Item Interface
 ..............
@@ -250,7 +267,10 @@ Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
 
 ``$valAttribute = $objItems->get($strAttributeName);``  |br|
+
 Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
+
+**Interfaces:**
 
 ``get($strAttributeName)``  |br|
 gibt den Wert eines Attributes bei gegebenen Attributnamen zurück
@@ -289,6 +309,7 @@ erstellt ein neues Item als Kopie eines vorhandenem Items als Variante
 
 ``save()``  |br|
 speichert den aktuellen Wert bzw. Werte für das Item
+
 
 Beispiel
 ........
