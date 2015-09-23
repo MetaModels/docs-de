@@ -6,7 +6,7 @@ MetaModels API
 Die MetaModels API bildet die Schnittstelle zur eigenen Programmierung und
 Erweiterung.
 
-.. _reference_api_intercaces:
+.. _reference_api_interfaces:
 
 Core Interfaces
 ---------------
@@ -17,7 +17,19 @@ als "`Interfaces <http://php.net/manual/de/language.oop5.interfaces.php>`_" bere
 Die Interfaces können zum Beispiel in eigenen Programmierungen bzw. Funktionen in
 Events/Hooks oder in Templates eingesetzt werden.
 
-Beispiele dazu werden im "Cookbook" folgen.
+Die meisten Arbeiten bei dem Einsatz bzw. Verwendung der Interfaces konzentrienen
+sich auf die Abfrage vorhandenener Daten. Hier folgt der Aufbau analog dem Aufbau
+einer Abfrage oder Auflistung über das Contentelement bzw. Frontend-Modul mit
+
+* Verbindung zum MetaModel
+* Abfrage eines MetaModels unter Berücksichtigung von Filterregeln
+* Zugriff auf alle Items; ggf. Parsing der Items mit Angabe des Ausgabeformats(Text, HTML5) und der Renderingeinstellung)
+* Zugriff auf ein Item
+
+Zudem können über die Interfaces auch verschiedene Objekte (MetaModel, Item)
+auch erstellt oder die Werte verändert werden.
+
+Beispiele zum Einsatz von Interfaces werden im "Cookbook" folgen.
 
 Factory Interface:
 ..................
@@ -170,7 +182,7 @@ ein Filter angegeben werden
 ``saveItem($objItem)``  |br|
 speichert ein gegebenes Item
 
-``delete(IItem $objItem)``  |br|
+``delete($objItem)``  |br|
 speichert ein gegebenes Item
 
 ``getView($intViewId = 0)``  |br|
