@@ -44,7 +44,7 @@ Anschließend kann mit einem Interface daruaf zugegriffen werden - z.B.:
 
 ``$factory = $container->getFactory();``
 
-Aktuelle Informationen unter: `IMetaModelsServiceContainer https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModelsServiceContainer.php`_
+Aktuelle Informationen unter: `IMetaModelsServiceContainer <https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModelsServiceContainer.php>`_
 
 **Interfaces:**
 

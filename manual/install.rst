@@ -16,9 +16,14 @@ in die Suchmaske des Composer werden:
 * `metamodels/core <https://packagist.org/packages/MetaModels/core>`_ (~2.0)
 * `metamodels/bundle_all <https://packagist.org/packages/MetaModels/bundle_all>`_ (~1.0)
 
+Bei den Paketen ist die Version "2.x-dev" auszuwählen.
+
 Werden nicht alle Attribute oder Filter gebraucht, können diese auch einzeln installiert
 oder anderes `Bundle-Paket <https://github.com/MetaModels?query=bundle>`_ ausgewählt
 werden. Die o.g. Pakete sind in Gruppen zusammen gefasst und sollten den meisten Ansprüchen genügen.
+
+Im Composer-Client von Contao ("Paketverwaltung") kann über die Anzeige des Abhängigkeitsgraph
+(Checkbox) ein Überblick über die installierten Pakete erhalten werden.
 
 Installieren via Nightly build
 ------------------------------
