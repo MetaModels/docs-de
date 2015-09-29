@@ -60,7 +60,10 @@ spezifischen Optionen:
   mit dem Attribute "Datei" steht ein Dateipicker zur Auswahl von einer Datei bzw.
   wenn die Option "Mehrfachauswahl" gesetzt ist von mehreren Dateien zur Verfügung;
   mit der Option "Passen Sie den Dateibaum an" können während der Auswahl weitere
-  Dateioptionen gesetzt werden.
+  Dateioptionen gesetzt werden; bei der Verwendung bei Bildern ist zu beachten, dass
+  für eine (direkte) Anzeige von Vorschaubildern im Backend bzw. im Frontend die
+  Option "Als Bildfeld mit Vorschaubild benutzen" in den Renderingeinstellungen des
+  Dateiattributs gesetzt werden muss
 * **Sprachschlüssel**: Auswahl von ISO-Sprachcodes |br|
   mit dem Attribut steht eine Auswahl von Sprachcodes zur Verfügung; die Sprachcodes
   können per Checkbox ausgewählt werden

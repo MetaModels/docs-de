@@ -25,6 +25,7 @@ Zudem können über die Interfaces eines MetaModel auch verschiedene Objekte (Me
 Attribut, Item) auch erstellt, die Werte verändert oder Eigenschaften abgefragt werden wie
 Anzahl oder Sprache.
 
+
 .. _ref_api_interf_mm_metamodelsservicecontainer:
 
 MetaModelsServiceContainer Interface:
@@ -74,6 +75,26 @@ fügt einen eigenen Service dem Container hinzu
 
 ``getService($serviceName)`` |br|
 gibt den Zugriff auf einen Service mit dem übergebenen Namen zurück
+
+
+.. _ref_api_interf_mm_servicecontaineraware:
+
+ServiceContainerAware Interface:
+.....................................
+
+Mit dem ServiceContainerAware Interface kann ...??
+
+
+
+Aktuelle Informationen unter: `IServiceContainerAware <https://github.com/MetaModels/core/blob/master/src/MetaModels/IServiceContainerAware.php>`_
+
+**Interfaces:**
+
+``setServiceContainer(IMetaModelsServiceContainer $serviceContainer)`` |br|
+setzt den zu verwendenden Service-Container
+
+``getServiceContainer()`` |br|
+gibt den Zugriff auf den verwendenden Service-Container zurück
 
 
 .. _ref_api_interf_mm_factory:
@@ -311,6 +332,10 @@ Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
 
 ``$valAttribute = $objItems->get($strAttributeName);``  |br|
+
+Ein neues Item kann wie folgt erzeugt werden:
+
+``$objItems = new \MetaModels\Item($objMetaModel, array());``
 
 Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
 
