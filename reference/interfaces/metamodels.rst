@@ -45,6 +45,10 @@ Anschließend kann mit einem Interface daruaf zugegriffen werden - z.B.:
 
 ``$factory = $container->getFactory();``
 
+Mit dem Zugriff über $GLOBALS kann in eigenen templates und Programmierungen
+leicht auf den Service.Container zugegriffen werden. Andere Möglichkeiten
+wären über Events wie z.B. "\MetaModelsEvents::SUBSYSTEM_BOOT".
+
 Aktuelle Informationen unter: `IMetaModelsServiceContainer <https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModelsServiceContainer.php>`_
 
 **Interfaces:**
@@ -82,9 +86,9 @@ gibt den Zugriff auf einen Service mit dem übergebenen Namen zurück
 ServiceContainerAware Interface:
 .....................................
 
-Mit dem ServiceContainerAware Interface kann ...??
-
-
+Mit dem ServiceContainerAware Interface kann man Zugriff auf den 
+Service-Container erhalten oder einen neuen Service-Container
+zuweisen.
 
 Aktuelle Informationen unter: `IServiceContainerAware <https://github.com/MetaModels/core/blob/master/src/MetaModels/IServiceContainerAware.php>`_
 
@@ -105,30 +109,38 @@ Factory Interface:
 Mit dem Factory Interface können Instanzen eines MetaModel erstellt und bestimmte
 Eigenschafen abgefragt werden.
 
+Die Erstellung eines neuen MetaModel ist nicht vorgesehen - wenn auch möglich - da
+für die Erstellung sehr komplexe Parameter mit übergeben werden müssten und die 
+Erstellung auf die Arbeit aus dem Backend ausgerichtet ist.
+
 Aktuelle Informationen unter: `IFactory <https://github.com/MetaModels/core/blob/master/src/MetaModels/IFactory.php>`_
 
 **Interfaces:**
 
-``getMetaModel($metaModelName);`` |br|
+``getMetaModel($strMetaModelName);`` |br|
 erstellt eine MetaModel-Instanz mit dem übergebenen Namen
-     
-``byId($strTableName);`` |br|
-erstellt eine MetaModel-Instanz aus Tabellen-ID
 
-``byTableName($strTableName);`` |br|   
-erstellt eine MetaModel-Instanz aus Tabellenname
-   
-``getAllTables();`` |br|
-gibt alle MetaModel-Tabellennamen als Array zurück
-   
+``translateIdToMetaModelName($intMetaModelId);`` |br|
+gibt den übersetzen Namen zu einer MetaModel-Id zurück
+  
 ``collectNames();`` |br|
 gibt alle MetaModel-Namen als Array zurück
-   
-``translateIdToMetaModelName($metaModelId);`` |br|
-gibt den übersetzen Namen zu einer MetaModel-Id zurück
-   
+
 ``getServiceContainer();`` |br|
-ermittelt den Event-Dispatcher   
+ermittelt den Service-Container
+
+``byTableName($strTableName);`` |br|   
+erstellt eine MetaModel-Instanz aus Tabellenname  |br|
+**Deprecated**: bitte Methode ``getMetaModel($strMetaModelName);`` verwenden
+
+``byId($intMetaModelId);`` |br|
+erstellt eine MetaModel-Instanz aus Tabellen-ID  |br|
+**Deprecated**: bitte Methode ``translateIdToMetaModelName($intMetaModelId);`` verwenden
+
+``getAllTables();`` |br|
+gibt alle MetaModel-Tabellennamen als Array zurück  |br|
+**Deprecated**: bitte Methode ``collectNames();`` verwenden
+ 
 
 
 .. _ref_api_interf_mm_metamodel:
@@ -142,8 +154,8 @@ beeinfusst werden.
 Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
 erzeugt werden (siehe :ref:`ref_api_interf_mm_factory`)
 
-``$objMetaModel = \MetaModels\IFactory::byId($metaModelId);`` 
-``$objMetaModel = \MetaModels\IFactory::byTableName($metaModelName);``
+``$objMetaModel = \MetaModels\IFactory::translateIdToMetaModelName($intMetaModelId);`` oder
+``$objMetaModel = \MetaModels\IFactory::getMetaModel($strMetaModelName);``
 
 Anschließend kann eine Eigenschaft abgefragt oder gesetzt werden - z.B. die Abfrage
 aller vorhandenen Attribute:
@@ -324,18 +336,22 @@ Item Interface:
 Mit dem Item-Interface können Eigenschaften eines Item abgefragt werden.
 
 Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
-erzeugt und anschließend z.B. über einen Filter eine Liste von Items ermittelt werden.
+erzeugt und anschließend z.B. über einen Filter (ggf. auch leerer Filter)eine
+Liste von Items ermittelt werden.
 
-``$objItems = $objMetaModel->findByFilter($objFilter);``  |br|
+``$objItem = $objMetaModel->findByFilter($objFilter);``  |br|
 
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
 
 ``$valAttribute = $objItems->get($strAttributeName);``  |br|
 
-Ein neues Item kann wie folgt erzeugt werden:
+Ein neues Item wird wie folgt erzeugt:
 
-``$objItems = new \MetaModels\Item($objMetaModel, array());``
+``$objItem = new \MetaModels\Item($objMetaModel, array());``
+
+In dem übergebenen Array können "Key-Value-Paare" übergeben werden - dies
+ist aber nur bei einfachen Item-Typen wie Text sinnvoll.
 
 Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
 
