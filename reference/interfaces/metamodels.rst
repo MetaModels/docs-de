@@ -3,6 +3,8 @@
 MetaModels Interfaces
 =====================
 
+.. warning:: Noch im Aufbau!
+
 Die MetaModels Interfaces bilden die Basis der Interfaces und
 ermöglichen den Zugriff auf ein MetaModel bis hin zum einzelnen
 Item.
@@ -45,8 +47,8 @@ Anschließend kann mit einem Interface daruaf zugegriffen werden - z.B.:
 
 ``$factory = $container->getFactory();``
 
-Mit dem Zugriff über $GLOBALS kann in eigenen templates und Programmierungen
-leicht auf den Service.Container zugegriffen werden. Andere Möglichkeiten
+Mit dem Zugriff über $GLOBALS kann in eigenen Templates und Programmierungen
+leicht auf den Service-Container zugegriffen werden. Andere Möglichkeiten
 wären über Events wie z.B. "\MetaModelsEvents::SUBSYSTEM_BOOT".
 
 Aktuelle Informationen unter: `IMetaModelsServiceContainer <https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModelsServiceContainer.php>`_
@@ -98,7 +100,7 @@ Aktuelle Informationen unter: `IServiceContainerAware <https://github.com/MetaMo
 setzt den zu verwendenden Service-Container
 
 ``getServiceContainer()`` |br|
-gibt den Zugriff auf den verwendenden Service-Container zurück
+gibt den Service-Container zurück
 
 
 .. _ref_api_interf_mm_factory:
@@ -121,13 +123,13 @@ Aktuelle Informationen unter: `IFactory <https://github.com/MetaModels/core/blob
 erstellt eine MetaModel-Instanz mit dem übergebenen Namen
 
 ``translateIdToMetaModelName($intMetaModelId);`` |br|
-gibt den übersetzen Namen zu einer MetaModel-Id zurück
+gibt den Namen zu einer MetaModel-ID zurück
   
 ``collectNames();`` |br|
 gibt alle MetaModel-Namen als Array zurück
 
 ``getServiceContainer();`` |br|
-ermittelt den Service-Container
+gibt den Service-Container zurück
 
 ``byTableName($strTableName);`` |br|   
 erstellt eine MetaModel-Instanz aus Tabellenname  |br|
