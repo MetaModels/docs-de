@@ -22,10 +22,10 @@ Aktuelle Informationen unter: `IMetaModelDataDefinition <https://github.com/Meta
 setzt die Definition eines MetaModel
 
 ``hasMetaModelDefinition()`` |br|
-prüft die Definition eines MetaModel
+prÃ¼ft die Definition eines MetaModel
 
 ``getMetaModelDefinition()`` |br|
-gibt die Definition eines MetaModel zurück
+gibt die Definition eines MetaModel zurÃ¼ck
 
 
 .. |br| raw:: html

@@ -5,7 +5,7 @@ Attribute Interfaces
 
 .. warning:: Noch im Aufbau!
 
-Die Attribute Interfaces ermöglichen den Zugriff auf die
+Die Attribute Interfaces ermÃ¶glichen den Zugriff auf die
 Attribute - sprich die Spalten der MetaModel-Tabelle -
 zum setzen, auslesen von Werten oder der Abfrage von
 Informationen.
@@ -24,29 +24,29 @@ Aktuelle Informationen unter: `IAttributeFactory <https://github.com/MetaModels/
 **Interfaces:**
 
 ``createAttribute($arrInformation, $objMetaModel)`` |br|
-gibt die Attribut-Instanz für ein gegebenes MetaModel und einem Array an
-Attributvorgaben zurück
+gibt die Attribut-Instanz fÃ¼r ein gegebenes MetaModel und einem Array an
+Attributvorgaben zurÃ¼ck
 
 ``addTypeFactory(IAttributeTypeFactory $typeFactory)`` |br|
-fügt ein "typ factory" zum gegebenen "factory" hinzu
+fÃ¼gt ein "typ factory" zum gegebenen "factory" hinzu
 
 ``getTypeFactory($typeFactory)`` |br|
-gibt den "typ factory" zum gegebenen "factory" zurück
+gibt den "typ factory" zum gegebenen "factory" zurÃ¼ck
 
 ``attributeTypeMatchesFlags($factory, $flags)`` |br|
-prüft das Attribute nach zu vergleichenden Flags
+prÃ¼ft das Attribute nach zu vergleichenden Flags
 
 ``getTypeNames($flags = false)`` |br|
-gibt die registrierten Typennamen der Factory zurück
+gibt die registrierten Typennamen der Factory zurÃ¼ck
 
 ``collectAttributeInformation(IMetaModel $objMetaModel)`` |br|
-gibt alle Attributinformationen eines MetaModel zurück
+gibt alle Attributinformationen eines MetaModel zurÃ¼ck
 
 ``createAttributesForMetaModel($metaModel)`` |br|
-gibt alle Attributinstanzen eines MetaModel zurück
+gibt alle Attributinstanzen eines MetaModel zurÃ¼ck
 
 ``getIconForType($type)`` |br|
-gibt das Icon für ein gegebenen Typnamen zurück
+gibt das Icon fÃ¼r ein gegebenen Typnamen zurÃ¼ck
 
 
 .. _ref_api_interf_attribute_iattributefactory:
@@ -54,83 +54,83 @@ gibt das Icon für ein gegebenen Typnamen zurück
 IAttribute Interface
 ....................
 
-Das IAttribute Interface ist das grundlegende Interface für Attribute.
+Das IAttribute Interface ist das grundlegende Interface fÃ¼r Attribute.
 
 Aktuelle Informationen unter: `IAttributeFactory <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/IAttribute.php>`_
 
 **Interfaces:**
 
 ``getName()`` |br|
-gibt den (lesbaren) Namen oder Titel eines Attributes zurück
+gibt den (lesbaren) Namen oder Titel eines Attributes zurÃ¼ck
 
 ``getColName()`` |br|
-gibt den Spaltennamen eines Attributes zurück
+gibt den Spaltennamen eines Attributes zurÃ¼ck
 
 ``getMetaModel()`` |br|
-gibt die MetaModel-Instanz eines Attributes zurück
+gibt die MetaModel-Instanz eines Attributes zurÃ¼ck
 
 ``get($strKey)`` |br|
-gibt die Meta-Informationen eines Attributes zum gegebenen Schlüsselwert zurück
+gibt die Meta-Informationen eines Attributes zum gegebenen SchlÃ¼sselwert zurÃ¼ck
 
 ``set($strKey, $varValue)`` |br|
-setzt die Meta-Informationen eines Attributes zum gegebenen Schlüsselwert
+setzt die Meta-Informationen eines Attributes zum gegebenen SchlÃ¼sselwert
 
 ``handleMetaChange($strMetaName, $varNewValue)`` |br|
-ersetzt die Meta-Informationen eines Attributes zum gegebenen Schlüsselwert
+ersetzt die Meta-Informationen eines Attributes zum gegebenen SchlÃ¼sselwert
 
 ``initializeAUX()`` |br|
 erstellt alle Hilfsdaten eines Attributes in anderen Tabellen 
 
 ``destroyAUX()`` |br|
-löscht alle Hilfsdaten eines Attributes in anderen Tabellen
+lÃ¶scht alle Hilfsdaten eines Attributes in anderen Tabellen
 
 ``getAttributeSettingNames()`` |br|
-gibt alle zulässigen Einstellungsnamen zurück
+gibt alle zulÃ¤ssigen Einstellungsnamen zurÃ¼ck
 
 ``getFieldDefinition($arrOverrides = array())`` |br|
 gibt ein DCA wie "$GLOBALS['TL_DCA']['tablename']['fields']['attribute-name]"
-zurück, mit einem optionalen Array mit zu überschreibenden Parametern
+zurÃ¼ck, mit einem optionalen Array mit zu Ã¼berschreibenden Parametern
 
 ``valueToWidget($varValue)`` |br|
-gibt ein Widgetkompatiblen Wert eines nativen Attributwertes zurück
+gibt ein Widgetkompatiblen Wert eines nativen Attributwertes zurÃ¼ck
 
 ``widgetToValue($varValue, $intItemId)`` |br|
-gibt ein Attributkompatiblen Wert eines nativen Widgetwertes zurück
+gibt ein Attributkompatiblen Wert eines nativen Widgetwertes zurÃ¼ck
 
 ``setDataFor($arrValues)`` |br|
 speichert die Werte nach dem Schema "id => value" in der Datenbank
 
 ``getDefaultRenderSettings()`` |br|
-gibt die Instanz der Standard-Rendereinstellungen des Attributes zurück
+gibt die Instanz der Standard-Rendereinstellungen des Attributes zurÃ¼ck
 
 ``parseValue($arrRowData, $strOutputFormat = 'text', $objSettings = null)`` |br|
-gibt die konvertierten Daten bezüglich des gegebenen Ausgabeformates zurück
+gibt die konvertierten Daten bezÃ¼glich des gegebenen Ausgabeformates zurÃ¼ck
 
 ``getFilterUrlValue($varValue)`` |br|
-gibt Attributwerte nach der Verwendung einer Filter-URL zurück
+gibt Attributwerte nach der Verwendung einer Filter-URL zurÃ¼ck
 
 ``sortIds($strListIds, $strDirection)`` |br|
-gibt ein nach der Sortierrichtung ("ASC|DESC") soertieres Array an IDs zurück
+gibt ein nach der Sortierrichtung ("ASC|DESC") soertieres Array an IDs zurÃ¼ck
 
 ``getFilterOptions($idList, $usedOnly, &$arrCount = null)`` |br|
-gibt Attribute nach dem Schema "id => value" zurück
+gibt Attribute nach dem Schema "id => value" zurÃ¼ck
 
 ``searchFor($strPattern)`` |br|
-gibt alle Items zu einem Suchmuster (z.B. Wildcard * oder ? für ein Buchtaben)
-zurück
+gibt alle Items zu einem Suchmuster (z.B. Wildcard * oder ? fÃ¼r ein Buchtaben)
+zurÃ¼ck
 
 ``filterGreaterThan($varValue, $blnInclusive = false)`` |br|
-gibt eine Liste mit IDs von Items zurück, die größer als der gegebene Wert ist;
+gibt eine Liste mit IDs von Items zurÃ¼ck, die grÃ¶ÃŸer als der gegebene Wert ist;
 ist die Option "Inclusive" gesetzt, wird das Item bei Gleichheit mit in
 die Liste aufgenommen
 
 ``filterLessThan($varValue, $blnInclusive = false)`` |br|
-gibt eine Liste mit IDs von Items zurück, die kleiner als der gegebene Wert ist;
+gibt eine Liste mit IDs von Items zurÃ¼ck, die kleiner als der gegebene Wert ist;
 ist die Option "Inclusive" gesetzt, wird das Item bei Gleichheit mit in
 die Liste aufgenommen
 
 ``filterNotEqual($varValue)`` |br|
-gibt eine Liste mit IDs von Items zurück, die gleich als der gegebene Wert ist
+gibt eine Liste mit IDs von Items zurÃ¼ck, die gleich als der gegebene Wert ist
 
 ``modelSaved($objItem)`` |br|
 wird aufgerufen, wenn ein gegebenes Item gespeichert wird
@@ -141,32 +141,32 @@ wird aufgerufen, wenn ein gegebenes Item gespeichert wird
 ISimple Interface
 .................
 
-Das ISimple Interface ist für alle "einfachen" Attribute gedacht,
-die über die einfache Methode "SELECT colName FROM mm_table"
-ermittelt werden können.
+Das ISimple Interface ist fÃ¼r alle "einfachen" Attribute gedacht,
+die Ã¼ber die einfache Methode "SELECT colName FROM mm_table"
+ermittelt werden kÃ¶nnen.
 
 Aktuelle Informationen unter: `ISimple <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/ISimple.php>`_
 
 **Interfaces:**
 
 ``getSQLDataType`` |br|
-gibt die SQL-Typendeklaration wie z.B. "text NULL" zurück
+gibt die SQL-Typendeklaration wie z.B. "text NULL" zurÃ¼ck
 
 ``createColumn()`` |br|
-erstellt die grundlegende Datenbankstruktur für ein gegbenenes Attribut
+erstellt die grundlegende Datenbankstruktur fÃ¼r ein gegbenenes Attribut
 
 ``deleteColumn()`` |br|
-löscht die grundlegende Datenbankstruktur für ein gegbenenes Attribut
+lÃ¶scht die grundlegende Datenbankstruktur fÃ¼r ein gegbenenes Attribut
 
 ``renameColumn($strNewColumnName)`` |br|
-benennt die grundlegende Datenbankstruktur für ein gegbenenes Attribut um;
-Achtung: die vorhandenen Daten in der Datenbank werden dabei gelöscht
+benennt die grundlegende Datenbankstruktur fÃ¼r ein gegbenenes Attribut um;
+Achtung: die vorhandenen Daten in der Datenbank werden dabei gelÃ¶scht
 
 ``unserializeData($strValue)`` |br|
-gibt die Rohdaten der Datenbank unserialisiert zurück
+gibt die Rohdaten der Datenbank unserialisiert zurÃ¼ck
 
 ``serializeData($strValue)`` |br|
-gibt die Daten serialisiert für die Datenbank zurück
+gibt die Daten serialisiert fÃ¼r die Datenbank zurÃ¼ck
 
 
 .. _ref_api_interf_attribute_icomplex:
@@ -174,20 +174,20 @@ gibt die Daten serialisiert für die Datenbank zurück
 IComplex Interface
 ..................
 
-Das IComplex Interface ist für alle "komplexen" Attribute gedacht,
-die nicht über die einfache Methode "SELECT colName FROM mm_table"
-ermittelt werden können.
+Das IComplex Interface ist fÃ¼r alle "komplexen" Attribute gedacht,
+die nicht Ã¼ber die einfache Methode "SELECT colName FROM mm_table"
+ermittelt werden kÃ¶nnen.
 
 Aktuelle Informationen unter: `IComplex <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/IComplex.php>`_
 
 **Interfaces:**
 
 ``getDataFor($arrIds)`` |br|
-gibt für die übergebenen IDs die Werte als "id => 'native data'" zurück,
+gibt fÃ¼r die Ã¼bergebenen IDs die Werte als "id => 'native data'" zurÃ¼ck,
 wobei "native data" sich nach dem jeweiligen Attributtyp richtet
 
 ``unsetDataFor($arrIds)`` |br|
-löscht die Werte der Attribute nach dem übergebenen Array der IDs
+lÃ¶scht die Werte der Attribute nach dem Ã¼bergebenen Array der IDs
 
 
 .. _ref_api_interf_attribute_itranslated:
@@ -195,21 +195,21 @@ löscht die Werte der Attribute nach dem übergebenen Array der IDs
 ITranslated Interface
 .....................
 
-Das ITranslated Interface ist für alle übersetzten Attribute.
+Das ITranslated Interface ist fÃ¼r alle Ã¼bersetzten Attribute.
 
 Aktuelle Informationen unter: `ITranslated <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/ITranslated.php>`_
 
 **Interfaces:**
 
 ``searchForInLanguages($strPattern, $arrLanguages = array())`` |br|
-gibt die IDs der Items zurück, welche mit der Angabe des Suchmusters (inkl. Wildcads)
+gibt die IDs der Items zurÃ¼ck, welche mit der Angabe des Suchmusters (inkl. Wildcads)
 und dem optionalen Array an Sprachen gefunden wurden
 
 ``setTranslatedDataFor($arrValues, $strLangCode)`` |br|
-setzt den Wert für ein Item in der entsprechnden Sprache
+setzt den Wert fÃ¼r ein Item in der entsprechnden Sprache
 
 ``unsetValueFor($arrIds, $strLangCode)`` |br|
-löscht die Werte für das Array von Item-IDs in der entsprechnden Sprache
+lÃ¶scht die Werte fÃ¼r das Array von Item-IDs in der entsprechnden Sprache
 
 .. |br| raw:: html
 
