@@ -210,10 +210,10 @@ gibt ein Array mit den Attributen des instanzierten MetaModel zurück
 welche nicht als Varianten definiert sind
 
 ``getAttribute($strAttributeName)``  |br|
-gibt die Instnz des Attributes mit dem gegebenen Attributnamen zurück
+gibt die Instanz des Attributes mit dem gegebenen Attributnamen zurück
 
 ``getAttributeById($intId)``  |br|
-gibt die Instnz des Attributes mit der gegebenen Attribut-ID zurück
+gibt die Instanz des Attributes mit der gegebenen Attribut-ID zurück
 
 ``findById($intId, $arrAttrOnly = array())``  |br|
 gibt das Item mit der gegebenen ID zurück; optional kann ein Array mit 
@@ -223,8 +223,9 @@ Attributnamen angegben werden, deren Werte zurück zu gegeben werden sollen
 erzeugt einen "leeres" Filterobjekt ohne Filterregeln
 
 ``prepareFilter($intFilterSettings, $arrFilterUrl)``  |br|
-erzeugt ein Filterobjekt aus einer gegebenen Filter-ID und einem Array
-mit URL-Parameter z.B. für die Aufnahme von GET-Werten
+erzeugt ein Filterobjekt aus einer gegebenen Filter-ID und einem optionalen
+Array mit Filterparametern z.B. für die Übernahme von GET-Werten aus einer
+URL
 
 ``findByFilter(
 $objFilter,
