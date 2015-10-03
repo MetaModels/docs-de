@@ -7,7 +7,7 @@ Attribute Interfaces
 
 Die Attribute Interfaces ermöglichen den Zugriff auf die
 Attribute - sprich die Spalten der MetaModel-Tabelle -
-zum setzen, auslesen von Werten oder der Abfrage von
+zum Setzen und auslesen von Werten oder der Abfrage von
 Informationen.
 
 
@@ -33,19 +33,19 @@ fügt ein "typ factory" zum gegebenen "factory" hinzu
 ``getTypeFactory($typeFactory)`` |br|
 gibt den "typ factory" zum gegebenen "factory" zurück
 
-``attributeTypeMatchesFlags($factory, $flags)`` |br|
+``attributeTypeMatchesFlags($factory, $intFlags)`` |br|
 prüft das Attribute nach zu vergleichenden Flags
 
-``getTypeNames($flags = false)`` |br|
+``getTypeNames($varFlags = false)`` |br|
 gibt die registrierten Typennamen der Factory zurück
 
 ``collectAttributeInformation(IMetaModel $objMetaModel)`` |br|
 gibt alle Attributinformationen eines MetaModel zurück
 
-``createAttributesForMetaModel($metaModel)`` |br|
+``createAttributesForMetaModel($objMetaModel)`` |br|
 gibt alle Attributinstanzen eines MetaModel zurück
 
-``getIconForType($type)`` |br|
+``getIconForType($strType)`` |br|
 gibt das Icon für ein gegebenen Typnamen zurück
 
 
@@ -112,7 +112,7 @@ gibt Attributwerte nach der Verwendung einer Filter-URL zurück
 ``sortIds($strListIds, $strDirection)`` |br|
 gibt ein nach der Sortierrichtung ("ASC|DESC") soertieres Array an IDs zurück
 
-``getFilterOptions($idList, $usedOnly, &$arrCount = null)`` |br|
+``getFilterOptions($strListIds, $usedOnly, &$arrCount = null)`` |br|
 gibt Attribute nach dem Schema "id => value" zurück
 
 ``searchFor($strPattern)`` |br|
