@@ -45,20 +45,22 @@ eine übersichtliche Darstellung der gespeicherten Items definieren.
 
 Optionen der Eingabemaske
 -------------------------
-* **Name**: Bezeichnung
+* **Name**: |br|
+  Bezeichnung
 * **Panel-Layout**: |br|
   Konfiguration der Tools in der Kopfzeile: Suche, Sortieren, Filtern, Limit;
-  für Suche und Filterung der Attribute muss die Option bei den Eingabewidgets gesetzt sein
+  für Suche und Filterung der Attribute muss die Option bei den Eingabewidgets
+  gesetzt sein
 * **Integration**: |br|  
   "Unabhängig" mit Auswahl des Backendbereiches; "Als Kind-Tabelle" mit Auswahl
   der Eltern-Tabelle
-* **Render mode**: |br|
-  Ausgabemodus der Auflistung als "Flat" oder "Hierarchical" bzw. bei Kind-Tabellen
-  zusätzlich auch als "Parented"
+* **Rendering-Modus**: |br|
+  Ausgabemodus der Auflistung als "Eine Ebene (ohne Hierarchie)" oder "Hierarchie"
+  bzw. bei Kind-Tabellen zusätzlich auch als "Elternelement vorhanden"
 * **showColumns**: |br|
   Option zur Anzeige der Attribute als Tabelle
-* **Allow editing/creating/deleting of items**: |br|
-  Freigabe zum Erstellen, Ändern, Löschen von Eingaben
+* **Bearbeitung/Erstellen/Löschen erlauben**: |br|
+  Freigabe zum Ändern, Erstellen, Löschen von Eingaben
 
 Optionen der Eingabewidgets
 ---------------------------
