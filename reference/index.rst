@@ -9,3 +9,4 @@ oder mehr erstellen wollen.
 
         api
         faq
+        glossary
