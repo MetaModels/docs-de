@@ -5,7 +5,7 @@ MetaModels Glossar
 
 .. glossary::
 
-  Metalodels
+  MetalModels
     MetaModels (Plural) stellt den komplette Aufbau mit dem Zusammenspiel
     mehrerer MetaModel untereinander dar
     
