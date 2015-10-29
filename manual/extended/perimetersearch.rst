@@ -61,12 +61,12 @@ Berlin (Spreeweg 1, 10557 Berlin, Deutschland).
 Filter anlegen
 --------------
 
-Unter den Filter wird ein neuer Filter z.B. mit der Bezeichnung
-"Umkreissuche" angelegt und anschließend einevom Typ "Umkreissuche" mit den
-folgenden Einstellungen angelegt:
+Unter Filter wird ein neuer Filter z.B. mit der Bezeichnung
+"Umkreissuche" angelegt und anschließend eine Filtereinstellung vom Typ
+"Umkreissuche" mit den folgenden Einstellungen:
 
 * Typ: Umkreissuche
-* Datenmodus: Multimodus
+* Datenmodus: Multimodus (z.Z. nur Multimodus verfügbar)
 * Attribute für Breite und Länge: entsprechende Attribute auswählen
 * Label: Bezeichnung für die Eingabe der Adresse ("Mittelpunkt") - z.B. "Adresse"
 * Bereichslabel: Bezeichnung für die Angabe der Größe des Radius - z.B. "Radius in km"
@@ -81,7 +81,7 @@ folgenden Einstellungen angelegt:
 Filter im Frontend einrichten
 -----------------------------
 
-Im Frontend sollte eine MetaModel-Liste mit aktiviertem Filter
+Im Frontend sollte eine zu filternde MetaModel-Liste mit aktiviertem Filter
 (z.B. "Umkreissuche") vorhanden sein.
 
 Im MetaModel-Frontendfilter wir das entsprechende MetaModel sowie der
@@ -109,7 +109,7 @@ LookUp-Service gibt.
 
 Die Auflösung der Adresse zu Längen- und Breitengerad bei der Eingabe im Backend
 ist auch über den LookUp-Service realisierbar - Eine Anleitung dazu folgt. Bis
-dahin kann bei folgend eine Anleitung eingesetzt werden: `Automatic Address
+dahin kann die folgende Anleitung eingesetzt werden: `Automatic Address
 <http://pyropixel.de/article-reader/metamodels-tutorial-part-8.html>`_
 
 In einem weiteren Ausbau der Erweiterung werden die Bezeichnungen Mehrsprachig
