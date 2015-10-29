@@ -40,7 +40,7 @@ Handbuch
         manual/metamodel-first/index
         manual/metamodel-second/index
         manual/metamodel-special/index
-        manual/extended
+        manual/extended/index
 
 .. _index_cookbook:
 
