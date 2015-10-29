@@ -9,7 +9,7 @@ Einleitung
 ----------
 
 Mit der Umkreissuche können Datensätze nach ihrer geografischen Position
-im Bezug auf eine vorgegebene Adresse und Radius filtern. Mit dem Filter
+im Bezug auf eine vorgegebene Adresse und Radius gefiltert werden. Mit dem Filter
 wird bestimmt, ob sich der entsprechende Datensatz innerhalb des vorgegebenen
 Radius befindet. Bezugspunkt ("Mittelpunkt") des "Filterkreises" ist die
 im Filter eingegebene Adresse - mehr zur Berechnung unter
