@@ -11,8 +11,10 @@ Einleitung
 Mit der Umkreissuche können Datensätze nach ihrer geografischen Position
 im Bezug auf eine vorgegebene Adresse und Radius gefiltert werden. Mit dem Filter
 wird bestimmt, ob sich der entsprechende Datensatz innerhalb des vorgegebenen
-Radius befindet. Bezugspunkt ("Mittelpunkt") des "Filterkreises" ist die
-im Filter eingegebene Adresse - mehr zur Berechnung unter
+Radius befindet bzw. ob der geografische Abstand zwischen dem Punkt der Filtereingabe
+und dem des Datensatzes unterhalb eines gegebenen Schwellwertes ist. Bezugspunkt
+("Mittelpunkt") des "Filterkreises" ist die im Filter eingegebene Adresse
+- mehr zur Berechnung unter
 `OpenGeoDB <http://www.mamat-online.de/umkreissuche/opengeodb.php>`_
 
 Die Berechnung der Entfernung der Datensätze zur eingegebenen Adresse
