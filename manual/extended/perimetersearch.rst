@@ -79,10 +79,10 @@ folgenden Einstellungen angelegt:
 Filter im Frontend einrichten
 -----------------------------
 
-Im Frontend sollte ein MetaModels-Listenelement mit aktiviertem Filter
+Im Frontend sollte eine MetaModel-Liste mit aktiviertem Filter
 (z.B. "Umkreissuche") vorhanden sein.
 
-Im MetaModels-Filterelement wir das entsprechende MetaModel sowie der
+Im MetaModel-Frontendfilter wir das entsprechende MetaModel sowie der
 Filter "Umkreissuche" aktiviert. Ebenso erfolgt eine Aktivierung bei
 den Attributen des Filters Umkreissuche.
 
