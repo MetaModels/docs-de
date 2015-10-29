@@ -90,12 +90,12 @@ Die Einstellung "Bei Änderung aktualisieren" sollte nicht angewählt werden,
 da ansonsten das Formular schon startet, wenn erst ein Wert von Adresse/Radius
 geändert wurde.
 
-.. |img_fe-filter_01|
+|img_fe-filter_01|
 
 In der Frontend-Ausgabe sollte nun ein Filter mit zwei Eingabemöglichkeiten
 zu sehen sein, mit denen die Liste gefiltert werden kann.
 
-.. |img_fe-filter_02|
+|img_fe-filter_02|
 
 
 Hinweise
