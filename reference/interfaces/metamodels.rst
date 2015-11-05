@@ -137,7 +137,8 @@ erstellt eine MetaModel-Instanz aus Tabellenname  |br|
 
 ``byId($intMetaModelId);`` |br|
 erstellt eine MetaModel-Instanz aus Tabellen-ID  |br|
-**Deprecated**: bitte Methode ``translateIdToMetaModelName($intMetaModelId);`` verwenden
+**Deprecated**: bitte Methode ``getMetaModel($strMetaModelName);`` mit 
+``translateIdToMetaModelName($intMetaModelId);`` verwenden
 
 ``getAllTables();`` |br|
 gibt alle MetaModel-Tabellennamen als Array zurück  |br|
@@ -153,11 +154,23 @@ MetaModel Interface:
 Mit dem MetaModel-Interface können Eigenschaften einer MetaModel-Instanz abgefragt bzw.
 beeinfusst werden.
 
-Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
-erzeugt werden (siehe :ref:`ref_api_interf_mm_factory`)
+Zunächst muss eine MetaModels-Instanz über den Namen eines MetaModel erzeugt werden
+siehe :ref:`ref_api_interf_mm_factory`)
 
-``$objMetaModel = \MetaModels\IFactory::translateIdToMetaModelName($intMetaModelId);`` oder
 ``$objMetaModel = \MetaModels\IFactory::getMetaModel($strMetaModelName);``
+
+bzw. inklusive des Service-Containers:
+
+.. code-block:: php
+	 :linenos:
+   
+	 /** @var \MetaModels\IMetaModelsServiceContainer $container */
+	 $container = $GLOBALS['container']['metamodels-service-container'];
+	 
+	 $factory = $container->getFactory();
+	 $strMetaModelName = $factory->translateIdToMetaModelName($intMetaModelId);
+	 $objMetaModel = $factory->getMetaModel($strMetaModelName);
+
 
 Anschließend kann eine Eigenschaft abgefragt oder gesetzt werden - z.B. die Abfrage
 aller vorhandenen Attribute:
