@@ -59,7 +59,7 @@ MetaModels von "Nightly build" zu "Composer" wechseln
 Das Vorgehen ist ähnlich dem "MetaModels aktualisieren". Beim Wechsel auf Composer sollte beachtet
 werden, dass der Composer für seine Arbeit einiges an RAM beansprucht - aus Erfahrungswerten sollten
 es mindestens 100MB sein. Die genaue Größe hängt von den weiteren installierten Paketen sowie von den
-Servereinstellungen des Providers.
+Servereinstellungen des Providers ab.
 
 Das folgende Vorgehen hat sich bisher bewährt:
 
