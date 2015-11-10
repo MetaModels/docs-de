@@ -52,3 +52,24 @@ Das folgende Vorgehen hat sich bisher bewährt:
 Aktuelle Informationen sind im
 `Forum <https://community.contao.org/de/showthread.php?56725-MetaModels-aktualisieren-%28ohne-Composer%29>`_
 zu finden.
+
+MetaModels von "Nightly build" zu "Composer" wechseln
+-----------------------------------------------------
+
+Das Vorgehen ist ähnlich dem "MetaModels aktualisieren". Beim Wechsel auf Composer sollte beachtet
+werden, dass der Composer für seine Arbeit einiges an RAM beansprucht - aus Erfahrungswerten sollten
+es mindestens 100MB sein. Die genaue Größe hängt von den weiteren installierten Paketen sowie von den
+Servereinstellungen des Providers.
+
+Das folgende Vorgehen hat sich bisher bewährt:
+
+* Composer installieren
+* alle alten Ordner von MM löschen (welche das waren könnt ihr in euren Downloads vom Nightly sehen) - Wirklich ALLE
+* Contao Cache leeren -> /system/cache (alles da drinn)
+* **KEIN** DB update machen (sonst ist alles weg)
+* in Composer dann die gewünschte MM Version auswählen zum Installieren vormerken und dann installieren
+* das Datenbankupdate sollte dann von alleine vorgeschlagen und gemacht werden
+
+Aktuelle Informationen sind im
+`Forum <https://community.contao.org/de/showthread.php?59961-MetaModels-aktualisieren-%28von-Nightly-Build-zu-Composer%29>`_
+zu finden.
