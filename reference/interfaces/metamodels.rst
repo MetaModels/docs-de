@@ -162,7 +162,7 @@ siehe :ref:`ref_api_interf_mm_factory`)
 bzw. inklusive des Service-Containers:
 
 .. code-block:: php
-	 :linenos:
+   :linenos:
    
    <?php
 	 /** @var \MetaModels\IMetaModelsServiceContainer $container */
