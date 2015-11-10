@@ -164,6 +164,7 @@ bzw. inklusive des Service-Containers:
 .. code-block:: php
 	 :linenos:
    
+   <?php
 	 /** @var \MetaModels\IMetaModelsServiceContainer $container */
 	 $container = $GLOBALS['container']['metamodels-service-container'];
 	 
@@ -425,6 +426,7 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
 .. code-block:: php
    :linenos:
    
+   <?php
    /* Parameter (Beispiel) */
    
    // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s)")

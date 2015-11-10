@@ -65,7 +65,7 @@ Ausgabe als HTML-Tabelle erfolgt.
 
 Mit einige CSS-Angaben wie z.B. die folgenden
 
-.. code-block:: html
+.. code-block:: css
    :linenos:
 	
 	.ce_metamodel_content .item {
