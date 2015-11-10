@@ -165,12 +165,12 @@ bzw. inklusive des Service-Containers:
    :linenos:
    
    <?php
-	 /** @var \MetaModels\IMetaModelsServiceContainer $container */
-	 $container = $GLOBALS['container']['metamodels-service-container'];
-	 
-	 $factory = $container->getFactory();
-	 $strMetaModelName = $factory->translateIdToMetaModelName($intMetaModelId);
-	 $objMetaModel = $factory->getMetaModel($strMetaModelName);
+   /** @var \MetaModels\IMetaModelsServiceContainer $container */
+   $container = $GLOBALS['container']['metamodels-service-container'];
+   
+   $factory = $container->getFactory();
+   $strMetaModelName = $factory->translateIdToMetaModelName($intMetaModelId);
+   $objMetaModel = $factory->getMetaModel($strMetaModelName);
 
 
 Anschließend kann eine Eigenschaft abgefragt oder gesetzt werden - z.B. die Abfrage
