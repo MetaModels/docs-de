@@ -52,6 +52,9 @@ zum Beispiel:
 ``"metamodels/core": "dev-hotfix-xyz"`` ändern zu
 ``"metamodels/core": "dev-hotfix-xyz as 2.0.0"``
 
+Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über "Einstellungen"
+der Paketverwaltung gelöscht werden.
+
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
 `Github <https://github.com/MetaModels>`_.
 
