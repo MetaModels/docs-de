@@ -49,6 +49,7 @@ Dazu in der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenm
 angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden.
 
 zum Beispiel:
+
 ``"metamodels/core": "dev-hotfix-xyz"`` ändern zu
 ``"metamodels/core": "dev-hotfix-xyz as 2.0.0"``
 
