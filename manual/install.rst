@@ -3,26 +3,30 @@
 MetaModels installieren und aktualisieren
 =========================================
 
+Für die Installation von MetaModels wird eine Contao-LTS-Version empfohlen
+- aktuell ist das Contao 3.5.x
+
 Installieren via Composer
 -------------------------
 
-MetaModels und alle seine Abhängigkeiten können mit der `Composer Erweiterung <https://c-c-a.org/ueber-composer>`_
-im Contao-Backend geladen bzw. installiert werden.
+MetaModels und alle seine Abhängigkeiten können mit der `Composer Paketverwaltung <https://c-c-a.org/ueber-composer>`_
+im Contao-Backend installiert werden.
 
 Wenn die Contao Installation bereits mit der neuen Paketverwaltung Composer versehen ist,
 kann man MetaModels einfach installieren in dem folgende Pakete auswählt bzw.
 in die Suchmaske des Composer werden:
 
-* `metamodels/core <https://packagist.org/packages/MetaModels/core>`_ (~2.0)
-* `metamodels/bundle_all <https://packagist.org/packages/MetaModels/bundle_all>`_ (~1.0)
+* `metamodels/core <https://packagist.org/packages/MetaModels/core>`_
+* `metamodels/bundle_all <https://packagist.org/packages/MetaModels/bundle_all>`_
 
-Bei den Paketen ist die Version "2.x-dev" auszuwählen.
+Bei den Paketen ist aktuell für Core die Version "2.0.0alphaX" und für Bundle die "1.0.X"
+auszuwählen.
 
 Werden nicht alle Attribute oder Filter gebraucht, können diese auch einzeln installiert
 oder anderes `Bundle-Paket <https://github.com/MetaModels?query=bundle>`_ ausgewählt
 werden. Die o.g. Pakete sind in Gruppen zusammen gefasst und sollten den meisten Ansprüchen genügen.
 
-Im Composer-Client von Contao ("Paketverwaltung") kann über die Anzeige des Abhängigkeitsgraph
+Im Composer-Client von Contao ("Paketverwaltung") kann über die Anzeige des Abhängigkeitsgraphen
 (Checkbox) ein Überblick über die installierten Pakete erhalten werden.
 
 Installieren via Nightly build
@@ -33,6 +37,23 @@ die aktuelle Version von MetaModels von der `Projektseite http://now.metamodel.m
 geladen, entpackt und per FTP auf den Server hoch geladen. Die meisten Ordner des Zip-Paketes
 kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionen
 müssen in das Hauptverzeichnis (Root) von Contao.
+
+Test von speziellen Bundles via Composer
+----------------------------------------
+
+Soll eine spezielles Bundle für Metamodels z.B. zum Testen von Paket "dev-hotfix-xyz"
+installiert werden, so muss zusätzlich nach Auswahl des entsprechenden Paketes per
+"Paket für die Installation vormerken" noch die Anpassung der Composer-JSON erfolgen.
+
+Dazu in der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
+angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden.
+
+zum Beispiel:
+``"metamodels/core": "dev-hotfix-xyz"`` ändern zu
+``"metamodels/core": "dev-hotfix-xyz as 2.0.0"``
+
+Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
+`Github <https://github.com/MetaModels>`_.
 
 MetaModels aktualisieren
 ------------------------
