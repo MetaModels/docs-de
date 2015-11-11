@@ -48,9 +48,8 @@ installiert werden, so muss zusätzlich nach Auswahl des entsprechenden Paketes 
 Dazu in der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
 angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden.
 
-zum Beispiel:
-
-``"metamodels/core": "dev-hotfix-xyz"`` ändern zu
+zum Beispiel: |br|
+``"metamodels/core": "dev-hotfix-xyz"`` ändern zu |br|
 ``"metamodels/core": "dev-hotfix-xyz as 2.0.0"``
 
 Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über "Einstellungen"
@@ -98,3 +97,7 @@ Das folgende Vorgehen hat sich bisher bewährt:
 Aktuelle Informationen sind im
 `Forum <https://community.contao.org/de/showthread.php?59961-MetaModels-aktualisieren-%28von-Nightly-Build-zu-Composer%29>`_
 zu finden.
+
+.. |br| raw:: html
+
+   <br />
