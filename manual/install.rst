@@ -12,15 +12,16 @@ Installieren via Composer
 MetaModels und alle seine Abhängigkeiten können mit der `Composer Paketverwaltung <https://c-c-a.org/ueber-composer>`_
 im Contao-Backend installiert werden.
 
-Wenn die Contao Installation bereits mit der neuen Paketverwaltung Composer versehen ist,
-kann man MetaModels einfach installieren in dem folgende Pakete auswählt bzw.
-in die Suchmaske des Composer werden:
+Wenn die Contao Installation bereits mit der neuen Composer Paketverwaltung versehen ist,
+kann man MetaModels einfach installieren in dem das folgende Paket auswählt bzw.
+in die Suchmaske des Composer eingegeben wird:
 
-* `metamodels/core <https://packagist.org/packages/MetaModels/core>`_
 * `metamodels/bundle_all <https://packagist.org/packages/MetaModels/bundle_all>`_
 
-Bei den Paketen ist aktuell für Core die Version "2.0.0alphaX" und für Bundle die "1.0.X"
-auszuwählen.
+Bei dem Bundle ist aktuell die Version "2.0.X" auszuwählen - diese installiert automatisch den kompletten
+"MetaModels-Core" mit. Bei der Auswahl der Restriktionen kann zwischen verschiedenen Stufen wie "Bugfix Release",
+"Feature Release" usw. ausgewählt werden - die aktuellen Funktionen von MetaModels werden mit "Feature Release"
+aktiviert.
 
 Werden nicht alle Attribute oder Filter gebraucht, können diese auch einzeln installiert
 oder anderes `Bundle-Paket <https://github.com/MetaModels?query=bundle>`_ ausgewählt
