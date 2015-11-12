@@ -27,8 +27,8 @@ Werden nicht alle Attribute oder Filter gebraucht, können diese auch einzeln in
 oder anderes `Bundle-Paket <https://github.com/MetaModels?query=bundle>`_ ausgewählt
 werden. Die o.g. Pakete sind in Gruppen zusammen gefasst und sollten den meisten Ansprüchen genügen.
 
-Im Composer-Client von Contao ("Paketverwaltung") kann über die Anzeige des Abhängigkeitsgraphen
-(Checkbox) ein Überblick über die installierten Pakete erhalten werden.
+Im Composer-Client von Contao ("Paketverwaltung") ist über die Anzeige des Abhängigkeitsgraphen
+(Checkbox) ein Überblick über die installierten Pakete möglich.
 
 Installieren via Nightly build
 ------------------------------
