@@ -39,6 +39,10 @@ geladen, entpackt und per FTP auf den Server hoch geladen. Die meisten Ordner de
 kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionen
 müssen in das Hauptverzeichnis (Root) von Contao.
 
+Anschließend muss in der Erweiterungsverwaltung die Datenbank aktualisiert werden - kommt dabei eine Fehlermeldung
+i.E. ``Fatal error: Class 'MetaModels\Helper\UpgradeHandler' ....!metamodels-tng-branch/config/runonce_0.php`` sollte
+eine Leerung des internen Caches über die Contao-Systemwartung erfolgen.
+
 Test von speziellen Bundles via Composer
 ----------------------------------------
 
