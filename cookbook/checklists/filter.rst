@@ -3,7 +3,7 @@
 Filter wird nicht angezeigt
 ===========================
 
-Eingewünschter Filter wird auf der Webseite nicht angezeigt.
+Ein gewünschter Filter wird auf der Webseite nicht angezeigt.
 
 Checkliste:
 
