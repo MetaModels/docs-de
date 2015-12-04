@@ -1,12 +1,26 @@
-MetaModels cookbook
-===================
+.. _rst_cookbook:
 
-In this cookbook you will find several snippets and example classes along with example configurations.
+MetaModels "Kochbuch"
+=====================
+
+In dem MetaModels "Kochbuch" sind verschiedene Snippets, Tipps und
+Tricks rund um den Einsatz mit Metamodels zusammengefasst.
+
+In die Auflistung können gern interessante oder ungewöhnliche Lösungen
+aufgenommen werden - bitte eigene "Rezepte" oder Links zum Forum bzw.
+andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
+
 
 .. toctree::
     :maxdepth: 2
 
-    filter/index.rst
+    checklists/index.rst
+    panels/own-regex.rst
+    debug/templates.rst
 
-If you are looking into writing excessive own extensions for MetaModels, please make yourself familiar with the base
-:ref:`dc-general <dcgeneral:search>`
+
+.. _manual@metamodel.me: manual\@metamodel.me?Subject=Mein%20Rezept%20f%FCr%20das%20MM-Kochbuch&Body=Mein%20Rezept%3A%0A
+
+.. |manual@metamodel.me| raw:: html
+
+   <a href="mailto:manual@metamodel.me?Subject=Mein Rezept für das MM-Kochbuch">manual@metamodel.me</a>

@@ -1,48 +1,48 @@
 .. _mm_first_rendersettings:
 
-|img_rendersettings| Rendereinstellungen
-========================================
+|img_rendersettings_32| Render-Einstellungen
+============================================
 
-In diesem Schritt werden die Rendereinstellungen für das MetaModel
-"Mitarbeiterliste" angelegt. Es wird eine Renderingeinstellung für das Backend
+In diesem Schritt werden die Render-Einstellungen für das MetaModel
+"Mitarbeiterliste" angelegt. Es wird eine Render-Einstellung für das Backend
 (Dateneingabe) und für das Frontend (Datenausgabe) benötigt.
 
-Zum Aufruf der Rendereinstellungen wird die Übersicht MetaModels aktiviert,
+Zum Aufruf der Render-Einstellungen wird die Übersicht MetaModels aktiviert,
 so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
-auf das Icon "|img_rendersettings| Rendereinstellungen" und die Ansicht
-wechselt zur Übersicht der Rendereinstellungen - diese ist aktuell noch leer.
+auf das Icon "|img_rendersettings| Render-Einstellungen" und die Ansicht
+wechselt zur Übersicht der Render-Einstellungen - diese ist aktuell noch leer.
 
 Nach einem Klick auf "|img_new| Neu" öffnet sich sofort die Eingabemaske der
-ersten Rendereinstellung. Im Eingabefeld "Name" wird eine treffende Bezeichnung
+ersten Render-Einstellung. Im Eingabefeld "Name" wird eine treffende Bezeichnung
 wie z.B. "BE Liste" eingegeben (siehe Screenshot), die Checkbox "Standard"
 gesetzt und mit "Speichern und schließen" die Eingabe gesichert.
 
 |img_rendersettings_01|
 
-In der Übersicht der Rendereinstellungen sollte nun der erste Eintrag mit
+In der Übersicht der Render-Einstellungen sollte nun der erste Eintrag mit
 "BE Liste" zu sehen sein - siehe Screenshot.
 
 |img_rendersettings_02|
 
-Über einen Klick auf das Icon "|img_rendersetting| Attributeinstellungen"
+Über einen Klick auf das Icon "|img_rendersetting| Render-Einstellungen der Attribute"
 wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
-die in der jeweiligen Liste der Rendereinstellungen die anzuzeigenden
+die in der jeweiligen Liste der Render-Einstellungen die anzuzeigenden
 Attribute ausgewählt bzw. aktiviert.
 
 Ein einfacher Weg, um die angelegten Attribute hinzu zu fügen ist über Icon
 in der Kopfzeile "|img_rendersettings_add| Alle hinzufügen" - nach Klick auf
 die Buttons "Weiter" und "Speichern und schließen" sind alle vorhandenen
-Attribute der Renderingeinstellung hinzu gefügt. Per Standard sind die
+Attribute der Render-Einstellung hinzu gefügt. Per Standard sind die
 Attribute nicht aktiviert - dies kann leicht über das "Auge-Icon" erfolgen.
 In diesem Beispiel werden die Attribute "Name" und "Vorname" aktiviert - die
 Attributauflistung sollte nun wie im Screenshot aussehen.
 
 |img_rendersettings_03|
 
-Die Rendereinstellungen für die Anzeige im Backend ist damit abgeschlossen.
-Nachfolgend kann die Rendereinstellungen für die Anzeige im Frontend folgen.
+Die Render-Einstellungen für die Anzeige im Backend ist damit abgeschlossen.
+Nachfolgend kann die Render-Einstellungen für die Anzeige im Frontend folgen.
 
-Das Vorgehen ist Analog dem für die "BE Liste" - in den Rendereinstellungen
+Das Vorgehen ist Analog dem für die "BE Liste" - in den Render-Einstellungen
 kann als Name könnte "FE Liste" eingetragen werden. Zusätzlich wird eine
 Anzeige der Attribut-Labels per Checkbox "Labels verbergen" abgewählt (siehe
 Screenshot).
@@ -57,12 +57,13 @@ Screenshot).
 |img_rendersettings_05|
 
 Damit sind die Vorbereitungen Auflistungen im Backend und Frontend abgeschlossen
-und die Übersicht der Rendereinstellungen sollte nun die zwei Listen anzeigen
+und die Übersicht der Render-Einstellungen sollte nun die zwei Listen anzeigen
 (siehe Screenshot).
 
 |img_rendersettings_06|
 
 
+.. |img_rendersettings_32| image:: /_img/icons/rendersettings_32.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
 .. |img_rendersetting| image:: /_img/icons/rendersetting.png
 .. |img_rendersettings_add| image:: /_img/icons/rendersettings_add.png

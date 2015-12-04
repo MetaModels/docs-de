@@ -17,7 +17,7 @@ als FE-Modul in Contao genutzt werden. Einen Unterschied in den
 Einstellungsoptionen zwischen Inhaltselement und Modul gibt es nicht.
 
 Für die Listendarstellung gehört zu den wichtigsten Auswahloptionen
-die Auswahl des MetaModel (wo kommen die Daten her), die Renderingeinstellung
+die Auswahl des MetaModel (wo kommen die Daten her), die Render-Einstellung
 und die Templateauswahl (wie werden die Daten angezeigt) und ggf. noch 
 die Filtereinstellung (welche Daten werden ausgegeben).
 
@@ -27,7 +27,7 @@ Ausgabe.
 
 Für die Filtereinstellungen sind die wichtigsten Auswahloptionen
 die Wahl des MetaModel (auf welcher Basis soll gefiltert werden) und
-die Filterwahl (welche Filterung soll zum Einsatz kommen).
+die Wahl des Filtersets (welche Filterung soll zum Einsatz kommen).
 
 Zusätzlich gibt es für die Filter ein Inhaltselement/Modul "Filterreset"
 zum Zurücksetzen aller Filtereinstellungen im Frontend.
@@ -39,17 +39,18 @@ Optionen CE Liste
   Auswahl des MetaModel für die Datenherkunft
 * **Elemente pro Seite, Offset und Limit** |br|
   Einstellungen für eine Paginierung bzw. maximale Anzahl
-* **Filter-Einstellungen**: |br|
-  Auswahl des Filters sowie der Sortierung; ist bei einem
-  Filter "Auswahl" die Option "Statischer Parameter" gesetzt,
-  erscheint hier ein Selectfeld zur Wertauswahl; ist der
+* **Filterset-Einstellungen**: |br|
+  Auswahl des Filtersets sowie der Sortierung; ist bei einer
+  Filterregel "Einfache Abfareg" die Option "Statischer Parameter"
+  gesetzt, erscheint hier ein Selectfeld zur Wertauswahl; ist der
   Parameter "Überschreiben der Sortierung erlauben" gesetzt,
-  kann die Sortierung per URL nach dem Schema /orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>.html
+  kann die Sortierung per URL nach dem Schema
+  /orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>.html
   bzw. als GET-Parameter überschrieben werden
-* **Rendering-Einstellungen**: |br|
-  Auswahl der Renderingeinstellung; möchte man Einfluss auf
+* **Render-Einstellungen**: |br|
+  Auswahl der Render-Einstellung; möchte man Einfluss auf
   die Ausgabe der Items der Ausgabeliste haben, dann bietet sich
-  das Template der Renderingeinstellung (metamodel_prerendered)
+  das Template der Render-Einstellung (metamodel_prerendered)
   an und nicht das "Template der Ausgabe" (ce_metamodel_list)
 
 Optionen CE Filter
@@ -57,8 +58,8 @@ Optionen CE Filter
 
 * **MetaModel**: |br|
   Auswahl des MetaModel welche die Grundlage der Filterung darstellt
-* **Anzuwendende Filtereinstellungen**: |br|
-  Auswahl des Filters
+* **Anzuwendendes Filterset**: |br|
+  Auswahl des Filtersets
 * **Attribute**: |br|
   Attribute, die in dem Filter im Frontend angezeigt werden sollen
   

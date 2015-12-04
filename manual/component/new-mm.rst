@@ -26,7 +26,7 @@ heißen - ob der Name im Singular oder Plural stehen sollte, gibt es unterschied
 
 Mit der Erstellung der Tabelle werden in dieser nur einige, für das Zusammenspiel mit der Erweiterung
 MetaModels notwendige, Spalten wie id, pid, timestamp usw. angelegt. Die weiteren, individuellen Spalten
-werden als s.g. "Attribute" angelegt und mit ihren spezifischen Optionen versehen. Mehr dazu unter dem
+werden als sog. "Attribute" angelegt und mit ihren spezifischen Optionen versehen. Mehr dazu unter dem
 Punkt :ref:`component_attribute`.
 
 Optionen

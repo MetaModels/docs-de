@@ -1,6 +1,6 @@
 .. _mm_first_attribute:
 
-|img_fields| Attribute
+|img_fields_32| Attribute
 =========================
 
 Nachdem die Tabelle "mm_mitarbeiterliste" in der Datenbank erstellt wurde, muss in dieser
@@ -58,7 +58,7 @@ werden.
 |img_attribute_04|
 
 
-
+.. |img_fields_32| image:: /_img/icons/fields_32.png
 .. |img_fields| image:: /_img/icons/fields.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_pasteafter| image:: /_img/icons/pasteafter.gif

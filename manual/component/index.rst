@@ -3,7 +3,9 @@
 Komponenten eines MetaModel
 ===========================
 
-.. warning:: Noch im Aufbau!
+.. warning:: Handbuch noch im Aufbau! |br|
+   Ab dem 04.12.2015 werden die Bezeichnungen und Icons
+   von MetaModels angepasst - siehe :ref:`manual_new_labels`
 
 In den folgenden Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"
 des Aufbaus der Erweiterung zu verstehen.
@@ -17,12 +19,12 @@ erforderlich wäre.
 
 Nach dem Erstellen eines MetaModel stehen die folgenden Komponenten zur Bearbeitung zur Verfügung:
 
-* |img_fields| Attribute
-* |img_rendersettings| Rendereinstellungen
-* |img_dca| Eingabemasken
-* |img_searchable_pages| Seitensuche
-* |img_filter| Filter
-* |img_dca_combine| Eingabe- und Ausgabe-Optionen
+ |img_fields|  :ref:`component_attribute` |br|
+ |img_rendersettings|  :ref:`component_rendersettings` |br|
+ |img_dca|  :ref:`component_dca` |br|
+ |img_searchable_pages|  :ref:`component_searchable-pages` |br|
+ |img_filter|  :ref:`component_filter` |br|
+ |img_dca_combine|  :ref:`component_dca-combine`
 
 Bei der Erstellung eines (einfachen) MetaModel können die Komponenten in der aufgeführten 
 Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels - also im
@@ -47,6 +49,14 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
     filter
     dca-combine
     contentelements
+
+
+.. |br| raw:: html
+
+   <br />
+   
+.. |nbsp| unicode:: 0xA0 
+   :trim:
 
 .. |img_fields| image:: /_img/icons/fields.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png

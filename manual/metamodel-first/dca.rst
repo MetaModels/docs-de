@@ -1,7 +1,7 @@
 .. _mm_first_dca:
 
-|img_dca| Eingabemasken
-=========================
+|img_dca_32| Eingabemasken
+==========================
 
 In diesem Schritt wird die Eingabemasken für das MetaModel
 "Mitarbeiterliste" angelegt, über welche die Daten der Attribute in der
@@ -32,7 +32,7 @@ In der Übersicht der Eingabemasken sollte nun der erste Eintrag mit
 wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
 die in der Eingabemaske anzuzeigenden Attribute ausgewählt bzw. aktiviert.
 
-Wie bei den Rendereinstellungen können auch hier die angelegten Attribute
+Wie bei den Render-Einstellungen können auch hier die angelegten Attribute
 in einem Schritt hinzugefügt werden. Dazu ist das Icon in der Kopfzeile
 "|img_dca_add| Alle hinzufügen" zu klicken und anschließend die Buttons
 "Weiter" und "Speichern und schließen" zu bestätigen. Nun sind alle
@@ -48,6 +48,7 @@ Die Eingabemaske ist im Backend immer noch nicht sichtbar. Dies erfolgt erst,
 wenn der Punkt :ref:`component_dca-combine` abgeschlossen ist.
 
 
+.. |img_dca_32| image:: /_img/icons/dca_32.png
 .. |img_dca| image:: /_img/icons/dca.png
 .. |img_dca_setting| image:: /_img/icons/dca_setting.png
 .. |img_dca_setting_add| image:: /_img/icons/dca_setting_add.png

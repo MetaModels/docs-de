@@ -61,8 +61,8 @@ Berlin (Spreeweg 1, 10557 Berlin, Deutschland).
 Filter anlegen
 --------------
 
-Unter Filter wird ein neuer Filter z.B. mit der Bezeichnung
-"Umkreissuche" angelegt und anschließend eine Filtereinstellung vom Typ
+Unter Filtersets wird ein neues Filterset z.B. mit der Bezeichnung
+"Umkreissuche" angelegt und anschließend eine Filterregel vom Typ
 "Umkreissuche" mit den folgenden Einstellungen:
 
 * Typ: Umkreissuche
@@ -81,11 +81,11 @@ Unter Filter wird ein neuer Filter z.B. mit der Bezeichnung
 Filter im Frontend einrichten
 -----------------------------
 
-Im Frontend sollte eine zu filternde MetaModel-Liste mit aktiviertem Filter
+Im Frontend sollte eine zu filternde MetaModel-Liste mit aktiviertem Filterset
 (z.B. "Umkreissuche") vorhanden sein.
 
-Im MetaModel-Frontendfilter wir das entsprechende MetaModel sowie der
-Filter "Umkreissuche" aktiviert. Ebenso erfolgt eine Aktivierung bei
+Im MetaModel-Frontendfilter wir das entsprechende MetaModel sowie das
+Filterset "Umkreissuche" aktiviert. Ebenso erfolgt eine Aktivierung bei
 den Attributen des Filters Umkreissuche.
 
 Die Einstellung "Bei Änderung aktualisieren" sollte nicht angewählt werden,

@@ -1,6 +1,6 @@
 .. _component_attribute:
 
-|img_fields| Attribute
+|img_fields_32| Attribute
 =========================
 
 .. note:: eigene Spalten der Datenbanktabelle als Attribute erstellen und
@@ -24,7 +24,7 @@ erscheinen.
   die bisher eingegebenen Werte in der Datenbank gelöscht! Muss dennoch ein Attributtyp
   bei Behalt der Werte geändert werden, sollte dies direkt auf der Datenbankebene z.B. über 
   Export/Import der Attribut-Spalte per CSV begleitet werden. Ein geändertes Attribut
-  sollte bei den Renderingeinstellungen und Eingabemasken anschließend nochmal neu
+  sollte bei den Render-Einstellungen und Eingabemasken anschließend nochmal neu
   hinzugefügt werden.
 
 Je nach Attributtyp stehen nach einem Neu laden der Seite weitere Eingabemöglichkeiten bzw.
@@ -62,7 +62,7 @@ spezifischen Optionen:
   mit der Option "Passen Sie den Dateibaum an" können während der Auswahl weitere
   Dateioptionen gesetzt werden; bei der Verwendung bei Bildern ist zu beachten, dass
   für eine (direkte) Anzeige von Vorschaubildern im Backend bzw. im Frontend die
-  Option "Als Bildfeld mit Vorschaubild benutzen" in den Renderingeinstellungen des
+  Option "Als Bildfeld mit Vorschaubild benutzen" in den Render-Einstellungen des
   Dateiattributs gesetzt werden muss
 * **Sprachschlüssel**: Auswahl von ISO-Sprachcodes |br|
   mit dem Attribut steht eine Auswahl von Sprachcodes zur Verfügung; die Sprachcodes
@@ -107,10 +107,17 @@ zusätzlich für eine Mehrsprachigkeit vorhanden:
 * Übersetzte Tags
 * Übersetzter Text
 
-Diese Attribute unterscheiden sich von ihren einsprachigen Attributen lediglich durch
+Diese Attribute unterscheiden sich von ihren einsprachigen Attributen im Grunde durch
 die Eingabe der mehrsprachigen Angaben für Name und Beschreibung. Für die übersetzten
 Attribute werden spezielle Tabellen der Erweiterung verwendet und nicht die von der
-MetaModel-Erstellung erzeugten Tabelle. 
+MetaModel-Erstellung erzeugten Tabelle.
+
+Zu beachten ist, dass bei Relationen per "Auswahl" oder "Mehrfachauswahl" zwischen
+zwei Metamodel mit Übersetzungen üblicher Weise *nicht* die Optionen "Übersetzter Select"
+und "Übersetzte Tags" auszuwählen ist. Das Erkennen bzw. das Umschaltung der Sprache
+macht MetaModels automatisch. Die beiden "übersetzten Varianten" sind hauptsächslich
+für die Anbindung von Tabellen bestimmt, die nicht zu MetaModels gehören und ein
+eigenständiges Feld für die Sprachvariante besitzen.
 
 Neben den aufgeführten Attributen können über zusätzliche Erweiterungen von MetaModels
 auch weitere Attributtypen zur Verfügung stehen.
@@ -144,6 +151,7 @@ gespeichert und es erscheint in der Attributliste der vorhandenen MetaModels.
 Die Reihenfolge in der Liste hat keinen weiteren Einfluss.
 
 
+.. |img_fields_32| image:: /_img/icons/fields_32.png
 .. |img_fields| image:: /_img/icons/fields.png
 .. |img_new| image:: /_img/icons/new.gif
 

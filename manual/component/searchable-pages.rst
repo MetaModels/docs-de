@@ -1,14 +1,14 @@
 .. _component_searchable-pages:
 
-|img_searchable_pages| Seitensuche
-==================================
+|img_searchable_pages_32| Indexierungen
+=======================================
 
 .. note:: Detailseiten eines MetaModel in der Suche und sitemap.xml von Contao einbinden
 
 Einleitung
 ----------
 
-Mit der Seitensuche können die Detailseiten eines MetaModel-Renderings (Liste) in das
+Mit den Indexierungen können die Detailseiten eines MetaModel-Renderings (Liste) in das
 Frontendmodule der Suche und in die Generierung der sitemap.xml eingebunden werden.
 
 Diese "Sonderbehandlung" der Detailseiten gegenüber den normalen Listenanzeigen ergibt sich aus
@@ -26,20 +26,21 @@ Optionen
 
 * **Name**: |br|
   Bezeichnung für das Backend
-* **Filtersetting**: |br|
-  Auswahl des Filters für die Detailansicht
-* **Rendersetting**: |br|
-  Auswahl der Renderingeinstellungen für die Detailansicht
+* **Filterset**: |br|
+  Auswahl des Filtersets für die Detailansicht
+* **Render-Einstellungen**: |br|
+  Auswahl der Render-Einstellungen für die Detailansicht
 
 Ablauf
 ------
 
-Eine neue Seitensuche kann über das Icon "|img_new| New searchable page" angelegt und die
-nach der Eingabe des Namens die Optionen für den Filter und das Rendering ausgewählt werden.
-Die Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder über
-die Neuerstellungen der Systemwartung.
+Eine neue Indexierung kann über das Icon "|img_new| Neue Indexierung" angelegt und die
+nach der Eingabe des Namens die Optionen für das Filterset und die Render-Einstellung ausgewählt
+werden. Die Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder
+über die Neuerstellungen der Systemwartung.
 
 
+.. |img_searchable_pages_32| image:: /_img/icons/searchable_pages_32.png
 .. |img_searchable_pages| image:: /_img/icons/searchable_pages.png
 .. |img_new| image:: /_img/icons/new.gif
 

@@ -17,7 +17,7 @@ Einstellungen aktiviert (siehe Screenshot):
 * Elementtyp: MetaModel-Liste
 * Sortieren nach: Name
 * Anzuwendende  Filtereinstellungen: Veröffentlicht
-* Anzuwendende Renderingeinstellungen: FE Liste
+* Anzuwendende Render-Einstellungen: FE Liste
 
 |img_contentelements_01|
 
@@ -38,7 +38,7 @@ mit den ersten Daten gefüllt werden kann (siehe Screenshot).
 |img_contentelements_02|
 
 Nach "Speichern und schließen" ist der Datensatz mit den aktivierten Attributen
-der Renderingeinstellung "BE Liste" (Name und Vorname) zu sehen (siehe Screenshot).
+der Render-Einstellung "BE Liste" (Name und Vorname) zu sehen (siehe Screenshot).
 
 |img_contentelements_03|
 

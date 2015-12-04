@@ -1,12 +1,12 @@
 .. _component_dca:
 
-|img_dca| Eingabemasken
-=========================
+|img_dca_32| Eingabemasken
+==========================
 
 .. note:: Eingabemasken für Dateneingabe erstellen;
   Attribute hinzufügen, aktivieren und konfigurieren; optional 
-  Anzeigebedingungen des Eingabewidgets definieren; Definition
-  von Sortier- und Gruppieroptionen der gespeicherten
+  Anzeigebedingung des Eingabefeldes definieren; Definition
+  von Gruppierung und Sortierung der gespeicherten
   Items möglich
 
 Einleitung
@@ -33,13 +33,13 @@ Mit "Unabhängig" wird die Eingabemaske in einem der Navigationsblöcke in Conta
 eingegliedert und mit "Kind-Tabelle" einer vorhandenen MetaModel- oder
 Contao-Tabelle zugeordnet.
 
-Die Anzeige des Eingabewidgets kann über weitere Steuerungsparameter beeinflusst
-werden. Jedes Eingabewidget hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
-der Anzeige bzw. Sichtbarkeit ("Anzeigebedingungen"). So kann ein oder mehrere
-Eingabewidgets in der Eingabemaske nur sichtbar sein, wenn eine bestimmte
+Die Anzeige des Eingabefeldes kann über weitere Steuerungsparameter beeinflusst
+werden. Jedes Rendereinstellungen hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
+der Anzeige bzw. Sichtbarkeit ("Ansichtsbedingungen"). So kann ein oder mehrere
+Eingabefelder in der Eingabemaske nur sichtbar sein, wenn z.B. eine bestimmte
 Checkbox gesetzt ist.
 
-Für jede Eingabemaske kann man ein oder mehrere Sortier- und Gruppieroptionen für
+Für jede Eingabemaske kann man ein oder mehrere Gruppierungen und Sortierungen für
 eine übersichtliche Darstellung der gespeicherten Items definieren.
 
 
@@ -54,16 +54,16 @@ Optionen der Eingabemaske
 * **Integration**: |br|  
   "Unabhängig" mit Auswahl des Backendbereiches; "Als Kind-Tabelle" mit Auswahl
   der Eltern-Tabelle
-* **Rendering-Modus**: |br|
+* **Render-Modus**: |br|
   Ausgabemodus der Auflistung als "Eine Ebene (ohne Hierarchie)" oder "Hierarchie"
   bzw. bei Kind-Tabellen zusätzlich auch als "Elternelement vorhanden"
-* **showColumns**: |br|
+* **Anzeige in Tabellenform**: |br|
   Option zur Anzeige der Attribute als Tabelle
 * **Bearbeitung/Erstellen/Löschen erlauben**: |br|
   Freigabe zum Ändern, Erstellen, Löschen von Eingaben
 
-Optionen der Eingabewidgets
----------------------------
+Optionen der Eingabefeldes
+--------------------------
 * **Typ**: |br|
   Legende: Unterteilung des Eingabepanels ("Grüne Linie") |br|
   Attribut: Anzeige der Attributoptionen
@@ -81,16 +81,16 @@ Optionen der Anzeigebedingungen des Eingabewidgets
 * **Attribut/Wert** |br|
   Auswahl bei Abhängigkeit zu einem anderen Attribut
 
-Optionen der Sortierung und Gruppierung
+Optionen der Gruppierung und Sortierung
 ---------------------------------------
 * **Name**: |br|
   Bezeichnung
-* **Enable manual sorting**: |br|
+* **Manuelle Sortierung aktivieren**: |br|
   wenn der Wert gesetzt ist, können die Items manuell sortiert werden; ist
   die Checkbox nicht gesetzt, können folgende Optionen gesetzt werden:
 * **Grouping attribute**: |br|
   Auswahl des Attributes, nach dem Gruppiert werden soll
-* **Grouping type**: |br|
+* **Gruppierungstyp**: |br|
   Gruppierungstyp wie nach Anfangsbuchstabe oder auch nach Zeitraum wie Woche,
   Monat
 * **rendersortattr**: |br|
@@ -128,6 +128,7 @@ Anschließend können in der Listenansicht der Eingabemasken über das Icon
 für die Sortierung und Gruppierung der gespeicherten Items angelegt werden.
 
 
+.. |img_dca_32| image:: /_img/icons/dca_32.png
 .. |img_dca| image:: /_img/icons/dca.png
 .. |img_dca_setting| image:: /_img/icons/dca_setting.png
 .. |img_dca_setting_add| image:: /_img/icons/dca.png

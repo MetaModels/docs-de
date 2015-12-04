@@ -20,7 +20,7 @@ bzw. Frontend-Modul mit
 * Abfrage eines MetaModels unter Berücksichtigung von Filterregeln 
   - siehe :ref:`ref_api_interf_mm_metamodel`
 * Zugriff auf alle Items; ggf. Parsing der Items mit Angabe des Ausgabeformats
-  (Text, HTML5) und der Renderingeinstellung) - siehe :ref:`ref_api_inteface_items`
+  (Text, HTML5) und der Render-Einstellung) - siehe :ref:`ref_api_inteface_items`
 * Zugriff auf ein Item bzw. Ausgabe (Raw, Text, HTML5) - siehe :ref:`ref_api_interf_mm_item`
 
 Zudem können über die Interfaces eines MetaModel auch verschiedene Objekte (MetaModel,
@@ -65,7 +65,7 @@ gibt den Zugriff auf die Attribute zurück
 gibt den Zugriff auf die Filter zurück
 
 ``getRenderSettingFactory()`` |br|
-gibt den Zugriff auf die Renderingeinstellungen zurück
+gibt den Zugriff auf die Render-Einstellungen zurück
 
 ``getEventDispatcher()`` |br|
 gibt den Zugriff auf die Event-Dispatcher zurück
@@ -289,7 +289,7 @@ speichert ein gegebenes Item
 speichert ein gegebenes Item
 
 ``getView($intViewId = 0)``  |br|
-gibt die Instanz der Renderingeinstellungen des instanzierten MetaModel zurück
+gibt die Instanz der Render-Einstellungen des instanzierten MetaModel zurück
 
 
 .. _ref_api_inteface_items:
@@ -336,12 +336,12 @@ gibt die CSS-Klasse des aktuellen Items zurück (first, last, even, odd)
 
 ``parseValue($strOutputFormat = 'text', $objSettings = null)``  |br|
 parst das aktuelle Item und gibt das Ergebnis als Array der Attribute zurück;
-für die Ausgaben in XHTML/HTML5 müssen die Renderingeinstellungen als
+für die Ausgaben in XHTML/HTML5 müssen die Render-Einstellungen als
 $objSettings übergeben werden z.B. $objMetaModel->getView(3)
 
 ``parseAll($strOutputFormat = 'text', $objSettings = null)``  |br|
 parst alle Items und gibt das Ergebnis als Array der Items mit dessen Attributen zurück;
-für die Ausgaben in XHTML/HTML5 müssen die Renderingeinstellungen als
+für die Ausgaben in XHTML/HTML5 müssen die Render-Einstellungen als
 $objSettings übergeben werden z.B. $objMetaModel->getView(3)
 
 
@@ -431,7 +431,7 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    
    // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s)")
    $strModelName = 'mm_mitarbeiterliste';
-   // ID der Renderingeinstellungen "FE-Liste"
+   // ID der Render-Einstellungen "FE-Liste"
    $intRenderId = 2;
    
    /* Interface */

@@ -1,10 +1,10 @@
 .. _mm_first_filter:
 
-|img_filter| Filter
-===================
+|img_filter_32| Filtersets
+==========================
 
-Der Schritt "Filter" zählt zu den optionalen Komponenten und steuert verschiedene
-Optionen der Ausgabe. In unserem Beispiel soll ein Filter angelegt werden,
+Der Schritt "Filtersets" zählt zu den optionalen Komponenten und steuert verschiedene
+Parameter der Ausgabe. In unserem Beispiel soll ein Filter angelegt werden,
 der für die Frontendausgabe nur die Einträge mit aktiviertem "Veröffentlicht".
 
 Zum Aufruf der Filter wird wieder die Übersicht MetaModels aktiviert,
@@ -49,6 +49,8 @@ Filterattribut fertig und es sollte folgende Listenansicht zu sehen sein
 Der Filter ist damit definiert und kann in verschiedenen Komponenten
 aktiviert werden.
 
+
+.. |img_filter_32| image:: /_img/icons/filter_32.png
 .. |img_filter| image:: /_img/icons/filter.png
 .. |img_filter_setting| image:: /_img/icons/filter_setting.png
 .. |img_new| image:: /_img/icons/new.gif
