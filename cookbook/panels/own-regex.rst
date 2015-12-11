@@ -3,7 +3,7 @@
 Eingabemaske: eigene RegEx-Prüfung
 ==================================
 
-Benötigt man eine eigene Regex-Validierung für ein Text-Eingabefeld
+Benötigt man eine eigene RegEx-Validierung für ein Text-Eingabefeld
 in einer Eingabemaske, so kann das über den folgenden Event-Listener
 eingebaut werden.
 
@@ -16,7 +16,8 @@ Dafür wird der Hook "addCustomRegex" wie folgt angelegt - siehe `API: addCustom
 * in dem Ordner metamodels_mycustoms zwei weitere Ordner "/config" und "/classes" anlegen
 * im Ordner /classes die Datei "MyClass.php" anlegen wie in der Contao API beschrieben
 * im Ordner /config die Datei "config.php" anlegen wie in der Contao API beschrieben
-* zusätzlich im Ordner /config die Datei "event_listeners.php"
+* zusätzlich im Ordner /config die Datei "event_listeners.php" - der Key des Arrays $options
+  muss identisch dem Wert bei der Prüfung von $strRegexp in /MyClass sein ('plz')
 * wenn alle Dateien angelegt und mit Quelltext gefüllt sind, kann über die Entwickler-Tools
   im Contao-Backend im Punkt "Autoload-Creator" die "autoload.php" erstellt werden
 
