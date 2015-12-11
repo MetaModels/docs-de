@@ -12,7 +12,7 @@ muss die Prüfung mit "Contao-Boardmitteln" zunächst zur Verfügung stehen.
 
 Dafür wird der Hook "addCustomRegex" wie folgt angelegt - siehe `API: addCustomRegex <https://docs.contao.org/books/api/extensions/hooks/addCustomRegexp.html>`_
 
-* einen Ordner für das eigene Modul unter /sytsem/modules anlegen - z.B. "/metamodels_mycustoms"
+* einen Ordner für das eigene Modul unter /system/modules anlegen - z.B. "/metamodels_mycustoms"
 * in dem Ordner metamodels_mycustoms zwei weitere Ordner "/config" und "/classes" anlegen
 * im Ordner /classes die Datei "MyClass.php" anlegen wie in der Contao API beschrieben
 * im Ordner /config die Datei "config.php" anlegen wie in der Contao API beschrieben
@@ -32,7 +32,7 @@ Quelltexte
 
 In den Dateien gefindet sich der folgende Quelltext:
 
-Datei /sytsem/modules/metamodels_mycustoms/classes/MyClass.php
+Datei /system/modules/metamodels_mycustoms/classes/MyClass.php
 
 .. code-block:: php
    :linenos:
@@ -57,7 +57,7 @@ Datei /sytsem/modules/metamodels_mycustoms/classes/MyClass.php
    }
 
 
-Datei /sytsem/modules/metamodels_mycustoms/config/config.php
+Datei /system/modules/metamodels_mycustoms/config/config.php
 
 .. code-block:: php
    :linenos:
@@ -66,7 +66,7 @@ Datei /sytsem/modules/metamodels_mycustoms/config/config.php
    $GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('MyClass', 'myAddCustomRegexp');
 
 
-Datei /sytsem/modules/metamodels_mycustoms/classes/event_listeners.php
+Datei /system/modules/metamodels_mycustoms/classes/event_listeners.php
 
 .. code-block:: php
    :linenos:
@@ -96,7 +96,8 @@ Datei /sytsem/modules/metamodels_mycustoms/classes/event_listeners.php
    );
 
 
-Die autoload.php sollte nach der Erzeugung so aus sehen
+Die autoload.php in /system/modules/metamodels_mycustoms/config sollte nach der Erzeugung
+wie folgt sehen
 
 .. code-block:: php
    :linenos:
