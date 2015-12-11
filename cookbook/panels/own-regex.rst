@@ -65,7 +65,7 @@ Datei /sytsem/modules/metamodels_mycustoms/config/config.php
    $GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('MyClass', 'myAddCustomRegexp');
 
 
-Datei /sytsem/modules/metamodels_mycustoms/classes/MyClass.php
+Datei /sytsem/modules/metamodels_mycustoms/classes/event_listeners.php
 
 .. code-block:: php
    :linenos:
