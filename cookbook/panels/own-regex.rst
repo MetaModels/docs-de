@@ -74,6 +74,7 @@ Datei /system/modules/metamodels_mycustoms/classes/event_listeners.php
    <?php 
    use ContaoCommunityAlliance\DcGeneral\Contao\View\Contao2BackendView\Event\GetPropertyOptionsEvent;
    
+   // Event-Listener mit Priorität "-1"
    return array
    (
        GetPropertyOptionsEvent::NAME => array(
@@ -85,7 +86,8 @@ Datei /system/modules/metamodels_mycustoms/classes/event_listeners.php
                    }
        
                    $options = $event->getOptions();
-       
+                   
+                   // Key "plz" gleich $strRegexp-Prüfung aus myAddCustomRegexp
                    $options['plz'] = 'PLZ';
        
                    $event->setOptions($options);
