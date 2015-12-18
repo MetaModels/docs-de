@@ -56,5 +56,5 @@ heutigen Datum ist - also in der Zukunft liegt"
    )  
 
 
-.. |img_about| image:: /_img/icons/about.jpg
+.. |img_about| image:: /_img/icons/about.png
 
