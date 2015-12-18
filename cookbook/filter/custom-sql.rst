@@ -9,7 +9,7 @@ Die ersten Hinweise für die Möglichkeiten der Filterregel
 Nochmal der Hinweis: Auch mit der Filterregel "Eigenes SQL"
 werden nur IDs zur nächsten Filterregel bzw. zum Filterset
 weiter gereicht. Es können keine "Attributwerte" hinzugefügt
-werden, auch wenn das per SQL z.B. durch JOINs möglich ist.
+werden, auch wenn das per SQL z.B. durch JOINs möglich wäre.
 
 Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
 
