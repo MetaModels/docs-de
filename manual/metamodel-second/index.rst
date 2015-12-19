@@ -1,7 +1,7 @@
 .. _mm_second_index:
 
-Das zweite MetaModels
-======================
+Das zweite MetaModel
+====================
 
 .. warning:: Noch im Aufbau!
 

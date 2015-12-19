@@ -1,7 +1,7 @@
 .. _mm_first_index:
 
-Das erste MetaModel(s)
-======================
+Das erste MetaModel
+===================
 
 .. warning:: Noch im Aufbau!
 
@@ -10,9 +10,6 @@ ermöglicht werden. Die Aufgabe für die erste Umsetzung ist eine einfache Mitar
 mit nur wenigen Inhaltsangaben. Die Liste soll im Backend zu befüllen sein
 und kann im Frontend in als Tabelle ausgegeben werden. Auf einige Aspekte wie
 Sortierungen, Filterungen usw. wurde absichtlich verzichtet.
-
-Die Bezeichnung "MetaModels" ist in dem Zusammenhang schon etwas zu weit geführt,
-da nur eine Tabelle - also ein "MetaModel" - angelegt wird.
 
 Die Umsetzung orientiert sich an den :ref:`component_index`.
 

@@ -12,10 +12,12 @@ des Aufbaus der Erweiterung zu verstehen.
 
 Zunächst eine Einordnung von zwei Begriffen: mit **MetaModel** (Singular) soll im
 Folgenden eine Datentabelle mit ihren Attributen, Ein-/Ausgabe-Möglichkeiten,
-Filtern usw. bezeichnet werden und mit **MetaModels** (Plural) der komplette Aufbau
-mit dem Zusammenspiel mehrerer MetaModel untereinander. Ein MetaModel wird in den
-folgenden Texten ohne "s" geschrieben, auch wenn dies z.B. durch den Genitiv
-erforderlich wäre.
+Filtern usw. bezeichnet werden. Ein MetaModel wird in den folgenden Texten 
+ohne "s" geschrieben, auch wenn dies z.B. durch den Genitiv erforderlich wäre.
+
+Der Begriff **MetaModels** (Plural) steht allein als Bezeichnung für das
+Erweiterungspaket für Contao.
+
 
 Nach dem Erstellen eines MetaModel stehen die folgenden Komponenten zur Bearbeitung zur Verfügung:
 
