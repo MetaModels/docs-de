@@ -14,8 +14,8 @@ einheitliche "Nomenklatur" der Elemente von MetaModels erreicht und
 ein leichtere Assoziation zwischen Bezeichnung/Icon und dem Inhalt
 möglich sein.
 
-Als Anhang gibt es ein Schaubild als Vergleich zwischen der alten
-(aktuellen) Version und der neuen Version.
+Als Anhang gibt es ein `Schaubild <http://metamodels.readthedocs.org/de/latest/_images/neue-bezeichnung-uebersicht_de_v2.jpg>`_
+als Vergleich zwischen der alten Version und der neuen Version.
 
 Die Bezeichnungen und Icons werden nach und nach mit den jeweiligen
 Updates der MetaModel-Komponenten ausgetauscht - sowie auch im Handbuch.
