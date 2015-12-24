@@ -21,8 +21,14 @@ Die Bezeichnungen und Icons werden nach und nach mit den jeweiligen
 Updates der MetaModel-Komponenten ausgetauscht - sowie auch im Handbuch.
 
 
-|neue-bezeichnung-uebersicht_de_v2|
+|neue-bezeichnung-uebersicht_de_v2_link|
 
 
 .. |neue-bezeichnung-uebersicht_de_v2| image:: /_img/div/neue-bezeichnung-uebersicht_de_v2.jpg
+
+.. |neue-bezeichnung-uebersicht_de_v2_link| raw:: html
+
+   <a href="../_images/neue-bezeichnung-uebersicht_de_v2.jpg" title="Bild öffnen" target="_blank">
+     <img src="../_images/neue-bezeichnung-uebersicht_de_v2.jpg" alt="Schaubild neue Bezeichnungen und Icons für MetaModels">
+   </a>
 
