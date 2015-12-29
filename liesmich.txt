@@ -28,6 +28,9 @@ oberhalb der zu verlinkenden Überschrift
 als Link einfügen z.B. per
 :ref:`rst_features`
 
+oder mit eigenem Linktext
+:ref:`Neue Funktionen <rst_features>`
+
 Bei den neueren Verlinkungen habe ich die Form <dateiname>_<überschrift-mit-bindestrich> gewählt - z.B.
 .. _introdution_was-ist-metamodels:
 

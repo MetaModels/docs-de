@@ -17,6 +17,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     checklists/index.rst
     panels/own-regex.rst
     filter/custom-sql.rst
+    filter/exclusion.rst
     debug/templates.rst
 
 
