@@ -1,7 +1,7 @@
 .. _rst_cookbook_filter_exclusion:
 
-Filterregel als Ausschluss
-==========================
+Filterregel als Ausschluß
+=========================
 
 Möchte man einen Filter erstellen welcher das Attribut nicht "eingrenzt"
 sondern "ausgrenzt", kann man dies mit einer speziellen Anordnung der 
