@@ -38,6 +38,22 @@ heutigen Datum ist - also in der Zukunft liegt"
    FROM {{table}} 
    WHERE FROM_UNIXTIME(`date_start`) >= CURDATE()
 
+**Filterung nach Datum (start/stop)**
+
+"Suche Items für die das Attribut 'start' größer dem aktuellen 
+Unix-Zeitstempel ist und das Attribut 'stop' noch nicht erreicht ist. 
+Leere Attributwerte werden als nicht relevant umgesetzt (dann nur 
+'start' bzw. 'stop' relevant)." [von "Cyberlussi"]
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id
+   FROM {{table}}
+   WHERE ({{table}}.start IS NULL OR {{table}}.start = '' OR 
+   {{table}}.start<UNIX_TIMESTAMP()) AND ({{table}}.stop IS NULL OR 
+   {{table}}.stop='' OR {{table}}.stop > UNIX_TIMESTAMP())
+
 **Filterung nach Kind-Elementen eines Eltern-Elements**
 
 "Suche alle Kind-Elemente für ein gegebens Eltern-Element über den Alias-Parameter
