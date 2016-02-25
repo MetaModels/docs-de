@@ -46,7 +46,7 @@ eine Leerung des internen Caches über die Contao-Systemwartung erfolgen.
 Test von speziellen Bundles via Composer
 ----------------------------------------
 
-Soll eine spezielles Bundle für Metamodels z.B. zum Testen von Paket "dev-hotfix-xyz"
+Soll eine spezielles Bundle für MetaModels z.B. zum Testen von Paket "dev-hotfix-xyz"
 installiert werden, so muss zusätzlich nach Auswahl des entsprechenden Paketes per
 "Paket für die Installation vormerken" noch die Anpassung der Composer-JSON erfolgen.
 
@@ -59,6 +59,10 @@ zum Beispiel: |br|
 
 Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über "Einstellungen"
 der Paketverwaltung gelöscht werden.
+
+Da MetaModels eng mit dem DC_General (DCG) verzahnt ist, muss zum Testen häufig auch hier
+auf eine neuere Version geupdatet werden. Das vorgehen ist das Gleiche wie bei MetaModels
+inklusive der Anpassung des JSON-Eintrages mit "as 2.0.0".
 
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
 `Github <https://github.com/MetaModels>`_.
