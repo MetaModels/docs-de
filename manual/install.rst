@@ -61,7 +61,7 @@ Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über
 der Paketverwaltung gelöscht werden.
 
 Da MetaModels eng mit dem DC_General (DCG) verzahnt ist, muss zum Testen häufig auch hier
-auf eine neuere Version geupdatet werden. Das vorgehen ist das Gleiche wie bei MetaModels
+auf eine neuere Version geupdatet werden. Das Vorgehen ist das Gleiche wie bei MetaModels
 inklusive der Anpassung des JSON-Eintrages mit "as 2.0.0".
 
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
