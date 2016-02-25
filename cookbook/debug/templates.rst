@@ -56,6 +56,22 @@ Das Template sollte anschließend mit den folgenden Zeilen beginnen:
 Wird die entsprechende Webseite mit derm Listing im Browser aufgerufen,
 sollte sich im Quelltext die Debugausgabe befinden.
 
+Ist die Ausgabe sehr umfangreich, kann die Darstellung im Browser sehr
+langsam werden - abhilfe schafft z.B. sich nur ein Item-Knoten ausgeben
+zu lassen
+
+.. code-block:: php
+   :linenos:
+
+   <?php 
+   echo "<!-- DEBUG START \n";
+   echo "<pre>\n";
+   // nur 0.-Knoten
+   print_r($this->items->parseAll($this->getFormat(), $this->view)[0]);
+   echo "</pre>\n";
+   echo "\n DEBUG ENDE -->";
+   ?>
+
 Die Ausgabe kann man wieder entfernen, in dem man den Ausgabeblock
 auskommentiert, löscht oder zu einem anderen Template wechselt.
 
