@@ -59,7 +59,7 @@ entsprechende Paket z.B. 'metamodels/core' sowie in der anschließenden Auswahl 
 Nach "Paket für die Installation vormerken" muss noch die Anpassung der Composer-JSON erfolgen. Dazu in
 der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
 angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden
-(bei mehreren Extra-Paketen natürlcih bei jedem Eintrag).
+(bei mehreren Extra-Paketen natürlich bei jedem Eintrag).
 
 zum Beispiel: |br|
 ``"metamodels/core": "dev-hotfix-xyz"`` ändern zu |br|
