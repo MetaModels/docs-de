@@ -43,15 +43,22 @@ Anschließend muss in der Erweiterungsverwaltung die Datenbank aktualisiert werd
 i.E. ``Fatal error: Class 'MetaModels\Helper\UpgradeHandler' ....!metamodels-tng-branch/config/runonce_0.php`` sollte
 eine Leerung des internen Caches über die Contao-Systemwartung erfolgen.
 
-Test von speziellen Bundles via Composer
+Test von speziellen Paketen via Composer
 ----------------------------------------
 
-Soll eine spezielles Bundle für MetaModels z.B. zum Testen von Paket "dev-hotfix-xyz"
-installiert werden, so muss zusätzlich nach Auswahl des entsprechenden Paketes per
-"Paket für die Installation vormerken" noch die Anpassung der Composer-JSON erfolgen.
+Im Bundle 'bundle_all' sind die aktuell verfügbaren und frei gegebenen Pakete von MetaModels enthalten.
+Zudem gibt es meist Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen - z.B. für
+den MetaModels-core das ein Paket "dev-hotfix-xyz" sein. Zu sehen sind die Pakete u.a. auf Github im
+entsprechenden Repository (z.B. MetaModels/core) im Reiter
+`'branches' <https://github.com/MetaModels/core/branches>`_.
 
-Dazu in der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
-angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden.
+Möchte man ein solches Paket testen, muss es separat in der Paketverwaltung ausgewählt und installiert
+werden. Zur Auswahl in der Paketverwaltung die Checkbox "Abhängigkeiten installiert" anklicken und auf
+entsprechende Paket z.B. 'metamodels/core' sowie in der anschließenden Auswahl auf z.B. auf 'dev-hotfix-xyz'.
+Nach "Paket für die Installation vormerken" muss noch die Anpassung der Composer-JSON erfolgen. Dazu in
+der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
+angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden
+(bei mehreren Extra-Paketen natürlcih bei jedem Eintrag).
 
 zum Beispiel: |br|
 ``"metamodels/core": "dev-hotfix-xyz"`` ändern zu |br|
@@ -63,6 +70,9 @@ der Paketverwaltung gelöscht werden.
 Da MetaModels eng mit dem DC_General (DCG) verzahnt ist, muss zum Testen häufig auch hier
 auf eine neuere Version geupdatet werden. Das Vorgehen ist das Gleiche wie bei MetaModels
 inklusive der Anpassung des JSON-Eintrages mit "as 2.0.0".
+
+Um auf den ursprünglichen Stand zurück zu gelangen, kann das Paket im Paketmanager einfach gelöscht
+werden.
 
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
 `Github <https://github.com/MetaModels>`_.
