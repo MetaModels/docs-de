@@ -47,14 +47,15 @@ Test von speziellen Paketen via Composer
 ----------------------------------------
 
 Im Bundle 'bundle_all' sind die aktuell verfügbaren und frei gegebenen Pakete von MetaModels enthalten.
-Zudem gibt es meist Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen - z.B. für
-den MetaModels-core das ein Paket "dev-hotfix-xyz" sein. Zu sehen sind die Pakete u.a. auf Github im
-entsprechenden Repository (z.B. MetaModels/core) im Reiter
+Zudem gibt es meist Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen - das
+könnte z.B. für den MetaModels-core das ein Paket "dev-hotfix-xyz" sein. Zu sehen sind die Pakete u.a.
+auf Github im entsprechenden Repository (z.B. MetaModels/core) im Reiter
 `'branches' <https://github.com/MetaModels/core/branches>`_.
 
 Möchte man ein solches Paket testen, muss es separat in der Paketverwaltung ausgewählt und installiert
 werden. Zur Auswahl in der Paketverwaltung die Checkbox "Abhängigkeiten installiert" anklicken und auf
 entsprechende Paket z.B. 'metamodels/core' sowie in der anschließenden Auswahl auf z.B. auf 'dev-hotfix-xyz'.
+
 Nach "Paket für die Installation vormerken" muss noch die Anpassung der Composer-JSON erfolgen. Dazu in
 der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
 angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden
