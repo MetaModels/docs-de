@@ -57,7 +57,7 @@ Wird die entsprechende Webseite mit derm Listing im Browser aufgerufen,
 sollte sich im Quelltext die Debugausgabe befinden.
 
 Ist die Ausgabe sehr umfangreich, kann die Darstellung im Browser sehr
-langsam werden - abhilfe schafft z.B. sich nur ein Item-Knoten ausgeben
+langsam werden - Abhilfe schafft z.B. sich nur ein Item-Knoten ausgeben
 zu lassen
 
 .. code-block:: php

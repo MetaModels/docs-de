@@ -20,6 +20,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     filter/exclusion.rst
     filter/search-text-at-two-fields.rst
     debug/templates.rst
+    other-tutorials/index.rst
 
 
 .. _manual@metamodel.me: manual\@metamodel.me?Subject=Mein%20Rezept%20f%FCr%20das%20MM-Kochbuch&Body=Mein%20Rezept%3A%0A
