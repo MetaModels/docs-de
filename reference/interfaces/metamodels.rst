@@ -86,7 +86,7 @@ gibt den Zugriff auf einen Service mit dem übergebenen Namen zurück
 .. _ref_api_interf_mm_servicecontaineraware:
 
 ServiceContainerAware Interface:
-.....................................
+................................
 
 Mit dem ServiceContainerAware Interface kann man Zugriff auf den 
 Service-Container erhalten oder einen neuen Service-Container
