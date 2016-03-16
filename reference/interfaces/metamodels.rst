@@ -444,10 +444,10 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    $container = $GLOBALS['container']['metamodels-service-container']; 
    // MM Factory
    $factory = $container->getFactory();
-   // MM aus Tabellen/MM-Name (außerhalb eines MM-Templates)
-   $objMetaModel = $factory->byTableName($strModelName);
-   // MM aus Tabellen/MM-Name (in einem MM-Template)
-   //$objMetaModel = \MetaModels\Factory::byTableName($strModelName);
+   // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
+   $objMetaModel = $factory->getMetaModel($strModelName);
+   // MetaModel erzeugen, wenn nur id bekannt ($metaModelId == tl_metamodel.id des MetaModel).
+   //$objMetaModel = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
    // leerer Filter
    $objFilter = $objMetaModel->getEmptyFilter();
    // alle Items
