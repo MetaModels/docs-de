@@ -4,7 +4,7 @@
 ==========================
 
 .. note:: Eingabemasken für Dateneingabe erstellen;
-  Attribute hinzufügen, aktivieren und konfigurieren; optional 
+  Attribute hinzufügen, aktivieren und konfigurieren; optional
   Anzeigebedingung des Eingabefeldes definieren; Definition
   von Gruppierung und Sortierung der gespeicherten
   Items möglich
@@ -34,7 +34,7 @@ eingegliedert und mit "Kind-Tabelle" einer vorhandenen MetaModel- oder
 Contao-Tabelle zugeordnet.
 
 Die Anzeige des Eingabefeldes kann über weitere Steuerungsparameter beeinflusst
-werden. Jedes Rendereinstellungen hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
+werden. Jede Rendereinstellungen hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
 der Anzeige bzw. Sichtbarkeit ("Ansichtsbedingungen"). So kann ein oder mehrere
 Eingabefelder in der Eingabemaske nur sichtbar sein, wenn z.B. eine bestimmte
 Checkbox gesetzt ist.
@@ -51,7 +51,7 @@ Optionen der Eingabemaske
   Konfiguration der Tools in der Kopfzeile: Suche, Sortieren, Filtern, Limit;
   für Suche und Filterung der Attribute muss die Option bei den Eingabewidgets
   gesetzt sein
-* **Integration**: |br|  
+* **Integration**: |br|
   "Unabhängig" mit Auswahl des Backendbereiches; "Als Kind-Tabelle" mit Auswahl
   der Eltern-Tabelle
 * **Render-Modus**: |br|
@@ -72,7 +72,7 @@ Optionen der Eingabefeldes
   weitere Optionen je nach Attributtyp
 * **Anzeigeoptionen**: |br|
   Angabe der Contao-CSS-Backendklassen z.B. "w50" für eine 50%-Breite
-  
+
 Optionen der Anzeigebedingungen des Eingabewidgets
 --------------------------------------------------
 * **Typ**: |br|

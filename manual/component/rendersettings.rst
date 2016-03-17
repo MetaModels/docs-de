@@ -38,8 +38,8 @@ kann einzelnen Render-Einstellungen der Zugriff von Benutzer und/oder Mitglieder
 
 Ist eine Render-Einstellung erzeugt und die Grundeinstellungen eingetragen, muss
 als weiterer Schritt die Attribute für die Einstellung aktiviert werden. Mehr dazu
-unter dem Punkt "Ablauf". Als weitere Einstellungsmöglichkeit kann bei jedem 
-Attribut in einer Render-Einstellung ein individuelles Template angewählt 
+unter dem Punkt "Ablauf". Als weitere Einstellungsmöglichkeit kann bei jedem
+Attribut in einer Render-Einstellung ein individuelles Template angewählt
 werden (wenn dies vorher angelegt wurde) und eine eigene CSS-Klasse
 z.B. zur Hervorhebung im Backend.
 
@@ -64,10 +64,10 @@ Optionen
   auf der Detailseite sollte ein Listenelement mit einem entsprechenden Filter vorhanden sein; bei
   mehrsprachigen MetaModel gibt es je Sprache eine Einstellung für Link und Filter
 * **Leere Einträge verbergen** |br|
-  leere Einträge der Attribute werden übersprungen - wichtig im Zusammenspiel, wenn die 
-  Label der Attribute mit ausgeben werden
+  leere Einträge der Attribute werden übersprungen - wichtig im Zusammenspiel, wenn die
+  Label der Attribute mit ausgegeben werden
 * **Labels verbergen** |br|
-  die Attributnamen werden als "Label" nicht ausgeben
+  die Attributnamen werden als "Label" nicht ausgegeben
 * **Zusätzliche CSS/Javascript-Dateien** |br|
   zur Ausgabeformatierung und Interaktion können CSS- und/oder Javascript-Dateien mit ausgegeben
   werden
@@ -75,14 +75,14 @@ Optionen
 Ablauf
 ------
 
-Eine neue Eingabe für die Render-Einstellung wird über "|img_new| Neu" geöffnet. Nachdem 
+Eine neue Eingabe für die Render-Einstellung wird über "|img_new| Neu" geöffnet. Nachdem
 alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird die Einstellung gespeichert
 und erscheint in der Liste der vorhandenen Render-Einstellungen eines MetaModels.
 
 Neben dem "|img_edit| Stifticon" existiert das Icon für die "|img_rendersetting| Render-Einstellungen der Attribute".
-Mit Kick auf das Icon öffnet sich eine Auflistung mit den zu den Render-Einstellungen aktivierten
+Mit Klick auf das Icon öffnet sich eine Auflistung mit den zu den Render-Einstellungen aktivierten
 Attributen. Sind keine Attribute vorhanden, bzw. müssen welche hinzugefügt werden, kann das über
-das Icon "|img_rendersettings_add| Alle hinzufügen" erfolgen - alternativ über "|img_new| Neu". 
+das Icon "|img_rendersettings_add| Alle hinzufügen" erfolgen - alternativ über "|img_new| Neu".
 Bei dem Weg über "Alle hinzufügen" muss zweimal eine Bestätigung erfolgen.
 
 Anschließend stehen die Attribute der Render-Einstellung zur Verfügung und müssen ggf. noch aktiviert
@@ -102,4 +102,3 @@ CSS-Klasse eingetragen werden ("|img_edit| Bearbeiten").
 .. |br| raw:: html
 
    <br />
-

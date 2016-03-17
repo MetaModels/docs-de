@@ -3,13 +3,13 @@
 |img_dca_32| Eingabemasken
 ==========================
 
-In diesem Schritt wird die Eingabemasken für das MetaModel
+In diesem Schritt wird die Eingabemaske für das MetaModel
 "Mitarbeiterliste" angelegt, über welche die Daten der Attribute in der
 Datenbank gespeichert werden.
 
 Zum Aufruf der Eingabemasken wird wieder die Übersicht MetaModels aktiviert,
 so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
-auf das Icon "|img_dca| Eingabemasken" und die Ansicht wechselt zur 
+auf das Icon "|img_dca| Eingabemasken" und die Ansicht wechselt zur
 Übersicht der Eingabemasken - diese ist aktuell noch leer.
 
 Nach einem Klick auf "|img_new| Neue Eingabemaske" öffnet sich sofort die Maske
@@ -29,7 +29,7 @@ In der Übersicht der Eingabemasken sollte nun der erste Eintrag mit
 |img_dca_02|
 
 Über einen Klick auf das Icon "|img_dca_setting| Einstellungen"
-wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
+wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden
 die in der Eingabemaske anzuzeigenden Attribute ausgewählt bzw. aktiviert.
 
 Wie bei den Render-Einstellungen können auch hier die angelegten Attribute
