@@ -3,7 +3,7 @@
 Inhaltselemente/Module für die Frontendausgabe
 ==============================================
 
-.. note:: zur Anzeige im Fontend die eine MetaModel-Liste
+.. note:: zur Anzeige im Frontend die eine MetaModel-Liste
   als Contentelement oder FE-Modul erstellen; optional kann
   ebenfalls als Contentelement oder FE-Modul ein Filter
   erzeugt werden
@@ -12,13 +12,13 @@ Einleitung
 ----------
 
 Für die Frontendausgabe stehen ein Listen- und ein Filterelement
-zur Verfügung. Diese können sowohl als Inhaltselement als auch 
+zur Verfügung. Diese können sowohl als Inhaltselement als auch
 als FE-Modul in Contao genutzt werden. Einen Unterschied in den
 Einstellungsoptionen zwischen Inhaltselement und Modul gibt es nicht.
 
 Für die Listendarstellung gehört zu den wichtigsten Auswahloptionen
 die Auswahl des MetaModel (wo kommen die Daten her), die Render-Einstellung
-und die Templateauswahl (wie werden die Daten angezeigt) und ggf. noch 
+und die Templateauswahl (wie werden die Daten angezeigt) und ggf. noch
 die Filtereinstellung (welche Daten werden ausgegeben).
 
 Zu beachten gilt, dass eine Detailansicht mit einem Item auch nur eine
@@ -41,7 +41,7 @@ Optionen CE Liste
   Einstellungen für eine Paginierung bzw. maximale Anzahl
 * **Filterset-Einstellungen**: |br|
   Auswahl des Filtersets sowie der Sortierung; ist bei einer
-  Filterregel "Einfache Abfareg" die Option "Statischer Parameter"
+  Filterregel "Einfache Abfrage" die Option "Statischer Parameter"
   gesetzt, erscheint hier ein Selectfeld zur Wertauswahl; ist der
   Parameter "Überschreiben der Sortierung erlauben" gesetzt,
   kann die Sortierung per URL nach dem Schema
@@ -62,7 +62,7 @@ Optionen CE Filter
   Auswahl des Filtersets
 * **Attribute**: |br|
   Attribute, die in dem Filter im Frontend angezeigt werden sollen
-  
+
 Ablauf
 ------
 
