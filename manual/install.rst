@@ -4,7 +4,8 @@ MetaModels installieren und aktualisieren
 =========================================
 
 Für die Installation von MetaModels wird eine Contao-LTS-Version vorausgesetzt
-- aktuell ist das Contao 3.5.x
+- aktuell ist das Contao 3.5.x - sowie die `Systemvoraussetzungen analog der
+Contao LTS <https://docs.contao.org/books/manual/3.5/de/01-installation/den-live-server-konfigurieren.html>`_.
 
 Installieren via Composer
 -------------------------
