@@ -20,7 +20,6 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     filter/exclusion.rst
     filter/search-text-at-two-fields.rst
     debug/templates.rst
-    extensions/attribute_mcw.rst
     other-tutorials/index.rst
 
 

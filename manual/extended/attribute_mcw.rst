@@ -1,4 +1,4 @@
-.. _rst_cookbook_extensions_attribute_mcw:
+.. _rst_extended_attribute_mcw:
 
 Erweiterung: Attribut für Multi-Column-Wizard
 =============================================
