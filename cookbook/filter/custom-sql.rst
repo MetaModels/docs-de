@@ -26,6 +26,23 @@ gesetzt ist oder gebe alle Items aus (keine Filterung)."
    FROM {{table}} 
    WHERE name LIKE (CONCAT('%',{{param::get?name=name&default=%%}},'%')) 
 
+
+**Filterung mit SQL-Funktion als Defaultwert**
+
+"Suche Items für die Attribut 'date_start' im Vergleich (<=) zum GET-Parameter
+'date_start' oder falls dieser nicht gesetzt ist nach dem aktuellen Datum."
+siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880#issue-103936641>`_
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id
+   FROM {{table}} 
+   WHERE FROM_UNIXTIME(`date_start`) <= IF({{param::get?name=date_start}},{{param::get?name=date_start}}, CURDATE()) 
+   ORDER BY von_datum DESC 
+   LIMIT 1
+
+
 **Filterung nach Datum**
 
 "Suche Items für die Attribut 'date_start' größer oder gleich dem 
@@ -37,6 +54,7 @@ heutigen Datum ist - also in der Zukunft liegt"
    SELECT id 
    FROM {{table}} 
    WHERE FROM_UNIXTIME(`date_start`) >= CURDATE()
+
 
 **Filterung nach Datum (start/stop)**
 
@@ -53,6 +71,7 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
    WHERE ({{table}}.start IS NULL OR {{table}}.start = '' OR 
    {{table}}.start<UNIX_TIMESTAMP()) AND ({{table}}.stop IS NULL OR 
    {{table}}.stop='' OR {{table}}.stop > UNIX_TIMESTAMP())
+
 
 **Filterung nach Kind-Elementen eines Eltern-Elements**
 
