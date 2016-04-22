@@ -1,7 +1,7 @@
 .. _rst_extended_attribute_mcw:
 
-Erweiterung: Attribut für Multi-Column-Wizard
-=============================================
+Attribut für Multi-Column-Wizard
+================================
 
 Mit dem Multi-Column-Wizard (MCW) ist es möglich, eine variable Eingabetabelle
 mit unterschiedlichen Eingabetypen wie Text, Checkboxen, Select in den Spalten
