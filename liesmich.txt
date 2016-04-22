@@ -17,6 +17,10 @@ Tools:
 Testdaten-Generator:
 http://www.generatedata.com/#generator
 
+SQL:
+Zufallszahlen:
+FLOOR(RAND() * (<max> - <min> + 1)) + <min>
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hinweise für das Dokument:
