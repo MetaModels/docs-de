@@ -42,6 +42,13 @@ Checkbox gesetzt ist.
 Für jede Eingabemaske kann man ein oder mehrere Gruppierungen und Sortierungen für
 eine übersichtliche Darstellung der gespeicherten Items definieren.
 
+Möchte man die Anzeige der Items in der Listenansicht als Baumstruktur bzw. Hierarchie,
+sind zwei grundlegende Einstellungen notwendig:
+
+* in Eigenschaften der Eingabemaske den "Render-Modus" auf "Hierarchie" (Tabellenansicht aus)
+* in Sortierung Eingabemaske eine Sortierung als Standard mit "Manuelle Sortierung aktivieren"
+
+
 
 Optionen der Eingabemaske
 -------------------------
@@ -88,15 +95,18 @@ Optionen der Gruppierung und Sortierung
 * **Manuelle Sortierung aktivieren**: |br|
   wenn der Wert gesetzt ist, können die Items manuell sortiert werden; ist
   die Checkbox nicht gesetzt, können folgende Optionen gesetzt werden:
-* **Grouping attribute**: |br|
+* **Attribut der Gruppierung**: |br|
   Auswahl des Attributes, nach dem Gruppiert werden soll
+* **Gruppierungslänge**: |br|
+  Die Anzahl an Buchstaben, welche für die Gruppierung eingesetzt wird
+  (wenn Gruppierungstyp gesetzt)
 * **Gruppierungstyp**: |br|
   Gruppierungstyp wie nach Anfangsbuchstabe oder auch nach Zeitraum wie Woche,
   Monat
-* **rendersortattr**: |br|
+* **Sorting attribute**: |br|
   Auswahl des Attributes, nach dem Sortiert werden soll (ggf. innerhalb einer
   Gruppierung)
-* **rendersort**: |br|
+* **Sorting direction**: |br|
   Sortierrichtung: Aufsteigend (ASC) oder Absteigend (DESC)
 
 Ablauf
