@@ -286,7 +286,7 @@ ein Filter angegeben werden
 speichert ein gegebenes Item
 
 ``delete($objItem)``  |br|
-speichert ein gegebenes Item
+löscht ein gegebenes Item
 
 ``getView($intViewId = 0)``  |br|
 gibt die Instanz der Render-Einstellungen des instanzierten MetaModel zurück
@@ -370,7 +370,7 @@ Ein neues Item wird wie folgt erzeugt:
 In dem übergebenen Array können "Key-Value-Paare" übergeben werden - dies
 ist aber nur bei einfachen Item-Typen wie Text sinnvoll.
 
-Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
+Aktuelle Informationen unter: `IItem <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
 
 **Interfaces:**
 
