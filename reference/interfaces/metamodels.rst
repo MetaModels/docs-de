@@ -375,16 +375,16 @@ Aktuelle Informationen unter: `IItem <https://github.com/MetaModels/core/blob/ma
 **Interfaces:**
 
 ``get($strAttributeName)``  |br|
-gibt den Wert eines Attributes bei gegebenen Attributnamen zurück
+gibt den Wert eines Attributes bei gegebenem Attributnamen zurück
 
 ``set($strAttributeName, $varValue)``  |br|
-setzt den Wert eines Attributes bei gegebenen Attributnamen
+setzt den Wert eines Attributes bei gegebenem Attributnamen
 
 ``getMetaModel()``  |br|
 gibt die Instanz des Items zurück
 
 ``getAttribute($strAttributeName)``  |br|
-gibt die Instanz eines Attributes bei gegebenen Attributnamen zurück
+gibt die Instanz eines Attributes bei gegebenem Attributnamen zurück
 
 ``isVariant()``  |br|
 ermittelt, ob das Item eine Variante eines anderen Items ist
