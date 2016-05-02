@@ -283,7 +283,8 @@ gibt alle Optionen eines gegebenen Attributs zurück; Optional kann
 ein Filter angegeben werden
 
 ``saveItem($objItem)``  |br|
-speichert ein gegebenes Item
+speichert ein gegebenes Item bzw. es wird ein neues Item erzeugt, wenn keine ID mit
+übergeben wurde
 
 ``delete($objItem)``  |br|
 löscht ein gegebenes Item
@@ -397,11 +398,11 @@ gibt ein Array mit den Varianten des Items zurück
 
 ``parseValue($strOutputFormat = 'text', $objSettings = null)``  |br|
 rendert das Item im vorgegebenen Format; als Rohdaten [raw]
-werden die Daten immer mit ausgegeben inl. Attribute referenzierter MetaModel
+werden die Daten immer mit ausgegeben inkl. Attribute referenzierter MetaModel
 
 ``parseAttribute($strAttributeName, $strOutputFormat = 'text', $objSettings = null)``  |br|
 rendert ein einzelnes Attribut des Item im vorgegebenen Format; als Rohdaten [raw]
-werden die Daten immer mit ausgegeben inl. Attribute referenzierter MetaModel
+werden die Daten immer mit ausgegeben inkl. Attribute referenzierter MetaModel
 
 ``copy()``  |br|
 erstellt ein neues Item als Kopie eines vorhandenem Items
