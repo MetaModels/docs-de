@@ -58,6 +58,11 @@ erwartet werden:
 * **Kontrollkästchen (Checkbox)**: true |br|
   ``...['default'] = true;``
 
+Wie man an dem Attribut "Tiemstamp" sieht, sind auch dynamsiche Vorgaben umsetzbar. So wäre
+es auch möglich, auf vorhandene Werte aus MetaModels zurück zu greifen und diese - ggf.
+mit einer Berechnung - als Standard auszugeben. Für einen Zugriff auf MetaModels stehen die
+Methoden der API (:ref:`ref_api_interf_mm`) zur Verfügung.
+
 
 .. |br| raw:: html
 
