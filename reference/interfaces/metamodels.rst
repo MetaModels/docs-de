@@ -430,7 +430,7 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    <?php
    /* Parameter (Beispiel) */
    
-   // Name der MetaModel Tabelle (siehe "Das erstes Metamodel(s)")
+   // Name der MetaModel Tabelle (siehe "Das erstes Metamodel")
    $strModelName = 'mm_mitarbeiterliste';
    // ID der Render-Einstellungen "FE-Liste"
    $intRenderId = 2;

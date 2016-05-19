@@ -15,6 +15,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     :maxdepth: 1
 
     checklists/index.rst
+    panels/default-values.rst
     panels/own-regex.rst
     filter/custom-sql.rst
     filter/exclusion.rst
