@@ -47,16 +47,16 @@ Für die einzelnen Attributarten gibt es spezifische Vorgaben, in welcher Form d
 erwartet werden:
 
 * **Text**: Text in Hochkomma z.B. '@mmtest.com' |br|
-  ...['default'] = '@mmtest.com';
+  ``...['default'] = '@mmtest.com';``
 * **Timestamp**: Integer für den Timestamp z.B. 1463657005 oder PHP-Funktion time() |br|
-  ...['default'] = 1463657005; |br|
-  ...['default'] = time();
+  ``...['default'] = 1463657005;`` oder |br|
+  ``...['default'] = time();``
 * **Auswahl**: Integer der ID des Wertes in Hochkomma |br|
-  ...['default'] = '2';
+  ``...['default'] = '2';``
 * **Mehfachauswahl**: Array mit den Alias-Werten aus der eingestellten Alias-Spalte |br|
-  ...['default'] = array('einkauf', 'marketing');
+  ``...['default'] = array('einkauf', 'marketing');``
 * **Kontrollkästchen (Checkbox)**: true |br|
-  ...['default'] = true;
+  ``...['default'] = true;``
 
 
 .. |br| raw:: html
