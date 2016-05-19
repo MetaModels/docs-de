@@ -46,16 +46,16 @@ Für ein das E-Mail-Feld ([text]) aus :ref:`mm_first_index` könnte die Vorgabe 
 Für die einzelnen Attributarten gibt es spezifische Vorgaben, in welcher Form die Werte
 erwartet werden:
 
-* **Text**: Text in Hochkomma z.B. '@mmtest.com'|br|
+* **Text**: Text in Hochkomma z.B. '@mmtest.com' |br|
   ...['default'] = '@mmtest.com';
-* **Timestamp**: Integer für den Timestamp z.B. 1463657005 oder PHP-Funktion time()|br|
-  ...['default'] = 1463657005;|br|
+* **Timestamp**: Integer für den Timestamp z.B. 1463657005 oder PHP-Funktion time() |br|
+  ...['default'] = 1463657005; |br|
   ...['default'] = time();
-* **Auswahl**: Integer der ID des Wertes in Hochkomma|br|
+* **Auswahl**: Integer der ID des Wertes in Hochkomma |br|
   ...['default'] = '2';
-* **Mehfachauswahl**: Array mit den Alias-Werten aus der eingestellten Alias-Spalte|br|
+* **Mehfachauswahl**: Array mit den Alias-Werten aus der eingestellten Alias-Spalte |br|
   ...['default'] = array('einkauf', 'marketing');
-* **Kontrollkästchen (Checkbox)**: true|br|
+* **Kontrollkästchen (Checkbox)**: true |br|
   ...['default'] = true;
 
 
