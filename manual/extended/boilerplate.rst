@@ -1,4 +1,4 @@
-.. _rst_cookbook_extensions_boilerplate:
+.. _rst_extended_boilerplate:
 
 MetaModels "Boilerplate"
 ========================
@@ -131,8 +131,8 @@ Mehr Informationen unter :ref:`rst_cookbook_panels_default-values`
 
 
 
-.. |img_backend-integration| image:: /_img/screenshots/cookbook/extensions/boilerplate/backend-integration.png
-.. |img_backend-navigation| image:: /_img/screenshots/cookbook/extensions/boilerplate/backend-navigation.png
+.. |img_backend-integration| image:: /_img/screenshots/extended/boilerplate/backend-integration.png
+.. |img_backend-navigation| image:: /_img/screenshots/extended/boilerplate/backend-navigation.png
 
 .. |br| raw:: html
 
