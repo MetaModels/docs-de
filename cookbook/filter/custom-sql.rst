@@ -90,6 +90,19 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
      parent_alias={{param::get?name=auto_item}}
    )  
 
+**Sortierung der Ausgabe nach mehr als einem Attribut (fest)**
+
+"Sortiere 'Mannschaften' nach Punkte absteigend + Spiele aufsteigend +
+Priorität absteigend."
+siehe auch `Forum <https://community.contao.org/de/showthread.php?62625-Zweite-Sortierung>`_
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id 
+   FROM mm_mannschaft
+   ORDER BY punkte DESC, spiele ASC, prio DESC
+
 
 .. |img_about| image:: /_img/icons/about.png
 
