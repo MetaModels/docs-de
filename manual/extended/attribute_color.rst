@@ -9,10 +9,8 @@ Attribut Color
 Mit dem Attribut "`Color <https://github.com/MetaModels/attribute_color>`_"
 wird ein Eingabefeld für einen Hex-Farbcode sowie ein Eingabefeld für
 den Deckungsgrad zur Verfügung gestellt. Das Eingabefeld für den
-Farbcode hat zusätzlich einen Farbpicker.
-
-Der Deckungsgrad wird als Prozentangabe eingegeben - z.B. "50" für
-50 Prozent.
+Farbcode hat zusätzlich einen Farbpicker. Der Deckungsgrad wird als
+Prozentangabe eingegeben - z.B. "50" für 50 Prozent.
 
 |img_input_mask|
 
