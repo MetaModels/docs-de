@@ -37,7 +37,7 @@ der Auflistung wurde das Template entsprechend angepasst sowie ein
 |img_output_css-color|
 
 Die Datensätze können aufgrund der Farbe und des Deckungsgrades sortiert werden.
-Eine Absteigende Sortierung bedeutet von Farbcode #FFFFFF (Weiß) zu #000000
+Eine absteigende Sortierung bedeutet von Farbcode #FFFFFF (Weiß) zu #000000
 (Schwarz) sowie vom Deckungsgrad 100% zu 0%. Im Anschluß kommen alle Datensätze
 ohne Farbzuweisung.
 
