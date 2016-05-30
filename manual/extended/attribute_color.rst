@@ -28,9 +28,10 @@ als Textwerte wie z.B. "fafa05 50" ausgegeben.
 
 Mit Zugriff auf den [raw]-Knoten sind die beiden Werte als Array des Attributs
 mit dem Key 0 für die Farbe und 1 für den Deckungsgrad abzugreifen. Mit den
-Werten kann z.B. ein CSS-Inlinestyle beeinflusst werden. In den Screenshot
+Werten kann z.B. ein CSS-Inlinestyle beeinflusst werden. In dem Screenshot
 der Auflistung wurde das Template entsprechend angepasst sowie ein
-"Schachbrettmuster" per CSS zur Verdeutlichung des Deckungsgrades eingefügt.
+"Schachbrettmuster" als Hintergrund per CSS zur Verdeutlichung des
+Deckungsgrades eingefügt.
 
 |img_output_css-color|
 
