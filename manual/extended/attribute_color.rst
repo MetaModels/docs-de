@@ -3,6 +3,9 @@
 Attribut Color
 ==============
 
+.. warning:: Für MetaModels 2.0 ist mindestens die Version 2.0.0-alpha2
+   notwendig
+
 Mit dem Attribut "`Color <https://github.com/MetaModels/attribute_color>`_"
 wird ein Eingabefeld für einen Hex-Farbcode sowie ein Eingabefeld für
 den Deckungsgrad zur Verfügung gestellt. Das Eingabefeld für den
@@ -35,7 +38,8 @@ der Auflistung wurde das Template entsprechend angepasst sowie ein
 
 Die Datensätze können aufgrund der Farbe und des Deckungsgrades sortiert werden.
 Eine Absteigende Sortierung bedeutet von Farbcode #FFFFFF (Weiß) zu #000000
-(Schwarz) sowie vom Deckungsgrad 100% zu 0%.
+(Schwarz) sowie vom Deckungsgrad 100% zu 0%. Im Anschluß kommen alle Datensätze
+ohne Farbzuweisung.
 
 .. |img_input_mask| image:: /_img/screenshots/extended/attribute_color/input_mask.png
 .. |img_output_text| image:: /_img/screenshots/extended/attribute_color/output_text.png
