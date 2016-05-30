@@ -12,6 +12,7 @@ Erweiterungen
     
     boilerplate
     perimetersearch
+    attribute_color
     attribute_mcw
     
 

@@ -129,5 +129,5 @@ unter GPL zur Verfügung gestellt.
 
 
 
-.. |img_input_mask| image:: /_img/screenshots/extended/attribut_mcw/input_mask.jpg
+.. |img_input_mask| image:: /_img/screenshots/extended/attribute_mcw/input_mask.jpg
 
