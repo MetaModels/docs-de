@@ -15,7 +15,7 @@ Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
 
 
 "LIKE"-Abfrage mit Defaultwert
-..............................
+******************************
 
 "Suche Items für die Attribut 'name' wenn GET-Parameter 'name' 
 gesetzt ist oder gebe alle Items aus (keine Filterung)."
@@ -29,7 +29,7 @@ gesetzt ist oder gebe alle Items aus (keine Filterung)."
 
 
 Filterung mit SQL-Funktion als Defaultwert
-..........................................
+******************************************
 
 "Suche Items für die Attribut 'date_start' im Vergleich (<=) zum GET-Parameter
 'date_start' oder falls dieser nicht gesetzt ist nach dem aktuellen Datum."
@@ -46,7 +46,7 @@ siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880#issue-103
 
 
 Filterung nach Datum
-....................
+********************
 
 "Suche Items für die Attribut 'date_start' größer oder gleich dem 
 heutigen Datum ist - also in der Zukunft liegt"
@@ -69,7 +69,7 @@ oder
 
 
 Filterung nach Datum (start oder "laufend")
-...........................................
+*******************************************
 
 "Suche Items für die Attribut 'date_start' größer oder gleich dem 
 heutigen Datum ist - also in der Zukunft liegt - oder die Items bei
@@ -91,7 +91,7 @@ denen das aktuelle Datum zwischen 'date_start' und 'date_end' liegt
 
 
 Filterung nach Datum (start/stop)
-.................................
+*********************************
 
 "Suche Items für die das Attribut 'start' größer dem aktuellen 
 Unix-Zeitstempel ist und das Attribut 'stop' noch nicht erreicht ist. 
@@ -115,7 +115,7 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
 
 
 Filterung nach Kind-Elementen eines Eltern-Elements
-...................................................
+***************************************************
 
 "Suche alle Kind-Elemente für ein gegebens Eltern-Element über den Alias-Parameter
 - z.B. um auf einer Detailseite alle zugehörigen 'Kind-Elemente' auszugeben."
@@ -133,7 +133,7 @@ Filterung nach Kind-Elementen eines Eltern-Elements
    )  
 
 Sortierung der Ausgabe nach mehr als einem Attribut (fest)
-..........................................................
+**********************************************************
 
 "Sortiere 'Mannschaften' nach Punkte absteigend + Spiele aufsteigend +
 Priorität absteigend."
