@@ -58,6 +58,15 @@ heutigen Datum ist - also in der Zukunft liegt"
    FROM {{table}} 
    WHERE FROM_UNIXTIME(`date_start`) >= CURDATE()
 
+oder
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id 
+   FROM {{table}} 
+   WHERE DATE(FROM_UNIXTIME(`date_start`)) >= DATE(now())
+
 
 Filterung nach Datum (start oder "laufend")
 ...........................................
