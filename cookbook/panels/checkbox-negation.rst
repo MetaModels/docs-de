@@ -13,7 +13,7 @@ des Wertes für "unchecked" - In Contao-Core wird dafür statt einer Null (0) Ni
 verarbeitet werden.
 
 Das Problem kann mit einem kleinen Workaround umgangen werden, in dem die 
-Sichtbarkeit auf "checked" getriggert wird aber die Prüfung mit einem NICHT (NOT)
+Sichtbarkeit auf "checked" getriggert aber die Prüfung mit einem NICHT (NOT)
 invertiert wird. Dazu wird bei den Ansichtsbedingung zunächst eine Bedingung NICHT
 angelegt und in diese die Prüfung der Checkbox auf "Aktiv" (siehe Screenshot).
 
