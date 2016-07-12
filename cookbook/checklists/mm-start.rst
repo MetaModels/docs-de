@@ -14,17 +14,13 @@ Checkliste:
 
    |box| aktuelles MetaModels und DCG installiert (möglichst per Composer)
    
-   |box| In Contao Systemeinstellungen die Checkboxen "Internen Cache umgehen"
-         und "Fehlermeldungen anzeigen" aktivieren - alle Caches anschließend
-         nochmal leeren!
+   |box| In Contao Systemeinstellungen die Checkboxen "Internen Cache umgehen" und "Fehlermeldungen anzeigen" aktivieren - alle Caches anschließend nochmal leeren!
    
    |box| regelmäßiges Backup einrichten
    
-   |box| auf bekannte Fehler/Bugs prüfen z.B. im `Forum <https://community.contao.org/de/showthread.php?60645-Aktuell-bekannte-Bugs>`_ 
-         oder auf `Github <https://github.com/issues?user=MetaModels>`_
+   |box| auf bekannte Fehler/Bugs prüfen z.B. im `Forum <https://community.contao.org/de/showthread.php?60645-Aktuell-bekannte-Bugs>`_ oder auf `Github <https://github.com/issues?user=MetaModels>`_
    
-   |box| bei problemen oder Fehlern die `Infos aus dem Forum <https://community.contao.org/de/showthread.php?62440-Tipps-bei-Problemen-Fehlern-Bugs-in-MetaModels>`_
-         beachten
+   |box| bei Problemen oder Fehlern die `Infos aus dem Forum <https://community.contao.org/de/showthread.php?62440-Tipps-bei-Problemen-Fehlern-Bugs-in-MetaModels>`_ beachten
 
 
 .. |box| raw:: html
