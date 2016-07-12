@@ -20,14 +20,20 @@ Diese Dokumentation gliedert sich in drei Bereiche:
     :ref:`index_reference` - Dokumentation über Events, Schnittstellen und vielem mehr.
 
 
+Unterstützung und Spenden
+-------------------------
 Die Erweiterung MetaModels ist eine kostenfreie Erweiterung auf der Basis von OpenSource und benötigt 
-für eine kontinuierliche Weiterentwicklung die Unterstützung einer aktiven Community. Eine finanzielle 
-Unterstüzung, Programmierungen oder die Meldung von Fehlern und eigenen Workflows werden gern angenommen.
+für eine kontinuierliche Weiterentwicklung die Unterstützung einer aktiven Community. Mitarbeit in 
+Form von Programmierungen oder die Meldung von Fehlern sowie eigenen Workflows werden gern angenommen.
 Informationen sind auf der `Projektwebseite von MetaModels <https://now.metamodel.me>`_ unter `Github 
 <https://github.com/MetaModels>`_ oder im `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_
 zu finden.
 
+Wichtig für die kontinuierliche Weiterentwicklung und laufende Pflege des Projektes sind ebenfalls
+finanzielle Zuwendungen in Form von Spenden. Mehr Informationen auf der `Spendenseite von Metamodels <https://now.metamodel.me/de/unterstuetzer/spenden>`_
+
 .. _index_manual:
+
 
 Handbuch
 --------

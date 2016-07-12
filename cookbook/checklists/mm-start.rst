@@ -1,0 +1,35 @@
+.. _rst_cookbook_checklists_mm-start:
+
+Start mit MetaModels
+====================
+
+Für den Start mit MetaModels sollten einige grundlegende Sachen beachtet werden.
+
+Das Projekt "MetaModels" arbeitet recht stabil - ist aber dennoch in steter Entwicklung. Im
+Zusammenspiel mit weiteren Komponenten die dem DC_General (DCG) oder dem Contao Core kann es
+trotzdem immer mal zum Verlust von Daten kommen. Deshalb sollte ein regelmäßiges Backup
+eingerichtet werden.
+
+Checkliste:
+
+   |box| aktuelles MetaModels und DCG installiert (möglichst per Composer)
+   
+   |box| In Contao Systemeinstellungen die Checkboxen "Internen Cache umgehen"
+         und "Fehlermeldungen anzeigen" aktivieren - alle Caches anschließend
+         nochmal leeren!
+   
+   |box| regelmäßiges Backup einrichten
+   
+   |box| auf bekannte Fehler/Bugs prüfen z.B. im `Forum <https://community.contao.org/de/showthread.php?60645-Aktuell-bekannte-Bugs>`_ 
+         oder auf `Github <https://github.com/issues?user=MetaModels>`_
+   
+   |box| bei problemen oder Fehlern die `Infos aus dem Forum <https://community.contao.org/de/showthread.php?62440-Tipps-bei-Problemen-Fehlern-Bugs-in-MetaModels>`_
+         beachten
+
+
+.. |box| raw:: html
+
+   <span>&#9634;</span>
+
+
+

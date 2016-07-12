@@ -9,6 +9,7 @@ Kurze Checklisten zur Überprüfung wenn was nicht funktioniert wie gewünscht.
 .. toctree::
     :maxdepth: 2
 
+    mm-start.rst
     filter.rst
     attribut.rst
 
