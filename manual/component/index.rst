@@ -4,7 +4,7 @@ Komponenten eines MetaModel
 ===========================
 
 .. warning:: Handbuch noch im Aufbau! |br|
-   Ab dem 04.12.2015 werden die Bezeichnungen und Icons
+   Im Dezember 2015 wurden die Bezeichnungen und Icons
    von MetaModels angepasst - siehe :ref:`manual_new_labels`
 
 In den folgenden Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"

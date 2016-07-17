@@ -3,7 +3,7 @@
 Neue Bezeichnungen und Icons für MetaModels
 ===========================================
 
-.. warning:: Ab dem 04.12.2015 werden die Bezeichnungen und Icons
+.. warning:: Im Dezember 2015 wurden die Bezeichnungen und Icons
    von MetaModels angepasst und vereinheitlicht sowie neue Icons
    eingeführt. Aus diesem Grund kann es zu Unterschieden bei
    Screenshots und dem aktuellen Backend geben.

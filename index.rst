@@ -1,9 +1,6 @@
 Willkommen zu MetaModels!
 =========================
 
-.. warning:: Ab dem 04.12.2015 werden die Bezeichnungen und Icons
-   von MetaModels angepasst - siehe :ref:`manual_new_labels`
-
 Dies ist die offizielle Dokumentation von `MetaModels <https://now.metamodel.me>`_, eine Erweiterung 
 für das `Contao Content Management System <https://contao.org>`_. Mit der Erweiterung MetaModels ist 
 es möglich, im CMS Contao strukturiert Daten abzulegen und diese auf der Webseite anzuzeigen - mehr 
