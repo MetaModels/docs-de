@@ -146,6 +146,26 @@ siehe auch `Forum <https://community.contao.org/de/showthread.php?62625-Zweite-S
    FROM mm_mannschaft
    ORDER BY punkte DESC, spiele ASC, prio DESC
 
+Dynamischer Defaultwert
+***********************
+
+Bei dem eigenen SQL können Defaultwerte per 'default=<wert>' vorgegeben werden,
+die verwendet werden, wenn der Filterparameter nicht gesetzt ist. Im Param-Tag
+ist aktuell noch keine Verschachtelung möglich, so dass man bei dynamischen
+Defaultwerten auf einen Workaround per "SQL-IF" zurückgreifen muss.
+siehe auch `Github <https://github.com/MetaModels/core/issues/880>`_
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id FROM mm_monate 
+   WHERE FROM_UNIXTIME(von_datum) <= IF(
+      {{param::get?name=von_datum}},
+      {{param::get?name=von_datum}}, 
+      CURDATE()
+   ) 
+   ORDER BY von_datum DESC 
+
 
 .. |img_about| image:: /_img/icons/about.png
 
