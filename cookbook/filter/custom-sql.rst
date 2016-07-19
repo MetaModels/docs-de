@@ -132,10 +132,11 @@ siehe auch `Forum <https://community.contao.org/de/showthread.php?62625-Zweite-S
 Dynamischer Defaultwert
 ***********************
 
-Bei dem eigenen SQL können Defaultwerte per 'default=<wert>' vorgegeben werden,
+Bei dem eigenen SQL sind Defaultwerte per 'default=<wert>' möglich,
 die verwendet werden, wenn der Filterparameter nicht gesetzt ist. Im Param-Tag
-ist aktuell noch keine Verschachtelung möglich, so dass man bei dynamischen
-Defaultwerten auf einen Workaround per "SQL-IF" zurückgreifen muss.
+ist aktuell noch keine Verschachtelung von Insert-Tags oder der Einsatz von
+MySQL-Funktionen möglich, so dass man bei dynamischen Defaultwerten auf
+einen Workaround per "SQL-IF" zurückgreifen muss.
 siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880>`_
 
 .. code-block:: php
