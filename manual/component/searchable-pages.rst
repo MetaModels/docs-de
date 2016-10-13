@@ -29,7 +29,7 @@ Optionen
 * **Filterset**: |br|
   Auswahl des Filtersets für die Detailansicht
 * **Render-Einstellungen**: |br|
-  Auswahl der Render-Einstellungen für die Detailansicht
+  Auswahl der Render-Einstellungen für die Listenansicht, die zur Detailansicht führt
 
 Ablauf
 ------
