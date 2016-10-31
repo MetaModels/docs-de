@@ -27,9 +27,9 @@ Optionen
 * **Name**: |br|
   Bezeichnung für das Backend
 * **Filterset**: |br|
-  Auswahl des Filtersets für die Detailansicht
+  Auswahl des Filtersets für die Listenansicht, die auch zur Detailansicht führt
 * **Render-Einstellungen**: |br|
-  Auswahl der Render-Einstellungen für die Listenansicht, die zur Detailansicht führt
+  Auswahl der Render-Einstellungen für die Listenansicht, die auch zur Detailansicht führt
 
 Ablauf
 ------
