@@ -27,7 +27,7 @@ Optionen
 * **Name**: |br|
   Bezeichnung für das Backend
 * **Filterset**: |br|
-  Auswahl des Filtersets für die Listenansicht, die auch zur Detailansicht führt
+  Auswahl des Filtersets für die Listenansicht der Render-Einstellung
 * **Render-Einstellungen**: |br|
   Auswahl der Render-Einstellungen für die Listenansicht, die auch zur Detailansicht führt
 
@@ -36,7 +36,9 @@ Ablauf
 
 Eine neue Indexierung kann über das Icon "|img_new| Neue Indexierung" angelegt und die
 nach der Eingabe des Namens die Optionen für das Filterset und die Render-Einstellung ausgewählt
-werden. Die Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder
+werden. Render-Einstellung und Filterset sind üblicher Weise die Gleichen, wie sie für das
+CE/Modul MetaModel-Liste der Frontendausgabe der "Übersichtsliste" gewählt werden. Die
+Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder
 über die Neuerstellungen der Systemwartung.
 
 
