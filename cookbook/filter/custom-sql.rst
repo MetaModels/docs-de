@@ -115,6 +115,34 @@ Filterung nach Kind-Elementen eines Eltern-Elements
      parent_alias={{param::get?name=auto_item}}
    )  
 
+Filterung nach Eltern-Element eines Kind-Elements
+*************************************************
+
+"Suche das Eltern-Element für ein gegebens Kind-Element über den Alias-Parameter
+- z.B. um auf einer Detailseite das zugehörige 'Eltern-Elemente' auszugeben."
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id 
+   FROM mm_parent
+   WHERE id = (
+     SELECT pid 
+     FROM mm_child
+     WHERE
+     child_alias={{param::get?name=auto_item}}
+   )  
+
+oder kürzer
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT pid as id
+   FROM mm_child
+   WHERE child_alias={{param::get?name=auto_item}}
+
+
 Sortierung der Ausgabe nach mehr als einem Attribut (fest)
 **********************************************************
 
