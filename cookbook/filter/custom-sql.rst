@@ -119,7 +119,7 @@ Filterung nach Eltern-Element eines Kind-Elements
 *************************************************
 
 "Suche das Eltern-Element für ein gegebens Kind-Element über den Alias-Parameter
-- z.B. um auf einer Detailseite das zugehörige 'Eltern-Elemente' auszugeben."
+- z.B. um auf einer Detailseite das zugehörige 'Eltern-Element' auszugeben."
 
 .. code-block:: php
    :linenos:
