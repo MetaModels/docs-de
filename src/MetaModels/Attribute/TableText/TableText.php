@@ -10,7 +10,7 @@
  *
  * This project is provided in good faith and hope to be usable by anyone.
  *
- * @package    MetaModels 
+ * @package    MetaModels
  * @subpackage AttributeTableText
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @author     Andreas Isaak <info@andreas-isaak.de>
@@ -29,10 +29,6 @@ use MetaModels\Attribute\BaseComplex;
 
 /**
  * This is the MetaModelAttribute class for handling table text fields.
- *
- * @package	   MetaModels
- * @subpackage AttributeTableText
- * @author     David Maack <david.maack@arcor.de>
  */
 class TableText extends BaseComplex
 {
@@ -123,7 +119,7 @@ class TableText extends BaseComplex
         $this->unsetDataFor($arrIds);
 
         // Insert or update the cells.
-        $strQueryUpdate = 'UPDATE %s';        
+        $strQueryUpdate = 'UPDATE %s';
         $strQueryInsert = 'INSERT INTO ' . $this->getValueTable() . ' %s';
 
         foreach ($arrIds as $intId) {
@@ -305,12 +301,12 @@ class TableText extends BaseComplex
 
         $arrColLabels = deserialize($this->get('tabletext_cols'), true);
         $countCol     = count($arrColLabels);
-
         $widgetValue  = array();
 
         foreach ($varValue as $k => $row) {
             for ($kk = 0; $kk < $countCol; $kk++) {
                 $i = array_search($kk, array_column($row, 'col'));
+
                 $widgetValue[$k]['col_' . $kk] = ($i !== false) ? $row[$i]['value'] : '';
             }
         }
