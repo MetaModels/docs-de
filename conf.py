@@ -7,6 +7,7 @@
 
 import sys
 import os
+from datetime import date
 
 #sys.path.append(os.path.abspath('_ext/phpdomain'))
 #sys.path.append(os.path.abspath('_ext/tk.phpautodoc/src'))
@@ -23,7 +24,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 master_doc = 'index'
 project = u'MetaModels'
-copyright = u'2015, Team MetaModels'
+copyright = u'{:d}, Team MetaModels'.format(date.today().year)
 version = '2.0'
 release = '2.0.0'
 language = 'de'
