@@ -24,7 +24,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 master_doc = 'index'
 project = u'MetaModels'
-copyright = u'{:d}, Team MetaModels'.format(date.today().year)
+copyright = u'{:d}, <a href="https://now.metamodel.me/de/ueber-uns/team" title="Team MetaModels" target="_blank">Team MetaModels</a>'.format(date.today().year)
 version = '2.0'
 release = '2.0.0'
 language = 'de'
@@ -40,6 +40,7 @@ html_static_path = ['_static']
 html_use_modindex = False
 htmlhelp_basename = 'MetaModelsdoc'
 html_favicon = '_img/favicon.ico'
+html_last_updated_fmt = '%d.%m.%Y'
 
 # -- Options for LaTeX output ---------------------------------------------
 
