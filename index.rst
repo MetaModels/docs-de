@@ -59,14 +59,14 @@ Kochbuch
 
         cookbook/*
 
-.. _index_reference:
-
 Aktuelles
 ---------
 
 Auf der Seite `MetaModels Aktuelles <https://now.metamodel.me/de/aktuelles>`_
 sind Informationen zu den letzten Änderungen, Bugfixes und neuen Funktionen
 aufgeführt.
+
+.. _index_reference:
 
 Referenz
 --------
