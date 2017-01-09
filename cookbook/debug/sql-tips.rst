@@ -63,11 +63,11 @@ an erster und letzter Stelle entfernt - das Ergebnis wäre dann ``8``.
 Eingrenzung auf serialisierten Wert in WHERE:
 *********************************************
 
-Hat man zum Beispiel im Attribut Mehrfachauswahl ([tags]) eine relation zur
+Hat man zum Beispiel im Attribut Mehrfachauswahl ([tags]) eine Relation zur
 Tabelle der Benutzer (tl_user) und möchte aber nur Mitglieder einer bestimmten
 Benutzergruppe, so muss man nach der Spalte ``groups`` filtern. In ``groups``
 ist die Gruppenzugehörigkeit aber als serialisiertes Array abgelegt, so dass
-in dem String suchen muss.
+in dem serialisierten String gesucht werden muss.
 
 In den Einstellungen des Attributes Mehrfachauswahl kann man eine SQL-Filterung
 wie folgt vornehmen:
