@@ -56,8 +56,27 @@ Anführungszeichen Trimmen:
    :linenos:
    
    SELECT TRIM(BOTH '"' FROM fieldvalue1) AS 'fieldvalue1_pure' FROM table
-   
+
 Mit dem Befehl werden die Anführungszeichen aus dem vorhergehenden Beispiel
 an erster und letzter Stelle entfernt - das Ergebnis wäre dann ``8``.
+
+Eingrenzung auf serialisierten Wert in WHERE:
+*********************************************
+
+Hat man zum Beispiel im Attribut Mehrfachauswahl ([tags]) eine relation zur
+Tabelle der Benutzer (tl_user) und möchte aber nur Mitglieder einer bestimmten
+Benutzergruppe, so muss man nach der Spalte ``groups`` filtern. In ``groups``
+ist die Gruppenzugehörigkeit aber als serialisiertes Array abgelegt, so dass
+in dem String suchen muss.
+
+In den Einstellungen des Attributes Mehrfachauswahl kann man eine SQL-Filterung
+wie folgt vornehmen:
+
+.. code-block:: sql
+   :linenos:
    
+   CONVERT(tl_user.groups USING utf8) LIKE '%"2"%'
+
+Damit werden in der Eingabemaske nur noch Mitgliedr der Mitgliedergruppe ``2``
+angezeigt.
 
