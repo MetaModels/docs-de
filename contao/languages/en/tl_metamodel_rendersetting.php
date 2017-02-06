@@ -12,18 +12,10 @@
  *
  * @package    MetaModels
  * @subpackage AttributeTableText
- * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @author     Andreas Isaak <info@andreas-isaak.de>
- * @author     David Maack <david.maack@arcor.de>
- * @author     David Greminger <david.greminger@1up.io>
  * @author     Ingolf Steinhardt <info@e-spin.de>
  * @copyright  2012-2016 The MetaModels team.
  * @license    https://github.com/MetaModels/attribute_tabletext/blob/master/LICENSE LGPL-3.0
  * @filesource
  */
 
-$GLOBALS['TL_DCA']['tl_metamodel_dcasetting']['metasubselectpalettes']['attr_id']['tabletext'] = array(
-    'presentation' => array(
-        'tl_class',
-    ),
-);
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['tabletext_hide_tablehead'] = array('Hide tablehead', 'Select to hide the head of the table.');

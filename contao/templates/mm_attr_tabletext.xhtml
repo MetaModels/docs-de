@@ -1,5 +1,20 @@
+
 <table class="tabletext<?php echo $this->additional_class; ?>">
-	<?php foreach ($this->raw as $k => $row) : ?><tr>
-		<?php foreach ($row as $kk =>$col): ?><td><?php echo $col['value']; ?></td><?php endforeach; ?>
-	</tr><?php endforeach;?>
+<?php $countCol = count($this->attribute->get('tabletext_cols')); if (!$this->settings->get('tabletext_hide_tablehead')) : ?>
+    <thead>
+        <tr>
+            <?php foreach (is_array($this->attribute->get('tabletext_cols')) ? $this->attribute->get('tabletext_cols'): array() as $countCol => $headCol) : ?>
+            <th><?= $headCol['rowLabel'] ?></th>
+            <?php endforeach; ?>
+        </tr>
+    </thead>
+    <tbody>
+	<?php foreach (is_array($this->raw) ? $this->raw : array() as $k => $row) : ?>
+	<tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
+	    <?php for ($kk = 0; $kk < $countCol; $kk++) : ?>
+	    <td><?php $i = array_search($kk, array_column($row, 'col')); echo ($i !== false) ? $row[$i]['value'] : '&nbsp;'; ?></td>
+	    <?php endfor; ?>
+	</tr>
+	<?php endforeach; ?>
+    </tbody>
 </table>
