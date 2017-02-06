@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-	<?php foreach (is_array($this->raw) ? $this->raw : array() as $k => $row) : ?>
+	<?php foreach ((array) $this->raw as $k => $row) : ?>
 	<tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
 	    <?php for ($kk = 0; $kk < $countCol; $kk++) : ?>
 	    <td><?php $i = array_search($kk, array_column($row, 'col')); echo ($i !== false) ? $row[$i]['value'] : '&nbsp;'; ?></td>

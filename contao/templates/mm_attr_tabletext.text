@@ -1,5 +1,5 @@
 <?php 
-foreach (is_array($this->raw) ? $this->raw : array() as $k => $row)
+foreach ((array) $this->raw as $k => $row)
 {
 	foreach (is_array($row) ? $row : array() as $kk => $col)
 	{
