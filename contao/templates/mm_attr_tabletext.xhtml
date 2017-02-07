@@ -8,6 +8,7 @@
             <?php endforeach; ?>
         </tr>
     </thead>
+<?php endif; ?>
     <tbody>
 	<?php foreach ((array) $this->raw as $k => $row) : ?>
 	<tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
