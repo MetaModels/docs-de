@@ -1,21 +1,25 @@
 <?php
 
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * This file is part of MetaModels/attribute_translatedurl.
  *
- * PHP version 5
- * @package     MetaModels
- * @subpackage  AttributeTableText
- * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @author      Andreas Isaak <info@andreas-isaak.de>
- * @author      David Maack <david.maack@arcor.de>
- * @author      David Greminger <david.greminger@1up.io>
- * @author      Stefan Heimes <stefan_heimes@hotmail.com>
- * @copyright   The MetaModels team.
- * @license     LGPL.
+ * (c) 2012-2016 The MetaModels team.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * This project is provided in good faith and hope to be usable by anyone.
+ *
+ * @package    MetaModels
+ * @subpackage AttributeTableText
+ * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author     Andreas Isaak <info@andreas-isaak.de>
+ * @author     David Maack <david.maack@arcor.de>
+ * @author     David Greminger <david.greminger@1up.io>
+ * @author     Stefan Heimes <stefan_heimes@hotmail.com>
+ * @author     Ingolf Steinhardt <info@e-spin.de>
+ * @copyright  2012-2016 The MetaModels team.
+ * @license    https://github.com/MetaModels/attribute_translatedurl/blob/master/LICENSE LGPL-3.0
  * @filesource
  */
 
@@ -25,10 +29,6 @@ use MetaModels\Attribute\BaseComplex;
 
 /**
  * This is the MetaModelAttribute class for handling table text fields.
- *
- * @package	   MetaModels
- * @subpackage AttributeTableText
- * @author     David Maack <david.maack@arcor.de>
  */
 class TableText extends BaseComplex
 {
@@ -85,8 +85,8 @@ class TableText extends BaseComplex
         $arrFieldDef['inputType']            = 'multiColumnWizard';
         $arrFieldDef['eval']['columnFields'] = array();
 
-        $count = count($arrColLabels);
-        for ($i = 0; $i < $count; $i++) {
+        $countCol = count($arrColLabels);
+        for ($i = 0; $i < $countCol; $i++) {
             $arrFieldDef['eval']['columnFields']['col_' . $i] = array(
                 'label'     => $arrColLabels[$i]['rowLabel'],
                 'inputType' => 'text',
@@ -115,44 +115,24 @@ class TableText extends BaseComplex
         $arrIds = array_keys($arrValues);
         $objDB  = $this->getMetaModel()->getServiceContainer()->getDatabase();
 
-        $strQueryUpdate = 'UPDATE %s';
+        // Reset all data for the ids.
+        $this->unsetDataFor($arrIds);
 
         // Insert or update the cells.
-        $strQuery = 'INSERT INTO ' . $this->getValueTable() . ' %s';
+        $strQueryUpdate = 'UPDATE %s';
+        $strQueryInsert = 'INSERT INTO ' . $this->getValueTable() . ' %s';
+
         foreach ($arrIds as $intId) {
-            // Delete missing rows.
-            if (empty($arrValues[$intId])) {
-                // No values give, delete all values.
-                $objDB
-                    ->prepare(sprintf('DELETE FROM %1$s WHERE att_id=? AND item_id=?', $this->getValueTable()))
-                    ->execute($this->get('id'), $intId);
-
-                continue;
-            }
-
-            // We have some values, delete the missing ones.
-            $rowIds = array_keys($arrValues[$intId]);
-            $objDB
-                ->prepare(
-                    sprintf(
-                        'DELETE
-                        FROM %1$s
-                        WHERE att_id=?
-                        AND item_id=?
-                        AND row NOT IN (%2$s)',
-                        $this->getValueTable(),
-                        implode(',', $rowIds)
-                    )
-                )
-                ->execute($this->get('id'), $intId);
-
             // Walk every row.
             foreach ($arrValues[$intId] as $row) {
                 // Walk every column and update / insert the value.
                 foreach ($row as $col) {
+                    if (empty($this->getSetValues($col, $intId)['value'])) {
+                        continue;
+                    }
                     $objDB
                         ->prepare(
-                            $strQuery .
+                            $strQueryInsert .
                             ' ON DUPLICATE KEY ' .
                             str_replace(
                                 'SET ',
@@ -319,10 +299,15 @@ class TableText extends BaseComplex
             return array();
         }
 
-        $widgetValue = array();
-        foreach ($varValue as $row) {
-            foreach ($row as $key => $col) {
-                $widgetValue[$col['row']]['col_' . $key] = $col['value'];
+        $arrColLabels = deserialize($this->get('tabletext_cols'), true);
+        $countCol     = count($arrColLabels);
+        $widgetValue  = array();
+
+        foreach ($varValue as $k => $row) {
+            for ($kk = 0; $kk < $countCol; $kk++) {
+                $i = array_search($kk, array_column($row, 'col'));
+
+                $widgetValue[$k]['col_' . $kk] = ($i !== false) ? $row[$i]['value'] : '';
             }
         }
 
@@ -339,14 +324,17 @@ class TableText extends BaseComplex
         }
 
         $newValue = array();
+        // Start row numerator at 0.
+        $intRow = 0;
         foreach ($varValue as $k => $row) {
             foreach ($row as $kk => $col) {
                 $kk = str_replace('col_', '', $kk);
 
                 $newValue[$k][$kk]['value'] = $col;
                 $newValue[$k][$kk]['col']   = $kk;
-                $newValue[$k][$kk]['row']   = $k;
+                $newValue[$k][$kk]['row']   = $intRow;
             }
+            $intRow++;
         }
 
         return $newValue;

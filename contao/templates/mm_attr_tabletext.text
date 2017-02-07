@@ -1,7 +1,7 @@
 <?php 
-foreach ($this->raw as $k => $row)
+foreach ((array) $this->raw as $k => $row)
 {
-	foreach ($row as $kk => $col)
+	foreach (is_array($row) ? $row : array() as $kk => $col)
 	{
 		echo (($kk !=0) ? ' ': '' ).$col['value'];
 	}
