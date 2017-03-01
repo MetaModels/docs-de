@@ -70,10 +70,6 @@ spezifischen Optionen:
 * **Langtext**: Texteingabe |br|
   Attribut für längere Texteingaben
 * **Numerisch**: Eingabe von ganzzahligen Werten (Integer)
-* **Bewertung**: Bewertungsmodul mit Sternen |br|
-  das Attributmodul dient zur Ausgabe ein "Sternchen-Bewertung" im Frontend;
-  im Backend können verschiedene Optionen wie Anzahl der Sterne usw. gesetzt
-  werden
 * **Auswahl**: Relation (1:n) zu einem weiteren MetaModel |br|
   mit dem Attribut "Auswahl" wird eine 1:n-Relation zu einem weiteren MetaModel
   erstellt; in den Optionen wird die MetaModel-Tabelle, das Attribut usw. eingestellt
@@ -99,7 +95,7 @@ Ist im MetaModel die Option "Übersetzung" aktiviert, sind die folgenden Attribu
 zusätzlich für eine Mehrsprachigkeit vorhanden:
 
 * Übersetzte Checkbox
-* Translated Combined values.
+* Translated kombinierte Werte
 * Übersetzte Datei
 * Übersetzter Langtext
 * Übersetzter Select
@@ -120,7 +116,19 @@ für die Anbindung von Tabellen bestimmt, die nicht zu MetaModels gehören und e
 eigenständiges Feld für die Sprachvariante besitzen.
 
 Neben den aufgeführten Attributen können über zusätzliche Erweiterungen von MetaModels
-auch weitere Attributtypen zur Verfügung stehen.
+auch weitere Attributtypen zur Verfügung stehen. Die Attribute werden über den Composer
+installiert oder wie normale Contao-Erweiterungen per Kopie in den Ordner "modules".
+
+Beispiele für zusätzliche Attribute sind:
+
+* **Bewertung**: Bewertungsmodul mit Sternen |br|
+  das Attributmodul dient zur Ausgabe ein "Sternchen-Bewertung" im Frontend;
+  im Backend können verschiedene Optionen wie Anzahl der Sterne usw. gesetzt
+  werden
+* **Color-Picker**: Auswahl von Webfarben und Transparenz
+* **Levenshtein**: Wortsuche nach Levenshtein |br|
+  mit dem Attribut wird eine Wortähnlichkeit für eine flexible Suche ermittelt
+* **Länderauswahl**: Auswahlliste mit Ländern
 
 Die Reihenfolge, wie die Attribute angelegt werden, ist frei wählbar -
 lediglich bei Attributen, die sich auf andere Attribute beziehen wie z.B.
