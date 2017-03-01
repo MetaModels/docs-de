@@ -5,7 +5,7 @@ Debug Templates
 
 Benötigt man für die Ausgabe z.B. einer Liste für das Frontend ein
 eigenes Template oder möchte man bei einem vorhanden Template wissen,
-welche Attributwerde an das Template übermittelt werden, kann man diese
+welche Attribute an das Template übermittelt werden, kann man diese
 sich in den HTML-Quelltext ausgeben lassen. Eine einfache Art ist die
 Ausgabe des Array der Items über "print_r".
 
