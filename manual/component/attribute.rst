@@ -117,7 +117,8 @@ eigenständiges Feld für die Sprachvariante besitzen.
 
 Neben den aufgeführten Attributen können über zusätzliche Erweiterungen von MetaModels
 auch weitere Attributtypen zur Verfügung stehen. Die Attribute werden über den Composer
-installiert oder wie normale Contao-Erweiterungen per Kopie in den Ordner "modules".
+installiert oder wie normale Contao-Erweiterungen per Kopie in den Ordner "modules"
+(je nach Bereitstellung durch Programmierer).
 
 Beispiele für zusätzliche Attribute sind:
 
