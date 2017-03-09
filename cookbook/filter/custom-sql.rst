@@ -176,7 +176,28 @@ siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880>`_
       {{param::get?name=von_datum}}, 
       CURDATE()
    ) 
-   ORDER BY von_datum DESC 
+   ORDER BY von_datum DESC
+
+Tags für ein Item filtern
+*************************
+
+Die Mitarbeiter haben eine Mehrfachauswahl [tags] zum MetaModels "Softskills".
+Für die Detailansicht eines Mitarbeiters, sollen diese ermittelt werden - die
+Detailansicht wird über das "auto_item" per Alias gefiltert.
+
+Die Softskills werden als eigene Liste auf der Detailseite angezeigt, müssen aber
+entsprechend gefiltert werden. Für die Ermittlung der Daten, muss man über die
+Relationstabelle "tl_metamodel_tag_relation" gehen. Wichtig ist die Ermittlung
+der Attribut-ID für "rel.att_id", d.h. in den Attributen von "Mitarbeitern"
+hat die Mehrfachauswahl die ID 5 (zu ermitteln über den Informationsbutton).
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT DISTINCT(rel.value_id) as id FROM mm_mitarbeiter r
+   LEFT JOIN tl_metamodel_tag_relation rel ON (r.id = rel.item_id AND rel.att_id=5)
+   WHERE
+   alias = {{param::get?name=auto_item}}
 
 
 .. |img_about| image:: /_img/icons/about.png
