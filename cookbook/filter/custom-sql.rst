@@ -189,7 +189,7 @@ Die Softskills werden als eigene Liste auf der Detailseite angezeigt, müssen ab
 entsprechend gefiltert werden. Für die Ermittlung der Daten, muss man über die
 Relationstabelle "tl_metamodel_tag_relation" gehen. Wichtig ist die Ermittlung
 der Attribut-ID für "rel.att_id", d.h. in den Attributen von "Mitarbeitern"
-hat die Mehrfachauswahl die ID 5 (zu ermitteln über den Informationsbutton).
+hat die Mehrfachauswahl z.B. die ID 5 (zu ermitteln über den i-Button).
 
 .. code-block:: php
    :linenos:
