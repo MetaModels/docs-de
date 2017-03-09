@@ -194,10 +194,10 @@ hat die Mehrfachauswahl die ID 5 (zu ermitteln über den Informationsbutton).
 .. code-block:: php
    :linenos:
    
-   SELECT DISTINCT(rel.value_id) as id FROM mm_mitarbeiter r
-   LEFT JOIN tl_metamodel_tag_relation rel ON (r.id = rel.item_id AND rel.att_id=5)
+   SELECT DISTINCT(rel.value_id) as id FROM mm_mitarbeiter ma
+   LEFT JOIN tl_metamodel_tag_relation rel ON (ma.id = rel.item_id AND rel.att_id=5)
    WHERE
-   alias = {{param::get?name=auto_item}}
+   ma.alias = {{param::get?name=auto_item}}
 
 
 .. |img_about| image:: /_img/icons/about.png
