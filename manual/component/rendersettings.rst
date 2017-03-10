@@ -60,7 +60,7 @@ Optionen
   mögliche Auswahl ist HTML5, XHTML und Text; sofern keine speziellen Anforderungen bestehen,
   kann die Auswahl leer gelassen werden
 * **Weiterleitungsseite** |br|
-  die WeiterleitunGsseite mit Seitenauswahl und Filter ist nur für die Frontendausgabe, um
+  die Weiterleitungsseite mit Seitenauswahl und Filter ist nur für die Frontendausgabe, um
   z.B. auf eine Detailseite zu verlinken; auf der Detailseite sollte ein Listenelement mit
   einem entsprechenden Filter vorhanden sein; bei mehrsprachigen MetaModel gibt es je 
   Sprache eine Einstellung für Seitenauswahl und Filter
