@@ -60,9 +60,10 @@ Optionen
   mögliche Auswahl ist HTML5, XHTML und Text; sofern keine speziellen Anforderungen bestehen,
   kann die Auswahl leer gelassen werden
 * **Weiterleitungsseite** |br|
-  die Weiterleitungsseite ist für die Frontendausgabe, um z.B. auf eine Detailseite zu verlinken;
-  auf der Detailseite sollte ein Listenelement mit einem entsprechenden Filter vorhanden sein; bei
-  mehrsprachigen MetaModel gibt es je Sprache eine Einstellung für Link und Filter
+  die WeiterleitunGsseite mit Seitenauswahl und Filter ist nur für die Frontendausgabe, um
+  z.B. auf eine Detailseite zu verlinken; auf der Detailseite sollte ein Listenelement mit
+  einem entsprechenden Filter vorhanden sein; bei mehrsprachigen MetaModel gibt es je 
+  Sprache eine Einstellung für Seitenauswahl und Filter
 * **Leere Einträge verbergen** |br|
   leere Einträge der Attribute werden übersprungen - wichtig im Zusammenspiel, wenn die
   Label der Attribute mit ausgegeben werden
