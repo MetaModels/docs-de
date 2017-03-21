@@ -107,7 +107,9 @@ Im Template könnte dann z.B. die Ausgabe der Abteilung so aussehen:
    :linenos:
    
    <html>
-   <?= $arrItem['attributes']['abteilung'] ?>: <?= $arrItem['raw']['abteilung']['name'] ?>
+   ...
+   <p><span class="label"><?= $arrItem['attributes']['abteilung'] ?>:</span> <?= $arrItem['raw']['abteilung']['name'] ?></p>
+   ...
    </html>
 
 Die Ausgabe kann man wieder entfernen, in dem man den Ausgabeblock
