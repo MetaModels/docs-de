@@ -75,4 +75,7 @@ zu lassen
 Die Ausgabe kann man wieder entfernen, in dem man den Ausgabeblock
 auskommentiert, löscht oder zu einem anderen Template wechselt.
 
+Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
+:ref:`rst_cookbook_frontend_array-helper`.
+
 
