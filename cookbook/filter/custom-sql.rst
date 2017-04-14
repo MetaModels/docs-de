@@ -178,6 +178,24 @@ siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880>`_
    ) 
    ORDER BY von_datum DESC
 
+Defaultwert ''
+**************
+
+Bei dem eigenen SQL sind Defaultwerte per 'default=<wert>' möglich,
+die verwendet werden, wenn der Filterparameter nicht gesetzt ist. Im Param-Tag
+ist aktuell wird akltuell die Eingabe von `''` oder `""` gecastet, so dass die
+Filterung nicht korrekt erfolgt; anzuwenden ist dies z.B. bei Checkboxwerten.
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id FROM mm_mitarbeiter 
+   WHERE driver_licence = IF(
+      {{param::get?name=driver_licence}},
+      {{param::get?name=driver_licence}}, 
+      ''
+   )
+
 Tags für ein Item filtern
 *************************
 
