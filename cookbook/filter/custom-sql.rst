@@ -199,6 +199,32 @@ hat die Mehrfachauswahl z.B. die ID 5 (zu ermitteln über den i-Button).
    WHERE
    ma.alias = {{param::get?name=auto_item}}
 
+Items nach Einfachauswahl-Eigenschaft filtern
+*********************************************
+
+Die Mitarbeiter haben eine Einfachauswahl zum MetaModels "Abteilung".
+Für eine Listnsicht der Mitarbeiter, sollen nur diejenigen ausgegeben
+werden, die in einer Abteilung arbeiten deren "Score" größer als 99 ist.
+
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id FROM mm_mitarbeiter
+   WHERE abteilung IN (
+      SELECT id FROM mm_abteilung
+      WHERE score > 99
+   )
+
+oder
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT ma.id FROM mm_mitarbeiter ma
+   LEFT JOIN mm_abteilung rel ON (ma.abteilung = rel.id)
+   WHERE rel.score > 99
+
 
 .. |img_about| image:: /_img/icons/about.png
 
