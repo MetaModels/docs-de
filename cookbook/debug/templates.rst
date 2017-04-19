@@ -58,7 +58,7 @@ sollte sich im Quelltext die Debugausgabe befinden.
 
 Ist die Ausgabe sehr umfangreich, kann die Darstellung im Browser sehr
 langsam werden - Abhilfe schafft z.B. sich nur ein Item-Knoten ausgeben
-zu lassen
+zu lassen:
 
 .. code-block:: php
    :linenos:
@@ -71,6 +71,11 @@ zu lassen
    echo "</pre>\n";
    echo "\n DEBUG ENDE -->";
    ?>
+
+Ist in den Render-Einstellungen die Weiterleitung und Filter für die Detailseite
+eingestellt, wird die Ausgabe des Arrays im Quelltext sehr umfangreich und führt
+häufig zu einem Error "Allowed memory size...". Abhilfe schafft hier z.B. das 
+kurzzeitige Abschalten des Filters für die Weiterleitung.
 
 Die Ausgabe kann man wieder entfernen, in dem man den Ausgabeblock
 auskommentiert, löscht oder zu einem anderen Template wechselt.
