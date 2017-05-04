@@ -208,6 +208,10 @@ und dem optionalen Array an Sprachen gefunden wurden
 ``setTranslatedDataFor($arrValues, $strLangCode)`` |br|
 setzt den Wert für ein Item in der entsprechnden Sprache
 
+``getTranslatedDataFor($arrIds, $strLangCode)`` |br|
+gibt ein Array mit den Werten für die Items des ID-Arrays in der entsprechnden Sprache
+zurück
+
 ``unsetValueFor($arrIds, $strLangCode)`` |br|
 löscht die Werte für das Array von Item-IDs in der entsprechnden Sprache
 
