@@ -1,10 +1,13 @@
-.. _rst_cookbook_checklists_filter:
+.. _rst_cookbook_checklists_attribut_change:
 
 Attribut nach Änderung wird nicht angezeigt
 ===========================================
 
 Nach Änderung eines Attributs (z.B. Attributtyp) wird wird 
 dies auf der Webseite nicht (mehr) angezeigt.
+
+Achtung: Bei Änderung des Attributtyps werden die vorhandenen
+Daten in der DB gelöscht!
 
 Checkliste:
 
@@ -14,7 +17,7 @@ Checkliste:
    
    |box| Werte in Eingabemaske nach Änderung ggf. neu eingeben   
    
-   |box| per Debugausgabe prüfen, ob Attribut im Template "ankommt"
+   |box| per :ref:`Debugausgabe <rst_cookbook_debug_templates>` prüfen, ob Attribut im Template "ankommt"
 
 
 .. |box| raw:: html

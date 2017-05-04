@@ -11,6 +11,7 @@ Kurze Checklisten zur Überprüfung wenn was nicht funktioniert wie gewünscht.
 
     mm-start.rst
     filter.rst
-    attribut.rst
+    attribut-new.rst
+    attribut-change.rst
 
 
