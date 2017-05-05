@@ -13,7 +13,9 @@ Checkliste:
 
    |box| Attributlistings bei Render-Einstellungen und Eingabemasken prüfen 
    
-   |box| bei Render-Einstellungen Attribut löschen und neu hinzufügen
+   |box| bei Render-Einstellungen Attribut ggf. löschen und neu hinzufügen
+   
+   |box| prüfen ob bei Render-Einstellungen und Eingabemasken auf sichtbar gestellt
    
    |box| Werte in Eingabemaske nach Änderung ggf. neu eingeben   
    
