@@ -20,7 +20,7 @@ werden, kann das mit dem folgenden Code im Template der Deatilansicht erreicht w
         $intPageId = 192; // Page id 
     	$objPage   = \PageModel::findByPK(intPageId); //Page objekt
     	$pageURL   = \Controller::generateFrontendUrl($objPage->row()); //URL
-	    \Controller::redirect($pageURL); //redirect
+    	\Controller::redirect($pageURL); //redirect
     }
 
 
