@@ -24,6 +24,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     frontend/array-helper.rst
     debug/templates.rst
     debug/sql-tips.rst
+    templates/fe_redirect_to_list.rst
     other-tutorials/index.rst
     other-tutorials/videos.rst
 
