@@ -6,8 +6,8 @@ Automatische Umleitung von Detailseite zur Listenseite
 Die Datenausgabe auf der Detailseite wird häufig über einen oder mehrere
 Parameter gesteuert bzw. die Ausgabe gefiltert - meist über das `auto_item`.
 
-Ist der oder die Parameter nicht gesetzt, ist die Detailseite denoch aufrufbar
-und es erscheint eine Ausgeb wie "Es konnten keine Daten gefunden werden".
+Die Detailseite auch ohne Angabe des (Filter)Parameters in der URL aufrufbar
+und es erscheint eine Ausgebe wie "Es konnten keine Daten gefunden werden".
 
 Ist dies nicht gewünscht, und es soll dann gleich zur Listenansicht gesprungen
 werden, kann das mit dem folgenden Code im Template der Deatilansicht erreicht werden:
