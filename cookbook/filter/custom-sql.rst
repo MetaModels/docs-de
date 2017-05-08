@@ -244,5 +244,18 @@ oder
    WHERE rel.score > 99
 
 
+Kommentare im SQL-Query
+***********************
+
+Die SQL-Queries können mit unter Umständen recht komplex werden und einige
+feste Werte wie Attribut-IDs usw. enthalten. Um für einen späteren Zeitpunkt
+oder die Arbeit im Team den Überblick nicht zu verlieren, können auch hier
+Kommentare eingefügt werden - mehr dazu im `MySQL reference manual <https://dev.mysql.com/doc/refman/5.6/en/comments.html>`_.
+
+Beispiel:
+|img_sql-comment|
+
+
 .. |img_about| image:: /_img/icons/about.png
+.. |img_sql-comment| image:: /_img/screenshots/cookbook/filter/sql-comment.jpg
 
