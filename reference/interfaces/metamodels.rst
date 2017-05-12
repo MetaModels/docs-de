@@ -462,20 +462,20 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    /* Ausgabe */
    
    // Anzahl der Items
-   echo 'Anzahl: '.$objItems->getCount()."<br>\n";;
+   echo 'Anzahl: '.$objItems->getCount()."<br>\n";
    
    // Variante 1 - Items-Objekt
    /*
    foreach ($objItems as $objItem)
    {
-   	echo $objItem->get('name')."<br>\n";
+       echo $objItem->get('name')."<br>\n";
    }
    */
    
    // Variante 2 - Items-Array
    foreach ($arrItems as $arrItem)
    {
-   	echo $arrItem['html5']['name']."<br>\n";
+       echo $arrItem['html5']['name']."<br>\n";
    }
 
 
