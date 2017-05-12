@@ -453,9 +453,10 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    $objFilter = $objMetaModel->getEmptyFilter();
    // alle Items
    $objItems = $objMetaModel->findByFilter($objFilter);
-   // alle Items geparst zu Array
-   $arrItems = $objItems->parseAll($strOutputFormat = 'html5',
-                                   $objMetaModel->getView($intRenderId));
+   // alle Items geparst zu Array mit HTML5 Knoten
+   $arrItems = $objItems->parseAll('html5', $objMetaModel->getView($intRenderId));
+   // alternativ nur Knoten raw und text
+   //$arrItems = $objItems->parseAll('text');
    //print_r($arrItems);
    
    /* Ausgabe */
