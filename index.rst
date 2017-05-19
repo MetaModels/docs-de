@@ -50,14 +50,15 @@ Handbuch
 
 .. _index_cookbook:
 
-Kochbuch
---------
+Kochbuch und Videos
+-------------------
 
     .. toctree::
         :glob:
         :maxdepth: 1
 
         cookbook/*
+        cookbook/other-tutorials/videos
 
 Aktuelles
 ---------
