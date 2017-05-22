@@ -131,18 +131,18 @@ gibt alle MetaModel-Namen als Array zurück
 ``getServiceContainer();`` |br|
 gibt den Service-Container zurück
 
+.. warning:: Die Methoden `byTableName`, `byId` und `getAllTables`
+   wurden in der Version 2.0 entfernt
+
 ``byTableName($strTableName);`` |br|   
-erstellt eine MetaModel-Instanz aus Tabellenname  |br|
-**Deprecated**: bitte Methode ``getMetaModel($strMetaModelName);`` verwenden
+Methode ``getMetaModel($strMetaModelName);`` verwenden
 
 ``byId($intMetaModelId);`` |br|
-erstellt eine MetaModel-Instanz aus Tabellen-ID  |br|
-**Deprecated**: bitte Methode ``getMetaModel($strMetaModelName);`` mit 
+Methode ``getMetaModel($strMetaModelName);`` mit 
 ``translateIdToMetaModelName($intMetaModelId);`` verwenden
 
 ``getAllTables();`` |br|
-gibt alle MetaModel-Tabellennamen als Array zurück  |br|
-**Deprecated**: bitte Methode ``collectNames();`` verwenden
+Methode ``collectNames();`` verwenden
  
 
 
