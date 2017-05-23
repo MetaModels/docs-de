@@ -394,7 +394,12 @@ ermittelt, ob das Item eine Variante eines anderen Items ist
 ermittelt, ob das Item eine Variantenbasis ist
 
 ``getVariants($objFilter)``  |br|
-gibt ein Array mit den Varianten des Items zurück
+gibt ein Array mit den Varianten des Items zurück oder null, wenn das Item
+keine Varianten beherrscht
+
+``getVariantBase()``  |br|
+gibt das Item der Variantenbasis zurück; für ein Item ohne Varianten ist
+die Variantenbasis das Item selbst
 
 ``parseValue($strOutputFormat = 'text', $objSettings = null)``  |br|
 rendert das Item im vorgegebenen Format; als Rohdaten [raw]
