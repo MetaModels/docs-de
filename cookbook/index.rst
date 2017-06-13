@@ -21,6 +21,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     filter/custom-sql.rst
     filter/exclusion.rst
     filter/search-text-at-two-fields.rst
+    frontend/output-item-count.rst
     frontend/array-helper.rst
     debug/templates.rst
     debug/sql-tips.rst
