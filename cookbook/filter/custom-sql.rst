@@ -244,6 +244,26 @@ oder
    WHERE rel.score > 99
 
 
+Mitarbeiter für eine per Mehrfachauswahl [tags] zugeordnete Seite filtern
+*************************************************************************
+
+Die Mitarbeiter haben ein Attribut Mehrfachauswahl auf die Tabelle `tl_page`,
+um auf einzelnen Seiten einen Mitarbeiter als Verantwortlichen darzustellen. Auf den
+entsprechenden Seiten kann ein MM-Listenelement eingefügt werden, der die zugehörigen
+Mitarbeiter ausgibt. Für die Filterung kann das folgende Query verwendet werden:
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT ma.id FROM mm_mitarbeiter ma
+   LEFT JOIN tl_metamodel_tag_relation rel ON (ma.id = rel.item_id)
+   WHERE
+   rel.att_id = 79 AND             -- 79 ID des Attributes [tags]
+   rel.value_id = {{page::id}} AND -- variable Seiten-ID
+   ma.published = 1
+   ORDER BY ma.name
+
+
 Kommentare im SQL-Query
 ***********************
 
