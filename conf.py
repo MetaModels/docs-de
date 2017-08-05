@@ -45,19 +45,16 @@ html_last_updated_fmt = '%d.%m.%Y'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-'papersize': 'a4paper',
-'pointsize': '10pt',
+  'papersize': 'a4paper',
+  'pointsize': '10pt',
+  'classoptions': ',openany,oneside',
+  'babel' : '\\usepackage[german]{babel}',
 }
 
 latex_documents = [
   ('index', 'MetaModels.tex', u'MetaModels Documentation',
    u'Team MetaModels', 'manual'),
 ]
-
-latex_elements = {
-  'classoptions': ',openany,oneside',
-  'babel' : '\\usepackage[german]{babel}',
-}
 
 # -- Options for manual page output ---------------------------------------
 
