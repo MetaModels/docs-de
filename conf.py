@@ -54,6 +54,11 @@ latex_documents = [
    u'Team MetaModels', 'manual'),
 ]
 
+latex_elements = {
+  'classoptions': ',openany,oneside',
+  'babel' : '\\usepackage[german]{babel}',
+}
+
 # -- Options for manual page output ---------------------------------------
 
 man_pages = [
