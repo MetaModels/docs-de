@@ -5,7 +5,7 @@
 
 Der Schritt "Filtersets" zählt zu den optionalen Komponenten und steuert verschiedene
 Parameter der Ausgabe. In unserem Beispiel soll ein Filter angelegt werden,
-der für die Frontendausgabe nur die Einträge mit aktiviertem "Veröffentlicht".
+der für die Frontendausgabe nur die Einträge mit aktiviertem "Veröffentlicht" anzeigt.
 
 Zum Aufruf der Filter wird wieder die Übersicht MetaModels aktiviert,
 so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
