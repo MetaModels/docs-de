@@ -94,7 +94,7 @@ z.B. mit dem folgenden Code ausgegeben werden:
      <a href="<?= $action['href']; ?>"<?php if ($action['class']): ?> class="<?= $action['class']; ?>"<?php endif; ?><?php if ($action['title']): ?> title="<?= $action['title']; ?>"<?php endif; ?><?= $action['attribute']; ?>><?= $action['label']; ?></a>
    <?php endforeach; ?>
 
-|img_notelist_fe_list|
+ |img_notelist_fe_list|
 
 
 Ausgabe der Merkliste per Filter
@@ -107,12 +107,12 @@ Für die Filterung muss ein Filter mit der neuen Filterregel "Notelist" angelegt
 werden. In der Filterregel ist lediglich die Merkliste auszuwählen, dessen Elemente
 ausgegeben werden sollen.
 
-|img_notelist_filterrule|
+ |img_notelist_filterrule|
 
 In der FE-Ausgabe der gefilterten Liste, sieht man nur noch die Mitarbeiter der
 Merkliste.
 
-|img_notelist_filtered_list|
+ |img_notelist_filtered_list|
 
 In der Listenausgabe wäre es z.B. möglich, eine weitere Merkliste zu aktivieren,
 um die Elemente von einer merkliste zu einer weiteren zu übernehmen - z.B. von
@@ -122,7 +122,7 @@ In den Einstellungen der Merkliste kann optional ein Filter für die Aufnahme zu
 einer Merkliste gesetzt werden. Sind z.B. nur Mitarbeiter erlaubt, die zum Vertrieb
 gehören, sieht die Liste wie folgt aus:
 
-|img_notelist_fe_list_with_filter|
+ |img_notelist_fe_list_with_filter|
 
 
 Datenanzeige und Übernahme im Formular
@@ -135,17 +135,17 @@ gesteuert.
 Dazu kann eine oder mehrere Merklisten aktiviert und jeweils für die FE-Ausgabe
 und die E-Mail-Ausgabe eine Render-Einstellung ausgewählt werden.
 
-|img_nodelist_form_widget|
+ |img_nodelist_form_widget|
 
 Im Formular werden die entsprechenden Datensätze ausgegeben mit der Möglichkeit, die gesamte Liste
 oder einzelne Items zu löschen.
 
-|img_nodelist_form_fe_list|
+ |img_nodelist_form_fe_list|
 
 Die Daten werden per E-Mail übertragen und können über das E-Mail-Template in der Ausgabe
 angepasst werden.
 
-|img_notelist_email_list|
+ |img_notelist_email_list|
 
 
 Known Issues and Next Features
