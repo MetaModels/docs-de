@@ -60,12 +60,13 @@ Kochbuch und Videos
         cookbook/*
         cookbook/other-tutorials/videos
 
-Aktuelles
----------
+Aktuelles und Newsletter
+------------------------
 
 Auf der Seite `MetaModels Aktuelles <https://now.metamodel.me/de/aktuelles>`_
 sind Informationen zu den letzten Änderungen, Bugfixes und neuen Funktionen
-aufgeführt.
+aufgeführt. Per `Newsletter <https://now.metamodel.me/de/home#newsletter>`_ 
+kann man automatisch über die letzten News informiert werden.
 
 .. _index_reference:
 
