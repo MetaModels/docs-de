@@ -4,8 +4,9 @@ Merkliste für MetaModels
 ========================
 
 .. warning:: Die Merkliste ist noch im Fundraising und wird erst nach
-   Erreichen der Zielsumme von 2.200€ frei geschaltet. Eine Vorab-
-   Installation ist nach Absprache möglich. Kontakt: info@e-spin.de
+   Erreichen der Zielsumme von 2.200€ frei geschaltet. |br|
+   Eine Vorab-Installation ist nach Absprache möglich.
+   Kontakt: info@e-spin.de
 
 Die Merkliste (Notelist) erweitert MetaModels um die Möglichkeit, in der
 FE-Ausgabe einzelne Datensätze (Items) einer Merkliste hinzuzufügen (add).
@@ -154,6 +155,10 @@ Known Issues and Next Features
 * nach Absenden des Formulars sind Elemente nicht aus Merkliste entfernt
 * optionale Angabe einer Anzahl fehlt
 
+
+.. |br| raw:: html
+
+   <br />
 
 
 .. |img_notelist_icon| image:: /_img/screenshots/extended/notelist/notelist_icon.png
