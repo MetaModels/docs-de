@@ -4,7 +4,7 @@ Merkliste für MetaModels
 ========================
 
 .. warning:: Die Merkliste ist noch im Fundraising und wird erst nach
-   Erreichen der Zielsumme von 2.200€ frei geschaltet. |br|
+   Erreichen der Zielsumme von x.000€ frei geschaltet. |br|
    Eine Vorab-Installation ist nach Absprache möglich.
    Kontakt: info@e-spin.de
 
