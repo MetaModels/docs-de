@@ -156,6 +156,63 @@ Known Issues and Next Features
 * optionale Angabe einer Anzahl fehlt
 
 
+Events
+------
+
+Soll die Manipulation einer Notelist (add, remove, clear) überwacht werden,
+steht dafür ein Eventlistener zur verfügung.
+
+Mit dem Eventlistener kann z.B. ein Rückmeldung an die Webseite erfolgen oder
+ein Logging/Tracking der Aktionen.
+
+Als Beispiel für eine Rückmeldung kann in einem eigenen Contao-Modul z.B. unter
+``/system/modules/myModule/config/event_listeners.php`` folgender Code eingetragen
+werden:
+
+.. code-block:: php
+   :linenos:
+
+    <?php
+    
+    use MetaModels\NoteList\Event\ManipulateNoteListEvent;
+    use MetaModels\NoteList\Event\NoteListEvents;
+    
+    return [
+        NoteListEvents::MANIPULATE_NOTE_LIST => [
+            function (ManipulateNoteListEvent $event) {
+                // Only handle note list "1".
+                if ('1' !== ($listId = $event->getNoteList()->getStorageKey())) {
+                    return;
+                }
+    
+                switch ($event->getOperation()) {
+                    case ManipulateNoteListEvent::OPERATION_ADD:
+                        Message::addConfirmation('Added ' . $event->getItem()->get('id') . ' to ' . $listId);
+                        break;
+                    case ManipulateNoteListEvent::OPERATION_REMOVE:
+                        Message::addConfirmation('Removed ' . $event->getItem()->get('id') . ' to ' . $listId);
+                        break;
+                    case ManipulateNoteListEvent::OPERATION_CLEAR:
+                        Message::addConfirmation('Cleared ' . $listId);
+                        break;
+                    default:
+                        throw new \RuntimeException('Unknown note list operation: ' . $event->getOperation());
+                }
+            }
+        ]
+];
+
+Auf der Webseite kann in einem Template die Rückmeldung über die Ausgabe der Contao-Message
+erfolgen - z.B.
+
+.. code-block:: php
+   :linenos:
+   
+   <?php
+   echo Message::generate();
+   ?>
+
+
 .. |br| raw:: html
 
    <br />
