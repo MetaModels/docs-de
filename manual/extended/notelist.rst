@@ -156,11 +156,25 @@ Known Issues and Next Features
 * optionale Angabe einer Anzahl fehlt
 
 
+InsertTags
+----------
+
+Für die Ausgabe der Anzahl der Items in den Merklisten sind verschiedene
+InsertTags implementiert. Diese geben die Anzahl wie folgt aus ('mm_mitarbeiterliste' 
+ist das entsprechende MetaModels):
+
+* Anzahl aller Items: {{metamodels_notelist::sum::mm_mitarbeiterliste}}
+* Anzahl aller Items der Merkliste ID 1: {{metamodels_notelist::sum::mm_mitarbeiterliste::1}}
+* Anzahl aller Items der Merkliste ID 1 und 2: {{metamodels_notelist::sum::mm_mitarbeiterliste::1,2}}
+
+Ist kein Item in der Merkliste, wird 0 (Null) ausgebeben.
+
+
 Events
 ------
 
 Soll die Manipulation einer Notelist (add, remove, clear) überwacht werden,
-steht dafür ein Eventlistener zur verfügung.
+steht dafür ein Eventlistener zur Verfügung.
 
 Mit dem Eventlistener kann z.B. ein Rückmeldung an die Webseite erfolgen oder
 ein Logging/Tracking der Aktionen.
@@ -211,6 +225,8 @@ erfolgen - z.B.
    <?php
    echo Message::generate();
    ?>
+
+
 
 
 .. |br| raw:: html
