@@ -34,7 +34,7 @@ nur noch bestimmte Datensätze in die Merkliste aufgenommen werden können - z.B
 nur Mitarbeiter aus der Abteilung "Vertrieb".
 
 Die Merkliste arbeitet auch mit übersetzten MetaModels, so dass die Datensätze einer
-Merkliste auch bei Wechsel einer Sprache erhalten bleiben.
+Merkliste auch beim Wechsel der Sprache erhalten bleiben.
 
 
 Installation per Composer
@@ -79,6 +79,9 @@ Im CE MetaModels-Liste bzw. FE-Modul gibt es einen neuen Abschnitt "Notelist", i
 eine oder mehrere der angelegten Merklisten aktiviert werden kann.
 
 |img_notelist_ce_mm-list|
+
+Die Reihenfolge der "Action-Ausgaben" ist über die Sortrierung der Merklisten per
+Drag&Drop veränderbar.
 
 Wird für die Ausgabe das Standardtemplate verwendet müssen keine weiteren Änderungen
 vorgenommen werden und in der FE-Listenansicht sollten die Datensätze einen weiteren
