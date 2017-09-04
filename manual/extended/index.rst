@@ -10,6 +10,7 @@ Erweiterungen
 .. toctree::
     :maxdepth: 1
     
+    frontend_editing
     boilerplate
     perimetersearch
     attribute_color
