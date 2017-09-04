@@ -8,8 +8,8 @@ Um ein MetaModel nicht nur im Backend bearbeiten zu können, sondern es auch Con
 
 Dazu wechseln wir in die Paketverwaltung (Composer)
 
-|img_fee-paketverwaltung.png|
+|img_paketverwaltung|
 
 
-.. |img_fee_paketverwaltung.png| image:: /_img/screenshots/extended/fee-paketverwaltung.png
+.. |img_paketverwaltung| image:: /_img/screenshots/extended/fee-paketverwaltung.png
 
