@@ -53,9 +53,9 @@ Auf der Detail-Seite haben wir ein Element "Metamodels Frontend Editing" eingese
 
 In diesem haben wir das MetaModel ausgewählt, was bearbeitet werden soll.
 
-|img_metamodellistfee|
+|img_metamodelfee|
 
-|img_metamodellistfeeedit|
+|img_metamodelfeeedit|
 
 Das war es im Backend.
 Wir können nun ins Frontend wechseln, um unsere Mitarbeiter zu bearbeiten.
@@ -82,16 +82,16 @@ Beim Bearbeiten des Datensatzes können wir alle Felder des MetaModels ändern. 
 
 
 .. |img_paketverwaltung| image:: /_img/screenshots/extended/frontend_editing/fee-paketverwaltung.png
-.. |img_paket| image:: /_img/screenshots/extended/frontend_editing/fee-paket.png
-.. |img_paketzwei| image:: /_img/screenshots/extended/frontend_editing/fee-paket2.png
-.. |img_paketvormerken| image:: /_img/screenshots/extended/frontend_editing/fee-paketvormerken.png
-.. |img_paketaktualisieren| image:: /_img/screenshots/extended/frontend_editing/fee-paketaktualisieren.png
+.. |img_paket| image:: /_img/screenshots/extended/frontend_editing/fee-feepaket.png
+.. |img_paketzwei| image:: /_img/screenshots/extended/frontend_editing/fee-feepaket2.png
+.. |img_paketvormerken| image:: /_img/screenshots/extended/frontend_editing/fee-feepaketvormerken.png
+.. |img_paketaktualisieren| image:: /_img/screenshots/extended/frontend_editing/fee-feepaketaktualisieren.png
 
 .. |img_seitenstruktur| image:: /_img/screenshots/extended/frontend_editing/fee-seitenstruktur.png
 .. |img_metamodellist| image:: /_img/screenshots/extended/frontend_editing/fee-metamodellist.png
 .. |img_metamodellistedit| image:: /_img/screenshots/extended/frontend_editing/fee-metamodellistedit.png
-.. |img_metamodellistfee| image:: /_img/screenshots/extended/frontend_editing/fee-metamodellistfee.png
-.. |img_metamodellistfeeedit| image:: /_img/screenshots/extended/frontend_editing/fee-metamodellistfeeedit.png
+.. |img_metamodelfee| image:: /_img/screenshots/extended/frontend_editing/fee-metamodelfee.png
+.. |img_metamodelfeeedit| image:: /_img/screenshots/extended/frontend_editing/fee-metamodelfeeedit.png
 
 .. |img_login| image:: /_img/screenshots/extended/frontend_editing/fee-login.png
 .. |img_liste| image:: /_img/screenshots/extended/frontend_editing/fee-liste.png
