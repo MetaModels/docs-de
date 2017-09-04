@@ -4,19 +4,19 @@ Frontend-Editing
 Installation
 ------------
 
-Um ein MetaModel nicht nur im Backend bearbeiten zu können, sondern es auch Contao-Mitgliedergruppen im Frontend zu ermöglichen, müssen wir eine zusätzliche Erweiterung installieren.
+Um ein MetaModel nicht nur im Backend bearbeiten zu können, sondern es auch Contao-Mitgliedergruppen im Frontend zu ermöglichen, muss man eine zusätzliche Erweiterung installieren.
 
-Dazu wechseln wir in die Paketverwaltung (Composer)
+Dazu wechselt man in die Paketverwaltung (Composer)
 
 |img_paketverwaltung|
 
-In der Suche der Paketverwaltung geben wir "metamodels/contao-frontend-editing" ein.
-Anschließend klicken wir auf "Suchen"
+In der Suche der Paketverwaltung gibt man "metamodels/contao-frontend-editing" ein.
+Anschließend klickt man auf "Suchen".
 
 |img_paket|
 
 Als Suchergebnis sollte sich nun folgende Erweiterung zeigen.
-Wir klicken auf das Icon rechts, um das Paket zur Installation vorzumerken.
+Man klickt auf das Icon rechts, um das Paket zur Installation vorzumerken.
 
 |img_paketzwei|
 
@@ -24,7 +24,7 @@ Bitte den dev-master auswählen und dann auf "Paket für die Installation vormer
 
 |img_paketvormerken|
 
-Zurück in der Liste der Paketverwaltung klicken wir auf "Pakete aktualisieren".
+Zurück in der Liste der Paketverwaltung klickt man auf "Pakete aktualisieren".
 Nun wird die Erweiterung installiert.
 
 |img_paketaktualisieren|
@@ -32,50 +32,50 @@ Nun wird die Erweiterung installiert.
 Einrichtung im Backend
 ----------------------
 
-Wir gehen in diesem Kapitel davon aus, dass bereits ein MetaModel "Mitarbeiterliste" eingerichtet wurde. Wir werden daher nur die Änderungen an diesem MetaModel bzw. an den Modul-Einstellungen durchgehen.
+Es wird in diesem Kapitel davon ausgegangen, dass bereits ein MetaModel "Mitarbeiterliste" eingerichtet wurde. Es werden daher nur die Änderungen an diesem MetaModel bzw. an den Modul-Einstellungen dargestellt.
 
-Wir haben uns für unseren Test-Aufbau drei Seiten in Contao gebaut.
+Für den Test-Aufbau gibt es drei Seiten in Contao.
 Eine Startseite mit einem Login.
 Eine Listen-Seite, auf der eine Mitarbeiterliste zu sehen sein wird.
 Eine Detail-Seite, auf der die Bearbeitung eines Mitarbeiter-Datensatzes stattfinden wird.
 
 |img_seitenstruktur|
 
-Auf der Listenseite haben wir ein Element vom Typ "Metamodel List" eingesetzt. Dies haben wir entsprechend der Anleitung "Erstes MetaModel" konfiguriert - mit zwei entscheidenden Ergänzungen, die uns die neue Erweiterung ermöglicht.
+Auf der Listenseite setzt man ein Element vom Typ "Metamodel List" ein. Dies wurde entsprechend der Anleitung "Erstes MetaModel" konfiguriert - mit zwei entscheidenden Ergänzungen, die einem die neue Erweiterung ermöglicht.
 
-Wir haben die Frontend-Bearbeitung aktiviert und eine Editor-Seite ausgewählt.
+Man kann die Frontend-Bearbeitung aktivieren und eine Editor-Seite auswählen.
 
 |img_metamodellist|
 
 |img_metamodellistedit|
 
-Auf der Detail-Seite haben wir ein Element "Metamodels Frontend Editing" eingesetzt.
+Auf der Detail-Seite setzt man ein Element "Metamodels Frontend Editing" ein.
 
-In diesem haben wir das MetaModel ausgewählt, was bearbeitet werden soll.
+In diesem wählt man das MetaModel aus, welches bearbeitet werden soll.
 
 |img_metamodelfee|
 
 |img_metamodelfeeedit|
 
 Das war es im Backend.
-Wir können nun ins Frontend wechseln, um unsere Mitarbeiter zu bearbeiten.
+Man kann nun ins Frontend wechseln, um die Mitarbeiter zu bearbeiten.
 
 Arbeiten im Frontend
 --------------------
 
-Wir loggen uns also im Frontend ein und gelangen zur Mitarbeiter-Liste.
+Man loggt sich also im Frontend ein und gelangt zur Mitarbeiter-Liste.
 
 |img_login|
 
-Bei der Liste unseres MetaModels sind zwei neue Möglichkeiten hinzugekommen: Einen Datensatz hinzuzufügen und einen Datensatz zu bearbeiten.
+Bei der Liste des MetaModels sind zwei neue Möglichkeiten hinzugekommen: Einen Datensatz hinzuzufügen und einen Datensatz zu bearbeiten.
 
 |img_liste|
 
-Die Maske zum Anlegen eines neuen Datensatzes enthält standardmäßig alle Felder des MetaModels. Nach dem Speichern haben wir einen Eintrag mehr in der Liste.
+Die Maske zum Anlegen eines neuen Datensatzes enthält standardmäßig alle Felder des MetaModels. Nach dem Speichern hat man einen Eintrag mehr in der Liste.
 
 |img_newfile|
 
-Beim Bearbeiten des Datensatzes können wir alle Felder des MetaModels ändern. "Speichern" bringt uns zurück zur Liste.
+Beim Bearbeiten des Datensatzes kann man alle Felder des MetaModels ändern. "Speichern" bringt einen zurück zur Liste.
 
 |img_editfile|
 
