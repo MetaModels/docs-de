@@ -1,3 +1,5 @@
+.. _rst_extended_frontend_editing:
+
 Frontend-Editing
 ================
 
