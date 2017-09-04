@@ -1,3 +1,11 @@
+Textgestaltung:
+
+Der Text sollte in einer neutralen Ansprache des Lesers erfolgen - üblicher
+Weise mit "man".
+
+Bitte Schachtelsätze vermeiden und längere Absätze in logische Blöcke unterteilen.
+
+
 Anmerkungen zur Arbeit mit Sphinx:
 
 Doku:
