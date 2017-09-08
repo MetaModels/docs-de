@@ -150,6 +150,10 @@ Sortierung der Ausgabe nach mehr als einem Attribut (fest)
 Priorität absteigend."
 siehe auch `Forum <https://community.contao.org/de/showthread.php?62625-Zweite-Sortierung>`_
 
+Zu beachten ist, dass diese SQL-Regel im Filter als erste Regel eingebaut wird. In der
+ersten Regel wird die "Basismenge" und die Reihenfolge der Items festgelegt und in den
+weiteren Regeln wird diese Menge nur noch gekürzt.
+
 .. code-block:: php
    :linenos:
    
