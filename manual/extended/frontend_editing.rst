@@ -6,8 +6,8 @@ Frontend-Editing (FEE)
 .. warning:: Noch im Aufbau!
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
-von MetaModels-Daten im Frontend. Das bedeuttet, dass Webseitenbesucher neue Datensätze 
-anlegen, bearbeiten oder auch löschen können.
+von MetaModels-Daten im Frontend. Das bedeutet, dass Webseitenbesucher
+neue Datensätze anlegen, bearbeiten oder auch löschen können.
 
 Üblicherweise wird die Bearbeitung nicht für alle Webseitenbesucher
 zugänglich gemacht, sondern nur einer bestimmten Nutzergruppe. Dafür
