@@ -3,7 +3,7 @@
 Frontend-Editing (FEE)
 ======================
 
-.. warning:: Noch im Aufbau!|br|
+.. warning:: Noch im Aufbau! |br|
    Bitte die `Tickets auf Github <https://github.com/MetaModels/contao-frontend-editing/issues>`_
    beachten!
 
