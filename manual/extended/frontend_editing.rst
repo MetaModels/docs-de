@@ -3,11 +3,13 @@
 Frontend-Editing (FEE)
 ======================
 
-.. warning:: Noch im Aufbau!
+.. warning:: Noch im Aufbau!|br|
+   Bitte die `Tickets auf Github <https://github.com/MetaModels/contao-frontend-editing/issues>`_
+   beachten!
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
 von MetaModels-Daten im Frontend. Das bedeutet, dass Webseitenbesucher
-neue Datensätze anlegen, bearbeiten oder auch löschen können.
+neue Datensätze anlegen und bearbeiten können.
 
 Üblicherweise wird die Bearbeitung nicht für alle Webseitenbesucher
 zugänglich gemacht, sondern nur einer bestimmten Nutzergruppe. Dafür
@@ -28,6 +30,12 @@ eine schwierige Aufgabe.
 Aus diesem Grund stehen aktuell noch nicht alle Attribute für ein Frontend-
 Editing zur Verfügung. Der Stand der Freigabe ist im folgenden Ticket
 auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
+
+Die erste Implementierung des Frontend-Editing wurde über ein
+`Fundraising <https://now.metamodel.me/de/unterstuetzer/fundraising#frontend-editing>`_
+finanziert. Für den weiteren Ausbau, Bugfixing und neue Funktionen ist die Mitarbeit am
+Projekt und auch die `finanzielle Unterstützung <https://now.metamodel.me/de/unterstuetzer/spenden>`_
+wichtig!
 
 
 Installation
@@ -180,3 +188,8 @@ definierte Eingabemaske als erstes gefunden und entsprechend angezeigt. Für die
 .. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung2.png
 
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
+
+
+.. |br| raw:: html
+
+   <br />
