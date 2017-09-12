@@ -6,18 +6,18 @@ Frontend-Editing (FEE)
 .. warning:: Noch im Aufbau!
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
-der MetaModels-Daten im Frontend, d.h. die Webseitenbesucher können
-neue Datensätze anlegen, bearbeiten oder auch löschen.
+von MetaModels-Daten im Frontend. Das bedeuttet, dass Webseitenbesucher neue Datensätze 
+anlegen, bearbeiten oder auch löschen können.
 
-Üblicher Weise wird die Bearbeitung nicht für alle Webseitenbesucher
+Üblicherweise wird die Bearbeitung nicht für alle Webseitenbesucher
 zugänglich gemacht, sondern nur einer bestimmten Nutzergruppe. Dafür
 werden die in Contao üblichen Module für den Login und die Zugangsberechtigungen
 eingesetzt.
 
-Zudem ist es möglich, Mitgliedergruppen individuelle Eingabemasken zuzuweisen, um
+Außerdem ist es möglich, an Mitgliedergruppen individuelle Eingabemasken zuzuweisen, um
 zum Beispiel im Frontend nur bestimmte Felder zur Bearbeitung frei zu geben. Diese
-Zuweisung der Bearbeitungsfreigabe erfolgt zurzeit ausschließlich auf Ebene der
-Mitgliedergruppe.
+Zuweisungen der Bearbeitungsfreigaben erfolgen zurzeit ausschließlich auf Ebene der
+Mitgliedergruppen.
 
 Im Frontend werden dieselben Eingabewidgets ("Formularfelder") des DC_General
 wie im Backend ausgegeben. Da im Frontend nicht so viele Restriktionen wie im
@@ -25,7 +25,7 @@ Backend vorliegen (z.B. MooTools als JavaScript-Framework), ist die Anzeige
 der Widgets inklusive zugehöriger Picker wie Datum, Farbe oder dem RichTextEditor
 eine schwierige Aufgabe.
 
-Aus diesem Grund, stehen aktuell noch nicht alle Attribute für ein Frontend-
+Aus diesem Grund stehen aktuell noch nicht alle Attribute für ein Frontend-
 Editing zur Verfügung. Der Stand der Freigabe ist im folgenden Ticket
 auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
 
@@ -33,7 +33,7 @@ auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao
 Installation
 ------------
 
-Das FEE wird über die Paketverwaltung  (Composer) von Contao installiert - eine
+Das FEE wird über die Paketverwaltung (Composer) von Contao installiert - eine
 "Nightly-Build-Version" steht nicht zur Verfügung.
 
 Für die Installation wechselt man in die Paketverwaltung
@@ -41,7 +41,7 @@ Für die Installation wechselt man in die Paketverwaltung
 |img_paketverwaltung|
 
 In der Suche der Paketverwaltung gibt man "metamodels/contao-frontend-editing" ein
-und klickt man auf den Button "Suchen".
+und klickt anschließend auf den Button "Suchen".
 
 |img_paket|
 
@@ -51,7 +51,7 @@ Man klickt auf das Icon rechts, um das Paket zur Installation vorzumerken.
 |img_paketzwei|
 
 Als Pakettyp ist "dev-master" auswählen und über den Button "Paket für die
-Installation vormerken" die Installation vorzubereiten..
+Installation vormerken" die Installation vorzubereiten.
 
 |img_paketvormerken|
 
@@ -64,9 +64,9 @@ die Erweiterung wird installiert.
 Einrichtung im Backend
 ----------------------
 
-In der folgenden Beschreibung wird davon ausgegangen, dass bereits ein MetaModels 
+In der folgenden Beschreibung wird davon ausgegangen, dass bereits ein MetaModel 
 "Mitarbeiterliste" eingerichtet wurde. Es werden daher nur die Änderungen an
-diesem MetaModels bzw. an den Modul-Einstellungen dargestellt.
+diesem MetaModel bzw. an den Modul-Einstellungen dargestellt.
 
 Für den Test-Aufbau gibt es zwei Seiten in Contao:
 
@@ -109,7 +109,7 @@ Mitarbeiter prüfen.
 Arbeiten im Frontend
 --------------------
 
-Bei der Liste des MetaModels sind zwei neue Möglichkeiten hinzugekommen:
+Bei der Liste des MetaModels sind nun zwei neue Möglichkeiten hinzugekommen:
 
 * einen Datensatz hinzuzufügen und 
 * einen Datensatz zu bearbeiten.
@@ -144,8 +144,8 @@ Einrichtung unterschiedlicher Eingabemasken für BE/FE
 Möchte man für die Bearbeitung im FE nur bestimmte Felder frei
 geben, so muss hierfür eine separate Eingabemaske erstellt werden.
 
-Die Erstellung der Eingabemaske erfolgt analog der für das Backend
-und über die Auswahl bzw. Aktivierung der Attribute werden die
+Die Erstellung der Eingabemaske erfolgt analog der Maske für das Backend.
+Über die Auswahl bzw. Aktivierung der Attribute werden die
 Formularfelder für die Bearbeitung definiert.
 
 Die Eingabemaske kann nun über die "Eingabe-/Render-Zuordnungen" |img_dca_combine|
@@ -154,9 +154,9 @@ für das FE ausgewählt werden.
 |img_fee-dca-zuordnung2|
 
 Die Reihenfolge der Zuordnungseinstellung ist wichtig, da diese "von oben nach unten"
-abgearbeitet wird, d.h. im BE wird für die Benutzergruppe "Administrator" als erstes
-die Maske "Eingabe" gefunden und entsprechend angezeigt und für die Mitgliedergruppe
-"general Members" wird als erstes die Maske "FEE Eingabe" gefunden.
+abgearbeitet wird. Dabei wird beispielsweise die im Backend für die Benutzergruppe "Administrator" 
+definierte Eingabemaske als erstes gefunden und entsprechend angezeigt. Für die Mitgliedergruppe
+"general Members" wird als erstes die Maske "FEE Eingabe" gefunden und angezeigt.
 
 
 .. |img_paketverwaltung| image:: /_img/screenshots/extended/frontend_editing/fee-paketverwaltung.png
