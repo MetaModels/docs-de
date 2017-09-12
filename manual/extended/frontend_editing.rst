@@ -176,7 +176,7 @@ die Maske "Eingabe" gefunden und entsprechend angezeigt und für die Mitgliederg
 .. |img_newfile| image:: /_img/screenshots/extended/frontend_editing/fee-newfile.png
 .. |img_editfile| image:: /_img/screenshots/extended/frontend_editing/fee-editfile.png
 
-.. |img_fee-dca-zuordnung| image:: /_img/screenshots/extended/fee-dca-zuordnung.png
-.. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/fee-dca-zuordnung2.png
+.. |img_fee-dca-zuordnung| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung.png
+.. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung2.png
 
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
