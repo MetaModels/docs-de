@@ -21,6 +21,11 @@ Unterstützung.
 Die "normalen Listenansichten" benötigen diese Sonderbehandlung nicht und die Seiten werden
 automatisch über die Contao-Funktionen korrekt in die Suche oder Sitemap aufgenommen.
 
+Zu beachten ist, dass von Contao URLs mit bestimmten Schlüsselwörtern als "Keys" wie `id`, `file`,
+`year` usw. nicht indiziert werden; z.B. als URL details/id/meine-details-123.html - die Schlüsselwörter
+sind im Array `$GLOBALS['TL_NOINDEX_KEYS'] <https://github.com/contao/core/blob/master/system/modules/core/config/config.php#L419>`_
+aufgeführt.
+
 Optionen
 --------
 
