@@ -21,6 +21,13 @@ Unterstützung.
 Die "normalen Listenansichten" benötigen diese Sonderbehandlung nicht und die Seiten werden
 automatisch über die Contao-Funktionen korrekt in die Suche oder Sitemap aufgenommen.
 
+Wird über die die "Systemwartung" das "Suchindex aufbauen" gestartet, werden die einzelnen
+Detailseiten mit in die Liste der URLs aufgenommen und aufgerufen - zusätzlich werden die URLs
+in die sitemap.xml eingetragen. Sofern man in der "Systemwarung" nur die Option "XML-Dateien
+neu schreiben" auswählt, werden lediglich die URLs in die sitemap.xml eingetragen.
+
+Die Detailseiten werden im FE-Modul "Sitemap" nicht eingebunden.
+
 Zu beachten ist, dass von Contao URLs mit bestimmten Schlüsselwörtern als "Keys" wie `id`, `file`,
 `year` usw. nicht indiziert werden; z.B. als URL details/id/meine-details-123.html - die Schlüsselwörter
 sind im Array `$GLOBALS['TL_NOINDEX_KEYS'] <https://github.com/contao/core/blob/master/system/modules/core/config/config.php#L419>`_
@@ -32,18 +39,20 @@ Optionen
 * **Name**: |br|
   Bezeichnung für das Backend
 * **Filterset**: |br|
-  Auswahl des Filtersets für die Listenansicht der Render-Einstellung
+  Optionale Auswahl eines  Filtersets für Eingrenzung der Detailseiten
 * **Render-Einstellungen**: |br|
   Auswahl der Render-Einstellungen für die Listenansicht, die auch zur Detailansicht führt
 
 Ablauf
 ------
 
-Eine neue Indexierung kann über das Icon "|img_new| Neue Indexierung" angelegt und die
-nach der Eingabe des Namens die Optionen für das Filterset und die Render-Einstellung ausgewählt
-werden. Render-Einstellung und Filterset sind üblicher Weise die Gleichen, wie sie für das
-CE/Modul MetaModel-Liste der Frontendausgabe der "Übersichtsliste" gewählt werden. Die
-Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder
+Eine neue Indexierung wird über das Icon "|img_new| Neue Indexierung" angelegt und die
+nach der Eingabe des Namens die Render-Einstellung ausgewählt. Die Render-Einstellung
+ist üblicher Weise die Gleiche, wie sie für das CE/Modul MetaModel-Liste der Frontendausgabe
+der "Übersichtsliste" gewählt wird. Ein Filter muss nur ausgewählt werden, wenn bestimmte
+Detailseiten von der automatischen Indexierung ausgeschlossen werden sollen.
+
+Die Indizierung erfolgt über den automatischen Aktualisierungsmechanismus aus Contao oder
 über die Neuerstellungen der Systemwartung.
 
 
