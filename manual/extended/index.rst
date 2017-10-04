@@ -11,6 +11,7 @@ Erweiterungen
     :maxdepth: 1
     
     frontend_editing
+    notelist
     boilerplate
     perimetersearch
     attribute_color
