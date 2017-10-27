@@ -70,5 +70,12 @@
       "dev-feature/contao4": "2.1.x-dev"
     }
   },
-  "prefer-stable": true
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@gitlab.com:metamodels/core.git"
+    }
+  ]
 }
