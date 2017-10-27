@@ -9,11 +9,10 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="tests/bootstrap.php"
     >
     <testsuites>
         <testsuite name="MetaModels attribute tabletext tests">
-            <directory>./tests/MetaModels/</directory>
+            <directory>./tests/Test/</directory>
         </testsuite>
     </testsuites>
 
