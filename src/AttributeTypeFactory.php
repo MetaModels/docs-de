@@ -37,7 +37,7 @@ class AttributeTypeFactory extends AbstractAttributeTypeFactory
         parent::__construct();
 
         $this->typeName  = 'tabletext';
-        $this->typeIcon  = 'system/modules/metamodelsattribute_tabletext/html/tabletext.png';
+        $this->typeIcon  = 'bundles/metamodelsattributetabletext/tabletext.png';
         $this->typeClass = 'MetaModels\Attribute\TableText\TableText';
     }
 }
