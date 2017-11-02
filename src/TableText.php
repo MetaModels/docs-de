@@ -26,7 +26,11 @@
 
 namespace MetaModels\Attribute\TableText;
 
+use Contao\System;
+use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\DBALException;
 use MetaModels\Attribute\BaseComplex;
+use MetaModels\IMetaModel;
 
 /**
  * This is the MetaModelAttribute class for handling table text fields.
@@ -34,26 +38,52 @@ use MetaModels\Attribute\BaseComplex;
 class TableText extends BaseComplex
 {
     /**
+     * Database connection.
+     *
+     * @var Connection
+     */
+    private $connection;
+
+    /**
+     * Instantiate an MetaModel attribute.
+     *
+     * Note that you should not use this directly but use the factory classes to instantiate attributes.
+     *
+     * @param IMetaModel      $objMetaModel The MetaModel instance this attribute belongs to.
+     *
+     * @param array           $arrData      The information array, for attribute information, refer to documentation of
+     *                                      table tl_metamodel_attribute and documentation of the certain attribute classes
+     *                                      for information what values are understood.
+     *
+     * @param Connection|null $connection   The database connection.
+     */
+    public function __construct(IMetaModel $objMetaModel, array $arrData = [], Connection $connection = null)
+    {
+        parent::__construct($objMetaModel, $arrData);
+
+        if (null === $connection) {
+            @trigger_error(
+                'Connection is missing. It has to be passed in the constructor. Fallback will be dropped.',
+                E_USER_DEPRECATED
+            );
+            $connection = System::getContainer()->get('database_connection');
+        }
+
+        $this->connection = $connection;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function searchFor($strPattern)
     {
-        $objValue = $this
-            ->getMetaModel()
-            ->getServiceContainer()
-            ->getDatabase()
-            ->prepare(
-                sprintf(
-                    'SELECT DISTINCT item_id FROM %1$s WHERE value LIKE ? AND att_id = ?',
-                    $this->getValueTable()
-                )
-            )
-            ->execute(
-                str_replace(array('*', '?'), array('%', '_'), $strPattern),
-                $this->get('id')
-            );
+        $query     = 'SELECT DISTINCT item_id FROM %1$s WHERE value LIKE :value AND att_id = :id';
+        $statement = $this->connection->prepare($query);
+        $statement->bindValue('value', str_replace(array('*', '?'), array('%', '_'), $strPattern));
+        $statement->bindValue('id', $this->get('id'));
+        $statement->execute();
 
-        return $objValue->fetchEach('item_id');
+        return $statement->fetchAll(\PDO::FETCH_COLUMN, 'item_id');
     }
 
     /**
@@ -114,14 +144,9 @@ class TableText extends BaseComplex
 
         // Get the ids.
         $arrIds = array_keys($arrValues);
-        $objDB  = $this->getMetaModel()->getServiceContainer()->getDatabase();
 
         // Reset all data for the ids.
         $this->unsetDataFor($arrIds);
-
-        // Insert or update the cells.
-        $strQueryUpdate = 'UPDATE %s';
-        $strQueryInsert = 'INSERT INTO ' . $this->getValueTable() . ' %s';
 
         foreach ($arrIds as $intId) {
             // Walk every row.
@@ -131,21 +156,19 @@ class TableText extends BaseComplex
                     if (empty($this->getSetValues($col, $intId)['value'])) {
                         continue;
                     }
-                    $objDB
-                        ->prepare(
-                            $strQueryInsert .
-                            ' ON DUPLICATE KEY ' .
-                            str_replace(
-                                'SET ',
-                                '',
-                                $objDB
-                                    ->prepare($strQueryUpdate)
-                                    ->set($this->getSetValues($col, $intId))
-                                    ->query
-                            )
-                        )
-                        ->set($this->getSetValues($col, $intId))
-                        ->execute();
+
+                    try {
+                        $this->connection->insert($this->getValueTable(), $this->getSetValues($col, $intId));
+                    } catch (DBALException $e) {
+                        $this->connection->update(
+                            $this->getValueTable(),
+                            $this->getSetValues($col, $intId),
+                            [
+                                'att_id'  => $this->get('id'),
+                                'item_id' => $intId
+                            ]
+                        );
+                    }
                 }
             }
         }
@@ -158,42 +181,26 @@ class TableText extends BaseComplex
      */
     public function getFilterOptions($idList, $usedOnly, &$arrCount = null)
     {
+        $builder = $this->connection->createQueryBuilder()
+            ->select('value, COUNT(value) as mm_count')
+            ->from($this->getValueTable())
+            ->andWhere('att_id = :att_id')
+            ->setParameter('att_id', $this->get('id'))
+            ->groupBy('value');
+
+
         if ($idList) {
-            $objRow = $this
-                ->getMetaModel()
-                ->getServiceContainer()
-                ->getDatabase()
-                ->prepare(
-                    sprintf(
-                        'SELECT value, COUNT(value) as mm_count
-                        FROM %1$s
-                        WHERE item_id IN (%2$s) AND att_id = ?
-                        GROUP BY value
-                        ORDER BY FIELD(id,%2$s)',
-                        $this->getValueTable(),
-                        $this->parameterMask($idList)
-                    )
-                )
-                ->execute(array_merge($idList, array($this->get('id')), $idList));
-        } else {
-            $objRow = $this
-                ->getMetaModel()
-                ->getServiceContainer()
-                ->getDatabase()
-                ->prepare(
-                    sprintf(
-                        'SELECT value, COUNT(value) as mm_count
-                        FROM %s
-                        WHERE att_id = ?
-                        GROUP BY value',
-                        $this->getValueTable()
-                    )
-                )
-                ->execute($this->get('id'));
+            $builder
+                ->andWhere('item_id IN (:id_list)')
+
+                ->orderBy('FIELD(id,:id_list)')
+                ->setParameter('id_list', $idList, Connection::PARAM_INT_ARRAY);
         }
 
+        $statement = $builder->execute();
+
         $arrResult = array();
-        while ($objRow->next()) {
+        while ($objRow = $statement->fetch(\PDO::FETCH_OBJ)) {
             $strValue = $objRow->value;
 
             if (is_array($arrCount)) {
@@ -212,22 +219,25 @@ class TableText extends BaseComplex
     public function getDataFor($arrIds)
     {
         $arrWhere = $this->getWhere($arrIds);
-        $objValue = $this
-            ->getMetaModel()
-            ->getServiceContainer()
-            ->getDatabase()
-            ->prepare(
-                sprintf(
-                    'SELECT * FROM %1$s%2$s ORDER BY row ASC, col ASC',
-                    $this->getValueTable(),
-                    ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : '')
-                )
-            )
-            ->execute(($arrWhere ? $arrWhere['params'] : null));
+        $builder  = $this->connection->createQueryBuilder()
+            ->select('*')
+            ->from($this->getValueTable())
+            ->orderBy('row', 'ASC')
+            ->addOrderBy('col', 'ASC');
 
-        $arrReturn = array();
-        while ($objValue->next()) {
-            $arrReturn[$objValue->item_id][$objValue->row][] = $objValue->row();
+        if ($arrWhere) {
+            $builder->andWhere($arrWhere['procedure']);
+
+            foreach ($arrWhere['params'] as $name => $value) {
+                $builder->setParameter($name, $value);
+            }
+        }
+
+        $statement = $builder->execute();
+        $arrReturn = [];
+
+        while ($row = $statement->fetch(\PDO::FETCH_ASSOC)) {
+            $arrReturn[$row['item_id']][$row['row']][] = $row;
         }
 
         return $arrReturn;
@@ -240,18 +250,18 @@ class TableText extends BaseComplex
     {
         $arrWhere = $this->getWhere($arrIds);
 
-        $this
-            ->getMetaModel()
-            ->getServiceContainer()
-            ->getDatabase()
-            ->prepare(
-                sprintf(
-                    'DELETE FROM %1$s%2$s',
-                    $this->getValueTable(),
-                    ($arrWhere ? ' WHERE ' . $arrWhere['procedure'] : '')
-                )
-            )
-            ->execute(($arrWhere ? $arrWhere['params'] : null));
+        $builder = $this->connection->createQueryBuilder()
+            ->delete($this->getValueTable());
+
+        if ($arrWhere) {
+            $builder->andWhere($arrWhere['procedure']);
+
+            foreach ($arrWhere['params'] as $name => $value) {
+                $builder->setParameter($name, $value);
+            }
+        }
+
+        $builder->execute();
     }
 
     /**
@@ -278,14 +288,14 @@ class TableText extends BaseComplex
         }
 
         if (is_int($intRow) && is_int($intCol)) {
-            $strRowCol = ' AND row = ? AND col = ?';
+            $strRowCol = ' AND row = :row AND col = :col';
         }
 
         $arrReturn = array(
-            'procedure' => 'att_id=?' . $strWhereIds . $strRowCol,
+            'procedure' => 'att_id=:att_id' . $strWhereIds . $strRowCol,
             'params' => ($strRowCol)
-                ? array($this->get('id'), $intRow, $intCol)
-                : array($this->get('id')),
+                ? array('att_id' => $this->get('id'), 'row' => $intRow, 'col' =>$intCol)
+                : array('att_id' => $this->get('id')),
         );
 
         return $arrReturn;
