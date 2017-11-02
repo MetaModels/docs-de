@@ -23,12 +23,14 @@
 
 namespace MetaModels\Test\Attribute\TableText;
 
+use Doctrine\DBAL\Connection;
 use MetaModels\Attribute\TableText\TableText;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Unit tests to test class TableText.
  */
-class TableTextTest extends \PHPUnit_Framework_TestCase
+class TableTextTest extends TestCase
 {
     /**
      * Mock a MetaModel.
@@ -40,11 +42,7 @@ class TableTextTest extends \PHPUnit_Framework_TestCase
      */
     protected function mockMetaModel($language, $fallbackLanguage)
     {
-        $metaModel = $this->getMock(
-            'MetaModels\MetaModel',
-            array(),
-            array(array())
-        );
+        $metaModel = $this->getMockForAbstractClass('MetaModels\IMetaModel');
 
         $metaModel
             ->expects($this->any())
@@ -64,6 +62,19 @@ class TableTextTest extends \PHPUnit_Framework_TestCase
         return $metaModel;
     }
 
+
+    /**
+     * Mock the database connection.
+     *
+     * @return \PHPUnit_Framework_MockObject_MockObject|Connection
+     */
+    private function mockConnection()
+    {
+        return $this->getMockBuilder(Connection::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+    }
+
     /**
      * Test that the attribute can be instantiated.
      *
@@ -71,7 +82,7 @@ class TableTextTest extends \PHPUnit_Framework_TestCase
      */
     public function testInstantiation()
     {
-        $text = new TableText($this->mockMetaModel('en', 'en'));
+        $text = new TableText($this->mockMetaModel('en', 'en'), [], $this->mockConnection());
         $this->assertInstanceOf('MetaModels\Attribute\TableText\TableText', $text);
     }
 }
