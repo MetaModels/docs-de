@@ -22,6 +22,7 @@
 
 namespace MetaModels\Attribute\TableText;
 
+use Doctrine\DBAL\Connection;
 use MetaModels\Attribute\AbstractAttributeTypeFactory;
 
 /**
@@ -30,14 +31,30 @@ use MetaModels\Attribute\AbstractAttributeTypeFactory;
 class AttributeTypeFactory extends AbstractAttributeTypeFactory
 {
     /**
+     * Database connection.
+     *
+     * @var Connection
+     */
+    private $connection;
+
+    /**
      * {@inheritDoc}
      */
-    public function __construct()
+    public function __construct(Connection $connection)
     {
         parent::__construct();
 
-        $this->typeName  = 'tabletext';
-        $this->typeIcon  = 'bundles/metamodelsattributetabletext/tabletext.png';
-        $this->typeClass = 'MetaModels\Attribute\TableText\TableText';
+        $this->connection = $connection;
+        $this->typeName   = 'tabletext';
+        $this->typeIcon   = 'bundles/metamodelsattributetabletext/tabletext.png';
+        $this->typeClass  = 'MetaModels\Attribute\TableText\TableText';
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function createInstance($information, $metaModel)
+    {
+        return new $this->typeClass($metaModel, $information, $this->connection);
     }
 }
