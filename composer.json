@@ -47,12 +47,12 @@
   },
   "autoload": {
     "psr-4": {
-      "MetaModels\\Attribute\\Tabletext\\": "src"
+      "MetaModels\\Attribute\\TableText\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MetaModels\\Test\\Attribute\\Tabletext\\": "tests/Test"
+      "MetaModels\\Test\\Attribute\\TableText\\": "tests/Test"
     }
   },
   "extra": {
