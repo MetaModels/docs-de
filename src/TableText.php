@@ -52,8 +52,8 @@ class TableText extends BaseComplex
      * @param IMetaModel      $objMetaModel The MetaModel instance this attribute belongs to.
      *
      * @param array           $arrData      The information array, for attribute information, refer to documentation of
-     *                                      table tl_metamodel_attribute and documentation of the certain attribute classes
-     *                                      for information what values are understood.
+     *                                      table tl_metamodel_attribute and documentation of the certain attribute
+     *                                      classes for information what values are understood.
      *
      * @param Connection|null $connection   The database connection.
      */
@@ -62,10 +62,12 @@ class TableText extends BaseComplex
         parent::__construct($objMetaModel, $arrData);
 
         if (null === $connection) {
+            // @codingStandardsIgnoreStart
             @trigger_error(
                 'Connection is missing. It has to be passed in the constructor. Fallback will be dropped.',
                 E_USER_DEPRECATED
             );
+            // @codingStandardsIgnoreEnd
             $connection = System::getContainer()->get('database_connection');
         }
 
@@ -294,7 +296,7 @@ class TableText extends BaseComplex
         $arrReturn = array(
             'procedure' => 'att_id=:att_id' . $strWhereIds . $strRowCol,
             'params' => ($strRowCol)
-                ? array('att_id' => $this->get('id'), 'row' => $intRow, 'col' =>$intCol)
+                ? array('att_id' => $this->get('id'), 'row' => $intRow, 'col' => $intCol)
                 : array('att_id' => $this->get('id')),
         );
 
