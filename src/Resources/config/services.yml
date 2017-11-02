@@ -1,0 +1,8 @@
+services:
+    metamodels.attribute_tabletext.factory:
+        class: MetaModels\Attribute\TableText\AttributeTypeFactory
+        arguments:
+            - '@database_connection'
+            - '@metamodels.table_manipulator'
+        tags:
+          - { name: metamodels.attribute_factory }
