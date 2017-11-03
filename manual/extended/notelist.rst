@@ -230,6 +230,15 @@ erfolgen - z.B.
    ?>
 
 
+Spenden
+-------
+
+Ein Dank für die Spenden* für die Erweiterung an:
+
+* `Sebastian Krull <http://www.sebastiankrull.de>`_: 350 € 
+
+
+(Spenden in Netto)
 
 
 .. |br| raw:: html
