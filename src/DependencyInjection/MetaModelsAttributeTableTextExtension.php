@@ -18,7 +18,7 @@
  * @filesource
  */
 
-namespace MetaModels\Attribute\TableText\DependencyInjection;
+namespace MetaModels\AttributeTableTextBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

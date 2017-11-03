@@ -21,10 +21,10 @@
  * @filesource
  */
 
-namespace MetaModels\Test\Attribute\TableText;
+namespace MetaModels\AttributeTableTextBundle\Test\Attribute;
 
 use Doctrine\DBAL\Connection;
-use MetaModels\Attribute\TableText\TableText;
+use MetaModels\AttributeTableTextBundle\Attribute\TableText;
 use PHPUnit\Framework\TestCase;
 
 /**

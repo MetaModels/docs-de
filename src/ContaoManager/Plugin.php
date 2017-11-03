@@ -18,12 +18,12 @@
  * @filesource
  */
 
-namespace MetaModels\Attribute\TableText\ContaoManager;
+namespace MetaModels\AttributeTableTextBundle\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use MetaModels\Attribute\TableText\MetaModelsAttributeTableTextBundle;
+use MetaModels\AttributeTableTextBundle\MetaModelsAttributeTableTextBundle;
 use MetaModels\CoreBundle\MetaModelsCoreBundle;
 
 /**

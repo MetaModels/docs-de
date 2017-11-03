@@ -21,11 +21,11 @@
  * @filesource
  */
 
-namespace MetaModels\Test\Attribute\TableText;
+namespace MetaModels\AttributeTableTextBundle\Test\Attribute;
 
 use Doctrine\DBAL\Connection;
 use MetaModels\Attribute\IAttributeTypeFactory;
-use MetaModels\Attribute\TableText\AttributeTypeFactory;
+use MetaModels\AttributeTableTextBundle\Attribute\AttributeTypeFactory;
 use MetaModels\IMetaModel;
 use PHPUnit\Framework\TestCase;
 

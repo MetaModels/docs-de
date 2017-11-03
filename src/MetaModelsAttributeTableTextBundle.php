@@ -18,7 +18,7 @@
  * @filesource
  */
 
-namespace MetaModels\Attribute\TableText;
+namespace MetaModels\AttributeTableTextBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -24,7 +24,7 @@
  * @filesource
  */
 
-namespace MetaModels\Attribute\TableText;
+namespace MetaModels\AttributeTableTextBundle\Attribute;
 
 use Contao\System;
 use Doctrine\DBAL\Connection;

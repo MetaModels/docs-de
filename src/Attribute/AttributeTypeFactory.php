@@ -20,7 +20,7 @@
  * @filesource
  */
 
-namespace MetaModels\Attribute\TableText;
+namespace MetaModels\AttributeTableTextBundle\Attribute;
 
 use Doctrine\DBAL\Connection;
 use MetaModels\Attribute\AbstractAttributeTypeFactory;

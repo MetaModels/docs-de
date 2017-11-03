@@ -1,6 +1,6 @@
 services:
     metamodels.attribute_tabletext.factory:
-        class: MetaModels\Attribute\TableText\AttributeTypeFactory
+        class: MetaModels\AttributeTableTextBundle\Attribute\AttributeTypeFactory
         arguments:
             - '@database_connection'
         tags:

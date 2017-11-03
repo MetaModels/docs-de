@@ -18,10 +18,10 @@
  * @filesource
  */
 
-namespace MetaModels\Test\Attribute\TableText\DependencyInjection;
+namespace MetaModels\AttributeTableTextBundle\Test\DependencyInjection;
 
-use MetaModels\Attribute\TableText\AttributeTypeFactory;
-use MetaModels\Attribute\TableText\DependencyInjection\MetaModelsAttributeTableTextExtension;
+use MetaModels\AttributeTableTextBundle\Attribute\AttributeTypeFactory;
+use MetaModels\AttributeTableTextBundle\DependencyInjection\MetaModelsAttributeTableTextExtension;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
