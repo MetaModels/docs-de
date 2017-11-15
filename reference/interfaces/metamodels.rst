@@ -357,12 +357,12 @@ Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaMod
 erzeugt und anschließend z.B. über einen Filter (ggf. auch leerer Filter)eine
 Liste von Items ermittelt werden.
 
-``$objItem = $objMetaModel->findByFilter($objFilter);``  |br|
+``$objItems = $objMetaModel->findByFilter($objFilter);``  |br|
 
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
 
-``$valAttribute = $objItems->get($strAttributeName);``  |br|
+``$valAttribute = $objItems->getItem()->get($strAttributeName);``  |br|
 
 Ein neues Item wird wie folgt erzeugt:
 
