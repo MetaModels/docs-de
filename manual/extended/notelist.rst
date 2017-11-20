@@ -60,10 +60,15 @@ gelangt.
 |img_notelist_icon|
 
 Legt man eine neue Merkliste an, so kann ein Name für die Merkliste vergeben werden.
-Als "Storage adapter" steht z.Z. nur die PHP-Session zur Verfügung - später kommen
-noch Adapter wie z.B. die Contao-Session hinzu. Über die Filterauswahl kann die
-Aufnahme auf Datensätze mit bestimmten Eigenschaften wie z.B. die "Abteilung"
-eingeschränkt werden.
+Als "Storage adapter" stehen z.Z. die PHP-Session und die Contao-Session zur Verfügung.
+Bei der Contao-Session werden die Werte einer Merkliste bei eingeloggten Mitgliedern
+automatisch in den Sessionwerten der Datenbank gespeichert und stehen bei erneutem
+Login wieder zur Verfügung.
+
+Über die Filterauswahl kann die Aufnahme auf Datensätze mit bestimmten Eigenschaften
+wie z.B. die "Abteilung" oder Mitgliedergruppen eingeschränkt werden. Die Filterung
+auf Mitgliedergruppen ist z.B. über die Erweiterung "`condition membergroup filter
+<https://github.com/cboelter/metamodels-filter_condition_membergroup>`_" möglich.
 
 |img_nodelist_config|
 
@@ -147,7 +152,8 @@ oder einzelne Items zu löschen.
 |img_nodelist_form_fe_list|
 
 Die Daten werden per E-Mail übertragen und können über das E-Mail-Template in der Ausgabe
-angepasst werden.
+angepasst werden. Für die Versendung stehen die Contao-Formularoption oder auch das
+"Notification Center (NC)" zur Verfügung.
 
 |img_notelist_email_list|
 
@@ -156,7 +162,7 @@ Known Issues and Next Features
 ------------------------------
 
 * nach Absenden des Formulars sind Elemente nicht aus Merkliste entfernt
-* optionale Angabe einer Anzahl fehlt
+* optionale Angabe einer Anzahl je Merkliste-Item fehlt
 
 
 InsertTags
