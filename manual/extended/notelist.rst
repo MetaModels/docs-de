@@ -98,12 +98,10 @@ z.B. mit dem folgenden Code ausgegeben werden:
 
 .. code-block:: html
    :linenos:
-   
-   <?php foreach($arrItem['actions'] as $action): ?>
-     <a href="<?= $action['href']; ?>"<?php if ($action['class']): ?> class="<?= $action['class']; ?>"<?php endif; ?><?php if ($action['title']): ?> title="<?= $action['title']; ?>"<?php endif; ?><?= $action['attribute']; ?>><?= $action['label']; ?></a>
-   <?php endforeach; ?>
 
- |img_notelist_fe_list|
+   <a href="<?= $arrItem['actions']['notelist_1']['href'] ?>" class="<?= $arrItem['actions']['notelist_1']['class'] ?>"><?= $arrItem['actions']['notelist_1']['label'] ?></a>
+
+|img_notelist_fe_list|
 
 
 Ausgabe der Merkliste per Filter
