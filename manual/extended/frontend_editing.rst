@@ -122,6 +122,11 @@ Bei der Liste des MetaModels sind nun zwei neue Möglichkeiten hinzugekommen:
 * einen Datensatz hinzuzufügen und 
 * einen Datensatz zu bearbeiten.
 
+Für die Anzeige des Links "Datensatz hinzufügen" muss im CE-/FE-Modul MM-Liste
+das Template `ce_metamodel_list_edit.html5` ausgewählt werden - die Links
+"Datensatz bearbeiten" werden über das Standardtemplate der Liste im Block
+"action" hinzugefügt.
+
 |img_liste|
 
 Die Maske zum Anlegen eines neuen Datensatzes enthält standardmäßig 
