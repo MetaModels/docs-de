@@ -23,7 +23,7 @@ automatisch über die Contao-Funktionen korrekt in die Suche oder Sitemap aufgen
 
 Wird über die die "Systemwartung" das "Suchindex aufbauen" gestartet, werden die einzelnen
 Detailseiten mit in die Liste der URLs aufgenommen und aufgerufen - zusätzlich werden die URLs
-in die sitemap.xml eingetragen. Sofern man in der "Systemwarung" nur die Option "XML-Dateien
+in die sitemap.xml eingetragen. Sofern man in der "Systemwartung" nur die Option "XML-Dateien
 neu schreiben" auswählt, werden lediglich die URLs in die sitemap.xml eingetragen.
 
 Die Detailseiten werden im FE-Modul "Sitemap" nicht eingebunden.
