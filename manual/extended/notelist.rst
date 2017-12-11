@@ -240,7 +240,8 @@ Spenden
 Ein Dank für die Spenden* für die Erweiterung an:
 
 * `Sebastian Krull <http://www.sebastiankrull.de>`_: 350 €
-* `Carsten Merz <http://www.fitkurs.de>`_: 350 € 
+* `Carsten Merz <http://www.fitkurs.de>`_: 350 €
+* `Westwerk GmbH & Co. KG <https://www.westwerk.ac>`_: 350 €
 
 
 (Spenden in Netto)
