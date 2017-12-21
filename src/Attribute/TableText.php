@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of MetaModels/attribute_translatedurl.
+ * This file is part of MetaModels/attribute_tabletext.
  *
  * (c) 2012-2017 The MetaModels team.
  *
@@ -20,7 +20,7 @@
  * @author     Ingolf Steinhardt <info@e-spin.de>
  * @author     David Molineus <david.molineus@netzmacht.de>
  * @copyright  2012-2017 The MetaModels team.
- * @license    https://github.com/MetaModels/attribute_translatedurl/blob/master/LICENSE LGPL-3.0
+ * @license    https://github.com/MetaModels/attribute_tabletext/blob/master/LICENSE LGPL-3.0
  * @filesource
  */
 
@@ -155,7 +155,8 @@ class TableText extends BaseComplex
             foreach ($arrValues[$intId] as $row) {
                 // Walk every column and update / insert the value.
                 foreach ($row as $col) {
-                    if (empty($this->getSetValues($col, $intId)['value'])) {
+                    // Skip empty cols but preserve cols containing '0'.
+                    if ($this->getSetValues($col, $intId)['value'] === '') {
                         continue;
                     }
 
