@@ -268,6 +268,23 @@ Mitarbeiter ausgibt. Für die Filterung kann das folgende Query verwendet werden
    ORDER BY ma.name
 
 
+ID aus GET-Parameter nach '::' abtrennen
+****************************************
+
+Bei Filterungen im Backend oder für das Frontend-Editing benötigt man ggf. Zugriff
+auf die ID aus dem GET-Parameter der URL. Dieser ist aber mit '::' an einen
+Tabellennamen gekoppelt und muss für die Verwendung in einem eigenen SQL-Query
+separiert werden. Das erfolgt z.B. über den den Befehl `SUBSTRING_INDEX` im Query,
+wie das folgende Beispiel zeigt:
+
+.. code-block:: php
+   :linenos:
+   
+   -- URL: ....&id=mm_mitarbeiter::51&...
+   SELECT * FROM mm_mitarbeiter
+   WHERE id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
+
+
 Kommentare im SQL-Query
 ***********************
 
