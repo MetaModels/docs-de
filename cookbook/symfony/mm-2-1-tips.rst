@@ -48,8 +48,8 @@ Für das Debugging der Templates gibt es hier eine Beschreibung: :ref:`rst_cookb
 Möchte man die SQL-Aufrufe z.B. einer Filterregel "Eigenes SQL" untersuchen, so kann man auf der
 Debug-Toolbar auf "Doctrine" gehen - dort werden alle SQL-Aufrufe aufgelistet. Über die Suche im
 Browser und einigen Bestandteilen wie der Tabellenname o.ä. ist das Query meist schnell gefunden.
-Die Toolbar bietet den SQL-Code in vrschiedenen Formatierungen an, so dass das Query schnell in
-phpMyAdmin getestet werden kann.
+Die Toolbar bietet den SQL-Code in verschiedenen Formatierungen an, so dass das Query schnell in
+phpMyAdmin übernommen und getestet werden kann.
 
 
 .. |img_symfony-toolbar| image:: /_img/screenshots/cookbook/debug/symfony-toolbar.jpg
