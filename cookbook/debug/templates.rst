@@ -84,3 +84,30 @@ Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
 :ref:`rst_cookbook_frontend_array-helper`.
 
 
+Debug in MM 2.1
+---------------
+
+Das Debugging in MM 2.1 ist durch die Möglichkeiten der Debug-Toolbar von
+Symfony sehr komfortabel geworden.
+
+In den Templates kann z.B. folgendes Code-Snipped eingebaut werden:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // Debug items.
+   if (function_exists('dump')) {
+       dump($this);
+   }
+   ?>
+
+Wird die Seite über "app_dev" aufgerufen z.B. "domain.tld/app_dev.php/meine-mm-listenansicht.html",
+kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon" untersucht werden:
+
+|img_symfony-toolbar|
+
+Mit der Prüfung "function_exist" stört das `dump` nicht den normalen Aufruf der Seite.
+
+
+.. |img_symfony-toolbar| image:: /_img/screenshots/cookbook/debug/symfony-toolbar.jpg
