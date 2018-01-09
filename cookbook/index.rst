@@ -15,6 +15,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     :maxdepth: 1
 
     checklists/index.rst
+    symfony/mm-2-1-tips.rst
     panels/default-values.rst
     panels/own-regex.rst
     panels/checkbox-negation.rst
