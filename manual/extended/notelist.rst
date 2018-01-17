@@ -159,8 +159,8 @@ angepasst werden. Für die Versendung stehen die Contao-Formularoption oder auch
 Known Issues and Next Features
 ------------------------------
 
-* nach Absenden des Formulars sind Elemente nicht aus Merkliste entfernt
-* optionale Angabe einer Anzahl je Merkliste-Item fehlt
+* Merkliste für MM 2.1 umbauen
+* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
 
 
 InsertTags
@@ -242,6 +242,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * `Sebastian Krull <http://www.sebastiankrull.de>`_: 350 €
 * `Carsten Merz <http://www.fitkurs.de>`_: 350 €
 * `Westwerk GmbH & Co. KG <https://www.westwerk.ac>`_: 350 €
+* `Niels Hegmanns <http://www.heimseiten.de/>`_: 350 €
 
 
 (Spenden in Netto)
