@@ -146,6 +146,12 @@ Aktuelle Informationen sind im
 `Forum <https://community.contao.org/de/showthread.php?59961-MetaModels-aktualisieren-%28von-Nightly-Build-zu-Composer%29>`_
 zu finden.
 
+
+Hinweise und Anleitungen für ältere Contao- und MM-Versionen
+------------------------------------------------------------
+
+:ref:`cookbook_install_update-file-attribute-v1-to-v2`
+
 .. |br| raw:: html
 
    <br />
