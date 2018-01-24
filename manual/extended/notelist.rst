@@ -190,14 +190,6 @@ angezeigt. Die Daten werden vom Formular auch mit verarbeitet und z.B. per E-Mai
 |img_notelist_fe_list_with_form|
 
 
-
-Known Issues and Next Features
-------------------------------
-
-* Merkliste für MM 2.1 umbauen
-* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
-
-
 InsertTags
 ----------
 
@@ -267,6 +259,14 @@ erfolgen - z.B.
    <?php
    echo Message::generate();
    ?>
+
+
+
+Known Issues and Next Features
+------------------------------
+
+* Merkliste für MM 2.1 umbauen
+* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
 
 
 Spenden
