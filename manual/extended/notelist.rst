@@ -44,7 +44,7 @@ Voraussetzungen für die Installation:
 
 * PHP 7.x
 * Contao 3.5.x
-* MetaModels core dev-hotfix/2.0.0-alpha16 (b326aed1) und DCG 2.0.0-beta39
+* MetaModels ab core 2.0.0-alpha16 und DCG 2.0.0-beta39
 
 In der Paketverwaltung in der Suche `metamodels/notelist` eingeben,
 installieren und die Datenbank aktualisieren.
@@ -139,21 +139,56 @@ Im Formulargeneratorsteht ein neues Widget `MetaModels note list` zur Verfügung
 Mit den Einstellungen wird sowohl die Anzeige im Formular als auch in der E-Mail
 gesteuert.
 
-Dazu kann eine oder mehrere Merklisten aktiviert und jeweils für die FE-Ausgabe
-und die E-Mail-Ausgabe eine Render-Einstellung ausgewählt werden.
+Dazu kann eine oder mehrere Merklisten aktiviert und jeweils eine Render-Einstellung
+für die FE-Ausgabe und die E-Mail-Ausgabe ausgewählt werden. Zusätzlich kann für
+jede Merkliste über die Checkbox "Clear list" bestimmt werden, ob nach der
+Formularverarbeitung die Liste geleert werden soll. Das optionale Template
+"Custom email template" bindet alle Renderings der E-Mail-Ausgaben der Merklisten
+ein und "umschließt" diese.
 
 |img_nodelist_form_widget|
 
-Im Formular werden die entsprechenden Datensätze ausgegeben mit der Möglichkeit, die gesamte Liste
-oder einzelne Items zu löschen.
+Im Formular werden die entsprechenden Datensätze über die gewählte Render-Einstellung
+ausgegeben.
 
 |img_nodelist_form_fe_list|
+
+Eine Bearbeitung z.B. Löschen der Elemente der Merkliste ist im Formular nicht möglich,
+da bei einem Reload der Seite schon im Formular eingegebene Daten verloren gehen würden.
+
+Man kann vor der Ausgabe des Formulares eine Liste mit allen Elementen der Merkliste
+ausgeben und dort diese einzeln bearbeiten oder die gesamte Liste löschen.
+
+.. code-block:: html
+   :linenos:
+
+   <p><a href="de/metamodels/note-list-contact-form.html?notelist_2_action=clear">Clear List 2</a></p>
+
+|img_nodelist_form_fe_list_edit_items|
 
 Die Daten werden per E-Mail übertragen und können über das E-Mail-Template in der Ausgabe
 angepasst werden. Für die Versendung stehen die Contao-Formularoption oder auch das
 "Notification Center (NC)" zur Verfügung.
 
 |img_notelist_email_list|
+
+
+Übermittlung zusätzlicher Daten für jedes Item
+----------------------------------------------
+
+Als Option können für jedes Item zusätzliche Daten an die Merkliste wie z.B. eine Anzahl, Freitext
+o.ä. übermittelt werden. Dafür erstellt man über den Formulargenerator ein Formular, welches die
+anzuzeigenden Felder beinhaltet z.B. Auswahlfeld für eine Anzahl und Textfeld für eine kurze Info -
+ein Absendefeld ist nicht notwendig und wird automatisch generiert.
+
+Dieses angelegte Formular steht nun in den Einstellungen der Merkliste zur Verfügung - Formulare,
+die schon ein Merkliste-Formularelement beinhalten, werden nicht angezeigt (Rekursion!).
+
+In der Listendarstellung wird bei jedem Item nun das Formular inkl. einem "Add/Edit-Button"
+angezeigt. Die Daten werden vom Formular auch mit verarbeitet und z.B. per E-Mail mitgesendet.
+
+|img_notelist_fe_list_with_form|
+
 
 
 Known Issues and Next Features
@@ -258,9 +293,11 @@ Ein Dank für die Spenden* für die Erweiterung an:
 .. |img_notelist_overview| image:: /_img/screenshots/extended/notelist/notelist_overview.png
 .. |img_notelist_ce_mm-list| image:: /_img/screenshots/extended/notelist/notelist_ce_mm-list.png
 .. |img_notelist_fe_list| image:: /_img/screenshots/extended/notelist/notelist_fe_list.png
+.. |img_nodelist_form_fe_list_edit_items| image:: /_img/screenshots/extended/notelist/nodelist_form_fe_list_edit_items.png
 .. |img_notelist_filterrule| image:: /_img/screenshots/extended/notelist/notelist_filterrule.png
 .. |img_notelist_filtered_list| image:: /_img/screenshots/extended/notelist/notelist_filtered_list.png
 .. |img_notelist_fe_list_with_filter| image:: /_img/screenshots/extended/notelist/notelist_fe_list_with_filter.png
 .. |img_nodelist_form_widget| image:: /_img/screenshots/extended/notelist/nodelist_form_widget.png
 .. |img_nodelist_form_fe_list| image:: /_img/screenshots/extended/notelist/nodelist_form_fe_list.png
 .. |img_notelist_email_list| image:: /_img/screenshots/extended/notelist/notelist_email_list.png
+.. |img_notelist_fe_list_with_form| image:: /_img/screenshots/extended/notelist/notelist_fe_list_with_form.png
