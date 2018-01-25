@@ -236,6 +236,10 @@ werden:
                switch ($event->getOperation()) {
                    case ManipulateNoteListEvent::OPERATION_ADD:
                        Message::addConfirmation('Added ' . $event->getItem()->get('id') . ' to ' . $listId);
+                       // Add your own notes in metaData.
+                       $metaData = $event->getNoteList()->getMetaDataFor($event->getItem());
+                       $metaData['tstamp'] = time();
+                       $event->getNoteList()->updateMetaDataFor($event->getItem(), $metaData);
                        break;
                    case ManipulateNoteListEvent::OPERATION_REMOVE:
                        Message::addConfirmation('Removed ' . $event->getItem()->get('id') . ' to ' . $listId);
@@ -260,6 +264,8 @@ erfolgen - z.B.
    echo Message::generate();
    ?>
 
+Zudem können über diesen Event auch zusätzliche Informationen abgespeichert werden - siehe bei
+`OPERATION_ADD`.
 
 
 Known Issues and Next Features
