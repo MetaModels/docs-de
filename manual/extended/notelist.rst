@@ -45,6 +45,7 @@ Voraussetzungen für die Installation:
 * PHP 7.x
 * Contao 3.5.x
 * MetaModels ab core 2.0.0-alpha16 und DCG 2.0.0-beta39
+* (Zip-Paket der Erweiterung, Anfrage über info@e-spin.de)
 
 In der Paketverwaltung in der Suche `metamodels/notelist` eingeben,
 installieren und die Datenbank aktualisieren.
@@ -142,11 +143,16 @@ gesteuert.
 Dazu kann eine oder mehrere Merklisten aktiviert und jeweils eine Render-Einstellung
 für die FE-Ausgabe und die E-Mail-Ausgabe ausgewählt werden. Zusätzlich kann für
 jede Merkliste über die Checkbox "Clear list" bestimmt werden, ob nach der
-Formularverarbeitung die Liste geleert werden soll. Das optionale Template
-"Custom email template" bindet alle Renderings der E-Mail-Ausgaben der Merklisten
-ein und "umschließt" diese.
+Formularverarbeitung die Liste geleert werden soll.
 
 |img_nodelist_form_widget|
+
+Das optionale Template "Custom email template" bindet alle Renderings der
+E-Mail-Ausgaben der Merklisten ein und "umschließt" diese. Achtung: in den
+Einstellungen von Contao muss bei "Unterstützte Templateformate" unbedingt die
+Extension `text` eingetragen sein! Aktuell können die Merklistdaten in der E-Mail
+nur als (Plain-)Text übermittelt werden - die Rendereinstellungen "Ausgabeformat"
+für das Listing in der E-Mail ist entsprechend auf "Text" einzustellen.
 
 Im Formular werden die entsprechenden Datensätze über die gewählte Render-Einstellung
 ausgegeben.
