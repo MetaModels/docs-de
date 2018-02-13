@@ -7,6 +7,8 @@ Für die Installation von MetaModels 2.0 für Contao 3 wird eine Contao-LTS-Vers
 - aktuell ist das Contao 3.5.x - sowie die `Systemvoraussetzungen analog der
 Contao LTS <https://docs.contao.org/books/manual/3.5/de/01-installation/den-live-server-konfigurieren.html>`_.
 
+Seit Januar 2018 wird in MM 2.0 eine PHP-Version von mindestens 5.6 vorausgesetzt.
+
 Aktuell wird an einer Migration von MetaModels 2.0 für Contao 4 gearbeitet und steht mit
 MetaModels 2.1 als Beta-Version bereit. Für einen Einsatz von MM 2.1 vor dem Abschluss
 unseres Fundrasings kann unser "early adopter"-Programm genutzt werden.
@@ -37,6 +39,7 @@ werden. Die o.g. Pakete sind in Gruppen zusammen gefasst und sollten den meisten
 Im Composer-Client von Contao ("Paketverwaltung") ist über die Anzeige des Abhängigkeitsgraphen
 (Checkbox) ein Überblick über die installierten Pakete möglich.
 
+
 Installieren via Nightly build
 ------------------------------
 
@@ -49,6 +52,7 @@ müssen in das Hauptverzeichnis (Root) von Contao.
 Anschließend muss in der Erweiterungsverwaltung die Datenbank aktualisiert werden - kommt dabei eine Fehlermeldung
 i.E. ``Fatal error: Class 'MetaModels\Helper\UpgradeHandler' ....!metamodels-tng-branch/config/runonce_0.php`` sollte
 eine Leerung des internen Caches über die Contao-Systemwartung erfolgen.
+
 
 Test von speziellen Paketen via Composer
 ----------------------------------------
@@ -106,6 +110,7 @@ werden.
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
 `Github <https://github.com/MetaModels>`_.
 
+
 MetaModels aktualisieren
 ------------------------
 
@@ -124,6 +129,7 @@ Das folgende Vorgehen hat sich bisher bewährt:
 Aktuelle Informationen sind im
 `Forum <https://community.contao.org/de/showthread.php?56725-MetaModels-aktualisieren-%28ohne-Composer%29>`_
 zu finden.
+
 
 MetaModels von "Nightly build" zu "Composer" wechseln
 -----------------------------------------------------
