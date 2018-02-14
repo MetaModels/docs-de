@@ -43,8 +43,8 @@ Installation per Composer
 Voraussetzungen für die Installation:
 
 * PHP 7.x
-* Contao 3.5.x
-* MetaModels ab core 2.0.0-alpha16 und DCG 2.0.0-beta39
+* Contao 3.5.x oder Contao 4.4.x
+* MetaModels ab core 2.0.0-alpha16 bzw. 2.1 und DCG 2.0.0-beta39
 * (Zip-Paket der Erweiterung, Anfrage über info@e-spin.de)
 
 In der Paketverwaltung in der Suche `metamodels/notelist` eingeben,
@@ -277,8 +277,8 @@ Zudem können über diesen Event auch zusätzliche Informationen abgespeichert w
 Known Issues and Next Features
 ------------------------------
 
-* Merkliste für MM 2.1 umbauen
 * Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
+* Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
 
 
 Spenden
