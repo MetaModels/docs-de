@@ -17,7 +17,7 @@ Contao-Managers mit angezeigt.
 
 ``/usr/bin/php71 web/contao-manager.phar.php update -v``
 
-Nach einem Update ggf. das *Installtool aufrufen*, damit Datenbankänderungen
+Nach einem Update ggf. das Installtool aufrufen, damit Datenbankänderungen
 durchgeführt werden (wird gern vergessen :D).
 
 Die composer.phar sollte regelmäßig aktualisiert werden - dazu folgenden Befehl aufrufen:
