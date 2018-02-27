@@ -7,12 +7,12 @@ Für die Arbeit mit MM 2.1 unter Symfony einige Tipps für den Start
 oder als "Merkzettel".
 
 Die Aufrufe auf der Konsole gehen immer vom Installationsverzeichnis von
-Contao aus - also da, wo die composer.json liegt, d.h. vor alles Aufrufen
+Contao aus - also da, wo die composer.json liegt, d.h. vor allen Aufrufen
 erstmal in das Verzeichnis wechseln:
 
 ``cd /var/www/mein-contao``
 
-Composer-Update auf der Konsole - der Pfad zu PHP wird beim Systemcheck des
+Composer-Update auf der Konsole - der Pfad zu PHP wird z.B. beim Systemcheck des
 Contao-Managers mit angezeigt.
 
 ``/usr/bin/php71 web/contao-manager.phar.php update -v``
