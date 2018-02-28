@@ -15,7 +15,7 @@ erstmal in das Verzeichnis wechseln:
 Composer-Update auf der Konsole - der Pfad zu PHP wird z.B. beim Systemcheck des
 Contao-Managers mit angezeigt.
 
-``/usr/bin/php71 web/contao-manager.phar.php update -v``
+``/usr/bin/php71 web/contao-manager.phar.php composer update -v``
 
 Nach einem Update ggf. das Installtool aufrufen, damit Datenbankänderungen
 durchgeführt werden (wird gern vergessen :D).
