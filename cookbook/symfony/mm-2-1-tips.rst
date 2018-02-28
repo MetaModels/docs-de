@@ -34,11 +34,13 @@ Dazu muss ein Zugang für app_dev eingerichtet werden über
 
 ``vendor/bin/contao-console contao:install-web-dir --user=ichbins --password=totalgeheim``
 
-Achtung: wenn der Zugang zur Seite über htaccess geschützt ist, müssen user+passwort
-bei beiden die selben sein.
+Für den app_dev-Zugang kann aber nur ein User angelegt werden.
+
+Achtung: sofern der Zugang zur Seite über htaccess geschützt ist, müssen user+passwort
+für htaccess und app_dev die selben sein!
 
 Mit dem Seitenaufruf per app_dev wird auch das Caching von Contao unterbunden und man muss
-den Cache nicht so häufig leeren - bedeutet aber auch, dass die Seite ohne app_dev "anders
+den Cache nicht so häufig leeren - bedeutet aber auch, dass die Seite ohne app_dev ggf. "anders
 aussieht" => Cache löschen. Zudem wird die Debug-Toolbar von Symfony im Browser eingeblendet.
 
 |img_symfony-toolbar|
