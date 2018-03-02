@@ -17,6 +17,10 @@ Contao-Managers mit angezeigt.
 
 ``/usr/bin/php71 web/contao-manager.phar.php composer update -v``
 
+oder mit Speicher- und Laufzeitzuweisung
+
+``/usr/bin/php71 -d memory_limit=1G -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
+
 Nach einem Update ggf. das Installtool aufrufen, damit Datenbankänderungen
 durchgeführt werden (wird gern vergessen :D).
 
