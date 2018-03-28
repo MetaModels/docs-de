@@ -111,7 +111,7 @@ Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaMode
 `Github <https://github.com/MetaModels>`_.
 
 Zwei weitere Möglichkeiten sind die Installation eines Forks oder eines Pull-Requests (PR).
-Hier muss für die Installtion die composer.json angepasst werden.
+Hier muss für die Installation die composer.json angepasst werden.
 
 Bei einem Fork (ggf. in den Einstellungen der Paketverwaltung den eigenen Github oAuth Token
 eintragen) z.B.
