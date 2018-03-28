@@ -110,6 +110,56 @@ werden.
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
 `Github <https://github.com/MetaModels>`_.
 
+Zwei weitere Möglichkeiten sind die Installation eines Forks oder eines Pull-Requests (PR).
+Hier muss für die Installtion die composer.json angepasst werden.
+
+Bei einem Fork (ggf. in den Einstellungen der Paketverwaltung den eigenen Github oAuth Token
+eintragen) z.B.
+
+.. code-block:: json
+   :linenos:
+   
+   {
+       "name": "local/website",
+       "description": "A local website project",
+       "type": "project",
+       "license": "proprietary",
+       "require": {
+           "contao-community-alliance/composer-client": "~0.12",
+           "contao-community-alliance/dc-general": "dev-hotfix/beta-39 as 2.0.0",
+           "metamodels/bundle_all": ">=2.0.0.0,<3-dev",
+           "byteworks/metamodelsattribute_multi": ">=1.0.5.0,<1.1-dev",
+           ...
+       },
+       ...
+       "repositories": [
+           ...
+           {
+               "type": "vcs",
+               "url": "https://github.com/byteworks-ch/contao-metamodelsattribute_multi.git"
+           }
+       ],
+       ...
+   }
+
+oder für einen PR mit dem Hash des Commits - diesen findet man unter Github bei dem PR beim
+Reiter "Commits".
+
+.. code-block:: json
+   :linenos:
+   
+   {
+       "name": "local/website",
+       "description": "A local website project",
+       "type": "project",
+       "license": "proprietary",
+       "require": {
+           "contao-community-alliance/composer-client": "~0.12",
+           "contao-community-alliance/dc-general": "dev-hotfix/beta-39 as 2.0.0",
+           "metamodels/bundle_all": ">=2.0.0.0,<3-dev",
+           "metamodels/attribute_alias": "dev-master#a97ec461ae1254fa616811c3ce234515238fb3c7",
+           ...
+
 
 MetaModels aktualisieren
 ------------------------
