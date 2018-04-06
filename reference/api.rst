@@ -36,20 +36,3 @@ Folgende Gruppen von Interfaces stehen zur Verfügung:
 
 Weitere Beispiele zum Einsatz von Interfaces werden im Kapitel "Cookbook" folgen.
 
-
-.. _ref_api_event:
-
-Events
-------
-
-`Informationen zu Events <https://github.com/contao-community-alliance/event-dispatcher>`_
-
-.. _ref_api_events:
-
-.. toctree::
-    :maxdepth: 1
-
-    events/dc_general
-
-
-Weitere Beispiele zum Einsatz von Events werden im Kapitel "Cookbook" folgen.
