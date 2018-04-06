@@ -28,9 +28,18 @@ Die composer.phar sollte regelmäßig aktualisiert werden - dazu folgenden Befeh
 
 ``/usr/bin/php71 web/contao-manager.phar.php self-update``
 
-Bei Anpassungen den Contao-Cache leeren.
+Bei Anpassungen den Contao-Cache leeren:
+
+die "harte Tour":
 
 ``rm -rf var/cache/``
+
+oder "Soft" (Empfehlung):
+
+``vendor/bin/contao-console cache:warmup``
+
+bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" aufruft.
+
 
 Während der Entwicklung sollte man unbedingt Zugriff auf die Entwicklungsumgebung
 per `app_dev` haben - der Seitenaufruf ist dann "domain.tld/app_dev.php/...".

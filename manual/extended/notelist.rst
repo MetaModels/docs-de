@@ -230,6 +230,9 @@ werden:
    
    use MetaModels\NoteList\Event\ManipulateNoteListEvent;
    use MetaModels\NoteList\Event\NoteListEvents;
+   // MM 2.1
+   //use MetaModels\NoteListBundle\Event\ManipulateNoteListEvent;
+   //use MetaModels\NoteListBundle\Event\NoteListEvents;
    
    return [
        NoteListEvents::MANIPULATE_NOTE_LIST => [
@@ -242,10 +245,6 @@ werden:
                switch ($event->getOperation()) {
                    case ManipulateNoteListEvent::OPERATION_ADD:
                        Message::addConfirmation('Added ' . $event->getItem()->get('id') . ' to ' . $listId);
-                       // Add your own notes in metaData.
-                       $metaData = $event->getNoteList()->getMetaDataFor($event->getItem());
-                       $metaData['tstamp'] = time();
-                       $event->getNoteList()->updateMetaDataFor($event->getItem(), $metaData);
                        break;
                    case ManipulateNoteListEvent::OPERATION_REMOVE:
                        Message::addConfirmation('Removed ' . $event->getItem()->get('id') . ' to ' . $listId);
@@ -270,8 +269,45 @@ erfolgen - z.B.
    echo Message::generate();
    ?>
 
+oder als Einblendung eines Div-Containers im Template ``metamodels_prerendered*``
+
+.. code-block:: html
+   :linenos:
+
+    <?php if (strpos(Message::generate(), "Added") !== false): ?>
+        <div class="add-message">
+            <p>Item added</p>
+        </div>
+    <?php endif; ?>
+
+Hinweis: ``Message::generate()`` kann nur einmal direkt ausgegeben werden - ggf. für Abfrage und
+Ausgabe in eine Variable speichern.
+
 Zudem können über diesen Event auch zusätzliche Informationen abgespeichert werden - siehe bei
 `OPERATION_ADD`.
+
+.. code-block:: php
+   :linenos:
+
+   // ...
+   switch ($event->getOperation()) {
+       case ManipulateNoteListEvent::OPERATION_ADD:
+           Message::addConfirmation('Added ' . $event->getItem()->get('id') . ' to ' . $listId);
+           // Add your own notes in metaData.
+           $metaData = $event->getNoteList()->getMetaDataFor($event->getItem());
+           $metaData['tstamp'] = time();
+           $event->getNoteList()->updateMetaDataFor($event->getItem(), $metaData);
+           break;
+       case ManipulateNoteListEvent::OPERATION_REMOVE:
+           Message::addConfirmation('Removed ' . $event->getItem()->get('id') . ' to ' . $listId);
+           break;
+       case ManipulateNoteListEvent::OPERATION_CLEAR:
+           Message::addConfirmation('Cleared ' . $listId);
+           break;
+       default:
+           throw new \RuntimeException('Unknown note list operation: ' . $event->getOperation());
+   }
+   // ...
 
 
 Known Issues and Next Features
