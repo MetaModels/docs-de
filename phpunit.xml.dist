@@ -11,7 +11,7 @@
          syntaxCheck="false"
     >
     <testsuites>
-        <testsuite name="MetaModels attribute tabletext tests">
+        <testsuite name="MetaModels attribute tablemulti tests">
             <directory>./tests/Test/</directory>
         </testsuite>
     </testsuites>

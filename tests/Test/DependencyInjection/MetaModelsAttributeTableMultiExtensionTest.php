@@ -3,7 +3,7 @@
 /**
  * * This file is part of MetaModels/attribute_tabletext.
  *
- * (c) 2012-2017 The MetaModels team.
+ * (c) 2012-2018 The MetaModels team.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -13,15 +13,16 @@
  * @package    MetaModels
  * @subpackage AttributeTableText
  * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2012-2017 The MetaModels team.
- * @license    https://github.com/MetaModels/attribute_text/blob/master/LICENSE LGPL-3.0
+ * @author     Andreas Dziemba <adziemba@web.de>
+ * @copyright  2012-2018 The MetaModels team.
+ * @license    https://github.com/MetaModels/attribute_tablemulti/blob/master/LICENSE LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MetaModels\AttributeTableTextBundle\Test\DependencyInjection;
+namespace MetaModels\AttributeTableMultiBundle\Test\DependencyInjection;
 
-use MetaModels\AttributeTableTextBundle\Attribute\AttributeTypeFactory;
-use MetaModels\AttributeTableTextBundle\DependencyInjection\MetaModelsAttributeTableTextExtension;
+use MetaModels\AttributeTableMultiBundle\DependencyInjection\MetaModelsAttributeTableMultiExtension;
+use MetaModels\AttributeTableMultiBundle\Attribute\AttributeTypeFactory;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -30,7 +31,7 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 /**
  * This test case test the extension.
  */
-class MetaModelsAttributeTableTextExtensionTest extends TestCase
+class MetaModelsAttributeTableMultiExtensionTest extends TestCase
 {
     /**
      * Test that extension can be instantiated.
@@ -39,9 +40,9 @@ class MetaModelsAttributeTableTextExtensionTest extends TestCase
      */
     public function testInstantiation()
     {
-        $extension = new MetaModelsAttributeTableTextExtension();
+        $extension = new MetaModelsAttributeTableMultiExtension();
 
-        $this->assertInstanceOf(MetaModelsAttributeTableTextExtension::class, $extension);
+        $this->assertInstanceOf(MetaModelsAttributeTableMultiExtension::class, $extension);
         $this->assertInstanceOf(ExtensionInterface::class, $extension);
     }
 
@@ -58,7 +59,7 @@ class MetaModelsAttributeTableTextExtensionTest extends TestCase
             ->expects($this->once())
             ->method('setDefinition')
             ->with(
-                'metamodels.attribute_tabletext.factory',
+                'metamodels.attribute_tablemulti.factory',
                 $this->callback(
                     function ($value) {
                         /** @var Definition $value */
@@ -71,7 +72,7 @@ class MetaModelsAttributeTableTextExtensionTest extends TestCase
                 )
             );
 
-        $extension = new MetaModelsAttributeTableTextExtension();
+        $extension = new MetaModelsAttributeTableMultiExtension();
         $extension->load([], $container);
     }
 }

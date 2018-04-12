@@ -11,9 +11,9 @@
  * last-updated: 2013-07-02T12:17:48+02:00
  */
 
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_cols']['0']      = 'Colonna configurazione';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']['0']  = 'Etichetta';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowLabel']['1']  = 'Inserire le etichette per le colonne';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowStyle']['0']  = 'Larghezza';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tabletext_rowStyle']['1']  = 'Inserire la larghezza delle colonne (es. 200px)';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['tabletext'] = 'Tabella testo';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tablemulti_cols']['0']      = 'Colonna configurazione';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tablemulti_rowLabel']['0']  = 'Etichetta';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tablemulti_rowLabel']['1']  = 'Inserire le etichette per le colonne';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tablemulti_rowStyle']['0']  = 'Larghezza';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['tablemulti_rowStyle']['1']  = 'Inserire la larghezza delle colonne (es. 200px)';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['tablemulti'] = 'Tabella multi';

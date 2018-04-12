@@ -1,18 +1,30 @@
 {
-  "name": "metamodels/attribute_tabletext",
+  "name": "metamodels/attribute_tablemulti",
   "description": "MetaModels attribute for dynamic table text",
   "keywords": [
     "contao",
     "metamodels",
     "attribute",
-    "text",
-    "tabletext",
+    "multicolumnwizard",
+    "tablemulti",
     "nontranslatable"
   ],
   "type": "contao-bundle",
   "homepage": "http://now.metamodel.me/",
-  "license": "LGPL-3.0+",
+  "license": "LGPL-3.0-or-later",
   "authors": [
+    {
+      "name": "Ronny Binder",
+      "email": "rb@bytworks.ch",
+      "homepage": "https://www.byteworks.ch",
+      "role": "Originator"
+    },
+    {
+      "name": "Michael Bischof",
+      "email": "mb@byteworks.ch",
+      "homepage": "https://www.byteworks.ch",
+      "role": "Originator"
+    },
     {
       "name": "Christian Schiffler",
       "email": "c.schiffler@cyberspectrum.de",
@@ -23,17 +35,22 @@
       "name": "Stefan Heimes",
       "email": "stefan_heimes@hotmail.com",
       "role": "Developer"
+    },
+    {
+      "name": "Andreas Dziemba",
+      "email": "dziemba@men-at-work.de",
+      "role": "Developer"
     }
   ],
   "support": {
     "email": "mail@metamodel.me",
-    "issues": "https://github.com/MetaModels/attribute_tabletext/issues",
+    "issues": "https://github.com/MetaModels/attribute_tablemulti/issues",
     "wiki": "http://de.contaowiki.org/MetaModels",
     "irc": "irc://irc.freenode.org/contao.mm",
-    "source": "https://github.com/MetaModels/attribute_tabletext"
+    "source": "https://github.com/MetaModels/attribute_tablemulti"
   },
   "require": {
-    "php": ">=5.6",
+    "php": ">=5.6 | ^7.0",
     "contao/core-bundle": "^4.4",
     "contao-community-alliance/dc-general": "~2.1@dev",
     "metamodels/core": "~2.1@dev",
@@ -47,7 +64,7 @@
   },
   "autoload": {
     "psr-4": {
-      "MetaModels\\AttributeTableTextBundle\\": "src"
+      "MetaModels\\AttributeTableMultiBundle\\": "src"
     },
     "files": [
       "src/deprecated-autoload.php"
@@ -55,29 +72,29 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "MetaModels\\AttributeTableTextBundle\\Test\\": "tests/Test"
+      "MetaModels\\AttributeTableMultiBundle\\Test\\": "tests/Test"
     }
   },
   "extra": {
-    "contao-manager-plugin": "MetaModels\\AttributeTableTextBundle\\ContaoManager\\Plugin",
+    "contao-manager-plugin": "MetaModels\\AttributeTableMultiBundle\\ContaoManager\\Plugin",
     "contao": {
       "transifex": {
         "project": "metamodels",
-        "prefix": "attribute_tabletext-",
+        "prefix": "attribute_tablemulti-",
         "languages_cto": "src/Resources/contao/languages",
         "languages_tx": ".tx"
       }
     },
     "branch-alias": {
-      "dev-master": "2.0.x-dev",
-      "dev-feature/contao4": "2.1.x-dev"
+      "dev-master": "2.1.x-dev",
+      "dev-feature/contao4":  "2.2.x-dev"
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "vcs",
+      "type": "git",
       "url": "git@gitlab.com:metamodels/core.git"
     }
   ]

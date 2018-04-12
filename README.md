@@ -1,9 +1,56 @@
-[![Build Status](https://travis-ci.org/MetaModels/attribute_tabletext.svg)](https://travis-ci.org/MetaModels/attribute_tabletext)
-[![Latest Version tagged](http://img.shields.io/github/tag/MetaModels/attribute_tabletext.svg)](https://github.com/MetaModels/attribute_tabletext/tags)
-[![Latest Version on Packagist](http://img.shields.io/packagist/v/MetaModels/attribute_tabletext.svg)](https://packagist.org/packages/MetaModels/attribute_tabletext)
-[![Installations via composer per month](http://img.shields.io/packagist/dm/MetaModels/attribute_tabletext.svg)](https://packagist.org/packages/MetaModels/attribute_tabletext)
+[![Build Status](https://travis-ci.org/MetaModels/attribute_tablemulti.svg)](https://travis-ci.org/MetaModels/attribute_tablemulti)
+[![Latest Version tagged](http://img.shields.io/github/tag/MetaModels/attribute_tablemulti.svg)](https://github.com/MetaModels/attribute_tablemulti/tags)
+[![Latest Version on Packagist](http://img.shields.io/packagist/v/MetaModels/attribute_tablemulti.svg)](https://packagist.org/packages/MetaModels/attribute_tablemulti)
+[![Installations via composer per month](http://img.shields.io/packagist/dm/MetaModels/attribute_tablemulti.svg)](https://packagist.org/packages/MetaModels/attribute_tablemulti)
 
-Tabletext
+TableMulti
 =========
+#####Original idea by Byteworks:
+- [Ronny Binder](mailto:rb@bytworks.ch)
+- [Michael Bischof](mailto:mb@byteworks.ch)
 
-The tabletext attribute.
+
+###The table multi attribute.
+
+
+With this attribute you are able to create complex table structures with the MultiColumnWizard.
+Create the configuration in the system/config/dcaconfig.php, system/config/localconfig.php or somewhere else where the config is loaded and write something like this:
+
+```php
+$GLOBALS['TL_CONFIG']['metamodelsattribute_multi']['mm_test']['multi_test'] = array(
+    'tl_class'     => 'clr',
+    'minCount'     => 0,
+    'columnFields' => array(
+        'col_title' => array(
+            'label'     => 'Title',
+            'exclude'   => true,
+            'inputType' => 'text',
+            'eval'      => array
+            (
+                'style'=>'width:130px'
+            )
+        ),
+        'col_highlight' => array(
+            'label'     => 'Hervorheben',
+            'exclude'   => true,
+            'inputType' => 'checkbox',
+            'eval'      => array
+            (
+                'style' => 'width:40px'
+            )
+        ),
+        'col_url' => array(
+            'label'     => 'URL',
+            'exclude'   => true,
+            'inputType' => 'text',
+            'eval'      => array
+            (
+                'style'=>'width:130px', 
+                'mandatory'=>false, 
+                'rgxp'=>'url'
+            )
+        ),
+    ),
+);
+```
+

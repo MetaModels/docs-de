@@ -1,9 +1,9 @@
 <?php
 
 /**
- * * This file is part of MetaModels/attribute_tabletext.
+ * * This file is part of MetaModels/attribute_tablemulti.
  *
- * (c) 2012-2017 The MetaModels team.
+ * (c) 2012-2018 The MetaModels team.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,23 +11,24 @@
  * This project is provided in good faith and hope to be usable by anyone.
  *
  * @package    MetaModels
- * @subpackage AttributeTableText
+ * @subpackage AttributeTableMulti
  * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2012-2017 The MetaModels team.
- * @license    https://github.com/MetaModels/attribute_text/blob/master/LICENSE LGPL-3.0
+ * @author     Andreas Dziemba <adziemba@web.de>
+ * @copyright  2012-2018 The MetaModels team.
+ * @license    https://github.com/MetaModels/attribute_tablemulti/blob/master/LICENSE LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MetaModels\AttributeTableTextBundle\Test;
+namespace MetaModels\AttributeTableMultiBundle\Test;
 
-use MetaModels\AttributeTableTextBundle\Attribute\TableText;
-use MetaModels\AttributeTableTextBundle\Attribute\AttributeTypeFactory;
+use MetaModels\AttributeTableMultiBundle\Attribute\TableMulti;
+use MetaModels\AttributeTableMultiBundle\Attribute\AttributeTypeFactory;
 use PHPUnit\Framework\TestCase;
 
 /**
  * This class tests if the deprecated autoloader works.
  *
- * @package MetaModels\AttributeTableTextBundle\Test
+ * @package MetaModels\AttributeTableMultiBundle\Test
  */
 class DeprecatedAutoloaderTest extends TestCase
 {
@@ -37,8 +38,8 @@ class DeprecatedAutoloaderTest extends TestCase
      * @var array
      */
     private static $classes = [
-        'MetaModels\Attribute\TableText\TableText' => TableText::class,
-        'MetaModels\Attribute\TableText\AttributeTypeFactory' => AttributeTypeFactory::class
+        'MetaModels\Attribute\TableMulti\TableMulti' => TableMulti::class,
+        'MetaModels\Attribute\TableMulti\AttributeTypeFactory' => AttributeTypeFactory::class
     ];
 
     /**
@@ -67,7 +68,7 @@ class DeprecatedAutoloaderTest extends TestCase
      */
     public function testDeprecatedClassesAreAliased($oldClass, $newClass)
     {
-        $this->assertTrue(class_exists($oldClass), sprintf('Class tableText "%s" is not found.', $oldClass));
+        $this->assertTrue(class_exists($oldClass), sprintf('Class tableMulti "%s" is not found.', $oldClass));
 
         $oldClassReflection = new \ReflectionClass($oldClass);
         $newClassReflection = new \ReflectionClass($newClass);

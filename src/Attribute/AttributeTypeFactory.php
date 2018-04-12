@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This file is part of MetaModels/attribute_tabletext.
+ * This file is part of MetaModels/attribute_tablemulti.
  *
- * (c) 2012-2017 The MetaModels team.
+ * (c) 2012-2018 The MetaModels team.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,16 +11,17 @@
  * This project is provided in good faith and hope to be usable by anyone.
  *
  * @package    MetaModels
- * @subpackage AttributeTableText
+ * @subpackage AttributeTableMulti
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @author     Ingolf Steinhardt <info@e-spin.de>
  * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2012-2017 The MetaModels team.
- * @license    https://github.com/MetaModels/attribute_tabletext/blob/master/LICENSE LGPL-3.0
+ * @author     Andreas Dziemba <adziemba@web.de>
+ * @copyright  2012-2018 The MetaModels team.
+ * @license    https://github.com/MetaModels/attribute_tablemulti/blob/master/LICENSE LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MetaModels\AttributeTableTextBundle\Attribute;
+namespace MetaModels\AttributeTableMultiBundle\Attribute;
 
 use Doctrine\DBAL\Connection;
 use MetaModels\Attribute\AbstractAttributeTypeFactory;
@@ -45,9 +46,9 @@ class AttributeTypeFactory extends AbstractAttributeTypeFactory
         parent::__construct();
 
         $this->connection = $connection;
-        $this->typeName   = 'tabletext';
-        $this->typeIcon   = 'bundles/metamodelsattributetabletext/tabletext.png';
-        $this->typeClass  = 'MetaModels\Attribute\TableText\TableText';
+        $this->typeName   = 'tablemulti';
+        $this->typeIcon   = 'bundles/metamodelsattributetablemulti/tablemulti.png';
+        $this->typeClass  = 'MetaModels\Attribute\TableMulti\TableMulti';
     }
 
     /**

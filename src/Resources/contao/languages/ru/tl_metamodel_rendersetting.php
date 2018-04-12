@@ -12,5 +12,5 @@
  */
 
 
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['tabletext_hide_tablehead']['1'] = 'Выберите, чтобы скрыть заголовок таблицы.';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['tablemulti_hide_tablehead']['1'] = 'Выберите, чтобы скрыть заголовок таблицы.';
 

@@ -1,9 +1,9 @@
 
-<table class="tabletext<?php echo $this->additional_class; ?>">
-<?php $countCol = count($this->attribute->get('tabletext_cols')); if (!$this->settings->get('tabletext_hide_tablehead')) : ?>
+<table class="tablemulti<?php echo $this->additional_class; ?>">
+<?php $countCol = count($this->attribute->get('tablemulti_cols')); if (!$this->settings->get('tablemulti_hide_tablehead')) : ?>
     <thead>
         <tr>
-            <?php foreach (is_array($this->attribute->get('tabletext_cols')) ? $this->attribute->get('tabletext_cols'): array() as $headCol) : ?>
+            <?php foreach (is_array($this->attribute->get('tablemulti_cols')) ? $this->attribute->get('tablemulti_cols'): array() as $headCol) : ?>
             <th><?= $headCol['rowLabel'] ?></th>
             <?php endforeach; ?>
         </tr>

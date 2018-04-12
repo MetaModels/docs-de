@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This file is part of MetaModels/attribute_tabletext.
+ * This file is part of MetaModels/attribute_tablemulti.
  *
- * (c) 2012-2017 The MetaModels team.
+ * (c) 2012-2018 The MetaModels team.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,7 +11,7 @@
  * This project is provided in good faith and hope to be usable by anyone.
  *
  * @package    MetaModels
- * @subpackage AttributeTableText
+ * @subpackage AttributeTableMulti
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @author     Andreas Isaak <info@andreas-isaak.de>
  * @author     David Maack <david.maack@arcor.de>
@@ -19,14 +19,16 @@
  * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  * @author     Ingolf Steinhardt <info@e-spin.de>
  * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2012-2017 The MetaModels team.
- * @license    https://github.com/MetaModels/attribute_tabletext/blob/master/LICENSE LGPL-3.0
+ * @author     Andreas Dziemba <adziemba@web.de>
+ * @copyright  2012-2018 The MetaModels team.
+ * @license    https://github.com/MetaModels/attribute_tablemulti/blob/master/LICENSE LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MetaModels\AttributeTableTextBundle\Attribute;
+namespace MetaModels\AttributeTableMultiBundle\Attribute;
 
 use Contao\System;
+use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DBALException;
 use MetaModels\Attribute\BaseComplex;
@@ -35,7 +37,7 @@ use MetaModels\IMetaModel;
 /**
  * This is the MetaModelAttribute class for handling table text fields.
  */
-class TableText extends BaseComplex
+class TableMulti extends BaseComplex
 {
     /**
      * Database connection.
@@ -93,9 +95,7 @@ class TableText extends BaseComplex
      */
     public function getAttributeSettingNames()
     {
-        return array_merge(parent::getAttributeSettingNames(), array(
-            'tabletext_cols',
-        ));
+        return array_merge(parent::getAttributeSettingNames(), array());
     }
 
     /**
@@ -105,30 +105,36 @@ class TableText extends BaseComplex
      */
     protected function getValueTable()
     {
-        return 'tl_metamodel_tabletext';
+        return 'tl_metamodel_tablemulti';
     }
 
     /**
      * {@inheritdoc}
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function getFieldDefinition($arrOverrides = array())
     {
-        $arrColLabels                        = deserialize($this->get('tabletext_cols'), true);
+        $strTable = $this->getMetaModel()->getTableName();
+        $strField = $this->getColName();
+
         $arrFieldDef                         = parent::getFieldDefinition($arrOverrides);
         $arrFieldDef['inputType']            = 'multiColumnWizard';
         $arrFieldDef['eval']['columnFields'] = array();
 
-        $countCol = count($arrColLabels);
-        for ($i = 0; $i < $countCol; $i++) {
-            $arrFieldDef['eval']['columnFields']['col_' . $i] = array(
-                'label'     => $arrColLabels[$i]['rowLabel'],
-                'inputType' => 'text',
-                'eval'      => array(),
-            );
-            if ($arrColLabels[$i]['rowStyle']) {
-                $arrFieldDef['eval']['columnFields']['col_' . $i]['eval']['style'] =
-                    'width:' . $arrColLabels[$i]['rowStyle'];
+
+        // Check for override in local config
+        if (isset($GLOBALS['TL_CONFIG']['metamodelsattribute_tablemulti'][$strTable][$strField])) {
+            // Cleanup the config.
+            $config = $GLOBALS['TL_CONFIG']['metamodelsattribute_tablemulti'][$strTable][$strField];
+            foreach ($config['columnFields'] as $col => $data) {
+                $config['columnFields']['col_' . $col] = $data;
+                unset($config['columnFields'][$col]);
             }
+
+            // Build the array
+            $arrFieldDef['inputType'] = 'multiColumnWizard';
+            $arrFieldDef['eval']      = $config;
         }
 
         return $arrFieldDef;
@@ -156,22 +162,32 @@ class TableText extends BaseComplex
                 // Walk every column and update / insert the value.
                 foreach ($row as $col) {
                     // Skip empty cols but preserve cols containing '0'.
-                    if ($this->getSetValues($col, $intId)['value'] === '') {
+                    $values = $this->getSetValues($col, $intId);
+                    if ($values['value'] === '') {
                         continue;
                     }
 
-                    try {
-                        $this->connection->insert($this->getValueTable(), $this->getSetValues($col, $intId));
-                    } catch (DBALException $e) {
-                        $this->connection->update(
-                            $this->getValueTable(),
-                            $this->getSetValues($col, $intId),
-                            [
-                                'att_id'  => $this->get('id'),
-                                'item_id' => $intId
-                            ]
-                        );
+                    $queryBuilder = $this->connection->createQueryBuilder()->insert($this->getValueTable());
+                    foreach ($values as $name => $value) {
+                        $queryBuilder
+                            ->setValue($name, ':' . $name)
+                            ->setParameter($name, $value);
                     }
+
+                    $sql        = $queryBuilder->getSQL();
+                    $parameters = $queryBuilder->getParameters();
+
+                    $queryBuilder = $this->connection->createQueryBuilder()->update($this->getValueTable());
+                    foreach ($values as $name => $value) {
+                        $queryBuilder
+                            ->set($name, ':' . $name)
+                            ->setParameter($name, $value);
+                    }
+
+                    $updateSql = $queryBuilder->getSQL();
+                    $sql      .= ' ON DUPLICATE KEY ' . str_replace($this->getValueTable() . ' SET ', '', $updateSql);
+
+                    $this->connection->executeQuery($sql, $parameters);
                 }
             }
         }
@@ -190,7 +206,6 @@ class TableText extends BaseComplex
             ->andWhere('att_id = :att_id')
             ->setParameter('att_id', $this->get('id'))
             ->groupBy('value');
-
 
         if ($idList) {
             $builder
@@ -221,26 +236,19 @@ class TableText extends BaseComplex
      */
     public function getDataFor($arrIds)
     {
-        $arrWhere = $this->getWhere($arrIds);
-        $builder  = $this->connection->createQueryBuilder()
+        $queryBuilder  = $this->connection->createQueryBuilder()
             ->select('*')
             ->from($this->getValueTable())
             ->orderBy('row', 'ASC')
             ->addOrderBy('col', 'ASC');
 
-        if ($arrWhere) {
-            $builder->andWhere($arrWhere['procedure']);
+        $this->buildWhere($queryBuilder, $arrIds);
 
-            foreach ($arrWhere['params'] as $name => $value) {
-                $builder->setParameter($name, $value);
-            }
-        }
-
-        $statement = $builder->execute();
+        $statement = $queryBuilder->execute();
         $arrReturn = [];
 
         while ($row = $statement->fetch(\PDO::FETCH_ASSOC)) {
-            $arrReturn[$row['item_id']][$row['row']][] = $row;
+            $arrReturn[$row['item_id']][$row['row']][$row['col']] = $row;
         }
 
         return $arrReturn;
@@ -251,57 +259,50 @@ class TableText extends BaseComplex
      */
     public function unsetDataFor($arrIds)
     {
-        $arrWhere = $this->getWhere($arrIds);
+        $queryBuilder = $this->connection->createQueryBuilder()->delete($this->getValueTable());
+        $this->buildWhere($queryBuilder, $arrIds);
 
-        $builder = $this->connection->createQueryBuilder()
-            ->delete($this->getValueTable());
+        $queryBuilder->execute();
 
-        if ($arrWhere) {
-            $builder->andWhere($arrWhere['procedure']);
-
-            foreach ($arrWhere['params'] as $name => $value) {
-                $builder->setParameter($name, $value);
-            }
-        }
-
-        $builder->execute();
     }
 
     /**
-     * Build a where clause for the given id(s) and rows/cols.
+     * Build the where clause
      *
-     * @param mixed    $mixIds One, none or many ids to use.
-     *
-     * @param int|null $intRow The row number, optional.
-     *
-     * @param int|null $intCol The col number, optional.
-     *
-     * @return array<string,string|array>
+     * @param QueryBuilder $queryBuilder
+     * @param $mixIds
+     * @param null         $strLangCode
+     * @param null         $intRow
+     * @param null         $varCol
      */
-    protected function getWhere($mixIds, $intRow = null, $intCol = null)
-    {
-        $strWhereIds = '';
-        $strRowCol   = '';
-        if ($mixIds) {
+    protected function buildWhere(
+        QueryBuilder $queryBuilder,
+        $mixIds,
+        $intRow = null,
+        $varCol = null
+    ) {
+        $queryBuilder
+            ->andWhere('att_id = :att_id')
+            ->setParameter('att_id', (int) $this->get('id'));
+
+        if (!empty($mixIds)) {
             if (is_array($mixIds)) {
-                $strWhereIds = ' AND item_id IN (' . implode(',', $mixIds) . ')';
+                $queryBuilder
+                    ->andWhere('item_id IN (:item_ids)')
+                    ->setParameter('item_ids', $mixIds, Connection::PARAM_STR_ARRAY);
             } else {
-                $strWhereIds = ' AND item_id=' . $mixIds;
+                $queryBuilder
+                    ->andWhere('item_id = :item_id')
+                    ->setParameter('item_id', $mixIds);
             }
         }
 
-        if (is_int($intRow) && is_int($intCol)) {
-            $strRowCol = ' AND row = :row AND col = :col';
+        if (is_int($intRow) && is_string($varCol)) {
+            $queryBuilder
+                ->andWhere('row = :row AND col = :col')
+                ->setParameter('row', $intRow)
+                ->setParameter('col', $varCol);
         }
-
-        $arrReturn = array(
-            'procedure' => 'att_id=:att_id' . $strWhereIds . $strRowCol,
-            'params' => ($strRowCol)
-                ? array('att_id' => $this->get('id'), 'row' => $intRow, 'col' => $intCol)
-                : array('att_id' => $this->get('id')),
-        );
-
-        return $arrReturn;
     }
 
     /**
@@ -313,15 +314,10 @@ class TableText extends BaseComplex
             return array();
         }
 
-        $arrColLabels = deserialize($this->get('tabletext_cols'), true);
-        $countCol     = count($arrColLabels);
-        $widgetValue  = array();
-
-        foreach ($varValue as $k => $row) {
-            for ($kk = 0; $kk < $countCol; $kk++) {
-                $i = array_search($kk, array_column($row, 'col'));
-
-                $widgetValue[$k]['col_' . $kk] = ($i !== false) ? $row[$i]['value'] : '';
+        $widgetValue = array();
+        foreach ($varValue as $row) {
+            foreach ($row as $col) {
+                $widgetValue[$col['row']]['col_' . $col['col']] = $col['value'];
             }
         }
 
@@ -333,6 +329,7 @@ class TableText extends BaseComplex
      */
     public function widgetToValue($varValue, $itemId)
     {
+
         if (!is_array($varValue)) {
             return array();
         }
@@ -370,7 +367,7 @@ class TableText extends BaseComplex
             'value'   => (string) $arrCell['value'],
             'att_id'  => $this->get('id'),
             'row'     => (int) $arrCell['row'],
-            'col'     => (int) $arrCell['col'],
+            'col'     => $arrCell['col'],
             'item_id' => $intId,
         );
     }
