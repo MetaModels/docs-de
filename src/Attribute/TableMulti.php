@@ -30,7 +30,6 @@ namespace MetaModels\AttributeTableMultiBundle\Attribute;
 use Contao\System;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Connection;
-use Doctrine\DBAL\DBALException;
 use MetaModels\Attribute\BaseComplex;
 use MetaModels\IMetaModel;
 
@@ -115,6 +114,7 @@ class TableMulti extends BaseComplex
      */
     public function getFieldDefinition($arrOverrides = array())
     {
+        // Get table and column
         $strTable = $this->getMetaModel()->getTableName();
         $strField = $this->getColName();
 
@@ -122,11 +122,10 @@ class TableMulti extends BaseComplex
         $arrFieldDef['inputType']            = 'multiColumnWizard';
         $arrFieldDef['eval']['columnFields'] = array();
 
-
         // Check for override in local config
-        if (isset($GLOBALS['TL_CONFIG']['metamodelsattribute_tablemulti'][$strTable][$strField])) {
+        if (isset($GLOBALS['TL_CONFIG']['metamodelsattribute_multi'][$strTable][$strField])) {
             // Cleanup the config.
-            $config = $GLOBALS['TL_CONFIG']['metamodelsattribute_tablemulti'][$strTable][$strField];
+            $config = $GLOBALS['TL_CONFIG']['metamodelsattribute_multi'][$strTable][$strField];
             foreach ($config['columnFields'] as $col => $data) {
                 $config['columnFields']['col_' . $col] = $data;
                 unset($config['columnFields'][$col]);

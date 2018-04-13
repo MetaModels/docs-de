@@ -59,5 +59,9 @@ class TableMultiRunOnce extends Controller
         $this->Database
             ->prepare("UPDATE tl_metamodel_attribute SET type='tablemulti' WHERE type='multi'")
             ->execute();
+
+        $this->Database
+            ->prepare("UPDATE tl_metamodel_rendersetting SET template='mm_attr_tablemulti' WHERE template='mm_attr_multi'")
+            ->execute();
     }
 }
