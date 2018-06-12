@@ -268,6 +268,27 @@ Mitarbeiter ausgibt. Für die Filterung kann das folgende Query verwendet werden
    ORDER BY ma.name
 
 
+Filterung einer Select-Auswahl im BE für eine nicht-MM-Tabelle
+**************************************************************
+
+Hat man für das Attribut Einzelauswahl [select] eine Tabelle ausgewählt,
+die keine MM-Tabelle ist, steht als Filtermöglichkeit die Eingabe einer "WHERE-Eingrenzung"
+zur Verfügung. Möchte man z.B. bei seinem Datensatz eine Verbindung zur Mitglieder-Tabelle
+"tl_members" haben aber die Eingrenzung, dass ein Mitglied nur einmal ausgewählt werden darf,
+dann folgenden String einsetzen:
+
+.. code-block:: php
+   :linenos:
+   
+   (SELECT tl_member.id FROM tl_member
+    LEFT JOIN mm_member
+           ON mm_member.memberId=tl_member.id
+      WHERE
+            mm_member.memberId IS NULL
+      AND 
+            tl_member.id=sourceTable.id)
+
+
 ID aus GET-Parameter nach '::' abtrennen
 ****************************************
 
