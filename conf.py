@@ -7,6 +7,7 @@
 
 import sys
 import os
+import sphinx_rtd_theme
 from datetime import date
 
 #sys.path.append(os.path.abspath('_ext/phpdomain'))
@@ -33,10 +34,9 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = 'default'
-html_theme = "sphinx_rtd_theme"
-html_theme_path = ["_themes", ]
-html_static_path = ['_static']
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = ['_themes', ]
+html_static_path = []
 html_use_modindex = False
 htmlhelp_basename = 'MetaModelsdoc'
 html_favicon = '_img/favicon.ico'
