@@ -12,6 +12,7 @@ Erweiterungen
     
     frontend_editing
     notelist
+    isotope
     boilerplate
     perimetersearch
     attribute_color

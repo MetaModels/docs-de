@@ -208,7 +208,6 @@ Voraussetzungen:
 * Zugriff auf die Konsole für die Installation per composer
 
 
-
 Known Issues and Next Features
 ------------------------------
 
@@ -219,7 +218,6 @@ Spenden
 -------
 
 Ein Dank für die Spenden* für die Erweiterung an:
-
 
 
 (Spenden in Netto)
