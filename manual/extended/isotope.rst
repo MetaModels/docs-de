@@ -3,9 +3,9 @@
 MetaModels-2-Isotope
 ####################
 
-.. warning:: Die Merkliste ist noch im Fundraising und wird erst nach Erreichen der Zielsumme
-   von x.000€ freigeschaltet. 
-   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – siehe unten
+.. warning:: MetaModels-2-Isotope ist noch im Fundraising und wird erst nach
+   Erreichen der Zielsumme von x.000€ freigeschaltet. 
+   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
 Projekt MetaModels (2.1) zur Verfügung gestellt, um aus MetaModels heraus Items an den
@@ -40,8 +40,8 @@ nach Zahlung einer Spende ausgeschlossen.
 
 Für die Spende gibt es zwei Varianten:
 
-* 1: Zugriff auf die drei Module des Projektes zur Installation: 390€*1
-* 2: zusätzlich zum Punkt 1 noch den `Demoshop <https://isotope.metamodel.me>`_: 490€*1
+* 1: Zugriff auf die drei Module des Projektes zur Installation: 390€*1 oder höher
+* 2: zusätzlich zum Punkt 1 noch den `Demoshop <https://isotope.metamodel.me>`_: 490€*1 oder höher
 
 Für den Zugriff auf die Module werden die Repositories per SSH-PublicKey für
 eine Installation per composer frei gegeben. Der Demoshop beinhaltet die composer.json,
@@ -49,7 +49,8 @@ Templates, Datenbank sowie die Demodateien (/files).
 
 Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
-Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@-spin.de.
+Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@-spin.de - siehe auch
+`MM-Fundrasing-Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#isotope>`_.
 
 *1 Netto – ggf. zzgl. MwSt.
 
