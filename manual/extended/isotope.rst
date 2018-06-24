@@ -8,7 +8,7 @@ MetaModels-2-Isotope
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
-Projekt MetaModels (2.1) zur Verfügung gestellt, um aus MetaModels heraus Items an den
+Projekt MetaModels (2.1) zur Verfügung gestellt, um aus MetaModels heraus Items (Artikel, Produkt) an den
 Onlineshop `Isotopeecommerce <https://isotopeecommerce.org>`_ (Isotope) für
 einen Kauf (Checkout) zu übergeben.
 
@@ -170,6 +170,8 @@ die Übergabe an den Warenkorb zu sehen sein. Alle weiteren Konfigurationen
 wie Warenkorb und Checkout erfolgen in Isotope.
 
 |img_isotope_fe-addtocart|
+
+Wurde ein Item gekauft, ist dieses im Backend wie bei Isotope nicht mehr löschbar.
 
 Demoshop
 --------------
