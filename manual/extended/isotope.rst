@@ -125,15 +125,15 @@ vorhanden sein:
 
 Pflichtfelder:
 
-* Name (Attribut Text)
+* Name (Attribut Text, CombinedValues od. vgl.)
 * Beschreibung (Attribut Langtext)
-* SKU/Artikelnummer (Attribut Alias)
-* Preis (Attribut Price (Isotope))
+* SKU/Artikelnummer (Attribut Alias, Text, Numerisch od. vgl.)
+* Preis (Attribut Price (Isotope) oder Dezimal (dann sind keine Steuern möglich))
 
 Optional:
 
 * Bild (Attribut Datei)
-* Basispreis (Attribut Baseprice (Isotope))
+* Grundpreis (Attribut Baseprice (Isotope))
 * Download (Attribut Datei)
 * Gewicht (Attribut Dezimal)
 
