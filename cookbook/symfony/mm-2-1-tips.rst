@@ -12,14 +12,31 @@ erstmal in das Verzeichnis wechseln:
 
 ``cd /var/www/mein-contao``
 
-Composer-Update auf der Konsole - der Pfad zu PHP wird z.B. beim Systemcheck des
-Contao-Managers mit angezeigt.
+Anschließend sollte man sicher gehen, dass auf der Konsole die selbe
+PHP-Version läuft, wie für die Webseite. Das kann man abfragen mit:
+
+``php -v``
+
+Ist die PHP-Version nicht gleich, muss man jeweils mit einem Pfad zum PHP-Binary
+die Befehle aufrufen. Den Pfad erhlt man z.B. beim Systemcheck des
+Contao-Managers mit angezeigt oder aus der Doku/Wiki des Providers.
+
+``/usr/bin/php71 -v``
+
+
+Composer-Update
+---------------
+
+Mit folgendem Befehl wird ein Update eingeleitet:
 
 ``/usr/bin/php71 web/contao-manager.phar.php composer update -v``
 
 oder mit Speicher- und Laufzeitzuweisung
 
 ``/usr/bin/php71 -d memory_limit=1G -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
+
+Mit dem Parameter "-v" bzw. "-vv" oder "-vvv" erhalt man verschiedene Detailstufen der Ausgabe. Mit dem
+zusätzlichen Parameter "--dry-run" wird ein "Trockenlauf" als Test durchegführt.
 
 Nach einem Update ggf. das Installtool aufrufen, damit Datenbankänderungen
 durchgeführt werden (wird gern vergessen :D).
@@ -28,18 +45,42 @@ Die composer.phar sollte regelmäßig aktualisiert werden - dazu folgenden Befeh
 
 ``/usr/bin/php71 web/contao-manager.phar.php self-update``
 
+
+Paketversion ermitteln
+----------------------
+
+Bei Fehlermeldungen oder Nachfragen bei Entwicklern ist die Auskunft über die installierte Version
+einer Erweiterung wichtig. Das kann man über den Paketnamen ermitteln z.B. für den DC_General
+
+``/usr/bin/php71 web/contao-manager.phar.php composer show | grep dc-general``
+
+Mit
+
+``/usr/bin/php71 web/contao-manager.phar.php composer show``
+
+werden alle Pakete ausgegeben.
+
+
+Cache leeren
+------------
+
 Bei Anpassungen den Contao-Cache leeren:
 
-die "harte Tour":
-
-``rm -rf var/cache/``
-
-oder "Soft" (Empfehlung):
+"Soft" (Empfehlung):
 
 ``vendor/bin/contao-console cache:warmup``
 
-bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" aufruft.
+bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" aufruft
 
+oder die "harte Tour":
+
+``rm -rf var/cache/``
+
+und löscht "alles".
+
+
+Symfony-Toolbar
+---------------
 
 Während der Entwicklung sollte man unbedingt Zugriff auf die Entwicklungsumgebung
 per `app_dev` haben - der Seitenaufruf ist dann "domain.tld/app_dev.php/...".
