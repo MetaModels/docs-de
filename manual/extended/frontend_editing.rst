@@ -3,9 +3,9 @@
 Frontend-Editing (FEE)
 ======================
 
-.. warning:: Noch im Aufbau! |br|
-   Bitte die `Tickets auf Github <https://github.com/MetaModels/contao-frontend-editing/issues>`_
-   beachten!
+.. warning:: Das FEE ist für MM 2.0 und 2.1 einsetzbar, jedoch sind nicht alle
+   Eingabewidgets nutzbar - siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_. |br|
+
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
 von MetaModels-Daten im Frontend. Das bedeutet, dass Webseitenbesucher
