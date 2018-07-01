@@ -41,6 +41,8 @@ html_use_modindex = False
 htmlhelp_basename = 'MetaModelsdoc'
 html_favicon = '_img/favicon.ico'
 html_last_updated_fmt = '%d.%m.%Y'
+html_show_sphinx = False
+html_show_copyright = True
 
 # -- Options for LaTeX output ---------------------------------------------
 
