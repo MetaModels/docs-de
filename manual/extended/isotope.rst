@@ -222,8 +222,10 @@ Spenden
 
 Ein Dank für die Spenden* für die Erweiterung an:
 
+* NN: 342 €
+* Carsten Merz - `Fitkurs <https://www.fitkurs.de>`_: 390 €
 
-(Spenden in Netto)
+(*Spenden in Netto)
 
 
 .. |br| raw:: html
