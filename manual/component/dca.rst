@@ -33,6 +33,11 @@ Mit "Unabhängig" wird die Eingabemaske in einem der Navigationsblöcke in Conta
 eingegliedert und mit "Kind-Tabelle" einer vorhandenen MetaModel- oder
 Contao-Tabelle zugeordnet.
 
+Bei der Auswahl "Kind-Tabelle" ist zu beachten, dass der "Render-Modus" auf die Einstellung
+"Elternelement vorhanden" gestellt werden muss, sofern eine eindeutige Zuordnung von Kind-
+Items zu einem Elternitem erfolgen soll. Anderenfalls sind alle Kindelitems bei
+allen Elternitems aufgelistet.
+
 Die Anzeige des Eingabefeldes kann über weitere Steuerungsparameter beeinflusst
 werden. Jede Rendereinstellungen hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
 der Anzeige bzw. Sichtbarkeit ("Ansichtsbedingungen"). So kann ein oder mehrere
