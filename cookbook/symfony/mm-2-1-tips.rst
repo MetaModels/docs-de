@@ -78,6 +78,8 @@ oder die "harte Tour":
 
 und löscht "alles".
 
+In einem Script als Kombination - `siehe Gist von Sven Baumann <https://gist.github.com/baumannsven/dabcc9fa16ca89007103b5795c1e031e>`_
+
 
 Symfony-Toolbar
 ---------------
