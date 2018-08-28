@@ -68,8 +68,7 @@ Bei Anpassungen den Contao-Cache leeren:
 
 "Soft" (Empfehlung):
 
-``vendor/bin/contao-console cache:clear --env=prod``
-
+``vendor/bin/contao-console cache:clear --env=prod`` |br|
 ``vendor/bin/contao-console cache:warmup``
 
 bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" 
@@ -121,3 +120,7 @@ phpMyAdmin übernommen und getestet werden kann.
 
 
 .. |img_symfony-toolbar| image:: /_img/screenshots/cookbook/debug/symfony-toolbar.jpg
+
+.. |br| raw:: html
+
+   <br />
