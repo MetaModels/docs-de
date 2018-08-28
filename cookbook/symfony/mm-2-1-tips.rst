@@ -90,6 +90,8 @@ Dazu muss ein Zugang für app_dev eingerichtet werden über
 
 ``vendor/bin/contao-console contao:install-web-dir --user=ichbins --password=totalgeheim``
 
+oder ab Contao 4.5 über den Contao-Manager.
+
 Für den app_dev-Zugang kann aber nur ein User angelegt werden.
 
 Achtung: sofern der Zugang zur Seite über htaccess geschützt ist, müssen user+passwort
