@@ -68,9 +68,12 @@ Bei Anpassungen den Contao-Cache leeren:
 
 "Soft" (Empfehlung):
 
+``vendor/bin/contao-console cache:clear --env=prod``
 ``vendor/bin/contao-console cache:warmup``
 
-bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" aufruft
+bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" 
+im Entwicklungsmodus aufruft. Muss der Pfad zu PHP mit aufgerufen werden,
+ist dieser (z.B. ``/usr/bin/php71``) vor das "vendor" zu setzen.
 
 oder die "harte Tour":
 
