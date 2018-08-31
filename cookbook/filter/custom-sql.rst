@@ -306,6 +306,32 @@ wie das folgende Beispiel zeigt:
    WHERE id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
 
 
+Filter für ein Select/Tags in der Eingabemaske
+**********************************************
+
+Die Attribute Einfach- und Mehrfachauswahl (Select und Tags) können für die
+Eingabemaske mit einem Filter versehen werden. Soll dieser Filter dynamisch
+auf ein anderes Attribut reagieren, kann man mit der Filterregel "Eigenes SQL"
+arbeiten und die dynamischen Parameter verwenden.
+
+Als dynamischer Parameter kann z.B. die URL mit den GET-Parametern oder bei einem
+`submitonchange` eines Attributes in der Eingabemaske die POST-Parameter ausgewertet
+werden.
+
+Zum Beispiel soll auf die Select-Auswahl der Abteilung die Liste der auswählbarer
+Mitarbeiter auf die eingeschränkt werden, die zur selben Abteilung gehören. "Gelauscht"
+wird auf den POST-Parameter der Abteilung und anschließend kann mit QUERY-U (update)
+oder QUERY-C (create) die Mitarbeiterliste eingegrenzt werden.
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT * FROM  mm_mitarbeiter
+   WHERE IF (
+         {{param::post?name=abteilung}} != 'NULL', (QUERY-U), (QUERY-C)
+    )
+
+
 Kommentare im SQL-Query
 ***********************
 
