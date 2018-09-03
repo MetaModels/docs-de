@@ -86,8 +86,9 @@
       }
     },
     "branch-alias": {
-      "dev-master": "2.0.x-dev",
-      "dev-feature/contao4":  "2.1.x-dev"
+      "dev-master-contao3": "2.1.x-dev",
+      "dev-master": "2.2.x-dev",
+      "dev-feature/contao4":  "2.2.x-dev"
     }
   },
   "minimum-stability": "dev",
