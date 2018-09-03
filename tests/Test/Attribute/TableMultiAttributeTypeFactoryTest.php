@@ -13,7 +13,6 @@
  * @package    MetaModels
  * @subpackage AttributeTableMulti
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @author     David Greminger <david.greminger@1up.io>
  * @author     Ingolf Steinhardt <info@e-spin.de>
  * @author     David Molineus <david.molineus@netzmacht.de>
  * @author     Andreas Dziemba <adziemba@web.de>

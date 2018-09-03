@@ -12,7 +12,6 @@
  *
  * @package    MetaModels
  * @subpackage AttributeTableMulti
- * @author     David Molineus <david.molineus@netzmacht.de>
  * @author     Andreas Dziemba <adziemba@web.de>
  * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  * @copyright  2012-2018 The MetaModels team.
