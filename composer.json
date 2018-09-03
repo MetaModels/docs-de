@@ -50,12 +50,12 @@
     "source": "https://github.com/MetaModels/attribute_tablemulti"
   },
   "require": {
-    "php": ">=5.6 | ^7.0",
+    "php": "^5.6 || ^7.0",
     "contao/core-bundle": "^4.4",
     "contao-community-alliance/dc-general": "~2.1@dev",
     "metamodels/core": "~2.1@dev",
-    "symfony/dependency-injection": "^3.3",
-    "symfony/http-kernel": "^3.3"
+    "symfony/dependency-injection": "^3.3 || ^4.0",
+    "symfony/http-kernel": "^3.3 || ^4.0"
   },
   "require-dev": {
     "cyberspectrum/contao-toolbox": "~0.6",
@@ -91,9 +91,10 @@
     }
   },
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "repositories": [
     {
-      "type": "git",
+      "type": "vcs",
       "url": "git@gitlab.com:metamodels/core.git"
     }
   ]

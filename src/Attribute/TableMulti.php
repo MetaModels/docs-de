@@ -235,7 +235,7 @@ class TableMulti extends BaseComplex
      */
     public function getDataFor($arrIds)
     {
-        $queryBuilder  = $this->connection->createQueryBuilder()
+        $queryBuilder = $this->connection->createQueryBuilder()
             ->select('*')
             ->from($this->getValueTable())
             ->orderBy('row', 'ASC')
@@ -262,7 +262,6 @@ class TableMulti extends BaseComplex
         $this->buildWhere($queryBuilder, $arrIds);
 
         $queryBuilder->execute();
-
     }
 
     /**

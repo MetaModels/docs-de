@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of MetaModels/attribute_tablemulti.
  *
@@ -12,6 +13,7 @@
  * @package    MetaModels
  * @subpackage AttributeTableMulti
  * @author     Andreas Dziemba <dziemba@men-at-work.de>
+ * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  * @copyright  2018 The MetaModels team.
  * @license    https://github.com/MetaModels/attribute_translatedtablemulti/blob/master/LICENSE LGPL-3.0-or-later
  * @filesource

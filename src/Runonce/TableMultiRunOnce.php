@@ -13,6 +13,7 @@
  * @package    MetaModels
  * @subpackage AttributeTableMulti
  * @author     Andreas Dziemba <dziemba@men-at-work.de>
+ * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  * @copyright  2018 The MetaModels team.
  * @license    https://github.com/MetaModels/attribute_translatedtablemulti/blob/master/LICENSE LGPL-3.0-or-later
  * @filesource
@@ -60,8 +61,9 @@ class TableMultiRunOnce extends Controller
             ->prepare("UPDATE tl_metamodel_attribute SET type='tablemulti' WHERE type='multi'")
             ->execute();
 
+        $sql = 'UPDATE tl_metamodel_rendersetting SET template=\'mm_attr_tablemulti\' WHERE template=\'mm_attr_multi\'';
         $this->Database
-            ->prepare("UPDATE tl_metamodel_rendersetting SET template='mm_attr_tablemulti' WHERE template='mm_attr_multi'")
+            ->prepare($sql)
             ->execute();
     }
 }
