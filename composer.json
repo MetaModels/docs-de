@@ -1,18 +1,30 @@
 {
-  "name": "metamodels/attribute_tabletext",
-  "description": "MetaModels attribute for dynamic table text",
+  "name": "metamodels/attribute_tablemulti",
+  "description": "MetaModels attribute for dynamic table multi",
   "keywords": [
     "contao",
     "metamodels",
     "attribute",
-    "text",
-    "tabletext",
+    "multicolumnwizard",
+    "tablemulti",
     "nontranslatable"
   ],
-  "type": "contao-module",
+  "type": "contao-bundle",
   "homepage": "http://now.metamodel.me/",
-  "license": "LGPL-3.0+",
+  "license": "LGPL-3.0-or-later",
   "authors": [
+    {
+      "name": "Ronny Binder",
+      "email": "rb@bytworks.ch",
+      "homepage": "https://www.byteworks.ch",
+      "role": "Originator"
+    },
+    {
+      "name": "Michael Bischof",
+      "email": "mb@byteworks.ch",
+      "homepage": "https://www.byteworks.ch",
+      "role": "Originator"
+    },
     {
       "name": "Christian Schiffler",
       "email": "c.schiffler@cyberspectrum.de",
@@ -23,53 +35,67 @@
       "name": "Stefan Heimes",
       "email": "stefan_heimes@hotmail.com",
       "role": "Developer"
+    },
+    {
+      "name": "Andreas Dziemba",
+      "email": "dziemba@men-at-work.de",
+      "role": "Developer"
     }
   ],
   "support": {
     "email": "mail@metamodel.me",
-    "issues": "https://github.com/MetaModels/attribute_tabletext/issues",
+    "issues": "https://github.com/MetaModels/attribute_tablemulti/issues",
     "wiki": "http://de.contaowiki.org/MetaModels",
     "irc": "irc://irc.freenode.org/contao.mm",
-    "source": "https://github.com/MetaModels/attribute_tabletext"
+    "source": "https://github.com/MetaModels/attribute_tablemulti"
   },
   "require": {
-    "php": ">=5.4",
-    "contao/core": "^3.5.5",
-    "contao-community-alliance/composer-plugin": "~2.0",
-    "contao-community-alliance/dc-general": "~2.0@beta",
-    "metamodels/core": "~2.0@alpha"
+    "php": "^5.6 || ^7.0",
+    "contao/core-bundle": "^4.4",
+    "contao-community-alliance/dc-general": "~2.1@dev",
+    "metamodels/core": "~2.1@dev",
+    "symfony/dependency-injection": "^3.3 || ^4.0",
+    "symfony/http-kernel": "^3.3 || ^4.0"
   },
   "require-dev": {
     "cyberspectrum/contao-toolbox": "~0.6",
-    "phpcq/all-tasks": "~1.0",
-    "metamodels/base-unit-tests": "~1.0"
+    "phpcq/all-tasks": "~1.1",
+    "contao/manager-bundle": "~4.4"
   },
   "autoload": {
-    "psr-0": {
-      "MetaModels": "src"
-    }
+    "psr-4": {
+      "MetaModels\\AttributeTableMultiBundle\\": "src"
+    },
+    "files": [
+      "src/deprecated-autoload.php"
+    ]
   },
   "autoload-dev": {
-    "psr-0": {
-      "MetaModels\\Test": "tests"
+    "psr-4": {
+      "MetaModels\\AttributeTableMultiBundle\\Test\\": "tests/Test"
     }
   },
   "extra": {
+    "contao-manager-plugin": "MetaModels\\AttributeTableMultiBundle\\ContaoManager\\Plugin",
     "contao": {
-      "sources": {
-        "contao": "system/modules/metamodelsattribute_tabletext"
-      },
       "transifex": {
         "project": "metamodels",
-        "prefix": "attribute_tabletext-",
-        "languages_cto": "contao/languages",
+        "prefix": "attribute_tablemulti-",
+        "languages_cto": "src/Resources/contao/languages",
         "languages_tx": ".tx"
       }
     },
     "branch-alias": {
       "dev-master": "2.0.x-dev",
-      "dev-develop": "2.1.x-dev"
+      "dev-feature/contao4":  "2.1.x-dev"
     }
   },
-  "prefer-stable": true
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@gitlab.com:metamodels/core.git"
+    }
+  ]
 }

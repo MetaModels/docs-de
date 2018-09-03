@@ -6,6 +6,6 @@
    https://github.com/phpcq/phpcq
 
 -->
-<project name="metamodels/attribute-tabletext" default="build">
+<project name="metamodels/attribute-tablemulti" default="build">
     <import file="vendor/phpcq/phpcq/phpcq.main.xml" />
 </project>
