@@ -157,7 +157,7 @@ class TableMulti extends BaseComplex
 
         foreach ($arrIds as $intId) {
             // Walk every row.
-            foreach ($arrValues[$intId] as $row) {
+            foreach ((array)$arrValues[$intId] as $row) {
                 // Walk every column and update / insert the value.
                 foreach ($row as $col) {
                     // Skip empty cols but preserve cols containing '0'.
