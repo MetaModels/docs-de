@@ -15,8 +15,8 @@ unseres Fundrasings kann unser "early adopter"-Programm genutzt werden.
 `Mehr... <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-1>`_
 
 
-Installieren via Composer
--------------------------
+Installieren via Paketverwaltung/Composer
+-----------------------------------------
 
 MetaModels und alle seine Abhängigkeiten können mit der `Composer Paketverwaltung <https://c-c-a.org/ueber-composer>`_
 im Contao-Backend installiert werden.
