@@ -40,20 +40,6 @@ Im Composer-Client von Contao ("Paketverwaltung") ist über die Anzeige des Abh�
 (Checkbox) ein Überblick über die installierten Pakete möglich.
 
 
-Installieren via Nightly build
-------------------------------
-
-Alternativ zur Installation via Composer ist die manuelle Installation per FTP möglich. Dazu wird
-die aktuelle Version von MetaModels von der `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_
-geladen, entpackt und per FTP auf den Server hoch geladen. Die meisten Ordner des Zip-Paketes
-kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionen
-müssen in das Hauptverzeichnis (Root) von Contao.
-
-Anschließend muss in der Erweiterungsverwaltung die Datenbank aktualisiert werden - kommt dabei eine Fehlermeldung
-i.E. ``Fatal error: Class 'MetaModels\Helper\UpgradeHandler' ....!metamodels-tng-branch/config/runonce_0.php`` sollte
-eine Leerung des internen Caches über die Contao-Systemwartung erfolgen.
-
-
 Test von speziellen Paketen via Composer
 ----------------------------------------
 
@@ -160,9 +146,47 @@ Reiter "Commits".
            "metamodels/attribute_alias": "dev-master#a97ec461ae1254fa616811c3ce234515238fb3c7",
            ...
 
+Installieren via "Nightly build"
+--------------------------------
 
-MetaModels aktualisieren
-------------------------
+.. warning:: Die automatische Generierung des "Nightly build" ist seit 08.10.2018 abgeschaltet.
+  Bitte die Installtion per Paketverwaltung/Contao-Manger/Composer durchführen.
+
+Alternativ zur Installation via Composer ist die manuelle Installation per FTP möglich. Dazu wird
+die aktuelle Version von MetaModels von der `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_
+geladen, entpackt und per FTP auf den Server hoch geladen. Die meisten Ordner des Zip-Paketes
+kommen in den Ordner `/system/module` - lediglich zwei PHP-Dateien für die Ajax-Funktionen
+müssen in das Hauptverzeichnis (Root) von Contao.
+
+Anschließend muss in der Erweiterungsverwaltung die Datenbank aktualisiert werden - kommt dabei eine Fehlermeldung
+i.E. ``Fatal error: Class 'MetaModels\Helper\UpgradeHandler' ....!metamodels-tng-branch/config/runonce_0.php`` sollte
+eine Leerung des internen Caches über die Contao-Systemwartung erfolgen.
+
+
+MetaModels von "Nightly build" zu "Composer" wechseln
+-----------------------------------------------------
+
+Das Vorgehen ist ähnlich dem "MetaModels aktualisieren". Beim Wechsel auf Composer sollte beachtet
+werden, dass der Composer für seine Arbeit einiges an RAM beansprucht - aus Erfahrungswerten sollten
+es mindestens 256MB sein. Die genaue Größe hängt von den weiteren installierten Paketen sowie von den
+Servereinstellungen des Providers ab.
+
+Das folgende Vorgehen hat sich bisher bewährt:
+
+* Composer installieren
+* alle alten Ordner von MM löschen (welche das waren könnt ihr in euren Downloads vom Nightly sehen) - Wirklich ALLE
+* Contao Cache leeren -> /system/cache (alles da drinn)
+* **KEIN** DB update machen (sonst ist alles weg)
+* in Composer dann die gewünschte MM Version auswählen zum Installieren vormerken und dann installieren
+* das Datenbankupdate sollte dann von alleine vorgeschlagen und gemacht werden
+
+Aktuelle Informationen sind im
+`Forum <https://community.contao.org/de/showthread.php?59961-MetaModels-aktualisieren-%28von-Nightly-Build-zu-Composer%29>`_
+zu finden.
+
+
+MetaModels "Nightly build" aktualisieren
+----------------------------------------
 
 Wurde MetaModels über den Composer installiert, ist darüber auch die Aktualisierung durchzuführen.
 
@@ -178,28 +202,6 @@ Das folgende Vorgehen hat sich bisher bewährt:
 
 Aktuelle Informationen sind im
 `Forum <https://community.contao.org/de/showthread.php?56725-MetaModels-aktualisieren-%28ohne-Composer%29>`_
-zu finden.
-
-
-MetaModels von "Nightly build" zu "Composer" wechseln
------------------------------------------------------
-
-Das Vorgehen ist ähnlich dem "MetaModels aktualisieren". Beim Wechsel auf Composer sollte beachtet
-werden, dass der Composer für seine Arbeit einiges an RAM beansprucht - aus Erfahrungswerten sollten
-es mindestens 100MB sein. Die genaue Größe hängt von den weiteren installierten Paketen sowie von den
-Servereinstellungen des Providers ab.
-
-Das folgende Vorgehen hat sich bisher bewährt:
-
-* Composer installieren
-* alle alten Ordner von MM löschen (welche das waren könnt ihr in euren Downloads vom Nightly sehen) - Wirklich ALLE
-* Contao Cache leeren -> /system/cache (alles da drinn)
-* **KEIN** DB update machen (sonst ist alles weg)
-* in Composer dann die gewünschte MM Version auswählen zum Installieren vormerken und dann installieren
-* das Datenbankupdate sollte dann von alleine vorgeschlagen und gemacht werden
-
-Aktuelle Informationen sind im
-`Forum <https://community.contao.org/de/showthread.php?59961-MetaModels-aktualisieren-%28von-Nightly-Build-zu-Composer%29>`_
 zu finden.
 
 
