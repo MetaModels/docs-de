@@ -277,6 +277,7 @@ Zudem können über diesen Event auch zusätzliche Informationen abgespeichert w
 Known Issues and Next Features
 ------------------------------
 
+* Seite(n) mit Notelist dürfen nicht gecached werden
 * Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
 * Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
 
