@@ -224,6 +224,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 * NN: 342 €
 * Carsten Merz - `Fitkurs <https://www.fitkurs.de>`_: 390 €
+* Oliver Willmes - `oliverwillmes.de <https://www.oliverwillmes.de>`_: 390 €
 
 (*Spenden in Netto)
 
