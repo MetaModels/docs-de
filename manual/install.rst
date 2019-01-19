@@ -12,7 +12,7 @@ Die Installation von MM 2.1 setzt PHP von mind. Version 7.1 voraus - empfohlen w
 MetaModels 2.1 kann über den Contao-Manager oder über die Konsole per Composer installiert werden - 
 siehe folgender Abschnitt.
 
-Für eine Re-Finanzierung der umfangreichen Arbeiten bittet das MM-Team um eine finanzielle
+Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um eine finanzielle
 Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
 und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzen Zuwendungen, sind
 das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
