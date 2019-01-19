@@ -14,5 +14,5 @@ Dazu gibt es verschiedene Wege - einer davon ist:
 * alle Erweiterungen, zu denen es kein Bundle gibt, in /system/modules kopieren
 * Datenbank von C3 in C4 kopieren - oder die MySQL-Zugangsdaten auf die alte DB anpassen
 
-Anschließend sollte die Webseite wieder laufen - ggf. nochmal ein `composer update` machen bzw. den Cache löschen
-und die Datenbank über das Install-Tool aktualisieren.
+AnschlieÃŸend sollte die Webseite wieder laufen - ggf. nochmal ein `composer update` machen bzw. den Cache lÃ¶schen
+und die Datenbank Ã¼ber das Install-Tool aktualisieren.
