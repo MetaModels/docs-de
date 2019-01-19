@@ -37,7 +37,7 @@ Start-Bundle auch die mehrsprachigen Pakete mit installiert.
 
 Ebenso ist die Installation der Pakete und Bundles direkt über die Konsole per Composer z.B. mit
 
-`php web/contao-manager.phar.php composer require metamodels/core`
+``php web/contao-manager.phar.php composer require metamodels/core``
 
 möglich. Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
 siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
@@ -155,8 +155,8 @@ Reiter "Commits".
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 
-:ref:`cookbook_move_mm2.0_to_2.1`
-:ref:`cookbook_install_mm2.0-and-older`
+* :ref:`cookbook_move_mm2.0_to_2.1`
+* :ref:`cookbook_install_mm2.0-and-older`
 
 .. |br| raw:: html
 
