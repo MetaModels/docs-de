@@ -38,14 +38,15 @@ wird der Core sowie die wichtigsten Attribute und Filter ohne z.B. die Pakete f�
 installiert.
 
 Wie in MetaModesls 2.0 gibt es auch das Bundle `metamodels/bundle_all`, welches neben dem
-`bundle_start` auch die mehrsprachigen Pakete mit installiert (Hinweis: die Pakete translatedselect
-translatedtags sind hier nicht mehr inkludiert, da diese nur für Spezialfälle einzusetzen sind).
+`bundle_start` auch die mehrsprachigen Pakete mit installiert (Hinweis: die Pakete `translatedselect`
+`translatedtags` sind hier nicht mehr inkludiert, da diese nur für Spezialfälle einzusetzen sind).
 
-Ebenso ist die Installation der Pakete und Bundles direkt über die Konsole per Composer z.B. mit
+Neben dem Contao-Manager ist die Installation der Pakete und Bundles direkt über die Konsole per
+Composer möglich - z.B. mit
 
 ``php web/contao-manager.phar.php composer require metamodels/core``
 
-möglich. Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
+Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
 siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
 
 Nach der Installation ist ein Update der Datenbank nicht zu vergessen!
