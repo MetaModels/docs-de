@@ -4,22 +4,22 @@ MetaModels installieren und aktualisieren
 =========================================
 
 Das aktuelle MetaModels 2.1 für Contao 4 wird wie gehabt für die aktuelle LTS (4.4)
-ausgiebig getestet und dafür frei gegeben - nach den bisherigen Tests, läuft MM 2.1
+ausgiebig getestet und ist dafür frei gegeben - nach den bisherigen Tests, läuft MM 2.1
 aber auch problemlos unter 4.6.
 
 Die Installation von MM 2.1 setzt PHP von mind. Version 7.1 voraus - empfohlen wird PHP 7.2.
 
-MetaModels 2.1 kann über den Contao-Manager oder über die Konsole per Composer installiert werden - 
-siehe folgender Abschnitt.
-
-Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um eine finanzielle
-Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
-und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzen Zuwendungen, sind
-das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
-erstellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-1>`_
+MetaModels 2.1 kann über den Contao-Manager oder über die Konsole per Composer installiert
+werden - siehe folgender Abschnitt.
 
 Hinweise zu älteren Versionen von MetaModels und Versionswechsel sind am `Ende der Seite
 <#hinweise-und-anleitungen-fur-altere-contao-und-mm-versionen>`_ zu finden.
+
+.. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um eine finanzielle
+   Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
+   und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzen Zuwendungen, sind
+   das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
+   ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-1>`_
 
 
 Installation von MM 2.1
