@@ -163,8 +163,9 @@ Reiter "Commits".
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 
-* :ref:`cookbook_move_mm2.0_to_2.1`
+:ref:`cookbook_install_mm2.0-and-older`
 
+* :ref:`cookbook_move_mm2.0_to_2.1`
 * :ref:`cookbook_install_mm2.0-and-older`
 
 .. |br| raw:: html
