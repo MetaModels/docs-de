@@ -1,8 +1,7 @@
-.. _cookbook_install_mm2.0-and-older:
-
-.. warning:: Die Angaben sind nicht für das aktuelle MetaModels 2.x
+.. warning:: Die Angaben sind nicht für das aktuelle MetaModels 2.1
    sondern für die Version 2.0 und älter
 
+.. _cookbook_install_mm2.0-and-older:
 
 MetaModels 2.0 installieren und aktualisieren
 =============================================
