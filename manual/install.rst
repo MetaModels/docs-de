@@ -159,7 +159,6 @@ Reiter "Commits".
            ...
 
 
-
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 
