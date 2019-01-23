@@ -4,7 +4,7 @@ MetaModels installieren und aktualisieren
 =========================================
 
 Das aktuelle MetaModels 2.1 für Contao 4 wird wie gehabt für die aktuelle LTS (4.4)
-ausgiebig getestet und ist dafür frei gegeben - nach den bisherigen Tests, läuft MM 2.1
+ausgiebig getestet und ist dafür freigegeben - nach den bisherigen Tests, läuft MM 2.1
 aber auch problemlos unter 4.6.
 
 Die Installation von MM 2.1 setzt PHP von mind. Version 7.1 voraus - empfohlen wird PHP 7.2.
@@ -15,27 +15,29 @@ werden - siehe folgender Abschnitt.
 Hinweise zu älteren Versionen von MetaModels und Versionswechsel sind am `Ende der Seite
 <#hinweise-und-anleitungen-fur-altere-contao-und-mm-versionen>`_ zu finden.
 
-.. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um eine finanzielle
+.. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um finanzielle
    Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
-   und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzen Zuwendungen, sind
+   und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzten Zuwendungen, sind
    das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-1>`_
 
 
 Installation von MM 2.1
 -----------------------
-Die Installtionsvoraussetzungen für MetaModels 2.1 sind ein laufendes Contao 4.4. oder höher und
-PHP 7.1 oder höher.
+Die Installationsvoraussetzungen  für MetaModels 2.1 sind
+
+* ein laufendes Contao 4.4. oder höher und
+* PHP 7.1 oder höher.
 
 Im Contao-Manager werden über die Eingabe `metamodels/` alle zur Verfügung stehenden Pakete
 aufgelistet. Neben dem Basispaket `metamodels/core` können darüber hinaus weitere Attribute
 und Filter installiert werden.
 
-Neben den einzelnen Paketen gibt es verschiedene `Bundles`, die verschiedene Pakete für eine
-vereinfachte Installation zusammen fassen.
+Neben den einzelnen Paketen gibt es `Bundles`, die verschiedene Pakete für eine
+vereinfachte Installation zusammenfassen.
 
 Für den Einstieg in MetaModels ist das Bunde `metamodels/bundle_start` zu empfehlen - hiermit
-wird der Core sowie die wichtigsten Attribute und Filter ohne z.B. die Pakete für die Mehrsprachigkeit
+werden der Core sowie die wichtigsten Attribute und Filter ohne z.B. die Pakete für die Mehrsprachigkeit
 installiert.
 
 Wie in MetaModesls 2.0 gibt es auch das Bundle `metamodels/bundle_all`, welches neben dem
@@ -59,7 +61,7 @@ Nach der Installation ist ein Update der Datenbank nicht zu vergessen!
 Test von speziellen Paketen
 ---------------------------
 
-Neben den aktuell verfügbaren und frei gegebenen Pakete von MetaModels, gibt es teilweise
+Neben den aktuell verfügbaren und freigegebenen Pakete von MetaModels, gibt es teilweise
 Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen - das
 könnte z.B. für den MetaModels-core das ein Paket "dev-hotfix-xyz" sein. Zu sehen sind die Pakete u.a.
 auf Github im entsprechenden Repository (z.B. MetaModels/core) im Reiter
