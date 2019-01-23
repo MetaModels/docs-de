@@ -54,8 +54,16 @@ Auf dieser Grundlage wurde unter dem Namen "MetaModels" eine komplett neue Erwei
 entwickelt, in die viele moderne Programmierparadigmen eingeflossen sind. Ziel war es,
 eine Erweiterung auf einer flexiblen und gut erweiterbaren Codebasis zu schaffen.
 
-Mit der aktuellen Version 2.0 von MetaModels liegt nun das Ergebnis von vielen Stunden
+Mit der Version 2.0 von MetaModels für Contao 3.x lag das Ergebnis von vielen Stunden
 der Diskussion um die "beste Lösung" und harter Programmierung vor.
+
+Inzwischen sind wir bei der Version 2.1 von MetaModels angelangt, welches eine
+Migration von 2.0 darstellt und unter Contao 4.x läuft.
+
+Bei dieser Umstellung wurde schon vieles im "Unterbau" für kommende Versionen von MetaModles
+angepasst und "alte Zöpfe" abgeschnitten, viele kleine Bugs gefixt sowie die DB-Abfragen
+Symfony-like umgestellt.
+
 
 MetaModels im Vergleich zu anderen Tools
 ----------------------------------------
@@ -71,6 +79,12 @@ werden können oder müssen. Ähnliche Funktionen gibt es z.B. bei den Erweiteru
 "[dma_elementgenerator]" oder der "[rocksolid-custom-elements]". Der Unterschied zu 
 diesen Erweiterungen liegt z.B. in der Möglichkeit in MetaModels auch komplexe
 Datenstrukturen abzubilden oder auch in den vielfältigen Ausgaben- und Filterfunktionen.
+
+Inzwischen gibt es weitere Erweiterungen, die sich aus der Idee des 'Catalog' entwickelt
+haben. Nach unserer Einschätzung liegen die Vorteile von MetaModels in dessem wohlstrukturiertem
+und modernen Unterbau (inkl. des DC_General) und der damit einhergehenden umfangreichen
+Anpassbarkeit. Weiterhin sind viele Funktionen wie z.B. die Mehrsprachigkeit im MM-Core
+fest verankert.
 
 Vor der Umsetzung einer Aufgabenstellung steht häufig die Frage "Eigene Erweiterung oder
 Einsatz von MetaModels?". Die Frage kann nicht pauschal beantwortet werden, denn mit beiden
