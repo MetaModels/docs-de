@@ -3,6 +3,9 @@
 Rendering: E-Mail-Ausgabe verschlüsseln
 =======================================
 
+.. note:: Die Verschlüsselung von E-Mails für die Ausgabe als HTML5 ist inzwischen
+   automatisch im Rendering der Texte enthalten - siehe `Github <https://github.com/MetaModels/core/issues/1233>`_ 
+
 In Contao eingegebene E-Mails werden im Quelltext verschlüsselt ausgegeben, um das automatische
 Abgreifen von E-Mail-Adressen zu erschweren.
 
