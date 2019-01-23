@@ -90,6 +90,15 @@ Der Designer kann für jeden Zweck eine komplett andere Ansicht definieren, sei 
 simple Listenausgabe, einen "Anreißer" für die Startseite oder eine Detailansicht eines
 Datensatzes, und ebenso wann und wo sie eingesetzt werden soll.
 
+Erweiterungen
+-------------
+
+Für spezielle Aufgabenstellungen gibt es weitere Pakete, die MetaModels in seinem
+Funktionsumfang wie z.B. eine Umkreissuche, Merkliste oder Schnittstelle zum Shop
+`Isotope` ergännzen bzw. erweitern.
+
+Eine Übersicht ist hier zu finden: :ref:`extended_index`
+
 Ausblick
 --------
 
@@ -98,8 +107,6 @@ einige Punkte, die in der Planung sind:
 
 * erweiterte Ausgaben wie RSS-Feeds und andere Syndications-Formen, XML, CSV
 * Export/Import-Funktion
-* Front-End-Editing
-* Schnittstelle zum Online-Shop-Modul 'Isotope'
 
 Eine schnelle Umsetzung von weiteren Funktionen ist nur mit finanzieller Unterstüzung
 oder der Freigabe von Auftrags-Programmierungen möglich - Informationen dazu auf der 
