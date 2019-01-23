@@ -3,9 +3,6 @@
 Attribut Color
 ==============
 
-.. warning:: Für MetaModels 2.0 ist mindestens die Version 2.0.0-alpha2
-   notwendig
-
 Mit dem Attribut "`Color <https://github.com/MetaModels/attribute_color>`_"
 wird ein Eingabefeld für einen Hex-Farbcode sowie ein Eingabefeld für
 den Deckungsgrad zur Verfügung gestellt. Das Eingabefeld für den

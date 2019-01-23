@@ -3,7 +3,6 @@
 Umkreissuche
 ============
 
-.. warning:: Noch im Aufbau! Kurzanleitung zu Version 2.0.0-alpha2
 
 Einleitung
 ----------
