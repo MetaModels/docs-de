@@ -15,7 +15,41 @@ welches in der Render-Einstellung für die Ausgabe ausgewählt wurde.
 Ist noch kein eigens Template im Einsatz, muss eine Kopie von
 "metamodel_prerendered" im Contao-Ordner "Templates" angelegt werden.
 
-Das jeweilige Template wird mit den folgenden Zeilen ergänzt:
+Das Debugging ist durch die Möglichkeiten der Debug-Toolbar
+von Symfony sehr komfortabel.
+
+Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // Debug items.
+   if (function_exists('dump')) {
+       dump($this->data);
+   }
+   ?>
+
+Wird die Seite über "app_dev" aufgerufen z.B. "domain.tld/app_dev.php/meine-mm-listenansicht.html",
+kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon" untersucht werden:
+
+|img_symfony-toolbar|
+
+Mit der Prüfung "function_exist" stört das `dump` nicht den normalen Aufruf der Seite.
+
+Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
+:ref:`rst_cookbook_frontend_array-helper`, die eine Ausgabe im Quelltext für ein
+`Copy&Paste` erstellt.
+
+
+Debug in MM 2.0
+---------------
+
+In Contao 3 steht die Symfony-Toolbar nicht zur Verfügung und man muss über ein
+`print_r` gehen.
+
+Das jeweilige Template wird mit einigen Ausgabezeilen ergänzt und sollte
+anschließend wie folgt beginnen:
 
 .. code-block:: php
    :linenos:
@@ -27,31 +61,6 @@ Das jeweilige Template wird mit den folgenden Zeilen ergänzt:
    echo "</pre>\n";
    echo "\n DEBUG ENDE -->";
    ?>
-
-Das Template sollte anschließend mit den folgenden Zeilen beginnen:
-
- 
-.. code-block:: php
-   :linenos:
-
-   <?php 
-   echo "<!-- DEBUG START \n";
-   echo "<pre>\n";
-   print_r($this->items->parseAll($this->getFormat(), $this->view));
-   echo "</pre>\n";
-   echo "\n DEBUG ENDE -->";
-   ?>
-   
-   <?php $strRendersettings = isset($this->settings)? 'settings' : 'view'; ?>
-   <?php if (count($this->data)): ?>
-    
-   <div class="layout_full">
-    
-   <?php foreach ($this->data as $arrItem): ?>
-   <div class="item <?php echo $arrItem['class']; ?>">
-    
-   <?php foreach ($arrItem['attributes'] as $field => $strName): ?>
-   //...
 
 Wird die entsprechende Webseite mit derm Listing im Browser aufgerufen,
 sollte sich im Quelltext die Debugausgabe befinden.
@@ -79,35 +88,6 @@ kurzzeitige Abschalten des Filters für die Weiterleitung.
 
 Die Ausgabe kann man wieder entfernen, in dem man den Ausgabeblock
 auskommentiert, löscht oder zu einem anderen Template wechselt.
-
-Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
-:ref:`rst_cookbook_frontend_array-helper`.
-
-
-Debug in MM 2.1
----------------
-
-Das Debugging in MM 2.1 ist durch die Möglichkeiten der Debug-Toolbar von
-Symfony sehr komfortabel geworden.
-
-In den Templates kann z.B. folgendes Code-Snipped eingebaut werden:
-
-.. code-block:: php
-   :linenos:
-
-   <?php
-   // Debug items.
-   if (function_exists('dump')) {
-       dump($this);
-   }
-   ?>
-
-Wird die Seite über "app_dev" aufgerufen z.B. "domain.tld/app_dev.php/meine-mm-listenansicht.html",
-kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon" untersucht werden:
-
-|img_symfony-toolbar|
-
-Mit der Prüfung "function_exist" stört das `dump` nicht den normalen Aufruf der Seite.
 
 
 .. |img_symfony-toolbar| image:: /_img/screenshots/cookbook/debug/symfony-toolbar.jpg
