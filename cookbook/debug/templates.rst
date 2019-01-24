@@ -6,17 +6,13 @@ Debug Templates
 Benötigt man für die Ausgabe z.B. einer Liste für das Frontend ein
 eigenes Template oder möchte man bei einem vorhanden Template wissen,
 welche Attribute an das Template übermittelt werden, kann man diese
-sich in den HTML-Quelltext ausgeben lassen. Eine einfache Art ist die
-Ausgabe des Array der Items über "print_r".
+sich mit der Debug-Toolbar von Symfony sehr komfortabel ausgeben lassen.
 
 Das Standardtemplate ist "metamodel_prerendered", bzw. das Template,
 welches in der Render-Einstellung für die Ausgabe ausgewählt wurde.
 
 Ist noch kein eigens Template im Einsatz, muss eine Kopie von
 "metamodel_prerendered" im Contao-Ordner "Templates" angelegt werden.
-
-Das Debugging ist durch die Möglichkeiten der Debug-Toolbar
-von Symfony sehr komfortabel.
 
 Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
 
@@ -31,7 +27,7 @@ Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
    ?>
 
 Wird die Seite über "app_dev" aufgerufen z.B. "domain.tld/app_dev.php/meine-mm-listenansicht.html",
-kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon" untersucht werden:
+kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon" untersuchen:
 
 |img_symfony-toolbar|
 
