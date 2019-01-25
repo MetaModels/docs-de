@@ -29,7 +29,7 @@ Die Installationsvoraussetzungen  für MetaModels 2.1 sind:
 * ein laufendes Contao 4.4.x (LTS) und
 * PHP 7.1/7.2
 
-Höhere Versionen von Contao und/oder PHP werden nicht ofiziell supportet.
+Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofiziell supportet.
 
 Im Contao-Manager werden über die Eingabe `metamodels/` alle zur Verfügung stehenden Pakete
 aufgelistet. Das Basispaket `metamodels/core` muss installiert werden - darüber hinaus 
