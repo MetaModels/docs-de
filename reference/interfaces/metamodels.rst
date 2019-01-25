@@ -434,9 +434,9 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    /* Parameter (Beispiel) */
    
    // Name der MetaModel Tabelle (siehe "Das erstes Metamodel")
-   $strModelName = 'mm_mitarbeiterliste';
+   $modelName = 'mm_mitarbeiterliste';
    // ID der Render-Einstellungen "FE-Liste"
-   $intRenderId = 2;
+   $renderId = 2;
    
    /* Interface */
 
@@ -454,29 +454,29 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    /** @var $container */
    $factory = $this->getContainer()->get('metamodels.factory');
    // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
-   $objMetaModel = $factory->getMetaModel($strModelName);
+   $model = $factory->getMetaModel($strModelName);
    // MetaModel erzeugen, wenn nur id bekannt ($metaModelId == tl_metamodel.id des MetaModel).
-   //$objMetaModel = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
+   //$model = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
    // leerer Filter
-   $objFilter = $objMetaModel->getEmptyFilter();
+   $filter = $model->getEmptyFilter();
    // alle Items
-   $objItems = $objMetaModel->findByFilter($objFilter);
+   $items = $model->findByFilter($filter);
    // alle Items geparst zu Array mit HTML5 Knoten
-   $arrItems = $objItems->parseAll('html5', $objMetaModel->getView($intRenderId));
+   $arrItems = $items->parseAll('html5', $model->getView($renderId));
    // alternativ nur Knoten raw und text
-   //$arrItems = $objItems->parseAll('text');
-   //print_r($arrItems);
+   //$arrItems = $items->parseAll('text');
+   //dump($arrItems);
    
    /* Ausgabe */
    
    // Anzahl der Items
-   echo 'Anzahl: '.$objItems->getCount()."<br>\n";
+   echo 'Anzahl: '.$items->getCount()."<br>\n";
    
    // Variante 1 - Items-Objekt
    /*
-   foreach ($objItems as $objItem)
+   foreach ($items as $item)
    {
-       echo $objItem->get('name')."<br>\n";
+       echo $item->get('name')."<br>\n";
    }
    */
    
