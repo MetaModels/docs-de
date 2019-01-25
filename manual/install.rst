@@ -57,7 +57,7 @@ Composer möglich - z.B. mit
 Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
 siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
 
-Nach der Installation ist über das Insatll-Tool von Contao ein **Update der Datenbank nicht
+Nach der Installation ist über das Install-Tool von Contao ein **Update der Datenbank nicht
 zu vergessen!**
 
 
