@@ -454,7 +454,7 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    /** @var $container */
    $factory = $this->getContainer()->get('metamodels.factory');
    // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
-   $model = $factory->getMetaModel($strModelName);
+   $model = $factorY->getMetaModel($modelName);
    // MetaModel erzeugen, wenn nur id bekannt ($metaModelId == tl_metamodel.id des MetaModel).
    //$model = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
    // leerer Filter
