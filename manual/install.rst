@@ -24,14 +24,16 @@ Hinweise zu älteren Versionen von MetaModels und Versionswechsel sind am `Ende 
 
 Installation von MM 2.1
 -----------------------
-Die Installationsvoraussetzungen  für MetaModels 2.1 sind
+Die Installationsvoraussetzungen  für MetaModels 2.1 sind:
 
-* ein laufendes Contao 4.4. oder höher und
-* PHP 7.1 oder höher.
+* ein laufendes Contao 4.4.x (LTS) und
+* PHP 7.1/7.2
+
+Höhere Versionen von Contao und/oder PHP werden nicht ofiziell supportet.
 
 Im Contao-Manager werden über die Eingabe `metamodels/` alle zur Verfügung stehenden Pakete
-aufgelistet. Neben dem Basispaket `metamodels/core` können darüber hinaus weitere Attribute
-und Filter installiert werden.
+aufgelistet. Das Basispaket `metamodels/core` muss installiert werden - darüber hinaus 
+können weitere Attribute und Filter je nach Aufgabenstellung hinzugefügt werden.
 
 Neben den einzelnen Paketen gibt es `Bundles`, die verschiedene Pakete für eine
 vereinfachte Installation zusammenfassen.
@@ -45,7 +47,7 @@ Wie in MetaModesls 2.0 gibt es auch das Bundle `metamodels/bundle_all`, welches 
 `translatedtags` sind hier nicht mehr inkludiert, da diese nur für Spezialfälle einzusetzen sind).
 
 Weitere Module wie "Registerfilter", "Umkreissuche", "Bewertung" usw. sind als separate Pakete
-hinzu zu fügen.
+hinzu zu fügen - siehe :ref:`extended_index`
 
 Neben dem Contao-Manager ist die Installation der Pakete und Bundles direkt über die Konsole per
 Composer möglich - z.B. mit
@@ -55,7 +57,7 @@ Composer möglich - z.B. mit
 Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
 siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
 
-Nach der Installation ist ein Update der Datenbank nicht zu vergessen!
+Nach der Installation ist ein **Update der Datenbank nicht zu vergessen!**
 
 
 Test von speziellen Paketen
