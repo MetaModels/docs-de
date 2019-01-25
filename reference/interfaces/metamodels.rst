@@ -3,8 +3,6 @@
 MetaModels Interfaces
 =====================
 
-.. warning:: Noch im Aufbau!
-
 Die MetaModels Interfaces bilden die Basis der Interfaces und
 ermöglichen den Zugriff auf ein MetaModel bis hin zum einzelnen
 Item.
@@ -442,14 +440,19 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    
    /* Interface */
 
+   /* --- MM 2.0 --- */
    // Den 'service container' kann man erhalten, wenn man ihn aus dem globalen Scope holt,
    // oder aber indem man auf das Event \MetaModelsEvents::SUBSYSTEM_BOOT (oder eines der
    // konkretisierten Events für Backend/Frontend) lauscht.
    // (Container nur notwendig, wenn außerhalb des MM-Zugriffs)
    /** @var \MetaModels\IMetaModelsServiceContainer $container */ 
-   $container = $GLOBALS['container']['metamodels-service-container']; 
+   //$container = $GLOBALS['container']['metamodels-service-container']; 
    // MM Factory
-   $factory = $container->getFactory();
+   //$factory = $container->getFactory();
+   
+   /* --- MM 2.1 --- */
+   /** @var $container */
+   $factory = $this->getContainer()->get('metamodels.factory');
    // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
    $objMetaModel = $factory->getMetaModel($strModelName);
    // MetaModel erzeugen, wenn nur id bekannt ($metaModelId == tl_metamodel.id des MetaModel).
