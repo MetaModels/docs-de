@@ -113,7 +113,7 @@ wie folgt sehen
 
 
 **Hinweis:** die RegEx-Prüfung wurde aus dem Contao-Handbuch übernommen und stellt
-für deutsche Postleitzahlen nur eine sehr einfache überprüfung dar. Im Internet
+für deutsche Postleitzahlen nur eine sehr einfache Überprüfung dar. Im Internet
 findet man genauere RegEx-Überprüfungen oder man könnte hier auch eine Prüfung gegen
 eine Liste mit in Deutschland vergebenen PLZ einbinden.
 
