@@ -72,7 +72,7 @@ MetaModels eignet sich sehr gut für die in vielen Bereichen eingesetzte Arbeits
 zwischen "Administrator" und "Redakteuren" - soll heißen: der Administrator oder Entwickler
 erstellt das oder die MetaModels mit den Eingabemasken und Ausgabefunktionen und der/die
 Redakteur(e) können die Inhalte pflegen, wie sie das von anderen Bereichen von Contao
-gewöhnt sind.
+gewohnt sind.
 
 Mit den Eingabemasken kann sehr genau festgelegt werden, wie und welche Daten eingeben 
 werden können oder müssen. Ähnliche Funktionen gibt es z.B. bei den Erweiterungen des
