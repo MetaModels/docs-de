@@ -16,7 +16,7 @@ Für die Installation stehen während des alpha-Tests die Bundles `bundle_start`
 für die Attribute und Filter separat zu installieren.
 
 Entweder erfolgt die Auswahl über den Contao-Manager oder man aktualisiert die
-`composer.json` direkt. Als Versionsbeschränkung ist `^2.1.0@dev` bei MM einzutragen.
+`composer.json` direkt. Als Versionsbeschränkung ist ``^2.1.0@dev`` bei MM einzutragen.
 
 Als Vorlage für die `composer.json` können folgende Angaben bei "require" übernommen
 werden:
