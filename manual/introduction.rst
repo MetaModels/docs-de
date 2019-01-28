@@ -60,9 +60,9 @@ der Diskussion um die "beste Lösung" und harter Programmierung vor.
 Inzwischen sind wir bei der Version 2.1 von MetaModels angelangt, welches eine
 Migration von 2.0 darstellt und unter Contao 4.x läuft.
 
-Bei dieser Umstellung wurde schon vieles im "Unterbau" für kommende Versionen von MetaModles
-angepasst und "alte Zöpfe" abgeschnitten, viele kleine Bugs gefixt sowie die DB-Abfragen
-Symfony-like umgestellt.
+Bei dieser Umstellung wurde schon vieles im "Unterbau" für kommende Versionen von
+MetaModles angepasst und "alte Zöpfe" abgeschnitten, viele kleine Bugs gefixt sowie
+die DB-Abfragen Symfony-like umgestellt.
 
 
 MetaModels im Vergleich zu anderen Tools
