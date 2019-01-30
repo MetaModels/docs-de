@@ -26,8 +26,6 @@ werden:
    
    "require": {
      "php": "^7.1",
-     "ext-json": "*",
-     "ext-pdo": "*",
      "contao-community-alliance/dc-general": "dev-feature/contao4-release as 2.1.0",
      "contao-community-alliance/dc-general-contao-frontend": "dev-feature/contao4 as 2.1.0",
      "contao/manager-bundle": "<4.5",
