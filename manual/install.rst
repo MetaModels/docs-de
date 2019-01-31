@@ -28,7 +28,7 @@ Die Installationsvoraussetzungen  für MetaModels 2.1 sind:
 
 * ein laufendes Contao 4.4.x (LTS) und
 * PHP 7.1/7.2
-* MySQL ab 5.5.5 (InnoDB), MariaDB
+* MySQL ab 5.5.5 (InnoDB), MariaDB (ohne `strict mode`)
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofiziell supportet.
 
