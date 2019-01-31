@@ -16,7 +16,12 @@ Für die Installation stehen während des alpha-Tests die Bundles `bundle_start`
 für die Attribute und Filter separat zu installieren.
 
 Entweder erfolgt die Auswahl über den Contao-Manager oder man aktualisiert die
-`composer.json` direkt. Als Versionsbeschränkung ist ``^2.1.0@dev`` bei MM einzutragen.
+`composer.json` direkt.
+
+Als Basisimplementierung ist neben dem MM-Core noch der DC_General mit
+``dev-feature/contao4-release as 2.1.0`` und der MultiColumnWizard (MCW) mit
+ ``^3.4.0@beta`` einzutragen - bei allen MM-Paketen als Versionsbeschränkung
+``^2.1.0@dev``. Diese Eintragungen müssen auch im Contao-Manager erfolgen.
 
 Als Vorlage für die `composer.json` können folgende Angaben bei "require" übernommen
 werden:
