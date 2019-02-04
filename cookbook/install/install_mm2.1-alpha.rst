@@ -18,10 +18,12 @@ für die Attribute und Filter separat zu installieren.
 Entweder erfolgt die Auswahl über den Contao-Manager oder man aktualisiert die
 `composer.json` direkt.
 
-Als Basisimplementierung ist neben dem MM-Core noch der DC_General mit
-``dev-feature/contao4-release as 2.1.0`` und der MultiColumnWizard (MCW) mit
- ``^3.4.0@beta`` einzutragen - bei allen MM-Paketen als Versionsbeschränkung
-``^2.1.0@dev``. Diese Eintragungen müssen auch im Contao-Manager erfolgen.
+Als Basisimplementierung sind sowohl für die composer.json direkt als auch für
+den Contao-Managern folgende Pakete inkl. den Versionsangaben zu installieren:
+
+* MM-Core ``^2.1.0@dev``
+* DC_General mit ``dev-feature/contao4-release as 2.1.0``
+* MultiColumnWizard (MCW) mit ``^3.4.0@beta``
 
 Als Vorlage für die `composer.json` können folgende Angaben bei "require" übernommen
 werden:
@@ -32,7 +34,6 @@ werden:
    "require": {
      "php": "^7.1",
      "contao-community-alliance/dc-general": "dev-feature/contao4-release as 2.1.0",
-     "contao-community-alliance/dc-general-contao-frontend": "dev-feature/contao4 as 2.1.0",
      "contao/manager-bundle": "<4.5",
      "contao/installation-bundle": "<4.5",
      "menatwork/contao-multicolumnwizard-bundle": "^3.4.0@beta",
