@@ -71,8 +71,8 @@ werden:
      "metamodels/filter_select": "^2.1.0@dev",
      "metamodels/filter_tags": "^2.1.0@dev",
      "metamodels/filter_text": "^2.1.0@dev",
-     "metamodels/filter_register": "^2.1.0@dev"
-     "metamodels/contao-frontend-editing": "dev-feature/contao4 as 2.1.0",
+     "metamodels/filter_register": "^2.1.0@dev",
+     "metamodels/contao-frontend-editing": "dev-feature/contao4 as 2.1.0"
    },
 
 Es ist zu beachten, dass nur die Pakete installiert werden müssen, die auch wirklich
