@@ -3,9 +3,11 @@
 Leaflet-Maps Integration
 ########################
 
-Mit der Leaflet-Maps Integration wird die Darstellung von MetaModels in der Erweiterung `netzmacht/contao-leaflet-maps`_ ermöglicht.
+Mit der Leaflet-Maps Integration wird die Darstellung von MetaModels in der
+Erweiterung `netzmacht/contao-leaflet-maps`_ ermöglicht.
 
-.. note:: Diese Dokumentation beszieht sich ausschließlich auf Contao 4, auch wenn die Erweiterung auch für Contao 3.5. bereitgestellt wird.
+.. note:: Diese Dokumentation bezieht sich ausschließlich auf Contao 4, auch
+   wenn die Erweiterung auch für Contao 3.5. bereitgestellt wird.
 
 
 Funktionen
@@ -41,20 +43,23 @@ Contao 3.5
 Installation
 ------------
 
-Über Composer/Contao Manager lässt sich `netzmacht/contao-leaflet-metamodels`_ in der Version **~3.0.0-beta1** *(Stand 08.02.2019)* installieren.
+Über Composer/Contao Manager lässt sich `netzmacht/contao-leaflet-metamodels`_
+in der Version **~3.0.0-beta1** *(Stand 08.02.2019)* installieren.
 
 
 MetaModel auf Karte integrieren
 -------------------------------
 
-In dieser Anleitung wird gezeigt, wie man ein MetaModels, welches Geokoordinaten besitzt, auf einer Karte von Leaflet für Contao dargestellt werden kann.
+In dieser Anleitung wird gezeigt, wie man ein MetaModels, welches Geokoordinaten
+besitzt, auf einer Karte von Leaflet für Contao dargestellt werden kann.
 
 
 Koordinaten-Attribute
 ~~~~~~~~~~~~~~~~~~~~~
 
-Die Geokoordinaten können als getrennte Attribute oder in einem Attribut (Latitude und Longitude mit komma getrennt) im MetaModel definiert werden. Als Attributstyp
-eignet sich z.B. ein einfaches Textattribut.
+Die Geokoordinaten können als getrennte Attribute oder in einem Attribut
+(Latitude und Longitude mit Komma getrennt) im MetaModel definiert werden.
+Als Attributstyp eignet sich z.B. ein einfaches Textattribut.
 
 .. figure:: /_img/screenshots/extended/leaflet/mm_attribute.png
    :alt: Attribute im MetaModel
@@ -68,13 +73,16 @@ eignet sich z.B. ein einfaches Textattribut.
 MetaModels Layer anlegen
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Als nächsten Schritt legen wir unter Karten-Layer einen neuen Layer vom Typ "MetaModels" an. Folgende Einstellungen sind
-hier vorzunehmen:
+Als nächsten Schritt legen wir unter Karten-Layer einen neuen Layer vom Typ
+"MetaModels" an. Folgende Einstellungen sind hier vorzunehmen:
 
- * **Typ** MetaModel auswählen
- * **MetaModel** Das gewünschte MetaModel
- * **Bounds relation** Legt fest, welche Abhängigkeiten zwischen den Elementen des Layers und den Kartengrenzen bestehen soll. Wir stellen wir *extend* ein. Die Kartengrenzen werden durch die definierten Marker also erweitert.
- * **Anzuwendende Filtereinstellung** Hier wird wie bei MetaModels gewohnt eine Filtereinstellung ausgewählt, die die anzuzeigenden Items beeinflusst
+ * **Typ**: MetaModel auswählen
+ * **MetaModel**: Das gewünschte MetaModel
+ * **Bounds relation**: Legt fest, welche Abhängigkeiten zwischen den Elementen des Layers
+   und den Kartengrenzen bestehen soll - Auswahl von *extend*. Die Kartengrenzen werden durch die
+   definierten Marker also erweitert.
+ * **Anzuwendende Filtereinstellung**: Hier wird, wie bei MetaModels gewohnt, eine Filtereinstellung
+   ausgewählt, die die anzuzeigenden Items beeinflusst
 
 .. figure:: /_img/screenshots/extended/leaflet/leaflet_layer.png
    :alt: Konfiguration des Layers MetaModels
@@ -85,30 +93,37 @@ hier vorzunehmen:
 MetaModels Layer Renderer anlegen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Als nächstes Schritt müssen wir definieren, wie das MetaModels Item auf der Karte dargestellt werden soll. Wie eingangs erwähnt, möchten wir diese als Marker darstellen. Dazu können nun über das Bearbeiten-Icon des Karten-Layers *Renderer* angelegt werden.
+Im nächsten Schritt wird definiert, wie das MetaModels Item auf der Karte
+dargestellt werden soll. Diese sollen in dem Beispiel als Marker dargestellt werden.
+Dazu können über das Bearbeiten-Icon des Karten-Layers die entsprechenden *Renderer*
+angelegt werden.
 
 .. figure:: /_img/screenshots/extended/leaflet/leaflet_layer_2.png
    :alt: Übersicht der Karten-Layer
 
    Übersicht der Karten-Layer
 
-In der Ansicht können neue Renderer definiert werden. Folgende Einstellungen sind
+In der Eingabemaske ist es möglich, neue Renderer zu definiert. Folgende Einstellungen sind
 hier vorzunehmen:
 
- * **Typ** Hier wählen wir *marker* aus, da die MetaModel Items ja als Marker dargestellt werden sollen
- * **Koordinaten** Hier wählen wir *separate* aus, da die Werte für Latitude und Longitude in separaten Attributen vorliegen
- * **Breite-Attribut** Hier wälen wir das Attribut für *Latitude* aus
- * **Länge-Attribut** Hier wälen wir das Attribut für *Longitude* aus
- * **Rendererinstellung aktivieren** Nun aktivieren wir die Rendereinstellung
- * **Verzögertes Laden** Bei größeren Listen empfiehlt sich das dynamische Nachladen der Kartendaten über eine API. Sie werden also nicht direkt als Javascript gerendert
+ * **Typ**: Auswahl von *marker*, da die MetaModel Items als Marker dargestellt werden sollen
+ * **Koordinaten**: Auswahl von *separate*, wenn die Werte für Latitude und Longitude in separaten
+   Attributen vorliegen
+ * **Breite-Attribut**: Auswahl des Attributs für *Latitude* aus
+ * **Länge-Attribut**: Auswahl des Attributs für *Longitude* aus
+ * **Rendererinstellung aktivieren**: aktivieren der Rendereinstellung
+ * **Verzögertes Laden**: Bei größeren Listen empfiehlt sich das dynamische Nachladen der Kartendaten
+   über eine API. Diese werden dann nicht direkt als Javascript gerendert.
 
-Zusätzlich zu der Grundkonfiguration, kann das MetaModel auch als Popup zum Marker hinzugefügt werden. Hier werden zwei
-Modi unterstützt:
+Zusätzlich zu der Grundkonfiguration, kann das MetaModel auch als Popup zum Marker
+hinzugefügt werden. Hier werden zwei Modi unterstützt:
 
- * **render** Eine Rendereinstellung wird ausgewählt und gerendert
- * **attribute** Es wird nun ein Attribut gerendert. Auch hierfür muss eine Rendererinstellung ausgewählt werden
+ * **render**: Eine Rendereinstellung wird ausgewählt und gerendert
+ * **attribute**: Es wird ein Attribut gerendert. Auch hierfür muss eine Rendererinstellung ausgewählt werden
 
-Weiterhin ist es möglich die Darstellung als Icon zu beeinflussen. Hier kann eines der vordefinierten Icons ausgewählt werden. Alterantiv kann auch über ein MetaModels-Attribut ein Icon bestimmt werden.
+Weiterhin ist es möglich die Darstellung als Icon zu beeinflussen. Hier kann eines der
+vordefinierten Icons ausgewählt werden. Alternativ kann auch über ein MetaModels-Attribut
+ein Icon bestimmt werden.
 
 .. figure:: /_img/screenshots/extended/leaflet/layer_renderer.png
    :alt: Einstellung des Renderers
@@ -119,14 +134,17 @@ Weiterhin ist es möglich die Darstellung als Icon zu beeinflussen. Hier kann ei
 Layer in Karte aktivieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Als letzten Schritt müssen wir den Layer noch einer Karte zuweisen, sodass dieser dargestellt wird. Dies kann über die Standardlayer einer Karte erfolgen.
+Als letzten Schritt müssen wir den Layer noch einer Karte zuweisen, sodass dieser
+dargestellt wird. Dies kann über die Standardlayer einer Karte erfolgen.
 
 Außerdem aktivieren wir bei der Funktion *Grenzen festlegen* die Optionen *bei Karteninitialisierung* und
- *Nach dem Laden des verzögerten Features* sodass unsere Karte nun dynamisch den Bereich anzeigt, indem die Marker existieren.
+*Nach dem Laden des verzögerten Features* sodass unsere Karte nun dynamisch den Bereich anzeigt,
+indem die Marker existieren.
 
 .. figure:: /_img/screenshots/extended/leaflet/leaflet_map.png
    :alt: Karteneinstellungen
 
    Karteneinstellungen
 
-.. note:: Ist auf der Seite nun ein Filter eingebunden, der die oben ausgewählte Filtereinstellung bedient, wir die Kartenansicht entsprechend gefiltert.
+.. note:: Ist auf der Seite nun ein Filter eingebunden, der die oben ausgewählte Filtereinstellung
+   bedient, wir die Kartenansicht entsprechend gefiltert.
