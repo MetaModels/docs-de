@@ -73,8 +73,8 @@ Als Attributstyp eignet sich z.B. ein einfaches Textattribut.
 MetaModels Layer anlegen
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Als nächsten Schritt legen wir unter Karten-Layer einen neuen Layer vom Typ
-"MetaModels" an. Folgende Einstellungen sind hier vorzunehmen:
+Als nächster Schritt, wird unter Karten-Layer einen neuen Layer vom Typ
+"MetaModels" angelegt. Folgende Einstellungen sind hier vorzunehmen:
 
  * **Typ**: MetaModel auswählen
  * **MetaModel**: Das gewünschte MetaModel
@@ -134,17 +134,17 @@ ein Icon bestimmt werden.
 Layer in Karte aktivieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Als letzten Schritt müssen wir den Layer noch einer Karte zuweisen, sodass dieser
-dargestellt wird. Dies kann über die Standardlayer einer Karte erfolgen.
+Als letzter Schritt, muss dem Layer für die Darstellung noch einer Karte zugewiesen werden. Dies
+kann über die Standardlayer einer Karte erfolgen.
 
-Außerdem aktivieren wir bei der Funktion *Grenzen festlegen* die Optionen *bei Karteninitialisierung* und
-*Nach dem Laden des verzögerten Features* sodass unsere Karte nun dynamisch den Bereich anzeigt,
-indem die Marker existieren.
+Zudem ist es zu empfehlen, bei der Funktion *Grenzen festlegen* die Optionen *bei Karteninitialisierung* und
+*Nach dem Laden des verzögerten Features* zu aktivieren. Damit erweitert sich die Karte dynamisch um den
+Bereich, indem die Marker existieren.
 
 .. figure:: /_img/screenshots/extended/leaflet/leaflet_map.png
    :alt: Karteneinstellungen
 
    Karteneinstellungen
 
-.. note:: Ist auf der Seite nun ein Filter eingebunden, der die oben ausgewählte Filtereinstellung
-   bedient, wir die Kartenansicht entsprechend gefiltert.
+Ist auf der Seite ein Filter eingebunden, der die oben ausgewählte Filtereinstellung
+bedient, wird die Kartenansicht entsprechend gefiltert.
