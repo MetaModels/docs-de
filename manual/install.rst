@@ -19,7 +19,7 @@ Hinweise zu älteren Versionen von MetaModels und Versionswechsel sind am `Ende 
    Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
    und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzten Zuwendungen, sind
    das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
-   ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-1>`_
+   ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
 
 Installation von MM 2.1
