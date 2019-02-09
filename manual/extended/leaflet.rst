@@ -80,9 +80,9 @@ Als nächster Schritt, wird unter Karten-Layer einen neuen Layer vom Typ
  * **MetaModel**: Das gewünschte MetaModel
  * **Bounds relation**: Legt fest, welche Abhängigkeiten zwischen den Elementen des Layers
    und den Kartengrenzen bestehen soll - Auswahl von *extend*. Die Kartengrenzen werden durch die
-   definierten Marker also erweitert.
+   definierten Marker erweitert.
  * **Anzuwendende Filtereinstellung**: Hier wird, wie bei MetaModels gewohnt, eine Filtereinstellung
-   ausgewählt, die die anzuzeigenden Items beeinflusst
+   ausgewählt, die die anzuzeigenden Items beeinflusst.
 
 .. figure:: /_img/screenshots/extended/leaflet/leaflet_layer.png
    :alt: Konfiguration des Layers MetaModels
@@ -103,7 +103,7 @@ angelegt werden.
 
    Übersicht der Karten-Layer
 
-In der Eingabemaske ist es möglich, neue Renderer zu definiert. Folgende Einstellungen sind
+In der Eingabemaske ist es möglich, neue Renderer zu definieren. Folgende Einstellungen sind
 hier vorzunehmen:
 
  * **Typ**: Auswahl von *marker*, da die MetaModel Items als Marker dargestellt werden sollen
@@ -119,11 +119,12 @@ Zusätzlich zu der Grundkonfiguration, kann das MetaModel auch als Popup zum Mar
 hinzugefügt werden. Hier werden zwei Modi unterstützt:
 
  * **render**: Eine Rendereinstellung wird ausgewählt und gerendert
- * **attribute**: Es wird ein Attribut gerendert. Auch hierfür muss eine Rendererinstellung ausgewählt werden
+ * **attribute**: Es wird ein Attribut gerendert. Auch hierfür muss eine Rendererinstellung
+   ausgewählt werden
 
-Weiterhin ist es möglich die Darstellung als Icon zu beeinflussen. Hier kann eines der
-vordefinierten Icons ausgewählt werden. Alternativ kann auch über ein MetaModels-Attribut
-ein Icon bestimmt werden.
+Weiterhin ist es möglich die Darstellung als Icon zu beeinflussen. Es kann eines der
+vordefinierten Icons ausgewählt oder Alternativ dazu über ein MetaModels-Attribut
+bestimmt werden.
 
 .. figure:: /_img/screenshots/extended/leaflet/layer_renderer.png
    :alt: Einstellung des Renderers
@@ -134,7 +135,7 @@ ein Icon bestimmt werden.
 Layer in Karte aktivieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Als letzter Schritt, muss dem Layer für die Darstellung noch einer Karte zugewiesen werden. Dies
+Als letzter Schritt, muss dem Layer für die Darstellung noch eine Karte zugewiesen werden. Dies
 kann über die Standardlayer einer Karte erfolgen.
 
 Zudem ist es zu empfehlen, bei der Funktion *Grenzen festlegen* die Optionen *bei Karteninitialisierung* und
@@ -146,5 +147,5 @@ Bereich, indem die Marker existieren.
 
    Karteneinstellungen
 
-Ist auf der Seite ein Filter eingebunden, der die oben ausgewählte Filtereinstellung
+Ist auf der Seite ein Filter eingebunden der die oben ausgewählte Filtereinstellung
 bedient, wird die Kartenansicht entsprechend gefiltert.
