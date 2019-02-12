@@ -440,11 +440,12 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    
    /* Interface */
 
-   /* --- MM 2.0 --- */
    // Den 'service container' kann man erhalten, wenn man ihn aus dem globalen Scope holt,
    // oder aber indem man auf das Event \MetaModelsEvents::SUBSYSTEM_BOOT (oder eines der
    // konkretisierten Events für Backend/Frontend) lauscht.
    // (Container nur notwendig, wenn außerhalb des MM-Zugriffs)
+
+   /* --- MM 2.0 --- */
    /** @var \MetaModels\IMetaModelsServiceContainer $container */ 
    //$container = $GLOBALS['container']['metamodels-service-container']; 
    // MM Factory
@@ -453,8 +454,10 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    /* --- MM 2.1 --- */
    /** @var $container */
    $factory = $this->getContainer()->get('metamodels.factory');
+
+   /* --- MM 2.x --- */
    // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
-   $model = $factorY->getMetaModel($modelName);
+   $model = $factory->getMetaModel($modelName);
    // MetaModel erzeugen, wenn nur id bekannt ($metaModelId == tl_metamodel.id des MetaModel).
    //$model = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
    // leerer Filter
