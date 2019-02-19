@@ -17,9 +17,9 @@ werden, kann das mit dem folgenden Code im Template der Deatilansicht erreicht w
 
     // redirect if data empty
     if (count($this->data) == 0) {
-        $intPageId = 192; // Page id 
-    	$objPage   = \PageModel::findByPK(intPageId); //Page objekt
-    	$pageURL   = \Controller::generateFrontendUrl($objPage->row()); //URL
+        $pageId  = 192; // Page id 
+    	$page    = \PageModel::findByPK($ageId); //Page object
+    	$pageURL = \Controller::generateFrontendUrl($page->row()); //URL
     	\Controller::redirect($pageURL); //redirect
     }
 
