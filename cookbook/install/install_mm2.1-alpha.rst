@@ -33,10 +33,10 @@ werden:
    
    "require": {
      "php": "^7.1",
-     "contao-community-alliance/dc-general": "dev-feature/contao4-release as 2.1.0",
+     "contao-community-alliance/dc-general": "^2.1",
      "contao/manager-bundle": "<4.5",
      "contao/installation-bundle": "<4.5",
-     "menatwork/contao-multicolumnwizard-bundle": "^3.4.0@beta",
+     "menatwork/contao-multicolumnwizard-bundle": "^3.4",
      "metamodels/core": "^2.1.0@dev",
      "metamodels/attribute_alias": "^2.1.0@dev",
      "metamodels/attribute_checkbox": "^2.1.0@dev",
