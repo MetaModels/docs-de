@@ -216,7 +216,7 @@ hat die Mehrfachauswahl z.B. die ID 5 (zu ermitteln über den i-Button).
 .. code-block:: php
    :linenos:
    
-   SELECT DISTINCT(rel.value_id) as id FROM mm_mitarbeiter ma
+   SELECT DISTINCT(rel.value_id) as id FROM mm_mitarbeiter as ma
    LEFT JOIN tl_metamodel_tag_relation rel ON (ma.id = rel.item_id AND rel.att_id=5)
    WHERE
    ma.alias = {{param::get?name=auto_item}}
