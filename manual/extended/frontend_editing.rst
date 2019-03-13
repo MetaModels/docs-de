@@ -5,6 +5,8 @@ Frontend-Editing (FEE)
 
 .. warning:: Das FEE ist für MM 2.0 und 2.1 einsetzbar, jedoch sind nicht alle
    Eingabewidgets nutzbar - siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_. |br|
+   
+   Für die Mehrsprachigkeit ist das FEE noch nicht einsetzbar!
 
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
