@@ -27,10 +27,11 @@ Im Frontend werden dieselben Eingabewidgets ("Formularfelder") des DC_General
 wie im Backend ausgegeben. Da im Frontend nicht so viele Restriktionen wie im
 Backend vorliegen (z.B. MooTools als JavaScript-Framework), ist die Anzeige
 der Widgets inklusive zugehöriger Picker wie Datum, Farbe oder dem RichTextEditor
-eine schwierige Aufgabe.
+keine direkte Aufgabe des FEE. Bei den entsprechenden Widget werden CSS-Klassen
+ausgegeben, anhand derer man per JavaScript verschiedene Widgets einbinden kann.
 
-Aus diesem Grund stehen aktuell noch nicht alle Attribute für ein Frontend-
-Editing zur Verfügung. Der Stand der Freigabe ist im folgenden Ticket
+Es stehen aktuell noch nicht alle Attribute für ein Frontend-
+Editing wie im Backend zur Verfügung. Der Stand der Freigabe ist im folgenden Ticket
 auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
 
 Die erste Implementierung des Frontend-Editing wurde über ein
