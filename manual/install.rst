@@ -25,9 +25,6 @@ Hinweise zu älteren Versionen von MetaModels und Versionswechsel sind am `Ende 
 Installation von MM 2.1
 -----------------------
 
-.. note:: Bis Anfang März 2019 läuft noch ein "alpha Test" bevor alles auf "stable" getaggt wird.
-   Eine Anleitung dazu unter :ref:`cookbook_install_mm2.1-alpha`
-
 Die Installationsvoraussetzungen  für MetaModels 2.1 sind:
 
 * ein laufendes Contao 4.4.x (LTS) und
