@@ -21,7 +21,7 @@ Unterstützung.
 Die "normalen Listenansichten" benötigen diese Sonderbehandlung nicht und die Seiten werden
 automatisch über die Contao-Funktionen korrekt in die Suche oder Sitemap aufgenommen.
 
-Wird über die die "Systemwartung" das "Suchindex aufbauen" gestartet, werden die einzelnen
+Wird über die "Systemwartung" das "Suchindex aufbauen" gestartet, werden die einzelnen
 Detailseiten mit in die Liste der URLs aufgenommen und aufgerufen - zusätzlich werden die URLs
 in die sitemap.xml eingetragen. Sofern man in der "Systemwartung" nur die Option "XML-Dateien
 neu schreiben" auswählt, werden lediglich die URLs in die sitemap.xml eingetragen.
@@ -46,9 +46,9 @@ Optionen
 Ablauf
 ------
 
-Eine neue Indexierung wird über das Icon "|img_new| Neue Indexierung" angelegt und die
+Eine neue Indexierung wird über das Icon "|img_new| Neue Indexierung" angelegt und
 nach der Eingabe des Namens die Render-Einstellung ausgewählt. Die Render-Einstellung
-ist üblicher Weise die Gleiche, wie sie für das CE/Modul MetaModel-Liste der Frontendausgabe
+ist üblicherweise die Gleiche, wie sie für das CE/Modul MetaModel-Liste der Frontendausgabe
 der "Übersichtsliste" gewählt wird. Ein Filter muss nur ausgewählt werden, wenn bestimmte
 Detailseiten von der automatischen Indexierung ausgeschlossen werden sollen.
 
