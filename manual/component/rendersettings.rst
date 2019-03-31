@@ -36,7 +36,7 @@ eine Detailausgabe (eine Detailausgabe ist "eine Liste mit einem Item"). Weiterh
 kann einzelnen Render-Einstellungen der Zugriff von Benutzer und/oder Mitgliedergruppen
 über die :ref:`component_dca-combine` gewährt werden.
 
-Ist eine Render-Einstellung erzeugt und die Grundeinstellungen eingetragen, muss
+Ist eine Render-Einstellung erzeugt und sind die Grundeinstellungen eingetragen, müssen
 als weiterer Schritt die Attribute für die Einstellung aktiviert werden. Mehr dazu
 unter dem Punkt "Ablauf". Als weitere Einstellungsmöglichkeit kann bei jedem
 Attribut in einer Render-Einstellung ein individuelles Template angewählt
