@@ -8,7 +8,7 @@ Das erste MetaModel
 Mit dem Aufbau des ersten MetaModels soll ein leichter Einstieg in die Umsetzung
 ermöglicht werden. Die Aufgabe für die erste Umsetzung ist eine einfache Mitarbeiterliste
 mit nur wenigen Inhaltsangaben. Die Liste soll im Backend zu befüllen sein
-und kann im Frontend in als Tabelle ausgegeben werden. Auf einige Aspekte wie
+und kann im Frontend als Tabelle ausgegeben werden. Auf einige Aspekte wie
 Sortierungen, Filterungen usw. wurde absichtlich verzichtet.
 
 Die Umsetzung orientiert sich an den :ref:`component_index`.
