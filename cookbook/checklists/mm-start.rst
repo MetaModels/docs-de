@@ -6,7 +6,7 @@ Start mit MetaModels
 Für den Start mit MetaModels sollten einige grundlegende Sachen beachtet werden.
 
 Das Projekt "MetaModels" arbeitet recht stabil - ist aber dennoch in steter Entwicklung. Im
-Zusammenspiel mit weiteren Komponenten die dem DC_General (DCG) oder dem Contao Core kann es
+Zusammenspiel mit weiteren Komponenten wie dem DC_General (DCG) oder dem Contao Core kann es
 trotzdem immer mal zum Verlust von Daten kommen. Deshalb sollte ein regelmäßiges Backup
 eingerichtet werden.
 
