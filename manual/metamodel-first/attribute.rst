@@ -3,7 +3,7 @@
 |img_fields_32| Attribute
 =========================
 
-Nachdem die Tabelle "mm_mitarbeiterliste" in der Datenbank erstellt wurde, muss in dieser
+Nachdem die Tabelle "mm_mitarbeiterliste" in der Datenbank erstellt wurde, müssen in dieser
 nun die Felder bzw. Tabellenspalten zur Speicherung der Daten erzeugt werden - sprich
 die Attribute. Dieser Schritt erfolgt über die gleichnamige Komponente
 "|img_fields| Attribute".
