@@ -123,7 +123,7 @@ die Einstellung gespeichert und erscheint in der Liste der vorhandenen Eingabema
 eines MetaModels.
 
 Neben dem "|img_edit| Stifticon" existiert das Icon für die "|img_dca_setting| Einstellungen der
-Eingabemaske". Mit Kick auf das Icon öffnet sich eine Auflistung mit den zur Eingabemaske
+Eingabemaske". Mit Klick auf das Icon öffnet sich eine Auflistung mit den zur Eingabemaske
 aktivierten Attributen. Sind keine Attribute vorhanden, bzw. müssen welche hinzugefügt
 werden, kann das über das Icon "|img_dca_setting_add| Alle hinzufügen" erfolgen
 - alternativ über "|img_new| Neu". Bei dem Weg über "Alle hinzufügen"
