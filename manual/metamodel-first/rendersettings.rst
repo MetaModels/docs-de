@@ -26,30 +26,30 @@ In der Übersicht der Render-Einstellungen sollte nun der erste Eintrag mit
 
 Über einen Klick auf das Icon "|img_rendersetting| Render-Einstellungen der Attribute"
 wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
-die in der jeweiligen Liste der Render-Einstellungen die anzuzeigenden
+die in der jeweiligen Liste der Render-Einstellungen anzuzeigenden
 Attribute ausgewählt bzw. aktiviert.
 
-Ein einfacher Weg, um die angelegten Attribute hinzu zu fügen ist über Icon
+Ein einfacher Weg, um die angelegten Attribute hinzuzufügen ist über Icon
 in der Kopfzeile "|img_rendersettings_add| Alle hinzufügen" - nach Klick auf
 die Buttons "Weiter" und "Speichern und schließen" sind alle vorhandenen
-Attribute der Render-Einstellung hinzu gefügt. Per Standard sind die
+Attribute der Render-Einstellung hinzugefügt. Per Standard sind die
 Attribute nicht aktiviert - dies kann leicht über das "Auge-Icon" erfolgen.
 In diesem Beispiel werden die Attribute "Name" und "Vorname" aktiviert - die
 Attributauflistung sollte nun wie im Screenshot aussehen.
 
 |img_rendersettings_03|
 
-Die Render-Einstellungen für die Anzeige im Backend ist damit abgeschlossen.
-Nachfolgend kann die Render-Einstellungen für die Anzeige im Frontend folgen.
+Die Render-Einstellungen für die Anzeige im Backend sind damit abgeschlossen.
+Nachfolgend können die Render-Einstellungen für die Anzeige im Frontend folgen.
 
 Das Vorgehen ist Analog dem für die "BE Liste" - in den Render-Einstellungen
-kann als Name könnte "FE Liste" eingetragen werden. Zusätzlich wird eine
+könnte als Name "FE Liste" eingetragen werden. Zusätzlich wird eine
 Anzeige der Attribut-Labels per Checkbox "Labels verbergen" abgewählt (siehe
 Screenshot).
 
 |img_rendersettings_04|
 
-Für die Anzeige im Frontend werden alle notwendigen Attribute aktiviert
+Für die Anzeige im Frontend werden alle notwendigen Attribute aktiviert,
 also alle bis auf das Attribut "Veröffentlicht", welches für den Filter
 benötigt wird und nicht mit ausgegeben werden muss bzw. soll (siehe
 Screenshot).
