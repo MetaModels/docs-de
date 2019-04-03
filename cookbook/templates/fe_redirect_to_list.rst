@@ -10,7 +10,7 @@ Die Detailseite auch ohne Angabe des (Filter)Parameters in der URL aufrufbar
 und es erscheint eine Ausgebe wie "Es konnten keine Daten gefunden werden".
 
 Ist dies nicht gewünscht, und es soll dann gleich zur Listenansicht gesprungen
-werden, kann das mit dem folgenden Code im Template der Deatilansicht erreicht werden:
+werden, kann das mit dem folgenden Code im Template der Detailansicht erreicht werden:
 
 .. code-block:: php
    :linenos:
