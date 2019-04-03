@@ -335,7 +335,7 @@ oder QUERY-C (create) die Mitarbeiterliste eingegrenzt werden.
 Kommentare im SQL-Query
 ***********************
 
-Die SQL-Queries können mit unter Umständen recht komplex werden und einige
+Die SQL-Queries können unter Umständen recht komplex werden und einige
 feste Werte wie Attribut-IDs usw. enthalten. Um für einen späteren Zeitpunkt
 oder die Arbeit im Team den Überblick nicht zu verlieren, können auch hier
 Kommentare eingefügt werden - mehr dazu im `MySQL reference manual <https://dev.mysql.com/doc/refman/5.6/en/comments.html>`_.
