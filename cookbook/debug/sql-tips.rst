@@ -4,7 +4,7 @@ SQL-Tipps
 =========
 
 Auch wenn MetaModels einem viel reine Programmierarbeit abnimmt,
-muss man doch hin und wieder direkt in die Datenbankeben
+muss man doch hin und wieder direkt in die Datenbankebene
 einsteigen. Entweder um Daten zu prüfen oder auch um Daten zu verändern.
 
 Vorausgesetzt wird für die Tipps der sichere Umgang mit Tools wie phpMyAdmin
