@@ -267,11 +267,13 @@ class TableMulti extends BaseComplex
     /**
      * Build the where clause
      *
-     * @param QueryBuilder $queryBuilder
-     * @param $mixIds
-     * @param null         $strLangCode
-     * @param null         $intRow
-     * @param null         $varCol
+     * @param QueryBuilder   $queryBuilder
+     *
+     * @param null|array|int $mixIds
+     *
+     * @param null           $intRow
+     *
+     * @param null           $varCol
      */
     protected function buildWhere(
         QueryBuilder $queryBuilder,
@@ -337,7 +339,7 @@ class TableMulti extends BaseComplex
         $intRow = 0;
         foreach ($varValue as $k => $row) {
             foreach ($row as $kk => $col) {
-                $kk = str_replace('col_', '', $kk);
+                $kk = substr($kk, 4);
 
                 $newValue[$k][$kk]['value'] = $col;
                 $newValue[$k][$kk]['col']   = $kk;
