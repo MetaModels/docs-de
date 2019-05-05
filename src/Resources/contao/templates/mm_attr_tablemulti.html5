@@ -10,12 +10,12 @@
     </thead>
 <?php endif; ?>
     <tbody>
-	<?php foreach ((array) $this->raw as $k => $row) : ?>
-	<tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
-	    <?php for ($kk = 0; $kk < $countCol; $kk++) : ?>
-	    <td><?php $i = array_search($kk, array_column($row, 'col')); echo ($i !== false) ? $row[$i]['value'] : ''; ?></td>
-	    <?php endfor; ?>
-	</tr>
-	<?php endforeach; ?>
+    <?php foreach ((array) $this->raw as $k => $row) : ?>
+    <tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
+        <?php for ($kk = 0; $kk < $countCol; $kk++) : ?>
+        <td><?php $i = array_search($kk, array_column($row, 'col')); echo ($i !== false) ? $row[$i]['value'] : ''; ?></td>
+        <?php endfor; ?>
+    </tr>
+    <?php endforeach; ?>
     </tbody>
 </table>
