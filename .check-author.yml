@@ -3,7 +3,7 @@ ignore:
   - "Scrutinizer Auto-Fixer <auto-fixer@scrutinizer-ci.com>"
 
 exclude:
-  languages
+  - /^src\/Resources\/contao\/languages/
 
 mapping:
   "Andreas Isaak <info@andreas-isaak.de>": "Andreas Isaak <andy.jared@googlemail.com>"
