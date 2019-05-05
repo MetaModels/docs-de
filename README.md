@@ -1,20 +1,23 @@
-[![Build Status](https://travis-ci.org/MetaModels/attribute_tablemulti.svg)](https://travis-ci.org/MetaModels/attribute_tablemulti)
+[![Build Status](https://travis-ci.org/MetaModels/attribute_tablemulti.svg)](https://travis-ci.org/MetaModels/attribute_tablemulti/branches)
 [![Latest Version tagged](http://img.shields.io/github/tag/MetaModels/attribute_tablemulti.svg)](https://github.com/MetaModels/attribute_tablemulti/tags)
 [![Latest Version on Packagist](http://img.shields.io/packagist/v/MetaModels/attribute_tablemulti.svg)](https://packagist.org/packages/MetaModels/attribute_tablemulti)
 [![Installations via composer per month](http://img.shields.io/packagist/dm/MetaModels/attribute_tablemulti.svg)](https://packagist.org/packages/MetaModels/attribute_tablemulti)
 
-The multi attribute table
-=========
-#####Original idea by Byteworks:
+# The multi attribute table
+
+The multi attribute table for MetaModels.
+
+
+## Original idea by Byteworks:
 - [Ronny Binder](mailto:rb@bytworks.ch)
 - [Michael Bischof](mailto:mb@byteworks.ch)
 
 
-The table multi attribute.
+## The table multi attribute.
 
+With this attribute you are able to create complex table structures with the [MultiColumnWizard]( https://github.com/menatwork/contao-multicolumnwizard-bundle).
+Create the configuration in e.g. the app/Resources/contao/config/dcaconfig.php or somewhere else where the config is loaded and write something like this:
 
-With this attribute you are able to create complex table structures with the MultiColumnWizard.
-Create the configuration in the system/config/dcaconfig.php or somewhere else where the config is loaded and write something like this:
 
 The `mm_test` is the name of the table and the `multi_test` is the name of the field.
 

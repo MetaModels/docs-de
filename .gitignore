@@ -16,3 +16,4 @@ vendor/
 
 # build
 build/
+composer.lock

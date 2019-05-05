@@ -50,17 +50,18 @@
     "source": "https://github.com/MetaModels/attribute_tablemulti"
   },
   "require": {
-    "php": "^5.6 || ^7.0",
-    "contao/core-bundle": "^4.4",
-    "contao-community-alliance/dc-general": "~2.1@dev",
-    "metamodels/core": "~2.1@dev",
+    "php": "^7.1",
+    "contao-community-alliance/dc-general": "^2.1.3",
+    "contao/core-bundle": "^4.4.8",
+    "metamodels/core": "^2.1.1",
     "symfony/dependency-injection": "^3.3 || ^4.0",
-    "symfony/http-kernel": "^3.3 || ^4.0"
+    "symfony/http-kernel": "^3.3 || ^4.0",
+    "ext-pdo": "*"
   },
   "require-dev": {
-    "cyberspectrum/contao-toolbox": "~0.6",
-    "phpcq/all-tasks": "~1.1",
-    "contao/manager-bundle": "~4.4"
+    "contao/manager-plugin": "^2.1",
+    "menatwork/contao-multicolumnwizard-bundle": "^3.4",
+    "phpcq/all-tasks": "^1.2"
   },
   "autoload": {
     "psr-4": {
@@ -86,17 +87,7 @@
       }
     },
     "branch-alias": {
-      "dev-master-contao3": "2.1.x-dev",
-      "dev-master": "2.2.x-dev",
-      "dev-feature/contao4":  "2.2.x-dev"
+      "dev-master": "2.1.x-dev"
     }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@gitlab.com:metamodels/core.git"
-    }
-  ]
+  }
 }
