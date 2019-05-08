@@ -62,6 +62,11 @@ siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
 Nach der Installation ist über das Install-Tool von Contao ein **Update der Datenbank nicht
 zu vergessen!**
 
+Erfolgt die Installtion über den Contao-Manager und es sind schon Pakete installiert, die
+noch ein altes Paket vom MultiColumnWizard (MCW) enthalten, kann der Manager das nicht
+austauschen und gleichzeitig installieren - 
+siehe `'Forum' <https://community.contao.org/de/showthread.php?72871-MCW-MultiColumnWizard-als-Bundle-f%C3%BCr-Contao-4-(stable)&p=502709&viewfull=1#post502709>`_.
+
 
 Test von speziellen Paketen
 ---------------------------
