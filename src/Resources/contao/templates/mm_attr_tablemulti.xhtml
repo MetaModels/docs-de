@@ -1,21 +1,27 @@
-
+<?php
+$config = $GLOBALS['TL_CONFIG']['metamodelsattribute_multi'][$this->attribute->getMetaModel()->getTableName()][$this->attribute->getColName()] ?? [];
+if (!is_array($config['columnFields'])) {
+    $config['columnFields'] = [];
+}
+$columnNames = array_keys($config['columnFields']);
+?>
 <table class="tablemulti<?php echo $this->additional_class; ?>">
-<?php $countCol = count($this->attribute->get('tablemulti_cols')); if (!$this->settings->get('tablemulti_hide_tablehead')) : ?>
+    <?php $countCol = count($config['columnFields']); if (!$this->settings->get('tablemulti_hide_tablehead')) : ?>
     <thead>
-        <tr>
-            <?php foreach (is_array($this->attribute->get('tablemulti_cols')) ? $this->attribute->get('tablemulti_cols'): array() as $countCol => $headCol) : ?>
-            <th><?php echo $headCol['rowLabel'] ?></th>
-            <?php endforeach; ?>
-        </tr>
-    </thead>
-<?php endif; ?>
-    <tbody>
-        <?php foreach ((array) $this->raw as $k => $row) : ?>
-        <tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
-            <?php for ($kk = 0; $kk < $countCol; $kk++) : ?>
-            <td><?php $i = array_search($kk, array_column($row, 'col')); echo ($i !== false) ? $row[$i]['value'] : ' '; ?></td>
-            <?php endfor; ?>
-        </tr>
+    <tr>
+        <?php foreach ($config['columnFields'] as $headCol): ?>
+        <th><?= $headCol['label'] ?></th>
         <?php endforeach; ?>
+    </tr>
+    </thead>
+    <?php endif; ?>
+    <tbody>
+    <?php foreach ((array) $this->raw as $k => $row) : ?>
+    <tr class="<?= ($k % 2 == 0 ? 'odd' : 'even'); ?>">
+        <?php foreach ($columnNames as $columnName): ?>
+        <td><?php echo $row[$columnName]['value']; ?></td>
+        <?php endforeach; ?>
+    </tr>
+    <?php endforeach; ?>
     </tbody>
 </table>
