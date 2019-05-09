@@ -82,19 +82,19 @@ Version angegeben werden.
 
 Nach "Paket für die Installation vormerken" muss noch die Anpassung der Composer-JSON erfolgen. Dazu in
 der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
-angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.0.0" erweitert bzw. ergänzt werden
+angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.1" erweitert bzw. ergänzt werden
 (bei mehreren Extra-Paketen natürlich bei jedem Eintrag).
 
 zum Beispiel: |br|
 ``"metamodels/core": "dev-hotfix-xyz"`` ändern zu |br|
-``"metamodels/core": "dev-hotfix-xyz as 2.0.0"``
+``"metamodels/core": "dev-hotfix-xyz as 2.1"``
 
 Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über "Einstellungen"
 der Paketverwaltung gelöscht werden.
 
 Da MetaModels eng mit dem DC_General (DCG) verzahnt ist, muss zum Testen häufig auch hier
 auf eine neuere Version geupdatet werden. Das Vorgehen ist das gleiche wie bei MetaModels
-inklusive der Anpassung des JSON-Eintrages mit "as 2.0.0".
+inklusive der Anpassung des JSON-Eintrages mit "as 2.1".
 
 Die Composer-JSON sollte für die Implementierung der Pakete für Core und DCG in etwa die
 folgenden Einträge im Knoten "require" aufweisen (Zeile 8 und 10):
@@ -109,9 +109,9 @@ folgenden Einträge im Knoten "require" aufweisen (Zeile 8 und 10):
        "license": "proprietary",
        "require": {
            "contao-community-alliance/composer-client": "~0.12",
-           "contao-community-alliance/dc-general": "dev-hotfix/beta-39 as 2.0.0",
-           "metamodels/bundle_all": ">=2.0.0.0,<3-dev",
-           "metamodels/core": "dev-hotfix/alpha-15 as 2.0.0",
+           "contao-community-alliance/dc-general": "dev-hotfix/test1 as 2.1",
+           "metamodels/bundle_all": "^2.1",
+           "metamodels/core": "dev-hotfix/test42 as 2.1",
            ...
        },
        ...
@@ -139,8 +139,8 @@ eintragen) z.B.
        "license": "proprietary",
        "require": {
            "contao-community-alliance/composer-client": "~0.12",
-           "contao-community-alliance/dc-general": "dev-hotfix/beta-39 as 2.0.0",
-           "metamodels/bundle_all": ">=2.0.0.0,<3-dev",
+           "contao-community-alliance/dc-general": "^2.1",
+           "metamodels/bundle_all": "^2.1",
            "byteworks/metamodelsattribute_multi": ">=1.0.5.0,<1.1-dev",
            ...
        },
@@ -168,8 +168,8 @@ Reiter "Commits".
        "license": "proprietary",
        "require": {
            "contao-community-alliance/composer-client": "~0.12",
-           "contao-community-alliance/dc-general": "dev-hotfix/beta-39 as 2.0.0",
-           "metamodels/bundle_all": ">=2.0.0.0,<3-dev",
+           "contao-community-alliance/dc-general": "^2.1",
+           "metamodels/bundle_all": "^2.1",
            "metamodels/attribute_alias": "dev-master#a97ec461ae1254fa616811c3ce234515238fb3c7",
            ...
 
