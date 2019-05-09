@@ -3,9 +3,9 @@
 [![Latest Version on Packagist](http://img.shields.io/packagist/v/MetaModels/attribute_tablemulti.svg)](https://packagist.org/packages/MetaModels/attribute_tablemulti)
 [![Installations via composer per month](http://img.shields.io/packagist/dm/MetaModels/attribute_tablemulti.svg)](https://packagist.org/packages/MetaModels/attribute_tablemulti)
 
-# The multi attribute table
+# The table multi attribute
 
-The multi attribute table for MetaModels.
+The table multi attribute for MetaModels.
 
 
 ## Original idea by Byteworks:
@@ -13,7 +13,7 @@ The multi attribute table for MetaModels.
 - [Michael Bischof](mailto:mb@byteworks.ch)
 
 
-## The table multi attribute.
+## Configure the table multi attribute
 
 With this attribute you are able to create complex table structures with the [MultiColumnWizard]( https://github.com/menatwork/contao-multicolumnwizard-bundle).
 Create the configuration in e.g. the app/Resources/contao/config/dcaconfig.php or somewhere else where the config is loaded and write something like this:
