@@ -73,9 +73,10 @@ Test von speziellen Paketen
 
 Neben den aktuell verfügbaren und freigegebenen Pakete von MetaModels, gibt es teilweise
 Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen - das
-könnte z.B. für den MetaModels-core das ein Paket "dev-hotfix-xyz" sein. Zu sehen sind die Pakete u.a.
+könnte z.B. für den MetaModels-core das ein Paket "dev-hotfix/test1" sein. Zu sehen sind die Pakete u.a.
 auf Github im entsprechenden Repository (z.B. MetaModels/core) im Reiter
-`'branches' <https://github.com/MetaModels/core/branches>`_.
+`'branches' <https://github.com/MetaModels/core/branches>`_. Die dort angegebene bezeichnung wie
+"hotfix/test1" muss um den Präfix "dev-" ergännz werden.
 
 Möchte man ein solches Paket testen, muss es explizit im Contao-Manger oder in der composer.json mit seiner
 Version angegeben werden.
@@ -86,8 +87,8 @@ angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.1" erweitert
 (bei mehreren Extra-Paketen natürlich bei jedem Eintrag).
 
 zum Beispiel: |br|
-``"metamodels/core": "dev-hotfix-xyz"`` ändern zu |br|
-``"metamodels/core": "dev-hotfix-xyz as 2.1"``
+``"metamodels/core": "dev-hotfix/test1"`` ändern zu |br|
+``"metamodels/core": "dev-hotfix/test1 as 2.1"``
 
 Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über "Einstellungen"
 der Paketverwaltung gelöscht werden.
