@@ -14,7 +14,7 @@ Metamodel oder fragt diese Eigenschaft ab.
 IMetaModelDataDefinition Interface
 ..................................
 
-Aktuelle Informationen unter: `IMetaModelDataDefinition <https://github.com/MetaModels/core/blob/master/src/MetaModels/DcGeneral/DataDefinition/IMetaModelDataDefinition.php>`_
+Aktuelle Informationen unter: `IMetaModelDataDefinition <https://github.com/MetaModels/core/blob/master/src/DcGeneral/DataDefinition/IMetaModelDataDefinition.php>`_
 
 **Interfaces:**
 

@@ -17,7 +17,7 @@ oder Filterparameter gesetzt werden.
 IFilterRule Interface
 .....................
 
-Aktuelle Informationen unter: `IFilterRule <https://github.com/MetaModels/core/blob/master/src/MetaModels/Filter/IFilterRule.php>`_
+Aktuelle Informationen unter: `IFilterRule <https://github.com/MetaModels/core/blob/master/src/Filter/IFilterRule.php>`_
 
 **Interfaces:**
 
@@ -30,7 +30,7 @@ gibt alle IDs nach der gegebenen Filterregel zurück
 IFilter Interface
 .................
 
-Aktuelle Informationen unter: `IFilterRule <https://github.com/MetaModels/core/blob/master/src/MetaModels/Filter/IFilter.php>`_
+Aktuelle Informationen unter: `IFilterRule <https://github.com/MetaModels/core/blob/master/src/Filter/IFilter.php>`_
 
 **Interfaces:**
 

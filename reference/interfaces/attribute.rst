@@ -19,7 +19,7 @@ IAttributeFactory Interface
 Das IAttributeFactory Interface ist das "Factory Interface" zur Abfrage
 eines Attributes.
 
-Aktuelle Informationen unter: `IAttributeFactory <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/IAttributeFactory.php>`_
+Aktuelle Informationen unter: `IAttributeFactory <https://github.com/MetaModels/core/blob/master/src/Attribute/IAttributeFactory.php>`_
 
 **Interfaces:**
 
@@ -56,7 +56,7 @@ IAttribute Interface
 
 Das IAttribute Interface ist das grundlegende Interface für Attribute.
 
-Aktuelle Informationen unter: `IAttributeFactory <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/IAttribute.php>`_
+Aktuelle Informationen unter: `IAttributeFactory <https://github.com/MetaModels/core/blob/master/src/Attribute/IAttribute.php>`_
 
 **Interfaces:**
 
@@ -145,7 +145,7 @@ Das ISimple Interface ist für alle "einfachen" Attribute gedacht,
 die über die einfache Methode "SELECT colName FROM mm_table"
 ermittelt werden können.
 
-Aktuelle Informationen unter: `ISimple <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/ISimple.php>`_
+Aktuelle Informationen unter: `ISimple <https://github.com/MetaModels/core/blob/master/src/Attribute/ISimple.php>`_
 
 **Interfaces:**
 
@@ -178,7 +178,7 @@ Das IComplex Interface ist für alle "komplexen" Attribute gedacht,
 die nicht über die einfache Methode "SELECT colName FROM mm_table"
 ermittelt werden können.
 
-Aktuelle Informationen unter: `IComplex <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/IComplex.php>`_
+Aktuelle Informationen unter: `IComplex <https://github.com/MetaModels/core/blob/master/src/Attribute/IComplex.php>`_
 
 **Interfaces:**
 
@@ -197,7 +197,7 @@ ITranslated Interface
 
 Das ITranslated Interface ist für alle übersetzten Attribute.
 
-Aktuelle Informationen unter: `ITranslated <https://github.com/MetaModels/core/blob/master/src/MetaModels/Attribute/ITranslated.php>`_
+Aktuelle Informationen unter: `ITranslated <https://github.com/MetaModels/core/blob/master/src/Attribute/ITranslated.php>`_
 
 **Interfaces:**
 
