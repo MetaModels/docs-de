@@ -39,11 +39,13 @@ soll.
 Für einen Zugriff benötigt man einen "Service Container", den man sich
 z.B. im globalen Scope holen kann
 
-``$container = $GLOBALS['container']['metamodels-service-container'];``
+``$container = $this->getContainer();``
 
 Anschließend kann mit einem Interface daruaf zugegriffen werden - z.B.:
 
-``$factory = $container->getFactory();``
+``$factory = $container->getFactory();`` |br|
+bzw. |br|
+``$factory = $this->getContainer()->get('metamodels.factory');``
 
 Mit dem Zugriff über $GLOBALS kann in eigenen Templates und Programmierungen
 leicht auf den Service-Container zugegriffen werden. Andere Möglichkeiten
@@ -437,6 +439,8 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    $modelName = 'mm_mitarbeiterliste';
    // ID der Render-Einstellungen "FE-Liste"
    $renderId = 2;
+   // ID des Filters
+   $filterId = 1;
    
    /* Interface */
 
@@ -462,6 +466,8 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    //$model = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
    // leerer Filter
    $filter = $model->getEmptyFilter();
+   // vordefinierter Filter über die Filter-Id
+   //$filter = $model->prepareFilter($filterId, []);
    // alle Items
    $items = $model->findByFilter($filter);
    // alle Items geparst zu Array mit HTML5 Knoten
