@@ -51,7 +51,7 @@ Mit dem Zugriff über $GLOBALS kann in eigenen Templates und Programmierungen
 leicht auf den Service-Container zugegriffen werden. Andere Möglichkeiten
 wären über Events wie z.B. "\MetaModelsEvents::SUBSYSTEM_BOOT".
 
-Aktuelle Informationen unter: `IMetaModelsServiceContainer <https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModelsServiceContainer.php>`_
+Aktuelle Informationen unter: `IMetaModelsServiceContainer <https://github.com/MetaModels/core/blob/master/src/IMetaModelsServiceContainer.php>`_
 
 **Interfaces:**
 
@@ -92,7 +92,7 @@ Mit dem ServiceContainerAware Interface kann man Zugriff auf den
 Service-Container erhalten oder einen neuen Service-Container
 zuweisen.
 
-Aktuelle Informationen unter: `IServiceContainerAware <https://github.com/MetaModels/core/blob/master/src/MetaModels/IServiceContainerAware.php>`_
+Aktuelle Informationen unter: `IServiceContainerAware <https://github.com/MetaModels/core/blob/master/src/IServiceContainerAware.php>`_
 
 **Interfaces:**
 
@@ -115,7 +115,7 @@ Die Erstellung eines neuen MetaModel ist nicht vorgesehen - wenn auch möglich -
 für die Erstellung sehr komplexe Parameter mit übergeben werden müssten und die 
 Erstellung auf die Arbeit aus dem Backend ausgerichtet ist.
 
-Aktuelle Informationen unter: `IFactory <https://github.com/MetaModels/core/blob/master/src/MetaModels/IFactory.php>`_
+Aktuelle Informationen unter: `IFactory <https://github.com/MetaModels/core/blob/master/src/IFactory.php>`_
 
 **Interfaces:**
 
@@ -178,7 +178,7 @@ aller vorhandenen Attribute:
 
 ``$arrAttributes = $objMetaModel->getAttributes();``
 
-Aktuelle Informationen unter: `IMetaModel <https://github.com/MetaModels/core/blob/master/src/MetaModels/IMetaModel.php>`_
+Aktuelle Informationen unter: `IMetaModel <https://github.com/MetaModels/core/blob/master/src/IMetaModel.php>`_
 
 **Interfaces:**
 
@@ -310,7 +310,7 @@ zur Anzahl aller vorhandenen Items:
 
 ``$intAmountItems = $objItems->getCount();``
 
-Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItems.php>`_
+Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/IItems.php>`_
 
 **Interfaces:**
 
@@ -371,7 +371,7 @@ Ein neues Item wird wie folgt erzeugt:
 In dem übergebenen Array können "Key-Value-Paare" übergeben werden - dies
 ist aber nur bei einfachen Item-Typen wie Text sinnvoll.
 
-Aktuelle Informationen unter: `IItem <https://github.com/MetaModels/core/blob/master/src/MetaModels/IItem.php>`_
+Aktuelle Informationen unter: `IItem <https://github.com/MetaModels/core/blob/master/src/IItem.php>`_
 
 **Interfaces:**
 
