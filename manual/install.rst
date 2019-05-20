@@ -62,6 +62,19 @@ siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
 Nach der Installation ist über das Install-Tool von Contao ein **Update der Datenbank nicht
 zu vergessen!**
 
+Bei einer Umstellung (2.0 -> 2.1) oder Neuinstalltion ist es eine gute Gelegenheit, nur noch die Attribute und Filter
+zu installieren, die für das Projekt notwendig sind. War zuvor z.B. `metamodels/bundle_all` im Einsatz,
+kann man mit den folgenden SQL-Befehlen die wirklich verwendeten Attribute und Filter abfragen:
+
+.. code-block:: sql
+   :linenos:
+   
+   -- Attribute
+   SELECT type FROM `tl_metamodel_attribute` GROUP BY type ORDER BY type
+   
+   -- Filter
+   SELECT type FROM `tl_metamodel_filtersetting` GROUP BY type ORDER BY type
+
 Erfolgt die Installtion über den Contao-Manager und es sind schon Pakete installiert, die
 noch ein altes Paket vom MultiColumnWizard (MCW) enthalten, kann der Manager das nicht
 austauschen und gleichzeitig installieren - 
