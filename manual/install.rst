@@ -56,6 +56,10 @@ Composer möglich - z.B. mit
 
 ``php web/contao-manager.phar.php composer require metamodels/core``
 
+bzw.
+
+``php web/contao-manager.phar.php composer require metamodels/bundle_start``
+
 Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
 siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
 
