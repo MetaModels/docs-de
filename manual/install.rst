@@ -109,7 +109,7 @@ Anschließend über den Contao-Manager oder auf der Konsole ein Update machen.
 
 Da MetaModels eng mit dem DC_General (DCG) verzahnt ist, muss zum Testen häufig auch hier
 auf eine neuere Version geupdatet werden. Das Vorgehen ist das gleiche wie bei MetaModels
-inklusive der Anpassung des JSON-Eintrages mit "as 2.1".
+inklusive der Anpassung des JSON-Eintrages mit "as 2.1.x".
 
 Die Composer-JSON sollte für die Implementierung der Pakete für Core und DCG in etwa die
 folgenden Einträge im Knoten "require" aufweisen (Zeile 8 und 10):
@@ -124,9 +124,9 @@ folgenden Einträge im Knoten "require" aufweisen (Zeile 8 und 10):
        "license": "proprietary",
        "require": {
            "contao-community-alliance/composer-client": "~0.12",
-           "contao-community-alliance/dc-general": "dev-hotfix/test1 as 2.1",
+           "contao-community-alliance/dc-general": "dev-hotfix/2.1.42 as 2.1.42",
            "metamodels/bundle_all": "^2.1",
-           "metamodels/core": "dev-hotfix/2.1.25 as 2.1",
+           "metamodels/core": "dev-hotfix/2.1.25 as 2.1.25",
            ...
        },
        ...
