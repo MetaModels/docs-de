@@ -93,15 +93,15 @@ Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen -
 könnte z.B. für den MetaModels-core das ein Paket ``hotfix/2.1.25`` sein. Zu sehen sind die Pakete u.a.
 auf Github im entsprechenden Repository (z.B. MetaModels/core) im Reiter
 `'branches' <https://github.com/MetaModels/core/branches>`_. Die dort angegebene Bezeichnung wie
-``hotfix/test1`` muss um den Präfix ``dev-`` ergännz werden, sowie um ein ``as 2.1`` am Ende.
+``hotfix/2.1.25`` muss um den Präfix ``dev-`` ergänzt werden, sowie um ein ``as 2.1.25`` am Ende.
 
 Möchte man ein solches Paket testen, muss es explizit im Contao-Manger mit 
 
-``dev-hotfix/2.1.25 as 2.1``
+``dev-hotfix/2.1.25 as 2.1.25``
 
 oder in der composer.json
 
-``"metamodels/core": "dev-hotfix/2.1.25 as 2.1"``
+``"metamodels/core": "dev-hotfix/2.1.25 as 2.1.25"``
 
 mit seiner Version angegeben werden.
 
