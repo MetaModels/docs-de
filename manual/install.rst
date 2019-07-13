@@ -90,25 +90,22 @@ Test von speziellen Paketen
 
 Neben den aktuell verfügbaren und freigegebenen Pakete von MetaModels, gibt es teilweise
 Pakete mit Bugfixes oder neuen Funktionen, die getestet werden können/müssen - das
-könnte z.B. für den MetaModels-core das ein Paket "dev-hotfix/test1" sein. Zu sehen sind die Pakete u.a.
+könnte z.B. für den MetaModels-core das ein Paket "hotfix/2.1.25" sein. Zu sehen sind die Pakete u.a.
 auf Github im entsprechenden Repository (z.B. MetaModels/core) im Reiter
 `'branches' <https://github.com/MetaModels/core/branches>`_. Die dort angegebene bezeichnung wie
-"hotfix/test1" muss um den Präfix "dev-" ergännz werden.
+"hotfix/test1" muss um den Präfix "dev-" ergännz werden, sowie um ein "as 2.1" am Ende.
 
-Möchte man ein solches Paket testen, muss es explizit im Contao-Manger oder in der composer.json mit seiner
-Version angegeben werden.
+Möchte man ein solches Paket testen, muss es explizit im Contao-Manger mit 
 
-Nach "Paket für die Installation vormerken" muss noch die Anpassung der Composer-JSON erfolgen. Dazu in
-der Paketverwaltung auf "Einstellungen" und anschließend auf "Expertenmodus" klicken - die
-angezeigte JSON-Datei muss im Knoten "require" um den Eintrag "as 2.1" erweitert bzw. ergänzt werden
-(bei mehreren Extra-Paketen natürlich bei jedem Eintrag).
+``dev-hotfix/2.1.25 as 2.1``
 
-zum Beispiel: |br|
-``"metamodels/core": "dev-hotfix/test1"`` ändern zu |br|
-``"metamodels/core": "dev-hotfix/test1 as 2.1"``
+oder in der composer.json
 
-Nach der Installation per "Pakete aktualisieren" sollte der Composer-Cache über "Einstellungen"
-der Paketverwaltung gelöscht werden.
+``"metamodels/core": "dev-hotfix/2.1.25 as 2.1"``
+
+mit seiner Version angegeben werden.
+
+Anschließend über den Contao-Manager oder auf der Konsole ein Update machen.
 
 Da MetaModels eng mit dem DC_General (DCG) verzahnt ist, muss zum Testen häufig auch hier
 auf eine neuere Version geupdatet werden. Das Vorgehen ist das gleiche wie bei MetaModels
@@ -129,14 +126,14 @@ folgenden Einträge im Knoten "require" aufweisen (Zeile 8 und 10):
            "contao-community-alliance/composer-client": "~0.12",
            "contao-community-alliance/dc-general": "dev-hotfix/test1 as 2.1",
            "metamodels/bundle_all": "^2.1",
-           "metamodels/core": "dev-hotfix/test42 as 2.1",
+           "metamodels/core": "dev-hotfix/2.1.25 as 2.1",
            ...
        },
        ...
    }
 
-Um auf den ursprünglichen Stand zurück zu gelangen, kann das Paket im Paketmanager einfach gelöscht
-werden.
+Um auf den ursprünglichen Stand zurück zu gelangen, die Pakete wieder auf ihren ursprünglichen Aufruf
+z.B. "^2.1" zurücksetzen und ein Update inkl. Datenbank machen..
 
 Wichtig ist nach einem Test die Rückmeldung zum Entwickler bzw. an das MetaModels-Team über
 `Github <https://github.com/MetaModels>`_.
