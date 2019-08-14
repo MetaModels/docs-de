@@ -5,16 +5,16 @@ Start mit MetaModels
 
 Für den Start mit MetaModels sollten einige grundlegende Sachen beachtet werden.
 
-Das Projekt "MetaModels" arbeitet recht stabil - ist aber dennoch in steter Entwicklung. Im
+Das Projekt "MetaModels" ist `stable` - aber ist dennoch in steter Entwicklung. Im
 Zusammenspiel mit weiteren Komponenten wie dem DC_General (DCG) oder dem Contao Core kann es
 trotzdem immer mal zum Verlust von Daten kommen. Deshalb sollte ein regelmäßiges Backup
 eingerichtet werden.
 
 Checkliste:
 
-   |box| aktuelles MetaModels und DCG installiert (möglichst per Composer)
+   |box| aktuelles MetaModels und DCG installiert
    
-   |box| In Contao Systemeinstellungen die Checkboxen "Internen Cache umgehen" und "Fehlermeldungen anzeigen" aktivieren - alle Caches anschließend nochmal leeren!
+   |box| neben MM-Core auch weitere, benötigte Attribute und Filter installiert - alternativ `bundle_start`
    
    |box| regelmäßiges Backup einrichten
    
