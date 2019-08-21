@@ -52,7 +52,7 @@ Die übrigen Einstellungsparameter sind analog der Filterregel "Einfache Abfrage
 Known Issues and Next Features
 ------------------------------
 
-* aktuell werden nur Attributstypen Select und Tags unterstützt
+* 
 
 
 Spenden
