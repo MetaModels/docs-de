@@ -21,7 +21,7 @@ Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
 
    <?php
    // Debug items.
-   if (function_exists('dump')) {
+   if (\Contao\System::getContainer()->get('kernel')->isDebug()) {
        dump($this->data);
    }
    ?>
