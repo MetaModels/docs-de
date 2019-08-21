@@ -14,7 +14,6 @@ Erweiterungen
     notelist
     isotope
     leaflet
-    boilerplate
     perimetersearch
     attribute_color
     attribute_mcw
