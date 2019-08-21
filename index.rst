@@ -44,7 +44,6 @@ Handbuch
         manual/install
         manual/component/index
         manual/metamodel-first/index
-        manual/metamodel-second/index
         manual/metamodel-special/index
         manual/extended/index
 
