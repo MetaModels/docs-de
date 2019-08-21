@@ -18,6 +18,7 @@ Erweiterungen
     perimetersearch
     attribute_color
     attribute_mcw
+    filter_parent
     
 
 weitere bekannte Erweiterungen
