@@ -49,9 +49,6 @@ Voraussetzungen für die Installation:
 
 * MetaModels core 2.1
 
-Während des Fundrasings benötigt man einen SSH-Key für die Freischaltung -
-weitere Infos zur Installation per E-Mail.
-
 
 Filterregel anlegen
 -------------------
