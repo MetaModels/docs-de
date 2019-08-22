@@ -30,7 +30,7 @@ die Erweiterung(en) bei Zahlung einer Spende sofort einsetzen. Die Zahlung
 berechtigt zum Einsatz für ein Projekt. Rechtsansprüche jedweder Art sind
 nach Zahlung einer Spende ausgeschlossen.
 
-Die Höhe der Spende sollte mindestens 250€*1 betragen.
+Die Höhe der Spende sollte mindestens 200€*1 betragen.
 
 Für den Zugriff auf das Module werden die Repositories per SSH-PublicKey für
 eine Installation per composer frei gegeben.
