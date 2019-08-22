@@ -5,8 +5,7 @@ Filter-Parent für MetaModels
 
 .. warning:: Der FilterParent ist noch im Fundraising und wird erst nach
    Erreichen der Zielsumme von z.Z. 2.640,00 € frei geschaltet. |br|
-   Eine Vorab-Installation ist nach Absprache möglich.
-   Kontakt: info@e-spin.de
+   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Der Filter-Parent ermöglicht es, Items einer vorhandenen Kind-Tabellen
 nach Eigenschaften der Elterntabelle zu filtern.
@@ -20,6 +19,27 @@ Frontend variabel gestalten möchte.
 Ein anderes Beispiel wären Events, die als Kindtabelle von Veranstaltungen
 fungieren und diese nach den Kategorien der Veranstaltung gefiltert werden
 sollen.
+
+
+Early-Adopter-Programm
+----------------------
+
+Das Projekt ist in Version 1.0 fertig aber aktuell noch nicht frei verfügbar.
+Die Refinanzierung erfolgt über ein "Early-Adopter-Programm", d.h. man kann
+die Erweiterung(en) bei Zahlung einer Spende sofort einsetzen. Die Zahlung
+berechtigt zum Einsatz für ein Projekt. Rechtsansprüche jedweder Art sind
+nach Zahlung einer Spende ausgeschlossen.
+
+Die Höhe der Spende sollte mindestens 250€*1 betragen.
+
+Für den Zugriff auf das Module werden die Repositories per SSH-PublicKey für
+eine Installation per composer frei gegeben.
+
+Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
+EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
+Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@-spin.de
+
+*1 Netto – ggf. zzgl. MwSt.
 
 
 Installation per Composer
