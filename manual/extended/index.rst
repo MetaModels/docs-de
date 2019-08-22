@@ -18,7 +18,8 @@ Erweiterungen
     attribute_color
     attribute_mcw
     filter_parent
-    
+    metadata_extractor
+
 
 weitere bekannte Erweiterungen
 ------------------------------
