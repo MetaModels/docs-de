@@ -23,7 +23,7 @@ müssen nicht manuell per "Copy&Paste" aus anderen Programmen übertragen werden
 Welche Metadaten möglich sind, ist durch das entsprechende Dateiformat bestimmt.
 
 Mit dem File-Metadata-Extractor können diese spezifischen Daten aus einer Datei
-ausgelesen werden und in ein oder verschiedene Attribute/Eingabefelder zum
+ausgelesen und in ein oder verschiedene Attribute/Eingabefelder zum
 Abspeichern in MetaModels übermittelt werden. Sind die Daten in MetaModels
 gespeichert, können die standardmäßigen Werkzeuge von MM wie Filter oder Suche
 zum Einsatz kommen.
@@ -115,7 +115,9 @@ Zielattribut manipuliert werden.
 
 In der Eingabemaske des Items sind nun bei dem Datei-Attribut neben der
 Dateiauswahl zwei weitere Buttons für den Datentransfer in die Eingabefelder
-vorhanden.
+vorhanden. Wird einer der beiden geklickt, werden die Daten in die Eingabefelder
+übertragen und können auch noch weiter korrigiert/ergänzt werden. Erst mit
+dem Speichern des Datensatzes sind die Metadaten in MetaModels gespeichert.
 
 |img_item_inputmask|
 
