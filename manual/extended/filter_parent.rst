@@ -37,7 +37,7 @@ eine Installation per composer frei gegeben.
 
 Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
-Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@-spin.de
+Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de
 
 *1 Netto – ggf. zzgl. MwSt.
 

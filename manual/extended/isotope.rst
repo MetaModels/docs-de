@@ -49,7 +49,7 @@ Templates, Datenbank sowie die Demodateien (/files).
 
 Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
-Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@-spin.de - siehe auch
+Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de - siehe auch
 `MM-Fundrasing-Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#isotope>`_.
 
 *1 Netto – ggf. zzgl. MwSt.
