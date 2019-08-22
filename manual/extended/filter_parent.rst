@@ -43,16 +43,10 @@ erscheint folgende Maske:
 
 |img_filterparameter|
 
-Bei den Einstellungen wird das Eltern-MetaModel und das zu filternde Attribut
-ausgewählt.
+Bei den Einstellungen ist das Eltern-MetaModel und das als Filter fungierende
+Attribut auszuwählen.
 
 Die übrigen Einstellungsparameter sind analog der Filterregel "Einfache Abfrage".
-
-
-Known Issues and Next Features
-------------------------------
-
-* 
 
 
 Spenden
