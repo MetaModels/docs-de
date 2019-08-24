@@ -230,8 +230,8 @@ Die Dictionaries ``mm_staff``, ``mm_division`` und ``mm_projects`` sind die
 gebildet. Mit den Jobnamen z.B. ``export-all`` oder ``import-all`` werden
 die Jobs auf der Konsole aufgerufen.
 
-Eine exportierte XLIFF-Datei kann in einem XLIFF-Editor wie z.B.
-Poedit geöffnet und bearbeitet werden - siehe Screenshot:
+Eine exportierte XLIFF-Datei kann in einem XLIFF-Editor wie z.B.`Poedit <https://poedit.net/>`_
+geöffnet und bearbeitet werden - siehe Screenshot:
 
 |img_poedit|
 
