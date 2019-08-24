@@ -69,48 +69,48 @@ Konfiguration
 Nach der erfolgreichen Installation muss der Export und Import
 entsprechend der eigenen Vorgaben und Wünsche konfiguriert werden.
 
-Zunächst wird ein Ordner `translations` im Installationsverzeichnis
+Zunächst wird ein Ordner ``/translations`` im Installationsverzeichnis
 von Contao anlegt. Dort ist die Ablage der Exportierten XLIFF-Dateien
 bzw. von dort werden diese wieder beim Import eingelesen.
 
-Weiterhin ist im Ordner /app oder /app/Resources eine Konfiguationsdatei
-`.translation-jobs.yml` anzulegen. Mit dieser Konfigurationsdatei wird
+Weiterhin ist im Ordner ``/app`` oder ``/app/Resources`` eine Konfiguationsdatei
+``.translation-jobs.yml`` anzulegen. Mit dieser Konfigurationsdatei wird
 festgelegt, was exportiert werden soll - z.B. nur Contao oder nur MM oder
 beides - sowie werden hier einzelne Jobs definiert, die per Konsolenaufruf
 gestartet werden. 
 
-Somit ist die Konfigurationsdatei in die Bereiche `dictionaries` und
-`jobs`eingeteilt - die Parameter sind wie folgt (`siehe auch Beispiel <#beispiel>`_:):
+Somit ist die Konfigurationsdatei in die Bereiche ``dictionaries`` und
+``jobs``eingeteilt - die Parameter sind wie folgt (`siehe auch Beispiel <#beispiel>`_:):
 
 dictionaries
 ............
 
-* <*> Quellenname: Bezeichnung für den Aufruf in Jobs bei `source` oder `target` oder bei Typ `xliff` ist das die Bezeichnung für die .xlf-Datei
-* <type> Typ: `contao`, `compound` oder `xliff`
-* <name> Name: `contao`oder `content`
+* ``*`` Quellenname: Bezeichnung für den Aufruf in Jobs bei ``source`` oder ``target`` oder bei Typ ``xliff`` ist das die Bezeichnung für die .xlf-Datei
+* ``type`` Typ: ``contao``, ``compound`` oder ``xliff``
+* ``name`` Name: ``contao``oder ``content``
 
-Dictionaries vom Typ `compound` können wiederum vorhandene Dictionaries beinhalten
-und diese um weitere Quellen ergänzen - `siehe Beispiel <#beispiel>`_
+Dictionaries vom Typ ``compound`` können wiederum vorhandene Dictionaries beinhalten
+und diese um weitere Quellen ergänzen - `siehe Beispiel #beispiel`_
 
 jobs
 ....
 
-* <*> Jobname: Bezeichnung für den Aufruf auf der Konsole oder in einem anderen Job
-* <type> Typ: `copy` zum Kopieren der Übersetzungsdaten oder `batch` zum Aufruf/Zusammenfassen vorhandener Jobs
+* ``*`` Jobname: Bezeichnung für den Aufruf auf der Konsole oder in einem anderen Job
+* ``type`` Typ: `copy` zum Kopieren der Übersetzungsdaten oder `batch` zum Aufruf/Zusammenfassen vorhandener Jobs
 
-Typ `copy`:
-* <source>: Quellenbezeichnung aus Dictionaries
-* <target>: Zielbezeichnung aus Dictionaries
-* <source_language>: Sprachkürzel z.B. `en`, `de` für die Quellensprache
-* <target_language>: Sprachkürzel z.B. `de`, `en` für die Zielsprache
-* <copy-source>: `true` oder `false`
-* <copy-target>: `if-empty`
-* <clean-obsolete>: `true` oder `false`
-* <remove-obsolete>: `true` oder `false`
-* <filter>: Filter
+Typ ``copy``:
+* ``source``: Quellenbezeichnung aus Dictionaries
+* ``target``: Zielbezeichnung aus Dictionaries
+* ``source_language``: Sprachkürzel z.B. `en`, `de` für die Quellensprache
+* ``target_language``: Sprachkürzel z.B. `de`, `en` für die Zielsprache
+* ``copy-source``: `true` oder `false`
+* ``copy-target``: `if-empty`
+* ``clean-obsolete``: `true` oder `false`
+* ``remove-obsolete``: `true` oder `false`
+* ``filter``: Filter
 
-Type `batch`
-* jobs: Liste mit Jobbezeichnungen, die Abgearbeitet werden sollen
+Type ``batch``
+* ``jobs``: Liste mit Jobbezeichnungen, die Abgearbeitet werden sollen
 
 
 Export
@@ -224,9 +224,9 @@ Beispiel
           - export-all
           - import-all
 
-Die Dictionaries `mm_staff`, `mm_division` und `mm_projects` sind die
-übersetzten MetaModels - aus `mmworkshop` wird der Dateiname mmworkshop.xlf
-gebildet. Mit den Jobnamen z.B. `export-all` oder `import-all` werden
+Die Dictionaries ``mm_staff``, ``mm_division`` und ``mm_projects`` sind die
+übersetzten MetaModels - aus ``mmworkshop`` wird der Dateiname ``mmworkshop.xlf``
+gebildet. Mit den Jobnamen z.B. ``export-all`` oder ``import-all`` werden
 die Jobs auf der Konsole aufgerufen.
 
 Eine exportierte XLIFF-Datei kann in einem XLIFF-Editor wie z.B.
