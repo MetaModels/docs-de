@@ -87,7 +87,7 @@ dictionaries
 
 * ``*`` Quellenname: Bezeichnung für den Aufruf in Jobs bei ``source`` oder ``target`` oder bei Typ ``xliff`` ist das die Bezeichnung für die .xlf-Datei
 * ``type`` Typ: ``contao``, ``compound`` oder ``xliff``
-* ``name`` Name: ``contao``oder ``content``
+* ``name`` Name: ``contao`` oder ``content``
 
 Dictionaries vom Typ ``compound`` können wiederum vorhandene Dictionaries beinhalten
 und diese um weitere Quellen ergänzen - `siehe Beispiel #beispiel`_
@@ -96,7 +96,7 @@ jobs
 ....
 
 * ``*`` Jobname: Bezeichnung für den Aufruf auf der Konsole oder in einem anderen Job
-* ``type`` Typ: `copy` zum Kopieren der Übersetzungsdaten oder `batch` zum Aufruf/Zusammenfassen vorhandener Jobs
+* ``type`` Typ: ``copy`` zum Kopieren der Übersetzungsdaten oder ``batch`` zum Aufruf/Zusammenfassen vorhandener Jobs
 
 Typ ``copy``:
 * ``source``: Quellenbezeichnung aus Dictionaries
