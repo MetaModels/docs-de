@@ -240,6 +240,7 @@ Erweiterungsmöglichkeiten
 -------------------------
 
 Ausgabetypen
+
 * po
 * csv
 * xml
