@@ -99,6 +99,7 @@ jobs
 * ``type`` Typ: ``copy`` zum Kopieren der Übersetzungsdaten oder ``batch`` zum Aufruf/Zusammenfassen vorhandener Jobs
 
 Typ ``copy``:
+
 * ``source``: Quellenbezeichnung aus Dictionaries
 * ``target``: Zielbezeichnung aus Dictionaries
 * ``source_language``: Sprachkürzel z.B. `en`, `de` für die Quellensprache
@@ -110,6 +111,7 @@ Typ ``copy``:
 * ``filter``: Filter
 
 Type ``batch``
+
 * ``jobs``: Liste mit Jobbezeichnungen, die Abgearbeitet werden sollen
 
 
