@@ -158,6 +158,7 @@ Beispiel
       contao_all:
         type: contao
         name: contao
+    
       combined-content:
         type: compound
         name: content
