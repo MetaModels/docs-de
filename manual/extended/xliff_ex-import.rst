@@ -9,10 +9,10 @@ XLIFF-Ex-Import für MetaModels
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 
-XLIFF-Ex-Import können die Inhalte einer Contao-Installation für eine
-Übersetzung Exportiert und wieder importiert werden. Neben den normalen
-Inhalten von Contao weren auch die mehrsprachigen Inhalte von MetaModels
-esportiert.
+Mit dem Tool XLIFF-Ex-Import können die Inhalte einer Contao-Installation
+für eine Übersetzung Exportiert und wieder importiert werden. Neben den
+normalen Inhalten von Contao werden auch die mehrsprachigen Inhalte von
+MetaModels exportiert.
 
 Als Export wird eine `XLIFF-Datei <https://de.wikipedia.org/wiki/XML_Localization_Interchange_File_Format>`_
 erzeugt, die von gängigen Übersetzungstools eingelesen werden kann. Zum
@@ -23,7 +23,7 @@ Sind die Übersetzungen in die exportierte XLIFF-Datei eingepflegt,
 kann diese wieder importiert werden.
 
 Der Export und Import erfolgt über Konsolenaufrufe - die Konfiguration
-über eine selbt zu erstellende YML-Datei.
+über eine selbst zu erstellende YML-Datei.
 
 Aktuell werden folgende Module unterstützt:
 
@@ -76,7 +76,7 @@ bzw. von dort werden diese wieder beim Import eingelesen.
 Weiterhin ist im Ordner /app oder /app/Resources eine Konfiguationsdatei
 `.translation-jobs.yml` anzulegen. Mit dieser Konfigurationsdatei wird
 festgelegt, was exportiert werden soll - z.B. nur Contao oder nur MM oder
-beides - sowie werden hier einzelne Jobs definiert, die per Konolenaufruf
+beides - sowie werden hier einzelne Jobs definiert, die per Konsolenaufruf
 gestartet werden. 
 
 Somit ist die Konfigurationsdatei in die Bereiche `dictionaries` und
@@ -121,8 +121,8 @@ als Parameter - z.B.
 
 ``php vendor/bin/contao-console i18n:process export-all``
 
-Es kann aber eich eine einzelne Sprache exportiert werden, wenn
-ein etsprechnder Job definiert wurde - z.B.
+Es kann aber auch eine einzelne Sprache exportiert werden, wenn
+ein entsprechender Job definiert wurde - z.B.
 
 ``php vendor/bin/contao-console i18n:process export-en-ru``
 
@@ -226,7 +226,7 @@ Beispiel
 
 Die Dictionaries `mm_staff`, `mm_division` und `mm_projects` sind die
 übersetzten MetaModels - aus `mmworkshop` wird der Dateiname mmworkshop.xlf
-gebildet. Mit den Jobnamen z.B. `export-all`oder `import-all` werden
+gebildet. Mit den Jobnamen z.B. `export-all` oder `import-all` werden
 die Jobs auf der Konsole aufgerufen.
 
 Eine exportierte XLIFF-Datei kann in einem XLIFF-Editor wie z.B.
