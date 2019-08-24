@@ -77,7 +77,7 @@ beides - sowie werden hier einzelne Jobs definiert, die per Konsolenaufruf
 gestartet werden. 
 
 Somit ist die Konfigurationsdatei in die Bereiche ``dictionaries`` und
-``jobs``eingeteilt - die Parameter sind wie folgt (`siehe auch Beispiel <#beispiel>`_:):
+``jobs`` eingeteilt - die Parameter sind wie folgt (`siehe auch Beispiel <#beispiel>`_:):
 
 dictionaries
 ............
