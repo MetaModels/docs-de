@@ -153,7 +153,7 @@ Debug
 Beispiel
 --------
 
-.. code-block:: yml
+.. highlight:: yaml
    :linenos:
 
     dictionaries:
