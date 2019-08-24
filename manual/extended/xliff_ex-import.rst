@@ -266,4 +266,4 @@ Ein Dank für die Spenden* für die Erweiterung an:
    <br />
 
 
-.. |img_poedit| image:: /_img/screenshots/extended/xliff_ex-import/img_poedit.png
+.. |img_poedit| image:: /_img/screenshots/extended/xliff_ex-import/poedit.png
