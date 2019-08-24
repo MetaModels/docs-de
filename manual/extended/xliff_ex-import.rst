@@ -102,12 +102,12 @@ Typ ``copy``:
 
 * ``source``: Quellenbezeichnung aus Dictionaries
 * ``target``: Zielbezeichnung aus Dictionaries
-* ``source_language``: Sprachkürzel z.B. `en`, `de` für die Quellensprache
-* ``target_language``: Sprachkürzel z.B. `de`, `en` für die Zielsprache
-* ``copy-source``: `true` oder `false`
-* ``copy-target``: `if-empty`
-* ``clean-obsolete``: `true` oder `false`
-* ``remove-obsolete``: `true` oder `false`
+* ``source_language``: Sprachkürzel z.B. ``en``, ``de`` für die Quellensprache
+* ``target_language``: Sprachkürzel z.B. ``de``, ``en`` für die Zielsprache
+* ``copy-source``: ``true`` oder ``false``
+* ``copy-target``: ``if-empty``
+* ``clean-obsolete``: ``true`` oder ``false``
+* ``remove-obsolete``: ``true`` oder ``false``
 * ``filter``: Filter
 
 Type ``batch``
