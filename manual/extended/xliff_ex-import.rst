@@ -109,7 +109,7 @@ Typ ``copy``:
 
 Type ``batch``
 
-* ``jobs``: Liste mit Jobbezeichnungen, die Abgearbeitet werden sollen
+* ``jobs``: Liste mit Jobbezeichnungen, die abgearbeitet werden sollen
 
 
 Export
