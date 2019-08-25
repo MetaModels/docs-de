@@ -105,7 +105,7 @@ Typ ``copy``:
 * ``copy-target``: ``if-empty``
 * ``clean-obsolete``: ``true`` oder ``false``
 * ``remove-obsolete``: ``true`` oder ``false``
-* ``filter``: Filter
+* ``filter``: Liste mit Filtern
 
 Type ``batch``
 
