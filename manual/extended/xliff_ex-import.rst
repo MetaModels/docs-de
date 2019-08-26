@@ -23,7 +23,7 @@ Sind die Übersetzungen in die exportierte XLIFF-Datei eingepflegt,
 kann diese wieder importiert werden.
 
 Der Export und Import erfolgt über Konsolenaufrufe - die Konfiguration
-über eine selbst zu erstellende YML-Datei.
+über eine selbst zu erstellende YAML-Datei.
 
 Aktuell werden folgende Module unterstützt:
 
