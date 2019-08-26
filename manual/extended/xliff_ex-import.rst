@@ -31,7 +31,7 @@ Aktuell werden folgende Module unterstützt:
 * MetaModels (Daten)
 * RockSolid Custom-Elements
 
-Mehr zur weiteren Planung und Ausbau `siehe unten <#erweiterungsmoeglichkeiten>`_
+Mehr zur weiteren Planung und Ausbau `siehe unten <#erweiterungsmoglichkeiten>`_
 
 
 Early-Adopter-Programm
@@ -87,7 +87,7 @@ dictionaries
 * ``name`` Name: ``contao`` oder ``content``
 
 Dictionaries vom Typ ``compound`` können wiederum vorhandene Dictionaries beinhalten
-und diese um weitere Quellen ergänzen - `siehe Beispiel #beispiel`_
+und diese um weitere Quellen ergänzen - `siehe Beispiel <#beispiel>`_
 
 jobs
 ....
