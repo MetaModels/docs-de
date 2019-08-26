@@ -105,7 +105,7 @@ Typ ``copy``:
 * ``copy-target``: ``if-empty``
 * ``clean-obsolete``: ``true`` oder ``false``
 * ``remove-obsolete``: ``true`` oder ``false``
-* ``filter``: Liste mit Filtern
+* ``filter``: Liste mit RegEx-Filtern zum Ausschließen von Inhalten
 
 Type ``batch``
 
@@ -125,8 +125,9 @@ ein entsprechender Job definiert wurde - z.B.
 
 ``php vendor/bin/contao-console i18n:process export-en-ru``
 
-Über die Verbose-Parameter (-v, -vv -vvv) können weitere Informationen
-zur Ausgabe gebracht werden.
+Mit dem Parameter ``--help`` werden alle Parameter ausgegeben z.B.
+der Verbose-Parameter (-v, -vv -vvv) für genauere weitere Informationen
+des Aufrufs oder ``--dry-run`` für einen "Trockenlauf".
 
 
 Import
@@ -144,7 +145,7 @@ oder
 Debug
 -----
 
-``php vendor/bin/contao-console debug:i18n-map tl_article.tl_content de fr | less``
+``php vendor/bin/contao-console debug:i18n-map tl_article.tl_content en de | less``
 
 
 Beispiel
