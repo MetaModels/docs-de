@@ -105,7 +105,7 @@ Typ ``copy``:
 * ``copy-target``: ``if-empty``
 * ``clean-obsolete``: ``true`` oder ``false``
 * ``remove-obsolete``: ``true`` oder ``false``
-* ``filter``: Liste mit RegEx-Filtern zum Ausschließen von Inhalten
+* ``filter``: Liste mit RegEx-Filtern auf die ``id`` im Knoten ``trans-unit`` zum Ausschließen von Inhalten
 
 Type ``batch``
 
