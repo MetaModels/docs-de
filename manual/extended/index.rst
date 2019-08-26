@@ -19,6 +19,7 @@ Erweiterungen
     attribute_mcw
     filter_parent
     metadata_extractor
+    xliff_ex-import
 
 
 weitere bekannte Erweiterungen
