@@ -126,7 +126,7 @@ ein entsprechender Job definiert wurde - z.B.
 ``php vendor/bin/contao-console i18n:process export-en-ru``
 
 Mit dem Parameter ``--help`` werden alle Parameter ausgegeben z.B.
-der Verbose-Parameter (-v, -vv -vvv) für genauere weitere Informationen
+der Verbose-Parameter (``-v, -vv -vvv``) für genauere weitere Informationen
 des Aufrufs oder ``--dry-run`` für einen "Trockenlauf".
 
 
