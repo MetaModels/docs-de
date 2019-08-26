@@ -72,9 +72,9 @@ bzw. von dort werden diese wieder beim Import eingelesen.
 
 Weiterhin ist im Ordner ``/app`` oder ``/app/Resources`` eine Konfiguationsdatei
 ``.translation-jobs.yml`` anzulegen. Mit dieser Konfigurationsdatei wird
-festgelegt, was exportiert werden soll - z.B. nur Contao oder nur MM oder
-beides - sowie werden hier einzelne Jobs definiert, die per Konsolenaufruf
-gestartet werden. 
+festgelegt, was exportiert bzw. importiert werden soll - z.B. nur Contao oder
+nur MM oder beides - sowie werden hier einzelne Jobs definiert, die per
+Konsolenaufruf gestartet werden. 
 
 Somit ist die Konfigurationsdatei in die Bereiche ``dictionaries`` und
 ``jobs`` eingeteilt - die Parameter sind wie folgt (`siehe auch Beispiel <#beispiel>`_):
