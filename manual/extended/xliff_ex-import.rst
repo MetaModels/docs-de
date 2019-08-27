@@ -179,10 +179,10 @@ Ein Debugaufruf kann z.B. wie folgt aussehen:
 Es folgt eine tabelarische Auflistung des Mappings. Gegebenfalls werden
 vorweg Hinweise auf Probleme ausgegeben wie z.B.
 
-``
+```
 WARNING   [app] Article 17 (index: 0) has no fallback set, expect problems, I guess it is 13
 ["id" => 17,"index" => 0,"guessed" => 13,"msg_type" => "article_fallback_guess"]
-``
+```
 
 Hier sollte man den Artikel mit der ID 17 im Backend aufsuchen und
 die Angabe des Fallbackartikels prüfen.
