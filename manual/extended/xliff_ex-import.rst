@@ -83,7 +83,7 @@ dictionaries
 ............
 
 * ``*`` Quellenname: Bezeichnung für den Aufruf in Jobs bei ``source`` oder ``target`` oder bei Typ ``xliff`` ist das die Bezeichnung für die .xlf-Datei
-* ``type`` Typ: ``contao``, ``compound`` oder ``xliff``
+* ``type`` Typ: ``contao``, ``metamodels``, ``compound`` oder ``xliff``
 * ``name`` Name: ``contao`` oder ``content``
 
 Dictionaries vom Typ ``compound`` können wiederum vorhandene Dictionaries beinhalten
