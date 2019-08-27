@@ -116,7 +116,7 @@ Typ ``copy``:
 * ``remove-obsolete``: Bestimmt das Löschen eines Textknotens
 
   * ``false`` (default): es wird nichts gelöscht
-  * ``true``: der Textknoten wird gelöscht, wen Quelle leer oder nicht mehr vorhanden
+  * ``true``: der Textknoten wird gelöscht, wenn Quelle leer oder nicht mehr vorhanden
 
 * ``filter``: Liste mit RegEx-Filtern auf die ``id`` im Knoten ``trans-unit`` zum Ausschließen von Inhalten
 
