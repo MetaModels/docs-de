@@ -89,7 +89,7 @@ dictionaries
   * ``contao``: ``contao``
   * ``metamodels``: ``<table_name>``
   * ``compound``: ``*`` frei vergebbar
-  * ``memory``: ``**`` frei vergebbar
+  * ``memory``: ``*`` frei vergebbar
   * ``xliff``: ``*`` frei vergebbar
 
 Dictionaries vom Typ ``compound`` können wiederum vorhandene Dictionaries beinhalten
