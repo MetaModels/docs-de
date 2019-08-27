@@ -101,10 +101,17 @@ Typ ``copy``:
 * ``target``: Zielbezeichnung aus Dictionaries
 * ``source_language``: Sprachkürzel z.B. ``en``, ``de`` für die Quellensprache
 * ``target_language``: Sprachkürzel z.B. ``de``, ``en`` für die Zielsprache
-* ``copy-source``: ``true`` oder ``false``
-* ``copy-target``: ``if-empty``
-* ``clean-obsolete``: ``true`` oder ``false``
-* ``remove-obsolete``: ``true`` oder ``false``
+* ``copy-source``: Bestimmt das Verhalten beim Kopieren von Quelle zu Ziel
+  * ``true`` (default): Quelle zu Ziel immer kopiert
+  * ``if-empty``: Quelle zu Ziel nur kopiert, wenn Ziel leer oder nicht vorhanden
+  * ``false``: es wird nichts kopiert
+* ``copy-target``: Bestimmt das Verhalten beim Kopieren von Ziel zu Quelle
+  * ``true`` (default): Ziel zu Quelle immer kopiert
+  * ``if-empty``: Ziel zu Quelle nur kopiert, wenn Quelle leer oder nicht vorhanden
+  * ``false``: es wird nichts kopiert
+* ``remove-obsolete``: Bestimmt das Löschen eines Textknotens
+  * ``false`` (default): es wird nichts gelöscht
+  * ``true``: der Textknoten wird gelöscht, wen Quelle leer oder nicht mehr vorhanden
 * ``filter``: Liste mit RegEx-Filtern auf die ``id`` im Knoten ``trans-unit`` zum Ausschließen von Inhalten
 
 Type ``batch``
@@ -145,8 +152,22 @@ oder
 Debug
 -----
 
-``php vendor/bin/contao-console debug:i18n-map tl_article.tl_content en de | less``
+Es besteht die Möglichkeit, das Mapping der Übersetzung auf Probleme
+hin zu untersuchen. Dazu wird der Debugbefehl mit den Parametern der
+Tabelle der Quellsprache sowie der Zielsprache aufgerufen. Über den
+Parameter ``--help`` kann ein Hilfetext ausgegeben werden.
 
+Ein Debugaufruf kann z.B. wie folgt aussehen:
+
+``php vendor/bin/contao-console debug:i18n-map tl_article.tl_content en de``
+
+Es folgt eine tabelarische Auflistung des Mappings. Gegebenfalls werden
+vorweg Hinweise auf Probleme ausgegeben wie z.B.
+
+``WARNING   [app] Article 17 (index: 0) has no fallback set, expect problems, I guess it is 13 ["id" => 17,"index" => 0,"guessed" => 13,"msg_type" => "article_fallback_guess"]``
+
+Hier sollte man den Artikel mit der ID 17 im Backend aufsuchen und
+die Angabe des Fallbackartikels prüfen.
 
 Beispiel
 --------
@@ -186,7 +207,7 @@ Beispiel
         target_language: de
         copy-source: true
         copy-target: if-empty
-        clean-obsolete: true
+        remove-obsolete: true
         filter:
           - /^content\.tl_article\.[0-9]+\.title$/
           - /^content\.tl_article\.[0-9]+\.alias$/
@@ -208,7 +229,7 @@ Beispiel
         target_language: de
         copy-source: false
         copy-target: true
-        clean-obsolete: false
+        remove-obsolete: false
         filter:
           - /^content\.tl_article\.[0-9]+\.title$/
           - /^content\.tl_article\.[0-9]+\.alias$/
