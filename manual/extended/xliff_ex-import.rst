@@ -102,16 +102,21 @@ Typ ``copy``:
 * ``source_language``: Sprachkürzel z.B. ``en``, ``de`` für die Quellensprache
 * ``target_language``: Sprachkürzel z.B. ``de``, ``en`` für die Zielsprache
 * ``copy-source``: Bestimmt das Verhalten beim Kopieren von Quelle zu Ziel
+
   * ``true`` (default): Quelle zu Ziel immer kopiert
   * ``if-empty``: Quelle zu Ziel nur kopiert, wenn Ziel leer oder nicht vorhanden
   * ``false``: es wird nichts kopiert
+
 * ``copy-target``: Bestimmt das Verhalten beim Kopieren von Ziel zu Quelle
   * ``true`` (default): Ziel zu Quelle immer kopiert
   * ``if-empty``: Ziel zu Quelle nur kopiert, wenn Quelle leer oder nicht vorhanden
   * ``false``: es wird nichts kopiert
+
 * ``remove-obsolete``: Bestimmt das Löschen eines Textknotens
+
   * ``false`` (default): es wird nichts gelöscht
   * ``true``: der Textknoten wird gelöscht, wen Quelle leer oder nicht mehr vorhanden
+
 * ``filter``: Liste mit RegEx-Filtern auf die ``id`` im Knoten ``trans-unit`` zum Ausschließen von Inhalten
 
 Type ``batch``
