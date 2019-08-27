@@ -108,6 +108,7 @@ Typ ``copy``:
   * ``false``: es wird nichts kopiert
 
 * ``copy-target``: Bestimmt das Verhalten beim Kopieren von Ziel zu Quelle
+
   * ``true`` (default): Ziel zu Quelle immer kopiert
   * ``if-empty``: Ziel zu Quelle nur kopiert, wenn Quelle leer oder nicht vorhanden
   * ``false``: es wird nichts kopiert
