@@ -83,8 +83,14 @@ dictionaries
 ............
 
 * ``*`` Quellenname: Bezeichnung für den Aufruf in Jobs bei ``source`` oder ``target`` oder bei Typ ``xliff`` ist das die Bezeichnung für die .xlf-Datei
-* ``type`` Typ: ``contao``, ``metamodels``, ``compound`` oder ``xliff``
-* ``name`` Name: ``contao`` oder ``content``
+* ``type`` Typ: ``contao``, ``metamodels``, ``compound``, ``memory`` oder ``xliff``
+* ``name`` Name: Abhängig vom typ
+
+  * ``contao``: ``contao``
+  * ``metamodels``: ``<table_name>``
+  * ``compound``: ``*`` frei vergebbar
+  * ``memory``: ``**`` frei vergebbar
+  * ``xliff``: ``*`` frei vergebbar
 
 Dictionaries vom Typ ``compound`` können wiederum vorhandene Dictionaries beinhalten
 und diese um weitere Quellen ergänzen - `siehe Beispiel <#beispiel>`_
@@ -191,8 +197,12 @@ Beispiel
         name: content
         dictionaries:
           content: contao_all
-          mm_staff:
+          my_staff_export:
             type: metamodels
+            name: mm_staff
+          # Shorthand version: name as key
+          # mm_staff:
+          #   type: metamodels
           mm_division:
             type: metamodels
           mm_projects:
