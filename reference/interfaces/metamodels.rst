@@ -7,10 +7,11 @@ Die MetaModels Interfaces bilden die Basis der Interfaces und
 ermöglichen den Zugriff auf ein MetaModel bis hin zum einzelnen
 Item.
 
-Viele Arbeiten bei dem Einsatz bzw. Verwendung der Interfaces konzentrienen
-sich auf die Abfrage vorhandenener Daten eines MetaModel. Hier folgt der
+Viele Arbeiten bei dem Einsatz bzw. Verwendung der Interfaces konzentrieren
+sich auf die Abfrage vorhandener Daten eines MetaModel. Hier folgt der
 Aufbau analog dem Aufbau einer Abfrage oder Auflistung über das Contentelement
 bzw. Frontend-Modul mit
+
 
 * Verbindung zu MetaModels; z.B. um außerhalb eines MetaModel-Templates eine Verbindung
   herzustellen - siehe :ref:`ref_api_interf_mm_metamodelsservicecontainer`
@@ -41,7 +42,7 @@ z.B. im globalen Scope holen kann
 
 ``$container = $this->getContainer();``
 
-Anschließend kann mit einem Interface daruaf zugegriffen werden - z.B.:
+Anschließend kann mit einem Interface darauf zugegriffen werden - z.B.:
 
 ``$factory = $container->getFactory();`` |br|
 bzw. |br|
@@ -152,10 +153,10 @@ MetaModel Interface:
 ....................
 
 Mit dem MetaModel-Interface können Eigenschaften einer MetaModel-Instanz abgefragt bzw.
-beeinfusst werden.
+beeinflusst werden.
 
-Zunächst muss eine MetaModels-Instanz über den Namen eines MetaModel erzeugt werden
-siehe :ref:`ref_api_interf_mm_factory`)
+Zunächst muss eine MetaModels-Instanz über die ID bzw. den Namen eines MetaModel erzeugt
+werden siehe :ref:`ref_api_interf_mm_factory`)
 
 ``$objMetaModel = \MetaModels\IFactory::getMetaModel($strMetaModelName);``
 
@@ -165,10 +166,8 @@ bzw. inklusive des Service-Containers:
    :linenos:
    
    <?php
-   /** @var \MetaModels\IMetaModelsServiceContainer $container */
-   $container = $GLOBALS['container']['metamodels-service-container'];
-   
-   $factory = $container->getFactory();
+   /** @var $container */
+   $factory = $this->getContainer()->get('metamodels.factory');
    $strMetaModelName = $factory->translateIdToMetaModelName($intMetaModelId);
    $objMetaModel = $factory->getMetaModel($strMetaModelName);
 
@@ -234,7 +233,7 @@ gibt das Item mit der gegebenen ID zurück; optional kann ein Array mit
 Attributnamen angegben werden, deren Werte zurück zu gegeben werden sollen
 
 ``getEmptyFilter()``  |br|
-erzeugt einen "leeres" Filterobjekt ohne Filterregeln
+erzeugt ein "leeres" Filterobjekt ohne Filterregeln
 
 ``prepareFilter($intFilterSettings, $arrFilterUrl)``  |br|
 erzeugt ein Filterobjekt aus einer gegebenen Filter-ID und einem optionalen
@@ -249,9 +248,9 @@ $intLimit = 0,
 $strSortOrder = 'ASC',
 $arrAttrOnly = array()
 )``  |br|
-gibt die Items zurück, welche mit einem gegbenen Filter in dem instanzierten
+gibt die Items zurück, welche mit einem gegebenen Filter in dem instanzierten
 MetaModel ermittelt werden - neben den Parametern der Sortierung, Offset, Limit
-und Sortierrichtung, kann ein Array mit Attributnamen angegben werden, deren
+und Sortierrichtung, kann ein Array mit Attributnamen angegeben werden, deren
 Werte zurück zu gegeben werden sollen
 
 ``getIdsFromFilter(
@@ -261,7 +260,7 @@ $intOffset = 0,
 $intLimit = 0,
 $strSortOrder = 'ASC'
 )``  |br|
-gibt die IDs der Items zurück, welche mit einem gegbenen Filter in dem instanzierten
+gibt die IDs der Items zurück, welche mit einem gegebenen Filter in dem instanzierten
 MetaModel ermittelt werden - die Parametern der Sortierung, Offset, Limit
 und Sortierrichtung können angegeben werden
 
@@ -410,10 +409,10 @@ rendert ein einzelnes Attribut des Item im vorgegebenen Format; als Rohdaten [ra
 werden die Daten immer mit ausgegeben inkl. Attribute referenzierter MetaModel
 
 ``copy()``  |br|
-erstellt ein neues Item als Kopie eines vorhandenem Items
+erstellt ein neues Item als Kopie eines vorhandenen Items
 
 ``varCopy()``  |br|
-erstellt ein neues Item als Kopie eines vorhandenem Items als Variante
+erstellt ein neues Item als Kopie eines vorhandenen Items als Variante
 
 ``save()``  |br|
 speichert den aktuellen Wert bzw. Werte für das Item
