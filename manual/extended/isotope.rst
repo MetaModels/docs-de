@@ -205,10 +205,9 @@ Voraussetzungen
 Für die Installation der Module gelten aktuell folgende
 Voraussetzungen:
 
-* Contao 4.4 (Contao 4.5. ist nicht getestet)
-* Isotope 2.5 und MetaModels 2.1
-* PHP 7.1 oder 7.2
-* Zugriff auf die Konsole für die Installation per composer
+* Contao 4.4 (Contao 4.9. ist noch nicht getestet)
+* Isotope 2.5/6 und MetaModels 2.1
+* PHP ab 7.1
 
 
 Known Issues and Next Features
