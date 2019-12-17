@@ -80,8 +80,10 @@ kann man mit den folgenden SQL-Befehlen die wirklich verwendeten Attribute und F
    SELECT type FROM `tl_metamodel_filtersetting` GROUP BY type ORDER BY type
 
 Erfolgt die Installtion über den Contao-Manager und es sind schon Pakete installiert, die
-noch ein altes Paket vom MultiColumnWizard (MCW) enthalten, kann der Manager das nicht
-austauschen und gleichzeitig installieren - 
+noch ein altes Paket vom MultiColumnWizard (MCW) enthalten, kann der Manager (bzw. der Composer)
+das nicht austauschen und gleichzeitig installieren. Als "Trick" dazu, erst alle vorhandene Erweiterungspakete
+für eine Aktualisierung markieren und anschließend das oder die MM-Pakete hinzufügen und übernehmen;
+alternativ dazu, ein `composer update` auf der Konsole - 
 siehe `'Forum' <https://community.contao.org/de/showthread.php?72871-MCW-MultiColumnWizard-als-Bundle-f%C3%BCr-Contao-4-(stable)&p=502709&viewfull=1#post502709>`_.
 
 
