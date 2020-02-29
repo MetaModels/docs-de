@@ -33,7 +33,7 @@ Die Installation und Verwendung besteht aus den Punkten
 Anpassung der DCA-Konfigurationsdatei
 -------------------------------------
 
-Die DCA-Konfigurationsdatei `module-multicolumnwizard.php`muss an einer geeigneten
+Die DCA-Konfigurationsdatei `module-multicolumnwizard.php` muss an einer geeigneten
 Stelle in der Contao-Installation abgelegt werden. Das kann z.B. erfolgen in
 
 * /app/Resources/contao/config (ab Contao 4.4)
