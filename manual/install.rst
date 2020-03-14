@@ -5,7 +5,7 @@ MetaModels installieren und aktualisieren
 
 Das aktuelle MetaModels 2.1 ist für die LTS 4.4 ausgiebig getestet und ist dafür freigegeben.
 
-*MetaModels 2.2 für Contao 4.9* (neue LTS) ist in Arbeit - kann aber sofort installiert werden.
+**MetaModels 2.2 für Contao 4.9** (neue LTS) ist in Arbeit - kann aber sofort installiert werden.
 Mehr dazu unter `Installation von MM 2.2 <#installation-von-mm-2-2>`_
 
 Die Installation von MM 2.1 setzt PHP von mind. Version 7.1 voraus - empfohlen wird PHP 7.2.
@@ -35,7 +35,7 @@ Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 * PHP 7.2/7.3
 * MySQL ab 5.5.5 (InnoDB), MariaDB
 
-*MetaModels 2.2 ist ab sofort einsatzbereit* und kann über den Composer (Konsole) oder den
+**MetaModels 2.2 ist ab sofort einsatzbereit** und kann über den Composer (Konsole) oder den
 Contao-Manager installiert werden. Zugang zu dem aktuell noch geschützem Repository erhält
 man über unser "eary adopter Programm" - mehr dazu unter Fundrasing auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
