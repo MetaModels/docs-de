@@ -3,7 +3,7 @@
 MetaModels installieren und aktualisieren
 =========================================
 
-Das aktuelle MetaModels 2.1 ist für die LTS 4.4 ausgiebig getestet und ist dafür freigegeben.
+Das aktuelle MetaModels 2.1 ist für die LTS 4.4 ausgiebig getestet und dafür freigegeben.
 
 **MetaModels 2.2 für Contao 4.9** (neue LTS) ist in Arbeit - kann aber sofort installiert werden.
 Mehr dazu unter `Installation von MM 2.2 <#installation-von-mm-2-2>`_
