@@ -3,9 +3,10 @@
 MetaModels installieren und aktualisieren
 =========================================
 
-Das aktuelle MetaModels 2.1 für Contao 4 wird wie gehabt für die aktuelle LTS (4.4)
-ausgiebig getestet und ist dafür freigegeben - nach den bisherigen Tests, läuft MM 2.1
-aber auch problemlos unter 4.6.
+Das aktuelle MetaModels 2.1 ist für die LTS 4.4 ausgiebig getestet und ist dafür freigegeben.
+
+*MetaModels 2.2 für Contao 4.9* (neue LTS) ist in Arbeit - kann aber sofort installiert werden.
+Mehr dazu unter `Installation von MM 2.2 <#installation-von-mm-2-2>`_
 
 Die Installation von MM 2.1 setzt PHP von mind. Version 7.1 voraus - empfohlen wird PHP 7.2.
 
@@ -21,11 +22,33 @@ Hinweise zu älteren Versionen von MetaModels und Versionswechsel sind am `Ende 
    das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
+Installation von MM 2.2
+-----------------------
+
+MetaModels 2.2 bringt eine volle Kompatibilität zu Contao 4.9 mit sowie verschiedene Features und
+Optimierungen. Zum Beispiel ist MM 2.2 kompatibel zum `strict mode` von höheren MySQL-Versionen oder
+aktueller MariaDB oder die manuelle Dateisortierung.
+
+Die Installationsvoraussetzungen für MetaModels 2.2 sind:
+
+* ein laufendes Contao 4.9.x (LTS) und
+* PHP 7.2/7.3
+* MySQL ab 5.5.5 (InnoDB), MariaDB
+
+*MetaModels 2.2 ist ab sofort einsatzbereit* und kann über den Composer (Konsole) oder den
+Contao-Manager installiert werden. Zugang zu dem aktuell noch geschützem Repository erhält
+man über unser "eary adopter Programm" - mehr dazu unter Fundrasing auf der
+`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
+
+Weitere Features von MM 2.2 (wird laufend ergänzt):
+
+* kompatibel zum `strict mode` von MySQL und MariaDB
+* manuelle Dateisortierung (inkl. übersetzte Dateien)
 
 Installation von MM 2.1
 -----------------------
 
-Die Installationsvoraussetzungen  für MetaModels 2.1 sind:
+Die Installationsvoraussetzungen für MetaModels 2.1 sind:
 
 * ein laufendes Contao 4.4.x (LTS) und
 * PHP 7.1/7.2
