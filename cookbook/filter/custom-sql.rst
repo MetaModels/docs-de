@@ -9,7 +9,13 @@ Die ersten Hinweise für die Möglichkeiten der Filterregel
 Nochmal der Hinweis: Auch mit der Filterregel "Eigenes SQL"
 werden nur IDs zur nächsten Filterregel bzw. zum Filterset
 weiter gereicht. Es können keine "Attributwerte" hinzugefügt
-werden, auch wenn das per SQL z.B. durch JOINs möglich wäre.
+oder berechnet werden, auch wenn das per SQL z.B. durch JOINs
+oder mathematische Anweisungen möglich wäre.
+
+Spaltennamen sollten immer in Backticks ` wie z.B. `name`
+gesetzt werden (siehe `MySQL Identifier <https://dev.mysql.com/doc/refman/8.0/en/identifiers.html>`_).
+Damit ist die Verwendung auch von in (My)SQL reservierten Wörter
+möglich.
 
 Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
 
@@ -23,9 +29,9 @@ gesetzt ist oder gebe alle Items aus (keine Filterung)."
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM {{table}} 
-   WHERE name LIKE (CONCAT('%',{{param::get?name=name&default=%%}},'%')) 
+   WHERE `name` LIKE (CONCAT('%',{{param::get?name=name&default=%%}},'%')) 
 
 
 Filterung nach Datum
@@ -37,7 +43,7 @@ heutigen Datum ist - also in der Zukunft liegt"
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM {{table}} 
    WHERE FROM_UNIXTIME(`date_start`) >= CURDATE()
 
@@ -46,7 +52,7 @@ oder
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM {{table}} 
    WHERE DATE(FROM_UNIXTIME(`date_start`)) >= DATE(now())
 
@@ -87,13 +93,13 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
    SELECT id
    FROM {{table}}
    WHERE (
-     {{table}}.start IS NULL OR {{table}}.start = ''
+     `start` IS NULL OR `start` = ''
      OR
-     {{table}}.start<UNIX_TIMESTAMP())
-     AND ({{table}}.stop IS NULL
+     `start` < UNIX_TIMESTAMP())
+     AND (`stop` IS NULL
      OR 
-     {{table}}.stop=''
-     OR {{table}}.stop > UNIX_TIMESTAMP()
+     `stop` = ''
+     OR `stop` > UNIX_TIMESTAMP()
    )
 
 
@@ -106,13 +112,13 @@ Filterung nach Kind-Elementen eines Eltern-Elements
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM mm_child
-   WHERE pid = (
-     SELECT id 
+   WHERE `pid` = (
+     SELECT `id` 
      FROM mm_parent
      WHERE
-     parent_alias={{param::get?name=auto_item}}
+     `parent_alias` = {{param::get?name=auto_item}}
    )  
 
 Filterung nach Eltern-Element eines Kind-Elements
@@ -124,13 +130,13 @@ Filterung nach Eltern-Element eines Kind-Elements
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM mm_parent
-   WHERE id = (
-     SELECT pid 
+   WHERE `id` = (
+     SELECT `pid` 
      FROM mm_child
      WHERE
-     child_alias={{param::get?name=auto_item}}
+     `child_alias` = {{param::get?name=auto_item}}
    )  
 
 oder kürzer
@@ -138,9 +144,9 @@ oder kürzer
 .. code-block:: php
    :linenos:
    
-   SELECT pid as id
+   SELECT `pid` as id
    FROM mm_child
-   WHERE child_alias={{param::get?name=auto_item}}
+   WHERE `child_alias` = {{param::get?name=auto_item}}
 
 
 Sortierung der Ausgabe nach mehr als einem Attribut (fest)
@@ -157,9 +163,9 @@ weiteren Regeln wird diese Menge nur noch gekürzt.
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM mm_mannschaft
-   ORDER BY punkte DESC, spiele ASC, prio DESC
+   ORDER BY `punkte` DESC, `spiele` ASC, `prio` DESC
 
 Dynamischer Defaultwert
 ***********************
@@ -174,13 +180,13 @@ siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880>`_
 .. code-block:: php
    :linenos:
    
-   SELECT id FROM mm_monate 
-   WHERE FROM_UNIXTIME(von_datum) <= IF(
+   SELECT `id` FROM mm_monate 
+   WHERE FROM_UNIXTIME(`von_datum`) <= IF(
       {{param::get?name=von_datum}},
       {{param::get?name=von_datum}}, 
       CURDATE()
    ) 
-   ORDER BY von_datum DESC
+   ORDER BY `von_datum` DESC
 
 Defaultwert ''
 **************
@@ -193,8 +199,8 @@ Filterung nicht korrekt erfolgt; anzuwenden ist dies z.B. bei Checkboxwerten.
 .. code-block:: php
    :linenos:
    
-   SELECT id FROM mm_mitarbeiter 
-   WHERE driver_licence = IF(
+   SELECT `id` FROM mm_mitarbeiter 
+   WHERE `driver_licence` = IF(
       {{param::get?name=driver_licence}},
       {{param::get?name=driver_licence}}, 
       ''
@@ -232,10 +238,10 @@ werden, die in einer Abteilung arbeiten deren "Score" größer als 99 ist.
 .. code-block:: php
    :linenos:
    
-   SELECT id FROM mm_mitarbeiter
-   WHERE abteilung IN (
-      SELECT id FROM mm_abteilung
-      WHERE score > 99
+   SELECT `id` FROM mm_mitarbeiter
+   WHERE `abteilung` IN (
+      SELECT `id` FROM mm_abteilung
+      WHERE `score` > 99
    )
 
 oder
@@ -303,7 +309,7 @@ wie das folgende Beispiel zeigt:
    
    -- URL: ....&id=mm_mitarbeiter::51&...
    SELECT * FROM mm_mitarbeiter
-   WHERE id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
+   WHERE `id` = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
 
 
 Filter für ein Select/Tags in der Eingabemaske
@@ -326,7 +332,7 @@ oder QUERY-C (create) die Mitarbeiterliste eingegrenzt werden.
 .. code-block:: php
    :linenos:
    
-   SELECT * FROM  mm_mitarbeiter
+   SELECT `id` FROM  mm_mitarbeiter
    WHERE IF (
          {{param::post?name=abteilung}} != 'NULL', (QUERY-U), (QUERY-C)
     )
