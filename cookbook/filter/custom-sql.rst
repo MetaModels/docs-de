@@ -12,7 +12,7 @@ weiter gereicht. Es können keine "Attributwerte" hinzugefügt
 oder berechnet werden, auch wenn das per SQL z.B. durch JOINs
 oder mathematische Anweisungen möglich wäre.
 
-Spaltennamen sollten immer in Backticks ` wie z.B. `name`
+Spaltennamen sollten immer in Backticks ` wie z.B. \`name\`
 gesetzt werden (siehe `MySQL Identifier <https://dev.mysql.com/doc/refman/8.0/en/identifiers.html>`_).
 Damit ist die Verwendung auch von in (My)SQL reservierten Wörter
 möglich.
