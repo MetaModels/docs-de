@@ -14,7 +14,7 @@ oder mathematische Anweisungen möglich wäre.
 
 Spaltennamen sollten immer in Backticks ` wie z.B. \`name\`
 gesetzt werden (siehe `MySQL Identifier <https://dev.mysql.com/doc/refman/8.0/en/identifiers.html>`_).
-Damit ist die Verwendung auch von in (My)SQL reservierten Wörter
+Damit ist die Verwendung auch von in (My)SQL `reservierten Wörter <https://dev.mysql.com/doc/refman/8.0/en/keywords.html>`_
 möglich.
 
 Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
