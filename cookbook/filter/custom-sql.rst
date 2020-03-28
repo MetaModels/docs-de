@@ -68,7 +68,7 @@ denen das aktuelle Datum zwischen 'date_start' und 'date_end' liegt
 .. code-block:: php
    :linenos:
    
-   SELECT id 
+   SELECT `id` 
    FROM {{table}}
    WHERE
    ( DATE(FROM_UNIXTIME(`date_start`)) >= DATE(NOW()) )
@@ -90,7 +90,7 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
 .. code-block:: php
    :linenos:
    
-   SELECT id
+   SELECT `id`
    FROM {{table}}
    WHERE (
      `start` IS NULL OR `start` = ''
