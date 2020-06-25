@@ -3,10 +3,8 @@
 MetaModels installieren und aktualisieren
 =========================================
 
-.. contents:: Table of Contents
-
 Allgemeine Informationen zur Installation
-_________________________________________
+-----------------------------------------
 
 MetaModels besteht aus mehreren Modulen, die je nach Aufgabenstellung installiert werden müssen.
 
