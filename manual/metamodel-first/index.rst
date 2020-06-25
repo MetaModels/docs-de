@@ -3,8 +3,6 @@
 Das erste MetaModel
 ===================
 
-.. warning:: Noch im Aufbau!
-
 Mit dem Aufbau des ersten MetaModels soll ein leichter Einstieg in die Umsetzung
 ermöglicht werden. Die Aufgabe für die erste Umsetzung ist eine einfache Mitarbeiterliste
 mit nur wenigen Inhaltsangaben. Die Liste soll im Backend zu befüllen sein

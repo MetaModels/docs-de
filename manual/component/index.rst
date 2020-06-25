@@ -3,8 +3,6 @@
 Komponenten eines MetaModel
 ===========================
 
-.. warning:: Handbuch noch im Aufbau!
-
 In den folgenden Kapiteln soll der Aufbau von MetaModels aufgezeigt werden, um die "Logik"
 des Aufbaus der Erweiterung zu verstehen.
 
