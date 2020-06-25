@@ -3,7 +3,7 @@
 MetaModels installieren und aktualisieren
 =========================================
 
-Text
+.. contents:: Table of Contents
 
 Allgemeine Informationen zur Installation
 _________________________________________
