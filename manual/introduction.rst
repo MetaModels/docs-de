@@ -14,7 +14,10 @@ auszugeben.
 
 Mit "strukturierten Daten" sind Inhalte gemeint, wie sie üblicher Weise in
 einem Datenbankschema mit verschiedenen Tabellen und Relationen abgelegt werden.
-MetaModels unterstützt dabei verschiedene Arten von Feldtypen (Attributen) wie z.B.
+Sehr vereinfacht ausgedrückt könnte man sagen, Metamodels ist das "Access für
+Contao".
+
+MetaModels unterstützt dabei verschiedene Arten von Feldtypen (Attribute) wie z.B.
 Text, Auswahlfelder (Select, Checkboxen, Radiobuttons), Integer/Dezimal, Ja/Nein-Felder,
 Dateiauswahlen usw.
 
