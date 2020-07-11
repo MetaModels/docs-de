@@ -15,12 +15,24 @@ gesetzt. Für jeden Eintrag stehen die folgenden Selectfelder zur Verfügung:
 
 * Mitgliedergruppe
 * Benutzergruppe
-* Eingabemaske
 * Render-Einstellung
+* Eingabemaske
 
-Für die Anzeige und den Zugriff im Backend sollten als Standard die Eingabemaske(n) und
-Render-Einstellung(en) für die Benutzergruppe "Administrator" freigeschaltet
-werden.
+Für die Anzeige und den Zugriff im Backend sollten als Standard eine Eingabemaske und
+eine Render-Einstellung für die Benutzergruppe "Administrator" freigeschaltet werden.
+
+Es ist möglich, mehrere Zuordnungen anzulegen und damit die Zugriffe auf die Listenausgabe
+und Eingabemasken zu steuern. Die Eingabemasken für die Mitglieder sind nur beim Frontend-Editing
+relevant.
+
+Werden mehrere Zuordnungen (Zeilen) angelegt, so werden diese "von oben nach unten" abgearbeitet, d.h.
+für die Mitglieder- oder Benutzergruppe wird die erste gefundene Gruppe als gültig ausgewertet. Dabei
+ist zu beachten, dass der Eintrag "*" ein "catch all" darstellt und die Einstellungen für alle
+verbliebenen Gruppen darstellt.
+
+Möchte man, dass z.B. in einer Zeile kein "catch all" vollzogen wird, kann man nich eine Mitglieder-
+oder Benutzergruppe anlegen, zu der kein Mitglied bzw. Benutzer zugewiesen wird.
+
 
 Ablauf
 ------
