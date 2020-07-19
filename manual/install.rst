@@ -77,6 +77,7 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Backend von MM "aufgeräumt" und typische Einstellungen als default gesetzt
 * manuelle Dateisortierung (inkl. übersetzte Dateien)
 * Slug-Generator für Alias und übersetzter Alias sowie Option zum Verhindern des "id-"-Präfix
+* Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen

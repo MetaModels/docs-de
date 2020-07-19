@@ -26,7 +26,7 @@ und Eingabemasken zu steuern. Die Eingabemasken für die Mitglieder sind nur bei
 relevant.
 
 Werden mehrere Zuordnungen (Zeilen) angelegt, so werden diese "von oben nach unten" abgearbeitet, d.h.
-für die Mitglieder- oder Benutzergruppe wird die erste gefundene Gruppe als gültig ausgewertet. Dabei
+für die Mitglieder- oder Benutzergruppe wird die erste angegebene Gruppe als gültig ausgewertet. Dabei
 ist zu beachten, dass der Eintrag "*" ein "catch all" darstellt und die Einstellungen für alle
 verbliebenen Gruppen darstellt.
 
