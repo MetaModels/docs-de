@@ -75,7 +75,7 @@ denen das aktuelle Datum zwischen 'date_start' und 'date_end' liegt
    OR
    ( DATE(FROM_UNIXTIME(`date_start`)) <= DATE(NOW())
      AND 
-     DATE(FROM_UNIXTIME(`date_startend`)) >= DATE(NOW())
+     DATE(FROM_UNIXTIME(`date_end`)) >= DATE(NOW())
    )
 
 
@@ -94,11 +94,8 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
    FROM {{table}}
    WHERE (
      `start` IS NULL OR `start` = ''
-     OR
-     `start` < UNIX_TIMESTAMP())
-     AND (`stop` IS NULL
-     OR 
-     `stop` = ''
+     OR `start` < UNIX_TIMESTAMP())
+     AND (`stop` IS NULL OR `stop` = ''
      OR `stop` > UNIX_TIMESTAMP()
    )
 
