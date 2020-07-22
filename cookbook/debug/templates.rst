@@ -12,7 +12,7 @@ Das Standardtemplate ist "metamodel_prerendered", bzw. das Template,
 welches in der Render-Einstellung für die Ausgabe ausgewählt wurde.
 
 Ist noch kein eigens Template im Einsatz, muss eine Kopie von
-"metamodel_prerendered" im Contao-Ordner "Templates" angelegt werden.
+"metamodel_prerendered" im Contao-Ordner "/templates" angelegt werden.
 
 Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
 
@@ -26,8 +26,12 @@ Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
    }
    ?>
 
-Wird die Seite über "app_dev" aufgerufen z.B. "domain.tld/app_dev.php/meine-mm-listenansicht.html",
-kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon" untersuchen:
+Anschließend muss man die Seite im Frontend im Debugmodus ansehen. Dazu im
+Backend den Debugmodus im header einschalten, oder für einen dauerhaften Debugmodus
+im Projektordner eine Datei `.env` mit dem Inhalt `APP_ENV=dev` anlegen.
+
+Anschließend kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon"
+untersuchen:
 
 |img_symfony-toolbar|
 
