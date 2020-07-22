@@ -30,8 +30,9 @@ für die Mitglieder- oder Benutzergruppe wird die erste angegebene Gruppe als g�
 ist zu beachten, dass der Eintrag "*" ein "catch all" darstellt und die Einstellungen für alle
 verbliebenen Gruppen darstellt.
 
-Möchte man, dass z.B. in einer Zeile kein "catch all" vollzogen wird, kann man nich eine Mitglieder-
-oder Benutzergruppe anlegen, zu der kein Mitglied bzw. Benutzer zugewiesen wird.
+Möchte man, dass z.B. in einer Zeile kein "catch all" vollzogen wird bzw. keine Gruppe zum Zuge kommt,
+kann man eine Mitglieder- oder Benutzergruppe anlegen z.B. "empty", zu der kein Mitglied bzw. Benutzer
+zugewiesen wird.
 
 
 Ablauf
