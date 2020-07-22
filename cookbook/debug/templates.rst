@@ -35,7 +35,7 @@ untersuchen:
 
 |img_symfony-toolbar|
 
-Mit der Prüfung "function_exist" stört das `dump` nicht den normalen Aufruf der Seite.
+Mit der Prüfung "isDebug()" stört das `dump` nicht den normalen Aufruf der Seite.
 
 Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
 :ref:`rst_cookbook_frontend_array-helper`, die eine Ausgabe im Quelltext für ein
