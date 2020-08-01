@@ -3,10 +3,8 @@
 Frontend-Editing (FEE)
 ======================
 
-.. warning:: Das FEE ist für MM 2.0 und 2.1 einsetzbar, jedoch sind nicht alle
-   Eingabewidgets nutzbar - siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_. |br|
-   
-   Für die Mehrsprachigkeit ist das FEE noch nicht einsetzbar!
+.. warning:: Das FEE ist für MM 2.0, 2.1 und 2.2 einsetzbar, jedoch sind nicht alle
+   Eingabewidgets nutzbar - siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_.
 
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
@@ -173,6 +171,9 @@ Die Reihenfolge der Zuordnungseinstellung ist wichtig, da diese "von oben nach u
 abgearbeitet wird. Dabei wird beispielsweise die im Backend für die Benutzergruppe "Administrator" 
 definierte Eingabemaske als erstes gefunden und entsprechend angezeigt. Für die Mitgliedergruppe
 "general Members" wird als erstes die Maske "FEE Eingabe" gefunden und angezeigt.
+
+Der Eintrag "*" (bis MM 2.1 "-") bei den Gruppen ist ein "catch all", d.h. dieser Eintrag gilt für
+alle Gruppen, sofern nicht schon vorher in der Abarbeitung ein Eintrag zum Zuge gekommen ist.
 
 
 .. |img_paketverwaltung| image:: /_img/screenshots/extended/frontend_editing/fee-paketverwaltung.png
