@@ -1,4 +1,4 @@
 # docs-de
 MetaModels Dokumentation auf deutsch
 
-https://metamodels.readthedocs.io/de
+https://metamodels.readthedocs.io/de/latest
