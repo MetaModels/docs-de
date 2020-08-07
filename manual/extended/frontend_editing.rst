@@ -176,6 +176,40 @@ Der Eintrag "*" (bis MM 2.1 "-") bei den Gruppen ist ein "catch all", d.h. diese
 alle Gruppen, sofern nicht schon vorher in der Abarbeitung ein Eintrag zum Zuge gekommen ist.
 
 
+Benachrichtigungen über das Notification Center
+-----------------------------------------------
+
+.. note:: Das Feature steht ab MM 2.2 zur Verfügung.
+
+Ist die Erweiterung `Notification Center <https://github.com/terminal42/contao-notification_center>`_ (NC)
+installiert, kann auf die Veränderung eines Datensatzes getriggert (reagiert) und eine "Benachrichtigung"
+über das NC erstellt werden - z.B. die Versendung einer E-Mail.
+
+Als Trigger stehen zur Verfügung:
+
+* Erstellen
+* Ändern
+* Kopieren
+* Löschen
+
+Im NC steht dazu unter der Gruppe "MetaModels frontendenditing" für jeden Trigger ein Benachrichtigungstyp bereit.
+Für eine neue Benachrichtigung muss zunächst für den gewünschten Trigger eine Benachrichtigung angelegt werden.
+
+Für die Information der Benachrichtigung gibt es eigne "Simple Tokens" mit den Pre-/Postfix "##" als
+
+* model_* - alle eigegeben Attributwerte
+* model_original_* - alle vorgher gespeicherten Attributwerte (nur bei Ändern und Kopieren)
+* member_* - alle Mitgliederdaten, sofern eingeloggt
+* property_label_* - alle Bezeichnungen der Attribute
+* data - alle Daten
+* admin_email - E-Mail aus der Contao-Konfiguration
+
+z.B. ##model_name## der Inhalt des Attributes "name".
+
+Ist für einen Triggertyp oder für mehrere eine Benachrrichtigung erstellt, kann diese in den Einstellungen
+der Eingabemaske ausgewählt werden.
+
+
 .. |img_paketverwaltung| image:: /_img/screenshots/extended/frontend_editing/fee-paketverwaltung.png
 .. |img_paket| image:: /_img/screenshots/extended/frontend_editing/fee-feepaket.png
 .. |img_paketzwei| image:: /_img/screenshots/extended/frontend_editing/fee-feepaket2.png
