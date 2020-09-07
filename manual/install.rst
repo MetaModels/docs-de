@@ -79,7 +79,7 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Slug-Generator für Alias und übersetzter Alias sowie Option zum Verhindern des "id-"-Präfix
 * Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
-* Anbindung des Notification center zur versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen im FEE
+* Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen im FEE
 * Unterstützung des MCW im FEE z.B. für Attribut Tabletext (Vanilla Script)
 * Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script
 * Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere Buchstaben wählbar
