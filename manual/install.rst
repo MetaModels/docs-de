@@ -81,7 +81,7 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen im FEE
 * Unterstützung des MCW im FEE z.B. für Attribut Tabletext (Vanilla Script)
-* Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script
+* Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script; Sortierung im BE unter Berücksichtigung der Anzahl der Bewertungen
 * Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere Buchstaben wählbar
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
