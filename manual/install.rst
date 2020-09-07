@@ -78,6 +78,11 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * manuelle Dateisortierung (inkl. übersetzte Dateien)
 * Slug-Generator für Alias und übersetzter Alias sowie Option zum Verhindern des "id-"-Präfix
 * Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
+* Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
+* Anbindung des Notification center zur versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen im FEE
+* Unterstützung des MCW im FEE z.B. für Attribut Tabletext (Vanilla Script)
+* Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script
+* Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere Buchstaben wählbar
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
