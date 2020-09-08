@@ -44,7 +44,7 @@ Voraussetzungen für die Installation:
 
 * PHP 7.x
 * Contao 3.5.x oder Contao 4.4.x
-* MetaModels ab core 2.0.0-alpha16 bzw. 2.1 und DCG 2.0.0-beta39
+* MetaModels ab core 2.0 bzw. 2.1 und DCG 2.0
 * (Zip-Paket der Erweiterung, Anfrage über info@e-spin.de)
 
 In der Paketverwaltung in der Suche `metamodels/notelist` eingeben,
