@@ -3,7 +3,7 @@
 Leaflet-Maps Integration
 ########################
 
-Mit der Leaflet-Maps Integration wird die Darstellung von MetaModels in der
+Mit der `Leaflet-Maps Integration <https://github.com/netzmacht/contao-leaflet-metamodels>`_ wird die Darstellung von MetaModels in der
 Erweiterung `netzmacht/contao-leaflet-maps`_ ermöglicht.
 
 .. note:: Diese Dokumentation bezieht sich ausschließlich auf Contao 4, auch
@@ -26,8 +26,7 @@ Contao 4
 ~~~~~~~~
 
  - min. Contao 4.4
- - MetaModels 2.1
- - `netzmacht/contao-leaflet-maps`_ 3.0
+ - min. MetaModels 2.1
  - min. PHP 7.1
  - min. Symfony 3.4
 
@@ -43,8 +42,7 @@ Contao 3.5
 Installation
 ------------
 
-Über Composer/Contao Manager lässt sich `netzmacht/contao-leaflet-metamodels`_
-in der Version **~3.0.0-beta1** *(Stand 08.02.2019)* installieren.
+Über Composer/Contao Manager lässt sich `netzmacht/contao-leaflet-metamodels`_ installieren.
 
 
 MetaModel auf Karte integrieren
