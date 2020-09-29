@@ -457,6 +457,8 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    /* --- MM 2.1 --- */
    /** @var $container */
    $factory = $this->getContainer()->get('metamodels.factory');
+   // alternativ
+   //$factory = \Contao\System::getContainer()->get('metamodels.factory');
 
    /* --- MM 2.x --- */
    // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
