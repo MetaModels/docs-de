@@ -44,6 +44,9 @@ html_favicon = '_img/favicon.ico'
 html_last_updated_fmt = '%d.%m.%Y'
 html_show_sphinx = False
 html_show_copyright = True
+html_css_files = [
+    'style.css',
+]
 
 # -- Options for LaTeX output ---------------------------------------------
 
