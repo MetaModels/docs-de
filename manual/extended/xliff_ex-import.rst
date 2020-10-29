@@ -52,12 +52,13 @@ Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de
 *1 Netto – ggf. zzgl. MwSt.
 
 
-Installation per Composer
--------------------------
+Installation per Contao-Manager oder Composer
+---------------------------------------------
 
 Voraussetzungen für die Installation:
 
-* MetaModels core 2.1
+* MetaModels core 2.1/2.2
+* Contao 4.4.x/4.9.x
 
 
 Konfiguration
@@ -70,7 +71,7 @@ Zunächst wird ein Ordner ``/translations`` im Installationsverzeichnis
 von Contao anlegt. Dort ist die Ablage der Exportierten XLIFF-Dateien
 bzw. von dort werden diese wieder beim Import eingelesen.
 
-Weiterhin ist im Ordner ``/app`` oder ``/app/Resources`` eine Konfiguationsdatei
+Weiterhin ist im Ordner ``/app`` oder ``/app/Resources`` eine Konfigurationsdatei
 ``.translation-jobs.yml`` anzulegen. Mit dieser Konfigurationsdatei wird
 festgelegt, was exportiert bzw. importiert werden soll - z.B. nur Contao oder
 nur MM oder beides - sowie werden hier einzelne Jobs definiert, die per
@@ -176,7 +177,7 @@ Ein Debugaufruf kann z.B. wie folgt aussehen:
 
 ``php vendor/bin/contao-console debug:i18n-map tl_article.tl_content en de``
 
-Es folgt eine tabelarische Auflistung des Mappings. Gegebenfalls werden
+Es folgt eine tabellarische Auflistung des Mappings. Gegebenenfalls werden
 vorweg Hinweise auf Probleme ausgegeben wie z.B.
 
 .. code-block:: bash
@@ -289,7 +290,7 @@ Ausgabetypen
 * csv
 * xml
 
-Unterstüzung anderer Erweiterungen
+Unterstützung anderer Erweiterungen
 
 * MetaModels Backend
 * Isotope

@@ -56,7 +56,7 @@ Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de - siehe a
 
 
 Funktionen
-----------------
+----------
 
 Aus MetaModels können mit der Erweiterung Items an Isotope für einen
 Kauf- und Bezahlvorgang übergeben werden – das können Produkte aus einem
@@ -86,7 +86,7 @@ an Isotope möglich. Zu beachten ist hier, dass in MetaModels die
 
 
 Komponenten
--------------------
+-----------
 
 Mit dem Projekt werden drei verschiedene Komponenten zur Verfügung
 gestellt:
@@ -97,7 +97,7 @@ gestellt:
 
 
 Konfiguration und Einsatz
-----------------------------------
+-------------------------
 
 Es wird vorausgesetzt, dass Isotope installiert und eingerichtet ist
 ebenso wie MetaModels.
@@ -174,7 +174,7 @@ wie Warenkorb und Checkout erfolgen in Isotope.
 Wurde ein Item gekauft, ist dieses im Backend wie bei Isotope nicht mehr löschbar.
 
 Demoshop
---------------
+--------
 
 Zum Testen und Vergleichen der Erweiterung gegenüber dem normalen
 Isotope, wurde ein Demoshop eingerichtet: `https://isotope.metamodel.me <https://isotope.metamodel.me>`_
@@ -200,14 +200,14 @@ Folgend noch einige Hinweise zu den einzelnen Produktgruppen:
 
 
 Voraussetzungen
-------------------------
+---------------
 
 Für die Installation der Module gelten aktuell folgende
 Voraussetzungen:
 
-* Contao 4.4 (Contao 4.9. ist noch nicht getestet)
-* Isotope 2.5/6 und MetaModels 2.1
-* PHP ab 7.1
+* Contao 4.4.x/4.9.x
+* Isotope 2.5/2.6 und MetaModels 2.1/2.2
+* PHP ab 7.2
 
 
 Known Issues and Next Features

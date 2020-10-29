@@ -4,7 +4,7 @@ Merkliste für MetaModels
 ========================
 
 .. warning:: Die Merkliste ist noch im Fundraising und wird erst nach
-   Erreichen der Zielsumme von x.000€ frei geschaltet. |br|
+   Erreichen der Zielsumme von 5.595€ frei geschaltet. |br|
    Eine Vorab-Installation ist nach Absprache möglich.
    Kontakt: info@e-spin.de
 
@@ -37,18 +37,15 @@ Die Merkliste arbeitet auch mit übersetzten MetaModels, so dass die Datensätze
 Merkliste auch beim Wechsel der Sprache erhalten bleiben.
 
 
-Installation per Composer
--------------------------
+Installation per Contao-Manager oder Composer
+---------------------------------------------
 
 Voraussetzungen für die Installation:
 
-* PHP 7.x
-* Contao 3.5.x oder Contao 4.4.x
-* MetaModels ab core 2.0 bzw. 2.1 und DCG 2.0
-* (Zip-Paket der Erweiterung, Anfrage über info@e-spin.de)
-
-In der Paketverwaltung in der Suche `metamodels/notelist` eingeben,
-installieren und die Datenbank aktualisieren.
+* PHP 7.2
+* Contao 4.4.x/4.9.x
+* MetaModels core 2.1/2.2 und DCG 2.1/2.2
+* Zugang zum geschützten Repository - Daten nach Spende
 
 
 Merkliste anlegen
@@ -280,6 +277,7 @@ Known Issues and Next Features
 * Seite(n) mit Notelist dürfen nicht gecached werden
 * Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
 * Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
+* in Contao 4.9 muss Template angepasst werden, da Contao .text nicht mehr unterstützt - Fix kommt noch
 
 
 Spenden
@@ -292,6 +290,10 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * `Westwerk GmbH & Co. KG <https://www.westwerk.ac>`_: 350 €
 * `Niels Hegmanns <http://www.heimseiten.de>`_: 350 €
 * `Hofer Werbung <http://www.hofer-werbung.de>`_: 350 €
+* `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
+* `AFM-Werbestudio <https://www.afm-werbestudio.de>`_: 350 €
+* `PITSol <https://www.pitsol.de/>`_: 350 €
+* `ghost.company <https://www.ghostcompany.com/>`_: 350 €
 
 
 (Spenden in Netto)

@@ -42,32 +42,7 @@ wichtig!
 Installation
 ------------
 
-Das FEE wird über die Paketverwaltung (Composer) von Contao installiert - eine
-"Nightly-Build-Version" steht nicht zur Verfügung.
-
-Für die Installation wechselt man in die Paketverwaltung
-
-|img_paketverwaltung|
-
-In der Suche der Paketverwaltung gibt man "metamodels/contao-frontend-editing" ein
-und klickt anschließend auf den Button "Suchen".
-
-|img_paket|
-
-Als Suchergebnis sollte sich nun folgende Erweiterung zeigen.
-Man klickt auf das Icon rechts, um das Paket zur Installation vorzumerken.
-
-|img_paketzwei|
-
-Als Pakettyp ist "dev-master" auswählen und über den Button "Paket für die
-Installation vormerken" die Installation vorzubereiten.
-
-|img_paketvormerken|
-
-Zurück in der Liste der Paketverwaltung klickt man auf "Pakete aktualisieren" und
-die Erweiterung wird installiert.
-
-|img_paketaktualisieren|
+Das FEE wird über den Contao-Manager oder Composer installiert.
 
 
 Einrichtung im Backend
@@ -176,6 +151,19 @@ Der Eintrag "*" (bis MM 2.1 "-") bei den Gruppen ist ein "catch all", d.h. diese
 alle Gruppen, sofern nicht schon vorher in der Abarbeitung ein Eintrag zum Zuge gekommen ist.
 
 
+Individuelle Buttons in FE-Maske
+--------------------------------
+
+.. note:: Das Feature steht ab MM 2.2 zur Verfügung.
+
+Über die Konfiguration der Eingabemaske kann die Ausgabe und Arbeitsweise der im FE ausgegebenen
+Buttons konfiguriert werden. Als Standard wird "Speichern" und "Speichern und neu" als Button ausgegeben.
+
+Mit der Konfiguration kann sowohl die Beschriftung der Button als auch die Aktion geändert werden. So ist
+zum Beispiel "Zurück" (ohne Speichern), "Speichern und zurück" oder auch "Speichern" mit einer Weiterleitung
+auf eine "Danke-Seite" ähnlich wie beim Formulargenerator möglich.
+
+
 Benachrichtigungen über das Notification Center
 -----------------------------------------------
 
@@ -197,8 +185,8 @@ Für eine neue Benachrichtigung muss zunächst für den gewünschten Trigger ein
 
 Für die Information der Benachrichtigung gibt es eigne "Simple Tokens" mit den Pre-/Postfix "##" als
 
-* model_* - alle eigegeben Attributwerte
-* model_original_* - alle vorgher gespeicherten Attributwerte (nur bei Ändern und Kopieren)
+* model_* - alle eingegeben Attributwerte
+* model_original_* - alle vorher gespeicherten Attributwerte (nur bei Ändern und Kopieren)
 * member_* - alle Mitgliederdaten, sofern eingeloggt
 * property_label_* - alle Bezeichnungen der Attribute
 * data - alle Daten
@@ -206,7 +194,7 @@ Für die Information der Benachrichtigung gibt es eigne "Simple Tokens" mit den 
 
 z.B. ##model_name## der Inhalt des Attributes "name".
 
-Ist für einen Triggertyp oder für mehrere eine Benachrrichtigung erstellt, kann diese in den Einstellungen
+Ist für einen Triggertyp oder für mehrere eine Benachrichtigung erstellt, kann diese in den Einstellungen
 der Eingabemaske ausgewählt werden.
 
 
