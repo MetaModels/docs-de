@@ -150,6 +150,11 @@ definierte Eingabemaske als erstes gefunden und entsprechend angezeigt. Für die
 Der Eintrag "*" (bis MM 2.1 "-") bei den Gruppen ist ein "catch all", d.h. dieser Eintrag gilt für
 alle Gruppen, sofern nicht schon vorher in der Abarbeitung ein Eintrag zum Zuge gekommen ist.
 
+Manchmal gibt es Konstellationen, bei denen man in einer Spalte bei der Abarbeitung eine Zeile
+"überspringen" möchte - z.B. um in der ersten Zeile bei Mitgliedergruppe kein "catch all *" zu haben.
+Dafür kann man sich eine Gruppe anlegen, zu der es keinen zugewiesenen Benutzer/Mitglied gibt - z. B.
+als "Anonymous" oder "empty".
+
 
 Individuelle Buttons in FE-Maske
 --------------------------------
