@@ -160,8 +160,10 @@ Individuelle Buttons in FE-Maske
 Buttons konfiguriert werden. Als Standard wird "Speichern" und "Speichern und neu" als Button ausgegeben.
 
 Mit der Konfiguration kann sowohl die Beschriftung der Button als auch die Aktion geändert werden. So ist
-zum Beispiel "Zurück" (ohne Speichern), "Speichern und zurück" oder auch "Speichern" mit einer Weiterleitung
+zum Beispiel "Speichern und zurück", "Speichern und neu" oder auch "Speichern" mit einer Weiterleitung
 auf eine "Danke-Seite" ähnlich wie beim Formulargenerator möglich.
+
+|img_fee-eigene-buttons|
 
 
 Benachrichtigungen über das Notification Center
@@ -220,6 +222,7 @@ der Eingabemaske ausgewählt werden.
 
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
 
+.. |img_fee-eigene-buttons| image:: /_img/screenshots/extended/frontend_editing/fee-eigene-buttons.png
 
 .. |br| raw:: html
 
