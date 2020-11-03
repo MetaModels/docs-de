@@ -83,6 +83,7 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Unterstützung des MCW im FEE z.B. für Attribut Tabletext (Vanilla Script)
 * Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script; Sortierung im BE unter Berücksichtigung der Anzahl der Bewertungen
 * Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere Buchstaben wählbar
+* Filter Mehrfachauswahl [Tags] kann nun so eingestellt werden, dass die Checkboxen "Nicht filtern" und "Alles filtern" wahlweise nicht erscheinen.
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
