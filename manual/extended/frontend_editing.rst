@@ -126,6 +126,11 @@ kann über die üblichen Zugangsberechtigungen von Contao
 geschützt werden und die Bearbeitung nur einer oder mehreren
 freigegebenen Mitgliedergruppen ermöglicht werden.
 
+Zu beachten ist das Zusammenspiel zwischen den Zugangsberechtigungen und
+der ausgegebenen Eingabemaske. Ist die Seite mit der Eingabemaske geschützt,
+muss für diese Mitgliedergruppe auch eine Eingabemaske definiert sein. Ist
+das nicht der Fall, ist das eine Fehlkonfiguration und führt zu einer Exception.
+
 
 Einrichtung unterschiedlicher Eingabemasken für BE/FE
 -----------------------------------------------------
