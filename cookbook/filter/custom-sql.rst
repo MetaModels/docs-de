@@ -164,6 +164,28 @@ weiteren Regeln wird diese Menge nur noch gekürzt.
    FROM mm_mannschaft
    ORDER BY `punkte` DESC, `spiele` ASC, `prio` DESC
 
+
+Sortierung der Ausgabe refernziertem MM und Name
+************************************************
+
+Hat man z. B. ein MM Produkte, in denen jeweils ein Partner per Einfachauswahl [select]
+referenziert ist und man möchte die Produkte so ausgeben, dass diese erst nach der
+manuellen Sortierung (sorting) der Partner sortiert ist und anschließend nach dem eigentlichen
+Produktnamen, kann man das mit den folgenden Code erreichen:
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT pro.id FROM mm_products AS pro
+   LEFT JOIN mm_partners AS part ON pro.partner = part.id
+   WHERE pro.published = 1
+   ORDER BY part.sorting, pro.product_code 
+
+In der Ausgabeliste könnte man damit z. B. bei jedem neuen Partner eine Zwischenüberschrift
+ausgeben. Dazu die aktuelle Partner.ID in einer temp. Variable abspeichern und in jedem
+Schleifendurchgang auf Gleichheit prüfen - wenn Ungleich, dann Ausgabe "Partnername".
+
+
 Dynamischer Defaultwert
 ***********************
 
