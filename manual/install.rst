@@ -60,10 +60,25 @@ aktueller MariaDB oder die manuelle Dateisortierung.
 Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 
 * ein laufendes Contao 4.9.x (LTS) und
-* PHP 7.2/7.3
+* PHP 7.2/7.3/7.4
 * MySQL ab 5.5.5 (InnoDB), MariaDB
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofiziell supportet.
+
+.. seealso:: Der DCG 2.2.0 wird nun auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
+   dass der Composer ab und an damit nicht zurecht gekommen ist – warum auch immer… |br|
+   Bei Update kommt z.B. die Meldung |br|
+   ``[InvalidArgumentException]
+   Unknown downloader type: . Available types: git, svn, fossil, hg, perforce, zip, rar, tar, gzip, xz, phar, file, path.`` |br| 
+   Wenn das auftritt, bitte den Ordner vendor/contao-community-alliance/dc-general (ggf. auch
+   /vendor/contao-community-alliance/dc-general-contao-frontend) löschen und das Update neu starten.
+
+   Bei HostEurope gab es zudem noch das Problem, dass der Composer kein Cache-Verzeichnis anlegen konnte.
+   Man kann das mit einer eigenen Umgebungsvariable zu einem Pfad, der für den eigenen User erreichbar und
+   beschreibbar ist, umgehen. Dazu einen Ordner .cache anlegen und den kompletten (absolut) Pfad wie folgt mit
+   in den Aufruf einbauen: |br|
+   ``COMPOSER_HOME=/is/htdocs/kunde_xyz/www/mein_projekt/.cache /usr/bin/php7.4 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php update -v`` |br|
+   Inwieweit die Probleme auch ein Update über den Contao-Manager betrifft, haben wir noch keine Rückmeldung. 
 
 **MetaModels 2.2 ist ab sofort einsatzbereit** und kann über den Composer (Konsole) oder den
 Contao-Manager installiert werden. Zugang zu dem aktuell noch geschützem Repository erhält
