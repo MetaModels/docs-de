@@ -81,8 +81,8 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofizi
    Inwieweit die Probleme auch ein Update über den Contao-Manager betrifft, haben wir noch keine Rückmeldung. 
 
 **MetaModels 2.2 ist ab sofort einsatzbereit** und kann über den Composer (Konsole) oder den
-Contao-Manager installiert werden. Zugang zu dem aktuell noch geschützem Repository erhält
-man über unser "eary adopter Programm" - mehr dazu unter Fundrasing auf der
+Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält
+man über unser "early adopter Programm" - mehr dazu unter Fundrasing auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
 Weitere Features von MM 2.2 (wird laufend ergänzt):
