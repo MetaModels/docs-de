@@ -42,7 +42,7 @@ Installieren via "Nightly build"
 --------------------------------
 
 .. warning:: Die automatische Generierung des "Nightly build" ist seit 08.10.2018 abgeschaltet.
-  Bitte die Installtion per Paketverwaltung/Contao-Manger/Composer durchführen.
+  Bitte die Installation per Paketverwaltung/Contao-Manager/Composer durchführen.
 
 Alternativ zur Installation via Composer ist die manuelle Installation per FTP möglich. Dazu wird
 die aktuelle Version von MetaModels von der `Projektseite http://now.metamodel.me/ <http://now.metamodel.me/>`_
