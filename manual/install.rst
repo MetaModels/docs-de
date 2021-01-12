@@ -78,7 +78,7 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofizi
    beschreibbar ist, umgehen. Dazu einen Ordner .cache anlegen und den kompletten (absolut) Pfad wie folgt mit
    in den Aufruf einbauen: |br|
    ``COMPOSER_HOME=/is/htdocs/kunde_xyz/www/mein_projekt/.cache /usr/bin/php7.4 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php update -v`` |br|
-   Inwieweit die Probleme auch ein Update über den Contao-Manager betrifft, haben wir noch keine Rückmeldung. 
+   Inwieweit die Probleme auch ein Update über den Contao-Manager betrifft, haben wir noch keine Rückmeldung.
 
 **MetaModels 2.2 ist ab sofort einsatzbereit** und kann über den Composer (Konsole) oder den
 Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält
@@ -100,6 +100,13 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere Buchstaben wählbar
 * Filter Mehrfachauswahl [Tags] kann nun so eingestellt werden, dass die Checkboxen "Nicht filtern" und "Alles filtern" wahlweise nicht erscheinen.
 * Attribute Text-Tabelle und trans. Text-Tabelle haben Einstellungen zum Angeben der min. und max. Anzahl der Zeilen sowie eine Checkbox zum Deaktivieren der manuellen Sortierung
+* Filter Tags kann die Anzeige der Checkbox "Alle" über eine Option bei den Einstellungen der Filterregel gesteuert werden
+
+.. seealso:: Beim Update zu beachten: |br|
+   Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
+   immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
+   bei einem `composer install` die Pakete nicht gefunden werden können und eine Fehlermeldung kommt. |br|
+   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen.
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
