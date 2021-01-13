@@ -94,13 +94,21 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Slug-Generator für Alias und übersetzter Alias sowie Option zum Verhindern des "id-"-Präfix
 * Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
-* Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen im FEE
+* Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen
+  im FEE
 * Unterstützung des MCW im FEE z.B. für Attribut Tabletext (Vanilla Script)
-* Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script; Sortierung im BE unter Berücksichtigung der Anzahl der Bewertungen
-* Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere Buchstaben wählbar
-* Filter Mehrfachauswahl [Tags] kann nun so eingestellt werden, dass die Checkboxen "Nicht filtern" und "Alles filtern" wahlweise nicht erscheinen.
-* Attribute Text-Tabelle und trans. Text-Tabelle haben Einstellungen zum Angeben der min. und max. Anzahl der Zeilen sowie eine Checkbox zum Deaktivieren der manuellen Sortierung
-* Filter Tags kann die Anzeige der Checkbox "Alle" über eine Option bei den Einstellungen der Filterregel gesteuert werden
+* Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script; Sortierung im BE unter
+  Berücksichtigung der Anzahl der Bewertungen
+* Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere
+  Buchstaben wählbar
+* Filter Mehrfachauswahl [Tags] kann nun so eingestellt werden, dass die Checkboxen "Nicht filtern" und "Alles filtern"
+  wahlweise nicht erscheinen.
+* Attribute Text-Tabelle und trans. Text-Tabelle haben Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
+  sowie eine Checkbox zum Deaktivieren der manuellen Sortierung
+* Filter Tags kann die Anzeige der Checkbox "Alle" über eine Option bei den Einstellungen der Filterregel gesteuert
+  werden
+* Umkreissuche/Perimeterseach ist bei den Lookup-Services, die eine Adressauflösung machen, der Service Koordinaten
+  hinzu gekommen - Damit kann ein Button "Eigener Standort" eingebaut werden
 
 .. seealso:: Beim Update zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
