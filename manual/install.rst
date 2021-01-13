@@ -107,8 +107,9 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
   sowie eine Checkbox zum Deaktivieren der manuellen Sortierung
 * Filter Tags kann die Anzeige der Checkbox "Alle" über eine Option bei den Einstellungen der Filterregel gesteuert
   werden
-* Umkreissuche/Perimeterseach ist bei den Lookup-Services, die eine Adressauflösung machen, der Service Koordinaten
-  hinzu gekommen - Damit kann ein Button "Eigener Standort" eingebaut werden
+* Umkreissuche/Perimeterseach ist bei den Lookup-Services, die eine Adressauflösung machen, der Service "Koordinaten"
+  hinzu gekommen - Damit kann direkt mit den Koordinaten gearbeitet werden und ein Button "Eigener Standort" eingebaut
+  werden
 
 .. seealso:: Beim Update zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
