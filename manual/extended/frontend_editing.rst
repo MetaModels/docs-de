@@ -60,11 +60,12 @@ Für den Test-Aufbau gibt es zwei Seiten in Contao:
 |img_seitenstruktur|
 
 Auf der Listenseite setzt man ein Inhalts-Element vom Typ "Metamodel List" ein. Dies
-wurde entsprechend der Anleitung :ref:`first_index` konfiguriert - mit zwei
-Ergänzungen, die einem die neue Erweiterung ermöglicht:
+wurde entsprechend der :ref:`Anleitung <component_contentelements>` konfiguriert
+- mit zwei Ergänzungen, die einem die neue Erweiterung ermöglicht:
 
-* die Frontend-Bearbeitung aktivieren und
-* eine Editor-Seite auswählen.
+* die Frontend-Bearbeitung aktivieren
+* eine Editor-Seite auswählen
+* das Template wechseln auf `ce_metamodel_frontend_edit`
 
 |img_metamodellist|
 
@@ -81,13 +82,21 @@ In diesem wählt man das MetaModel aus, welches bearbeitet werden soll.
 Als letzter Schritt, muss die Eingabemaske, die für das Backend konfiguriert wurde,
 noch für das Frontend freigeschaltet werden. Dazu öffnet man im Backend die 
 Seite der "Eingabe-/Render-Zuordnungen" |img_dca_combine| und wählt in der
-Spalte "Mitgliedergruppe" den Eintrag "Anonymous" (`PR #1189 beachten <https://github.com/MetaModels/core/pull/1189>`_)
+Spalte "Mitgliedergruppe" einen passenden Eintrag für die Rechte im Frontend - bitte
+die :ref:`Ausführungen zu den Einstellungen <component_dca-combine>` beachten.
+
 
 |img_fee-dca-zuordnung|
 
 Damit sind die Einstellungen im Backend abgeschlossen und man
 kann nun im Frontend die Einstellungen bzw. die Bearbeitung der
 Mitarbeiter prüfen.
+
+.. warning:: Mit der Zuordnung zu einer Mitgliedergruppe sind die Daten nicht
+   automatisch vor der Bearbeitung durch andere Mitglieder geschützt. Die
+   Rechteprüfung ist (noch) nicht Implementiert und muss selbständig über
+   entsprechende Events eingebaut werden. Einer Finanzierung des Features
+   stehen wir offen gegenüber ;-)
 
 
 Arbeiten im Frontend
