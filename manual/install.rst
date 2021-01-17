@@ -112,6 +112,8 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
   werden
 * Im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons für Filterung und Filter zurücksetzen
   aus Contao
+* Bei den Einstellungen der Filterregeln kann nun eingestellt werden, dass das Label des Filterwidgets nicht ausgegeben
+  wird
 
 .. seealso:: Beim Update zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
