@@ -108,8 +108,10 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Filter Tags kann die Anzeige der Checkbox "Alle" über eine Option bei den Einstellungen der Filterregel gesteuert
   werden
 * Umkreissuche/Perimeterseach ist bei den Lookup-Services, die eine Adressauflösung machen, der Service "Koordinaten"
-  hinzu gekommen - Damit kann direkt mit den Koordinaten gearbeitet werden und ein Button "Eigener Standort" eingebaut
+  hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet und ein Button "Eigener Standort" eingebaut
   werden
+* Im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons für Filterung und Filter zurücksetzen
+  aus Contao
 
 .. seealso:: Beim Update zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
