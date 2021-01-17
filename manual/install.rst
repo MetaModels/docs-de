@@ -115,11 +115,15 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Bei den Einstellungen der Filterregeln kann nun eingestellt werden, dass das Label des Filterwidgets nicht ausgegeben
   wird
 
-.. seealso:: Beim Update zu beachten: |br|
+.. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
    immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
    bei einem `composer install` die Pakete nicht gefunden werden können und eine Fehlermeldung kommt. |br|
-   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen.
+   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen. |br|
+   |br|
+   In den Paketen werden die Abhängigkeiten der Pakete nicht auf die DEV-Version eingetragen - das kann bedeuten,
+   dass man z. B. `attribute_numeric` für `attribute_timestamp` selbständig in die composer.json eintragen muss.
+   Bei Fragen steht der Support zur Seite.
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
