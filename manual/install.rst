@@ -116,6 +116,9 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
   wird
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden können
+* Attribute Checkbox: die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert, bei translated Checkbox
+  kann je Sprache ein eigenes Icon-Set ausgewählt werden; sind die Checkboxen `readonly`, werden diese in der Listen-
+  Ansicht dargestellt, haben aber keine Togglefunktion
 
 .. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
