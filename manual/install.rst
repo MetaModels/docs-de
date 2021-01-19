@@ -114,6 +114,8 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
   zurücksetzen statt der "Gelben Pfeile" eingebaut  
 * Bei den Einstellungen der Filterregeln kann nun eingestellt werden, dass das Label des Filterwidgets nicht ausgegeben
   wird
+* Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
+  besser per CSS arrangiert/gestyled werden können
 
 .. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
