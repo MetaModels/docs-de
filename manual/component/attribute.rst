@@ -111,9 +111,13 @@ MetaModel-Erstellung erzeugten Tabelle.
 Zu beachten ist, dass bei Relationen per "Einfachauswahl" oder "Mehrfachauswahl" zwischen
 zwei Metamodel mit Übersetzungen üblicher Weise *nicht* die Optionen "Übersetzter Select"
 und "Übersetzte Tags" auszuwählen ist. Das Erkennen bzw. das Umschaltung der Sprache
-macht MetaModels automatisch. Die beiden "übersetzten Varianten" sind hauptsächlich
-für die Anbindung von Tabellen bestimmt, die nicht zu MetaModels gehören und ein
-eigenständiges Feld für die Sprachvariante besitzen.
+macht MetaModels mit den Attributen "Einfachauswahl" und "Mehrfachauswahl" automatisch.
+
+Die beiden "übersetzten Varianten" sind hauptsächlich für die Anbindung von Tabellen bestimmt,
+die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen -
+oder für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche
+Items ausgewählt werden sollen. Mehr dazu auf einer Sonderseite zur Mehrsprachigkeit - Sponsoren
+dazu gesucht!
 
 Neben den aufgeführten Attributen können über zusätzliche Erweiterungen von MetaModels
 auch weitere Attributtypen zur Verfügung stehen. Die Attribute werden über den Composer
