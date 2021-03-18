@@ -70,7 +70,7 @@ spezifischen Optionen:
 * **Langtext**: Texteingabe |br|
   Attribut für längere Texteingaben
 * **Numerisch**: Eingabe von ganzzahligen Werten (Integer)
-* **Auswahl**: Relation (1:n) zu einem weiteren MetaModel |br|
+* **Einzelauswahl [select]**: Relation (1:n) zu einem weiteren MetaModel |br|
   mit dem Attribut "Auswahl" wird eine 1:n-Relation zu einem weiteren MetaModel
   erstellt; in den Optionen wird die MetaModel-Tabelle, das Attribut usw. eingestellt
 * **Text-Tabelle**: Eingabe von Werten als Tabelle |br|
@@ -78,7 +78,7 @@ spezifischen Optionen:
   Spaltenbezeichnung und Spaltenbreite definiert; in der Eingabemaske können dann
   beliebig viele Zeilen erzeugt werden z.B. um mehrere URLs oder Telefonnummern
   zu speichern
-* **Mehrfachauswahl**: Relation (m:n) zu einem weiteren MetaModel |br|
+* **Mehrfachauswahl [tags]**: Relation (m:n) zu einem weiteren MetaModel |br|
   mit dem Attribut "Auswahl" wird eine m:n-Relation zu einem weiteren MetaModel
   erstellt; in den Optionen wird die MetaModel-Tabelle, das Attribut usw. eingestellt;
   die Auflösung der Relation erfolgt in einer speziellen Tabelle von MetaModels, so dass
