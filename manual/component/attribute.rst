@@ -70,17 +70,17 @@ spezifischen Optionen:
 * **Langtext**: Texteingabe |br|
   Attribut für längere Texteingaben
 * **Numerisch**: Eingabe von ganzzahligen Werten (Integer)
-* **Einzelauswahl [select]**: Relation (1:n) zu einem weiteren MetaModel |br|
-  mit dem Attribut "Auswahl" wird eine 1:n-Relation zu einem weiteren MetaModel
-  erstellt; in den Optionen wird die MetaModel-Tabelle, das Attribut usw. eingestellt
+* **Einzelauswahl [select]**: Relation (1:n) zu einer weiteren Tabelle von MetaModels oder Contao |br|
+  mit dem Attribut "Auswahl" wird eine 1:n-Relation zu einer weiteren Tabelle
+  erstellt; das kann sowohl eine MetaModels-Tabelle sein als auch jede andere Tabelle aus Contao z. B. tl_member
 * **Text-Tabelle**: Eingabe von Werten als Tabelle |br|
   mit dem Attribut "Text-Tabelle" wird eine Anzahl von Spalten inkl. der
   Spaltenbezeichnung und Spaltenbreite definiert; in der Eingabemaske können dann
   beliebig viele Zeilen erzeugt werden z.B. um mehrere URLs oder Telefonnummern
   zu speichern
-* **Mehrfachauswahl [tags]**: Relation (m:n) zu einem weiteren MetaModel |br|
-  mit dem Attribut "Auswahl" wird eine m:n-Relation zu einem weiteren MetaModel
-  erstellt; in den Optionen wird die MetaModel-Tabelle, das Attribut usw. eingestellt;
+* **Mehrfachauswahl [tags]**: Relation (m:n) zu einer weiteren Tabelle von MetaModels oder Contao |br|
+  mit dem Attribut "Auswahl" wird eine m:n-Relation zu einer weiteren Tabelle
+  erstellt; das kann sowohl eine MetaModels-Tabelle sein als auch jede andere Tabelle aus Contao z. B. tl_page;
   die Auflösung der Relation erfolgt in einer speziellen Tabelle von MetaModels, so dass
   für das Attribut keine Spalte in der MetaModel-Tabelle angelegt wird
 * **Text**: einfaches Textfeld
