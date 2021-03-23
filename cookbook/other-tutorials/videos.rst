@@ -11,6 +11,9 @@ Videoreihe von Almut Müller:
 Verschiedene Videos:
 
 * #00 `Vortrag "MetaModels - Booster für den Content" Contao-Konf 2017 <https://www.youtube.com/watch?v=gV1kaxohX1A>`_
+* #01 `Vortrag "Buchungssystem mit Meta Models" Contao-Konf 2016 <https://www.youtube.com/watch?v=jnDOyW0C4_c>`_
+* #02 `Vortrag "MetaModels 2.0 für Einsteiger" Contao-Konf 2015 <https://www.youtube.com/watch?v=i-Iq8l4956c>`_
+
 
 Für Ergänzungen oder Korrekturen der Liste bitte eine E-Mail an
 an die folgende Adresse senden: |manual@metamodel.me|
