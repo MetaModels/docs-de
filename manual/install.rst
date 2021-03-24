@@ -164,7 +164,7 @@ Umstellung von `metamodels/bundle_*` auf separate Module
 --------------------------------------------------------
 
 Bei einer Umstellung z.B. von 2.0 auf eine neuere Version oder Neuinstalltion ist es eine gute Gelegenheit, nur noch
-die Attribute und Filter zu installieren, die für das Projekt notwendig sind. War zuvor z.B. `metamodels/bundle_all`
+die Attribute und Filter zu installieren, die für das Projekt notwendig sind. War zuvor z.B. `metamodels/bundle_start`
 oder `metamodels/bundle_all` im Einsatz, kann man mit den folgenden SQL-Befehlen die wirklich verwendeten Attribute
 und Filter abfragen:
 
