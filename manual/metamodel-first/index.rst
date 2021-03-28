@@ -21,7 +21,7 @@ Die Umsetzung orientiert sich an den :ref:`component_index`.
 **Voraussetzungen:**
 
 * aktuelles Contao (LTS) - siehe :ref:`manual_install`
-* aktuelles, zu Contaoversion passendes MetaModels - siehe :ref:`manual_install` und :ref:`mm-start`
+* aktuelles, zu Contaoversion passendes MetaModels - siehe :ref:`manual_install` und :ref:`rst_cookbook_checklists_mm-start`
 * sicherer Umgang von Contao
 * Verständnis der :ref:`component_index`
 
