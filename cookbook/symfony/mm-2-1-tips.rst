@@ -1,9 +1,9 @@
 .. _rst_cookbook_symfony_mm-2-1-tips:
 
-Symfony und MM 2.1 Tipps
+Symfony und MM 2.x Tipps
 ========================
 
-Für die Arbeit mit MM 2.1 unter Symfony einige Tipps für den Start
+Für die Arbeit mit MM 2.x unter Symfony einige Tipps für den Start
 oder als "Merkzettel".
 
 Die Aufrufe auf der Konsole gehen immer vom Installationsverzeichnis von
@@ -13,7 +13,8 @@ erstmal in das Verzeichnis wechseln:
 ``cd /var/www/mein-contao``
 
 Anschließend sollte man sicher gehen, dass auf der Konsole die selbe
-PHP-Version läuft, wie für die Webseite. Das kann man abfragen mit:
+PHP-Version läuft, wie für die Webseite (siehe im Contao-Manager bei Tools > PHPINFO).
+Auf der Konsole kann man das abfragen mit:
 
 ``php -v``
 
@@ -21,7 +22,7 @@ Ist die PHP-Version nicht gleich, muss man jeweils mit einem Pfad zum PHP-Binary
 die Befehle aufrufen. Den Pfad erhlt man z.B. beim Systemcheck des
 Contao-Managers mit angezeigt oder aus der Doku/Wiki des Providers.
 
-``/usr/bin/php73 -v``
+``/usr/bin/php74 -v``
 
 
 Composer-Update
@@ -29,11 +30,11 @@ Composer-Update
 
 Mit folgendem Befehl wird ein Update eingeleitet:
 
-``/usr/bin/php73 web/contao-manager.phar.php composer update -v``
+``/usr/bin/php74 web/contao-manager.phar.php composer update -v``
 
 oder mit Speicher- und Laufzeitzuweisung
 
-``/usr/bin/php73 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
+``/usr/bin/php74 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
 
 Mit dem Parameter "-v" bzw. "-vv" oder "-vvv" erhalt man verschiedene Detailstufen der Ausgabe. Mit dem
 zusätzlichen Parameter "--dry-run" wird ein "Trockenlauf" als Test durchegführt.
@@ -43,7 +44,7 @@ durchgeführt werden (wird gern vergessen :D).
 
 Die composer.phar sollte regelmäßig aktualisiert werden - dazu folgenden Befehl aufrufen:
 
-``/usr/bin/php73 web/contao-manager.phar.php self-update``
+``/usr/bin/php74 web/contao-manager.phar.php self-update``
 
 
 Paketversion ermitteln
@@ -52,11 +53,11 @@ Paketversion ermitteln
 Bei Fehlermeldungen oder Nachfragen bei Entwicklern ist die Auskunft über die installierte Version
 einer Erweiterung wichtig. Das kann man über den Paketnamen ermitteln z.B. für den DC_General
 
-``/usr/bin/php73 web/contao-manager.phar.php composer show | grep dc-general``
+``/usr/bin/php74 web/contao-manager.phar.php composer show | grep dc-general``
 
 Mit
 
-``/usr/bin/php73 web/contao-manager.phar.php composer show``
+``/usr/bin/php74 web/contao-manager.phar.php composer show``
 
 werden alle Pakete ausgegeben.
 
@@ -87,9 +88,16 @@ In einem Script als Kombination - `siehe Gist von Sven Baumann <https://gist.git
 Symfony-Toolbar
 ---------------
 
-Während der Entwicklung sollte man unbedingt Zugriff auf die Entwicklungsumgebung
-per `app_dev` haben - der Seitenaufruf ist dann "domain.tld/app_dev.php/...".
-Dazu muss ein Zugang für app_dev eingerichtet werden über
+Die Symfony-Toolbar erleichtert die Anzeige von Templatewerten und das Debugging während
+der Erstellung eines Projektes mit MetaModels.
+
+Ab Contao 4.9 kann diese über den Debugmodus aus dem Backend oder Contao-Manager aktiviert
+werden, oder über Environment-Datei `.env` mit dem Eintrag
+
+``APP_ENV=dev``
+
+In Contao 4.4 ist der Debugmodus per `app_dev` zu aktivieren - der Seitenaufruf ist dann
+"domain.tld/app_dev.php/...". Dazu muss ein Zugang für app_dev eingerichtet werden über
 
 ``vendor/bin/contao-console contao:install-web-dir --user=ichbins --password=totalgeheim``
 
@@ -100,13 +108,13 @@ Für den app_dev-Zugang kann aber nur ein User angelegt werden.
 Achtung: sofern der Zugang zur Seite über htaccess geschützt ist, müssen user+passwort
 für htaccess und app_dev die selben sein!
 
-Mit dem Seitenaufruf per app_dev wird auch das Caching von Contao unterbunden und man muss
-den Cache nicht so häufig leeren - bedeutet aber auch, dass die Seite ohne app_dev ggf. "anders
-aussieht" => Cache löschen. Zudem wird die Debug-Toolbar von Symfony im Browser eingeblendet.
+Im Debugmodus wird auch das Caching von Contao unterbunden und man muss den Cache nicht
+so häufig leeren - bedeutet aber auch, dass die Seite ggf. "anders aussieht". Zudem wird
+die Debug-Toolbar von Symfony im Browser eingeblendet.
 
 |img_symfony-toolbar|
 
-Muss im Quelltext mal was debugt werden, die Debug-Funktion ``debug()`` von Symfony verwenden
+Muss im Quelltext mal was debugt werden, dann die Debug-Funktion ``debug()`` von Symfony verwenden
 - die Ausgabe erfolgt dann in der Debug-Toolbar und kann über das "Fadenkreuz-Icon" eingesehen
 werden.
 
