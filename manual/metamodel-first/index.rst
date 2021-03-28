@@ -20,8 +20,8 @@ Die Umsetzung orientiert sich an den :ref:`component_index`.
 
 **Voraussetzungen:**
 
-* aktuelles Contao - möglichst LTS
-* aktuelles MetaModels - siehe :ref:`manual_install`
+* aktuelles Contao (LTS) - siehe :ref:`manual_install`
+* aktuelles, zu Contaoversion passendes MetaModels - siehe :ref:`manual_install` und :ref:`mm-start`
 * sicherer Umgang von Contao
 * Verständnis der :ref:`component_index`
 
