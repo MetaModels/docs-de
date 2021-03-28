@@ -13,7 +13,7 @@ Checkliste:
 
    |box| regelmäßiges Backup einrichten
    
-   |box| Contao als LTS-Version und passende MM-Version installiert - für den ersten Test kann `bundle_start <https://extensions.contao.org/?p=metamodels%2Fbundle_start>` oder `bundle_all <https://extensions.contao.org/?p=metamodels%2Fbundle_all>` gewählt werden oder optimierter nur der `MM-Core sowie  weitere, benötigte Attribute und Filter <https://extensions.contao.org/?q=metamodels>`
+   |box| Contao als LTS-Version und passende MM-Version installiert - für den ersten Test kann `bundle_start <https://extensions.contao.org/?p=metamodels%2Fbundle_start>`_ oder `bundle_all <https://extensions.contao.org/?p=metamodels%2Fbundle_all>`_ gewählt werden oder optimierter nur der `MM-Core sowie  weitere, benötigte Attribute und Filter <https://extensions.contao.org/?q=metamodels>`_
    
    |box| auf bekannte Fehler/Bugs prüfen z.B. im `Forum <https://community.contao.org/de/showthread.php?60645-Aktuell-bekannte-Bugs>`_ oder auf `Github <https://github.com/issues?user=MetaModels>`_
    
