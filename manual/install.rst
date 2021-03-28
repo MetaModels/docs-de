@@ -8,18 +8,19 @@ Allgemeine Informationen zur Installation
 
 MetaModels besteht aus mehreren Modulen, die je nach Aufgabenstellung installiert werden müssen.
 
-Im Contao-Manager werden über die Eingabe `metamodels/` alle zur Verfügung stehenden Pakete
-von MetaModels aufgelistet. Das Basispaket `metamodels/core` muss installiert werden - darüber hinaus
-können weitere Attribute und Filter je nach Aufgabenstellung hinzugefügt werden.
+Im Contao-Manager werden über die Eingabe `metamodels/ <https://extensions.contao.org/?q=metamodels>`_
+alle zur Verfügung stehenden Pakete von MetaModels aufgelistet. Das Basispaket `metamodels/core <https://extensions.contao.org/?p=metamodels%2Fcore>`_
+muss installiert werden - darüber hinaus sind weitere `Attribute und Filter <https://extensions.contao.org/?q=metamodels>`_
+je nach Aufgabenstellung notwendig.
 
 Neben den einzelnen Paketen gibt es `Bundles`, die verschiedene Pakete für eine vereinfachte Installation
 zusammenfassen.
 
-Für den Einstieg in MetaModels ist das Bunde `metamodels/bundle_start` zu empfehlen - hiermit
-werden der Core sowie die wichtigsten Attribute und Filter installiert.
+Für den Einstieg in MetaModels ist das Bunde `metamodels/bundle_start <https://extensions.contao.org/?p=metamodels%2Fbundle_start>`_
+zu empfehlen - hiermit werden der Core sowie die wichtigsten Attribute und Filter installiert.
 
-Zudem gibt es auch das Bundle `metamodels/bundle_all`, welches neben dem
-`bundle_start` auch die mehrsprachigen Pakete mit installiert (Hinweis: die Pakete `translatedselect`
+Zudem gibt es auch das Bundle `metamodels/bundle_all <https://extensions.contao.org/?p=metamodels%2Fbundle_all>`_,
+welches neben dem `bundle_start` auch die mehrsprachigen Pakete mit installiert (Hinweis: die Pakete `translatedselect`
 `translatedtags` sind hier seit MM 2.1 nicht mehr inkludiert, da diese nur für Spezialfälle einzusetzen sind).
 
 Weitere Module wie "Registerfilter", "Umkreissuche", "Bewertung" usw. sind als separate Pakete
