@@ -8,15 +8,16 @@ Allgemeine Informationen zur Installation
 
 MetaModels besteht aus mehreren Modulen, die je nach Aufgabenstellung installiert werden müssen.
 
-Im Contao-Manager werden über die Eingabe `metamodels/ <https://extensions.contao.org/?q=metamodels>`_
+Im Contao-Manager werden bei `Pakete` über die Eingabe `metamodels/ <https://extensions.contao.org/?q=metamodels>`_
 alle zur Verfügung stehenden Pakete von MetaModels aufgelistet. Das Basispaket `metamodels/core <https://extensions.contao.org/?p=metamodels%2Fcore>`_
 muss installiert werden - darüber hinaus sind weitere `Attribute und Filter <https://extensions.contao.org/?q=metamodels>`_
-je nach Aufgabenstellung notwendig.
+je nach Aufgabenstellung notwendig. Für den ersten Start mit MetaModels steht eine :ref:`Checkliste <rst_cookbook_checklists_mm-start>`
+zur Verfügung.
 
 Neben den einzelnen Paketen gibt es `Bundles`, die verschiedene Pakete für eine vereinfachte Installation
 zusammenfassen.
 
-Für den Einstieg in MetaModels ist das Bunde `metamodels/bundle_start <https://extensions.contao.org/?p=metamodels%2Fbundle_start>`_
+Für den Einstieg in MetaModels ist das Bundle `metamodels/bundle_start <https://extensions.contao.org/?p=metamodels%2Fbundle_start>`_
 zu empfehlen - hiermit werden der Core sowie die wichtigsten Attribute und Filter installiert.
 
 Zudem gibt es auch das Bundle `metamodels/bundle_all <https://extensions.contao.org/?p=metamodels%2Fbundle_all>`_,
