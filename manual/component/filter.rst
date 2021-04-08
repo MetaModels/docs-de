@@ -38,40 +38,44 @@ beeinflusst werden, wodurch sich sehr umfangreiche Filterungen ergeben.
 Typen von Filterregeln
 ----------------------
 
-* **Vordefiniertes Itemset**: |br|
+* **Vordefiniertes Itemset** (core): |br|
   Eingabe einer Liste mit IDs, nach denen gefiltert werden soll
-* **Einfache Abfrage**: |br|
+* **Einfache Abfrage** (core): |br|
   erzeugt eine Filterung nach einem Attribut; für die Filterung
   kann ein URL-Parameter angegeben werden; mit Option "Statischer Parameter"
   kann in den Inhaltselementen/FE-Modulen aus einer Select-Liste ein Wert
   zum Filtern aktiviert werden
-* **Eigenes SQL**: |br|
+* **Eigenes SQL** (core): |br|
   eigene SQL-Bedingungen zur Filterung; den |img_about| Hilfe-Assistenten (Popup) beachten
-* **UND-Bedingung (AND)**: |br|
+* **UND-Bedingung (AND)** (core): |br|
   Container für weitere Filterregeln mit UND-Verknüpfung
-* **ODER-Bedingung (OR)**: |br|
+* **ODER-Bedingung (OR)** (core): |br|
   Container für weitere Filterregeln mit ODER-Verknüpfung
-* **Veröffentlichungsstatus**: |br|
+* **Veröffentlichungsstatus** (filter_checkbox): |br|
   prüft ein Attributwert auf 1; kann Attribut "published" sein
-* **Übersetzter Veröffentlichungsstatus**: |br|
+* **Übersetzter Veröffentlichungsstatus** (filter_checkbox): |br|
   prüft ein übersetzten Attributwert auf 1; kann Attribut
   "published" sein
-* **Ja / Nein**: |br|
+* **Ja / Nein** (filter_checkbox): |br|
   Ja/Nein-Auswahl z.B. als Radio-Buttons
-* **Wert von/bis**: |br|
+* **Wert von/bis für ein Feld** (filter_fromto): |br|
   von/bis-Auswahl für Werte
-* **Wert von/bis für Datum**: |br|
+* **Wert von/bis für ein Datumsfeld** (filter_fromto): |br|
   von/bis-Auswahl für Datum
-* **2 Felder mit Werten**: |br|
+* **Wert von/bis für zwei Felder** (filter_range): |br|
   zwei Felder mit Werten
-* **2 Felder mit Werten für Datum**: |br|
+* **Wert von/bis für zwe Datumsfelder** (filter_range): |br|
   zwei Felder mit Werten für Datum
-* **Einzelauswahl**: |br|
+* **Einzelauswahl** (filter_select): |br|
   einzelne Auswahl eines Wertes z.B. einer Select-Liste
-* **Mehrfachauswahl**: |br|
+* **Mehrfachauswahl** (filter_tags): |br|
   mehrfache Auswahl von Werten z.B. einer Select-Liste
-* **Textfilter**: |br|
+* **Textfilter** (filter_text): |br|
   filtert nach einer Texteingabe
+* **Umkreissuche** (filter_perimetersearch): |br|
+  filtert nach einer Adresse/Geokoordinaten und einem Umkreis
+* **Register** (filter_register): |br|
+  filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben
 
 Ablauf
 ------
