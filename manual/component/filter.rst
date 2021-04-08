@@ -59,9 +59,9 @@ Typen von Filterregeln
 * **Ja / Nein** (filter_checkbox): |br|
   Ja/Nein-Auswahl z.B. als Radio-Buttons
 * **Wert von/bis für ein Feld** (filter_fromto): |br|
-  von/bis-Auswahl für Werte
+  von/bis-Auswahl für Werte eines Attributwerts
 * **Wert von/bis für ein Datumsfeld** (filter_fromto): |br|
-  von/bis-Auswahl für Datum
+  von/bis-Auswahl für Datum eines Attributwerts
 * **Wert von/bis für zwei Felder** (filter_range): |br|
   zwei Felder mit Werten
 * **Wert von/bis für zwe Datumsfelder** (filter_range): |br|
@@ -73,7 +73,7 @@ Typen von Filterregeln
 * **Textfilter** (filter_text): |br|
   filtert nach einer Texteingabe
 * **Umkreissuche** (filter_perimetersearch): |br|
-  filtert nach einer Adresse/Geokoordinaten und einem Umkreis
+  filtert nach einer Adresse/Geokoordinaten und einem Umkreis bezogen auf Lat/Long-Werte in den Datensätzen
 * **Register** (filter_register): |br|
   filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben
 
