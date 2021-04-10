@@ -121,6 +121,7 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
 * Attribute Checkbox: die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert, bei translated Checkbox
   kann je Sprache ein eigenes Icon-Set ausgewählt werden; sind die Checkboxen `readonly`, werden diese in der Listen-
   Ansicht dargestellt, haben aber keine Togglefunktion
+* das Autosubmit bei FE-Filter ist nun in Vanilla Script geschrieben und sind somit unabhängig von Mootools oder jQuery
 
 .. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
