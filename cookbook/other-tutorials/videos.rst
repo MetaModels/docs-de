@@ -5,8 +5,8 @@ Videos und Podcasts zu MetaModels
 
 Videoreihe von Almut Müller:
 
-* #00 `Installation Composer <https://www.youtube.com/watch?v=LapSc5pRDWg>`_
-* #01 `Das erste MetaModels <https://www.youtube.com/watch?v=qMXZfVk-ass>`_
+* #00 `Installation Composer <https://www.youtube.com/watch?v=LapSc5pRDWg>`_ (2017)
+* #01 `Das erste MetaModels <https://www.youtube.com/watch?v=qMXZfVk-ass>`_ (2017)
 
 Verschiedene Videos:
 
