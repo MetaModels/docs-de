@@ -123,6 +123,7 @@ Weitere Features von MM 2.2 (wird laufend ergänzt):
   Ansicht dargestellt, haben aber keine Togglefunktion
 * das Autosubmit bei FE-Filter ist nun in Vanilla Script geschrieben und sind somit unabhängig von Mootools oder jQuery
 * Attribut Datei arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
+* Attribut translated Checkboxen unterstützt nun die Option "Inverse", die das Anzeigeverhalten umddreht 
 
 .. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
