@@ -19,18 +19,23 @@ Allgemein und Core
   zurücksetzen statt der "Gelben Pfeile" eingebaut
 * Im Bereich der übersetzten MetaModels wurde etliches an Code refactured - so ist z.B. ein neues Interface
   ITranslatedMetaModel hinzu gekommen für eine einfachere und saubere Schnittstelle und Ansprache der Daten.
-Für den "MM-Enduser" ändert sich zwar erstmal nichts Sichtbares, aber es vereinfacht und sichert die Arbeit/Entwicklung der Mehrsprachigkeit bei MM.
+  Für den "MM-Enduser" ändert sich zwar erstmal nichts Sichtbares, aber es vereinfacht und sichert die
+  Arbeit/Entwicklung der Mehrsprachigkeit bei MM.
 * Überarbeitung aller Migrationen für Unterstützung `strict mode` nun `case sensitive` für Spaltennamen
 * Entfernung der nicht mehr von Contao unterstützten xhtml-Templatedateien; in der Migration kommt ein Hinweis,
   wenn alte von Contao nicht mehr unterstützte xhtml-Templatedateien von MM gefunden werden - automatisch können
   diese leider nicht angepasst werden.
+* In Liste der Attributen Suche und Filterung nach Name bzw. Typ
+* In Einstellung Eingabemaske (fehlerhafte) DCA-Popups entfernt - dafür Helper-Popup ("Verkehrszeichen")
+* Unterstützung des Cachings (ESI-Tags)
+* Verbesserte Anzeige bei Auswahl von Attributen - nun im Schema 'Attribut-Name [Typ, "Spaltenname"]'
 
 
 Attribute
 ---------
 * Alias und Übersetzter Alias
-  * Slug-Generator
-  * Option zum Verhindern des "id-"-Präfix
+  * Slug-Generator für Sonderzeichen
+  * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Checkbox
   * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
   * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
@@ -44,8 +49,8 @@ Attribute
   * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
   * Checkbox zum Deaktivieren der manuellen Sortierung
 * Übersetzter Alias
-  * Slug-Generator
-  * Option zum Verhindern des "id-"-Präfix
+  * Slug-Generator für Sonderzeichen
+  * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Übersetzte Checkbox
   * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
   * Je Sprache ein eigenes Icon-Set ausgewählt werden
@@ -75,8 +80,11 @@ Filter
   * Option, wenn die Filterregel ein FE-Widget ausgeben soll (bis MM 2.0 über Option "Statischer Parameter" und
     Option "GET-Parameter" einzustellen - Umstellung der Einstellung bitte manuell durchführen)
 * Einzelauswahl [select]
+  * Attributstypen Alias und Übersetzter Alias möglich
   * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 * Ja / Nein
+  * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die jeweilige Übersetzung)
+  * Attributstype Übersetzte Checkbox möglich
   * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 * Mehrfachauswahl [Tags]
   * Attributstypen Alias und Übersetzter Alias möglich
@@ -97,11 +105,13 @@ Filter
 
 Frontend-Editing (FEE)
 ______________________
+* Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
 * Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
   Datensätzen im FEE
 * Unterstützung des MCW im FEE z.B. für Attribut Text-Tabelle (Vanilla Script)
+* Unterstützung Min/Max bei Attribut Text-Tabelle
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden können
 
