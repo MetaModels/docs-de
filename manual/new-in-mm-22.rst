@@ -14,7 +14,7 @@ Allgemein und Core
 
 * kompatibel zum `strict mode` von MySQL und MariaDB
 * verschiedene Optimierungen für eine schnellere Anzeige von Daten
-* Backend von MM "aufgeräumt" und typische Einstellungen als default gesetzt
+* Backend von MM "aufgeräumt" und typische Einstellungen als Default gesetzt
 * im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons aus Contao für Filterung und Filter
   zurücksetzen statt der "Gelben Pfeile" eingebaut
 * Im Bereich der übersetzten MetaModels wurde etliches an Code refactured - so ist z.B. ein neues Interface
@@ -33,7 +33,7 @@ Allgemein und Core
 
 Attribute
 ---------
-* Alias und Übersetzter Alias
+* Alias
     * Slug-Generator für Sonderzeichen
     * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Checkbox
@@ -77,16 +77,19 @@ Filter
       diese leider nicht angepasst werden.
 * Einfache Abfrage
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Option, wenn die Filterregel ein FE-Widget ausgeben soll (bis MM 2.0 über Option "Statischer Parameter" und
       Option "GET-Parameter" einzustellen - Umstellung der Einstellung bitte manuell durchführen)
 * Einzelauswahl [select]
     * Attributstypen Alias und Übersetzter Alias möglich
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Ja / Nein
     * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die
       jeweilige Übersetzung)
     * Attributstype Übersetzte Checkbox möglich
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Mehrfachauswahl [Tags]
     * Attributstypen Alias und Übersetzter Alias möglich
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
@@ -95,24 +98,27 @@ Filter
     * Korrekte Ausgabe der active-CSS-Klassen
     * Optional kann nach mehreren Buchstaben gefiltert werden
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Umkreissuche (Perimeterseach)
     * Neuer Lookup-Services Service "Koordinaten" hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet
       und ein Button "Eigener Standort" eingebaut werden
 * Wert von/bis für ein Feld
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Wert von/bis für zwei Felder
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 
 
 Frontend-Editing (FEE)
 ______________________
 * Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
 * Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
-* Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
+* Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und "Nicht speichern"
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
   Datensätzen im FEE
-* Unterstützung des MCW im FEE z.B. für Attribut Text-Tabelle (Vanilla Script)
-* Unterstützung Min/Max bei Attribut Text-Tabelle
+* Unterstützung des MCW im FEE mit (Vanilla Script) z.B. für Attribut Text-Tabelle
+* Unterstützung Min/Max bei Attribut Text-Tabelle im FE
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden können
 
