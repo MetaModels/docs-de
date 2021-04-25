@@ -34,73 +34,74 @@ Allgemein und Core
 Attribute
 ---------
 * Alias und Übersetzter Alias
-  * Slug-Generator für Sonderzeichen
-  * Option zum Verhindern des "id-"-Präfix für Zahlen
+    * Slug-Generator für Sonderzeichen
+    * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Checkbox
-  * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
-  * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
+    * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
+    * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
 * Datei
-  * Unterstützung manuelle Dateisortierung
-  * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
+    * Unterstützung manuelle Dateisortierung
+    * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
 * Rating ("Sternchenbewertung")
-  * Umstellung von Mootools auf Vanilla Script
-  * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
+    * Umstellung von Mootools auf Vanilla Script somit unabhängig von Mootools
+    * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
 * Text-Tabelle
-  * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
-  * Checkbox zum Deaktivieren der manuellen Sortierung
+    * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
+    * Checkbox zum Deaktivieren der manuellen Sortierung
 * Übersetzter Alias
-  * Slug-Generator für Sonderzeichen
-  * Option zum Verhindern des "id-"-Präfix für Zahlen
+    * Slug-Generator für Sonderzeichen
+    * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Übersetzte Checkbox
-  * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
-  * Je Sprache ein eigenes Icon-Set ausgewählt werden
-  * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
-  * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
-    bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
-    Achtung! die Icons in der Listenansicht im Backend wechseln auch mit.
+    * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
+    * Je Sprache ein eigenes Icon-Set ausgewählt werden
+    * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
+    * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
+      bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
+      Achtung! die Icons in der Listenansicht im Backend wechseln auch mit.
 * Übersetzte Datei
-  * Unterstützung manuelle Dateisortierung
-  * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
+    * Unterstützung manuelle Dateisortierung
+    * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
 * Übersetzte Text-Tabelle
-  * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
-  * Checkbox zum Deaktivieren der manuellen Sortierung
+    * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
+    * Checkbox zum Deaktivieren der manuellen Sortierung
 
 
 Filter
 ------
 * CE/Modul FE-Filter und Filterreset (clear all)
-  * Das Autosubmit bei CE/Modul FE-Filter ist nun in Vanilla Script geschrieben somit unabhängig von Mootools oder jQuery
-  * das CE bzw. Modul Filterreset hat nun ein eigenes Template (mm_clearall_default.html5) welches dann beim Erstellen
-    auch gleich ausgewählt ist. Bisher musste man beim Erstellen das Template von "mm_filter_default" auf
-    "mm_filter_clearall" wechseln. Bei der Migration erfolgt eine eine Ausgabe, sofern noch ein eigenes Template
-    "mm_filter_clearall*.*" gefunden werden mit der Aufforderung das umzustellen - automatisch können
-    diese leider nicht angepasst werden.
+    * Das Autosubmit bei CE/Modul FE-Filter ist nun in Vanilla Script geschrieben somit unabhängig von Mootools oder jQuery
+    * das CE bzw. Modul Filterreset hat nun ein eigenes Template (mm_clearall_default.html5) welches dann beim Erstellen
+      auch gleich ausgewählt ist. Bisher musste man beim Erstellen das Template von "mm_filter_default" auf
+      "mm_filter_clearall" wechseln. Bei der Migration erfolgt eine eine Ausgabe, sofern noch ein eigenes Template
+      "mm_filter_clearall*.*" gefunden werden mit der Aufforderung das umzustellen - automatisch können
+      diese leider nicht angepasst werden.
 * Einfache Abfrage
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
-  * Option, wenn die Filterregel ein FE-Widget ausgeben soll (bis MM 2.0 über Option "Statischer Parameter" und
-    Option "GET-Parameter" einzustellen - Umstellung der Einstellung bitte manuell durchführen)
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, wenn die Filterregel ein FE-Widget ausgeben soll (bis MM 2.0 über Option "Statischer Parameter" und
+      Option "GET-Parameter" einzustellen - Umstellung der Einstellung bitte manuell durchführen)
 * Einzelauswahl [select]
-  * Attributstypen Alias und Übersetzter Alias möglich
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Attributstypen Alias und Übersetzter Alias möglich
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 * Ja / Nein
-  * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die jeweilige Übersetzung)
-  * Attributstype Übersetzte Checkbox möglich
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die
+      jeweilige Übersetzung)
+    * Attributstype Übersetzte Checkbox möglich
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 * Mehrfachauswahl [Tags]
-  * Attributstypen Alias und Übersetzter Alias möglich
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
-  * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
+    * Attributstypen Alias und Übersetzter Alias möglich
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Register (Filter für Anfangsbuchstaben)
-  * Korrekte Ausgabe der active-CSS-Klassen
-  * Optional kann nach mehreren Buchstaben gefiltert werden
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Korrekte Ausgabe der active-CSS-Klassen
+    * Optional kann nach mehreren Buchstaben gefiltert werden
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 * Umkreissuche (Perimeterseach)
-  * Neuer Lookup-Services Service "Koordinaten" hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet und ein Button "Eigener Standort" eingebaut
-    werden
+    * Neuer Lookup-Services Service "Koordinaten" hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet
+      und ein Button "Eigener Standort" eingebaut werden
 * Wert von/bis für ein Feld
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 * Wert von/bis für zwei Felder
-  * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
 
 
 Frontend-Editing (FEE)
