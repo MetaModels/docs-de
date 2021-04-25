@@ -87,43 +87,8 @@ Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repos
 man über unser "early adopter Programm" - mehr dazu unter Fundrasing auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
-Weitere Features von MM 2.2 (wird laufend ergänzt):
-
-* kompatibel zum `strict mode` von MySQL und MariaDB
-* verschiedene Optimierungen für eine schnellere Anzeige von Daten
-* Backend von MM "aufgeräumt" und typische Einstellungen als default gesetzt
-* manuelle Dateisortierung (inkl. übersetzte Dateien)
-* Slug-Generator für Alias und übersetzter Alias sowie Option zum Verhindern des "id-"-Präfix
-* Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
-* Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und nicht speichern
-* Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von Datensätzen
-  im FEE
-* Unterstützung des MCW im FEE z.B. für Attribut Tabletext (Vanilla Script)
-* Attribut Rating ("Sternchenbewertung") Umstellung von Mootols auf Vanilla Script; Sortierung im BE unter
-  Berücksichtigung der Anzahl der Bewertungen
-* Filter Register (Filter für Anfangsbuchstaben) mit korrekter Ausgabe der active-CSS-Klassen; Optional mehrere
-  Buchstaben wählbar
-* Filter Mehrfachauswahl [Tags] kann nun so eingestellt werden, dass die Checkboxen "Nicht filtern" und "Alles filtern"
-  wahlweise nicht erscheinen.
-* Attribute Text-Tabelle und trans. Text-Tabelle haben Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
-  sowie eine Checkbox zum Deaktivieren der manuellen Sortierung
-* Filter Tags kann die Anzeige der Checkbox "Alle" über eine Option bei den Einstellungen der Filterregel gesteuert
-  werden
-* Umkreissuche/Perimeterseach ist bei den Lookup-Services, die eine Adressauflösung machen, der Service "Koordinaten"
-  hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet und ein Button "Eigener Standort" eingebaut
-  werden
-* Im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons aus Contao für Filterung und Filter
-  zurücksetzen statt der "Gelben Pfeile" eingebaut  
-* Bei den Einstellungen der Filterregeln kann nun eingestellt werden, dass das Label des Filterwidgets nicht ausgegeben
-  wird
-* Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
-  besser per CSS arrangiert/gestyled werden können
-* Attribute Checkbox: die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert, bei translated Checkbox
-  kann je Sprache ein eigenes Icon-Set ausgewählt werden; sind die Checkboxen `readonly`, werden diese in der Listen-
-  Ansicht dargestellt, haben aber keine Togglefunktion
-* das Autosubmit bei FE-Filter ist nun in Vanilla Script geschrieben und sind somit unabhängig von Mootools oder jQuery
-* Attribut Datei arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
-* Attribut translated Checkboxen unterstützt nun die Option "Inverse", die das Anzeigeverhalten umddreht 
+**Weitere Features von MM 2.2:**
+Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt.
 
 .. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung

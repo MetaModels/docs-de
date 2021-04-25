@@ -82,7 +82,7 @@ Hinweise:
 
 
 HTML-Sonderzeichen usw.:
-per "Ersetungstoken" z.B. kostet 2.000 |nbsp| EUR
+per "Ersetzungstoken" z.B. kostet 2.000 |nbsp| EUR
 
 .. |nbsp| unicode:: 0xA0 
    :trim:
