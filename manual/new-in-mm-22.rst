@@ -29,7 +29,7 @@ Allgemein und Core
 * In Einstellung Eingabemaske (fehlerhafte) DCA-Popups entfernt - dafür Helper-Popup ("Verkehrszeichen")
 * Unterstützung des Cachings (ESI-Tags)
 * Verbesserte Anzeige bei Auswahl von Attributen - nun im Schema 'Attribut-Name [Typ, "Spaltenname"]'
-* neues Template für FE-Ausgabe für Debuganzeige: metamodel_prerendered_debug.html5
+* neues FE-Ausgabetemplate für Debuganzeige: metamodel_prerendered_debug.html5
 
 
 Attribute
