@@ -81,10 +81,12 @@ Filter
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Option, wenn die Filterregel ein FE-Widget ausgeben soll (bis MM 2.0 über Option "Statischer Parameter" und
       Option "GET-Parameter" einzustellen - Umstellung der Einstellung bitte manuell durchführen)
+    * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
 * Einzelauswahl [select]
     * Attributstypen Alias und Übersetzter Alias möglich
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
+    * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
 * Ja / Nein
     * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die
       jeweilige Übersetzung)
@@ -95,6 +97,7 @@ Filter
     * Attributstypen Alias und Übersetzter Alias möglich
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
+    * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
 * Register (Filter für Anfangsbuchstaben)
     * Korrekte Ausgabe der active-CSS-Klassen
     * Optional kann nach mehreren Buchstaben gefiltert werden
