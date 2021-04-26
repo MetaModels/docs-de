@@ -29,6 +29,7 @@ Allgemein und Core
 * In Einstellung Eingabemaske (fehlerhafte) DCA-Popups entfernt - dafür Helper-Popup ("Verkehrszeichen")
 * Unterstützung des Cachings (ESI-Tags)
 * Verbesserte Anzeige bei Auswahl von Attributen - nun im Schema 'Attribut-Name [Typ, "Spaltenname"]'
+* neues Template für FE-Ausgabe für Debuganzeige: metamodel_prerendered_debug.html5
 
 
 Attribute
@@ -53,7 +54,7 @@ Attribute
     * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Übersetzte Checkbox
     * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
-    * Je Sprache ein eigenes Icon-Set ausgewählt werden
+    * Je Sprache kann ein eigenes Icon-Set ausgewählt werden
     * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
     * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
       bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
