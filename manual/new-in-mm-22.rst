@@ -84,24 +84,24 @@ Filter
     * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
 * Einzelauswahl [select]
     * Attributstypen Alias und Übersetzter Alias möglich
-    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
 * Ja / Nein
     * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die
       jeweilige Übersetzung)
     * Attributstype Übersetzte Checkbox möglich
-    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Mehrfachauswahl [Tags]
     * Attributstypen Alias und Übersetzter Alias möglich
-    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
 * Register (Filter für Anfangsbuchstaben)
     * Korrekte Ausgabe der active-CSS-Klassen
     * Optional kann nach mehreren Buchstaben gefiltert werden
-    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Umkreissuche (Perimeterseach)
     * Neuer Lookup-Services Service "Koordinaten" hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet
@@ -110,18 +110,19 @@ Filter
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Wert von/bis für zwei Felder
-    * Option, dass das Label des Filterwidgets nicht ausgegeben wird
+    * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 
 
 Frontend-Editing (FEE)
 ______________________
 * Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
-* Frontend-Editing mit Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
+* UnterstützungDateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und "Nicht speichern"
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
   Datensätzen im FEE
-* Unterstützung des MCW im FEE mit (Vanilla Script) z.B. für Attribut Text-Tabelle
+* Unterstützung des MCW im FEE mit (Vanilla Script) z.B. für Attribut Text-Tabelle zum Vervielfältigen und Sortieren
+  der Zeilen
 * Unterstützung Min/Max bei Attribut Text-Tabelle im FE
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden können
