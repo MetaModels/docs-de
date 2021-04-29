@@ -106,12 +106,14 @@ Filter
 * Umkreissuche (Perimeterseach)
     * Neuer Lookup-Services Service "Koordinaten" hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet
       und ein Button "Eigener Standort" eingebaut werden
-* Wert von/bis für ein Feld
+* Wert von/bis für ein Feld (fromto)
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
-* Wert von/bis für zwei Felder
+    * Platzhalter für FE-Widget
+* Wert von/bis für zwei Felder (range)
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
+    * Platzhalter für FE-Widget
 
 
 Frontend-Editing (FEE)
