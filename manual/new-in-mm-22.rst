@@ -9,6 +9,10 @@ Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.2, die durc
 "early adopter Programm" ermöglicht wurden - mehr dazu unter Fundrasing auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
+In dem Issue auf `Github <https://github.com/MetaModels/core/issues/1424>`_ gibt es
+eine Auflistung der für MM 2.2 fertig gestellten Repositories, d. h. es gibt dort
+keine Tickets mehr, die auf MM 2.2 verweisen.
+
 Allgemein und Core
 ------------------
 
