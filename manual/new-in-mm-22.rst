@@ -50,7 +50,7 @@ Attribute
 * Datum
     * In den Einstellungen der Eingabemaske kann festgelegt werden, welcher Teil des Timestamps "auf Null" gesetzt
       werden soll, damit z. B. die Zeit ohne eine Tagesangabe bzw. ein Datum ohne Zeitergänzung gespeichert werden
-      soll - dass kann für eine korrekte Filterung nach Zeit oder Datum wichtig sein
+      soll - das kann für eine korrekte Filterung nach Zeit oder Datum wichtig sein
 * Rating ("Sternchenbewertung")
     * Umstellung von Mootools auf Vanilla Script somit unabhängig von Mootools
     * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
