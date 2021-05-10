@@ -114,6 +114,8 @@ Filter
 * Umkreissuche (Perimeterseach)
     * Neuer Lookup-Services Service "Koordinaten" hinzu gekommen. Damit kann direkt mit den Koordinaten gearbeitet
       und ein Button "Eigener Standort" eingebaut werden
+    * für die Bereichsauswahl (Range) die Möglichkeit hinzu gekommen einen Vorgabe als Standard zu setzen; also wenn
+      die Bereichsvorgaben z.B. 5, 10, 20 50 km sind, kann der Standard des Selects im FE auf 10 km gesetzt werden.
 * Wert von/bis für ein Feld (fromto)
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
