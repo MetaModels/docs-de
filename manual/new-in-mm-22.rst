@@ -124,6 +124,9 @@ Filter
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Platzhalter für FE-Widget
+    * es gibt nun fünf verschiedene Varianten wie der Filter bei dem Vergleich zwischen vorhandene Werten in der DB
+      und den eingegebenen Filterwerten reagieren soll; eine Beschreibung der Varianten kann über den 
+      |img_about| Hilfe-Assistenten (Popup) aufgerufen werden.
 
 
 Frontend-Editing (FEE)
@@ -145,6 +148,8 @@ ______________________
    und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzten Zuwendungen, sind
    das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
+
+.. |img_about| image:: /_img/icons/about.png
 
 .. |br| raw:: html
 
