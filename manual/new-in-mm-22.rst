@@ -51,6 +51,12 @@ Attribute
     * In den Einstellungen der Eingabemaske kann festgelegt werden, welcher Teil des Timestamps "auf Null" gesetzt
       werden soll, damit z. B. die Zeit ohne eine Tagesangabe bzw. ein Datum ohne Zeitergänzung gespeichert werden
       soll - das kann für eine korrekte Filterung nach Zeit oder Datum wichtig sein
+* Einzelauswahl [select]
+    * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
+      ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
+* Mehrfachauswahl [tags]
+    * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
+      ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
 * Rating ("Sternchenbewertung")
     * Umstellung von Mootools auf Vanilla Script somit unabhängig von Mootools
     * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
@@ -70,6 +76,7 @@ Attribute
 * Übersetzte Datei
     * Unterstützung manuelle Dateisortierung
     * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
+    * Option "Pflichtfeld" steht nun zur Verfügung
 * Übersetzte Text-Tabelle
     * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
     * Checkbox zum Deaktivieren der manuellen Sortierung
