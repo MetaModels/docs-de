@@ -18,6 +18,8 @@ bzw. Frontend-Modul mit
 * Verbindung zum MetaModel - siehe :ref:`ref_api_interf_mm_factory`
 * Abfrage eines MetaModels unter Berücksichtigung von Filterregeln 
   - siehe :ref:`ref_api_interf_mm_metamodel`
+* Abfragen und setzen der aktiven Sprache bei übersetzten MetaModels - siehe
+  :ref:`ref_api_interf_mm_translatedmetamodel`
 * Zugriff auf alle Items; ggf. Parsing der Items mit Angabe des Ausgabeformats
   (Text, HTML5) und der Render-Einstellung) - siehe :ref:`ref_api_inteface_items`
 * Zugriff auf ein Item bzw. Ausgabe (Raw, Text, HTML5) - siehe :ref:`ref_api_interf_mm_item`
