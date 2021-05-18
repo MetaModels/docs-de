@@ -302,9 +302,9 @@ Translated MetaModel Interface:
 .. note:: Das Feature steht ab MM 2.2 zur Verfügung.
 
 Mit dem Translated-MetaModel-Interface können die Sprachvorgaben eines übersetzten
-MetaModels abgefragt oder gesetzt werden.
+MetaModel abgefragt oder gesetzt werden.
 
-Bis zur Version MM 2.1 konnte aktuelle Sprache eines übersetzten MetaModels nur über
+Bis zur Version MM 2.1 konnte aktuelle Sprache eines übersetzten MetaModel nur über
 das (temporäre) Setzen von ``$GLOBALS['TL_LANGUAGE']`` erreicht werden. Mit dem Interface
 ist das Setzen der Sprache des MetaModel unabhängig von der Backendsprache von Contao
 möglich.
