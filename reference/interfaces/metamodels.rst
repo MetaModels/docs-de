@@ -292,6 +292,42 @@ löscht ein gegebenes Item
 gibt die Instanz der Render-Einstellungen des instanzierten MetaModel zurück
 
 
+.. _ref_api_interf_mm_translatedmetamodel:
+
+Translated MetaModel Interface:
+....................
+
+.. note:: Das Feature steht ab MM 2.2 zur Verfügung.
+
+Mit dem Translated-MetaModel-Interface können die Sprachvorgaben eines übersetzten
+MetaModels abgefragt oder gesetzt werden.
+
+Bis zur Version MM 2.1 könnte aktuelle Sprache eines übersetzten MetaModels nur über
+das (temporäre) Setzen von ``$GLOBALS['TL_LANGUAGE']`` erreicht werden. Mit dem Interface
+ist das setzen der Sprache des MetaModel unabhängig von der Backendsprache von Contao möglich.
+
+Soll zum Beispiel bei einem übersetzten MetaModel ein Item in einer bestimmten Sprache gespeichert
+werden, kann die Sprache wie folgt gesetzt werden:
+
+``$objMetaModel->selectLanguage('de');``
+
+Ab MetaModels 2.2 müssen die folgenden Interfaces verwendet werden:
+
+**Interfaces:**
+
+``getLanguages()``  |br|
+ermittelt alle Sprachcodes, die in diesem MetaModel als für die Übersetzung verfügbar markiert wurden
+
+``getMainLanguage()``  |br|
+ermittelt den Sprachcode, der in diesem MetaModel als Fallback-Sprache markiert wurde
+
+``getLanguage()``  |br|
+ermittelt den aktuellen Sprachcode
+
+``selectLanguage($activeLanguage)``  |br|
+setzt die neue Sprache und gibt den vorherigen Sprachcode zurück
+
+
 .. _ref_api_inteface_items:
 
 Items Interface:
