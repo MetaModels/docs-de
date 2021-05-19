@@ -181,6 +181,9 @@ Buttons konfiguriert werden. Als Standard wird "Speichern" und "Speichern und ne
 Mit der Konfiguration kann sowohl die Beschriftung der Button als auch die Aktion geändert werden. So ist
 zum Beispiel "Speichern und zurück", "Speichern und neu" oder auch "Speichern" mit einer Weiterleitung
 auf eine "Danke-Seite" ähnlich wie beim Formulargenerator möglich.
+Die Änderung der Button-Beschriftung kann derzeit nicht direkt im Backend erfolgen. Dieser kann entweder leer bleiben oder mit MSC.'name' gefüllt werden. Die Übersetzung findet über einen Eintrag im entsprechenden Languagefile des MetaModels statt, z. B. contao/languages/de/mm_table.php.
+Ist der Eintrag leer so lautet dieser z. B.: $GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen';
+Ist er mit MSC.'name' definiert, so lautet dieser z. B.: $GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen';
 
 |img_fee-eigene-buttons|
 
