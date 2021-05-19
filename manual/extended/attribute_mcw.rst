@@ -33,8 +33,9 @@ Die Installation und Verwendung besteht aus den Punkten
 Anpassung der DCA-Konfigurationsdatei
 -------------------------------------
 
-Die DCA-Konfigurationsdatei `module-multicolumnwizard.php` muss an einer geeigneten
-Stelle in der Contao-Installation abgelegt werden. Das kann z.B. erfolgen in
+Die DCA-Konfigurationsdatei `config.php` muss an einer geeigneten
+Stelle in der Contao-Installation abgelegt oder eine bestehende Datei
+mit den Angeban ergänzt werden. Das kann z.B. erfolgen in
 
 * /app/Resources/contao/config (ab Contao 4.4)
 * /config/Resources/contao/config (ab Contao 4.9)
@@ -51,7 +52,7 @@ wie folgt aussehen:
    :linenos:
    
    <?php
-   // /config/Resources/contao/config/module-multicolumnwizard.php
+   // /config/Resources/contao/config/config.php
 
    $GLOBALS['TL_CONFIG']['metamodelsattribute_multi']['mm_my_table']['my_mcw'] = array(
       'minCount'     => 2,
@@ -84,6 +85,8 @@ wie folgt aussehen:
    );
 
 Hinweis: Die Bezeichnungen in "label" können auch als Sprach-Array eingebunden werden.
+
+Nach Anpassungen der Konfiguration den Cache leeren!
 
 Ansicht in der Eingabemaske:
 
