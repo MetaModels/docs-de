@@ -160,7 +160,7 @@ beeinflusst werden.
 Zunächst muss eine MetaModels-Instanz über die ID bzw. den Namen eines MetaModel erzeugt
 werden siehe :ref:`ref_api_interf_mm_factory`)
 
-``$objMetaModel = \MetaModels\IFactory::getMetaModel($strMetaModelName);``
+``$metaModel = \MetaModels\IFactory::getMetaModel($strMetaModelName);``
 
 bzw. inklusive des Service-Containers:
 
@@ -168,16 +168,18 @@ bzw. inklusive des Service-Containers:
    :linenos:
    
    <?php
+   $metaModelId = 42;
+   
    /** @var $container */
-   $factory = $this->getContainer()->get('metamodels.factory');
-   $strMetaModelName = $factory->translateIdToMetaModelName($intMetaModelId);
-   $objMetaModel = $factory->getMetaModel($strMetaModelName);
+   $factory       = $this->getContainer()->get('metamodels.factory');
+   $metaModelName = $factory->translateIdToMetaModelName($metaModelId);
+   $metaModel     = $factory->getMetaModel($metaModelName);
 
 
 Anschließend kann eine Eigenschaft abgefragt oder gesetzt werden - z.B. die Abfrage
 aller vorhandenen Attribute:
 
-``$arrAttributes = $objMetaModel->getAttributes();``
+``$attributes = $metaModel->getAttributes();``
 
 Aktuelle Informationen unter: `IMetaModel <https://github.com/MetaModels/core/blob/master/src/IMetaModel.php>`_
 
@@ -224,31 +226,31 @@ gibt ein Array mit allen Attributen des instanzierten MetaModel zurück
 gibt ein Array mit den Attributen des instanzierten MetaModel zurück
 welche nicht als Varianten definiert sind
 
-``getAttribute($strAttributeName)``  |br|
+``getAttribute($attributeName)``  |br|
 gibt die Instanz des Attributes mit dem gegebenen Attributnamen zurück
 
-``getAttributeById($intId)``  |br|
+``getAttributeById($id)``  |br|
 gibt die Instanz des Attributes mit der gegebenen Attribut-ID zurück
 
-``findById($intId, $arrAttrOnly = array())``  |br|
+``findById($id, $attrOnly = [])``  |br|
 gibt das Item mit der gegebenen ID zurück; optional kann ein Array mit 
 Attributnamen angegben werden, deren Werte zurück zu gegeben werden sollen
 
 ``getEmptyFilter()``  |br|
 erzeugt ein "leeres" Filterobjekt ohne Filterregeln
 
-``prepareFilter($intFilterSettings, $arrFilterUrl)``  |br|
+``prepareFilter($filterSettings, $filterUrl)``  |br|
 erzeugt ein Filterobjekt aus einer gegebenen Filter-ID und einem optionalen
 Array mit Filterparametern z.B. für die Übernahme von GET-Werten aus einer
 URL
 
 ``findByFilter(
-$objFilter,
-$strSortBy = '',
-$intOffset = 0,
-$intLimit = 0,
-$strSortOrder = 'ASC',
-$arrAttrOnly = array()
+$filter,
+$sortBy = '',
+$offset = 0,
+$limit = 0,
+$sortOrder = 'ASC',
+$attrOnly = []
 )``  |br|
 gibt die Items zurück, welche mit einem gegebenen Filter in dem instanzierten
 MetaModel ermittelt werden - neben den Parametern der Sortierung, Offset, Limit
@@ -256,41 +258,41 @@ und Sortierrichtung, kann ein Array mit Attributnamen angegeben werden, deren
 Werte zurück zu gegeben werden sollen
 
 ``getIdsFromFilter(
-$objFilter, 
-$strSortBy = '',
-$intOffset = 0,
-$intLimit = 0,
-$strSortOrder = 'ASC'
+$filter, 
+$sortBy = '',
+$offset = 0,
+$limit = 0,
+$sortOrder = 'ASC'
 )``  |br|
 gibt die IDs der Items zurück, welche mit einem gegebenen Filter in dem instanzierten
 MetaModel ermittelt werden - die Parametern der Sortierung, Offset, Limit
 und Sortierrichtung können angegeben werden
 
-``getCount($objFilter)``  |br|
+``getCount($filter)``  |br|
 gibt die Anzahl der Items zurück, die nach einem gegebenen Filter ermittelt werden
 
-``findVariantBase($objFilter)``  |br|
+``findVariantBase($filter)``  |br|
 gibt alle Items einer Varianten-Basis zürück, die nach einem gegebenen Filter ermittelt werden
 
-``findVariants($arrIds, $objFilter)``  |br|
+``findVariants($ids, $filter)``  |br|
 gibt alle Varianten-Items eines Arrays mit IDs und einem gegebenen Filter zurück
 
-``findVariantsWithBase($arrIds, $objFilter)``  |br|
+``findVariantsWithBase($ids, $filter)``  |br|
 gibt alle Varianten-Items eines Arrays mit IDs und einem gegebenen Filter zurück;
 die Abfrage unterscheidet nicht zwischen Items einer Varianten-Basis und -Items
 
-``getAttributeOptions($strAttribute, $objFilter = null)``  |br|
+``getAttributeOptions($attribute, $filter = null)``  |br|
 gibt alle Optionen eines gegebenen Attributs zurück; Optional kann
 ein Filter angegeben werden
 
-``saveItem($objItem)``  |br|
+``saveItem($item)``  |br|
 speichert ein gegebenes Item bzw. es wird ein neues Item erzeugt, wenn keine ID mit
 übergeben wurde
 
-``delete($objItem)``  |br|
+``delete($item)``  |br|
 löscht ein gegebenes Item
 
-``getView($intViewId = 0)``  |br|
+``getView($viewId = 0)``  |br|
 gibt die Instanz der Render-Einstellungen des instanzierten MetaModel zurück
 
 
@@ -313,7 +315,20 @@ Soll zum Beispiel bei einem übersetzten MetaModel ein Item in einer bestimmten 
 gespeichert werden, kann die Sprache über den Sprachcode (de, en, fr, ..) wie folgt
 gesetzt werden:
 
-``$objMetaModel->selectLanguage('de');``
+``$metaModel->selectLanguage('de');``
+
+Eine Typprüfung kann wie folgt implementiert werden:
+
+.. code-block:: php
+   :linenos:
+   
+   <?php
+
+   use MetaModels\ITranslatedMetaModel;
+   
+   if ($metaModel instanceof ITranslatedMetaModel) {
+       // make anything...
+   }
 
 Ab MetaModels 2.2 müssen die folgenden Interfaces verwendet werden:
 
@@ -342,12 +357,12 @@ Mit dem Items-Interface können Eigenschaften der Items abgefragt werden.
 Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
 erzeugt und anschließend z.B. über einen Filter eine Liste von Items ermittelt werden.
 
-``$objItems = $objMetaModel->findByFilter($objFilter);``
+``$items = $objMetaModel->findByFilter($objFilter);``
 
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 zur Anzahl aller vorhandenen Items:
 
-``$intAmountItems = $objItems->getCount();``
+``$amountItems = $items->getCount();``
 
 Aktuelle Informationen unter: `IItems <https://github.com/MetaModels/core/blob/master/src/IItems.php>`_
 
@@ -374,15 +389,15 @@ resettet das aktuelle Ergebnis
 ``getClass()``  |br|
 gibt die CSS-Klasse des aktuellen Items zurück (first, last, even, odd)
 
-``parseValue($strOutputFormat = 'text', $objSettings = null)``  |br|
+``parseValue($outputFormat = 'text', $settings = null)``  |br|
 parst das aktuelle Item und gibt das Ergebnis als Array der Attribute zurück;
-für die Ausgaben in XHTML/HTML5 müssen die Render-Einstellungen als
-$objSettings übergeben werden z.B. $objMetaModel->getView(3)
+für die Ausgaben in HTML5 müssen die Render-Einstellungen als
+$objSettings übergeben werden z.B. $metaModel->getView(3)
 
-``parseAll($strOutputFormat = 'text', $objSettings = null)``  |br|
+``parseAll($outputFormat = 'text', $settings = null)``  |br|
 parst alle Items und gibt das Ergebnis als Array der Items mit dessen Attributen zurück;
-für die Ausgaben in XHTML/HTML5 müssen die Render-Einstellungen als
-$objSettings übergeben werden z.B. $objMetaModel->getView(3)
+für die Ausgaben in HTML5 müssen die Render-Einstellungen als
+$objSettings übergeben werden z.B. $metaModel->getView(3)
 
 
 .. _ref_api_interf_mm_item:
@@ -396,16 +411,16 @@ Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaMod
 erzeugt und anschließend z.B. über einen Filter (ggf. auch leerer Filter)eine
 Liste von Items ermittelt werden.
 
-``$objItems = $objMetaModel->findByFilter($objFilter);``  |br|
+``$items = $metaModel->findByFilter($filter);``  |br|
 
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
 
-``$valAttribute = $objItems->getItem()->get($strAttributeName);``  |br|
+``$attribute = $items->getItem()->get($attributeName);``  |br|
 
 Ein neues Item wird wie folgt erzeugt:
 
-``$objItem = new \MetaModels\Item($objMetaModel, array());``
+``$item = new \MetaModels\Item($ometaModel, []);``
 
 In dem übergebenen Array können "Key-Value-Paare" übergeben werden - dies
 ist aber nur bei einfachen Item-Typen wie Text sinnvoll.
@@ -414,16 +429,16 @@ Aktuelle Informationen unter: `IItem <https://github.com/MetaModels/core/blob/ma
 
 **Interfaces:**
 
-``get($strAttributeName)``  |br|
+``get($attributeName)``  |br|
 gibt den Wert eines Attributes bei gegebenem Attributnamen zurück
 
-``set($strAttributeName, $varValue)``  |br|
+``set($attributeName, $value)``  |br|
 setzt den Wert eines Attributes bei gegebenem Attributnamen
 
 ``getMetaModel()``  |br|
 gibt die Instanz des Items zurück
 
-``getAttribute($strAttributeName)``  |br|
+``getAttribute($attributeName)``  |br|
 gibt die Instanz eines Attributes bei gegebenem Attributnamen zurück
 
 ``isVariant()``  |br|
@@ -432,7 +447,7 @@ ermittelt, ob das Item eine Variante eines anderen Items ist
 ``isVariantBase()``  |br|
 ermittelt, ob das Item eine Variantenbasis ist
 
-``getVariants($objFilter)``  |br|
+``getVariants($filter)``  |br|
 gibt ein Array mit den Varianten des Items zurück oder null, wenn das Item
 keine Varianten beherrscht
 
@@ -440,11 +455,11 @@ keine Varianten beherrscht
 gibt das Item der Variantenbasis zurück; für ein Item ohne Varianten ist
 die Variantenbasis das Item selbst
 
-``parseValue($strOutputFormat = 'text', $objSettings = null)``  |br|
+``parseValue($outputFormat = 'text', $settings = null)``  |br|
 rendert das Item im vorgegebenen Format; als Rohdaten [raw]
 werden die Daten immer mit ausgegeben inkl. Attribute referenzierter MetaModel
 
-``parseAttribute($strAttributeName, $strOutputFormat = 'text', $objSettings = null)``  |br|
+``parseAttribute($attributeName, $outputFormat = 'text', $settings = null)``  |br|
 rendert ein einzelnes Attribut des Item im vorgegebenen Format; als Rohdaten [raw]
 werden die Daten immer mit ausgegeben inkl. Attribute referenzierter MetaModel
 
