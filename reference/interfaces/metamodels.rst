@@ -122,10 +122,10 @@ Aktuelle Informationen unter: `IFactory <https://github.com/MetaModels/core/blob
 
 **Interfaces:**
 
-``getMetaModel($strMetaModelName);`` |br|
+``getMetaModel($modelName);`` |br|
 erstellt eine MetaModel-Instanz mit dem übergebenen Namen
 
-``translateIdToMetaModelName($intMetaModelId);`` |br|
+``translateIdToMetaModelName($modelId);`` |br|
 gibt den Namen zu einer MetaModel-ID zurück
   
 ``collectNames();`` |br|
@@ -138,11 +138,11 @@ gibt den Service-Container zurück
    wurden in der Version 2.0 entfernt
 
 ``byTableName($strTableName);`` |br|   
-Methode ``getMetaModel($strMetaModelName);`` verwenden
+Methode ``getMetaModel($modelName);`` verwenden
 
 ``byId($intMetaModelId);`` |br|
-Methode ``getMetaModel($strMetaModelName);`` mit 
-``translateIdToMetaModelName($intMetaModelId);`` verwenden
+Methode ``getMetaModel($modelName);`` mit 
+``translateIdToMetaModelName($modelId);`` verwenden
 
 ``getAllTables();`` |br|
 Methode ``collectNames();`` verwenden
@@ -160,7 +160,7 @@ beeinflusst werden.
 Zunächst muss eine MetaModels-Instanz über die ID bzw. den Namen eines MetaModel erzeugt
 werden siehe :ref:`ref_api_interf_mm_factory`)
 
-``$metaModel = \MetaModels\IFactory::getMetaModel($strMetaModelName);``
+``$model = \MetaModels\IFactory::getMetaModel($modelName);``
 
 bzw. inklusive des Service-Containers:
 
@@ -171,9 +171,9 @@ bzw. inklusive des Service-Containers:
    $metaModelId = 42;
    
    /** @var $container */
-   $factory       = $this->getContainer()->get('metamodels.factory');
-   $metaModelName = $factory->translateIdToMetaModelName($metaModelId);
-   $metaModel     = $factory->getMetaModel($metaModelName);
+   $factory   = $this->getContainer()->get('metamodels.factory');
+   $modelName = $factory->translateIdToMetaModelName($modelId);
+   $model     = $factory->getMetaModel($modelName);
 
 
 Anschließend kann eine Eigenschaft abgefragt oder gesetzt werden - z.B. die Abfrage
@@ -212,10 +212,10 @@ gibt den Sprachcode der Fallbacksprache des instanzierten MetaModel zurück
 ``getActiveLanguage()``  |br|
 gibt den Sprachcode der aktiven Sprache des instanzierten MetaModel zurück
 
-``addAttribute(IAttribute $objAttribute)``  |br|
+``addAttribute(IAttribute $attribute)``  |br|
 fügt ein Attribut in die interne Liste der Attribute ein
 
-``hasAttribute($strAttributeName)``  |br|
+``hasAttribute($attributeName)``  |br|
 prüft, ob ein Attribut mit dem gegebenen Namen in der internen Liste der
 Attribute vorhanden ist
 
@@ -315,7 +315,7 @@ Soll zum Beispiel bei einem übersetzten MetaModel ein Item in einer bestimmten 
 gespeichert werden, kann die Sprache über den Sprachcode (de, en, fr, ..) wie folgt
 gesetzt werden:
 
-``$metaModel->selectLanguage('de');``
+``$model->selectLanguage('de');``
 
 Eine Typprüfung kann wie folgt implementiert werden:
 
@@ -326,7 +326,7 @@ Eine Typprüfung kann wie folgt implementiert werden:
 
    use MetaModels\ITranslatedMetaModel;
    
-   if ($metaModel instanceof ITranslatedMetaModel) {
+   if ($model instanceof ITranslatedMetaModel) {
        // make anything...
    }
 
@@ -357,7 +357,7 @@ Mit dem Items-Interface können Eigenschaften der Items abgefragt werden.
 Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaModel
 erzeugt und anschließend z.B. über einen Filter eine Liste von Items ermittelt werden.
 
-``$items = $objMetaModel->findByFilter($objFilter);``
+``$items = $model->findByFilter($filter);``
 
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 zur Anzahl aller vorhandenen Items:
@@ -411,7 +411,7 @@ Zunächst muss eine MetaModels-Instanz über die ID oder dem Namen eines MetaMod
 erzeugt und anschließend z.B. über einen Filter (ggf. auch leerer Filter)eine
 Liste von Items ermittelt werden.
 
-``$items = $metaModel->findByFilter($filter);``  |br|
+``$items = $model->findByFilter($filter);``  |br|
 
 Anschließend kann eine Eigenschaft abgefragt werden - z.B. die Abfrage
 des Wertes eines Attributs:
@@ -420,7 +420,7 @@ des Wertes eines Attributs:
 
 Ein neues Item wird wie folgt erzeugt:
 
-``$item = new \MetaModels\Item($ometaModel, []);``
+``$item = new \MetaModels\Item($model, []);``
 
 In dem übergebenen Array können "Key-Value-Paare" übergeben werden - dies
 ist aber nur bei einfachen Item-Typen wie Text sinnvoll.
