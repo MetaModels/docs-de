@@ -168,7 +168,7 @@ bzw. inklusive des Service-Containers:
    :linenos:
    
    <?php
-   $metaModelId = 42;
+   $modelId = 42;
    
    /** @var $container */
    $factory   = $this->getContainer()->get('metamodels.factory');
