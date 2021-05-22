@@ -69,6 +69,8 @@ Attribute
 * Übersetzte Checkbox
     * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
     * Je Sprache kann ein eigenes Icon-Set ausgewählt werden
+    * in der Listenansicht sind die Icons nun in der Reihenfolge wie die Sprachen des Model definiert sind - bisher
+      war das Icon der Fallbacksprache immer an erster Position
     * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
     * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
       bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
