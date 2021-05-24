@@ -49,6 +49,7 @@ Attribute
 * Checkbox
     * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
     * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
+    * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske
 * Datei
     * Unterstützung manuelle Dateisortierung
     * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
@@ -61,9 +62,11 @@ Attribute
 * Einzelauswahl [select]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
+    * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Mehrfachauswahl [tags]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
+    * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Rating ("Sternchenbewertung")
     * Umstellung von Mootools auf Vanilla Script somit unabhängig von Mootools
     * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
