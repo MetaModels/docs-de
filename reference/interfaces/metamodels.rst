@@ -185,6 +185,9 @@ Aktuelle Informationen unter: `IMetaModel <https://github.com/MetaModels/core/bl
 
 **Interfaces:**
 
+.. warning:: Die Methoden `getServiceContainer` ist deprecated - bitte
+   als Service einbinden
+
 ``getServiceContainer()`` |br|
 gibt den Service-Container zurück
 
@@ -197,17 +200,29 @@ gibt die Tabellen-Namen des instanzierten MetaModel zurück
 ``getName()``  |br|
 gibt die Namen des instanzierten MetaModel zurück
 
+.. warning:: Die Methoden `isTranslated` ist deprecated - bitte
+   ITranslatedMetaModel verwenden
+
 ``isTranslated()``  |br|
 prüft, ob das instanzierten MetaModel Übersetzungen erstellen kann 
 
 ``hasVariants()``  |br|
 prüft, ob das instanzierten MetaModel Varianten erstellen kann
 
+.. warning:: Die Methoden `getAvailableLanguages` ist deprecated - bitte
+   ITranslatedMetaModel verwenden
+
 ``getAvailableLanguages()``  |br|
 gibt alle Sprachcodes als Array des instanzierten MetaModel zurück
 
+.. warning:: Die Methoden `getFallbackLanguage` ist deprecated - bitte
+   ITranslatedMetaModel verwenden
+
 ``getFallbackLanguage()``  |br|
 gibt den Sprachcode der Fallbacksprache des instanzierten MetaModel zurück
+
+.. warning:: Die Methoden `getActiveLanguage` ist deprecated - bitte
+   ITranslatedMetaModel verwenden
 
 ``getActiveLanguage()``  |br|
 gibt den Sprachcode der aktiven Sprache des instanzierten MetaModel zurück
@@ -238,6 +253,9 @@ Attributnamen angegben werden, deren Werte zurück zu gegeben werden sollen
 
 ``getEmptyFilter()``  |br|
 erzeugt ein "leeres" Filterobjekt ohne Filterregeln
+
+.. warning:: Die Methoden `prepareFilter` ist deprecated - bitte
+   Filter-Setting-Factopry verwenden
 
 ``prepareFilter($filterSettings, $filterUrl)``  |br|
 erzeugt ein Filterobjekt aus einer gegebenen Filter-ID und einem optionalen
@@ -285,12 +303,15 @@ die Abfrage unterscheidet nicht zwischen Items einer Varianten-Basis und -Items
 gibt alle Optionen eines gegebenen Attributs zurück; Optional kann
 ein Filter angegeben werden
 
-``saveItem($item)``  |br|
+``saveItem($item, $timestamp = null)``  |br|
 speichert ein gegebenes Item bzw. es wird ein neues Item erzeugt, wenn keine ID mit
 übergeben wurde
 
 ``delete($item)``  |br|
 löscht ein gegebenes Item
+
+.. warning:: Die Methoden `prepareFilter` ist deprecated - bitte
+   Render-Setting-Factopry verwenden
 
 ``getView($viewId = 0)``  |br|
 gibt die Instanz der Render-Einstellungen des instanzierten MetaModel zurück
