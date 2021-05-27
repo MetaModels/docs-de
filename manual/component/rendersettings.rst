@@ -70,8 +70,9 @@ Optionen
 * **Labels verbergen** |br|
   die Attributnamen werden als "Label" nicht ausgegeben
 * **Zusätzliche CSS/Javascript-Dateien** |br|
-  zur Ausgabeformatierung und Interaktion können CSS- und/oder Javascript-Dateien mit ausgegeben
-  werden
+  zur Ausgabeformatierung und Interaktion können CSS- und/oder Javascript-Dateien mit in
+  der Liste ausgegeben werden; die Einbindung erfolgt aber nur, wenn mindestens ein Item
+  in der Liste ausgegeben wird
 
 Ablauf
 ------
