@@ -104,7 +104,8 @@ Filter
       auch gleich ausgewählt ist. Bisher musste man beim Erstellen das Template von "mm_filter_default" auf
       "mm_filter_clearall" wechseln. Bei der Migration erfolgt eine eine Ausgabe, sofern noch ein eigenes Template
       "mm_filter_clearall*.*" gefunden werden mit der Aufforderung das umzustellen - automatisch können
-      diese leider nicht angepasst werden.
+      diese leider nicht angepasst werden. Sollte an der Stelle im FE eine Fehlermeldung kommen, dass das alte Template
+      nicht gefunden werden kann, bitte das CE/FE-Modul einmal neu abspeichern.
 * Einfache Abfrage
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
