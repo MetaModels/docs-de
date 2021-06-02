@@ -58,7 +58,8 @@ Optionen
   nur die aktiven Attribute im Typ "html" und "text" übergeben
 * **Ausgabeformat** |br|
   mögliche Auswahl ist HTML5 und Text; sofern keine speziellen Anforderungen bestehen,
-  kann die Auswahl leer gelassen werden
+  kann die Auswahl leer gelassen werden; das Format XHTML wird mit MM 2.2 nicht mehr
+  unterstützt
 * **Weiterleitungsseite** |br|
   die Weiterleitungsseite mit Seitenauswahl und Filter ist nur für die Frontendausgabe, um
   z.B. auf eine Detailseite zu verlinken; auf der Detailseite sollte ein Listenelement mit
