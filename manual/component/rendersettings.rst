@@ -57,7 +57,7 @@ Optionen
   Unterordner angelegt werden dürfen; dem Template werden alle Attribute im Typ "raw" und
   nur die aktiven Attribute im Typ "html" und "text" übergeben
 * **Ausgabeformat** |br|
-  mögliche Auswahl ist HTML5, XHTML und Text; sofern keine speziellen Anforderungen bestehen,
+  mögliche Auswahl ist HTML5 und Text; sofern keine speziellen Anforderungen bestehen,
   kann die Auswahl leer gelassen werden
 * **Weiterleitungsseite** |br|
   die Weiterleitungsseite mit Seitenauswahl und Filter ist nur für die Frontendausgabe, um
