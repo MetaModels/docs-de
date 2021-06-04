@@ -39,6 +39,11 @@ Allgemein und Core
 * Unterstützung des Cachings (ESI-Tags)
 * Verbesserte Anzeige bei Auswahl von Attributen - nun im Schema 'Attribut-Name [Typ, "Spaltenname"]'
 * neues FE-Ausgabetemplate für Debuganzeige: metamodel_prerendered_debug.html5
+* Für die URL der Weiterleitungsseite (jumpTo) musste man bei den Rendersettings sowohl die Seite
+  als auch einen Filter angeben - nun ist nur noch die Seitenauswahl notwendig und die URL wird im
+  Listentemplate ausgegeben. Damit kann man z. B. aus dem BE einen Link auf der Detailseite zurück
+  zur Listenseite anlegen ohne einen Filter angeben zu müssen. Zur Prüfung ob Filterparameter gesetzt
+  wurden, gibt es nun den Knoten "deep" - der ist `true`, wenn Parameter vorhanden.
 
 
 Attribute
