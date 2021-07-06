@@ -72,6 +72,7 @@ Spenden
 Ein Dank für die Spenden* für die Erweiterung an:
 
 * N.N.: 400 €
+* N.N.: 400 €
 
 
 (Spenden in Netto)
