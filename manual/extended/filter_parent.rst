@@ -32,9 +32,6 @@ nach Zahlung einer Spende ausgeschlossen.
 
 Die Höhe der Spende sollte mindestens 200€*1 betragen.
 
-Für den Zugriff auf das Module werden die Repositories per SSH-PublicKey für
-eine Installation per composer frei gegeben.
-
 Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
 Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de
@@ -49,6 +46,7 @@ Voraussetzungen für die Installation:
 
 * MetaModels core ab Version 2.1
 
+Das Modul kann per Konsole oder über den Contao-Manager installiert werden.
 
 Filterregel anlegen
 -------------------
