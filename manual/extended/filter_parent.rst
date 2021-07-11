@@ -47,7 +47,7 @@ Installation per Composer
 
 Voraussetzungen für die Installation:
 
-* MetaModels core 2.1
+* MetaModels core ab Version 2.1
 
 
 Filterregel anlegen
