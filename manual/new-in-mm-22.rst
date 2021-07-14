@@ -117,11 +117,13 @@ Filter
     * Option, wenn die Filterregel ein FE-Widget ausgeben soll (bis MM 2.0 über Option "Statischer Parameter" und
       Option "GET-Parameter" einzustellen - Umstellung der Einstellung bitte manuell durchführen)
     * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
+    * per Checkbox kann das Label als Blankoptionlabel (statt "Nicht filtern") im Select ausgegeben werden
 * Einzelauswahl [select]
     * Attributstypen Alias und Übersetzter Alias möglich
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Option zum Sortieren der Filteritems nach "natürlicher Sortierung" - Auf- oder Absteigend
+    * per Checkbox kann das Label als Blankoptionlabel (statt "Nicht filtern") im Select ausgegeben werden
 * Ja / Nein
     * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die
       jeweilige Übersetzung)
