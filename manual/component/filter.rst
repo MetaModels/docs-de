@@ -46,7 +46,8 @@ Typen von Filterregeln
   kann in den Inhaltselementen/FE-Modulen aus einer Select-Liste ein Wert
   zum Filtern aktiviert werden
 * **Eigenes SQL** (core): |br|
-  eigene SQL-Bedingungen zur Filterung; den |img_about| Hilfe-Assistenten (Popup) beachten
+  eigene SQL-Bedingungen zur Filterung; den |img_about| Hilfe-Assistenten (Popup) beachten |br|
+  siehe auch im Kochbuch :ref:`rst_cookbook_filter_custom-sql`
 * **UND-Bedingung (AND)** (core): |br|
   Container für weitere Filterregeln mit UND-Verknüpfung
 * **ODER-Bedingung (OR)** (core): |br|
