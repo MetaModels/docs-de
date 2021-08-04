@@ -8,7 +8,7 @@ MetaModels-2-Isotope
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
-Projekt MetaModels (2.1) zur Verfügung gestellt, um aus MetaModels heraus Items (Artikel, Produkt) an den
+Projekt MetaModels (ab 2.1) zur Verfügung gestellt, um aus MetaModels heraus Items (Artikel, Produkt) an den
 Onlineshop `Isotopeecommerce <https://isotopeecommerce.org>`_ (Isotope) für
 einen Kauf (Checkout) zu übergeben.
 
@@ -43,11 +43,11 @@ Für die Spende gibt es zwei Varianten:
 * 1: Zugriff auf die drei Module des Projektes zur Installation: 390€*1 oder höher
 * 2: zusätzlich zum Punkt 1 noch den `Demoshop <https://isotope.metamodel.me>`_: 490€*1 oder höher
 
-Für den Zugriff auf die Module werden die Repositories per SSH-PublicKey für
-eine Installation per composer frei gegeben. Der Demoshop beinhaltet die composer.json,
+Die Erweiterung kann über den Contao-Manager oder über die Konsole (composer)
+installiert werden. Der Demoshop beinhaltet die composer.json,
 Templates, Datenbank sowie die Demodateien (/files).
 
-Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
+Für die Zuwendung zu dem projekt wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
 Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de - siehe auch
 `MM-Fundrasing-Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#isotope>`_.
@@ -206,8 +206,8 @@ Für die Installation der Module gelten aktuell folgende
 Voraussetzungen:
 
 * Contao 4.4.x/4.9.x
-* Isotope 2.5/2.6 und MetaModels 2.1/2.2
-* PHP ab 7.2
+* Isotope ab 2.5 und MetaModels 2.1/2.2
+* PHP ab 7.2/7.4
 
 
 Known Issues and Next Features
