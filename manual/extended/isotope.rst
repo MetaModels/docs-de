@@ -47,7 +47,7 @@ Die Erweiterung kann über den Contao-Manager oder über die Konsole (composer)
 installiert werden. Der Demoshop beinhaltet die composer.json,
 Templates, Datenbank sowie die Demodateien (/files).
 
-Für die Zuwendung zu dem projekt wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
+Für die Zuwendung zu dem Projekt wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
 Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de - siehe auch
 `MM-Fundrasing-Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#isotope>`_.
