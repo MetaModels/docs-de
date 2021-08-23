@@ -71,6 +71,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 * N.N.: 400 €
 * N.N.: 400 €
+* Agentur `Markenzoo <https://markenzoo.de/>`_: 200€
 
 
 (Spenden in Netto)
