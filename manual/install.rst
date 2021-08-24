@@ -74,6 +74,10 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofizi
    Unknown downloader type: . Available types: git, svn, fossil, hg, perforce, zip, rar, tar, gzip, xz, phar, file, path.`` |br| 
    Wenn das auftritt, bitte den Ordner vendor/contao-community-alliance/dc-general (ggf. auch
    /vendor/contao-community-alliance/dc-general-contao-frontend) löschen und das Update neu starten.
+   
+   Kommt beim Update die Meldung |br|
+   ``The checksum verification of the file failed...`` |br|
+   bitte die ``composer.lock`` löschen und das Update neu starten.
 
    Bei HostEurope gab es zudem noch das Problem, dass der Composer kein Cache-Verzeichnis anlegen konnte.
    Man kann das mit einer eigenen Umgebungsvariable zu einem Pfad, der für den eigenen User erreichbar und
