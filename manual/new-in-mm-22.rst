@@ -44,6 +44,14 @@ Allgemein und Core
   Listentemplate ausgegeben. Damit kann man z. B. aus dem BE einen Link auf der Detailseite zurück
   zur Listenseite anlegen ohne einen Filter angeben zu müssen. Zur Prüfung ob Filterparameter gesetzt
   wurden, gibt es nun den Knoten "deep" - der ist `true`, wenn Parameter vorhanden.
+* neue Optionen bei der Paginierung der MM-Listenausgabe:
+    * dynamscher Parameter verhindert das "Übersprechen" der Paginierung anderer Listen
+    * die Bezeichnung des Paginierungsparameters kann frei gewählt werden
+    * ein eigenes Template für die Paginierung ist möglich - Standard "mm_pagination.html5"
+    * es kann ausgewählt werden, ob der Parameter per Slug (/page_mmce42/3) oder GET (?page_mmce42=3) übergeben wird
+* neue Optionen beim Überschreiben der Sortierung bei der MM-Listenausgabe
+    * die Bezeichnung der Standardparameter "orderBy" und "orderDir" kann mit eigenen Werten überschrieben werden
+    * die Parameter können wahlweise als Slug und/oder GET angegeben werden
 
 
 Attribute
