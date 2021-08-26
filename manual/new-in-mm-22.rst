@@ -45,7 +45,7 @@ Allgemein und Core
   zur Listenseite anlegen ohne einen Filter angeben zu müssen. Zur Prüfung ob Filterparameter gesetzt
   wurden, gibt es nun den Knoten "deep" - der ist `true`, wenn Parameter vorhanden.
 * neue Optionen bei der Paginierung der MM-Listenausgabe:
-    * dynamscher Parameter verhindert das "Übersprechen" der Paginierung anderer Listen
+    * dynamischer Parameter verhindert das "Übersprechen" der Paginierung anderer Listen
     * die Bezeichnung des Paginierungsparameters kann frei gewählt werden
     * ein eigenes Template für die Paginierung ist möglich - Standard "mm_pagination.html5"
     * es kann ausgewählt werden, ob der Parameter per Slug (/page_mmce42/3) oder GET (?page_mmce42=3) übergeben wird
