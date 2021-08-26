@@ -60,12 +60,14 @@ eine Erweiterung auf einer flexiblen und gut erweiterbaren Codebasis zu schaffen
 Mit der Version 2.0 von MetaModels für Contao 3.x lag das Ergebnis von vielen Stunden
 der Diskussion um die "beste Lösung" und harter Programmierung vor.
 
-Inzwischen sind wir bei der Version 2.1 von MetaModels angelangt, welches eine
-Migration von 2.0 darstellt und unter Contao 4.x läuft.
+Weiter ging es mit Version 2.1 als Migration von 2.0 für Contao 4.4 zur aktuellen Version
+2.2 für Contao 4.9.
 
-Bei dieser Umstellung wurde schon vieles im "Unterbau" für kommende Versionen von
-MetaModles angepasst und "alte Zöpfe" abgeschnitten, viele kleine Bugs gefixt sowie
-die DB-Abfragen Symfony-like umgestellt.
+Bei diesen Umstellungen wurde vieles im "Unterbau" angepasst und "alte Zöpfe" abgeschnitten,
+viele kleine Bugs gefixt sowie die DB-Abfragen Symfony-like umgestellt. Eine Zusammenstellung
+für MM 2.2 ist :ref:`hier zu finden <new_in_mm220>`.
+
+Für MM 3.0 gibt es auch schon Planungen - :ref:`siehe <planning_mm30>`.
 
 
 MetaModels im Vergleich zu anderen Tools
@@ -84,7 +86,7 @@ diesen Erweiterungen liegt z.B. in der Möglichkeit in MetaModels auch komplexe
 Datenstrukturen abzubilden oder auch in den vielfältigen Ausgaben- und Filterfunktionen.
 
 Inzwischen gibt es weitere Erweiterungen, die sich aus der Idee des 'Catalog' entwickelt
-haben. Nach unserer Einschätzung liegen die Vorteile von MetaModels in dessem wohlstrukturiertem
+haben. Nach unserer Einschätzung liegen die Vorteile von MetaModels in dessen wohlstrukturiertem
 und modernen Unterbau (inkl. des DC_General) und der damit einhergehenden umfangreichen
 Anpassbarkeit. Weiterhin sind viele Funktionen wie z.B. die Mehrsprachigkeit im MM-Core
 fest verankert.
