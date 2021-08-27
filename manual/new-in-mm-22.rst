@@ -44,17 +44,21 @@ Allgemein und Core
   Listentemplate ausgegeben. Damit kann man z. B. aus dem BE einen Link auf der Detailseite zurück
   zur Listenseite anlegen ohne einen Filter angeben zu müssen. Zur Prüfung ob Filterparameter gesetzt
   wurden, gibt es nun den Knoten "deep" - der ist `true`, wenn Parameter vorhanden.
-* neue Optionen bei der Paginierung der MM-Listenausgabe:
+* neue Optionen bei der Paginierung der MM-Listenausgabe (Siehe Screenshots unten)
 
   * dynamischer Parameter verhindert das "Übersprechen" der Paginierung anderer Listen
   * die Bezeichnung des Paginierungsparameters kann frei gewählt werden
   * ein eigenes Template für die Paginierung ist möglich - Standard "mm_pagination.html5"
   * es kann ausgewählt werden, ob der Parameter per Slug (/page_mmce42/3) oder GET (?page_mmce42=3) übergeben wird
-* neue Optionen beim Überschreiben der Sortierung bei der MM-Listenausgabe
+* neue Optionen beim Überschreiben der Sortierung bei der MM-Listenausgabe (Siehe Screenshots unten)
 
   * die Bezeichnung der Standardparameter "orderBy" und "orderDir" kann mit eigenen Werten überschrieben werden
   * die Parameter können wahlweise als Slug und/oder GET angegeben werden
-
+* neue Option zur Übermittlung von eigenen Parametern von den Einstellungen der Listenausgabe (CE/FE-Modul) an das
+  Listentemplate. Über einen MCW können eigene "Key-Value-Pärchen" erstellt werden, auf die im Template über
+  "$this-[gt]wizardParams" als Array zur Verfügung stehen. Damit kann man ein Listentemplate weiter verallgemeinern
+  und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe oder JavaScript-Inhalte
+  steuern. Siehe Screenshots unten.
 
 Attribute
 ---------
@@ -181,7 +185,21 @@ ______________________
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden können
 
+Screenshots
+-----------
 
+Einstellungen für Paginierung und Sortierung bei der MM-Liste:
+
+|img_settings-pagination-sort|
+
+Einstellungen für den Parameter-Wizard und Zugriff auf Werte im Template:
+
+|img_settings-wizard_01|
+
+|img_settings-wizard_02|
+
+Re-Finanzierung
+---------------
 .. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um finanzielle
    Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
    und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzten Zuwendungen, sind
@@ -189,6 +207,9 @@ ______________________
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
 .. |img_about| image:: /_img/icons/about.png
+.. |img_settings-pagination-sort| image:: /_img/screenshots/metamodel_new_features/settings-pagination-sort.jpg
+.. |img_settings-wizard_01| image:: /_img/screenshots/metamodel_new_features/settings-wizard_01.jpg
+.. |img_settings-wizard_02| image:: /_img/screenshots/metamodel_new_features/settings-wizard_02.jpg
 
 .. |br| raw:: html
 
