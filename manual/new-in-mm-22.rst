@@ -56,7 +56,7 @@ Allgemein und Core
   * die Parameter können wahlweise als Slug und/oder GET angegeben werden
 * neue Option zur Übermittlung von eigenen Parametern von den Einstellungen der Listenausgabe (CE/FE-Modul) an das
   Listentemplate. Über einen MCW können eigene "Key-Value-Pärchen" erstellt werden, die im Template über
-  "$this-[gt]wizardParams" als Array zur Verfügung stehen. Damit kann man ein Listentemplate weiter verallgemeinern
+  "$this->wizardParams" als Array zur Verfügung stehen. Damit kann man ein Listentemplate weiter verallgemeinern
   und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe oder JavaScript-Inhalte
   steuern. Siehe Screenshots unten.
 
