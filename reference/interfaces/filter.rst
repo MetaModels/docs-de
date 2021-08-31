@@ -3,8 +3,6 @@
 Filter Interfaces
 =================
 
-.. warning:: Noch im Aufbau!
-
 Die Filter Interfaces erstellen einen Zugriff auf Filter bzw.
 Filterregeln, die im Backend in einem MetaModel definiert sind.
 
@@ -70,7 +68,7 @@ Beispiele
    $filter->addFilterRule(new \MetaModels\Filter\Rules\SearchAttribute($attribute, $value, $languages));
 
    // eigenes SQL:
-   $query  = sprintf('SELECT * FROM %s WHERE published = 1', $modelName);
+   $query = sprintf('SELECT * FROM %s WHERE published = 1', $modelName);
    $filter->addFilterRule(new \MetaModels\Filter\Rules\SimpleQuery($query));
 
    // Filterung mit mehreren Regeln:
@@ -80,8 +78,8 @@ Beispiele
    $compareInclusive = true;
    $andRule          = new \MetaModels\Filter\Rules\Condition\ConditionAnd();
    $andRule
-       ->addRule(new \MetaModels\Filter\Rules\Comparing\GreaterThan($attribute, 10, $compareInclusive))
-       ->addRule(new \MetaModels\Filter\Rules\Comparing\LessThan($attribute, 20));
+       ->addRule(new \MetaModels\Filter\Rules\Comparing\GreaterThan($attribute, 10, $compareInclusive)) // >= 10
+       ->addRule(new \MetaModels\Filter\Rules\Comparing\LessThan($attribute, 20));                      // < 20
    $filter->addFilterRule($andRule);
 
    // Ende
