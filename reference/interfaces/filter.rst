@@ -30,7 +30,7 @@ gibt alle IDs nach der gegebenen Filterregel zurück
 IFilter Interface
 .................
 
-Aktuelle Informationen unter: `IFilterRule <https://github.com/MetaModels/core/blob/master/src/Filter/IFilter.php>`_
+Aktuelle Informationen unter: `IFilter <https://github.com/MetaModels/core/blob/master/src/Filter/IFilter.php>`_
 
 **Interfaces:**
 
