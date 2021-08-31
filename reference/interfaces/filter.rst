@@ -59,7 +59,7 @@ Beispiele
 
    // Filterung nach fester ID (Liste):
    $idList = [1,2,3];
-   $filter->addFilterRule(new \MetaModels\Filter\Rules\StaticIdList($idList);
+   $filter->addFilterRule(new \MetaModels\Filter\Rules\StaticIdList($idList));
 
    // Filterung nach Wert eines Attributes:
    $value      = 'marketing';
