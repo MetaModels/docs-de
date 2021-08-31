@@ -500,7 +500,9 @@ Beispiel:
 Das folgende Beispiel soll einen kleinen Einstieg in die Arbeit mit den
 Interfaces demonstrieren. Das Beispiel kann z.B. in eine Template-Datei
 eingefügt und per Inserttag ``{{file::mm_interfaces.html5}}`` in einem 
-Artikel-Inhaltselement ausgegeben werden. 
+Artikel-Inhaltselement ausgegeben werden.
+
+Beispiele für den Einsatz von Filtern sind hier zu finden :ref:`ref_api_interf_filter`
 
 Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
 
