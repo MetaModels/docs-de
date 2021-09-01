@@ -45,6 +45,8 @@ erzeugt eine Kopie des Filters
 Beispiele
 .........
 
+Die Blocks "Filterung" zwischen "Start" und "Ende" sind als Alternativen zueinander zu betrachten.
+
 .. code-block:: php
    :linenos:
 
@@ -73,7 +75,7 @@ Beispiele
 
    // Filterung mit mehreren Regeln:
    // Verknüpfung mit ConditionAnd() oder ConditionOr()
-   // Vergleich mit GreaterThan, LessThan, NotEqual
+   // Vergleich mit GreaterThan, LessThan, NotEqual möglich
    $attribute        = $model->getAttribute('price');
    $compareInclusive = true;
    $andRule          = new \MetaModels\Filter\Rules\Condition\ConditionAnd();
