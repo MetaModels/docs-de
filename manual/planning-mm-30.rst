@@ -43,6 +43,7 @@ Vorschläge dazu gern als Ticket in `Github <https://github.com/MetaModels/core/
   * Aufteilung der Relationstabelle in separate Tabellen (auch wichtig für Ex-/Import)
 * Symfony-Forms (DCG 3.0)
 * API-Ansatz von MM um z.B. per REST, Hydra-LD, GraphQL zu kommunizieren
+* ASC/DESC usw. als Konstanten
 * Umbau Filter:
 
   * besseres Caching,
