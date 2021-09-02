@@ -81,10 +81,14 @@ Attribute
 * Einzelauswahl [select]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
+    * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
+      der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Mehrfachauswahl [tags]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
+    * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
+      der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Rating ("Sternchenbewertung")
     * Umstellung von Mootools auf Vanilla Script somit unabhängig von Mootools
