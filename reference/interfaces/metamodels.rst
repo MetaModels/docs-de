@@ -254,8 +254,8 @@ Attributnamen angegben werden, deren Werte zurück zu gegeben werden sollen
 ``getEmptyFilter()``  |br|
 erzeugt ein "leeres" Filterobjekt ohne Filterregeln
 
-.. warning:: Die Methoden `prepareFilter` ist deprecated - bitte
-   Filter-Setting-Factopry verwenden
+.. warning:: Die Methode `prepareFilter` ist deprecated - bitte
+   Filter-Setting-Factory verwenden
 
 ``prepareFilter($filterSettings, $filterUrl)``  |br|
 erzeugt ein Filterobjekt aus einer gegebenen Filter-ID und einem optionalen
@@ -310,8 +310,8 @@ speichert ein gegebenes Item bzw. es wird ein neues Item erzeugt, wenn keine ID 
 ``delete($item)``  |br|
 löscht ein gegebenes Item
 
-.. warning:: Die Methoden `prepareFilter` ist deprecated - bitte
-   Render-Setting-Factopry verwenden
+.. warning:: Die Methode `getView` ist deprecated - bitte
+   Render-Setting-Factory verwenden
 
 ``getView($viewId = 0)``  |br|
 gibt die Instanz der Render-Einstellungen des instanzierten MetaModel zurück
