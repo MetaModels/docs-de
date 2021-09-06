@@ -45,7 +45,8 @@ erzeugt eine Kopie des Filters
 Beispiele
 .........
 
-Die Blocks "Filterung" zwischen "Start" und "Ende" sind als Alternativen zueinander zu betrachten.
+Die Blocks "Filterung" zwischen "Start" und "Ende" sind als Alternativen zueinander zu betrachten. Die 
+aufgerufenen Klassen sollten als qualifizierter Import per "use" eingebunden werden.
 
 .. code-block:: php
    :linenos:
