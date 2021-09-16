@@ -18,9 +18,9 @@ werden, kann das mit dem folgenden Code im Template der Detailansicht erreicht w
     // redirect if data empty
     if (count($this->data) == 0) {
         $pageId  = 192; // Page id 
-    	$page    = \PageModel::findByPK($ageId); //Page object
-    	$pageURL = \Controller::generateFrontendUrl($page->row()); //URL
-    	\Controller::redirect($pageURL); //redirect
+        $page    = \PageModel::findByPK($pageId);
+        $pageURL = $page->getFrontendUrl();
+        \Controller::redirect($pageURL);
     }
 
 
