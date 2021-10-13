@@ -92,12 +92,17 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
    
    SELECT `id`
    FROM {{table}}
-   WHERE (
-     `start` IS NULL OR `start` = ''
-     OR `start` < UNIX_TIMESTAMP())
-     AND (`stop` IS NULL OR `stop` = ''
-     OR `stop` > UNIX_TIMESTAMP()
-   )
+   WHERE (`date_start` IS NULL OR `date_start` = '' OR `date_start` < UNIX_TIMESTAMP())
+   AND (`date_stop` IS NULL OR `date_stop` = '' OR `date_stop` > UNIX_TIMESTAMP())
+
+Alternativ
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT `id` FROM {{table}}
+   WHERE (`date_start` IS NULL OR DATE(FROM_UNIXTIME(`date_start`)) <= DATE(now()))
+   AND (`date_stop` IS NULL OR DATE(FROM_UNIXTIME(`date_stop`)) >= DATE(now()))
 
 
 Filterung nach Kind-Elementen eines Eltern-Elements
