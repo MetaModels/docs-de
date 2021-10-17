@@ -15,7 +15,7 @@ ergeben sich teilweise durch die dynamische Generierung der Felder
 in MetaModels durch den DC-General.
 
 Die Vorgaben für die Felder können durch die Ergänzung des DC-Array
-mit dem Key "default" erreicht werden - `siehe Contao-Handbuch <https://docs.contao.org/dev/reference/dca/fields/>`.
+mit dem Key "default" erreicht werden - `siehe Contao-Handbuch <https://docs.contao.org/dev/reference/dca/fields/>`_.
 
 Für einen Eintrag einer Vorgabe muss der (interne) Name des MetaModel
 und der Spaltenname des Attributes bekannt sein. Diese Angaben können
