@@ -371,23 +371,18 @@ wie folgt anlegen:
 
 .. code-block:: php
    :linenos:
-   
-   SELECT `id` FROM  mm_mitarbeiter
-   WHERE IF (
-         {{param::post?name=abteilung}} != 'NULL', (QUERY-U), (QUERY-C)
-    )
 
    SELECT `id`
    FROM mm_countries
-   WHERE id NOT IN (
-       SELECT value_id as id
+   WHERE `id` NOT IN (
+       SELECT `value_id` as id
        FROM tl_metamodel_tag_relation
-       WHERE att_id = '42'
+       WHERE `att_id` = '42'
    ) OR id IN (
-       SELECT value_id as id
+       SELECT `value_id` as id
        FROM tl_metamodel_tag_relation
-       WHERE att_id = '42'
-       AND item_id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
+       WHERE `att_id` = '42'
+       AND `item_id` = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
    )
 
 
