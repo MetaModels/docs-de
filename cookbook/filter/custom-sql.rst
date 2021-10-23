@@ -361,6 +361,36 @@ oder QUERY-C (create) die Mitarbeiterliste eingegrenzt werden.
          {{param::post?name=abteilung}} != 'NULL', (QUERY-U), (QUERY-C)
     )
 
+Filter für Mehrfachauswahl in der Eingabemaske: nur unausgewählte Items
+***********************************************************************
+
+Hat man z. B. eine Tabelle Regionen und dort eine Mehrfachauswahl auf Länder und möchte die Auswahl
+auf die Länder begrenzen, die noch nicht zugewiesen wurden, kann man bei dem Attribut Mehrfachauswahl
+(ID: 42) auf die Länder einen Filter aktivieren. In dem Filter kann man eine Filterregel "Eigenes SQL"
+wie folgt anlegen:
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT `id` FROM  mm_mitarbeiter
+   WHERE IF (
+         {{param::post?name=abteilung}} != 'NULL', (QUERY-U), (QUERY-C)
+    )
+
+   SELECT `id`
+   FROM mm_countries
+   WHERE id NOT IN (
+       SELECT value_id as id
+       FROM tl_metamodel_tag_relation
+       WHERE att_id = '42'
+   ) OR id IN (
+       SELECT value_id as id
+       FROM tl_metamodel_tag_relation
+       WHERE att_id = '42'
+       AND item_id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
+   )
+
+
 
 Kommentare im SQL-Query
 ***********************
