@@ -64,7 +64,7 @@ Eingrenzung auf serialisierten Wert in WHERE:
 *********************************************
 
 Hat man zum Beispiel im Attribut Mehrfachauswahl ([tags]) eine Relation zur
-Tabelle der Benutzer (tl_user) und möchte aber nur Mitglieder einer bestimmten
+Tabelle der Benutzer (tl_user) und möchte aber nur Benutzer einer bestimmten
 Benutzergruppe, so muss man nach der Spalte ``groups`` filtern. In ``groups``
 ist die Gruppenzugehörigkeit aber als serialisiertes Array abgelegt, so dass
 in dem serialisierten String gesucht werden muss.
@@ -75,8 +75,8 @@ wie folgt vornehmen:
 .. code-block:: sql
    :linenos:
    
-   CONVERT(tl_user.groups USING utf8) LIKE '%"2"%'
+   CONVERT(tl_users.groups USING utf8) LIKE '%"2"%'
 
-Damit werden in der Eingabemaske nur noch Mitgliedr der Mitgliedergruppe ``2``
+Damit werden in der Eingabemaske nur noch Benutzer der Benutzergruppe ``2``
 angezeigt.
 
