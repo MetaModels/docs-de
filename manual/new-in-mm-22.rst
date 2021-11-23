@@ -58,7 +58,7 @@ Allgemein und Core
   Listentemplate. Über einen MCW können eigene "Key-Value-Pärchen" erstellt werden, die im Template über
   "$this->params" als Array zur Verfügung stehen. Damit kann man ein Listentemplate weiter verallgemeinern
   und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe oder JavaScript-Inhalte
-  steuern. Siehe Screenshots unten.
+  steuern. Siehe :ref:`rst_cookbook_templates_fe_list_parameters`.
 
 Attribute
 ---------
@@ -196,11 +196,6 @@ Einstellungen für Paginierung und Sortierung bei der MM-Liste:
 
 |img_settings-pagination-sort|
 
-Einstellungen für den Parameter-Wizard und Zugriff auf Werte im Template:
-
-|img_settings-wizard_01|
-
-|img_settings-wizard_02|
 
 Re-Finanzierung
 ---------------
@@ -212,8 +207,6 @@ Re-Finanzierung
 
 .. |img_about| image:: /_img/icons/about.png
 .. |img_settings-pagination-sort| image:: /_img/screenshots/metamodel_new_features/settings-pagination-sort.jpg
-.. |img_settings-wizard_01| image:: /_img/screenshots/metamodel_new_features/settings-wizard_01.jpg
-.. |img_settings-wizard_02| image:: /_img/screenshots/metamodel_new_features/settings-wizard_02.jpg
 
 .. |br| raw:: html
 
