@@ -31,6 +31,8 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     templates/fe_list_parameters.rst
     other-tutorials/index.rst
     other-tutorials/videos.rst
+    reference/interfaces/metamodels.rst
+    reference/interfaces/filter.rst
 
 
 .. _manual@metamodel.me: manual\@metamodel.me?Subject=Mein%20Rezept%20f%FCr%20das%20MM-Kochbuch&Body=Mein%20Rezept%3A%0A
