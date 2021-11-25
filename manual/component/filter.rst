@@ -65,7 +65,7 @@ Typen von Filterregeln
   von/bis-Auswahl für Datum eines Attributwerts
 * **Wert von/bis für zwei Felder** (filter_range): |br|
   zwei Felder mit Werten
-* **Wert von/bis für zwe Datumsfelder** (filter_range): |br|
+* **Wert von/bis für zwei Datumsfelder** (filter_range): |br|
   zwei Felder mit Werten für Datum
 * **Einzelauswahl** (filter_select): |br|
   einzelne Auswahl eines Wertes z.B. einer Select-Liste
