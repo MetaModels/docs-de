@@ -158,9 +158,11 @@ Sortierung der Ausgabe nach mehr als einem Attribut (fest)
 Priorität absteigend."
 siehe auch `Forum <https://community.contao.org/de/showthread.php?62625-Zweite-Sortierung>`_
 
-Zu beachten ist, dass diese SQL-Regel im Filter als erste Regel eingebaut wird. In der
+Zu beachten ist, dass diese SQL-Regel im Filter als *erste Regel* eingebaut wird. In der
 ersten Regel wird die "Basismenge" und die Reihenfolge der Items festgelegt und in den
-weiteren Regeln wird diese Menge nur noch gekürzt.
+weiteren Regeln wird diese Menge nur noch gekürzt. Die Sortierrichtung ist bei MySQL
+immer ASC - möchte man eine andere Richtung, dann die Angabe bei jeder angegebenen 
+Sortierspalte mit angeben.
 
 .. code-block:: php
    :linenos:
@@ -168,6 +170,16 @@ weiteren Regeln wird diese Menge nur noch gekürzt.
    SELECT `id` 
    FROM mm_mannschaft
    ORDER BY `punkte` DESC, `spiele` ASC, `prio` DESC
+
+Man kann auch einzelne Items als Erste anzeigen lassen (Attribut "Prio-Slider" = 1) und
+den Rest per Zufall:
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT `id` 
+   FROM mm_sv_trainings
+   ORDER BY `prio_slider` DESC, rand()
 
 
 Sortierung der Ausgabe refernziertem MM und Name
