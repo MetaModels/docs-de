@@ -29,6 +29,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     debug/sql-tips.rst
     templates/fe_redirect_to_list.rst
     templates/fe_list_parameters.rst
+    tips/speed-up-backend-list.rst
     other-tutorials/index.rst
     other-tutorials/videos.rst
     reference/interfaces/metamodels.rst
