@@ -1,38 +1,32 @@
-.. _rst_cookbook_panels_checkbox-negation:
+.. _rst_cookbook_tips_speedup_backend:
 
-Ansichtsbedingung: Anzeige wenn Checkbox nicht gesetzt
-======================================================
+Beschleunigung der Listenansicht im Backend bei vielen Datensätzen
+==================================================================
 
-Möchte man eine Ansichtsbedingung erstellen bei welcher das entsprechende
-Feld angezeigt wird, wenn eine Checkbox **nicht** gesetzt ist, so ist das
-mit den einem Trigger auf den Wert der Checkbox "Inaktiv" nicht zu erreichen.
+Bei sehr vielen Datensätzen - ab ca. 50k oder 100k - kann der Aufbau der Listenansicht
+sehr lang dauern und sehr speicherintensiv sein. Das hängt von verschiedenen Faktoren
+wie den vorhandenen Attributstypen oder den Paneleinstellungen der Liste ab. Folgend einige
+einige Tipps, wie die Ansicht beschleunigt werden kann:
 
-Grund dafür ist die zwischen MetaModels und Contao-Core unterschiedliche Behandlung
-des Wertes für "unchecked" - In Contao-Core wird dafür statt einer Null (0) Nichts
-'' gespeichert. Das wiederum kann aktuell von MetaModels bzw. dem DCG nicht
-verarbeitet werden.
+1. Limit einstellen
+   In den Einstellungen der Eingabemaske im Feld "Panel-Layout" den Key "limit" eintragen.
+   Damit wird die Listenansicht pagginiert.
+2. Filter entfernen
+   Sind einzelne Attribute für eine Filterung aktiviert, so sollte man bei sehr großen
+   Datenmengen diese nicht verwenden. Die Filter arbeiten nicht unabhängig voneinenander, so
+   dass hier die auszuführenden Queries mit steigender Anzahl der Filter und Datenseätze sehr
+   lang zur Ausführung brauchen. Als Alternative zur Filterung können die Attribute für eine
+   Suche aktiviert werden. Die Eingrenzung der Liste bleibt gleich - nur das eben keine vorgegebenen
+   Daten im Panel vorhanden sind.
+   Für MM 3.x soll es an der Stelle eine weitere Optimierung geben.
+3. Tabelle in DB mit Index versehen
+   Die Anzeige bei großen Datenmengen kann durch das Anlegen eines oder mehrerer Indexe beschleunigt werden.
+   Bei wenigen Datensätzen kann das auch zu einer langsameren Ausführung der Queries führen, so dass diese
+   nicht automatisch durch MM erzeugt werden. Es sollten die Spalten der Tabelle einen Index bekommen,
+   die in einer Suche verwendet werden z.B. Spalte "surname" in Tabelle "mm_empoyees". Das kann mit dem folgenden
+   Query angelegt werden:
+   `create index mm_empoyees_surname_id_index on mm_empoyees (surname, id);`
 
-Das Problem kann mit einem kleinen Workaround umgangen werden, in dem die 
-Sichtbarkeit auf "checked" getriggert aber die Prüfung mit einem NICHT (NOT)
-invertiert wird. Dazu wird bei den Ansichtsbedingung zunächst eine Bedingung NICHT
-angelegt und in diese die Prüfung der Checkbox auf "Aktiv" (siehe Screenshot).
-
-|img_checkbox-negation_01|
-
-In den folgenden zwei Screenshots sieht man das Ausblenden der E-Mail-Eingabemaske mit
-gesetzter Checkbox.
-
-E-Mail eingeblendet
-
-|img_checkbox-negation_02|
-
-E-Mail ausgeblendet
-
-|img_checkbox-negation_03|
-
-.. |img_checkbox-negation_01| image:: /_img/screenshots/cookbook/panels/checkbox-negation_01.jpg
-.. |img_checkbox-negation_02| image:: /_img/screenshots/cookbook/panels/checkbox-negation_02.jpg
-.. |img_checkbox-negation_03| image:: /_img/screenshots/cookbook/panels/checkbox-negation_03.jpg
 
 
 .. |br| raw:: html
