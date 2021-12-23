@@ -130,6 +130,12 @@ in `contao/dca` (siehe `Contao Handbuch <https://docs.contao.org/dev/framework/d
         ]
     ];
 
+Leider wird beim Frontend-Editing (FEE) die Relation mit Kindtabellen noch nicht unterstützt, so dass hier eine
+eigene Löschroutine erstellt werden muss. Zum Triggern könnte z. B. der `PostDeleteModelEvent <https://github.com/contao-community-alliance/dc-general/blob/61ffe2081323104b38ad951b2fbb3cb4b0f1a025/src/Event/PostDeleteModelEvent.php>`_ des DC_G eingesetzt werden.
+Mit der ID des gelöschten Model können alle Kinddatensätze mit der selben PID gefunden und gelöscht werden.
+
+Erfolgt das Editieren bzw. das Löschen eines MM-Items über ein Formular, muss dort eine Löschroutine mit eingebaut werden.
+
 .. |br| raw:: html
 
    <br />
