@@ -130,11 +130,11 @@ phpMyAdmin übernommen und getestet werden kann.
 Abschalten der Warnings im Debugmode
 ------------------------------------
 
-Möchte man sich eine Debugausgabe ansehen kann es vorkommen, dass durch eine Warning die Anzeige nicht
-zustande kommt. Die Warning kann z. B. aus einem Theme oder einer anderen Erweiterung kommen und mit
-MetaModels nichts weiter zu tun haben. Damit man dennoch seine gewünschte Anzeige über die Symfony-Toolbar
-angezeigt bekommt, kann man die Warnings unterdrücken. Dazu in der `config.yml` folgenden Eintrag
-einfügen:
+Möchte man sich eine Debugausgabe ansehen kann es vorkommen, dass durch eine Warning-Meldung die Anzeige
+nicht zustande kommt. Die Warning-Meldung kann z. B. aus einem Theme oder einer anderen Erweiterung kommen
+und mit MetaModels nichts weiter zu tun haben. Damit man dennoch seine gewünschte Anzeige über die
+Symfony-Toolbar angezeigt bekommt, kann man die Warnings unterdrücken. Dazu in der `config.yml` folgenden
+Eintrag einfügen:
 
 .. code-block:: php
    :linenos:
