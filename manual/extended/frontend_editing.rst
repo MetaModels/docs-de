@@ -181,11 +181,17 @@ Buttons konfiguriert werden. Als Standard wird "Speichern" und "Speichern und ne
 Mit der Konfiguration kann sowohl die Beschriftung der Button als auch die Aktion geändert werden. So ist
 zum Beispiel "Speichern und zurück", "Speichern und neu" oder auch "Speichern" mit einer Weiterleitung
 auf eine "Danke-Seite" ähnlich wie beim Formulargenerator möglich.
-Die Änderung der Button-Beschriftung kann derzeit nicht direkt im Backend erfolgen. Dieser kann entweder leer bleiben oder mit MSC.'name' gefüllt werden. Die Übersetzung findet über einen Eintrag im entsprechenden Languagefile des MetaModels statt, z. B. contao/languages/de/mm_table.php.
-Ist der Eintrag leer so lautet dieser z. B.: $GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen';
-Ist er mit MSC.'name' definiert, so lautet dieser z. B.: $GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen';
+Die Änderung der Button-Beschriftung kann derzeit nicht direkt im Backend erfolgen. Dieser kann entweder
+leer bleiben oder mit MSC.'name' gefüllt werden. Die Übersetzung findet über einen Eintrag im entsprechenden
+Languagefile des MetaModels statt, z. B. contao/languages/de/mm_table.php.
+Ist der Eintrag leer so lautet dieser z. B.: `$GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen'`;
+Ist er mit MSC.'name' definiert, so lautet dieser z. B.: `$GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen'`;
 
 |img_fee-eigene-buttons|
+
+Wird ein Button mit der Cehckbox "Not save" definiert, so erfolgt keine Speicherung der Daten. Damit kann z. B. ein
+Button "Abbrechen" oder "Zurück" definiert werden. Die HTML5-Validierung der Pflichtfelder wird bei Klick auf einen
+solchen Button per JavaScript übergangen.
 
 
 Benachrichtigungen über das Notification Center
