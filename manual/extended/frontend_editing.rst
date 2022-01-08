@@ -184,8 +184,8 @@ auf eine "Danke-Seite" ähnlich wie beim Formulargenerator möglich.
 Die Änderung der Button-Beschriftung kann derzeit nicht direkt im Backend erfolgen. Dieser kann entweder
 leer bleiben oder mit MSC.'name' gefüllt werden. Die Übersetzung findet über einen Eintrag im entsprechenden
 Languagefile des MetaModels statt, z. B. contao/languages/de/mm_table.php. |br|
-Ist der Eintrag leer so lautet dieser z. B.: `$GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen'`; |br|
-Ist er mit MSC.'name' definiert, so lautet dieser z. B.: `$GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen'`; |br|
+Ist der Eintrag leer so lautet dieser z. B.: ``$GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen'``; |br|
+Ist er mit MSC.'name' definiert, so lautet dieser z. B.: ``$GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen'``; |br|
 
 |img_fee-eigene-buttons|
 
@@ -194,7 +194,7 @@ Button "Abbrechen" oder "Zurück" definiert werden. Die HTML5-Validierung der Pf
 solchen Button per JavaScript übergangen.
 
 Im Feld Parameter kann auf Werte des Datensatzes zugegriffen und diese mit "Simple Tokens" ersetzt werden. So
-können in die URL dynamische Werte einfließen. Der Aufbau der Tokens ist ```##model_<property-name>##```. Der
+können in die URL dynamische Werte einfließen. Der Aufbau der Tokens ist ``##model_<property-name>##``. Der
 Präfix "model_" wurde eingefügt um die Möglichkeit zu haben, auch andere Daten wie z. B. die des Users einbauen
 zu können.
 
