@@ -181,11 +181,20 @@ Buttons konfiguriert werden. Als Standard wird "Speichern" und "Speichern und ne
 Mit der Konfiguration kann sowohl die Beschriftung der Button als auch die Aktion geändert werden. So ist
 zum Beispiel "Speichern und zurück", "Speichern und neu" oder auch "Speichern" mit einer Weiterleitung
 auf eine "Danke-Seite" ähnlich wie beim Formulargenerator möglich.
-Die Änderung der Button-Beschriftung kann derzeit nicht direkt im Backend erfolgen. Dieser kann entweder leer bleiben oder mit MSC.'name' gefüllt werden. Die Übersetzung findet über einen Eintrag im entsprechenden Languagefile des MetaModels statt, z. B. contao/languages/de/mm_table.php.
-Ist der Eintrag leer so lautet dieser z. B.: $GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen';
-Ist er mit MSC.'name' definiert, so lautet dieser z. B.: $GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen';
+Die Änderung der Button-Beschriftung kann derzeit nicht direkt im Backend erfolgen. Dieser kann entweder
+leer bleiben oder mit MSC.'name' gefüllt werden. Die Übersetzung findet über einen Eintrag im entsprechenden
+Languagefile des MetaModels statt, z. B. contao/languages/de/mm_table.php. |br|
+Ist der Eintrag leer so lautet dieser z. B.: $GLOBALS['TL_LANG']['mm_table']['MSC']['closeNback'] = 'Abbrechen'; |br|
+Ist er mit MSC.'name' definiert, so lautet dieser z. B.: $GLOBALS['TL_LANG']['MSC']['closeNback'] = 'Abbrechen'; |br|
 
 |img_fee-eigene-buttons|
+
+Im Feld Parameter kann auf Werte des Datensatzes zugegriffen und diese mit "Simple Tokens" ersetzt werden. So
+können in die URL dynamsiche Werte einließen. Der Aufbau der Tokens ist ```##model_<property-name>##```. Der
+Präfix "model_" wurde eingefügt um die Möglichkeit zu haben, auch andere Daten wie z. B. die des Users einbauen
+zu können.
+
+|fee-simple-tokens|
 
 
 Benachrichtigungen über das Notification Center
@@ -245,6 +254,7 @@ der Eingabemaske ausgewählt werden.
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
 
 .. |img_fee-eigene-buttons| image:: /_img/screenshots/extended/frontend_editing/fee-eigene-buttons.png
+.. |fee-simple-tokens| image:: /_img/screenshots/extended/frontend_editing/fee-simple-tokens.png
 
 .. |br| raw:: html
 
