@@ -194,7 +194,7 @@ Button "Abbrechen" oder "Zurück" definiert werden. Die HTML5-Validierung der Pf
 solchen Button per JavaScript übergangen.
 
 Im Feld Parameter kann auf Werte des Datensatzes zugegriffen und diese mit "Simple Tokens" ersetzt werden. So
-können in die URL dynamische Werte einließen. Der Aufbau der Tokens ist ```##model_<property-name>##```. Der
+können in die URL dynamische Werte einfließen. Der Aufbau der Tokens ist ```##model_<property-name>##```. Der
 Präfix "model_" wurde eingefügt um die Möglichkeit zu haben, auch andere Daten wie z. B. die des Users einbauen
 zu können.
 
