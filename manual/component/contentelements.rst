@@ -22,7 +22,7 @@ und die Templateauswahl (wie werden die Daten angezeigt) und ggf. noch
 die Filtereinstellung (welche Daten werden ausgegeben).
 
 Zu beachten gilt, dass eine Detailansicht mit einem Item auch nur eine
-"Listendarstellung" ist, aber mit entsprechnder Filterung für eine
+"Listendarstellung" ist, aber mit entsprechender Filterung für eine
 Ausgabe.
 
 Für die Filtereinstellungen sind die wichtigsten Auswahloptionen
@@ -62,6 +62,67 @@ Optionen CE Filter
   Auswahl des Filtersets
 * **Attribute**: |br|
   Attribute, die in dem Filter im Frontend angezeigt werden sollen
+
+Man kann einen Filter und die Liste auf verschiedene Seiten setzen und beim Filterelement
+eine Weiterleitungsseite definieren. Damit jedoch aus den POST-Parametern des Filterelementes
+die GET-Parameter für die Liste entstehen, muss auf der Seite der Liste das selbe Filterelement
+eingebaut sein - es reicht, wenn das Filterelement als ausgeblendetes Contentelement vorhanden ist.
+
+Es gibt einen Sicherheitscheck von Contao, dass nur identische Formulare die
+selben Daten verarbeiten dürfen, d.h. das Filterelement muss als Modul erstellt werden und jeweils
+auf die Seite mit dem sichtbaren Filter und die Listenseite eingebaut werden.
+
+Das Auslösen des Filters kann per Button erfolgen oder automatisch per Javascript, wenn Filterwerte
+in einem Filterwidget geändert werden (Checkbox "Bei Änderung aktualisieren").
+
+.. note:: JavaScript ab MM 2.2 benötigt kein Mootools oder jQuery mehr ("Vanilla Script").
+
+Möchte man in den Ablauf des JavaScripts eingreifen, so ist das mit verschiedenen Aufrufen möglich
+- siehe Kommentar in der JavaScript-Datei.
+
+Beispiel für einen eigenen Aufruf des 'submitonchange':
+
+.. code-block:: js
+   :linenos:
+
+    <script>
+    // Remove 'submitonchange'.
+    window.MetaModelsFE.removeClassHook('submitonchange', window.MetaModelsFE.applySubmitOnChange);
+    // Add own 'submitonchange'.
+    window.MetaModelsFE.addClassHook('submitonchange', (el, helper) => {
+        helper.bindEvent({
+            object: el,
+            type  : 'change',
+            func  : (event) => {
+                // Your code...
+            },
+        });
+    });
+    </script>
+
+Beispiel für einen eigenen Aufruf des 'submitonchange' wenn mehrere Filterelemente auf der Seite sind:
+
+.. code-block:: js
+   :linenos
+
+    <script>
+    window.MetaModelsFE.addClassHook('submitonchange', (el, helper) => {
+        // Check right element.
+        if (el.withoutChange) {
+             return;
+        }
+        // Remove 'submitonchange'
+        helper.unbindEvents({object: el, type: 'change'});
+        // Add own 'submitonchange'.
+        helper.bindEvent({
+            object: el,
+            type  : 'change',
+            func  : (event) => {
+                // Own code...
+            },
+        });
+    });
+    </script>
 
 Ablauf
 ------
