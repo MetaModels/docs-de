@@ -78,7 +78,7 @@ in einem Filterwidget geändert werden (Checkbox "Bei Änderung aktualisieren").
 .. note:: JavaScript ab MM 2.2 benötigt kein Mootools oder jQuery mehr ("Vanilla Script").
 
 Möchte man in den Ablauf des JavaScripts eingreifen, so ist das mit verschiedenen Aufrufen möglich
-- siehe Kommentar in der JavaScript-Datei.
+- siehe Kommentar in der JavaScript-Datei ``metamodels.js``.
 
 Beispiel für einen eigenen Aufruf des 'submitonchange':
 
@@ -103,7 +103,7 @@ Beispiel für einen eigenen Aufruf des 'submitonchange':
 Beispiel für einen eigenen Aufruf des 'submitonchange' wenn mehrere Filterelemente auf der Seite sind:
 
 .. code-block:: js
-   :linenos
+   :linenos:
 
     <script>
     window.MetaModelsFE.addClassHook('submitonchange', (el, helper) => {
