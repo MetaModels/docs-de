@@ -67,13 +67,14 @@ Attribute
     * Option zum Verhindern des "id-"-Präfix für Zahlen
 * Checkbox
     * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
-    * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
+    * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Toggle-Funktion
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske
 * Datei
     * Unterstützung manuelle Dateisortierung
-    * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
+    * arbeitet nun mit der "picture factory" - damit wird das Lazy-load der Bildereinstellungen unterstützt
     * Option "Nur lesen" (readonly) ist nun möglich
-    * Die Einschänkung der Auswahl auf "nur Dateien" würde erweitert auf "nur Ordner" - Standard bleibt Dateien und Ordner
+    * Die Einschränkung der Auswahl auf "nur Dateien" würde erweitert auf "nur Ordner" - Standard bleibt Dateien und Ordner
+    * Unterstützung der Bildgröße bei einer Lightbox mit Werten aus den Layouteinstellungen
 * Datum
     * In den Einstellungen der Eingabemaske kann festgelegt werden, welcher Teil des Timestamps "auf Null" gesetzt
       werden soll, damit z. B. die Zeit ohne eine Tagesangabe bzw. ein Datum ohne Zeitergänzung gespeichert werden
@@ -104,16 +105,17 @@ Attribute
     * Je Sprache kann ein eigenes Icon-Set ausgewählt werden
     * in der Listenansicht sind die Icons nun in der Reihenfolge wie die Sprachen des Model definiert sind - bisher
       war das Icon der Fallbacksprache immer an erster Position
-    * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Togglefunktion
+    * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Toggle-Funktion
     * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
       bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
       Achtung! die Icons in der Listenansicht im Backend wechseln auch mit.
 * Übersetzte Datei
     * Unterstützung manuelle Dateisortierung
-    * arbeitet nun mit der "picture factory" - damit wird das Lazyload der Bildereinstellungen unterstützt
+    * arbeitet nun mit der "picture factory" - damit wird das Lazy-load der Bildereinstellungen unterstützt
     * Option "Pflichtfeld" steht nun zur Verfügung
     * Option "Nur lesen" (readonly) ist nun möglich
-    * Die Einschänkung der Auswahl auf "nur Dateien" würde erweitert auf "nur Ordner" - Standard bleibt Dateien und Ordner
+    * Die Einschränkung der Auswahl auf "nur Dateien" würde erweitert auf "nur Ordner" - Standard bleibt Dateien und Ordner
+    * Unterstützung der Bildgröße bei einer Lightbox mit Werten aus den Layouteinstellungen
 * Übersetzte Text-Tabelle
     * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
     * Checkbox zum Deaktivieren der manuellen Sortierung
