@@ -59,6 +59,7 @@ Allgemein und Core
   "$this->params" als Array zur Verfügung stehen. Damit kann man ein Listentemplate weiter verallgemeinern
   und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe oder JavaScript-Inhalte
   steuern. Siehe :ref:`rst_cookbook_templates_fe_list_parameters`.
+* Das Zählen der Items in den Widgets des FE-Filters wurde abgeschaltet - siehe `Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
 
 Attribute
 ---------
@@ -131,6 +132,10 @@ Filter
       "mm_filter_clearall*.*" gefunden werden mit der Aufforderung das umzustellen - automatisch können
       diese leider nicht angepasst werden. Sollte an der Stelle im FE eine Fehlermeldung kommen, dass das alte Template
       nicht gefunden werden kann, bitte das CE/FE-Modul einmal neu abspeichern.
+    * die Widgets für die FE-Filter haben die Property "used" mit den Werten "true|false" bekommen -
+      "true" wenn das Widget benutzt wird
+    * die Zählerausgabe bei den Widgets im FE-Filter nicht mehr unterstützt - die Templates wurden entsprechend angepasst.
+      `Erklärung siehe Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
 * Einfache Abfrage
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
@@ -182,14 +187,16 @@ Frontend-Editing (FEE)
 ______________________
 * Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
 * UnterstützungDateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
-* Konfiguration der Buttons der Eingabemaske im FEE inkl. Option Weiterleitungsseite und "Nicht speichern"
+* Konfiguration der Buttons der Eingabemaske im FEE inkl. Option für Weiterleitungsseite und "Nicht speichern";
+  Option für Weiterleitungsseite können mit "Simple Tokens" dynamsich gestaltet werden
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
   Datensätzen im FEE
 * Unterstützung des MCW im FEE mit (Vanilla Script) z.B. für Attribut Text-Tabelle zum Vervielfältigen und Sortieren
   der Zeilen
 * Unterstützung Min/Max bei Attribut Text-Tabelle im FE
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
-  besser per CSS arrangiert/gestyled werden können
+  besser per CSS arrangiert/gestyled werden
+* es wird eine saubere Exception geworfen, wenn ein Datensatz nicht löschbar ist
 
 Screenshots
 -----------
