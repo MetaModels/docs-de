@@ -28,7 +28,7 @@ ist die Anzeige der Widgets inklusive zugehöriger Picker wie Datum, Farbe oder 
 keine direkte Aufgabe des FEE. Bei den entsprechenden Widget werden CSS-Klassen
 ausgegeben, anhand derer man per JavaScript verschiedene Widgets einbinden kann.
 
-Mit MM 2.2 stehen im Prinzip alle Attribute für ein Frontend-Editing zur Verfügung. Der Stand
+Mit MM 2.2 stehen im Prinzip alle (einsprachigen) Attribute für ein Frontend-Editing zur Verfügung. Der Stand
 der Freigabe ist im folgenden Ticket auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
 
 Die erste Implementierung des Frontend-Editing wurde über ein
