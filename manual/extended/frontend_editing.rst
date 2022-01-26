@@ -3,13 +3,13 @@
 Frontend-Editing (FEE)
 ======================
 
-.. warning:: Das FEE ist für MM 2.0, 2.1 und 2.2 einsetzbar, jedoch sind nicht alle
-   Eingabewidgets nutzbar - siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_.
+.. note:: Die Unterstützung einiger Attribute steht erst ab ab MM 2.2 zur Verfügung.
+   siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_.
 
 
 Die Erweiterung Frontend-Editing (FEE) ermöglicht die Bearbeitung
 von MetaModels-Daten im Frontend. Das bedeutet, dass Webseitenbesucher
-neue Datensätze anlegen und bearbeiten können.
+neue Datensätze anlegen, bearbeiten, duplizieren und löschen können.
 
 Üblicherweise wird die Bearbeitung nicht für alle Webseitenbesucher
 zugänglich gemacht, sondern nur einer bestimmten Nutzergruppe. Dafür
@@ -19,18 +19,17 @@ eingesetzt.
 Außerdem ist es möglich, an Mitgliedergruppen individuelle Eingabemasken zuzuweisen, um
 zum Beispiel im Frontend nur bestimmte Felder zur Bearbeitung frei zu geben. Diese
 Zuweisungen der Bearbeitungsfreigaben erfolgen zurzeit ausschließlich auf Ebene der
-Mitgliedergruppen.
+Mitgliedergruppen. Analog wie im Backend können die Bearbeitungsmöglichkeiten eingeschränkt
+werden, so dass z. B. das Löschen von Datensätzen nicht erlaubt ist.
 
-Im Frontend werden dieselben Eingabewidgets ("Formularfelder") des DC_General
-wie im Backend ausgegeben. Da im Frontend nicht so viele Restriktionen wie im
-Backend vorliegen (z.B. MooTools als JavaScript-Framework), ist die Anzeige
-der Widgets inklusive zugehöriger Picker wie Datum, Farbe oder dem RichTextEditor
+Im Frontend werden die Eingabewidgets als Formularfelder ausgegeben. Da im Frontend
+nicht so viele Restriktionen wie im Backend vorliegen (z.B. MooTools als JavaScript-Framework),
+ist die Anzeige der Widgets inklusive zugehöriger Picker wie Datum, Farbe oder dem RichTextEditor
 keine direkte Aufgabe des FEE. Bei den entsprechenden Widget werden CSS-Klassen
 ausgegeben, anhand derer man per JavaScript verschiedene Widgets einbinden kann.
 
-Es stehen aktuell noch nicht alle Attribute für ein Frontend-
-Editing wie im Backend zur Verfügung. Der Stand der Freigabe ist im folgenden Ticket
-auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
+Mit MM 2.2 stehen im Prinzip alle Attribute für ein Frontend-Editing zur Verfügung. Der Stand
+der Freigabe ist im folgenden Ticket auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
 
 Die erste Implementierung des Frontend-Editing wurde über ein
 `Fundraising <https://now.metamodel.me/de/unterstuetzer/fundraising#frontend-editing>`_
