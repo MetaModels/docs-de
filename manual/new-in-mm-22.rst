@@ -60,6 +60,8 @@ Allgemein und Core
   und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe oder JavaScript-Inhalte
   steuern. Siehe :ref:`rst_cookbook_templates_fe_list_parameters`.
 * Das Zählen der Items in den Widgets des FE-Filters wurde abgeschaltet - siehe `Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
+* Beim Contentelement MM-Liste ist in der Listenansicht des Artikels die Filterauswahlen des "Statischen Parameters"
+  zusätzlich zu der Angabe des Filternamens zu sehen
 
 Attribute
 ---------
@@ -76,6 +78,7 @@ Attribute
     * Option "Nur lesen" (readonly) ist nun möglich
     * Die Einschränkung der Auswahl auf "nur Dateien" würde erweitert auf "nur Ordner" - Standard bleibt Dateien und Ordner
     * Unterstützung der Bildgröße bei einer Lightbox mit Werten aus den Layouteinstellungen
+    * ein Platzhalterbild kann ausgewählt werden
 * Datum
     * In den Einstellungen der Eingabemaske kann festgelegt werden, welcher Teil des Timestamps "auf Null" gesetzt
       werden soll, damit z. B. die Zeit ohne eine Tagesangabe bzw. ein Datum ohne Zeitergänzung gespeichert werden
@@ -117,6 +120,7 @@ Attribute
     * Option "Nur lesen" (readonly) ist nun möglich
     * Die Einschränkung der Auswahl auf "nur Dateien" würde erweitert auf "nur Ordner" - Standard bleibt Dateien und Ordner
     * Unterstützung der Bildgröße bei einer Lightbox mit Werten aus den Layouteinstellungen
+    * ein Platzhalterbild kann ausgewählt werden
 * Übersetzte Text-Tabelle
     * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
     * Checkbox zum Deaktivieren der manuellen Sortierung
