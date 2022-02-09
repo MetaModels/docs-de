@@ -146,6 +146,7 @@ Filter
       "true" wenn das Widget benutzt wird
     * die Zählerausgabe bei den Widgets im FE-Filter nicht mehr unterstützt - die Templates wurden entsprechend angepasst.
       `Erklärung siehe Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
+    * Beim CE/Modul MM-Filter kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
 * Einfache Abfrage
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
