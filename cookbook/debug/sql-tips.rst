@@ -85,7 +85,7 @@ Dateien anhand der UUID suchen:
 
 Die UUID einer Datei oder Ordners kann man in der Dateiverwaltung über den Infobutton ablesen.
 Die Suche in der DB ist etwas schwieriger, da die UUIDs nicht im "Klartext in der DB stehen.
-Für die Suche muss die UUID erst umgewandelt werden
+Für die Suche muss die uuid der DB erst umgewandelt werden:
 
 .. code-block:: sql
    :linenos:
