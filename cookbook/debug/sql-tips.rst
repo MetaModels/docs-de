@@ -80,3 +80,33 @@ wie folgt vornehmen:
 Damit werden in der Eingabemaske nur noch Benutzer der Benutzergruppe ``2``
 angezeigt.
 
+Dateien anhand der UUID suchen:
+*********************************************
+
+Die UUID einer Datei oder Ordners kann man in der Dateiverwaltung über den Infobutton ablesen.
+Die Suche in der DB ist etwas schwieriger, da die UUIDs nicht im "Klartext in der DB stehen.
+Für die Suche muss die UUID erst umgewandelt werden
+
+.. code-block:: sql
+   :linenos:
+   
+   SELECT * FROM tl_files
+   WHERE LOWER(CONCAT(
+        LEFT(HEX(uuid), 8),
+        '-', MID(HEX(uuid), 9,4),
+        '-', MID(HEX(uuid), 13,4),
+        '-', MID(HEX(uuid), 17,4),
+        '-', RIGHT(HEX(uuid), 12))
+      ) = '2abbf0c1-e76f-43e5-a123-00ac10d40e00';
+
+   -- oder
+   
+   SELECT * FROM tl_files
+   WHERE LCASE(CONCAT_WS('-',
+          HEX(SUBSTR(uuid,  1, 4)),
+          HEX(SUBSTR(uuid,  5, 2)),
+          HEX(SUBSTR(uuid,  7, 2)),
+          HEX(SUBSTR(uuid,  9, 2)),
+          HEX(SUBSTR(uuid, 11))
+      )) = '2abbf0c1-e76f-43e5-a123-00ac10d40e00';
+ 
