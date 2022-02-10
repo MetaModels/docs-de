@@ -62,7 +62,7 @@ Allgemein und Core
 * Das Zählen der Items in den Widgets des FE-Filters wurde abgeschaltet - siehe `Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
 * Beim Contentelement MM-Liste ist in der Listenansicht des Artikels die Filterauswahlen des "Statischen Parameters"
   zusätzlich zu der Angabe des Filternamens zu sehen
-* neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID]::[ID filter]}}` - damit ist kein extra MM-CE/Modul notwendig
+* neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID](::[ID filter])}}` - damit ist kein extra MM-CE/Modul notwendig
 
 Attribute
 ---------
