@@ -81,9 +81,11 @@ Optionen der Eingabefeldes
   Attribut: Anzeige der Attributoptionen
 * **Funktionsbezogene Einstellungen**: |br|
   Aktivierung von "nur lesen" oder "Pflichtfeld" |br|
-  weitere Optionen je nach Attributtyp
+  weitere Optionen je nach Attributtyp z. B. Eingabevalidierung, TinyMCE-Aktivierung usw.
 * **Anzeigeoptionen**: |br|
   Angabe der Contao-CSS-Backendklassen z.B. "w50" für eine 50%-Breite
+* **Auflistung, Filterung und Sortierung im Backend**: |br|
+  Checkboxen für Filterbar und/oder Suchbar - abhängig vom Attribusttyp
 
 Optionen der Anzeigebedingungen des Eingabewidgets
 --------------------------------------------------
