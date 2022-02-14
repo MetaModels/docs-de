@@ -73,6 +73,9 @@ Attribute
     * Die optionalen eigenen Icons werden als 16x16px Thumbnails gerendert
     * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Toggle-Funktion
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske
+* ContentArticle
+    *  es gibt sowohl in der Eingabemaske als auch in der Listenansicht eine Vorschau auf die angelegten Elemente
+       inkl. Typ und ob sichtbar oder nicht
 * Datei
     * Unterstützung manuelle Dateisortierung
     * arbeitet nun mit der "picture factory" - damit wird das Lazy-load der Bildereinstellungen unterstützt
@@ -117,6 +120,9 @@ Attribute
     * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
       bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
       Achtung! die Icons in der Listenansicht im Backend wechseln auch mit.
+* Übersetzte ContentArticle
+    *  es gibt sowohl in der Eingabemaske als auch in der Listenansicht eine Vorschau auf die angelegten Elemente
+       inkl. Typ und ob sichtbar oder nicht
 * Übersetzte Datei
     * Unterstützung manuelle Dateisortierung
     * arbeitet nun mit der "picture factory" - damit wird das Lazy-load der Bildereinstellungen unterstützt
