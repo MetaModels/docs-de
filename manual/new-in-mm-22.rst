@@ -217,6 +217,9 @@ ______________________
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden
 * es wird eine saubere Exception geworfen, wenn ein Datensatz nicht löschbar ist
+* im CE/Modul "MetaModels Frontend-Bearbeitung" kann nun ein eigenes Template für den Wrapper gewählt werden - im
+  Standardtemplate ist ein JavaScript und CSS für die Aktualisierung der Maske bei Ansichtsbedingungen eingebunden;
+  zusätzlich gibt es ein Template zur Auswahl, welches die beiden eingebundenen Dateien nicht enthält
 
 Screenshots
 -----------
