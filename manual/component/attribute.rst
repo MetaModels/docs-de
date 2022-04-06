@@ -134,6 +134,13 @@ Beispiele für zusätzliche Attribute sind:
 * **Levenshtein**: Wortsuche nach Levenshtein |br|
   mit dem Attribut wird eine Wortähnlichkeit für eine flexible Suche ermittelt
 * **Länderauswahl**: Auswahlliste mit Ländern
+* **ContentArtikel**: Möglichkeit Contao-Contentelemente analog wie ein Artikel in |br|
+  einem Widget anzulegen - gibt es auch als übersetzte Variante
+* **Multi-Tabelle**: Ähnlich Attribut "Text-Tabelle" nur das in jede "Zelle" ein eigener |br|
+  Widgettyp wie Select, Radiobuttons, Checkboxen usw. eingebaut werden kann - gibt es |br|
+  auch als übersetzte Variante
+* **Geo-Entfernung**: berechnet bei einer Umkreissuche die geogr. Entfernung zum Suchpunkt |br|
+  mit dem Wert können Listen nach der Entfernung sortiert werden
 
 Die Reihenfolge, wie die Attribute angelegt werden, ist frei wählbar -
 lediglich bei Attributen, die sich auf andere Attribute beziehen wie z.B.
