@@ -182,7 +182,7 @@ Anzeige der Items nach einer eigenen Sortierungsnummer aber alle Items ohne Numm
    
    SELECT `id` 
    FROM mm_sv_categories
-   ORDER BY SNULL(`sort_number`), `sort_number` ASC
+   ORDER BY ISNULL(`sort_number`), `sort_number` ASC
 
 Man kann auch einzelne Items als Erste anzeigen lassen (Attribut "Prio-Slider" = 1) und
 den Rest per Zufall:
