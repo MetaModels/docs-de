@@ -181,6 +181,8 @@ Filter
     * Attributstype Übersetzte Checkbox möglich
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
+* Levenshtein-gestützte Suche (Ähnlichkeitssuche)
+    * siehe bei Attribute
 * Mehrfachauswahl [Tags]
     * Attributstypen Alias und Übersetzter Alias möglich
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
