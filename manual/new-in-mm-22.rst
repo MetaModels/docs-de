@@ -96,6 +96,12 @@ Attribute
     * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
+* Levenshtein-gestützte Suche (Ähnlichkeitssuche)
+    * Einstellmöglichkeit der Wortlänge (min + max), die im Index gesucht wird
+    * Erklärung zu den Einstellmöglichkeiten beim Attribut
+    * Autovervollständigung beim FE-Widget der Suche Umstellung von Mootools auf "Vanilla Script" somit
+      unabhängig von Mootools - Auswahl des (neuen) Templates beachten
+    * Autovervollständigung kann abgeschaltet werden und minimale Buchstabenlänge kann angegeben werden
 * Mehrfachauswahl [tags]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
@@ -103,7 +109,7 @@ Attribute
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Rating ("Sternchenbewertung")
-    * Umstellung von Mootools auf Vanilla Script somit unabhängig von Mootools
+    * Umstellung von Mootools auf "Vanilla Script" somit unabhängig von Mootools
     * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
 * Text-Tabelle
     * Einstellungen zum Angeben der min. und max. Anzahl der Zeilen
