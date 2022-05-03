@@ -150,7 +150,7 @@ und Filter abfragen:
    
    -- Filter
    SELECT type FROM `tl_metamodel_filtersetting` GROUP BY type ORDER BY type
-   -- Filterregeln "customsql" und "simplelookup" sind im MM-Core enthalten 
+   -- Filterregeln "conditionand, conditionor, customsql, simplelookup" sind im MM-Core enthalten 
 
 Die daraus sich ergebende Liste kann dann über den Contao Manager oder die Konsole installiert werden und nicht genutzte
 Module bleiben außen vor.
