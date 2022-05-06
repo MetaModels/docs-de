@@ -70,7 +70,7 @@ Installation per Composer
 
 Voraussetzungen für die Installation:
 
-* MetaModels core 2.1
+* MetaModels core ab 2.1
 
 
 Unterstützte Metadaten
