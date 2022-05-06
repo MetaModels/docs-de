@@ -21,9 +21,10 @@ keine Tickets mehr, die auf MM 2.2 verweisen.
 Allgemein und Core
 ------------------
 
-* kompatibel zum `strict mode` von MySQL und MariaDB
+* kompatibel zum `strict mode` von MySQL und MariaDB; alle Queries auf queryBulder umgeschrieben und bei den
+  Abfragen einen Tabellenpräfix eingefügt - damit fällt die prüfung auf die von MySQL-Reservierten Wörter weg
 * verschiedene Optimierungen für eine schnellere Anzeige von Daten
-* Backend von MM "aufgeräumt" und typische Einstellungen als Default gesetzt
+* Backend von MM "aufgeräumt" und typische Einstellungen als Default gesetzt (ca. 30% weniger Klicks beim Erstellen)
 * im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons aus Contao für Filterung und Filter
   zurücksetzen statt der "Gelben Pfeile" eingebaut
 * Im Bereich der übersetzten MetaModels wurde etliches an Code refactured - so ist z.B. ein neues Interface
@@ -63,6 +64,7 @@ Allgemein und Core
 * Beim Contentelement MM-Liste ist in der Listenansicht des Artikels die Filterauswahlen des "Statischen Parameters"
   zusätzlich zu der Angabe des Filternamens zu sehen
 * neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID](::[ID filter])}}` - damit ist kein extra MM-CE/Modul notwendig
+* Attribute als Variante haben eine Kennzeichnung in der Liste der Attribute
 
 Attribute
 ---------
