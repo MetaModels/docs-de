@@ -215,8 +215,9 @@ Filter
 
 Frontend-Editing (FEE)
 ______________________
+* Übersicht der unterstützten Attribute - `siehe Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
 * Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
-* UnterstützungDateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
+* Unterstützung Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option für Weiterleitungsseite und "Nicht speichern";
   Option für Weiterleitungsseite können mit "Simple Tokens" dynamsich gestaltet werden
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
