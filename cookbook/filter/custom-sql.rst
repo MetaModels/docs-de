@@ -366,25 +366,50 @@ Filter für ein Select/Tags in der Eingabemaske
 
 Die Attribute Einfach- und Mehrfachauswahl (Select und Tags) können für die
 Eingabemaske mit einem Filter versehen werden. Soll dieser Filter dynamisch
-auf ein anderes Attribut reagieren, kann man mit der Filterregel "Eigenes SQL"
-arbeiten und die dynamischen Parameter verwenden.
+auf ein anderes Attribut der Eingabemaske reagieren, kann man mit der Filterregel
+"Eigenes SQL" arbeiten und die dynamischen Parameter verwenden.
 
 Als dynamischer Parameter kann z.B. die URL mit den GET-Parametern oder bei einem
 `submitonchange` eines Attributes in der Eingabemaske die POST-Parameter ausgewertet
-werden.
+werden. Bei GET startet man bei der ID des Datensatzes und bei Post, mit dem Wert/Werten
+des zu triggernden Attributes.
 
 Zum Beispiel soll auf die Select-Auswahl der Abteilung die Liste der auswählbarer
 Mitarbeiter auf die eingeschränkt werden, die zur selben Abteilung gehören. "Gelauscht"
-wird auf den POST-Parameter der Abteilung und anschließend kann mit QUERY-U (update)
-oder QUERY-C (create) die Mitarbeiterliste eingegrenzt werden.
+wird auf den POST-Parameter der Abteilung und anschließend kann mit QUERY-P (POST)
+oder QUERY-G (GET) die Mitarbeiterliste eingegrenzt werden.
 
 .. code-block:: php
    :linenos:
    
    SELECT `id` FROM  mm_mitarbeiter
    WHERE IF (
-         {{param::post?name=abteilung}} != 'NULL', (QUERY-U), (QUERY-C)
+         {{param::post?name=abteilung}} != 'NULL', (QUERY-P), (QUERY-G)
     )
+
+Bei der Eingrenzung einer Mehrfachauswahl muss man etwas tricksen, da die Bedingung
+mit IF in den Sub-Queries keine mehrfachen Werte als Rückgabe zulässt. Es ist aber möglich,
+mit GROUP_CONCAT einen einzelnenen String mit den IDs zu erzeugen, der von IN ausgewertet
+werden kann.
+
+Zum Beispiel sollen beim Attribut "Reisebausteine" die möglichen Auswahlen auf die Auswahl
+des Attributes "Reiseziele" eingegrenzt werden. Die folgende Vorlage soll als Anregung
+dienen - ggf. gibt es elegantere Lösungen.
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT rb.id FROM mm_reisebausteine AS rb
+   WHERE rb.region IN (
+       SELECT IF(
+           {{param::post?name=reiseziele}} != 'NULL',
+           (SELECT GROUP_CONCAT(rz.id) FROM mm_reiseziele AS rz 
+               WHERE rz.alias IN ({{param::post?name=reiseziele}}) GROUP BY rz.pid),
+           (SELECT GROUP_CONCAT(rel.value_id) AS id FROM tl_metamodel_tag_relation AS rel
+               WHERE rel.att_id = '42'
+               AND rel.item_id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1) GROUP BY rel.att_id)
+       ) as id
+   )
 
 Filter für Mehrfachauswahl in der Eingabemaske: nur unausgewählte Items
 ***********************************************************************
