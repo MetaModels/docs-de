@@ -65,6 +65,7 @@ Allgemein und Core
   zusätzlich zu der Angabe des Filternamens zu sehen
 * neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID](::[ID filter])}}` - damit ist kein extra MM-CE/Modul notwendig
 * Attribute als Variante haben eine Kennzeichnung in der Liste der Attribute
+* Alle SQL-Queries wurden mit Tabellenpräfixen versehen, so dass eine Prüfung auf `reservierte Wörter von MySQL <https://dev.mysql.com/doc/refman/5.7/en/keywords.html>`_ nicht mehr notwendig ist
 
 Attribute
 ---------
@@ -164,6 +165,8 @@ Filter
     * Beim CE/Modul MM-Filter kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
       (bei eigenen Templates als Linkliste diese ggf. anpassen)
     * Beim CE/Modul MM-Filterreset kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
+    * Die Templates für die Filter wurden für eine sauberes Markup umgebaut - `siehe Github-Issue <https://github.com/MetaModels/core/issues/374>`_
+      - ggf. eigene Templates anpassen
 * Einfache Abfrage
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
