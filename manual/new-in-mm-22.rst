@@ -66,6 +66,7 @@ Allgemein und Core
 * neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID](::[ID filter])}}` - damit ist kein extra MM-CE/Modul notwendig
 * Attribute als Variante haben eine Kennzeichnung in der Liste der Attribute
 * Alle SQL-Queries wurden mit Tabellenpräfixen versehen, so dass eine Prüfung auf `reservierte Wörter von MySQL <https://dev.mysql.com/doc/refman/5.7/en/keywords.html>`_ nicht mehr notwendig ist
+* alle xhtml-Templates wurden entfernt
 
 Attribute
 ---------
