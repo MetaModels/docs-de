@@ -166,6 +166,8 @@ auf Github im entsprechenden Repository (z.B. MetaModels/core) im Reiter
 `'branches' <https://github.com/MetaModels/core/branches>`_. Die dort angegebene Bezeichnung wie
 ``hotfix/2.1.25`` muss um den Präfix ``dev-`` ergänzt werden, sowie um ein ``as 2.1.25`` am Ende.
 
+Eine Übersicht zu den Angaben in der composer.json `hier <https://devhints.io/composer>`_.
+
 Möchte man ein solches Paket testen, muss es explizit im Contao-Manger mit 
 
 ``dev-hotfix/2.1.25 as 2.1.25``
