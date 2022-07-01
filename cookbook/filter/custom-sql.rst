@@ -105,6 +105,26 @@ Alternativ
    AND (`date_stop` IS NULL OR DATE(FROM_UNIXTIME(`date_stop`)) >= DATE(now()))
 
 
+Filterung nach Datum (start) und Veröffentlichungsdatum mit Prüfung per GET
+***************************************************************************
+
+Zum Beispiel für Events, die nach Erreichen des Startdatums ausgeblendet werden sollen
+aber erst ab einem bestimmten Datum angezeigt werden dürfen - sofern gesetzt.
+
+Zur Prüfung kann im FE an die URL ein GET-Parameter angehangen werden - Datumsformat ist
+"YYYY-MM-DD" z. B. "domain.tld/meine-liste.html?now=2023-07-10".
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id FROM {{table}}
+   WHERE DATE(FROM_UNIXTIME(`date_start`)) >= DATE(now())
+   AND (`date_published` IS NULL
+   	OR DATE(FROM_UNIXTIME(`date_published`)) <= DATE(now())
+   	OR DATE(FROM_UNIXTIME(`date_published`)) <= {{param::get?name=now}}
+   )
+
+
 Filterung nach Kind-Elementen eines Eltern-Elements
 ***************************************************
 
