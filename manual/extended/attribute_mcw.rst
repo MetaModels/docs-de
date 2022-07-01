@@ -37,9 +37,9 @@ Die DCA-Konfigurationsdatei `config.php` muss an einer geeigneten
 Stelle in der Contao-Installation abgelegt oder eine bestehende Datei
 mit den Angeban ergänzt werden. Das kann z.B. erfolgen in
 
-* /app/Resources/contao/config (ab Contao 4.4)
-* /config/Resources/contao/config (ab Contao 4.9)
-* /src/AppBundle/Resources/contao/config (eigenes Bundle)
+* app/Resources/contao/config/ (ab Contao 4.4)
+* contao/config/ (ab Contao 4.9)
+* src/AppBundle/Resources/contao/config/ (eigenes Bundle)
 
 Diese ist Datei entsprechend den eigenen MetaModel-Parametern und den gewünschten
 Feldern mit einem Editor anzupassen - siehe
@@ -52,7 +52,7 @@ wie folgt aussehen:
    :linenos:
    
    <?php
-   // /config/Resources/contao/config/config.php
+   // /contao/config/config.php
 
    $GLOBALS['TL_CONFIG']['metamodelsattribute_multi']['mm_my_table']['my_mcw'] = array(
       'minCount'     => 2,
