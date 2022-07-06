@@ -101,11 +101,16 @@ Attribute
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Levenshtein-gestützte Suche (Ähnlichkeitssuche)
+    * Das automatische Abschalten des Autosubmit bei CE/Modul-MM-Filter wurde entfernt - durch die neuen
+      Einstellungsmöglichkeiten ist das nicht mehr notwendig
     * Einstellmöglichkeit der Wortlänge (min + max), die im Index gesucht wird
     * Erklärung zu den Einstellmöglichkeiten beim Attribut
     * Autovervollständigung beim FE-Widget der Suche Umstellung von Mootools auf "Vanilla Script" somit
       unabhängig von Mootools - Auswahl des (neuen) Templates beachten
     * Autovervollständigung kann abgeschaltet werden und minimale Buchstabenlänge kann angegeben werden
+    * Bei den Filtereinstellungen muss für das Autocomplete das entsprechende Template gewählt werden; das Autocomplete
+      kann abner auch per Checkbox abgeschaltet werden - zusätzlich kann aktiviert werden, dass bei Klick auf ein
+      Autosubmit-Eintrag das Formular abgesendet wird
 * Mehrfachauswahl [tags]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
