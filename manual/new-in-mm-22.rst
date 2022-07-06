@@ -109,7 +109,7 @@ Attribute
       unabhängig von Mootools - Auswahl des (neuen) Templates beachten
     * Autovervollständigung kann abgeschaltet werden und minimale Buchstabenlänge kann angegeben werden
     * Bei den Filtereinstellungen muss für das Autocomplete das entsprechende Template gewählt werden; das Autocomplete
-      kann abner auch per Checkbox abgeschaltet werden - zusätzlich kann aktiviert werden, dass bei Klick auf ein
+      kann aber auch per Checkbox abgeschaltet werden - zusätzlich kann aktiviert werden, dass bei Klick auf ein
       Autosubmit-Eintrag das Formular abgesendet wird
 * Mehrfachauswahl [tags]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
