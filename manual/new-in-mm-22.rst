@@ -67,6 +67,9 @@ Allgemein und Core
 * Attribute als Variante haben eine Kennzeichnung in der Liste der Attribute
 * Alle SQL-Queries wurden mit Tabellenpräfixen versehen, so dass eine Prüfung auf `reservierte Wörter von MySQL <https://dev.mysql.com/doc/refman/5.7/en/keywords.html>`_ nicht mehr notwendig ist
 * alle xhtml-Templates wurden entfernt
+* Ansichtsbedingungen für die Widgets der Eingabemaske wurden angepasst: dort wird nun auch eine "Nicht Auswahl" z.B. eines Select- oder
+  Tags-Parameters korrekt ausgewertet, d.h. wenn als Bedingung "Nichts" ausgewählt wurde, ist das Widget sichtbar - solange bis was ausgewählt
+  wurde (das erspart einen NOT-Opperator)
 
 Attribute
 ---------
