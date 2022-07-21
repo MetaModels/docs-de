@@ -228,15 +228,17 @@ Filter
 Frontend-Editing (FEE)
 ______________________
 * Übersicht der unterstützten Attribute - `siehe Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
+* Möglichkeit von Dateiupload inkl. verschiedener Parameter wie Zierlordner, dynamische Pfadangaben, Bereinigung von Dateinamen
+  sowie Vorschaubilder, u.a.m. - Optional mit Dropzone.js-Unterstützung für mehrere Dateien
 * Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
-* Unterstützung Dateiupload inkl. Drag&Drop, deaktivieren/löschen von Dateien, Thumbnails bei Bildern
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option für Weiterleitungsseite und "Nicht speichern";
   Option für Weiterleitungsseite können mit "Simple Tokens" dynamsich gestaltet werden
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
   Datensätzen im FEE
-* Unterstützung des MCW im FEE mit (Vanilla Script) z.B. für Attribut Text-Tabelle zum Vervielfältigen und Sortieren
-  der Zeilen
-* Unterstützung Min/Max bei Attribut Text-Tabelle im FE
+* Unterstützung des "`MCW <https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle>`_"
+  im FEE mit (Vanilla Script) z.B. für Attribut Text-Tabelle und Multiwidget-Tabelle zum Vervielfältigen und
+  Sortieren der Zeilen
+* Unterstützung Min/Max bei Attribut Text-Tabelle und Multiwidget-Tabelle im FE
 * Bei der FEE-Eingabemaske haben die Widgets eine CSS-Klasse bestehend aus `prop-<Spaltenname-Attribut`, so dass diese
   besser per CSS arrangiert/gestyled werden
 * es wird eine saubere Exception geworfen, wenn ein Datensatz nicht löschbar ist
