@@ -6,7 +6,7 @@
 .. seealso:: Die Liste wird kontinuierlich erweitert
 
 Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.2, die durch das
-"early adopter Programm" ermöglicht wurden - mehr dazu unter Fundrasing auf der
+"early adopter Programm" ermöglicht wurden - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
 An der Stelle nochmal der Hinweis, dass MM 2.2 PHP 7.4 voraussetzt. Änderungen an Bezeichnungen
@@ -21,13 +21,13 @@ keine Tickets mehr, die auf MM 2.2 verweisen.
 Allgemein und Core
 ------------------
 
-* kompatibel zum `strict mode` von MySQL und MariaDB; alle Queries auf queryBulder umgeschrieben und bei den
+* kompatibel zum `strict mode` von MySQL und MariaDB; alle Queries auf queryBuilder umgeschrieben und bei den
   Abfragen einen Tabellenpräfix eingefügt - damit fällt die prüfung auf die von MySQL-Reservierten Wörter weg
 * verschiedene Optimierungen für eine schnellere Anzeige von Daten
 * Backend von MM "aufgeräumt" und typische Einstellungen als Default gesetzt (ca. 30% weniger Klicks beim Erstellen)
 * im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons aus Contao für Filterung und Filter
   zurücksetzen statt der "Gelben Pfeile" eingebaut
-* Im Bereich der übersetzten MetaModels wurde etliches an Code refactured - so ist z.B. ein neues Interface
+* Im Bereich der übersetzten MetaModels wurde etliches an Code refactored - so ist z.B. ein neues Interface
   ITranslatedMetaModel hinzu gekommen für eine einfachere und saubere Schnittstelle und Ansprache der Daten.
   Für den "MM-Enduser" ändert sich zwar erstmal nichts Sichtbares, aber es vereinfacht und sichert die
   Arbeit/Entwicklung der Mehrsprachigkeit bei MM.
@@ -63,13 +63,15 @@ Allgemein und Core
 * Das Zählen der Items in den Widgets des FE-Filters wurde abgeschaltet - siehe `Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
 * Beim Contentelement MM-Liste ist in der Listenansicht des Artikels die Filterauswahlen des "Statischen Parameters"
   zusätzlich zu der Angabe des Filternamens zu sehen
-* neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID](::[ID filter])}}` - damit ist kein extra MM-CE/Modul notwendig
+* neuer Inserttag für Anzahl Items (total count): `{{mm::total::mm::[MM Name|ID](::[ID filter])}}` - damit ist kein
+  extra MM-CE/Modul notwendig
 * Attribute als Variante haben eine Kennzeichnung in der Liste der Attribute
 * Alle SQL-Queries wurden mit Tabellenpräfixen versehen, so dass eine Prüfung auf `reservierte Wörter von MySQL <https://dev.mysql.com/doc/refman/5.7/en/keywords.html>`_ nicht mehr notwendig ist
 * alle xhtml-Templates wurden entfernt
-* Ansichtsbedingungen für die Widgets der Eingabemaske wurden angepasst: dort wird nun auch eine "Nicht Auswahl" z.B. eines Select- oder
-  Tags-Parameters korrekt ausgewertet, d.h. wenn als Bedingung "Nichts" ausgewählt wurde, ist das Widget sichtbar - solange bis was ausgewählt
-  wurde (das erspart einen NOT-Opperator)
+* Ansichtsbedingungen für die Widgets der Eingabemaske wurden angepasst: dort wird nun auch eine "Nicht Auswahl" z.B.
+  eines Select- oder Tags-Parameters korrekt ausgewertet, d.h. wenn als Bedingung "Nichts" ausgewählt wurde, ist das
+  Widget sichtbar - solange bis was ausgewählt wurde (das erspart einen NOT-Operator)
+
 
 Attribute
 ---------
@@ -136,8 +138,8 @@ Attribute
       war das Icon der Fallbacksprache immer an erster Position
     * Sind die Checkboxen `readonly`, werden diese in der Listen-Ansicht dargestellt, haben aber keine Toggle-Funktion
     * Unterstützung der Option "Inverse", die das Anzeigeverhalten umdreht; Damit kann man die Methodik vom ContaoCore
-      bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet werden.
-      Achtung! die Icons in der Listenansicht im Backend wechseln auch mit.
+      bei Inhaltselementen nachstellen, die per se immer sichtbar sind und per Checkbox auf nicht sichtbar geschaltet
+      werden. Achtung! die Icons in der Listenansicht im Backend wechseln auch mit.
 * Übersetzte ContentArticle
     *  es gibt sowohl in der Eingabemaske als auch in der Listenansicht eine Vorschau auf die angelegten Elemente
        inkl. Typ und ob sichtbar oder nicht
@@ -171,10 +173,11 @@ Filter
       "true" wenn das Widget benutzt wird
     * die Zählerausgabe bei den Widgets im FE-Filter nicht mehr unterstützt - die Templates wurden entsprechend angepasst.
       `Erklärung siehe Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
-    * Beim CE/Modul MM-Filter kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
-      (bei eigenen Templates als Linkliste diese ggf. anpassen)
-    * Beim CE/Modul MM-Filterreset kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
-    * Die Templates für die Filter wurden für eine sauberes Markup umgebaut - `siehe Github-Issue <https://github.com/MetaModels/core/issues/374>`_
+    * Beim CE/Modul MM-Filter kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an
+      den Ankerpunkt (bei eigenen Templates als Linkliste diese ggf. anpassen)
+    * Beim CE/Modul MM-Filterreset kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite
+      an den Ankerpunkt
+    * Die Templates für die Ausgabe der Filterwidgets wurden für eine sauberes Markup umgebaut - `siehe Github-Issue <https://github.com/MetaModels/core/issues/374>`_
       - ggf. eigene Templates anpassen
 * Einfache Abfrage
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
@@ -192,7 +195,7 @@ Filter
 * Ja / Nein
     * Alternativ zu den GET-Werten "1" und "-1" können die Werte "ja" und "nein" übermittelt werden (bzw. die
       jeweilige Übersetzung)
-    * Attributstype Übersetzte Checkbox möglich
+    * Attributstyp "Übersetzte Checkbox" möglich
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
 * Levenshtein-gestützte Suche (Ähnlichkeitssuche)
@@ -228,11 +231,11 @@ Filter
 Frontend-Editing (FEE)
 ______________________
 * Übersicht der unterstützten Attribute - `siehe Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
-* Möglichkeit von Dateiupload inkl. verschiedener Parameter wie Zierlordner, dynamische Pfadangaben, Bereinigung von Dateinamen
-  sowie Vorschaubilder, u.a.m. - Optional mit Dropzone.js-Unterstützung für mehrere Dateien
+* Möglichkeit von Dateiupload inkl. verschiedener Parameter wie Zielordner, dynamische Pfadangaben, Bereinigung
+  von Dateinamen sowie Vorschaubilder, u.a.m. - Optional mit Dropzone.js-Unterstützung für ein oder mehrere Dateien
 * Unterstützung Attribute "Farbwähler" und "URL", die mit jeweils zwei Eingabefelder ausgegeben werden.
 * Konfiguration der Buttons der Eingabemaske im FEE inkl. Option für Weiterleitungsseite und "Nicht speichern";
-  Option für Weiterleitungsseite können mit "Simple Tokens" dynamsich gestaltet werden
+  Option für Weiterleitungsseite können mit "Simple Tokens" dynamisch gestaltet werden
 * Anbindung des Notification Center zur Versendung von E-Mails bei Erstellung/Kopie/Bearbeiten/Löschen von
   Datensätzen im FEE
 * Unterstützung des "`MCW <https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle>`_"
@@ -252,6 +255,31 @@ Screenshots
 Einstellungen für Paginierung und Sortierung bei der MM-Liste:
 
 |img_settings-pagination-sort|
+
+
+Check für Upgrade auf MM 2.2
+____________________________
+
+Grundsätzlich ist ein Upgrade innerhalb des MM 2.x-Zweiges problemlos möglich und ggf. notwendige Anpassungen an
+Bezeichnungen und DB-Änderungen werden über Migrationen abgefangen. Es gibt aber ein paar Sachen, die damit nicht
+oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen auf MM 2.2 die folgenden Punkte
+im Blick behalten werden:
+
+* eigene Programmierungen sollten dahingehend geprüft werden ob die Methode "widgetToValue" bei Attribut Select und
+  Tags den Wert für "Alias" bekommt, wie es bei der Attributseinstelltung ausgewählt wurde - z.B. bei der Verarbeitung
+  Formulardaten; bisher wurde immer eine ID erwartet
+* bei der Paginierung ist der GET-Parameter nicht mehr nur "page" sondern es wird ein für jede Paginierung eindeutigen
+  Key ausgegeben - wer möchte, kann das über die neuen Einstellungen der Paginierung überschreiben
+* sollte die Paginierung im FE nach der Umstellung nicht angezeigt werden, dann das CE/FE-Modul Liste im BE aufrufen und
+  neu speichern - dann klemmt die Zuweisung für das neue Paginierungstemplate
+* beim CE/FE-Modul "Clear all" gibt es nun ein eigenes Template - ggf. das checken
+* eigene Templates für die Filterwidgets ggf. an neues Template anpassen
+* bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
+  angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
+  Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
+
+Verschiedene Features kommen nun "out-off-the-box" wie z. B. das Platzhalterbild, so dass ggf. eigene Anpassungen
+zurückgebaut werden können.
 
 
 Re-Finanzierung
