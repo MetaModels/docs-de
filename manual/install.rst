@@ -27,7 +27,7 @@ welches neben dem `bundle_start` auch die mehrsprachigen Pakete mit installiert 
 Weitere Module wie "Registerfilter", "Umkreissuche", "Bewertung" usw. sind als separate Pakete
 hinzu zu fügen - siehe :ref:`extended_index`
 
-.. seealso:: Erfolgt die Installtion über den Contao-Manager und es sind schon Pakete installiert, die
+.. seealso:: Erfolgt die Installation über den Contao-Manager und es sind schon Pakete installiert, die
    noch ein altes Paket vom MultiColumnWizard (MCW) enthalten, kann der Manager (bzw. der Composer)
    das nicht austauschen und gleichzeitig installieren. Als "Trick" dazu, erst alle vorhandene Erweiterungspakete
    für eine Aktualisierung markieren und anschließend das oder die MM-Pakete hinzufügen und übernehmen;
@@ -52,6 +52,28 @@ Nach der Installation ist über das Install-Tool von Contao ein **Update der Dat
 Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 
 
+Installation von MM 2.3 für Contao 4.13 und PHP 8
+-------------------------------------------------
+
+MetaModels 2.3 bringt eine volle Kompatibilität zu Contao 4.13 und PHP 8. MM 2.3 ist eine Anpassung der
+Version 2.2 an die neue Contao- und PHP-Version und bringt natürlich
+:ref:`alle Änderungen und Features aus MM 2.2 mit <new_in_mm220>`.
+
+Die Installationsvoraussetzungen für MetaModels 2.3 sind:
+
+* ein laufendes Contao 4.13.x (LTS)
+* PHP 7.4 oder 8.0/8.1
+* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+
+Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
+
+**MetaModels 2.3 ist als "Alpha" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen keine Warnings
+und sie erfüllen ihre Funktion. Vor einem Produktiveinsatz sollte dennoch die Seite vollständig durchgetestet werden.
+MM 2.3 kann über den Composer (Konsole) oder oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch
+geschütztem Repository erhält man über unser "early adopter Programm" - mehr dazu unter Fundraising auf der
+`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_.
+
+
 Installation von MM 2.2 für Contao 4.9
 --------------------------------------
 
@@ -61,11 +83,11 @@ aktueller MariaDB oder die manuelle Dateisortierung.
 
 Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 
-* ein laufendes Contao 4.9.x (LTS) und
+* ein laufendes Contao 4.9.x (LTS)
 * PHP >=7.4 und <8.0
-* MySQL ab 5.5.5 (InnoDB), MariaDB
+* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 
-Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofiziell supportet.
+Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
 
 .. seealso:: Der DCG 2.2.0 wird nun auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
    dass der Composer ab und an damit nicht zurecht gekommen ist – warum auch immer… |br|
@@ -88,7 +110,7 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofizi
 
 **MetaModels 2.2 ist ab sofort einsatzbereit** und kann über den Composer (Konsole) oder den
 Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält
-man über unser "early adopter Programm" - mehr dazu unter Fundrasing auf der
+man über unser "early adopter Programm" - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
 **Weitere Features von MM 2.2:**
@@ -115,18 +137,6 @@ im Backend zuständig ist und viele tolle Funktionen mitbringt.
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
 
-Installation von MM 2.1 für Contao 4.4
---------------------------------------
-
-Die Installationsvoraussetzungen für MetaModels 2.1 sind:
-
-* ein laufendes Contao 4.4.x (LTS) und
-* PHP 7.1/7.2
-* MySQL ab 5.5.5 (InnoDB), MariaDB (ohne `strict mode`)
-
-Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht ofiziell supportet.
-
-
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 
@@ -137,7 +147,7 @@ Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 Umstellung von `metamodels/bundle_*` auf separate Module
 --------------------------------------------------------
 
-Bei einer Umstellung z.B. von 2.0 auf eine neuere Version oder Neuinstalltion ist es eine gute Gelegenheit, nur noch
+Bei einer Umstellung z.B. von 2.0 auf eine neuere Version oder Neuinstallation ist es eine gute Gelegenheit, nur noch
 die Attribute und Filter zu installieren, die für das Projekt notwendig sind. War zuvor z.B. `metamodels/bundle_start`
 oder `metamodels/bundle_all` im Einsatz, kann man mit den folgenden SQL-Befehlen die wirklich verwendeten Attribute
 und Filter abfragen:

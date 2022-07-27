@@ -27,7 +27,7 @@ aktualisieren wollen.
    Nach der Aktualisierung der Datenbank sollte MetaModels 2.x im Backend wie gewohnt
    zur Verfügung stehen.
 #. Dateiverwaltung |br|
-   Sofern noch nicht geschenen, sollten Sie in der Dateiverwaltung die Funktion
+   Sofern noch nicht erfolgt, sollten Sie in der Dateiverwaltung die Funktion
    "Synchronisieren" aufrufen, um die vorhandenen Dateien mit der Datenbank zu
    synchronisieren.
 #. Attribute aktualisieren |br|

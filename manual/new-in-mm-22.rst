@@ -18,6 +18,8 @@ In dem Issue auf `Github <https://github.com/MetaModels/core/issues/1424>`_ gibt
 eine Auflistung der für MM 2.2 fertig gestellten Repositories, d. h. es gibt dort
 keine Tickets mehr, die auf MM 2.2 verweisen.
 
+Für einen Check nach einem Upgrade zu MM 2.2 sind unten weitere Hinweise.
+
 Allgemein und Core
 ------------------
 
@@ -258,7 +260,7 @@ Einstellungen für Paginierung und Sortierung bei der MM-Liste:
 
 
 Check für Upgrade auf MM 2.2
-____________________________
+----------------------------
 
 Grundsätzlich ist ein Upgrade innerhalb des MM 2.x-Zweiges problemlos möglich und ggf. notwendige Anpassungen an
 Bezeichnungen und DB-Änderungen werden über Migrationen abgefangen. Es gibt aber ein paar Sachen, die damit nicht
