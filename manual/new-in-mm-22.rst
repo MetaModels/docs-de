@@ -18,7 +18,7 @@ In dem Issue auf `Github <https://github.com/MetaModels/core/issues/1424>`_ gibt
 eine Auflistung der für MM 2.2 fertig gestellten Repositories, d. h. es gibt dort
 keine Tickets mehr, die auf MM 2.2 verweisen.
 
-Für einen Check nach einem Upgrade zu MM 2.2 sind unten weitere Hinweise.
+Für einen Check nach einem Upgrade zu MM 2.2 sind :ref:`unten weitere Hinweise<Check für Upgrade auf MM 2.2>`.
 
 Allgemein und Core
 ------------------
