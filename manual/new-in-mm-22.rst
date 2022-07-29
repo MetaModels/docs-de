@@ -280,7 +280,7 @@ im Blick behalten werden:
   angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
   Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
 
-Verschiedene Features kommen nun "out-off-the-box" wie z. B. das Platzhalterbild, so dass ggf. eigene Anpassungen
+Verschiedene Features kommen nun "out-of-the-box" wie z. B. das Platzhalterbild, so dass ggf. eigene Anpassungen
 zurückgebaut werden können.
 
 
