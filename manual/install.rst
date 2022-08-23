@@ -67,7 +67,7 @@ Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
 
-**MetaModels 2.3 ist als "Alpha" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen keine Warnings
+**MetaModels 2.3 ist als "Alpha" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen (fast) keine Warnings
 und sie erfüllen ihre Funktion. Aktuell müssen noch Anpassungen von Contao 4.13 "umschifft" werden wie z. B. die
 Restriktion auf Tabellen mit "tl_*", so dass die Tabellen mit "mm_*" zum Löschen angeboten werden - dazu wird ein
 neuer Schemamanager Einzug halten. |br|
