@@ -55,14 +55,14 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 Installation von MM 2.3 für Contao 4.13 und PHP 8
 -------------------------------------------------
 
-MetaModels 2.3 bringt eine volle Kompatibilität zu Contao 4.13 und PHP 8. MM 2.3 ist eine Anpassung der
+MetaModels 2.3 bringt eine volle Kompatibilität zu Contao 4.13 und PHP 8.1. MM 2.3 ist eine Anpassung der
 Version 2.2 an die neue Contao- und PHP-Version und bringt natürlich
 :ref:`alle Änderungen und Features aus MM 2.2 mit <new_in_mm220>`.
 
 Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
 * ein laufendes Contao 4.13.x (LTS)
-* PHP 7.4 oder 8.0/8.1
+* PHP 8.1
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
