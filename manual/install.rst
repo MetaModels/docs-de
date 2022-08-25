@@ -70,7 +70,20 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiz
 **MetaModels 2.3 ist als "Alpha" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen (fast) keine Warnings
 und sie erfüllen ihre Funktion. Aktuell müssen noch Anpassungen von Contao 4.13 "umschifft" werden wie z. B. die
 Restriktion auf Tabellen mit "tl_*", so dass die Tabellen mit "mm_*" zum Löschen angeboten werden - dazu wird ein
-neuer Schemamanager Einzug halten. |br|
+neuer Schemamanager Einzug halten.
+
+Als Workaround kann folgendes in die ``config.yml`` eingetragen werden:
+
+.. code-block:: yaml
+   :linenos:
+
+   doctrine:
+       dbal:
+           connections:
+               default:
+                   # Damit werden "mm_"-Tabellen ignoriert und nicht zum Löschen angeboten
+                   schema_filter: "/^tl_/"
+
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.3 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
 "early adopter Programm" - mehr dazu unter Fundraising auf der
