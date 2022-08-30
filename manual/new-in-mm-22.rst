@@ -108,12 +108,13 @@ Attribute
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
 * Levenshtein-gestützte Suche (Ähnlichkeitssuche)
+    * Umbenennung in korrekte Schreibweise ("sht" statt "sth") - bitte in composer.json prüfen
     * Das automatische Abschalten des Autosubmit bei CE/Modul-MM-Filter wurde entfernt - durch die neuen
       Einstellungsmöglichkeiten ist das nicht mehr notwendig
     * Einstellmöglichkeit der Wortlänge (min + max), die im Index gesucht wird
     * Erklärung zu den Einstellmöglichkeiten beim Attribut
     * Autovervollständigung beim FE-Widget der Suche Umstellung von Mootools auf "Vanilla Script" somit
-      unabhängig von Mootools - Auswahl des (neuen) Templates beachten
+      unabhängig von Mootools - *Auswahl des (neuen) Templates beachten*
     * Autovervollständigung kann abgeschaltet werden und minimale Buchstabenlänge kann angegeben werden
     * Bei den Filtereinstellungen muss für das Autocomplete das entsprechende Template gewählt werden; das Autocomplete
       kann aber auch per Checkbox abgeschaltet werden - zusätzlich kann aktiviert werden, dass bei Klick auf ein
@@ -279,6 +280,7 @@ im Blick behalten werden:
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
   angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
   Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
+* Bei Levenshtein-gestütze Suche die neue Schreibweise beachten sowie die Templateauswahl für die Autovervollständigung
 
 Verschiedene Features kommen nun "out-of-the-box" wie z. B. das Platzhalterbild, so dass ggf. eigene Anpassungen
 zurückgebaut werden können.
