@@ -280,7 +280,8 @@ im Blick behalten werden:
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
   angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
   Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
-* Bei Levenshtein-gestütze Suche die neue Schreibweise beachten sowie die Templateauswahl für die Autovervollständigung
+* Bei Levenshtein-gestütze Suche die neue Schreibweise beachten (sht statt sth) sowie die Templateauswahl für die
+  Autovervollständigung in den Einstellungen der Filterregel
 
 Verschiedene Features kommen nun "out-of-the-box" wie z. B. das Platzhalterbild, so dass ggf. eigene Anpassungen
 zurückgebaut werden können.
