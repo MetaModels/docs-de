@@ -161,6 +161,7 @@ und Filter abfragen:
    
    -- Attribute
    SELECT type FROM `tl_metamodel_attribute` GROUP BY type ORDER BY type
+   -- Attribut "levensthein" wurde umbenannt nach "levenshtein"
    
    -- Filter
    SELECT type FROM `tl_metamodel_filtersetting` GROUP BY type ORDER BY type
