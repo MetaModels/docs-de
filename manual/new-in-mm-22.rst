@@ -53,6 +53,7 @@ Allgemein und Core
   * die Bezeichnung des Paginierungsparameters kann frei gewählt werden
   * ein eigenes Template für die Paginierung ist möglich - Standard "mm_pagination.html5"
   * es kann ausgewählt werden, ob der Parameter per Slug (/page_mmce42/3) oder GET (?page_mmce42=3) übergeben wird
+  * die Links der Paginierung können um ein URL-Fragment (Sprunganker) erweitert werden - ggf. eigene Templates anpassen
 * neue Optionen beim Überschreiben der Sortierung bei der MM-Listenausgabe (Siehe Screenshots unten)
 
   * die Bezeichnung der Standardparameter "orderBy" und "orderDir" kann mit eigenen Werten überschrieben werden
@@ -73,6 +74,17 @@ Allgemein und Core
 * Ansichtsbedingungen für die Widgets der Eingabemaske wurden angepasst: dort wird nun auch eine "Nicht Auswahl" z.B.
   eines Select- oder Tags-Parameters korrekt ausgewertet, d.h. wenn als Bedingung "Nichts" ausgewählt wurde, ist das
   Widget sichtbar - solange bis was ausgewählt wurde (das erspart einen NOT-Operator)
+* in der Maske von "Alle hinzufügen" der Eingabemaske gibt es nun ein Eingabefeld, um den Attributen gleich ein oder
+  mehrere CSS-Klassen mit auf den Weg zu geben - wenn man Attribute einzeln hinzufügt, ist die Standard-CSS-Klasse "w50"
+  - mit dem Feature kann man sich das einzelne Editieren der Attribute sparen
+* wenn man beim Erstellen eines Attributes auf "Speichern und neu" klickt, wird der Attributstyp mit übernommen und
+  ist vorausgewählt
+* wenn ein Attribut gelöscht wird, wird nun automatisch eine ggf. angelegte Ansichtsbedingung bzw. Sortierung/Gruppierung
+  mit gelöscht
+* bei der Mehrsprachigkeit werden nun auch die Territory-Angabe bei Locale unterstützt, d.h. z. B. ch_DE, ch_FR usw.
+  bei den Einstellungen des Models kann mit einer Checkbox die Liste der "Sprachen" um die Angaben mit Territory-Angabe
+  erweitert werden; in der Liste gibt es jeweils eine Angabe, wie der Eintrag in dem Startpunkt der Webseite aussehen
+  muss
 
 
 Attribute
@@ -107,6 +119,8 @@ Attribute
     * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
+    * ein bei den Attributseinstellungen aktivierter Filter wirkt sich nun auch auf die Ausgabe im FE aus - z. B.
+      werden referenzierte Items nicht mehr ausgegeben, wenn ein Filter das begrenzt analog der Darstellung im BE
 * Levenshtein-gestützte Suche (Ähnlichkeitssuche)
     * Umbenennung in korrekte Schreibweise ("sht" statt "sth") - bitte in composer.json prüfen
     * Das automatische Abschalten des Autosubmit bei CE/Modul-MM-Filter wurde entfernt - durch die neuen
@@ -125,6 +139,8 @@ Attribute
     * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
+    * ein bei den Attributseinstellungen aktivierter Filter wirkt sich nun auch auf die Ausgabe im FE aus - z. B.
+      werden referenzierte Items nicht mehr ausgegeben, wenn ein Filter das begrenzt analog der Darstellung im BE
 * Rating ("Sternchenbewertung")
     * Umstellung von Mootools auf "Vanilla Script" somit unabhängig von Mootools
     * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
@@ -275,6 +291,7 @@ im Blick behalten werden:
   Key ausgegeben - wer möchte, kann das über die neuen Einstellungen der Paginierung überschreiben
 * sollte die Paginierung im FE nach der Umstellung nicht angezeigt werden, dann das CE/FE-Modul Liste im BE aufrufen und
   neu speichern - dann klemmt die Zuweisung für das neue Paginierungstemplate
+* die Links der Paginierung können um ein URL-Fragment (Sprunganker) erweitert werden - ggf. eigene Templates anpassen
 * beim CE/FE-Modul "Clear all" gibt es nun ein eigenes Template - ggf. das checken
 * eigene Templates für die Filterwidgets ggf. an neues Template anpassen
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
