@@ -85,6 +85,8 @@ Allgemein und Core
   bei den Einstellungen des Models kann mit einer Checkbox die Liste der "Sprachen" um die Angaben mit Territory-Angabe
   erweitert werden; in der Liste gibt es jeweils eine Angabe, wie der Eintrag in dem Startpunkt der Webseite aussehen
   muss
+* Die Anzeige der Eingabemaske bei Varianten wurde angepasst. Bisher wurden Attribute ohne Variantion in der Variant-Maske
+  ausgeblendet - nun werden diese Attribute als Readonly dargestellt.
 
 
 Attribute
