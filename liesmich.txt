@@ -90,3 +90,18 @@ per "Ersetzungstoken" z.B. kostet 2.000 |nbsp| EUR
 .. |br| raw:: html
 
    <br />
+
+Code - siehe https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#inline-code-highlighting
+Inline: als :code:`das ist mein code`
+Block:
+
+.. code-block:: php
+   :linenos:
+
+    // redirect if data empty
+    if (count($this->data) == 0) {
+        $pageId  = 192; // Page id 
+        $page    = \PageModel::findByPK($pageId);
+        $pageURL = $page->getFrontendUrl();
+        \Controller::redirect($pageURL);
+    }
