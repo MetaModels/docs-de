@@ -115,6 +115,10 @@ Attribute
     * In den Einstellungen der Eingabemaske kann festgelegt werden, welcher Teil des Timestamps "auf Null" gesetzt
       werden soll, damit z. B. die Zeit ohne eine Tagesangabe bzw. ein Datum ohne Zeitergänzung gespeichert werden
       soll - das kann für eine korrekte Filterung nach Zeit oder Datum wichtig sein
+* Eigenes SQL
+    * hier können nun in dem Parameter-Inserttags weitere (Contao-)Inserttags eingebaut werden - z.B. ist nun |br|
+      :code:`SELECT * FROM  WHERE year = {{param::get?name=year&default={{date::Y}}}}` |br|
+      möglich. Zudem liefert der Inserttag nun :code:`null`, wenn der Parameterkey nicht existiert.
 * Einzelauswahl [select]
     * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
