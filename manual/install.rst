@@ -72,6 +72,10 @@ und sie erfüllen ihre Funktion. Aktuell müssen noch Anpassungen von Contao 4.1
 Restriktion auf Tabellen mit "tl_*", so dass die Tabellen mit "mm_*" zum Löschen angeboten werden - dazu wird ein
 neuer Schemamanager Einzug halten.
 
+Die neuen Features von MM 2.2 sind selbstverständlich auch in MM 2.3 dabei
+:ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` - bitte
+beachtet bei einem Upgrade die :ref:`Checkliste <check-fur-upgrade-auf-mm-2-2>`.
+
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.3 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
 "early adopter Programm" - mehr dazu unter Fundraising auf der
@@ -118,7 +122,8 @@ man über unser "early adopter Programm" - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
 **Weitere Features von MM 2.2:**
-Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt.
+Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt - bitte
+beachtet bei einem Upgrade die :ref:`Checkliste <check-fur-upgrade-auf-mm-2-2>`.
 
 .. seealso:: Beim Update der DEV-Version zu beachten: |br|
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
