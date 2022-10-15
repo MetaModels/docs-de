@@ -300,6 +300,8 @@ im Blick behalten werden:
 * die Links der Paginierung können um ein URL-Fragment (Sprunganker) erweitert werden - ggf. eigene Templates anpassen
 * beim CE/FE-Modul "Clear all" gibt es nun ein eigenes Template - ggf. das checken
 * eigene Templates für die Filterwidgets ggf. an neues Template anpassen
+* die JavaScript-Unterstützung ist nun im Core, den Attributen und Filtern auf "Vanilla-Script" umgestellt - Abhängikeiten
+  zu jQuery oder Mootools sind damit entfallen. Bitte eigene Scripte ggf. anpassen.
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
   angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
   Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
