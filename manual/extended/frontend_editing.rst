@@ -47,9 +47,9 @@ FEE-Core: :code:`"metamodels/contao-frontend-editing"`
 
 .. note:: Die folgenden Unterstützungen stehen ab MM 2.2 zur Verfügung:
 
-MCW-Widget: :code:`"contao-community-alliance/contao-multicolumnwizard-frontend-bundle"`
-Widgets mit zwei Eingabeelementen wie z.B. URL: :code:`"contao-community-alliance/contao-textfield-multiple-bundle"`
-Dateiupload mit Dropzone und Thumbnails: :code:`"metamodels/dropzone_file_upload"`
+MCW-Widget: :code:`"contao-community-alliance/contao-multicolumnwizard-frontend-bundle"` |br|
+Widgets mit zwei Eingabeelementen wie z.B. URL: :code:`"contao-community-alliance/contao-textfield-multiple-bundle"` |br|
+Dateiupload mit Dropzone und Thumbnails: :code:`"metamodels/dropzone_file_upload"` |br|
 
 
 Einrichtung im Backend
