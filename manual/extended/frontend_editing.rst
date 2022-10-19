@@ -44,7 +44,7 @@ Installation
 Das FEE wird über den Contao-Manager oder Composer installiert.
 
 FEE-Core: :code:`"metamodels/contao-frontend-editing"` |br|
-(:code:`"contao-community-alliance/dc-general-contao-frontend"`wird üblicher Weise automatisch eingebunden)
+(:code:`"contao-community-alliance/dc-general-contao-frontend"` wird üblicher Weise automatisch eingebunden)
 
 .. note:: Die folgenden Unterstützungen stehen ab MM 2.2 zur Verfügung:
 
