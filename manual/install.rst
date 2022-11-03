@@ -108,6 +108,8 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiz
    Kommt beim Update die Meldung |br|
    ``The checksum verification of the file failed...`` |br|
    bitte die ``composer.lock`` löschen und das Update neu starten.
+   
+   Bei Problemen eines Updates kann es helfen den Composer-Cache zu leeren ``composer clearcache``.
 
    Bei HostEurope gab es zudem noch das Problem, dass der Composer kein Cache-Verzeichnis anlegen konnte.
    Man kann das mit einer eigenen Umgebungsvariable zu einem Pfad, der für den eigenen User erreichbar und
