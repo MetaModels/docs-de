@@ -92,7 +92,7 @@ aktueller MariaDB oder die manuelle Dateisortierung.
 Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 
 * ein laufendes Contao 4.9.x (LTS)
-* PHP >=7.4 und <8.0
+* PHP 7.4
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
