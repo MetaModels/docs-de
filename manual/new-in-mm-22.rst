@@ -3,8 +3,6 @@
 Änderungen und Features von MM 2.2
 ==================================
 
-.. seealso:: Die Liste wird kontinuierlich erweitert
-
 Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.2, die durch das
 "early adopter Programm" ermöglicht wurden - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
