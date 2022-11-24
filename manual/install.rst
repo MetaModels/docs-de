@@ -34,7 +34,6 @@ hinzu zu fügen - siehe :ref:`extended_index`
    alternativ dazu, ein `composer update` auf der Konsole -
    siehe `'Forum' <https://community.contao.org/de/showthread.php?72871-MCW-MultiColumnWizard-als-Bundle-f%C3%BCr-Contao-4-(stable)&p=502709&viewfull=1#post502709>`_.
 
-
 Neben dem Contao-Manager ist die Installation der Pakete und Bundles direkt über die Konsole per
 Composer möglich - z.B. mit
 
@@ -67,19 +66,47 @@ Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
 
+.. seealso::
+   Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
+   immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
+   bei einem `composer install` die Pakete nicht gefunden werden können und eine Fehlermeldung kommt. |br|
+   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen. |br|
+   |br|
+   In den Paketen werden die Abhängigkeiten der Pakete nicht auf die DEV-Version eingetragen - das kann bedeuten,
+   dass man z. B. `attribute_numeric` für `attribute_timestamp` selbständig in die composer.json eintragen muss.
+   Bei Fragen steht der Support zur Seite.
+   
+   Der DCG 2.2.0 wird nun auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
+   dass der Composer ab und an damit nicht zurecht gekommen ist – warum auch immer… |br|
+   Bei Update kommt z.B. die Meldung |br|
+   ``[InvalidArgumentException]
+   Unknown downloader type: . Available types: git, svn, fossil, hg, perforce, zip, rar, tar, gzip, xz, phar, file, path.`` |br| 
+   Wenn das auftritt, bitte den Ordner vendor/contao-community-alliance/dc-general (ggf. auch
+   /vendor/contao-community-alliance/dc-general-contao-frontend) löschen und das Update neu starten.
+   
+   Kommt beim Update die Meldung |br|
+   ``The checksum verification of the file failed...`` |br|
+   bitte die ``composer.lock`` löschen und das Update neu starten.
+   
+   Bei Problemen eines Updates kann es helfen den Composer-Cache zu leeren ``composer clearcache``.
+   
 **MetaModels 2.3 ist als "Beta" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen (fast) keine Warnings
 und sie erfüllen ihre Funktion. Aktuell müssen noch Anpassungen von Contao 4.13 "umschifft" werden wie z. B. die
 Restriktion auf Tabellen mit "tl_*", so dass die Tabellen mit "mm_*" zum Löschen angeboten werden - dazu wird ein
 neuer Schemamanager Einzug halten.
 
-Die neuen Features von MM 2.2 sind selbstverständlich auch in MM 2.3 dabei
+**Die neuen Features von MM 2.2 sind selbstverständlich auch in MM 2.3 dabei**
 :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` - bitte
 beachtet bei einem Upgrade die :ref:`Checkliste <check-fur-upgrade-auf-mm-2-2>`.
 
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.3 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
-"early adopter Programm" - mehr dazu unter Fundraising auf der
+"**early adopter Programm**" - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_.
+
+Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
+`DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
+im Backend zuständig ist und viele tolle Funktionen mitbringt.
 
 
 Installation von MM 2.2 für Contao 4.9
@@ -97,49 +124,9 @@ Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 
 Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
 
-.. seealso:: Der DCG 2.2.0 wird nun auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
-   dass der Composer ab und an damit nicht zurecht gekommen ist – warum auch immer… |br|
-   Bei Update kommt z.B. die Meldung |br|
-   ``[InvalidArgumentException]
-   Unknown downloader type: . Available types: git, svn, fossil, hg, perforce, zip, rar, tar, gzip, xz, phar, file, path.`` |br| 
-   Wenn das auftritt, bitte den Ordner vendor/contao-community-alliance/dc-general (ggf. auch
-   /vendor/contao-community-alliance/dc-general-contao-frontend) löschen und das Update neu starten.
-   
-   Kommt beim Update die Meldung |br|
-   ``The checksum verification of the file failed...`` |br|
-   bitte die ``composer.lock`` löschen und das Update neu starten.
-   
-   Bei Problemen eines Updates kann es helfen den Composer-Cache zu leeren ``composer clearcache``.
-
-   Bei HostEurope gab es zudem noch das Problem, dass der Composer kein Cache-Verzeichnis anlegen konnte.
-   Man kann das mit einer eigenen Umgebungsvariable zu einem Pfad, der für den eigenen User erreichbar und
-   beschreibbar ist, umgehen. Dazu einen Ordner .cache anlegen und den kompletten (absolut) Pfad wie folgt mit
-   in den Aufruf einbauen: |br|
-   ``COMPOSER_HOME=/is/htdocs/kunde_xyz/www/mein_projekt/.cache /usr/bin/php7.4 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php update -v`` |br|
-   Inwieweit die Probleme auch ein Update über den Contao-Manager betrifft, haben wir noch keine Rückmeldung.
-
-**MetaModels 2.2 ist ab sofort einsatzbereit** und kann über den Composer (Konsole) oder den
-Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält
-man über unser "early adopter Programm" - mehr dazu unter Fundraising auf der
-`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
-
 **Weitere Features von MM 2.2:**
 Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt - bitte
 beachtet bei einem Upgrade die :ref:`Checkliste <check-fur-upgrade-auf-mm-2-2>`.
-
-.. seealso:: Beim Update der DEV-Version zu beachten: |br|
-   Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
-   immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
-   bei einem `composer install` die Pakete nicht gefunden werden können und eine Fehlermeldung kommt. |br|
-   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen. |br|
-   |br|
-   In den Paketen werden die Abhängigkeiten der Pakete nicht auf die DEV-Version eingetragen - das kann bedeuten,
-   dass man z. B. `attribute_numeric` für `attribute_timestamp` selbständig in die composer.json eintragen muss.
-   Bei Fragen steht der Support zur Seite.
-
-Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
-`DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
-im Backend zuständig ist und viele tolle Funktionen mitbringt.
 
 .. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um finanzielle
    Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
