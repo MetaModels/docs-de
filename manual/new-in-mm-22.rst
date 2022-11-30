@@ -7,15 +7,6 @@ Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.2, die durc
 "early adopter Programm" ermöglicht wurden - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
-An der Stelle nochmal der Hinweis, dass MM 2.2 PHP 7.4 voraussetzt. Änderungen an Bezeichnungen
-und Beschreibungen sind erstmal nur zu sehen, wenn die Backendsprache auf Englisch gestellt ist.
-Die Übersetzungen per Transifex können erst eingespielt werden, wenn die Pakete wieder bei Github
-sind.
-
-In dem Issue auf `Github <https://github.com/MetaModels/core/issues/1424>`_ gibt es
-eine Auflistung der für MM 2.2 fertig gestellten Repositories, d. h. es gibt dort
-keine Tickets mehr, die auf MM 2.2 verweisen.
-
 Für einen Check nach einem Upgrade zu MM 2.2 sind :ref:`unten weitere Hinweise<Check für Upgrade auf MM 2.2>`.
 
 Allgemein und Core
