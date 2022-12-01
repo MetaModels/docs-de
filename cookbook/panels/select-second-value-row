@@ -1,0 +1,40 @@
+Eingabemaske: Einzelauswahl um zweite Wertespalte ergänzen
+===========================================================
+Standardmäßig ist die Wertespalte beim Attribut Einzelauswahl auf die Auswahl eines Attributs einer beliebigen Contao Tabelle beschränkt.
+Möchte man in der Eingabemaske im Attribut Einzelauswahl ein weiteres Attribut der referenzierten Tabelle darstellen kann das über eine DCA Erweiterung wie in folgenden Beispiel geschehen.
+
+
+.. code-block:: php
+   :linenos:
+   
+   <?php
+   // contao/dca/<MM-Table-Name>.php
+   $GLOBALS['TL_DCA']['mm_events']['fields']['parentEvent'] = [ 
+    'options_callback' => function () { 
+        $modelName = '<MM-Table-Name>'; 
+        $factory   = $this->getContainer()->get('metamodels.factory'); 
+        $model     = $factory->getMetaModel($modelName); 
+        $filter    = $model->getEmptyFilter(); 
+        $items     = $model->findByFilter($filter); 
+        $arrItems  = $items->parseAll('text'); 
+
+        $options = []; 
+        foreach ($arrItems as $arrItem) { 
+            $options[$arrItem['raw']['alias']] = \sprintf( 
+            ' %s [%s]', 
+            $arrItem['text']['spaltennameAttr1'], 
+            $arrItem['text']['spaltennameAttr2'] 
+            ); 
+        } 
+        return $options; 
+    }, 
+];
+
+ergänzt werden.
+
+
+
+
+.. |br| raw:: html
+
+   <br />
