@@ -35,7 +35,7 @@ für die Anzeige kombiniert werden.
 
         $options = []; 
         foreach ($arrItems as $arrItem) { 
-            $options[$arrItem['raw']['alias']] = \sprintf( 
+            $options[$arrItem['text']['alias']] = \sprintf(
             '%s [%s]',
             $arrItem['text']['spaltennameAttr1'], 
             $arrItem['text']['spaltennameAttr2'] 
@@ -45,6 +45,9 @@ für die Anzeige kombiniert werden.
         return $options;
     }, 
 ];
+
+Die Keys des Array ``$options`` müssen mit der Einstellung "Alias" aus den
+Einstellungen des Attributes übereinstimmen.
 
 .. |br| raw:: html
 
