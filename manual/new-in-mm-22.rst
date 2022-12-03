@@ -16,6 +16,7 @@ Allgemein und Core
   Abfragen einen Tabellenpräfix eingefügt - damit fällt die prüfung auf die von MySQL-Reservierten Wörter weg
 * verschiedene Optimierungen für eine schnellere Anzeige von Daten
 * Backend von MM "aufgeräumt" und typische Einstellungen als Default gesetzt (ca. 30% weniger Klicks beim Erstellen)
+* alle Repos sind auf Github-Actions für eine automatische Codeprüfung umgestellt
 * im Backend sind im Panel (Bereich über der Listenansicht) die Standardicons aus Contao für Filterung und Filter
   zurücksetzen statt der "Gelben Pfeile" eingebaut
 * Im Bereich der übersetzten MetaModels wurde etliches an Code refactored - so ist z.B. ein neues Interface
@@ -61,7 +62,6 @@ Allgemein und Core
   enthalten - für ein gleiches Verhalten wie bei den MM-Listen, wurde die automatische Prüfung im Inserttag entfernt
 * Attribute als Variante haben eine Kennzeichnung in der Liste der Attribute
 * Alle SQL-Queries wurden mit Tabellenpräfixen versehen, so dass eine Prüfung auf `reservierte Wörter von MySQL <https://dev.mysql.com/doc/refman/5.7/en/keywords.html>`_ nicht mehr notwendig ist
-* alle xhtml-Templates wurden entfernt
 * Ansichtsbedingungen für die Widgets der Eingabemaske wurden angepasst: dort wird nun auch eine "Nicht Auswahl" z.B.
   eines Select- oder Tags-Parameters korrekt ausgewertet, d.h. wenn als Bedingung "Nichts" ausgewählt wurde, ist das
   Widget sichtbar - solange bis was ausgewählt wurde (das erspart einen NOT-Operator)
@@ -114,6 +114,7 @@ Attribute
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
     * ein bei den Attributseinstellungen aktivierter Filter wirkt sich nun auch auf die Ausgabe im FE aus - z. B.
       werden referenzierte Items nicht mehr ausgegeben, wenn ein Filter das begrenzt analog der Darstellung im BE
+      (`zu beachten bei "Eigenem SQL" <https://metamodels.readthedocs.io/de/latest/cookbook/filter/custom-sql.html#filterunterscheidung-von-frontend-und-backend>`_)
 * Levenshtein-gestützte Suche (Ähnlichkeitssuche)
     * Umbenennung in korrekte Schreibweise ("sht" statt "sth") - bitte in composer.json prüfen
     * Das automatische Abschalten des Autosubmit bei CE/Modul-MM-Filter wurde entfernt - durch die neuen
@@ -134,6 +135,7 @@ Attribute
     * Widget als `readonly` arbeitet nun korrekt in der Eingabemaske; auch beim Popup-Picker
     * ein bei den Attributseinstellungen aktivierter Filter wirkt sich nun auch auf die Ausgabe im FE aus - z. B.
       werden referenzierte Items nicht mehr ausgegeben, wenn ein Filter das begrenzt analog der Darstellung im BE
+      (`zu beachten bei "Eigenem SQL" <https://metamodels.readthedocs.io/de/latest/cookbook/filter/custom-sql.html#filterunterscheidung-von-frontend-und-backend>`_)
 * Rating ("Sternchenbewertung")
     * Umstellung von Mootools auf "Vanilla Script" somit unabhängig von Mootools
     * Sortierung im BE unter  Berücksichtigung der Anzahl der Bewertungen
@@ -291,6 +293,10 @@ im Blick behalten werden:
 * die Links der Paginierung können um ein URL-Fragment (Sprunganker) erweitert werden - ggf. eigene Templates anpassen
 * beim CE/FE-Modul "Clear all" gibt es nun ein eigenes Template - ggf. das checken
 * eigene Templates für die Filterwidgets ggf. an neues Template anpassen
+* bei Filterregel "Einfache Abfrage" mit einer gewünschten Widgetausgabe im FE muss eine separate Checkbox bei der
+  Filterregel gesetzt werden
+* bei Attribut Select und Tags eingestellte Filter gelten nun auch für die FE-Ausgabe; sind diese nur für eine Filterung
+  der Eingabemaske zuständig, muss ggf. das Query angepasst werden - `siehe hier <https://metamodels.readthedocs.io/de/latest/cookbook/filter/custom-sql.html#filterunterscheidung-von-frontend-und-backend>`_
 * die JavaScript-Unterstützung ist nun im Core, den Attributen und Filtern auf "Vanilla-Script" umgestellt - Abhängikeiten
   zu jQuery oder Mootools sind damit entfallen. Bitte eigene Scripte ggf. anpassen.
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
