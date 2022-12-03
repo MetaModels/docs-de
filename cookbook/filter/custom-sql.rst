@@ -215,7 +215,7 @@ den Rest per Zufall:
    ORDER BY `prio_slider` DESC, rand()
 
 
-Sortierung der Ausgabe refernziertem MM und Name
+Sortierung der Ausgabe referenziertem MM und Name
 ************************************************
 
 Hat man z. B. ein MM Produkte, in denen jeweils ein Partner per Einfachauswahl [select]
@@ -409,7 +409,7 @@ oder QUERY-G (GET) die Mitarbeiterliste eingegrenzt werden.
 
 Bei der Eingrenzung einer Mehrfachauswahl muss man etwas tricksen, da die Bedingung
 mit IF in den Sub-Queries keine mehrfachen Werte als Rückgabe zulässt. Es ist aber möglich,
-mit GROUP_CONCAT einen einzelnenen String mit den IDs zu erzeugen, der von IN ausgewertet
+mit GROUP_CONCAT einen einzelnen String mit den IDs zu erzeugen, der von IN ausgewertet
 werden kann.
 
 Zum Beispiel sollen beim Attribut "Reisebausteine" die möglichen Auswahlen auf die Auswahl
@@ -455,7 +455,28 @@ wie folgt anlegen:
        AND `item_id` = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
    )
 
+Filterunterscheidung von Frontend und Backend
+*********************************************
 
+Bei den Filterungen mit eigenem SQL kann es notwendig sein, eine Unterscheidung zwischen
+Frontend und Backend zu erreichen. Seit MM 2.2 werden die beim Attribut Select und Tags
+eingestellten Filter auch im Frontend angewendet, so dass es Problemen mit Filterregeln
+kommen kann, die nur in der Eingabemaske zum Tragen kommen sollen.
+
+Man kann eine Abfrage auf den aktuellen Request-String setzen und dort nach "contao"
+als erstes Wort suchen.
+
+.. code-block:: php
+   :linenos:
+
+   SELECT artd.id FROM mm_article_details artd
+   LEFT JOIN tl_metamodel_tag_relation rel ON (artd.id = rel.item_id)
+   WHERE
+   IF (SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1) = 'contao',
+      rel.att_id = 43 AND                                             -- 43 ID des Attributes [tags]
+      rel.value_id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1), -- variable ID aus URL für Artikel/Produkt
+      1=1
+   )
 
 Kommentare im SQL-Query
 ***********************
