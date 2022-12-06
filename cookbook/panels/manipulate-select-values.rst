@@ -24,9 +24,9 @@ für die Anzeige kombiniert werden.
    
    <?php
    // contao/dca/<MM-Table-Name>.php
-   $GLOBALS['TL_DCA']['mm_events']['fields']['parentEvent'] = [ 
+   $GLOBALS['TL_DCA']['<MM-Table-Name>']['fields']['<MM-Spalten-Name-Select>'] = [ 
     'options_callback' => function () { 
-        $modelName = '<MM-Table-Name>'; 
+        $modelName = '<MM-Table-Name-Select>'; 
         $factory   = $this->getContainer()->get('metamodels.factory'); 
         $model     = $factory->getMetaModel($modelName); 
         $filter    = $model->getEmptyFilter(); 
@@ -35,19 +35,22 @@ für die Anzeige kombiniert werden.
 
         $options = []; 
         foreach ($arrItems as $arrItem) { 
-            $options[$arrItem['text']['alias']] = \sprintf(
+            $options[$arrItem['text']['<MM-Select-Spalten-Name-Alias>']] = \sprintf(
             '%s [%s]',
-            $arrItem['text']['spaltennameAttr1'], 
-            $arrItem['text']['spaltennameAttr2'] 
+            $arrItem['text']['<MM-Select-Spalten-Name-1>'], 
+            $arrItem['text']['<MM-Select-Spalten-Name-2>'] 
             ); 
         } 
 
         return $options;
-    }, 
-];
+       }, 
+   ];
 
 Die Keys des Array ``$options`` müssen mit der Einstellung "Alias" aus den
 Einstellungen des Attributes übereinstimmen.
+
+Im Attribut "Select" eingestellte Filter für das Backend werden hiermit
+übergangen.
 
 .. |br| raw:: html
 
