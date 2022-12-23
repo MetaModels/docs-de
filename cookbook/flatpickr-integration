@@ -34,3 +34,5 @@ An letzter Stelle:
 	"plugins": [new rangePlugin({ input: "#ctrl_startDate_1"})]
         });
    </script>
+   
+Abschließend das geänderte Template umbenennen in z.B. mm_filteritem_flatpickr und in den Filtereinstellungen auswählen.
