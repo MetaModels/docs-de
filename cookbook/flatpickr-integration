@@ -1,5 +1,5 @@
 Einfache Datumsauswahl für den Filter fromto durch Integration von Flatpickr
-==============================================================================
+============================================================================
 
 Anzupassendes Template: mm_filteritem_default
 
@@ -7,6 +7,8 @@ Folgende Zeilen sind im Template zu ergänzen:
 
 An 1. Stelle:
 
+.. code-block:: php
+   :linenos:
 <?php
 $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/flatpickr.min.js';
 $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/l10n/de.js';
@@ -18,6 +20,8 @@ Erforderliche Dateien unter https://flatpickr.js.org
 
 An letzter Stelle:
 
+.. code-block:: php
+   :linenos:
 <script>
 	flatpickr('#ctrl_startDate_0', {
 	locale: "de",
