@@ -9,20 +9,20 @@ An 1. Stelle:
 
 .. code-block:: php
    :linenos:
-<?php
-$GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/flatpickr.min.js';
-$GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/l10n/de.js';
-$GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/plugins/rangePlugin.js';
-$GLOBALS['TL_CSS'][] = 'files/resources/flatpickr/flatpickr.min.css';
-?>
+   <?php
+   $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/flatpickr.min.js';
+   $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/l10n/de.js';
+   $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/plugins/rangePlugin.js';
+   $GLOBALS['TL_CSS'][] = 'files/resources/flatpickr/flatpickr.min.css';
+   ?>
 
-Erforderliche Dateien unter https://flatpickr.js.org
+Erforderliche Dateien unter `Flatpickr <https://flatpickr.js.org>`_
 
 An letzter Stelle:
 
 .. code-block:: php
    :linenos:
-<script>
+   <script>
 	flatpickr('#ctrl_startDate_0', {
 	locale: "de",
 	minDate: "today",
@@ -32,5 +32,5 @@ An letzter Stelle:
 	dateFormat: "d.m.Y",
 	defaultDate: ["today", new Date().fp_incr(14)],
 	"plugins": [new rangePlugin({ input: "#ctrl_startDate_1"})]
-});
-</script>
+        });
+   </script>
