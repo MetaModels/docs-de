@@ -16,6 +16,7 @@ zu finden:
 
 .. code-block:: php
    :linenos:
+
    <?php
    $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/flatpickr.min.js';
    $GLOBALS['TL_JAVASCRIPT'][] = 'files/resources/flatpickr/l10n/de.js';
@@ -29,6 +30,7 @@ zu finden:
 
 .. code-block:: php
    :linenos:
+
    <script>
    flatpickr('#ctrl_startDate_0', {
       locale: "de",
