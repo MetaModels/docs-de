@@ -106,7 +106,7 @@ Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2
 beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm230>`.
 
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
-`DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u.A. bei MM für die Anzeigen
+`DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u. a. bei MM für die Anzeigen
 im Backend zuständig ist und viele tolle Funktionen mitbringt.
 
 
