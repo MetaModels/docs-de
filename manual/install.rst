@@ -90,10 +90,13 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiz
    
    Bei Problemen eines Updates kann es helfen den Composer-Cache zu leeren ``composer clearcache``.
    
+   Kommt eine Meldung |br|
+   ``... Failed to connect to packages.cyberspectrum.de port 443: Connection refused...`` |br|
+   dann ist sehr wahrscheinlich der Packagist-Server down und composer kann die Pakete nicht ziehen. Dann bitte das
+   Update nach einigen Minuten erneut probieren oder das MM-Team kontaktieren.
+   
 **MetaModels 2.3 ist als "Beta" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen (fast) keine Warnings
-und sie erfüllen ihre Funktion. Aktuell müssen noch Anpassungen von Contao 4.13 "umschifft" werden wie z. B. die
-Restriktion auf Tabellen mit "tl_*", so dass die Tabellen mit "mm_*" zum Löschen angeboten werden - dazu wird ein
-neuer Schemamanager Einzug halten.
+und sie erfüllen ihre Funktion.
 
 **Die neuen Features von MM 2.2 sind selbstverständlich auch in MM 2.3 dabei**
 :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` - bitte
@@ -122,7 +125,7 @@ Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 * PHP 7.4
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 
-Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
+Höhere Versionen von Contao sind möglich, werden aber nicht offiziell supportet.
 
 **Weitere Features von MM 2.2:**
 Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt - bitte
