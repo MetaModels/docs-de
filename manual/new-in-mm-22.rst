@@ -7,7 +7,7 @@ Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.2, die durc
 "early adopter Programm" ermöglicht wurden - mehr dazu unter Fundraising auf der
 `MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-2>`_.
 
-Für einen Check nach einem Upgrade zu MM 2.2 sind :ref:`unten weitere Hinweise<Check für Upgrade auf MM 2.2>`.
+Für einen Check nach einem Upgrade zu MM 2.2 sind :ref:`unten weitere Hinweise <check_upgrade_mm220>`.
 
 Allgemein und Core
 ------------------
@@ -233,7 +233,7 @@ Filter
       und ein Button "Eigener Standort" eingebaut werden
     * für die Bereichsauswahl (Range) die Möglichkeit hinzu gekommen einen Vorgabe als Standard zu setzen; also wenn
       die Bereichsvorgaben z.B. 5, 10, 20 50 km sind, kann der Standard des Selects im FE auf 10 km gesetzt werden.
-* Wert von/bis für ein Feld (fromto)
+* Wert von/bis für ein Feld (from-to)
     * Option, dass das Label des Filterwidgets nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
     * Platzhalter für FE-Widget
@@ -274,7 +274,7 @@ Einstellungen für Paginierung und Sortierung bei der MM-Liste:
 
 |img_settings-pagination-sort|
 
-
+.. _check_upgrade_mm220:
 Check für Upgrade auf MM 2.2
 ----------------------------
 
@@ -302,7 +302,7 @@ im Blick behalten werden:
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
   angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
   Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
-* Bei Levenshtein-gestütze Suche die neue Schreibweise beachten (sht statt sth) sowie die Templateauswahl für die
+* Bei Levenshtein-gestützte Suche die neue Schreibweise beachten (sht statt sth) sowie die Templateauswahl für die
   Autovervollständigung in den Einstellungen der Filterregel
 
 Verschiedene Features kommen nun "out-of-the-box" wie z. B. das Platzhalterbild, so dass ggf. eigene Anpassungen
