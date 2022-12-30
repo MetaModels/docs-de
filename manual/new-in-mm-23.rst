@@ -12,7 +12,8 @@ Für einen Check nach einem Upgrade zu MM 2.3 sind :ref:`unten weitere Hinweise 
 Allgemein und Core
 ------------------
 
-*
+* Einbau eines neuen Schema-Managers - damit werden die Tabellen "mm_*" von Contao nicht mehr zum Löschen
+  angeboten
 
 
 Attribute

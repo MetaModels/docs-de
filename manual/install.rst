@@ -98,9 +98,9 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiz
 **MetaModels 2.3 ist als "Beta" einsatzbereit**, d. h. die Repositories sind installierbar, es kommen (fast) keine Warnings
 und sie erfüllen ihre Funktion.
 
-**Die neuen Features von MM 2.2 sind selbstverständlich auch in MM 2.3 dabei**
-:ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` - bitte
-beachtet bei einem Upgrade die :ref:`Checkliste <check-fur-upgrade-auf-mm-2-2>`.
+**Weitere Features von MM 2.3:**
+Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.3 <new_in_mm230>` zusammengestellt - bitte
+beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm230>`.
 
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.3 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
@@ -129,7 +129,7 @@ Höhere Versionen von Contao sind möglich, werden aber nicht offiziell supporte
 
 **Weitere Features von MM 2.2:**
 Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt - bitte
-beachtet bei einem Upgrade die :ref:`Checkliste <check-fur-upgrade-auf-mm-2-2>`.
+beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm220>`.
 
 .. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um finanzielle
    Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
