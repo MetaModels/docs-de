@@ -216,56 +216,65 @@ steht dafür ein Eventlistener zur Verfügung.
 Mit dem Eventlistener kann z.B. ein Rückmeldung an die Webseite erfolgen oder
 ein Logging/Tracking der Aktionen.
 
-Als Beispiel für eine Rückmeldung kann in einem eigenen Contao-Modul z.B. unter
-``/system/modules/myModule/config/event_listeners.php`` folgender Code eingetragen
-werden:
+Als Beispiel für eine Rückmeldung ein Listener wie folgt erstellt werden:
 
 .. code-block:: php
    :linenos:
 
    <?php
+   // src/EventListener/ManipulateNoteListListener.php
+   namespace App\EventListener;
    
-   use MetaModels\NoteList\Event\ManipulateNoteListEvent;
-   use MetaModels\NoteList\Event\NoteListEvents;
+   use Contao\Message;
+   use MetaModels\NoteListBundle\Event\ManipulateNoteListEvent;
+   use Terminal42\ServiceAnnotationBundle\Annotation\ServiceTag;
    
-   return [
-       NoteListEvents::MANIPULATE_NOTE_LIST => [
-           function (ManipulateNoteListEvent $event) {
-               // Only handle note list "1".
-               if ('1' !== ($listId = $event->getNoteList()->getStorageKey())) {
-                   return;
-               }
-   
-               switch ($event->getOperation()) {
-                   case ManipulateNoteListEvent::OPERATION_ADD:
-                       Message::addConfirmation('Added ' . $event->getItem()->get('id') . ' to ' . $listId);
-                       // Add your own notes in metaData.
-                       $metaData = $event->getNoteList()->getMetaDataFor($event->getItem());
-                       $metaData['tstamp'] = time();
-                       $event->getNoteList()->updateMetaDataFor($event->getItem(), $metaData);
-                       break;
-                   case ManipulateNoteListEvent::OPERATION_REMOVE:
-                       Message::addConfirmation('Removed ' . $event->getItem()->get('id') . ' to ' . $listId);
-                       break;
-                   case ManipulateNoteListEvent::OPERATION_CLEAR:
-                       Message::addConfirmation('Cleared ' . $listId);
-                       break;
-                   default:
-                       throw new \RuntimeException('Unknown note list operation: ' . $event->getOperation());
-               }
+   /**
+    * @ServiceTag("kernel.event_listener", event="metamodels.note-list.manipulate")
+    */
+   class ManipulateNoteListListener
+   {
+       public function __invoke(ManipulateNoteListEvent $event)
+       {
+           // Only handle note list "1".
+           if ('1' !== ($listId = $event->getNoteList()->getStorageKey())) {
+               return;
            }
-       ]
-   ];
+   
+           switch ($event->getOperation()) {
+               case ManipulateNoteListEvent::OPERATION_ADD:
+                   Message::addConfirmation('Added ' . $event->getItem()->get('id') . ' to ' . $listId);
+                   // Add your own notes in metaData.
+                   $metaData = $event->getNoteList()->getMetaDataFor($event->getItem());
+                   $metaData['tstamp'] = time();
+                   $event->getNoteList()->updateMetaDataFor($event->getItem(), $metaData);
+                   break;
+               case ManipulateNoteListEvent::OPERATION_REMOVE:
+                   Message::addConfirmation('Removed ' . $event->getItem()->get('id') . ' to ' . $listId);
+                   break;
+               case ManipulateNoteListEvent::OPERATION_CLEAR:
+                   Message::addConfirmation('Cleared ' . $listId);
+                   break;
+               default:
+                   throw new \RuntimeException('Unknown note list operation: ' . $event->getOperation());
+           }
+       }
+   }
 
 Auf der Webseite kann in einem Template die Rückmeldung über die Ausgabe der Contao-Message
-erfolgen - z.B.
+erfolgen - z. B. mit folgenden Code in einem eigenen Template als ce_html_message.html5
 
 .. code-block:: php
    :linenos:
    
    <?php
-   echo Message::generate();
+   $message = \Message::generateUnwrapped(TL_MODE, true);
    ?>
+   <?php if ($message): ?>
+   <div class="alert alert-primary" role="alert">
+       <p class="mb-0"><?= $message?></p>
+   </div>
+   <?php endif; ?>
 
 Zudem können über diesen Event auch zusätzliche Informationen abgespeichert werden - siehe bei
 `OPERATION_ADD`.
