@@ -275,9 +275,9 @@ Known Issues and Next Features
 ------------------------------
 
 * Seite(n) mit Notelist dürfen nicht gecached werden
-* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
+* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex oder eigene Dateien anlegen)
 * Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
-* in Contao 4.9 muss Template angepasst werden, da Contao .text nicht mehr unterstützt - Fix
+* in Contao 4.9/4.13 muss Template angepasst werden, da Contao .text nicht mehr unterstützt - Fix
   kommt noch (Workaround: Template als .html5 anlegen)
 
 
