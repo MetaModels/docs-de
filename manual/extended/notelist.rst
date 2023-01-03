@@ -42,9 +42,9 @@ Installation per Contao-Manager oder Composer
 
 Voraussetzungen für die Installation:
 
-* PHP 7.2
-* Contao 4.4.x/4.9.x
-* MetaModels core 2.1/2.2 und DCG 2.1/2.2
+* PHP 7.2 || PHP 8.1
+* Contao 4.4.x/4.9.x || 4.13.x
+* MetaModels core 2.1/2.2 und DCG 2.1/2.2 || MetaModels core 2.3 und DCG 2.3
 * Zugang zum geschützten Repository - Daten nach Spende
 
 
@@ -277,7 +277,8 @@ Known Issues and Next Features
 * Seite(n) mit Notelist dürfen nicht gecached werden
 * Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
 * Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
-* in Contao 4.9 muss Template angepasst werden, da Contao .text nicht mehr unterstützt - Fix kommt noch
+* in Contao 4.9 muss Template angepasst werden, da Contao .text nicht mehr unterstützt - Fix
+  kommt noch (Workaround: Template als .html5 anlegen)
 
 
 Spenden
