@@ -4,7 +4,7 @@ MetaModels-2-Isotope
 ####################
 
 .. warning:: MetaModels-2-Isotope ist noch im Fundraising und wird erst nach
-   Erreichen der Zielsumme von 5.000€ freigeschaltet. |br|
+   Erreichen der Zielsumme von 6.500€ freigeschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
@@ -32,7 +32,7 @@ umgesetzt.
 Early-Adopter-Programm
 ----------------------
 
-Das Projekt ist in Version 1.0 fertig aber aktuell noch nicht frei verfügbar.
+Das Projekt ist in Version 2.3 fertig aber aktuell noch nicht frei verfügbar.
 Die Refinanzierung erfolgt über ein "Early-Adopter-Programm", d.h. man kann
 die Erweiterung(en) bei Zahlung einer Spende sofort einsetzen. Die Zahlung
 berechtigt zum Einsatz für ein Projekt. Rechtsansprüche jedweder Art sind
@@ -94,6 +94,7 @@ gestellt:
 * isotope-bridge: Hauptkomponente für die Konfiguration
 * attribute_isotopeprice: Dezimalattribut für die Preiseingabe und Auswahl der Steuer
 * attribute_isotopebaseprice: Attribut für die Auswahl des Grundpreistyps und Mengeneingabe
+* attribute_isotopeshippingweight: Attribut für die Übergabe des Gewichts
 
 
 Konfiguration und Einsatz
@@ -205,9 +206,9 @@ Voraussetzungen
 Für die Installation der Module gelten aktuell folgende
 Voraussetzungen:
 
-* Contao 4.4.x/4.9.x
-* Isotope ab 2.5 und MetaModels 2.1/2.2
-* PHP ab 7.2/7.4
+* Contao 4.4.x/4.9.x || 4.13
+* Isotope ab 2.5 und MetaModels 2.1/2.2 || Isotope ab 2.8 und MetaModels 2.3
+* PHP ab 7.2/7.4 || PHP ab 8.1
 
 
 Known Issues and Next Features
