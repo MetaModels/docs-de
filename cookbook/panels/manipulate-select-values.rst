@@ -8,12 +8,12 @@ eines Attributs einer beliebigen Contao Tabelle beschränkt. Möchte man in der
 Eingabemaske im Attribut Einzelauswahl ein weiteres Attribut der referenzierten
 Tabelle darstellen, kann das über verschiedene Wege erfolgen:
 
-1. Attribut "Kombinierte Werte"
+**1. Attribut "Kombinierte Werte"**
 
 Man legt sich im referenzierten Model ein weiteres Attribut an, in dem die Werte
 für die Anzeige kombiniert werden.
 
-2. Event "GetPropertyOptionsEvent"
+**2. Event "GetPropertyOptionsEvent"**
 
 .. code-block:: php
    :linenos:
@@ -84,7 +84,7 @@ Referenz:
 
 `GetPropertyOptionsListener <https://github.com/MetaModels/attribute_select/blob/master/src/EventListener/GetPropertyOptionsListener.php>`_
 
-3. DCA-Callback "options_callback"
+**3. DCA-Callback "options_callback"**
 
 .. code-block:: php
    :linenos:
