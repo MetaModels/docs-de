@@ -15,7 +15,74 @@ für die Anzeige kombiniert werden.
 
 2. Event "GetPropertyOptionsEvent"
 
-`Zum Beispiel <https://github.com/MetaModels/attribute_select/blob/master/src/EventListener/GetPropertyOptionsListener.php>`_
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/EventListener/GetPropertyOptionsListener.php
+
+   namespace App\EventListener;
+
+   use Contao\MemberModel;
+   use ContaoCommunityAlliance\DcGeneral\Contao\View\Contao2BackendView\Event\GetPropertyOptionsEvent;
+   use MetaModels\AttributeSelectBundle\Attribute\AbstractSelect;
+   use MetaModels\DcGeneral\Data\Model;
+   use Terminal42\ServiceAnnotationBundle\Annotation\ServiceTag;
+
+   /**
+    * @ServiceTag("kernel.event_listener", event="dc-general.view.contao2backend.get-property-options")
+    */
+   class GetPropertyOptionsListener
+   {
+       public function __invoke(GetPropertyOptionsEvent $event)
+       {
+           // Check if options set.
+           if ($event->getOptions() !== null) {
+               return;
+           }
+
+           // Check if right model table and type.
+           if ('mm_my_model' !== $event->getEnvironment()->getDataDefinition()->getName()) {
+               return;
+           }
+
+           $model = $event->getModel();
+           if (!($model instanceof Model)) {
+               return;
+           }
+
+           // Check if right attribute and type.
+           if ('member' !== $event->getPropertyName()) {
+               return;
+           }
+
+           $attribute = $model->getItem()->getAttribute($event->getPropertyName());
+           if (!($attribute instanceof AbstractSelect)) {
+               return;
+           }
+
+           // Generate own options list.
+           $members     = MemberModel::findAll();
+           $aliasColumn = $attribute->get('select_alias');
+
+           $options = [];
+
+           foreach ($members as $member) {
+               $options[$member->{$aliasColumn}] =
+                   \sprintf('%s, %s [%s]', $member->lastname, $member->firstname, $member->email);
+           }
+
+           $event->setOptions($options);
+       }
+   }
+
+Ergebnis:
+
+|img_manipulate-select-values_01|
+
+Referenz:
+
+`GetPropertyOptionsListener <https://github.com/MetaModels/attribute_select/blob/master/src/EventListener/GetPropertyOptionsListener.php>`_
 
 3. DCA-Callback "options_callback"
 
@@ -51,6 +118,9 @@ Einstellungen des Attributes übereinstimmen.
 
 Im Attribut "Select" eingestellte Filter für das Backend werden hiermit
 übergangen.
+
+
+.. |img_manipulate-select-values_01| image:: /_img/screenshots/cookbook/panels/manipulate-select-values_01.jpg
 
 .. |br| raw:: html
 
