@@ -1,12 +1,12 @@
 .. _rst_cookbook_panels_manipulate-select-values:
 
-Eingabemaske: Einzelauswahl um zweite Wertespalte ergänzen
-===========================================================
+Eingabemaske: Einzelauswahl um weitere Wertes ergänzen
+======================================================
 
 Standardmäßig ist die Wertespalte beim Attribut Einzelauswahl auf die Auswahl
 eines Attributs einer beliebigen Contao Tabelle beschränkt. Möchte man in der
-Eingabemaske im Attribut Einzelauswahl ein weiteres Attribut der referenzierten
-Tabelle darstellen, kann das über verschiedene Wege erfolgen:
+Eingabemaske im Attribut Einzelauswahl ein oder mehrere Attribute/Werte der
+referenzierten Tabelle darstellen, kann das über verschiedene Wege erfolgen:
 
 **1. Attribut "Kombinierte Werte"**
 
