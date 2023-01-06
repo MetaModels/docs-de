@@ -1,7 +1,7 @@
 .. _rst_cookbook_panels_manipulate-select-values:
 
-Eingabemaske: Einzelauswahl um weitere Wertes ergänzen
-======================================================
+Eingabemaske: Einzelauswahl um weitere Werte ergänzen
+=====================================================
 
 Standardmäßig ist die Wertespalte beim Attribut Einzelauswahl auf die Auswahl
 eines Attributs einer beliebigen Contao Tabelle beschränkt. Möchte man in der
@@ -62,7 +62,7 @@ für die Anzeige kombiniert werden.
            }
 
            // Generate own options list.
-           $members     = MemberModel::findAll();
+           $members     = MemberModel::findAll(); // add e.g. filter for not disabled...
            $aliasColumn = $attribute->get('select_alias');
 
            $options = [];
