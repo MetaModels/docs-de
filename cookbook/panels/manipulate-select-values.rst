@@ -76,12 +76,10 @@ für die Anzeige kombiniert werden.
        }
    }
 
-Ergebnis:
-
+Ergebnis: |br|
 |img_manipulate-select-values_01|
 
-Referenz:
-
+Referenz: |br|
 `GetPropertyOptionsListener <https://github.com/MetaModels/attribute_select/blob/master/src/EventListener/GetPropertyOptionsListener.php>`_
 
 **3. DCA-Callback "options_callback"**
