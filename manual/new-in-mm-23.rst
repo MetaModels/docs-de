@@ -14,6 +14,8 @@ Allgemein und Core
 
 * Einbau eines neuen Schema-Managers - damit werden die Tabellen "mm_*" von Contao nicht mehr zum Löschen
   angeboten
+* Einträge für Sortierung/Gruppierung haben einen Toggle-Button und können damit aktiviert/deaktiviert werden
+
 
 
 Attribute
@@ -23,9 +25,12 @@ Attribute
 Filter
 ------
 
+* beim CE-/FE-Modul Filter sind bei den Bezeichnungen der Filterregeln nun auch der Typ mit angegeben
+  (`#1473 <https://github.com/MetaModels/core/issues/1473>`_
+
 
 Frontend-Editing (FEE)
-______________________
+----------------------
 
 
 .. _check_upgrade_mm230:
