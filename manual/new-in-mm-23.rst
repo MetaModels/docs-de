@@ -26,7 +26,7 @@ Filter
 ------
 
 * beim CE-/FE-Modul Filter sind bei den Bezeichnungen der Filterregeln nun auch der Typ mit angegeben
-  (`#1473 <https://github.com/MetaModels/core/issues/1473>`_
+  (`#1473 <https://github.com/MetaModels/core/issues/1473>)`_
 
 
 Frontend-Editing (FEE)
