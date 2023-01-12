@@ -13,7 +13,7 @@ Allgemein und Core
 ------------------
 
 * Einbau eines neuen Schema-Managers - damit werden die Tabellen "mm_*" von Contao nicht mehr zum Löschen
-  angeboten
+  angeboten (`#1297 <https://github.com/MetaModels/core/issues/1279>`_)
 * Einträge für Sortierung/Gruppierung haben einen Toggle-Button und können damit aktiviert/deaktiviert
   werden (`#1380 <https://github.com/MetaModels/core/issues/1380>`_)
 
