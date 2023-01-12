@@ -14,7 +14,8 @@ Allgemein und Core
 
 * Einbau eines neuen Schema-Managers - damit werden die Tabellen "mm_*" von Contao nicht mehr zum Löschen
   angeboten
-* Einträge für Sortierung/Gruppierung haben einen Toggle-Button und können damit aktiviert/deaktiviert werden
+* Einträge für Sortierung/Gruppierung haben einen Toggle-Button und können damit aktiviert/deaktiviert
+  werden (`#1380 <https://github.com/MetaModels/core/issues/1380>`_)
 
 
 
