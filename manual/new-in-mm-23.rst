@@ -16,6 +16,15 @@ Allgemein und Core
   angeboten (`#1297 <https://github.com/MetaModels/core/issues/1279>`_)
 * Einträge für Sortierung/Gruppierung haben einen Toggle-Button und können damit aktiviert/deaktiviert
   werden (`#1380 <https://github.com/MetaModels/core/issues/1380>`_)
+* Hinweis für Programmierer: es gibt eine neue Klasse, mit der die Attribute nach Namen sortiert werden
+  können (src/CoreBundle/Sorter/AttributeSorter.php) - zum Einsatz kommt diese z. B. bei der Auswahl des
+  Attributes bei der Sortierung (die sind nun aufsteigend sortiert)
+* wenn die erste Sortierung angelegt wird, ist nun die Checkbox für "Standard" vorausgewählt
+  (`#1472 <https://github.com/MetaModels/core/issues/1472>`_)
+* wird bei der Eingabemaske der Render-Modus auf "Hierarchie" gestellt, erscheint nun ein Hinweis,
+  dass die Sortierung auf "Manuell" einzustellen ist (`#1324 <https://github.com/MetaModels/core/issues/1324>`_)
+* die Checkbox "Variante" bei den Attributen ist disabled, wenn das Model nicht-variant ist
+  (`#884 <https://github.com/MetaModels/core/issues/884>`_)
 
 
 
