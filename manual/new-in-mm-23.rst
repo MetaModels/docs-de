@@ -25,7 +25,8 @@ Allgemein und Core
   dass die Sortierung auf "Manuell" einzustellen ist (`#1324 <https://github.com/MetaModels/core/issues/1324>`_)
 * die Checkbox "Variante" bei den Attributen ist disabled, wenn das Model nicht-variant ist
   (`#884 <https://github.com/MetaModels/core/issues/884>`_)
-
+* die Klasse "getSearchablePages" (Indexierung der Detailseiten) wurde komplett neu geschrieben und läuft nun
+  effektiver/schneller
 
 
 Attribute
@@ -41,6 +42,8 @@ Filter
 
 Frontend-Editing (FEE)
 ----------------------
+* Es wurde ein einfaches Rechtemanagement eingebaut welches nach Aktivierung ermöglicht, dass jedes
+  eingeloggte Mitglied nur noch seine Einträge bearbeiten kann (`#14 <https://github.com/MetaModels/contao-frontend-editing/issues/14>`_)
 
 
 .. _check_upgrade_mm230:
