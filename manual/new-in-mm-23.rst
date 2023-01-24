@@ -45,7 +45,8 @@ Frontend-Editing (FEE)
 ----------------------
 * Es wurde ein einfaches Rechtemanagement eingebaut welches nach Aktivierung ermöglicht, dass jedes
   eingeloggte Mitglied nur noch seine Einträge bearbeiten kann (`#14 <https://github.com/MetaModels/contao-frontend-editing/issues/14>`_)
-* passend zum Rechtemanagement gibt es eine neue Filterregel, der die Liste nach den zugehörigen Items filtert
+* passend zum Rechtemanagement gibt es eine neue Filterregel, die die Liste nach den zugehörigen Items eines
+  eingeloggten Mitglieds filtert
 
 .. _check_upgrade_mm230:
 Check für Upgrade auf MM 2.3
