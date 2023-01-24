@@ -38,7 +38,7 @@ Filter
 
 * beim CE-/FE-Modul Filter sind bei den Bezeichnungen der Filterregeln nun auch der Typ mit angegeben
   (`#1473 <https://github.com/MetaModels/core/issues/1473>`_)
-* 
+* passend zum Rechtemanagement gibt es eine neue Filterregel, der die Liste nach den zugehörigen Items filtert
 
 
 Frontend-Editing (FEE)
