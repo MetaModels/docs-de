@@ -38,7 +38,8 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
 .. toctree::
     :hidden:
     :maxdepth: 1
-    
+
+    schema-manager
     new-mm
     attribute
     rendersettings
