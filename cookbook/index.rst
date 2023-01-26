@@ -31,6 +31,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     templates/fe_redirect_to_list.rst
     templates/fe_list_parameters.rst
     templates/flatpickr-integration.rst
+    tips/change-table-column-name.rst
     tips/delete-child-items.rst
     tips/speed-up-backend-list.rst
     other-tutorials/index.rst
