@@ -58,6 +58,9 @@ MetaModels 2.3 bringt eine volle Kompatibilität zu Contao 4.13 und PHP 8.1. MM 
 Version 2.2 an die neue Contao- und PHP-Version und bringt natürlich
 :ref:`alle Änderungen und Features aus MM 2.2 mit <new_in_mm220>`.
 
+Mit dem neuen Schemamanager muss der Workflow mit MM angepasst werden
+- :ref:`siehe Schemamanager <component_schema-manager>`
+
 Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
 * ein laufendes Contao 4.13.x (LTS)
