@@ -8,23 +8,23 @@ Schemamanager
 Kurzinfo
 --------
 
-Mit dem Schemamanager werden die mm_*-Tabellen der Model und Spalten der Attribute nicht
-sofort mir dem Speichern angelegt. Es ist notwendig, eine Datenbank-Migration mit der Konsole
-CManager oder Installtool durchzuführen. Analog dem Vorgehen, wenn per DCA Änderungen an der Datenbank
-anstehen. Entsprechende Hinweise sind bei der Eingabemaske des Models und Attribute hinterlegt.
+Mit dem Schemamanager werden die mm_*-Tabellen der Models und Spalten der Attribute nicht
+sofort mit dem Speichern angelegt. Es ist notwendig, eine Datenbank-Migration mit Konsole,
+Manager oder Install-Tool durchzuführen. Analog dem Vorgehen, wenn per DCA Änderungen an der Datenbank
+anstehen. Entsprechende Hinweise sind bei der Eingabemaske des Models und der Attribute hinterlegt.
 
 Hintergründe
 -------------
 
 In MetaModels 2.3 wurde ein neuer Schemamanager eingebaut, der die Kommunikation zu Doctrine herstellt.
 Doctrine ist Datenbankabstraktion in Symfony auf der auch Contao aufbaut. Der Einsatz des neuen Schemamanager
-ergab sich durch Notwendigkeiten wie z. B. dass Contao die mm_*-Tabellen nicht als „Fremdartig“ ansieht und
-löschen möchte. Vorteile aus dem Einsatz Ergeben sich z. B. durch einen sauberen und sicheren Tabellenaufbau da
+ergab sich durch Notwendigkeiten wie z. B. dass Contao die mm_*-Tabellen nicht als „fremdartig“ ansieht und
+löschen möchte. Vorteile aus dem Einsatz ergeben sich z. B. durch einen sauberen und sicheren Tabellenaufbau da
 dieser durch Doctrine überwacht wird. Auch das Ändern, Löschen oder Kopieren von Attributen muss nicht mehr von
 MM übernommen werden, sondern erfolgt durch Doctrine.
 
-Mit dem Wechsel ergibt sich aber auch eine grundlegende Änderung in der Arbeit mit MM: Beim Anlegen eines
-Models und Attributes hat nun stets eine DB-Migration über die üblichen Wege (Install-Tool, Manager, Konsole)
+Mit dem Wechsel ergibt sich aber auch eine grundlegende Änderung in der Arbeit mit MM: beim Anlegen eines
+Models und Attributes hat nun stets eine DB-Migration über die üblichen Wege (Konsole, Manager oder Install-Tool)
 zu erfolgen – so wie es auch bei Contao und Änderungen des DCA immer notwendig war und ist.
 
 Bei Spalten ist das nur bei Attributen relevant, die eine eigene Spalte in der mm_*-Tabelle
@@ -32,7 +32,7 @@ anlegen wie z. B. Text oder Alias (Simple Attribute).
 
 Diese Änderung nimmt nun etwas vorweg, was spätestens bei MM 3.0 erfolgt wäre. Hier soll es auch die
 Möglichkeit geben, das Datenbankschema von MM über Dateien vorzugeben. Damit ist eine Versionierung,
-Wiederverwendbarkeit und Ex-Import möglich. Mit dem Feature ist eine Anpassung des Schemas nur über
+Wiederverwendbarkeit und Ex-/Import möglich. Mit dem Feature ist eine Anpassung des Schemas nur über
 die Ausführung einer DB-Migration möglich.
 
 Die Umstellung des eigenen „MM-Workflows“ benötigt sicher eine gewisse Eingewöhnungszeit, aber es wurde
