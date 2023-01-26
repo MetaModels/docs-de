@@ -3,7 +3,7 @@
 Ändern von Tabellen- oder Spaltennamen
 ======================================
 
-.. note:: Der Schemamanager ist ab Version 2.3 implementiert.
+.. note:: Der Schemamanager ist ab Version 2.3 implementiert - :ref:`siehe Schemamanager <component_schema-manager>`
 
 Die Namen für Tabellen und Spalten sollten gut überlegt sein, da eine nachträgliche
 Anpassung ein eher kritischer Vorgang ist und vermieden werden sollte.

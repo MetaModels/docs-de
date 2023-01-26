@@ -27,6 +27,9 @@ Mit dem Wechsel ergibt sich aber auch eine grundlegende Änderung in der Arbeit 
 Models und Attributes hat nun stets eine DB-Migration über die üblichen Wege (Install-Tool, Manager, Konsole)
 zu erfolgen – so wie es auch bei Contao und Änderungen des DCA immer notwendig war und ist.
 
+Bei Spalten ist das nur bei Attributen relevant, die eine eigene Spalte in der mm_*-Tabelle
+anlegen wie z. B. Text oder Alias (Simple Attribute).
+
 Diese Änderung nimmt nun etwas vorweg, was spätestens bei MM 3.0 erfolgt wäre. Hier soll es auch die
 Möglichkeit geben, das Datenbankschema von MM über Dateien vorzugeben. Damit ist eine Versionierung,
 Wiederverwendbarkeit und Ex-Import möglich. Mit dem Feature ist eine Anpassung des Schemas nur über
