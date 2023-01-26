@@ -3,8 +3,9 @@
 |img_new| Neues MetaModel
 ===========================
 
-.. note:: neues MetaModel (Datenbanktabelle) erstellen
-  ggf. Übersetzung oder Varianten aktivieren
+.. note:: neues MetaModel (Datenbanktabelle) erstellen ggf. Übersetzung oder Varianten aktivieren |br|
+   Zum Anlegen der mm_*-Tabelle eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
+
 
 Einleitung
 ----------
@@ -28,6 +29,7 @@ Mit der Erstellung der Tabelle werden in dieser nur einige, für das Zusammenspi
 MetaModels notwendige, Spalten wie id, pid, timestamp usw. angelegt. Die weiteren, individuellen Spalten
 werden als sog. "Attribute" angelegt und mit ihren spezifischen Optionen versehen. Mehr dazu unter dem
 Punkt :ref:`component_attribute`.
+
 
 Optionen
 --------
@@ -63,3 +65,7 @@ die Werte varbase gleich 0 und vargroup gleich der ID des Eltern-Datensatzes.
    
 .. |nbsp| unicode:: 0xA0 
    :trim:
+
+.. |br| raw:: html
+
+   <br />

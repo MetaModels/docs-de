@@ -3,8 +3,9 @@
 |img_fields_32| Attribute
 =========================
 
-.. note:: eigene Spalten der Datenbanktabelle als Attribute erstellen und
-  diese konfigurieren
+.. note:: eigene Spalten der Datenbanktabelle als Attribute erstellen und diese konfigurieren |br|
+   Zum Anlegen der Attributsspalten in der mm_*-Tabelle eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
+
 
 Einleitung
 ----------
@@ -149,6 +150,7 @@ der "Alias" oder "Kombinierte Einträge" ist eine nachfolgende Erstellung sinnvo
 Bei den Attributen "Auswahl" und "Mehrfachauswahl" müssen zudem erst die zu
 referenzierenden MetaModel erstellt sein.
 
+
 Optionen
 --------
 
@@ -157,10 +159,11 @@ und "Eindeutige Werte".
 
 Mit "Varianten überschreiben" steht das Attribut auch bei den Eingabemasken der
 Varianteneingabe zur Verfügung. Voraussetzung dafür ist, dass beim MetaModel die
-Option "Varianten" gesetzt ist.
+Option "Varianten" gesetzt ist - anderenfalls ist die Checkbox inaktiv.
 
 Mit der Option "Eindeutige Werte" werden die Attributeingaben auf Eindeutigkeit
 (unique) geprüft.
+
 
 Ablauf
 ------
@@ -169,6 +172,7 @@ Ein neues Attribut wird über "|img_new| Neues Attribut" geöffnet. Nachdem
 alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird die Einstellung
 gespeichert und es erscheint in der Attributliste der vorhandenen MetaModels.
 Die Reihenfolge in der Liste hat keinen weiteren Einfluss.
+Datenbank-Migration durchführen!
 
 
 .. |img_fields_32| image:: /_img/icons/fields_32.png
