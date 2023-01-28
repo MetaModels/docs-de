@@ -3,8 +3,8 @@ FAQ
 
 .. _faq-searchable-pages:
 
-Searchable Pages
-----------------
+Indexierung (Searchable Pages)
+------------------------------
 
 | Q: Kann ich die Sitemap und den Suchindex voneinander unabhängig Konfigurieren?
 | A: Nein, beide werden über die gleiche Funktion mit Informationen versorgt. Dies ist im Contao Core hinterlegt. Daher gelten für beide die gleichen Konfigurationen.
