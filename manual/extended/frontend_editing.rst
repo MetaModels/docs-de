@@ -57,12 +57,12 @@ Einrichtung im Backend
 ----------------------
 
 In der folgenden Beschreibung wird davon ausgegangen, dass bereits ein MetaModel 
-"Mitarbeiterliste" eingerichtet wurde. Es werden daher nur die Änderungen an
+z. B. "Mitarbeiterliste" eingerichtet wurde. Es werden daher nur die Änderungen an
 diesem MetaModel bzw. an den Modul-Einstellungen dargestellt.
 
-Für den Test-Aufbau gibt es zwei Seiten in Contao:
+Für den Beispiel-Aufbau gibt es zwei Seiten in Contao:
 
-* eine Listen-Seite, auf der eine Mitarbeiterliste zu sehen sein wird
+* eine Listen-Seite, auf der eine Liste mit allen Mitarbeiter zu sehen sein wird
 * eine Detail-Seite, auf der die Bearbeitung eines Mitarbeiter-Datensatzes stattfindet
 
 |img_seitenstruktur|
@@ -87,7 +87,7 @@ In diesem wählt man das MetaModel aus, welches bearbeitet werden soll.
 
 |img_metamodelfeeedit|
 
-Als letzter Schritt, muss die Eingabemaske, die für das Backend konfiguriert wurde,
+Als letzter Schritt muss die Eingabemaske, die für das Backend konfiguriert wurde,
 noch für das Frontend freigeschaltet werden. Dazu öffnet man im Backend die 
 Seite der "Eingabe-/Render-Zuordnungen" |img_dca_combine| und wählt in der
 Spalte "Mitgliedergruppe" einen passenden Eintrag für die Rechte im Frontend - bitte
@@ -101,10 +101,7 @@ kann nun im Frontend die Einstellungen bzw. die Bearbeitung der
 Mitarbeiter prüfen.
 
 .. warning:: Mit der Zuordnung zu einer Mitgliedergruppe sind die Daten nicht
-   automatisch vor der Bearbeitung durch andere Mitglieder geschützt. Die
-   Rechteprüfung ist (noch) nicht Implementiert und muss selbständig über
-   entsprechende Events eingebaut werden. Einer Finanzierung des Features
-   stehen wir offen gegenüber ;-)
+   automatisch vor der Bearbeitung durch andere Mitglieder geschützt.
 
 
 Arbeiten im Frontend
@@ -147,6 +144,53 @@ Zu beachten ist das Zusammenspiel zwischen den Zugangsberechtigungen und
 der ausgegebenen Eingabemaske. Ist die Seite mit der Eingabemaske geschützt,
 muss für diese Mitgliedergruppe auch eine Eingabemaske definiert sein. Ist
 das nicht der Fall, ist das eine Fehlkonfiguration und führt zu einer Exception.
+
+
+Erweiterte Rechteverwaltung
+---------------------------
+
+Mit den Zugangsberechtigungen kann man allgemeine Freigaben der Eingabemaske auf
+Basis der Mitgliedergruppen von Contao machen. Individuellere Berechtigungen wie
+z. B. "nur Mitglieder einer Mitgliedergruppe dürfen bearbeiten" (sofern für mehrere
+Gruppen frei gegeben) oder jedes Mitglied darf nur seine Datensätze bearbeiten, können
+durch eine Anpassungen erreicht werden. Es stehen verschiedene Events zur Verfügung,
+die dafür angesprochen werden können:
+
+* `PreEditModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PreEditModelEvent.php>`_:
+  Rechteprüfung vor dem Laden der Eingabemaske
+* `PrePersistModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PrePersistModelEvent.php>`_:
+  Rechteprüfung vor dem Speichern eines Items
+* `PreDuplicateModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PreDuplicateModelEvent.php>`_:
+  Rechteprüfung vor dem Duplizieren eines Items
+* `PreDeleteModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PreDeleteModelEvent.php>`_:
+  Rechteprüfung vor dem Löschen eines Items
+
+Zum automatischen Abspeichern der ID des Mitgliedes oder seiner Gruppe kann ebenfalls das `PreEditModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PreEditModelEvent.php>`_
+verwendet werden.
+
+Zusätzlich sollte eine Prüfung auf Login und Frontend erfolgen. Zudem sollte eine Seite "Error-403" angelegt werden, wenn die
+Berechtigungen nicht ausreichend sind.
+
+.. note:: Das Feature steht ab MM 2.3 zur Verfügung.
+
+Die häufigste Prüfung, jedes Mitglied darf nur seine Datensätze bearbeiten, ist im FEE
+implementiert. Dazu sind folgende Elemente notwendig:
+
+* Attribut Einfachauswahl [Select] mit Relation auf die Tabelle ``tl_member`` sowie der Einstellung
+  des Alias auf Spalte ``username``
+* in der Eingabemaske für das FEE die Rechteprüfung aktivieren und dort das entsprechende Attribut
+  für das Mitglied auswählen - es werden nur die Einfachauswahl-Attribute angezeigt, die die passende
+  Konfiguration haben
+* optional kann die Liste auf die Datensätze des Mitgliedes gefiltert werden - dazu bei dem Filter der
+  Liste die Filterregel "Mitglied" hinzufügen und auch hier das entsprechende Attribut für das
+  Mitglied auswählen - ist keine Filterung eingebaut, werden die Action-Links zum bearbeiten nur bei den
+  passenden Items mit ausgegeben
+
+Eingabemaske: |br|
+|img_fee-rights-at-inputmask|
+
+Filterregel: |br|
+|img_fee-member-filterrule|
 
 
 Einrichtung unterschiedlicher Eingabemasken für BE/FE
@@ -264,6 +308,9 @@ der Eingabemaske ausgewählt werden.
 .. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung2.png
 
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
+
+.. |img_fee-rights-at-inputmask| image:: /_img/screenshots/extended/frontend_editing/fee-rights-at-inputmask.png
+.. |img_fee-member-filterrule| image:: /_img/screenshots/extended/frontend_editing/fee-member-filterrule.png
 
 .. |img_fee-eigene-buttons| image:: /_img/screenshots/extended/frontend_editing/fee-eigene-buttons.png
 .. |fee-simple-tokens| image:: /_img/screenshots/extended/frontend_editing/fee-simple-tokens.png
