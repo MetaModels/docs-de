@@ -182,8 +182,8 @@ implementiert. Dazu sind folgende Elemente notwendig:
   für das Mitglied auswählen - es werden nur die Einfachauswahl-Attribute angezeigt, die die passende
   Konfiguration haben
 * optional kann die Liste auf die Datensätze des Mitgliedes gefiltert werden - dazu bei dem Filter der
-  Liste die Filterregel "Mitglied" hinzufügen und auch hier das entsprechende Attribut für das
-  Mitglied auswählen - ist keine Filterung eingebaut, werden die Action-Links zum bearbeiten nur bei den
+  Liste die Filterregel "Member permissions" hinzufügen und auch hier das entsprechende Attribut für das
+  Mitglied auswählen - ist keine Filterung eingebaut, werden die Action-Links zum Bearbeiten nur bei den
   passenden Items mit ausgegeben
 
 Eingabemaske: |br|
