@@ -131,6 +131,58 @@ Beim Bearbeiten des Datensatzes kann man alle Felder des MetaModels
 |img_editfile|
 
 
+Einrichtung unterschiedlicher Eingabemasken für BE/FE
+-----------------------------------------------------
+
+Möchte man für die Bearbeitung im FE nur bestimmte Felder frei
+geben, so muss hierfür eine separate Eingabemaske erstellt werden.
+
+Die Erstellung der Eingabemaske erfolgt analog der Maske für das Backend.
+Über die Auswahl bzw. Aktivierung der Attribute werden die
+Formularfelder für die Bearbeitung definiert.
+
+Die Eingabemaske kann nun über die "Eingabe-/Render-Zuordnungen" |img_dca_combine|
+für das FE ausgewählt werden.
+
+|img_fee-dca-zuordnung2|
+
+Die Reihenfolge der Zuordnungseinstellung ist wichtig, da diese "von oben nach unten"
+abgearbeitet wird. Dabei wird beispielsweise die im Backend für die Benutzergruppe "Administrator"
+definierte Eingabemaske als erstes gefunden und entsprechend angezeigt. Für die Mitgliedergruppe
+"general Members" wird als erstes die Maske "FEE Eingabe" gefunden und angezeigt.
+
+Der Eintrag "*" (bis MM 2.1 "-") bei den Gruppen ist ein "catch all", d.h. dieser Eintrag gilt für
+alle Gruppen, sofern nicht schon vorher in der Abarbeitung ein Eintrag zum Zuge gekommen ist.
+
+Manchmal gibt es Konstellationen, bei denen man in einer Spalte bei der Abarbeitung eine Zeile
+"überspringen" möchte - z.B. um in der ersten Zeile bei Mitgliedergruppe kein "catch all *" zu haben.
+Dafür kann man sich eine Gruppe anlegen, zu der es keinen zugewiesenen Benutzer/Mitglied gibt - z. B.
+als "Anonymous" oder "empty".
+
+
+Anpassung der Überschrift
+-------------------------
+
+.. note:: Das Feature steht ab MM 2.3 zur Verfügung.
+
+Wenn ein Datensatz im FE bearbeitet wird, lautet die Überschrift "Bearbeite Datensatz <ID>".
+Es erschießt sich für editierende Mitglieder anhand der Angabe der ID nicht sehr klar, welchen
+Datensatz man gerade bearbeitet. Zur deutlicheren Kennzeichnung ist es möglich, in den Einstellungen
+der Eingabemaske einen entsprechenden Text aus den Daten des Items zu generieren und das statt
+der ID auszugeben.
+
+In dem Textfeld können die Werte des Items als "Simple Tokens" wie z. B. ``##model_name##`` übergeben
+werden.
+
+Die Anpassung der Ausgabe ist auch im BE möglich.
+
+Einstellung im BE: |br|
+|img_fee-own-headline|
+
+Ausgabe im FE: |br|
+|img_fee-own-headline2|
+
+
 Einstellen der Zugangsberechtigung für die Bearbeitung
 ------------------------------------------------------
 
@@ -191,35 +243,6 @@ Eingabemaske: |br|
 
 Filterregel: |br|
 |img_fee-member-filterrule|
-
-
-Einrichtung unterschiedlicher Eingabemasken für BE/FE
------------------------------------------------------
-
-Möchte man für die Bearbeitung im FE nur bestimmte Felder frei
-geben, so muss hierfür eine separate Eingabemaske erstellt werden.
-
-Die Erstellung der Eingabemaske erfolgt analog der Maske für das Backend.
-Über die Auswahl bzw. Aktivierung der Attribute werden die
-Formularfelder für die Bearbeitung definiert.
-
-Die Eingabemaske kann nun über die "Eingabe-/Render-Zuordnungen" |img_dca_combine|
-für das FE ausgewählt werden.
-
-|img_fee-dca-zuordnung2|
-
-Die Reihenfolge der Zuordnungseinstellung ist wichtig, da diese "von oben nach unten"
-abgearbeitet wird. Dabei wird beispielsweise die im Backend für die Benutzergruppe "Administrator" 
-definierte Eingabemaske als erstes gefunden und entsprechend angezeigt. Für die Mitgliedergruppe
-"general Members" wird als erstes die Maske "FEE Eingabe" gefunden und angezeigt.
-
-Der Eintrag "*" (bis MM 2.1 "-") bei den Gruppen ist ein "catch all", d.h. dieser Eintrag gilt für
-alle Gruppen, sofern nicht schon vorher in der Abarbeitung ein Eintrag zum Zuge gekommen ist.
-
-Manchmal gibt es Konstellationen, bei denen man in einer Spalte bei der Abarbeitung eine Zeile
-"überspringen" möchte - z.B. um in der ersten Zeile bei Mitgliedergruppe kein "catch all *" zu haben.
-Dafür kann man sich eine Gruppe anlegen, zu der es keinen zugewiesenen Benutzer/Mitglied gibt - z. B.
-als "Anonymous" oder "empty".
 
 
 Individuelle Buttons in FE-Maske
@@ -308,6 +331,9 @@ der Eingabemaske ausgewählt werden.
 .. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung2.png
 
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
+
+.. |img_fee-own-headline| image:: /_img/screenshots/extended/frontend_editing/fee-own-headline.png
+.. |img_fee-own-headline2| image:: /_img/screenshots/extended/frontend_editing/fee-own-headline2.png
 
 .. |img_fee-rights-at-inputmask| image:: /_img/screenshots/extended/frontend_editing/fee-rights-at-inputmask.png
 .. |img_fee-member-filterrule| image:: /_img/screenshots/extended/frontend_editing/fee-member-filterrule.png
