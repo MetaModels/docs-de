@@ -11,6 +11,9 @@ Sortierungen, Filterungen usw. wurde absichtlich verzichtet.
 
 Die Umsetzung orientiert sich an den :ref:`component_index`.
 
+Für eine leichtere Übersicht wo was zu finden ist, gibt es den
+:download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.
+
 **Aufgabenstellung:**
 
 * Erstellung einer im Backend pflegbaren Mitarbeiterliste
