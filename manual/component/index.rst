@@ -48,6 +48,7 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
     filter
     dca-combine
     contentelements
+    inserttags
 
 
 .. |br| raw:: html
