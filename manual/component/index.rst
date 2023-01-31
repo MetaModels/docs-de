@@ -29,6 +29,7 @@ Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels - a
 Zusammenspiel mehrerer MetaModel miteinander - kommt man nicht umhin, einzelne Eingaben
 in einem vorhandenen MetaModel weiter zu ergänzen oder abzuändern.
 
+.. _rst_component_index_mm_lageplan:
 Für eine leichtere Übersicht wo was zu finden ist, gibt es den
 :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.
 
