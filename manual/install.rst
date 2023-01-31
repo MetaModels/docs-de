@@ -66,8 +66,9 @@ Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 * ein laufendes Contao 4.13.x (LTS)
 * PHP 8.1
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+* ``memory_limit`` 512MB oder mehr (Empfehlung)
 
-Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiziell supportet.
+Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
 
 .. seealso::
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
@@ -79,7 +80,7 @@ Höhere Versionen von Contao und/oder PHP sind möglich, werden aber nicht offiz
    dass man z. B. `attribute_numeric` für `attribute_timestamp` selbständig in die composer.json eintragen muss.
    Bei Fragen steht der Support zur Seite.
    
-   Der DCG 2.2.0 wird nun auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
+   Der DCG wird nun ab 2.2.0 auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
    dass der Composer ab und an damit nicht zurecht gekommen ist – warum auch immer… |br|
    Bei Update kommt z.B. die Meldung |br|
    ``[InvalidArgumentException]
@@ -125,8 +126,9 @@ Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 * ein laufendes Contao 4.9.x (LTS)
 * PHP 7.4
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+* ``memory_limit`` 512MB oder mehr (Empfehlung)
 
-Höhere Versionen von Contao sind möglich, werden aber nicht offiziell supportet.
+Höhere Versionen von Contao können möglich sein, werden aber nicht offiziell supportet.
 
 **Weitere Features von MM 2.2:**
 Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt - bitte
