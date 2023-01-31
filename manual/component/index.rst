@@ -29,11 +29,18 @@ Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels - a
 Zusammenspiel mehrerer MetaModel miteinander - kommt man nicht umhin, einzelne Eingaben
 in einem vorhandenen MetaModel weiter zu ergänzen oder abzuändern.
 
+Für eine leichtere Übersicht wo was zu finden ist, gibt es den
+:download:`"MM-lageplan" <_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.
+
 Mit der Erweiterung MetaModels erhält Contao jeweils zwei neue Inhaltselemente und Module
 für die Frontendausgabe. Mit dem Inhaltselement/Modul "MetaModel-Liste" können
 Datensätze einzeln oder als Liste auf der Webseite ausgegeben werden und mit dem
 Inhaltselement/Modul "MetaModel-Frontendfilter" steht ein Filter für das Frontend
 zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
+
+Um einzelne Werte eines Datensatzes (Item) oder die Anzahl aller Datensätze im Contao-Kontext
+auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Verfügung.
+
 
 .. toctree::
     :hidden:
