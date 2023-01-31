@@ -67,7 +67,7 @@ oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen
 im Blick behalten werden:
 
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
-* zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen
+* zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
 
 
 Re-Finanzierung
