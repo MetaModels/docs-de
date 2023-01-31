@@ -30,7 +30,7 @@ ausgegeben.
 * FE-Model MM-Liste: ``{{mm::total::mod::[ID]}}`` - z. B. ``{{mm::total::mod::22}}``
 * CE MM-Liste: ``{{mm::total::ce::[ID]}}`` - z. B. ``{{mm::total::ce::33}}``
 * MetaModel: ``{{mm::total::mm::[MM Col-Name|ID](::[ID filter])}}`` - z. B.
-  ``{{mm::total::mm::mm_employees}}``, ``{{mm::total::1}}``, ``{{mm::total::1::44}}``
+  ``{{mm::total::mm::mm_employees}}``, ``{{mm::total::mm::1}}``, ``{{mm::total::mm::1::44}}``
 
 
 Ausgabe eines/mehrerer Items
