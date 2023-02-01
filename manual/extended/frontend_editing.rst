@@ -159,7 +159,7 @@ Manchmal gibt es Konstellationen, bei denen man in einer Spalte bei der Abarbeit
 Dafür kann man sich eine Gruppe anlegen, zu der es keinen zugewiesenen Benutzer/Mitglied gibt - z. B.
 als "Anonymous" oder "empty".
 
-
+.. _extended_frontend_editing_headlines:
 Anpassung der Überschrift
 -------------------------
 

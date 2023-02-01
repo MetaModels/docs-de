@@ -31,6 +31,9 @@ Allgemein und Core
   effektiver/schneller
 * es gibt ein neues Event zum Manipulieren der Überschrift der Eingabemaske
   `GetEditMaskSubHeadlineEvent <https://github.com/contao-community-alliance/dc-general/blob/39ec68cee8b7034e5c1900692cd1b0eeaa7d4c7e/src/Contao/View/Contao2BackendView/Event/GetEditMaskSubHeadlineEvent.php>`_
+* bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
+  angezeigt werden
+* die Insert-Tags wurden komplett überarbeitet - :ref:`bitte teilweise geänderte Syntax beachten <component_inserttags>`
 
 
 Attribute
@@ -55,6 +58,8 @@ Frontend-Editing (FEE)
   eingeloggten Mitglieds filtert
 * es gibt ein neues Event zum Manipulieren der Überschrift der Eingabemaske
   `GetEditMaskSubHeadlineEvent <https://github.com/contao-community-alliance/dc-general/blob/39ec68cee8b7034e5c1900692cd1b0eeaa7d4c7e/src/Contao/View/Contao2BackendView/Event/GetEditMaskSubHeadlineEvent.php>`_
+* bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
+  angezeigt werden (`#14 <https://github.com/MetaModels/contao-frontend-editing/issues/43>`_) - :ref:`siehe FEE <extended_frontend_editing_headlines>`
 
 
 .. _check_upgrade_mm230:
