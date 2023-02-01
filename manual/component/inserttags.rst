@@ -29,7 +29,7 @@ ausgegeben.
 
 * FE-Model MM-Liste: ``{{mm::total::mod::[ID]}}`` - z. B. ``{{mm::total::mod::22}}``
 * CE MM-Liste: ``{{mm::total::ce::[ID]}}`` - z. B. ``{{mm::total::ce::33}}``
-* MetaModel: ``{{mm::total::mm::[MM Col-Name|ID](::[ID filter])}}`` - z. B.
+* MetaModel: ``{{mm::total::mm::[MM Table-Name|ID](::[ID filter])}}`` - z. B.
   ``{{mm::total::mm::mm_employees}}``, ``{{mm::total::mm::1}}``, ``{{mm::total::mm::1::44}}``
 
 
@@ -38,8 +38,8 @@ Ausgabe eines/mehrerer Items
 
 Ausgabe eines oder mehrerer Items mit optionaler Angabe des Ausgabetyps.
 
-* ``{{mm::item::[MM Col-Name|ID]::[Item ID|ID,ID,ID]::[ID render setting](::[Output (Default:text)|html5])`` - z. B.
-  ``{{mm::item::mm_employees::1,3,42::5}}``
+* ``{{mm::item::[MM Table-Name|ID]::[Item ID|ID,ID,ID]::[ID render setting](::[Output (Default:text)|html5])`` - z. B.
+  ``{{mm::item::mm_employees::1,3,42::5}}``, ``{{mm::item::1::1,3,42::5}}``
 
 
 Ausgabe eines Attributes
@@ -47,7 +47,7 @@ Ausgabe eines Attributes
 
 Ausgabe eines Attributes mit optionaler Angabe des Ausgabetyps.
 
-* ``{{mm::attribute::[MM Col-Name|ID]::[Item ID]::[ID render setting]::[Attribute Col-Name|ID](::[Output (Default:text)|html5|raw])`` - z. B.
+* ``{{mm::attribute::[MM Table-Name|ID]::[Item ID]::[ID render setting]::[Attribute Col-Name|ID](::[Output (Default:text)|html5|raw])`` - z. B.
   ``{{mm::attribute::mm_employees::42::5::combined_name}}``, ``{{mm::attribute::mm_employees::42::5::date_start::raw}}``
 
 
@@ -57,7 +57,7 @@ Ausgabe von Parametern der Weiterleitung zur Detailseite
 Ausgabe der URL, Bezeichnung, Seiten-ID oder Werte des Knotens "param" wie z. B. dem Alias einer Weiterleitung
 (jumpTo) eines Items - die Weiterleitung muss in den Rendereinstellungen entsprechend konfiguriert sein.
 
-* ``{{mm::jumpTo::[MM Col-Name|ID]::[Item ID]::[ID render setting](::[Parameter (Default:url)|label|page|params.attname])}}`` - z. B.
+* ``{{mm::jumpTo::[MM Table-Name|ID]::[Item ID]::[ID render setting](::[Parameter (Default:url)|label|page|params.attname])}}`` - z. B.
   ``{{mm::jumpTo::mm_employees::42::5}}``, ``{{mm::jumpTo::mm_employees::42::5::page}}``, ``{{mm::jumpTo::mm_employees::42::5::params.alias}}``
 
 
