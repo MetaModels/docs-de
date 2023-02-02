@@ -31,6 +31,13 @@ ausgegeben, anhand derer man per JavaScript verschiedene Widgets einbinden kann.
 Mit MM 2.2 stehen im Prinzip alle (einsprachigen) Attribute für ein Frontend-Editing zur Verfügung. Der Stand
 der Freigabe ist im folgenden Ticket auf Github zusammengefasst: `FEE Issue #15 <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_
 
+Folgende Model-Typen werden aktuell noch nicht unterstützt:
+
+* Mehrsprachige Model
+* Kindtabellen
+* Model mit Hierarchie
+* Model mit Varianten
+
 Die erste Implementierung des Frontend-Editing wurde über ein
 `Fundraising <https://now.metamodel.me/de/unterstuetzer/fundraising#frontend-editing>`_
 finanziert. Für den weiteren Ausbau, Bugfixing und neue Funktionen ist die Mitarbeit am
