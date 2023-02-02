@@ -33,10 +33,10 @@ der Freigabe ist im folgenden Ticket auf Github zusammengefasst: `FEE Issue #15 
 
 Folgende Model-Typen werden aktuell noch nicht unterstützt:
 
-* Mehrsprachige Model
-* Kindtabellen
-* Model mit Hierarchie
-* Model mit Varianten
+* Mehrsprachige Model (`#21 <https://github.com/MetaModels/contao-frontend-editing/issues/21>`_)
+* Model mit Varianten (`#20 <https://github.com/MetaModels/contao-frontend-editing/issues/20>`_)
+* Kindtabellen (`#19 <https://github.com/MetaModels/contao-frontend-editing/issues/19>`_)
+* Model mit Hierarchie (`#18 <https://github.com/MetaModels/contao-frontend-editing/issues/18>`_)
 
 Die erste Implementierung des Frontend-Editing wurde über ein
 `Fundraising <https://now.metamodel.me/de/unterstuetzer/fundraising#frontend-editing>`_
