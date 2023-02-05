@@ -47,7 +47,10 @@ Filter
   (`#1473 <https://github.com/MetaModels/core/issues/1473>`_)
 * passend zum FEE-Rechtemanagement gibt es eine neue Filterregel, der die Liste nach den zugehörigen Items
   eines eingeloggten Mitgliedes filtert
-
+* Einzelauswahl [select]
+    * Attributstyp Numerisch (Integer) möglich
+* Mehrfachauswahl [Tags]
+    * Attributstyp Numerisch (Integer) möglich
 
 Frontend-Editing (FEE)
 ----------------------
