@@ -167,7 +167,7 @@ Dafür kann man sich eine Gruppe anlegen, zu der es keinen zugewiesenen Benutzer
 als "Anonymous" oder "empty".
 
 Kann für den FE-Besucher der Webseite keine passende Einstellung für die Eingabemaske gefunden werden z. B.
-weil die Seite dch kein Login geschützt wurde oder die Mitgliedergruppe nicht in den Zuordnungen definiert
+weil die Seite durch kein Login geschützt oder die Mitgliedergruppe nicht in den Zuordnungen definiert
 wurde, wird eine Exception ausgegeben "Definition basic is not registered in the configuration mm_xyz".
 
 Die Ausgabe der Exception könnte man umgehen, wenn man als letzte Konfiguration bei der Mitgliedergruppe
