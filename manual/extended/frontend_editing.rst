@@ -166,6 +166,15 @@ Manchmal gibt es Konstellationen, bei denen man in einer Spalte bei der Abarbeit
 Dafür kann man sich eine Gruppe anlegen, zu der es keinen zugewiesenen Benutzer/Mitglied gibt - z. B.
 als "Anonymous" oder "empty".
 
+Kann für den FE-Besucher der Webseite keine passende Einstellung für die Eingabemaske gefunden werden z. B.
+weil die Seite dch kein Login geschützt wurde oder die Mitgliedergruppe nicht in den Zuordnungen definiert
+wurde, wird eine Exception ausgegeben "Definition basic is not registered in the configuration mm_xyz".
+
+Die Ausgabe der Exception könnte man umgehen, wenn man als letzte Konfiguration bei der Mitgliedergruppe
+das "catch-all" (*) auswählt und eine eine leere Eingabemaske ohne Berechtigung für Erstellung und Bearbeitung.
+Dann wird ein Error 403 ausgegeben, der mit einer entsprechenden Seite in Contao abgefangen werden kann.
+
+
 .. _extended_frontend_editing_headlines:
 Anpassung der Überschrift
 -------------------------
