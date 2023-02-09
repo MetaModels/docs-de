@@ -171,7 +171,7 @@ weil die Seite durch kein Login geschützt oder die Mitgliedergruppe nicht in de
 wurde, wird eine Exception ausgegeben "Definition basic is not registered in the configuration mm_xyz".
 
 Die Ausgabe der Exception könnte man umgehen, wenn man als letzte Konfiguration bei der Mitgliedergruppe
-das "catch-all" (*) auswählt und eine eine leere Eingabemaske ohne Berechtigung für Erstellung und Bearbeitung.
+das "catch-all" (*) auswählt und sowie eine "leere" Eingabemaske ohne Berechtigung für Erstellung und Bearbeitung.
 Dann wird ein Error 403 ausgegeben, der mit einer entsprechenden Seite in Contao abgefangen werden kann.
 
 
