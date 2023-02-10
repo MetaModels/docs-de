@@ -4,7 +4,7 @@ File-Metadata-Extractor für MetaModels
 ======================================
 
 .. warning:: Das Tool File-Metadata-Extractor ist noch im Fundraising 
-   und wird erst nach Erreichen der Zielsumme von z.Z. 3.900,00 € frei
+   und wird erst nach Erreichen der Zielsumme von z.Z. 4.200,00 € frei
    geschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
@@ -70,7 +70,7 @@ Installation per Composer
 
 Voraussetzungen für die Installation:
 
-* MetaModels core ab 2.1
+* MetaModels Core ab 2.1
 
 
 Unterstützte Metadaten
@@ -128,6 +128,9 @@ Spenden
 Ein Dank für die Spenden* für die Erweiterung an:
 
 * N.N.: 350 €
+* Liebchen+Liebchen: 1.210 €
+* Liebchen+Liebchen: 300 €
+* Liebchen+Liebchen: 500 €
 
 
 (Spenden in Netto)
