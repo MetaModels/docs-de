@@ -34,10 +34,14 @@ Allgemein und Core
 * bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
   angezeigt werden
 * die Insert-Tags wurden komplett überarbeitet - :ref:`bitte teilweise geänderte Syntax beachten <component_inserttags>`
+* Anpassung an Contao-Änderung der Locale-Angaben (nun ``_`` statt ``-``) - alle Angaben von $GLOBALS[TL_LANGUAGE]
 
 
 Attribute
 ---------
+
+* bei allen Attributen wurden die HTML5-Templates überarbeitet: CSS-Klasse mit Attributtyp und Ausgabetyp, PHP-Shortcode,
+  umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
 
 
 Filter
@@ -76,6 +80,7 @@ im Blick behalten werden:
 
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
+* Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
 
 
 Re-Finanzierung
