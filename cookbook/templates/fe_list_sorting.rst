@@ -25,7 +25,7 @@ für die Umsortierung zu generieren. Es gibt einen "Toggle-Link" der jeweils in 
 umschaltet sowie jeweils für Ab- und Aufsteigend einen Link - entsprechende CSS-Klassen und ein Aktiv-Parameter
 wird auch übergeben. Man kann sich den kompletten Link inkl. CSS-Klassen direkt auch generieren lassen.
 
-Folgendes Snippet als Beispiel für die Aufrufe:
+Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
 
 .. code-block:: php
    :linenos:
