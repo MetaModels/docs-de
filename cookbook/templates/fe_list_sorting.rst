@@ -31,6 +31,7 @@ Folgendes Snippet als Beispiel für die Aufrufe:
    :linenos:
 
    <?php
+   //..
    <?php $sortingLinkToggle = $this->generateSortingLink('name', 'toggle');?>
    <a href="<?= $sortingLinkToggle['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkToggle['label'] ?> (toggle)</a><br>
    <?php $sortingLinkAsc = $this->generateSortingLink('name', 'asc'); ?>
@@ -40,6 +41,7 @@ Folgendes Snippet als Beispiel für die Aufrufe:
    <?= $this->renderSortingLink('name', 'toggle') ?> (toggle)<br>
    <?= $this->renderSortingLink('name', 'asc') ?> (asc)<br>
    <?= $this->renderSortingLink('name', 'desc') ?> (desc)<br>
+   // Liste...
 
 Bitte beachten, dass bei dem Link mit den Einstellungen der Standardsortierung die Slug/Get-Parameter entfernt werden -
 lediglich das URL-Fragment bleibt bestehen.
