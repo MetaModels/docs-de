@@ -50,7 +50,7 @@ folgenden Werte zurück:
 * "attribute": Attribut
 * "name": Name des Attributs
 * "href": Link zum Sortieren
-* "direction": Aktuelle Sortierung
+* "direction": Aktuelle Sortierrichtung
 * "active": aktuelles Attribut der Sortierung
 * "class": CSS-Klasse
 * "label": Label
