@@ -20,11 +20,10 @@ eingebracht werden.
 
 .. note:: Das Feature steht ab MM 2.3 zur Verfügung.
 
-Um die Verwendung im MM-Listen-Template zu vereinfachen ist es möglich, im MM-Listen-Template für jedes Attribut
-verschiedene Links für die Umsortierung zu generieren. Es gibt einen "Toggle-Link" der jeweils in die andere
-Sortierrichtung umschaltet sowie jeweils für Ab- und Aufsteigend einen Link - entsprechende CSS-Klassen und
-ein Aktiv-Parameter wird auch übergeben. Man kann sich den kompletten Link inkl. CSS-Klassen direkt auch
-generieren lassen.
+Um die Verwendung im MM-Listen-Template zu vereinfachen ist es möglich, für jedes Attribut verschiedene Links
+für die Umsortierung zu generieren. Es gibt einen "Toggle-Link" der jeweils in die andere Sortierrichtung
+umschaltet sowie jeweils für Ab- und Aufsteigend einen Link - entsprechende CSS-Klassen und ein Aktiv-Parameter
+wird auch übergeben. Man kann sich den kompletten Link inkl. CSS-Klassen direkt auch generieren lassen.
 
 Folgendes Snippet als Beispiel für die Aufrufe:
 
