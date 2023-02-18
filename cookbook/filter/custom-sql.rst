@@ -195,6 +195,7 @@ Sortierspalte mit angeben.
 Sortierungen der Ausgabe nach einer Nummer und NULL-Werten oder Zufall
 **********************************************************************
 
+Zu beachten ist, dass diese SQL-Regel im Filter als *erste Regel* eingebaut wird.
 Anzeige der Items nach einer eigenen Sortierungsnummer aber alle Items ohne Nummer (NULL) ans Ende:
 
 .. code-block:: php

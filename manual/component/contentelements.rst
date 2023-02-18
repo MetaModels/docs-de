@@ -16,6 +16,9 @@ zur Verfügung. Diese können sowohl als Inhaltselement als auch
 als FE-Modul in Contao genutzt werden. Einen Unterschied in den
 Einstellungsoptionen zwischen Inhaltselement und Modul gibt es nicht.
 
+Module zu verwenden bietet sich an, wenn man die selbe Liste/Filter an
+mehreren Stellen ausgeben möchte.
+
 Für die Listendarstellung gehört zu den wichtigsten Auswahloptionen
 die Auswahl des MetaModel (wo kommen die Daten her), die Render-Einstellung
 und die Templateauswahl (wie werden die Daten angezeigt) und ggf. noch
@@ -32,36 +35,57 @@ die Wahl des Filtersets (welche Filterung soll zum Einsatz kommen).
 Zusätzlich gibt es für die Filter ein Inhaltselement/Modul "Filterreset"
 zum Zurücksetzen aller Filtereinstellungen im Frontend.
 
-Optionen CE Liste
------------------
+Optionen CE/Modul Liste
+-----------------------
 
-* **MetaModel**: |br|
-  Auswahl des MetaModel für die Datenherkunft
-* **Elemente pro Seite, Offset und Limit** |br|
-  Einstellungen für eine Paginierung bzw. maximale Anzahl
-* **Filterset-Einstellungen**: |br|
-  Auswahl des Filtersets sowie der Sortierung; ist bei einer
-  Filterregel "Einfache Abfrage" die Option "Statischer Parameter"
-  gesetzt, erscheint hier ein Selectfeld zur Wertauswahl; ist der
-  Parameter "Überschreiben der Sortierung erlauben" gesetzt,
-  kann die Sortierung per URL nach dem Schema
-  /orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>.html
-  bzw. als GET-Parameter überschrieben werden
-* **Render-Einstellungen**: |br|
-  Auswahl der Render-Einstellung; möchte man Einfluss auf
-  die Ausgabe der Items der Ausgabeliste haben, dann bietet sich
-  das Template der Render-Einstellung (metamodel_prerendered)
-  an und nicht das "Template der Ausgabe" (ce_metamodel_list)
+* **MetaModel-Einstellungen**: |br|
+  Auswahl des MetaModel für die Datenherkunft sowie Offset und Limit der Liste
+* **MetaModel Render-Einstellung**: |br|
+  Auswahl einer erstellten Render-Einstellung, Auswahl des Templates
+  ce/mod_metamodel_list und eine Option, die Daten ungeparst ausgeben zu können; |br|
+  Mit dem Template wird der die Liste umschließende Wrapper definiert, der die Liste
+  und Paginierung enthält; möchte man Einfluss auf die Ausgabe der Items der
+  Ausgabeliste haben, dann sollte das im Template der Render-Einstellung (metamodel_prerendered)
+  erfolgen; Die Daten ungeparst auszugeben kann von Vorteil sein, wenn sehr viele Daten
+  ausgegeben werden sollen da ggf. unnötige/doppelte Templateparsings gespart werden.
+* **MetaModel Paginierung**: |br|
+  Mit der Paginierung kann die Ausgabe der Gesamtliste in einzelne Seiten unterteilt werden.
+  Das Überschreiben verschiedener Standardparameter ist möglich.
+* **MetaModel-Filter**: |br|
+  Auswahl eines erstellten Filtersets; |br|
+  ist bei einer Filterregel "Einfache Abfrage" die Option "Statischer Parameter"
+  gesetzt, erscheint hier ein Selectfeld zur Wertauswahl
+* **Sortierung**: |br|
+  Hier wird die Sortierung der Listenelemente gesetzt. |br|
+  Wenn eine manuelle Sortierung der Items vorgenommen wurde, wäre die Auswahl
+  "Sortierung" zu wählen. Eine individuelle Sortierung z. B. nach mehreren Attributen
+  kann über die Filterregel "Eig. SQL" erfolgen (:ref:`siehe Kochbuch <sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`)
+  Ist der Parameter "Überschreiben der Sortierung erlauben" gesetzt,
+  kann die Sortierung per URL z. B. nach dem Schema |br|
+  ``/orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>``
+  bzw. als GET-Parameter überschrieben werden. Das Überschreiben verschiedener
+  Standardparameter ist möglich.
+* **Parameter-Einstellungen**: |br|
+  Mit den Parameter-Einstellungen können leicht individuelle Parameter an das Template
+  übergeben werden - mehr dazu im :ref:`"Kochbuch" <rst_cookbook_templates_fe_list_parameters>`
 
-Optionen CE Filter
-------------------
+
+Optionen CE/Modul Filter
+------------------------
 
 * **MetaModel**: |br|
   Auswahl des MetaModel welche die Grundlage der Filterung darstellt
-* **Anzuwendendes Filterset**: |br|
-  Auswahl des Filtersets
+* **Anzuwendendes Filtereinstellungen**: |br|
+  Auswahl eines erstellten Filtersets
 * **Attribute**: |br|
-  Attribute, die in dem Filter im Frontend angezeigt werden sollen
+  Filterregeln der Filtereinstellung, die im im Frontend angezeigt werden sollen
+* **Bei Änderung aktualisieren**: |br|
+  Ist die Option gesetzt, wird statt des Submitbuttons das Filterformular direkt
+  nach einer Eingabe/Auswahl abgesendet.
+* **Weiterleitungsseite**: |br|
+  Mit der Weiterleitungsseite wird mit den Filterparametern der URL die
+  ausgewählte Seite angesteuert. Möchte man auf dieser Seite den selben Filter
+  ebenfalls einbauen, so muss das per Modul erfolgen (s. u.)
 
 Man kann einen Filter und die Liste auf verschiedene Seiten setzen und beim Filterelement
 eine Weiterleitungsseite definieren. Damit jedoch aus den POST-Parametern des Filterelementes

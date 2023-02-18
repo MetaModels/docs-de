@@ -42,6 +42,7 @@ Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
    <?= $this->renderSortingLink('name', 'asc') ?> (asc)<br>
    <?= $this->renderSortingLink('name', 'desc') ?> (desc)<br>
    // Liste...
+   <?php foreach ($this->data as $arrItem): ?>
 
 Bitte beachten, dass bei dem Link mit den Einstellungen der Standardsortierung die Slug/Get-Parameter entfernt werden -
 lediglich das URL-Fragment bleibt bestehen.
@@ -49,14 +50,16 @@ lediglich das URL-Fragment bleibt bestehen.
 Der Aufruf von ``generateSortingLink`` mit den Parametern "Spaltenname" des Attributs und Sortierungstyp liefert die
 folgenden Werte zurück:
 
-* "attribute": Attribut
+* "attribute": Referenz des Attributs
 * "name": Name des Attributs
 * "href": Link zum Sortieren
-* "direction": Aktuelle Sortierrichtung
-* "active": aktuelles Attribut der Sortierung
-* "class": CSS-Klasse
+* "direction": Aktuelle Sortierrichtung (``asc`` || ``desc``)
+* "active": ``true`` wenn es das Attribut der Sortierung ist, ansonsten ``false``
+* "class": CSS-Klassen
 * "label": Label
 
+Das ``renderSortingLink`` generiert einen kompletten Link - der Text kann über die Anpassung der
+Sprachendatei individuell gestaltet werden.
 
 .. |img_sorting_options| image:: /_img/screenshots/cookbook/templates/sorting_options.jpg
 
