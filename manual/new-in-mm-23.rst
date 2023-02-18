@@ -34,7 +34,12 @@ Allgemein und Core
 * bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
   angezeigt werden
 * die Insert-Tags wurden komplett überarbeitet - :ref:`bitte teilweise geänderte Syntax beachten <component_inserttags>`
-* Anpassung an Contao-Änderung der Locale-Angaben (nun ``_`` statt ``-``) - alle Angaben von $GLOBALS[TL_LANGUAGE]
+* Anpassung an Contao-Änderung der Locale-Angaben (nun ``_`` statt ``-``) - alle Angaben von $GLOBALS[TL_LANGUAGE] als
+  deprercated gekennzeichnet
+* die Sortierung beim CE/Modul hat eine Einstellung zum Anfügen eines URL-Fragments zum Ansteuern eines Ankerpunktes
+  für ``generateSortingLink`` und ``renderSortingLink``
+* im Listentemplate ``metamodels_prerendered`` stehen zwei Methoden zur Verfügung, um für ein Attribut Links für einen
+  Sortierwechsel auszugeben - mehr im :ref:`"Kochbuch" <rst_cookbook_templates_fe_list_sorting>`
 
 
 Attribute
