@@ -59,7 +59,7 @@ Optionen CE/Modul Liste
   Hier wird die Sortierung der Listenelemente gesetzt. |br|
   Wenn eine manuelle Sortierung der Items vorgenommen wurde, wäre die Auswahl
   "Sortierung" zu wählen. Eine individuelle Sortierung z. B. nach mehreren Attributen
-  kann über die Filterregel "Eig. SQL" erfolgen (:ref:`siehe Kochbuch <rst_cookbook_filter_custom-sql_sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`)
+  kann über die Filterregel "Eig. SQL" erfolgen (:ref:`siehe Kochbuch <rst_cookbook_filter_custom-sql_sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`).
   Ist der Parameter "Überschreiben der Sortierung erlauben" gesetzt,
   kann die Sortierung per URL z. B. nach dem Schema ``/orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>``
   bzw. als GET-Parameter überschrieben werden. Zum Erstellen der Sortierungslinks steht eine
