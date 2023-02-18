@@ -61,9 +61,10 @@ Optionen CE/Modul Liste
   "Sortierung" zu wählen. Eine individuelle Sortierung z. B. nach mehreren Attributen
   kann über die Filterregel "Eig. SQL" erfolgen (:ref:`siehe Kochbuch <sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`)
   Ist der Parameter "Überschreiben der Sortierung erlauben" gesetzt,
-  kann die Sortierung per URL z. B. nach dem Schema |br|
-  ``/orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>``
-  bzw. als GET-Parameter überschrieben werden. Das Überschreiben verschiedener
+  kann die Sortierung per URL z. B. nach dem Schema ``/orderBy/<Spaltenname d. Attributs>/orderDir/<DESC || ASC>``
+  bzw. als GET-Parameter überschrieben werden. Zum Erstellen der Sortierungslinks steht eine
+  Methode zur Verfügung, mit der je Attribut diese erzeugt werden können - mehr dazu im
+  :ref:`"Kochbuch" <rst_cookbook_templates_fe_list_sorting>`. Das Überschreiben verschiedener
   Standardparameter ist möglich.
 * **Parameter-Einstellungen**: |br|
   Mit den Parameter-Einstellungen können leicht individuelle Parameter an das Template
