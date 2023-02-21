@@ -32,12 +32,15 @@ Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
 
    <?php
    //..
-   <?php $sortingLinkToggle = $this->generateSortingLink('name', 'toggle');?>
+   <?php if ($sortingLinkToggle = $this->generateSortingLink('name', 'toggle')): ?>
    <a href="<?= $sortingLinkToggle['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkToggle['label'] ?> (toggle)</a><br>
-   <?php $sortingLinkAsc = $this->generateSortingLink('name', 'asc'); ?>
+   <?php endif; ?>
+   <?php if ($sortingLinkAsc = $this->generateSortingLink('name', 'asc')): ?>
    <a href="<?= $sortingLinkAsc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkAsc['label'] ?> (asc)</a><br>
-   <?php $sortingLinkDesc = $this->generateSortingLink('name', 'desc'); ?>
+   <?php endif; ?>
+   <?php if ($sortingLinkDesc = $this->generateSortingLink('name', 'desc')): ?>
    <a href="<?= $sortingLinkDesc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkDesc['label'] ?> (desc)</a><br>
+   <?php endif; ?>
    <?= $this->renderSortingLink('name', 'toggle') ?> (toggle)<br>
    <?= $this->renderSortingLink('name', 'asc') ?> (asc)<br>
    <?= $this->renderSortingLink('name', 'desc') ?> (desc)<br>
