@@ -115,6 +115,6 @@ Ressourcen
 * `MetaModels Projektseite <https://now.metamodel.me>`_
 * `MetaModels auf Github <https://github.com/MetaModels>`_
 * `MetaModels Handbuch auf Github <https://github.com/MetaModels/docs-de>`_
-* `MetaModels Contao Wiki <http://de.contaowiki.org/MetaModels>`_
 * `MetaModels Contao Community Subforum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_
-* `MetaModels IRC Channel on freenode #contao.mm <irc://chat.freenode.net/#contao.mm>`_
+* `MetaModels Contao-Slack #metamodels <https://contao.slack.com/archives/CKGEBDV60>`_
+* :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>`
