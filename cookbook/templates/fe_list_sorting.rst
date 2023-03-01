@@ -33,13 +33,13 @@ Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
    <?php
    //..
    <?php if ($sortingLinkToggle = $this->generateSortingLink('name', 'toggle')): ?>
-   <a href="<?= $sortingLinkToggle['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkToggle['label'] ?> (toggle)</a><br>
+   <a href="<?= $sortingLinkToggle['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>" data-escargot-ignore rel="nofollow"><?= $sortingLinkToggle['label'] ?> (toggle)</a><br>
    <?php endif; ?>
    <?php if ($sortingLinkAsc = $this->generateSortingLink('name', 'asc')): ?>
-   <a href="<?= $sortingLinkAsc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkAsc['label'] ?> (asc)</a><br>
+   <a href="<?= $sortingLinkAsc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>" data-escargot-ignore rel="nofollow"><?= $sortingLinkAsc['label'] ?> (asc)</a><br>
    <?php endif; ?>
    <?php if ($sortingLinkDesc = $this->generateSortingLink('name', 'desc')): ?>
-   <a href="<?= $sortingLinkDesc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>"><?= $sortingLinkDesc['label'] ?> (desc)</a><br>
+   <a href="<?= $sortingLinkDesc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>" data-escargot-ignore rel="nofollow"><?= $sortingLinkDesc['label'] ?> (desc)</a><br>
    <?php endif; ?>
    <?= $this->renderSortingLink('name', 'toggle') ?> (toggle)<br>
    <?= $this->renderSortingLink('name', 'asc') ?> (asc)<br>
@@ -48,7 +48,8 @@ Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
    <?php foreach ($this->data as $arrItem): ?>
 
 Bitte beachten, dass bei dem Link mit den Einstellungen der Standardsortierung die Slug/Get-Parameter entfernt werden -
-lediglich das URL-Fragment bleibt bestehen.
+lediglich das URL-Fragment bleibt bestehen. Das Attribut ``data-escargot-ignore`` verhindert die Aufnahme des Links in den
+Contao-Crawler für die Indexierung der Suche.
 
 Der Aufruf von ``generateSortingLink`` mit den Parametern "Spaltenname" des Attributs und Sortierungstyp liefert die
 folgenden Werte zurück:
