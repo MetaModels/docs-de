@@ -81,6 +81,7 @@ Frontend-Editing (FEE)
   `GetEditMaskSubHeadlineEvent <https://github.com/contao-community-alliance/dc-general/blob/39ec68cee8b7034e5c1900692cd1b0eeaa7d4c7e/src/Contao/View/Contao2BackendView/Event/GetEditMaskSubHeadlineEvent.php>`_
 * bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
   angezeigt werden (`#14 <https://github.com/MetaModels/contao-frontend-editing/issues/43>`_) - :ref:`siehe FEE <extended_frontend_editing_headlines>`
+* der "Create"-Link ist im Standardtemplate des FE-Moduls nicht mehr dabei - das Template wurde an das des CE angeglichen
 
 
 .. _check_upgrade_mm230:
@@ -96,6 +97,7 @@ im Blick behalten werden:
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
+* bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 
 
 Re-Finanzierung
