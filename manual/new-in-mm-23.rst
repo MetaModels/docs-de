@@ -12,6 +12,7 @@ Für einen Check nach einem Upgrade zu MM 2.3 sind :ref:`unten weitere Hinweise 
 .. note:: zum Anlegen von mm_*-Tabellen und Spalten der Attribute muss eine DB-Migration durchgeführt werden
    - siehe :ref:`siehe Schemamanager <component_schema-manager>`
 
+
 Allgemein und Core
 ------------------
 
@@ -58,10 +59,16 @@ Filter
   (`#1473 <https://github.com/MetaModels/core/issues/1473>`_)
 * passend zum FEE-Rechtemanagement gibt es eine neue Filterregel, der die Liste nach den zugehörigen Items
   eines eingeloggten Mitgliedes filtert
+* das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
+  Links für die Suche-Indexierung nicht mehr folgt
 * Einzelauswahl [select]
     * Attributstyp Numerisch (Integer) möglich
 * Mehrfachauswahl [Tags]
     * Attributstyp Numerisch (Integer) möglich
+* Register
+    * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
+      Links für die Suche-Indexierung nicht mehr folgt
+
 
 Frontend-Editing (FEE)
 ----------------------
@@ -88,6 +95,7 @@ im Blick behalten werden:
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
+* Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 
 
 Re-Finanzierung
