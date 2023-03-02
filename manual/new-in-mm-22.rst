@@ -300,8 +300,7 @@ im Blick behalten werden:
 * die JavaScript-Unterstützung ist nun im Core, den Attributen und Filtern auf "Vanilla-Script" umgestellt - Abhängikeiten
   zu jQuery oder Mootools sind damit entfallen. Bitte eigene Scripte ggf. anpassen.
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
-  angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden. Im englischen
-  Hinweistext wird das mit angegeben - für weitere Sprachen muss das in Transifex nach Release gepflegt werden
+  angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden.
 * Bei Levenshtein-gestützte Suche die neue Schreibweise beachten (sht statt sth) sowie die Templateauswahl für die
   Autovervollständigung in den Einstellungen der Filterregel
 
