@@ -275,7 +275,7 @@ Reiter "Commits".
            "contao-community-alliance/composer-client": "~0.12",
            "contao-community-alliance/dc-general": "^2.1",
            "metamodels/bundle_all": "^2.1",
-           "metamodels/attribute_alias": "dev-master#a97ec461ae1254fa616811c3ce234515238fb3c7",
+           "metamodels/attribute_alias": "dev-master#a97ec461ae1254fa616811c3ce234515238fb3c7 as 2.1.42",
            ...
 
 
