@@ -59,7 +59,7 @@ als Inhalt in MM ausgeben, gibt es wie immer verschiedene Wege - folgend einer a
 Zunächst wird ein Slider z. B. als Bilderslider über den entsprechenden Navigationspunkt im BE angelegt und die
 gewünschten Bilder ausgewählt. Zur Vereinfachung der Konfigurationseinstellungen legt man weiterhin ein FE-Modul
 vom Typ "RockSolid Slider" an und nimmt dort die gewünschten Einstellungen zu Größe, Animation, Navigation usw. vor
-- die ID des FE-Moduls z. B. ``5`` wird dann im Template noch benötigt.
+- die ID des FE-Moduls z. B. ``55`` wird dann im Template noch benötigt.
 
 In MM legt man ein Attribut vom Typ Einzelauswahl [Select] mit den folgenden Einstellungen an:
 
