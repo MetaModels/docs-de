@@ -76,6 +76,7 @@ Zudem wird ein eigenes Template z. B. ``mm_attr_select_rst_slider.html5`` mit fo
 .. code-block:: php
    :linenos:
 
+   <?php
    $moduleData['type']                      = 'rocksolid_slider';
    $moduleData['rsts_id']                   = $this->raw['id'];
    $moduleData['rsts_import_settings']      = 1;
