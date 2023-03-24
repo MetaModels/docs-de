@@ -3,6 +3,9 @@
 FE-Templates über Content-Elemente erstellen
 ============================================
 
+CE YouTube
+----------
+
 Bei komplexeren Ausgaben wie z. B. bei dem CE YouTube gibt es neben der YT-ID noch verschiedene weitere
 Parameter, die eingestellt bzw. ausgegeben werden können. Man kann über das MM-Template diese CEs einbinden
 und für die Ausgabe verwenden. Die Einbindung der CEs kann sowohl im Template der Rendersettings
@@ -18,6 +21,7 @@ In dem Template folgenden Code eingeben:
    :linenos:
 
    <?php
+   $contentData['type']           = 'youtube';
    $contentData['youtube']        = $this->raw . '?rel=0';
    $contentData['youtubeOptions'] = serialize(['youtube_nocookie']);
    $contentData['playerSize']     = serialize(['560', '315']);
@@ -44,3 +48,48 @@ siehe :ref:`rst_cookbook_templates_fe_list_parameters`.
 
 Für eine kompakte Darstellung und Eingabe in der Eingabemaske, könnte man sich auch mit dem MCW-Attribut eine
 einzeilige "Multi-Eingabe" erstellen - siehe :ref:`rst_extended_attribute_mcw`.
+
+
+FE-Modul RockSolid Slider
+-------------------------
+
+Möchte man vorgefertigte Slider wie beim `RockSolid Slider <https://rocksolidthemes.com/de/contao/plugins/responsive-slider>`_
+als Inhalt in MM ausgeben, gibt es wie immer verschiedene Wege - folgend einer als Anregung:
+
+Zunächst wird ein Slider z. B. als Bilderslider über den entsprechenden Navigationspunkt im BE angelegt und die
+gewünschten Bilder ausgewählt. Zur Vereinfachung der Konfigurationseinstellungen legt man weiterhin ein FE-Modul
+vom Typ "RockSolid Slider" an und nimmt dort die gewünschten Einstellungen zu Größe, Animation, Navigation usw. vor
+- die ID des FE-Moduls z. B. ``5`` wird dann im Template noch benötigt.
+
+In MM legt man ein Attribut vom Typ Einzelauswahl [Select] mit den folgenden Einstellungen an:
+
+* Quelltabelle: tl_rocksolid_slider
+* ID-Spalte: id
+* Werte-Spalte: name
+* Alias-Spalte: id
+* Auswahl-Sortierung: name
+
+Damit kann später ein Slider in der Eingabemaske ausgewählt werden in der natürlich das Attribut eingebunden wird.
+
+Zudem wird ein eigenes Template z. B. ``mm_attr_select_rst_slider.html5`` mit folgendem Inhalt angelegt:
+
+.. code-block:: php
+   :linenos:
+
+   $moduleData['type']                      = 'rocksolid_slider';
+   $moduleData['rsts_id']                   = $this->raw['id'];
+   $moduleData['rsts_import_settings']      = 1;
+   $moduleData['rsts_import_settings_from'] = 55;
+
+   $model = new ModuleModel();
+   $model->setRow($moduleData);
+
+   $module = new MadeYourDay\RockSolidSlider\Module\Slider($model);
+
+   echo $module->generate();
+
+Der Typ muss unbedingt angegeben werden, damit die passenden CSS-Klassen für den Slider in den Quelltext kommen; die
+``55`` ist die Modul-ID der Einstellungen.
+
+In den Rendersettings für die Ausgabe wird das Attribut ebenfalls eingebunden und bei den Attributseinstellungen das
+Template ``mm_attr_select_rst_slider`` ausgewählt.
