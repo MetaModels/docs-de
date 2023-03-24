@@ -95,3 +95,6 @@ Der Typ muss unbedingt angegeben werden, damit die passenden CSS-Klassen für de
 
 In den Rendersettings für die Ausgabe wird das Attribut ebenfalls eingebunden und bei den Attributseinstellungen das
 Template ``mm_attr_select_rst_slider`` ausgewählt.
+
+Wie man die Parameter dynamisch in das Template bekommt, ist im oberen Abschnitt beschrieben und kann hier analog
+erfolgen.
