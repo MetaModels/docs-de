@@ -69,7 +69,8 @@ In MM legt man ein Attribut vom Typ Einzelauswahl [Select] mit den folgenden Ein
 * Alias-Spalte: id
 * Auswahl-Sortierung: name
 
-Damit kann später ein Slider in der Eingabemaske ausgewählt werden in der natürlich das Attribut eingebunden wird.
+Damit kann später ein Slider in der Eingabemaske ausgewählt werden - in der Eingabemaske wird natürlich das Attribut
+auch eingebunden.
 
 Zudem wird ein eigenes Template z. B. ``mm_attr_select_rst_slider.html5`` mit folgendem Inhalt angelegt:
 
