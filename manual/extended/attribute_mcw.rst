@@ -21,7 +21,7 @@ als Erweiterung `attribute_translatedtablemulti <https://github.com/MetaModels/a
 
 Das MCW-Attribut kann z.B. verwendet werden, um in einer Eingabemaske eine variable
 Anzahl von Eingaben zu machen, die unterschiedliche Eingabetypen beinhalten. Ein einfaches
-Bespiel wäre die Angabe mehrerer Links mit einem Textfeld für die URL, einem Textfeld
+Beispiel wäre die Angabe mehrerer Links mit einem Textfeld für die URL, einem Textfeld
 für den Linktext und einer Checkbox für das Link-Target.
 
 Die Installation und Verwendung besteht aus den Punkten
@@ -35,7 +35,7 @@ Anpassung der DCA-Konfigurationsdatei
 
 Die DCA-Konfigurationsdatei `config.php` muss an einer geeigneten
 Stelle in der Contao-Installation abgelegt oder eine bestehende Datei
-mit den Angeban ergänzt werden. Das kann z.B. erfolgen in
+mit den Angaben ergänzt werden. Das kann z.B. erfolgen in
 
 * app/Resources/contao/config/ (ab Contao 4.4)
 * contao/config/ (ab Contao 4.9)

@@ -43,6 +43,7 @@ Allgemein und Core
   Sortierwechsel auszugeben - mehr im :ref:`"Kochbuch" <rst_cookbook_templates_fe_list_sorting>`
 * Unterstützung des in Contao 4.10 eingebauten neuen Routings - damit kann das Legacy-Routing über die config.yml
   abgeschaltet werden (``legacy_routing: false``)
+* das Sessionhandling wurde von der Contao- zur Symfony-Session umgebaut
 
 
 Attribute
