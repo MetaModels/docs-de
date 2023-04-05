@@ -3,9 +3,9 @@
 Strukturierte Daten im FE-Template ausgeben
 ===========================================
 
-Die MM-Daten können für eine leichtere Analyse zu ihrem Inhalt z. B. für Suchmaschinen mit s.g. "strukturierte Daten"
+Die MM-Daten können für eine leichtere Analyse zu ihrem Inhalt z. B. für Suchmaschinen mit s. g. "strukturierte Daten"
 im Quelltext ergänzt werden. Einer der bekanntesten Kataloge für solche Auszeichnungen ist unter
-`Schema.org <https://schema.org/`_ zu finden.
+`Schema.org <https://schema.org>`_ zu finden.
 
 Die Schemata können in den Kodierungen ``RDFa``, ``Microdata`` and ``JSON-LD`` erstellt und in die Seite eingebaut
 werden. Bis Contao 4.9 war die Kodierung die Contao verwendet hat ``Microdata`` - seit Contao 4.12 wird ``JSON-LD``
@@ -14,7 +14,7 @@ eingesetzt.
 Für den Einbau der Auszeichnung erstellt man ein eigenes Template aus ``metamodels_prerendered.html5`` und passt dieses
 so an, wie die folgenden Beispiele einer Stellenausschreibung zeigen - siehe `JobPosting <https://schema.org/JobPosting>`_.
 
-Zum Testen der Auszeichnung kann z. B. mit folgenden Tools geprüft werden:
+Die Auszeichnungen können z. B. mit folgenden Tools geprüft werden:
 
 * `Rich-Suchergebnisse <https://search.google.com/test/rich-results>`_
 * `Schema-Validierung <https://validator.schema.org/>`_
@@ -28,7 +28,6 @@ Auszeichnung mit ``Microdata``
    <?php if (count($this->data)): ?>
        <div class="layout_full">
            <?php foreach ($this->data as $arrKey => $arrItem): ?>
-                <?php $this->block('item'); ?>
                <div class="item <?= $arrItem['class'] ?>" itemscope itemtype="https://schema.org/JobPosting">
                    <h2 itemprop="title"><?= $arrItem['text']['title'] ?></h2>
                    <div>
@@ -92,7 +91,6 @@ Auszeichnung mit ``JSON-LD``
                    ->jobLocation((new Place())->address((new PostalAddress())->addressCountry($arrItem['text']['country'])))
                    ->description($arrItem['text']['description']);
                ?>
-                <?php $this->block('item'); ?>
                <div class="item <?= $arrItem['class'] ?>">
                    <h2 itemprop="title"><?= $arrItem['text']['title'] ?></h2>
                    <div>
