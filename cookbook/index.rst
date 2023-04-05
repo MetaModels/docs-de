@@ -33,6 +33,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     templates/fe_redirect_to_list.rst
     templates/flatpickr-integration.rst
     templates/fe_template_ce_elements.rst
+    templates/fe_template_schema_org.rst
     tips/change-table-column-name.rst
     tips/delete-child-items.rst
     tips/speed-up-backend-list.rst

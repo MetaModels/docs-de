@@ -3,7 +3,7 @@
 Frontend-Editing (FEE)
 ======================
 
-.. note:: Die Unterstützung einiger Attribute steht erst ab ab MM 2.2 zur Verfügung.
+.. note:: Die Unterstützung einiger Attribute steht erst ab MM 2.2 zur Verfügung.
    siehe `Github <https://github.com/MetaModels/contao-frontend-editing/issues/15>`_.
 
 
