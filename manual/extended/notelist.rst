@@ -4,7 +4,7 @@ Merkliste für MetaModels
 ========================
 
 .. warning:: Die Merkliste ist sofort einsatzbereit (siehe Installation) wird
-   aber erst nach Erreichen der aktuellen Fundrasingsumme von 5.595€ frei geschaltet. |br|
+   aber erst nach Erreichen der aktuellen Fundrasingsumme von 6.020€ frei geschaltet. |br|
    Für einen Zugang bitte eine E-Mail an info@e-spin.de
 
 Die Merkliste (Notelist) erweitert MetaModels um die Möglichkeit, in der
@@ -295,14 +295,20 @@ Spenden
 Ein Dank für die Spenden* für die Erweiterung an:
 
 * `Sebastian Krull <http://www.sebastiankrull.de>`_: 350 €
-* `Carsten Merz <http://www.fitkurs.de>`_: 350 €
 * `Westwerk GmbH & Co. KG <https://www.westwerk.ac>`_: 350 €
+* `Carsten Merz <http://www.fitkurs.de>`_: 350 €
+* Next Home Creation: 350 €
 * `Niels Hegmanns <http://www.heimseiten.de>`_: 350 €
 * `Hofer Werbung <http://www.hofer-werbung.de>`_: 350 €
 * `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
 * `AFM-Werbestudio <https://www.afm-werbestudio.de>`_: 350 €
 * `PITSol <https://www.pitsol.de/>`_: 350 €
 * `ghost.company <https://www.ghostcompany.com/>`_: 350 €
+* Druckhaus S+F: 350 €
+* w3scout: 350 €
+* `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
+* `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
+* `AFM-Werbestudio <https://www.afm-werbestudio.de>`_: 350 €
 
 
 (Spenden in Netto)
