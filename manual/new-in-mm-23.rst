@@ -94,8 +94,11 @@ Bezeichnungen und DB-Änderungen werden über Migrationen abgefangen. Es gibt ab
 oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen auf MM 2.3 die folgenden Punkte
 im Blick behalten werden:
 
+* wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
+  "Pseudo-Fehlern" zu vermeiden
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
-* zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`
+* zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen -
+  :ref:`siehe Schemamanager <component_schema-manager>`
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link

@@ -99,7 +99,9 @@ Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nic
    ``... Failed to connect to packages.cyberspectrum.de port 443: Connection refused...`` |br|
    dann ist sehr wahrscheinlich der Packagist-Server down und composer kann die Pakete nicht ziehen. Dann bitte das
    Update nach einigen Minuten erneut probieren oder das MM-Team kontaktieren.
-   
+
+   Wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
+   "Pseudo-Fehlern" zu vermeiden.
 
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.3 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
