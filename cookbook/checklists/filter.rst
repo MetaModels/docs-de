@@ -13,7 +13,7 @@ Checkliste:
    
    |box| in FE-CE/Modul Filterset ausgewählt (Anzuwendende Filtereinstellungen)
    
-   |box| in FE-CE/Modul Filterregel aktiviert (Attribute)
+   |box| in FE-CE/Modul Filterregel aktiviert (Attribute) - bei Änderungen an der Filterregel muss diese ggf. erneut aktiviert werden
    
    |box| FE-CE/Modul aktiv/sichtbar geschaltet
 
