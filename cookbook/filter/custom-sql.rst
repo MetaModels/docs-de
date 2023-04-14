@@ -141,6 +141,7 @@ Filterung nach Kind-Elementen eines Eltern-Elements
      FROM mm_parent
      WHERE
      `parent_alias` = {{param::get?name=auto_item}}
+     LIMIT 1
    )  
 
 
@@ -160,6 +161,7 @@ Filterung nach Eltern-Element eines Kind-Elements
      FROM mm_child
      WHERE
      `child_alias` = {{param::get?name=auto_item}}
+     LIMIT 1
    )  
 
 oder kürzer
