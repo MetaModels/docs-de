@@ -17,6 +17,16 @@ gesetzt oder mit dem Tabellennamen bzw. dessen Alias versehen werden (siehe `MyS
 Damit ist die Verwendung auch von in (My)SQL `reservierten Wörter <https://dev.mysql.com/doc/refman/8.0/en/keywords.html>`_
 möglich.
 
+Bei komplexeren Queries ist es ratsam, diese vor dem Einbau mit 
+entsprechenden SQL-Tools wie phpMyAdmin, PHPStorm o. Ä. zu testen
+bzw. bei Verschachtelungen Stück für Stück aufzubauen und vorab mit
+festen Werten zu arbeiten. Die entsprechenden Daten sollten dann natürlich
+auch als Items in der DB vorhanden sein. Als letzten Schritt fügt man
+ggf. notwendige dynamische Parameter mit den zur Verfügung stehenden
+Inserttags hinzu. Die MM-SQL-Inserttags werden nur innerhalb der Verarbeitung
+des Queries aufgelöst und stehen daher auch nicht allgemein im FE zur
+Verfügung.
+
 Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
 
 
