@@ -18,7 +18,7 @@ Damit ist die Verwendung auch von in (My)SQL `reservierten Wörter <https://dev.
 möglich.
 
 Bei komplexeren Queries ist es ratsam, diese vor dem Einbau mit 
-entsprechenden SQL-Tools wie phpMyAdmin, PHPStorm o. Ä. zu testen
+entsprechenden SQL-Tools wie phpMyAdmin, PHPStorm o. ä. zu testen
 bzw. bei Verschachtelungen Stück für Stück aufzubauen und vorab mit
 festen Werten zu arbeiten. Die entsprechenden Daten sollten dann natürlich
 auch als Items in der DB vorhanden sein. Als letzten Schritt fügt man
