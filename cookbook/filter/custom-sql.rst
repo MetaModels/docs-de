@@ -24,7 +24,7 @@ festen Werten zu arbeiten. Die entsprechenden Daten sollten dann natürlich
 auch als Items in der DB vorhanden sein. Als letzten Schritt fügt man
 ggf. notwendige dynamische Parameter mit den zur Verfügung stehenden
 Inserttags hinzu. Die MM-SQL-Inserttags werden nur innerhalb der Verarbeitung
-des Queries aufgelöst und stehen daher auch nicht allgemein im FE zur
+des Query aufgelöst und stehen daher auch nicht allgemein im FE zur
 Verfügung.
 
 Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
