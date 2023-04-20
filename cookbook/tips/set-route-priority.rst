@@ -62,7 +62,7 @@ Die Liste ist dann z. B. über den Alias ``projekte`` und eine Detaildarstellung
 
 
 Link zu einer Detailseite in der Navigation
-___________________________________________
+-------------------------------------------
 
 Möchte man ein oder mehrere MM-Detailseiten in der normalen Contao-Seitennavigation einbauen, sollte man hierzu
 mit entsprechenden Erweiterungen arbeiten und deren Hooks oder Events verwenden.
