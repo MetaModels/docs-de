@@ -35,6 +35,10 @@ die Wahl des Filtersets (welche Filterung soll zum Einsatz kommen).
 Zusätzlich gibt es für die Filter ein Inhaltselement/Modul "Filterreset"
 zum Zurücksetzen aller Filtereinstellungen im Frontend.
 
+Für bestimmte Alias-Filter-Kombinationen ist ggf. die Routenpriorität in den
+Seiteneinstellungen zu setzen - siehe :ref:`rst_cookbook_tips_set-route-priority`
+
+
 Optionen CE/Modul Liste
 -----------------------
 
