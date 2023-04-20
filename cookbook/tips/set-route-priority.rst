@@ -58,7 +58,7 @@ erreichen:
 * Element erforderlich: ein
 * MM-Liste mit Filterregel "Einfache Abfrage" und URL-Parameter "auto_item"
 
-Die Liste ist dann z. B. über den Alias ``projekte`` erreichbar und eine Detaildarstellung über ``projekte/test``.
+Die Liste ist dann z. B. über den Alias ``projekte`` und eine Detaildarstellung über ``projekte/test`` erreichbar.
 
 
 Link zu einer Detailseite in der Navigation
