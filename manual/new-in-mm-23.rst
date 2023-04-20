@@ -44,6 +44,7 @@ Allgemein und Core
 * Unterstützung des in Contao 4.10 eingebauten neuen Routings - damit kann das Legacy-Routing über die config.yml
   abgeschaltet werden (``legacy_routing: false``)
 * das Sessionhandling wurde von der Contao- zur Symfony-Session umgebaut
+* Behandlung der Routenpriorität - siehe :ref:`rst_cookbook_tips_set-route-priority`
 
 
 Attribute
@@ -102,6 +103,7 @@ im Blick behalten werden:
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
+* Filter mit "auto_item" Routenpriorität prüfen - siehe :ref:`rst_cookbook_tips_set-route-priority`
 
 
 Re-Finanzierung
