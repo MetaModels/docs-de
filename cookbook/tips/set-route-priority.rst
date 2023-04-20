@@ -6,7 +6,7 @@ Setzen der Routenpriorität
 .. note:: Die Routenpriorität ist ab Contao 4.13 implementiert und wird ab MM 2.3 mit behandelt.
 
 Contao und MetaModels müssen aus einer gegebenen URl die Seite und ggf. enthaltene Slug-Parameter extrahieren
-und darauf reagieren. Dabei kann es zu überscheidungen und entsprechende "Interpretationsmöglichkeiten"
+und darauf reagieren. Dabei kann es zu Überschneidungen und entsprechende "Interpretationsmöglichkeiten"
 bei der Bedeutung der URL-Elemente geben. Mit der Routenpriorität kann auf die Reihenfolge der Abarbeitung
 Einfluss genommen werden. Folgende Beispiele sollen einen Einblick in die Möglichkeiten geben.
 
@@ -39,7 +39,7 @@ nicht notwendig.
 Listen- und Detailseite mit selbem Alias
 ----------------------------------------
 
-Wenn man die Listen- und die Detailseite mit den selben Alias erstellen, kann man das mit folgenden Einstellungen
+Wenn man die Listen- und die Detailseite mit denselben Alias erstellen, kann man das mit folgenden Einstellungen
 erreichen:
 
 **Listenseite:**
