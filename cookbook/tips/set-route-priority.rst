@@ -68,8 +68,9 @@ Link zu einer Detailseite in der Navigation
 Möchte man ein oder mehrere MM-Detailseiten in der normalen Contao-Seitennavigation einbauen, sollte man hierzu
 mit entsprechenden Erweiterungen arbeiten und deren Hooks oder Events verwenden.
 
-Eine schnelle Lösung ist das Anlegen einer normalen Contao-Seite z. B. mit Alias ``projekte/test`` wenn es die
-Detailseite mit Alias ``projekte`` gibt und die Details über ``projekte/test`` aufgerufen werden können.
+Eine schnelle Lösung ist das Anlegen einer normalen Contao-Seite z. B. mit Alias ``projekte/test`` sowie eine
+Detailseite mit Alias ``projekte``, deren Detailansicht über ``projekte/test`` aufgerufen werden kann (URL-Parameter
+"auto_item").
 
 Gibt man der MM-Detailseite eine höhere Routenpriorität (10) als der normalen Contao-Seite (0), wird der Link
 sauber aufgelöst.
