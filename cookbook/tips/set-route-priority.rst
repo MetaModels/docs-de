@@ -12,8 +12,8 @@ kann auf die Reihenfolge der Abarbeitung Einfluss genommen werden. Folgende Beis
 in die Möglichkeiten geben.
 
 
-Filterung mit "auto_item"
--------------------------
+Filterung mit "folderurl" und "auto_item"
+-----------------------------------------
 
 Ein typischer Aufbau in der Darstellung von Daten mit MM, ist eine Listen- und Detailseite. Häufig wird bei der
 Detailseite der Key für die Filterung per URL-Parameter "auto_item" ausgeblendet. Zudem ist die Detailseite
@@ -27,10 +27,10 @@ Mit einem MM-Filterwert ``test`` wäre die vollständige URL ``projekte/projekt/
 Nun könnte das interpretiert werden als
 
 * Alias: ``projekte`` mit Key: ``projekt`` und Value: ``test`` - oder
-* Alias: ``projekte/projekte`` mit Key: ``auto_item`` und Value: ``test``
+* Alias: ``projekte/projekt`` mit Key: ``auto_item`` und Value: ``test``
 
 Ohne eine Priorisierung der Auflösung wäre es mehr oder weniger dem Zufall überlassen, welche Variante als
-erstes aufgelöst wird.Stellt man in den Seiteneigenschaften der Detailseite eine höhere Routenpriorität (10) als
+erstes aufgelöst wird. Stellt man in den Seiteneigenschaften der Detailseite eine höhere Routenpriorität (10) als
 auf der Listenseite (0) ein, ist die Abarbeitung eindeutig und wird sauber abgearbeitet.
 
 Ist der Alias der Detailseite z. B. nur ``projekt-details`` ist die Auflösung kein Problem und die Routenpriorität
