@@ -40,8 +40,8 @@ nicht notwendig.
 Listen- und Detailseite mit selbem Alias
 ----------------------------------------
 
-Wenn man die Listen- und die Detailseite mit denselben Alias erstellen, kann man das mit folgenden Einstellungen
-erreichen:
+Wenn man die Listen- und die Detailseite mit denselben Seitenalias ausgeben möchte, kann man das mit folgenden
+Einstellungen erreichen:
 
 **Listenseite:**
 
