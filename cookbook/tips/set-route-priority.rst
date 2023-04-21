@@ -5,16 +5,17 @@ Setzen der Routenpriorität
 
 .. note:: Die Routenpriorität ist ab Contao 4.13 implementiert und wird ab MM 2.3 mit behandelt.
 
-Contao und MetaModels müssen aus einer gegebenen URl die Seite und ggf. enthaltene Slug-Parameter extrahieren
-und darauf reagieren. Dabei kann es zu Überschneidungen und entsprechende "Interpretationsmöglichkeiten"
-bei der Bedeutung der URL-Elemente geben. Mit der Routenpriorität kann auf die Reihenfolge der Abarbeitung
-Einfluss genommen werden. Folgende Beispiele sollen einen Einblick in die Möglichkeiten geben.
+Contao und MetaModels müssen aus einer gegebenen URL die Seite über den Alias und ggf. enthaltene
+Slug-Parameter (Key-Value-Pärchen) extrahieren und darauf reagieren. Dabei kann es zu Überschneidungen
+und entsprechende "Interpretationsmöglichkeiten" bei der Bedeutung der URL-Elemente geben. Mit der Routenpriorität
+kann auf die Reihenfolge der Abarbeitung Einfluss genommen werden. Folgende Beispiele sollen einen Einblick
+in die Möglichkeiten geben.
 
 
 Filterung mit "auto_item"
 -------------------------
 
-Ein typischer Aufbau in der Darstellung von Daten mit MM ist eine Listen- und Detailseite. Häufig wird bei der
+Ein typischer Aufbau in der Darstellung von Daten mit MM, ist eine Listen- und Detailseite. Häufig wird bei der
 Detailseite der Key für die Filterung per URL-Parameter "auto_item" ausgeblendet. Zudem ist die Detailseite
 oft eine Unterseite der Listenseite. Mit aktivem ``folderurl`` könnten die Seiten wie folgt aufgebaut sein:
 
