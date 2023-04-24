@@ -21,6 +21,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     panels/checkbox-negation.rst
     panels/manipulate-select-values.rst
     filter/custom-sql.rst
+    filter/filter-with-forwarding.rst
     filter/exclusion.rst
     filter/search-text-at-two-fields.rst
     frontend/output-item-count.rst

@@ -59,6 +59,7 @@ Filter
 
 * beim CE-/FE-Modul Filter sind bei den Bezeichnungen der Filterregeln nun auch der Typ mit angegeben
   (`#1473 <https://github.com/MetaModels/core/issues/1473>`_)
+* beim CE-/FE-Modul Filter kann die ID für das "FORM_SUBMIT" überschrieben werden - siehe :ref:`rst_cookbook_filter_filter-with-forwarding`
 * passend zum FEE-Rechtemanagement gibt es eine neue Filterregel, der die Liste nach den zugehörigen Items
   eines eingeloggten Mitgliedes filtert
 * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
