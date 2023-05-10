@@ -57,6 +57,7 @@ wie folgt aussehen:
    $GLOBALS['TL_CONFIG']['metamodelsattribute_multi']['mm_my_table']['my_mcw'] = array(
       'minCount'     => 2,
       'maxCount'     => 4,
+      'tl_class'     => 'clr w50',
       'columnFields' => array(
          'ts_client_os'     => array(
             'label'     => 'Meine Optionen',
