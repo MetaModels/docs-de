@@ -6,15 +6,16 @@ Daten in Tabellenkalkulation übernehmen
 Für Auswertungen wie eine grafische Aufbereitung mit Diagrammen oder verschiedene Berechnungen gibt es unter Umständen
 die Anfrage nach einem Export zu einer Tabellenkalkulation wie Excel oder Google-Sheets.
 
-Eine Möglichkeit ist, einen Export der aktuellen Daten in ein entsprechendes Format zu erstellen. Eine einfache
-Möglichkeit ist es, die Daten dynamisch abzugreifen. Dazu ist es lediglich notwendig, die Daten als Tabelle auszugeben.
+Eine Möglichkeit ist, einen Export der aktuellen Daten in einem entsprechendem Format zu erstellen. Eine andere und
+einfache Möglichkeit ist es, die Daten dynamisch abzugreifen. Dazu ist es lediglich notwendig, die Daten als Tabelle
+auszugeben und somit für einen Import bereit zu stellen.
 
 Die entsprechenden Programme können diese Tabelle mit den Daten übernehmen - nicht nur einmal sondern auch je nach
 Typ beim Öffnen der Datei oder auch kontinuierlich nach einer vorgegebenen Zeitspanne.
 
 Zur Vorbereitung der Datenübernahme müssen die Daten als Tabelle ausgegeben werden. Dazu kann eine eigene Seite
-eingerichtet werden, bei der auf die üblichen Elemente wie Header, Footer usw. verzichtet wird. Über ein entsprechendes
-Template werden die Daten als Tabelle ausgegeben - z. B.
+eingerichtet werden, bei der auf die überflüssige Elemente wie Header, Footer usw. verzichtet wird. Über ein
+entsprechendes Template werden die Daten als Tabelle ausgegeben - z. B.
 
 .. code-block:: php
    :linenos:
