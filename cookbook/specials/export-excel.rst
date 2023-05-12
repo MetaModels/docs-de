@@ -52,7 +52,7 @@ entsprechendes Template werden die Daten als Tabelle ausgegeben - z. B.
 Daten in Excel
 --------------
 
-Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/download/Movie-Database.zip>` verwendet werden
+Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/Movie-Database.zip>` verwendet werden
 oder man startet mit einer neuen Datei.
 
 Im Tab "Daten" wählt man als Datenquelle das Web.
@@ -86,8 +86,8 @@ der Formel werden die Daten eingeladen.
 |img_google-sheet_01|
 
 
-.. |img_excel-export_01| image:: /_img/screenshots/specials/excel-export_01.jpg
-.. |img_excel-export_02| image:: /_img/screenshots/specials/excel-export_02.jpg
-.. |img_excel-export_03| image:: /_img/screenshots/specials/excel-export_03.jpg
-.. |img_excel-export_04| image:: /_img/screenshots/specials/excel-export_04.jpg
-.. |img_google-sheet_01| image:: /_img/screenshots/specials/google-sheet_01.jpg
+.. |img_excel-export_01| image:: /_img/screenshots/cookbook/specials/excel-export_01.jpg
+.. |img_excel-export_02| image:: /_img/screenshots/cookbook/specials/excel-export_02.jpg
+.. |img_excel-export_03| image:: /_img/screenshots/cookbook/specials/excel-export_03.jpg
+.. |img_excel-export_04| image:: /_img/screenshots/cookbook/specials/excel-export_04.jpg
+.. |img_google-sheet_01| image:: /_img/screenshots/cookbook/specials/google-sheet_01.jpg
