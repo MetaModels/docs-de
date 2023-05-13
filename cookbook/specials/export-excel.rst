@@ -21,6 +21,7 @@ entsprechendes Template werden die Daten als Tabelle ausgegeben - z. B.
    :linenos:
 
     <?php
+    // templates/metamodel_pre_movies_table.html5
     if (count($this->data)): ?>
         <div class="layout_full">
             <table id="export">
