@@ -83,7 +83,7 @@ Daten in Calc
 Zur Übernahme in Calc kann die :download:`Beispieldatei </_download/Movie-Database.ods.zip>` verwendet werden
 oder man startet mit einem neuen Tabellendokument.
 
-Unter "Einfügen" erstellt man eine "Verknüpfung zu externen Daten.
+Unter "Einfügen" erstellt man eine "Verknüpfung zu externen Daten".
 
 |img_oo-export_01|
 
@@ -117,5 +117,5 @@ der Formel werden die Daten eingeladen.
 .. |img_excel-export_04| image:: /_img/screenshots/cookbook/specials/excel-export_04.jpg
 .. |img_oo-export_01| image:: /_img/screenshots/cookbook/specials/oo-export_01.jpg
 .. |img_oo-export_02| image:: /_img/screenshots/cookbook/specials/oo-export_02.jpg
-.. |img_oo-export_03| image:: /_img/screenshots/cookbook/specials/oo-export_02.jpg
+.. |img_oo-export_03| image:: /_img/screenshots/cookbook/specials/oo-export_03.jpg
 .. |img_google-sheet_01| image:: /_img/screenshots/cookbook/specials/google-sheet_01.jpg
