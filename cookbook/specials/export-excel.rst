@@ -48,11 +48,15 @@ entsprechendes Template werden die Daten als Tabelle ausgegeben - z. B.
         <?php $this->endblock(); ?>
     <?php endif; ?>
 
+In den Einstellungen des CE/FE-Moduls MM-Liste sollte keine Paginierung eingerichtet werden. Bei vielen Datensätzen
+kann die Laufzeit der Tabellenausgabe mit setzten der Checkbox "Keine geparsten Items über "$data" ausgeben"
+beschleunigt werden oder mit  Setzen eines Index in der MM-Tabelle - mehr dazu unter :ref:`rst_cookbook_tips_speedup_backend`_
+
 
 Daten in Excel
 --------------
 
-Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/Movie-Database.zip>` verwendet werden
+Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/Movie-Database.xlsx.zip>` verwendet werden
 oder man startet mit einer neuen Datei.
 
 Im Tab "Daten" wählt man als Datenquelle das Web.
@@ -73,6 +77,27 @@ Mit "Laden" werden die Einstellungen abgeschlossen und die Daten sind sichtbar.
 |img_excel-export_04|
 
 
+Daten in Excel
+--------------
+
+Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/Movie-Database.ods.zip>` verwendet werden
+oder man startet mit einem neuen Tabellendokument.
+
+Unter "Einfügen" erstellt man eine "Verknüpfung zu externen Daten.
+
+|img_oo-export_01|
+
+Im nächsten Schritt wird die URL eingegeben - sofern sich nach der Eingabe keine Anzeige im Feld
+"Verfügbare Tabellen/Bereiche" ergibt, auf den Button "..." klicken und die URL bei "Dateiname" einfügen sowie "Öffnen"
+klicken. Anschließend die Tabelle "HTML_export" (Tabellen-ID "export") auswählen und Button "OK" klicken.
+
+|img_oo-export_02|
+
+Anschließend stehen die Daten in dem Tabellenblatt zur verfügung.
+
+|img_oo-export_03|
+
+
 Daten in Google-Sheet
 ---------------------
 
@@ -90,4 +115,7 @@ der Formel werden die Daten eingeladen.
 .. |img_excel-export_02| image:: /_img/screenshots/cookbook/specials/excel-export_02.jpg
 .. |img_excel-export_03| image:: /_img/screenshots/cookbook/specials/excel-export_03.jpg
 .. |img_excel-export_04| image:: /_img/screenshots/cookbook/specials/excel-export_04.jpg
+.. |img_oo-export_01| image:: /_img/screenshots/cookbook/specials/oo-export_01.jpg
+.. |img_oo-export_02| image:: /_img/screenshots/cookbook/specials/oo-export_02.jpg
+.. |img_oo-export_03| image:: /_img/screenshots/cookbook/specials/oo-export_02.jpg
 .. |img_google-sheet_01| image:: /_img/screenshots/cookbook/specials/google-sheet_01.jpg
