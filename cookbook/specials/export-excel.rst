@@ -77,10 +77,10 @@ Mit "Laden" werden die Einstellungen abgeschlossen und die Daten sind sichtbar.
 |img_excel-export_04|
 
 
-Daten in Excel
+Daten in Calc
 --------------
 
-Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/Movie-Database.ods.zip>` verwendet werden
+Zur Übernahme in Calc kann die :download:`Beispieldatei </_download/Movie-Database.ods.zip>` verwendet werden
 oder man startet mit einem neuen Tabellendokument.
 
 Unter "Einfügen" erstellt man eine "Verknüpfung zu externen Daten.
