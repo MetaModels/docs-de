@@ -17,7 +17,7 @@ als FE-Modul in Contao genutzt werden. Einen Unterschied in den
 Einstellungsoptionen zwischen Inhaltselement und Modul gibt es nicht.
 
 Module zu verwenden bietet sich an, wenn man die selbe Liste/Filter an
-mehreren Stellen ausgeben möchte.
+mehreren Stellen ausgeben aber die Einstellungen nur einmal eingeben möchte.
 
 Für die Listendarstellung gehört zu den wichtigsten Auswahloptionen
 die Auswahl des MetaModel (wo kommen die Daten her), die Render-Einstellung
@@ -89,16 +89,25 @@ Optionen CE/Modul Filter
   nach einer Eingabe/Auswahl abgesendet.
 * **Weiterleitungsseite**: |br|
   Mit der Weiterleitungsseite wird mit den Filterparametern der URL die
-  ausgewählte Seite angesteuert. Möchte man auf dieser Seite den selben Filter
-  ebenfalls einbauen, so muss das per Modul erfolgen (s. u.)
+  ausgewählte Seite angesteuert.
 
-Man kann einen Filter und die Liste auf verschiedene Seiten setzen und beim Filterelement
+.. note:: Einstellungen Weiterleitungsseite ab MM 2.3
+
+Ab MM 2.3 ist es möglich, eine Formular-ID anzugeben. Damit kann ein anderer Filter die
+Verarbeitung der Daten übernehmen - siehe :ref:`rst_cookbook_filter_filter-with-forwarding`
+
+Die bisherige Variante, den Filter als Modul einzubinden, kann in MM 2.3 auch weiterhin genutzt werden.
+
+.. note:: Einstellungen Weiterleitungsseite bis MM 2.3
+
+Möchte man auf der Weiterleitungsseite den selben Filter ebenfalls einbauen, so muss das per
+Modul erfolgen. Man kann einen Filter und die Liste auf verschiedene Seiten setzen und beim Filterelement
 eine Weiterleitungsseite definieren. Damit jedoch aus den POST-Parametern des Filterelementes
 die GET-Parameter für die Liste entstehen, muss auf der Seite der Liste das selbe Filterelement
 eingebaut sein - es reicht, wenn das Filterelement als ausgeblendetes Contentelement vorhanden ist.
 
 Es gibt einen Sicherheitscheck von Contao, dass nur identische Formulare die
-selben Daten verarbeiten dürfen, d.h. das Filterelement muss als Modul erstellt werden und jeweils
+selben Daten verarbeiten dürfen, d. h. das Filterelement muss als Modul erstellt werden und jeweils
 auf die Seite mit dem sichtbaren Filter und die Listenseite eingebaut werden.
 
 Das Auslösen des Filters kann per Button erfolgen oder automatisch per Javascript, wenn Filterwerte
