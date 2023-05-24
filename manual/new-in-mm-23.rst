@@ -85,6 +85,8 @@ Frontend-Editing (FEE)
 * bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
   angezeigt werden (`#14 <https://github.com/MetaModels/contao-frontend-editing/issues/43>`_) - :ref:`siehe FEE <extended_frontend_editing_headlines>`
 * der "Create"-Link ist im Standardtemplate des FE-Moduls nicht mehr dabei - das Template wurde an das des CE angeglichen
+* Upload Modi "Einzelner Datei-Upload" sind deprecated
+* Änderung der Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>` - ggf. anpassen
 
 
 .. _check_upgrade_mm230:
@@ -105,6 +107,8 @@ im Blick behalten werden:
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 * Filter mit "auto_item" Routenpriorität prüfen - siehe :ref:`rst_cookbook_tips_set-route-priority`
+* bei FEE Check Upload-Modus :ref:`Dateiupload <extended_frontend_editing_upload>`
+* bei FEE Check Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>`
 
 
 Re-Finanzierung
