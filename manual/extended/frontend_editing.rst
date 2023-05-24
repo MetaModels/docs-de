@@ -397,8 +397,8 @@ Die Ausgabe kann in der FE-Maske zum Beispiel wie folgt aussehen:
 .. |img_fee-eigene-buttons| image:: /_img/screenshots/extended/frontend_editing/fee-eigene-buttons.png
 .. |img_fee-simple-tokens| image:: /_img/screenshots/extended/frontend_editing/fee-simple-tokens.png
 
-.. |img_fee-upload| image:: /_img/screenshots/extended/frontend_editing/fee-fee-upload.png
-.. |img_fee-upload2| image:: /_img/screenshots/extended/frontend_editing/fee-fee-upload2.png
+.. |img_fee-upload| image:: /_img/screenshots/extended/frontend_editing/fee-upload.png
+.. |img_fee-upload2| image:: /_img/screenshots/extended/frontend_editing/fee-upload2.png
 
 .. |br| raw:: html
 
@@ -406,4 +406,4 @@ Die Ausgabe kann in der FE-Maske zum Beispiel wie folgt aussehen:
 
 .. |sup*| raw:: html
 
-   <sup><strong>*</strong><sup>
+   <sup><strong>*</strong></sup>
