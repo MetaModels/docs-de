@@ -289,7 +289,7 @@ können in die URL dynamische Werte einfließen. Der Aufbau der Tokens ist ``##m
 Präfix "model_" wurde eingefügt um die Möglichkeit zu haben, auch andere Daten wie z. B. die des Users einbauen
 zu können.
 
-|fee-simple-tokens|
+|img_fee-simple-tokens|
 
 
 Benachrichtigungen über das Notification Center
@@ -326,6 +326,46 @@ Ist für einen Triggertyp oder für mehrere eine Benachrichtigung erstellt, kann
 der Eingabemaske ausgewählt werden.
 
 
+Upload von Dateien - Optional Dropzone
+--------------------------------------
+
+In der Eingabemaske im FE ist kein Picker für die Dateiverwaltung implementiert, da das Durchreichen der Daten
+aus dem BE in das FE inkl. verschiedener Berechtigungen sehr schwierig ist und mögliche Dateien auch erst
+in die Dateiverwaltung eingebracht werden müssten.
+
+Für die Eingabemaske im FE besteht aber die Möglichkeit, ein Upload von Dateien vorzunehmen. Für den Upload gibt
+es verschiedene Optionen zur Manipulation des Zielpfades, des Dateinamens und der Anzeige nach dem Upload im FE.
+
+Der Upload kann über das Standard-Uploadwidget erfolgen als auch per Drag&Drop über die Dropzone.
+
+Für den Upload muss das entsprechende Attribut vom Typ Datei in der Maske eingebunden sein und als "Widget-Modus"
+"Mehrfacher Datei-Upload" bzw. "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder".
+
+.. note:: Ab MM 2.2 die Widget-Modi "Einzelner Datei-Upload" nicht mehr verwenden - Eingrenzung auf eine Datei per
+   "Doropzone limit"
+
+|img_fee-upload|
+
+Folgende Einstellungen stehen zur Verfügung:
+
+* "Home-Verzeichnis" - Zielverzeichnis bei eingeloggten Mitgliedern; Fallback ist Auswahl bei "Zielordner"
+* "Zielordner" - Dateiablage; ggf. Fallback für "Home-Verzeichnis"
+* "Ordner normalisieren" / "Dateinamen normalisieren" - entsprechende Strings werden wie Aliase normalisiert
+* "Ordner erweitern" / "Dateinamen Prefix/Postfix" - Anpassung der Strings; Verwendung von Inserttags möglich |sup*|
+* "Datei abwählen" - damit kann die Speicherung der Datei im MM-Datensatz entfernt werden
+* "Datei löschen" - damit wird die Datei auf dem Server gelöscht und aus dem MM-Datensatz entfernt
+* "Breite und Höhe der Vorschaubilder" - Ausgabegröße der Thumbnails bei Modus "mit Anzeige der Vorschaubilder"
+* "Dropzone" - Einstellungen der `Dropzone <https://www.dropzone.dev/>`_
+
+.. note:: |sup*| Ab MM 2.3 erfolgt die Auflösung der Inserttags nicht mehr über die Filterregel "Eigenes SQL", sondern
+   über die Standard-Contao-Auflösung; Auf Daten der Eingabemaske kann mit ``{{post::<Attribut-Spaltenname>}}``
+   zugegriffen werden
+
+Die Ausgabe kann in der FE-Maske zum Beispiel wie folgt aussehen:
+
+|img_fee-upload2|
+
+
 .. |img_paketverwaltung| image:: /_img/screenshots/extended/frontend_editing/fee-paketverwaltung.png
 .. |img_paket| image:: /_img/screenshots/extended/frontend_editing/fee-feepaket.png
 .. |img_paketzwei| image:: /_img/screenshots/extended/frontend_editing/fee-feepaket2.png
@@ -355,8 +395,15 @@ der Eingabemaske ausgewählt werden.
 .. |img_fee-member-filterrule| image:: /_img/screenshots/extended/frontend_editing/fee-member-filterrule.png
 
 .. |img_fee-eigene-buttons| image:: /_img/screenshots/extended/frontend_editing/fee-eigene-buttons.png
-.. |fee-simple-tokens| image:: /_img/screenshots/extended/frontend_editing/fee-simple-tokens.png
+.. |img_fee-simple-tokens| image:: /_img/screenshots/extended/frontend_editing/fee-simple-tokens.png
+
+.. |img_fee-upload| image:: /_img/screenshots/extended/frontend_editing/fee-fee-upload.png
+.. |img_fee-upload2| image:: /_img/screenshots/extended/frontend_editing/fee-fee-upload2.png
 
 .. |br| raw:: html
 
    <br />
+
+.. |sup*| raw:: html
+
+   <sup><strong>*</strong><sup>
