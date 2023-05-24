@@ -361,7 +361,7 @@ Folgende Einstellungen stehen zur Verfügung:
    über die Standard-Contao-Auflösung; Auf Daten der Eingabemaske kann mit ``{{post::<Attribut-Spaltenname>}}``
    zugegriffen werden
 
-Die Ausgabe kann in der FE-Maske zum Beispiel wie folgt aussehen:
+Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
 
 |img_fee-upload2|
 
