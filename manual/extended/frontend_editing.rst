@@ -336,7 +336,8 @@ in die Dateiverwaltung eingebracht werden müssten.
 Für die Eingabemaske im FE besteht aber die Möglichkeit, ein Upload von Dateien vorzunehmen. Für den Upload gibt
 es verschiedene Optionen zur Manipulation des Zielpfades, des Dateinamens und der Anzeige nach dem Upload im FE.
 
-Der Upload kann über das Standard-Uploadwidget erfolgen als auch per Drag&Drop über die Dropzone.
+Der Upload kann über das Standard-Uploadwidget erfolgen als auch per Drag&Drop über die
+`Dropzone <https://www.dropzone.dev/>`_.
 
 Für den Upload muss das entsprechende Attribut vom Typ Datei in der Maske eingebunden sein und als "Widget-Modus"
 "Mehrfacher Datei-Upload" bzw. "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder".
