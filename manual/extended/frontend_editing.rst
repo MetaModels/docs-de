@@ -358,7 +358,7 @@ Folgende Einstellungen stehen zur Verfügung:
 * "Dropzone" - Einstellungen der `Dropzone <https://www.dropzone.dev/>`_
 
 .. note:: |sup*| Ab MM 2.3 erfolgt die Auflösung der Inserttags nicht mehr über die Filterregel "Eigenes SQL", sondern
-   über die Standard-Contao-Auflösung; Auf Daten der Eingabemaske kann mit ``{{post::<Attribut-Spaltenname>}}``
+   über die Standard-Contao-Auflösung; auf andere Daten der Eingabemaske kann mit ``{{post::<Attribut-Spaltenname>}}``
    zugegriffen werden
 
 Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
