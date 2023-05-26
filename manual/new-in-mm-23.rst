@@ -47,6 +47,8 @@ Allgemein und Core
 * Behandlung der Routenpriorität - siehe :ref:`rst_cookbook_tips_set-route-priority`
 * bei Varianten-Items werden die nicht-variant Attribute in der Maske nun nicht mehr ausgeblendet, sondern als
   readonly dargestellt
+* Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - für die Anzeige muss das bei den entsprechenden
+  Attributen freigeschaltet sein
 
 
 Attribute
@@ -55,7 +57,9 @@ Attribute
 * bei allen Attributen wurden die HTML5-Templates überarbeitet: CSS-Klasse mit Attributtyp und Ausgabetyp, PHP-Shortcode,
   umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
 * Langtext
-    *  Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+    * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+* Text
+    * Freigabe der Auswahl der BE/FE-Templates der Eingabemaske (siehe Core und FEE)
 
 
 Filter
@@ -92,6 +96,8 @@ Frontend-Editing (FEE)
 * Upload Modi "Einzelner Datei-Upload" sind deprecated
 * Änderung der Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>` - ggf. anpassen
 * Thumbnails von Bilddateien in der Dropzone werden nach einem Seitenreload nun angezeigt
+* Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) - für die Anzeige muss das bei den entsprechenden
+  Attributen freigeschaltet sein
 
 
 .. _check_upgrade_mm230:
