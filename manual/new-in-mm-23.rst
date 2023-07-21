@@ -56,11 +56,20 @@ Attribute
 
 * bei allen Attributen wurden die HTML5-Templates überarbeitet: CSS-Klasse mit Attributtyp und Ausgabetyp, PHP-Shortcode,
   umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
+* bei allen Attributen kann das Template für das Backend per Select ausgewählt werden - für das Frontend siehe FEE
+
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+* Tabelle-Multi (MCW)
+    * Support für readonly und CSS-Klassen für tl_class des Widgets
 * Text
     * Freigabe der Auswahl der BE/FE-Templates der Eingabemaske (siehe Core und FEE)
-
+* Text-Tabelle
+    * Support für readonly
+* Übersetzte Text-Tabelle
+    * Support für readonly
+* Übersetzte Tabelle-Multi (MCW)
+    * Support für readonly und CSS-Klassen für tl_class des Widgets
 
 Filter
 ------
@@ -96,8 +105,7 @@ Frontend-Editing (FEE)
 * Upload Modi "Einzelner Datei-Upload" sind deprecated
 * Änderung der Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>` - ggf. anpassen
 * Thumbnails von Bilddateien in der Dropzone werden nach einem Seitenreload nun angezeigt
-* Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) - für die Anzeige muss das bei den entsprechenden
-  Attributen freigeschaltet sein
+* Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen nichtübersetzten Attributen
 
 
 .. _check_upgrade_mm230:
