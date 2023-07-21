@@ -47,8 +47,7 @@ Allgemein und Core
 * Behandlung der Routenpriorität - siehe :ref:`rst_cookbook_tips_set-route-priority`
 * bei Varianten-Items werden die nicht-variant Attribute in der Maske nun nicht mehr ausgeblendet, sondern als
   readonly dargestellt
-* Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - für die Anzeige muss das bei den entsprechenden
-  Attributen freigeschaltet sein
+* Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - siehe Attribute
 
 
 Attribute
@@ -58,18 +57,18 @@ Attribute
   umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
 * bei allen Attributen kann das Template für das Backend per Select ausgewählt werden - für das Frontend siehe FEE
 
+
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
 * Tabelle-Multi (MCW)
     * Support für readonly und CSS-Klassen für tl_class des Widgets
-* Text
-    * Freigabe der Auswahl der BE/FE-Templates der Eingabemaske (siehe Core und FEE)
 * Text-Tabelle
     * Support für readonly
 * Übersetzte Text-Tabelle
     * Support für readonly
 * Übersetzte Tabelle-Multi (MCW)
     * Support für readonly und CSS-Klassen für tl_class des Widgets
+
 
 Filter
 ------
