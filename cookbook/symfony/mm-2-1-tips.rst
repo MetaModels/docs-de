@@ -30,11 +30,11 @@ Composer-Update
 
 Mit folgendem Befehl wird ein Update eingeleitet:
 
-``/usr/bin/php74 web/contao-manager.phar.php composer update -v``
+``/usr/bin/php81 web/contao-manager.phar.php composer update -v``
 
 oder mit Speicher- und Laufzeitzuweisung
 
-``/usr/bin/php74 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
+``/usr/bin/php81 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
 
 Mit dem Parameter "-v" bzw. "-vv" oder "-vvv" erhalt man verschiedene Detailstufen der Ausgabe. Mit dem
 zusätzlichen Parameter "--dry-run" wird ein "Trockenlauf" als Test durchegführt.
@@ -44,7 +44,7 @@ durchgeführt werden (wird gern vergessen :D).
 
 Die composer.phar sollte regelmäßig aktualisiert werden - dazu folgenden Befehl aufrufen:
 
-``/usr/bin/php74 web/contao-manager.phar.php self-update``
+``/usr/bin/php81 web/contao-manager.phar.php self-update``
 
 
 Paketversion ermitteln
@@ -53,11 +53,11 @@ Paketversion ermitteln
 Bei Fehlermeldungen oder Nachfragen bei Entwicklern ist die Auskunft über die installierte Version
 einer Erweiterung wichtig. Das kann man über den Paketnamen ermitteln z.B. für den DC_General
 
-``/usr/bin/php74 web/contao-manager.phar.php composer show | grep dc-general``
+``/usr/bin/php81 web/contao-manager.phar.php composer show | grep dc-general``
 
 Mit
 
-``/usr/bin/php74 web/contao-manager.phar.php composer show``
+``/usr/bin/php81 web/contao-manager.phar.php composer show``
 
 werden alle Pakete ausgegeben.
 
