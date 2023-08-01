@@ -48,6 +48,7 @@ Allgemein und Core
 * bei Varianten-Items werden die nicht-variant Attribute in der Maske nun nicht mehr ausgeblendet, sondern als
   readonly dargestellt
 * Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - siehe Attribute
+* Models, die als Kindtabelle verknüpft sind, können nun Varianten beinhalten (`#1054 <https://github.com/MetaModels/core/issues/1054>`_)
 
 
 Attribute
