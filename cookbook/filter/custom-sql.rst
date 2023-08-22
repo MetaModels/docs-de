@@ -134,6 +134,16 @@ Zur Prüfung kann im FE an die URL ein GET-Parameter angehangen werden - Datumsf
    	OR DATE(FROM_UNIXTIME(`date_published`)) <= {{param::get?name=now}}
    )
 
+Filterung nach Datum (start) letzen 12 Monate
+*********************************************
+Archivfilter für vergangene Items der letzten 12 Monate:
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT id FROM {{table}}
+   WHERE DATE(FROM_UNIXTIME(`date_start`)) < DATE(now())
+   AND DATE(FROM_UNIXTIME(`date_start`)) >= DATE(now() - INTERVAL 12 month)
 
 Filterung nach Kind-Elementen eines Eltern-Elements
 ***************************************************
