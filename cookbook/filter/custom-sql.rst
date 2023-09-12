@@ -374,7 +374,7 @@ Filterung einer Select-Auswahl im BE für eine nicht-MM-Tabelle
 Hat man für das Attribut Einzelauswahl [select] eine Tabelle ausgewählt,
 die keine MM-Tabelle ist, steht als Filtermöglichkeit die Eingabe einer "WHERE-Eingrenzung"
 zur Verfügung. Möchte man z.B. bei seinem Datensatz eine Verbindung zur Mitglieder-Tabelle
-"tl_members" haben aber die Eingrenzung, dass ein Mitglied nur einmal ausgewählt werden darf,
+"tl_member" haben aber die Eingrenzung, dass ein Mitglied nur einmal ausgewählt werden darf,
 dann folgenden String einsetzen:
 
 .. code-block:: php
