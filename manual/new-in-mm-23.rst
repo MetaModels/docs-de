@@ -88,7 +88,7 @@ Filter
 * Register
     * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
       Links für die Suche-Indexierung nicht mehr folgt
-    * im Template sind Blocks für `formlabel`und `formfield` eingefügt
+    * im Template sind Blocks für `formlabel` und `formfield` eingefügt
 
 
 Frontend-Editing (FEE)
