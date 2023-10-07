@@ -233,7 +233,7 @@ die dafür angesprochen werden können:
 * `PreDeleteModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PreDeleteModelEvent.php>`_:
   Rechteprüfung vor dem Löschen eines Items
 
-Zum automatischen Abspeichern der ID des Mitgliedes oder seiner Gruppe kann ebenfalls das `PreEditModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PreEditModelEvent.php>`_
+Zum automatischen Abspeichern der ID des Mitgliedes oder seiner Gruppe kann ebenfalls das `PrePersistModelEvent <https://github.com/contao-community-alliance/dc-general/blob/a91084614d92875bf41427de0a1ed2ab28589917/src/Event/PrePersistModelEvent.php>`_
 verwendet werden.
 
 Zusätzlich sollte eine Prüfung auf Login und Frontend erfolgen. Zudem sollte eine Seite "Error-403" angelegt werden, wenn die
