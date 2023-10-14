@@ -6,9 +6,12 @@ Daten in Tabellenkalkulation übernehmen
 Für Auswertungen wie eine grafische Aufbereitung mit Diagrammen oder verschiedene Berechnungen gibt es unter Umständen
 die Anfrage nach einem Export zu einer Tabellenkalkulation wie MS Excel, OpenOffice Calc oder Google-Sheets.
 
-Eine Möglichkeit ist, einen Export der aktuellen Daten in einem entsprechenden Format (XLSX, ODS, XLS) zu erstellen.
+Eine Möglichkeit ist, einen Export der aktuellen Daten in einem entsprechenden Format (XLSX, ODS, XLS) zu erstellen
+(siehe `MM-Vortrag Konferenz 2023 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_).
+
 Eine andere und einfache Möglichkeit ist es, die Daten dynamisch abzugreifen. Dazu ist es lediglich notwendig, die
-Daten als Tabelle auszugeben und somit für einen Import bereit zu stellen.
+Daten als Tabelle auszugeben und somit für einen Import bereit zu stellen. Das kann mit einer entsprechenden Seite
+der FE-Ausgabe erfolgen oder mit Aufruf eines `eigenen Routings <https://docs.contao.org/dev/framework/routing/#implementing-custom-routes`_.
 
 Die entsprechenden Programme können diese Tabelle mit den Daten übernehmen - nicht nur einmal sondern auch je nach
 Typ beim Öffnen der Datei oder auch kontinuierlich nach einer vorgegebenen Zeitspanne.
