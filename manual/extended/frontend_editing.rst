@@ -287,7 +287,7 @@ solchen Button per JavaScript übergangen.
 Im Feld Parameter kann auf Werte des Datensatzes zugegriffen und diese mit "Simple Tokens" ersetzt werden. So
 können in die URL dynamische Werte einfließen. Der Aufbau der Tokens ist ``##model_<property-name>##``. Der
 Präfix "model_" wurde eingefügt um die Möglichkeit zu haben, auch andere Daten wie z. B. die des Users einbauen
-zu können. Wenn der/die Parameter als GET Paratemer an die URL angehängt werden sollen, dann muss der Wert mit ``?`` beginnen, z.B. ``?act=edit&id=mm_test::##model_pid##`` ergibt die URL ``domain.tdl/liste.html?act=edit&id=mm_test::3``. Um die Parameter innerhalb der URL zu ergänzen, muss das ``?`` weggelassen werden und es ist alles mittels ``/`` zu verbinden, z.B. ``pid/##model_pid##`` ergibt die URL ``domain.tdl/liste.html?act=edit&id=mm_test::3``.
+zu können. Wenn der/die Parameter als GET Paratemer an die URL angehängt werden sollen, dann muss der Wert mit ``?`` beginnen, z.B. ``?act=edit&id=mm_test::##model_pid##`` ergibt die URL ``domain.tdl/liste.html?act=edit&id=mm_test::3``. Um die Parameter innerhalb der URL zu ergänzen, muss das ``?`` weggelassen werden und es ist alles mittels ``/`` zu verbinden, z.B. ``pid/##model_pid##`` ergibt die URL ``domain.tdl/liste/pid/3.html``.
 
 |img_fee-simple-tokens|
 
