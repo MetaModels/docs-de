@@ -47,9 +47,9 @@ erwartet werden:
 * **Timestamp**: Integer für den Timestamp z.B. 1463657005 oder PHP-Funktion time() |br|
   ``...['default'] = 1463657005;`` oder |br|
   ``...['default'] = time();``
-* **Auswahl**: Integer der ID des Wertes in Hochkomma |br|
+* **Einzelauswahl [Select]**: Integer der ID des Wertes in Hochkomma |br|
   ``...['default'] = '2';``
-* **Mehfachauswahl**: Array mit den Alias-Werten aus der eingestellten Alias-Spalte |br|
+* **Mehrfachauswahl [Tags]**: Array mit den Alias-Werten aus der eingestellten Alias-Spalte |br|
   ``...['default'] = ['einkauf', 'marketing'];``
 * **Kontrollkästchen (Checkbox)**: true |br|
   ``...['default'] = true;``
