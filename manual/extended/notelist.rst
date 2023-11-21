@@ -309,6 +309,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
 * `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
 * `AFM-Werbestudio <https://www.afm-werbestudio.de>`_: 350 €
+* `Ulf Spethmann <https://derdigitalist.de/>`_: 350 €
 
 
 (Spenden in Netto)
