@@ -300,6 +300,25 @@ Filterung nicht korrekt erfolgt; anzuwenden ist dies z.B. bei Checkboxwerten.
       ''
    )
 
+Übergabe mehrerer Werte für `IN()`
+**********************************
+
+Mehrere Werte können an das Query als kommaseparierte Liste oder Array übergeben werden - je nach Typ der Übergabe
+gibt es für den Parameter `aggregate` den Wert `list` oder `set`.
+
+.. code-block:: sql
+   :linenos:
+
+   -- als Liste
+   -- domain.tld/de/liste?id=13,15,19
+   SELECT id FROM {{table}}
+   WHERE id IN ({{param::get?name=id&aggregate=list}})
+
+   -- als Array
+   -- domain.tld/de/liste?id[]=13&id[]=15&id[]=19
+   SELECT id FROM {{table}}
+   WHERE id IN ({{param::get?name=id&aggregate=set}})
+
 Tags für ein Item filtern
 *************************
 
