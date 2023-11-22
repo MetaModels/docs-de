@@ -81,6 +81,9 @@ Filter
   eines eingeloggten Mitgliedes filtert
 * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
   Links für die Suche-Indexierung nicht mehr folgt
+* Eigenes SQL
+   * bei dem Inserttag-Parameter "aggregate" wurde nun der Typ "list" hinzugefügt - der wurde zwar schon immer in der Infobox beschrieben,
+     war aber bisher nicht implementiert; damit können nun kommaseparierte Listenwerte als GET-Wert übergeben werden
 * Einzelauswahl [select]
     * Attributstyp Numerisch (Integer) möglich
 * Mehrfachauswahl [Tags]
