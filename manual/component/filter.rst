@@ -78,6 +78,20 @@ Typen von Filterregeln
 * **Register** (filter_register): |br|
   filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben
 
+Einstellungsparameter
+--------------------
+
+Die unterschiedlichen Filterregeln können über spezifische Einstellungsmöglichkeiten an die
+individuellen Vorgaben angepasst werden. Bei den meisten Filterregeln sind folgende Parameter
+einstellbar:
+
+* **URL-Parameter:** hiermit wird das Schlüsselwort (Key) für die URL definiert; ohne Angabe ist dies
+  der Spaltenname des Attributes. Mit dem Schlüsselwort ``auto_item`` wird das Schlüsselwort nicht mit
+  in die URL eingebaut, sondern nur der Wert ausgegeben - ``auto_item`` kann nur für eine Filterregel
+  verwendet werden. Die Schlüsselwörter ``language`` und ``items`` sind von Contao reserviert - ab
+  MM 2.3 werden diese automatisch umgeschrieben und ein ``__`` angehangen.
+
+
 Ablauf
 ------
 
