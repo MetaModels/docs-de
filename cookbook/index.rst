@@ -24,6 +24,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     filter/filter-with-forwarding.rst
     filter/exclusion.rst
     filter/search-text-at-two-fields.rst
+    filter/exclude-url-from-search-index.rst
     frontend/output-item-count.rst
     frontend/array-helper.rst
     renderings/encrypt-email.rst
