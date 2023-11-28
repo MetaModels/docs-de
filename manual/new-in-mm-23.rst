@@ -86,12 +86,15 @@ Filter
      war aber bisher nicht implementiert; damit können nun kommaseparierte Listenwerte als GET-Wert übergeben werden
 * Einzelauswahl [select]
     * Attributstyp Numerisch (Integer) möglich
+    * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
 * Mehrfachauswahl [Tags]
     * Attributstyp Numerisch (Integer) möglich
+    * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
 * Register
     * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
       Links für die Suche-Indexierung nicht mehr folgt
     * im Template sind Blocks für `formlabel` und `formfield` eingefügt
+    * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
 
 
 Frontend-Editing (FEE)
