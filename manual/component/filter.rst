@@ -89,7 +89,13 @@ einstellbar:
   der Spaltenname des Attributes. Mit dem Schlüsselwort ``auto_item`` wird das Schlüsselwort nicht mit
   in die URL eingebaut, sondern nur der Wert ausgegeben - ``auto_item`` kann nur für eine Filterregel
   verwendet werden. Die Schlüsselwörter ``language`` und ``items`` sind von Contao reserviert - ab
-  MM 2.3 werden diese automatisch umgeschrieben und ein ``__`` angehangen.
+  MM 2.3 werden diese automatisch umgeschrieben und ein ``__`` angehangen, sofern als Spaltenname angelegt.
+* **Template:** Auswahl des Widget-Templates für die FE-Anzeige; neben dem Template ``mm_filteritem_default`` bringen
+  verschiedene Filterregeln ihre eigenen Templates mit wie z. B. Checkbox, Levenshtein, Register usw. Die
+  Templates können auf dem üblichen Weg von Contao angepasst oder individualisiert werden. Das umschließende
+  Template (Wrapper) wird im CE-/FE-Modul Filter ausgewählt.
+* **CSS-ID/Klasse:** setzt eine ID bzw. CSS-Klasse in das auszugebende Widget; damit ist eine individuelle Steuerung
+  der Ansicht/Formatierung möglich.
 
 
 Ablauf
