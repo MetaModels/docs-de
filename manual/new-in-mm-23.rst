@@ -49,6 +49,8 @@ Allgemein und Core
   readonly dargestellt
 * Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - siehe Attribute
 * Models, die als Kindtabelle verknüpft sind, können nun Varianten beinhalten (`#1054 <https://github.com/MetaModels/core/issues/1054>`_)
+* Liste im BE kann nach nach Kalenderwoche gruppiert werden - die Formatierung über einen Sprachschlüssen individuell je
+  Sprache angepasst möglich
 
 
 Attribute
@@ -113,6 +115,8 @@ Frontend-Editing (FEE)
 * Änderung der Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>` - ggf. anpassen
 * Thumbnails von Bilddateien in der Dropzone werden nach einem Seitenreload nun angezeigt
 * Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen nichtübersetzten Attributen
+* bei überschreiben der Buttons für die Eingabemaske, kann nun bei "Parameter" neben den "Simple-Tokens" auch ein
+  Inserttag eingefügt werden
 
 
 .. _check_upgrade_mm230:
