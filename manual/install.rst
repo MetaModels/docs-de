@@ -77,7 +77,7 @@ Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 * PHP 8.1
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 * ``memory_limit`` 512MB oder mehr (Empfehlung)
-* bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_
+* **bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_**
 
 Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
 
