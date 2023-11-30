@@ -74,7 +74,7 @@ Mit dem neuen Schemamanager muss der Workflow mit MM angepasst werden
 Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
 * ein laufendes Contao 4.13.x (LTS)
-* PHP 8.1
+* ab PHP 8.1
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 * ``memory_limit`` 512MB oder mehr (Empfehlung)
 * **bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_**
