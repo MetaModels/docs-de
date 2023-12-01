@@ -116,6 +116,8 @@ Optionen der Gruppierung und Sortierung
 * **Sorting direction**: |br|
   Sortierrichtung: Aufsteigend (ASC) oder Absteigend (DESC)
 
+Über einen Sprachschlüssel kann die Anzeige für die Gruppierung nach Woche individualisiert werden. Mit ``$GLOBALS['TL_LANG']['MSC']['week_format'] = 'K\W W. Y';`` wird z.B. die Ausgabe ``KW 43. 2023`` erzeugt (es wird die `PHP Datumsformatierung <https://www.php.net/manual/de/datetime.format.php>`_ verwendet, das erste ``W`` wird mit einem ``\`` escaped, um es auszugeben statt für die PHP Datumsformatierung zu nutzen).
+
 Ablauf
 ------
 
