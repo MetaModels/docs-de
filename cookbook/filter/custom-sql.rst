@@ -451,6 +451,32 @@ oder QUERY-G (GET) die Mitarbeiterliste eingegrenzt werden.
          {{param::post?name=abteilung}} != 'NULL', (QUERY-P), (QUERY-G)
     )
 
+Man kann damit auch zwei Select-Auswahlen voneinander abhängig gestalten. Wenn man eine
+Tabelle für Kategorien hat ``mm_markt_kategorie`` und eine Kind-Tabelle mit Unterkategorien
+``mm_markt_unterkategorie`` sowie eine Tabelle ``mm_markt_maschine`` in der beide Tabellen
+als Einzelauswahl eingebunden sind. Wird in der Eingabemaske der Maschinen eine Kategorie
+ausgewählt, sollen bei dem Select der Unterkategorien nur noch die zugehörigen Elemente auftauchen.
+Dazu wäre bei dem Model der Unterkategorien folgende SQL-Filterregel einzubauen:
+
+.. code-block:: php
+   :linenos:
+   
+   SELECT unterkategorie.id FROM mm_markt_unterkategorie AS unterkategorie
+   WHERE IF (
+       {{param::post?name=category}} != 'NULL',
+       unterkategorie.pid = (
+           SELECT kategorie.id FROM mm_markt_kategorie AS kategorie 
+           WHERE kategorie.alias = {{param::post?name=category}} 
+           LIMIT 1
+       ),
+       unterkategorie.pid = (
+           SELECT markt.category
+           FROM mm_markt_maschine AS markt
+           WHERE markt.id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1)
+           LIMIT 1
+       )
+   )
+
 Bei der Eingrenzung einer Mehrfachauswahl muss man etwas tricksen, da die Bedingung
 mit IF in den Sub-Queries keine mehrfachen Werte als Rückgabe zulässt. Es ist aber möglich,
 mit GROUP_CONCAT einen einzelnen String mit den IDs zu erzeugen, der von IN ausgewertet
