@@ -12,9 +12,9 @@ im Bezug auf eine vorgegebene Adresse und Radius gefiltert werden. Mit dem Filte
 wird bestimmt, ob sich der entsprechende Datensatz innerhalb des vorgegebenen
 Radius befindet bzw. ob der geografische Abstand zwischen dem Punkt der Filtereingabe
 und dem des Datensatzes unterhalb eines gegebenen Schwellwertes ist. Bezugspunkt
-("Mittelpunkt") des "Filterkreises" ist die im Filter eingegebene Adresse
-- mehr zur Berechnung unter
-`OpenGeoDB <http://www.mamat-online.de/umkreissuche/opengeodb.php>`_
+("Mittelpunkt") des "Filterkreises" ist die im Filter eingegebene Adresse. Der sphärische
+Abstand zwischen den zwei Punkten wird mit der `Haversine-Formel <https://en.wikipedia.org/wiki/Haversine_formula>`_
+ermittelt.
 
 Die Berechnung der Entfernung der Datensätze zur eingegebenen Adresse
 erfolgt auf der Grundlage des Längen- und Breitengerades. Diese beiden Werte
