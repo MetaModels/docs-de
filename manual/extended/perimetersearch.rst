@@ -37,17 +37,17 @@ ergänzt wird.
 Filter installieren
 -------------------
 
-In der Paketverwaltung das Paket "metamodels/filter_perimetersearch" in der
-Version "2.0.0-alpha2" installieren. Nach der Installation sollte es eine
-weitere Filtereinstellung "Umkreissuche" geben.
+Mit dem Contao Manager oder auf Konsole das Paket "metamodels/filter_perimetersearch"
+installieren. Nach der Installation sollte es eine weitere Filterregel "Umkreissuche"
+geben.
 
 
 Attribute anlegen
 -----------------
 
 Für den Längengrad (longitude) und den Breitengrad (latitude) ist jeweils ein
-Attribut vom Typ "Text" anzulegen z.B. als "geo_lat" und "geo_long". Die Attribute
-werden nur für die Filterung benötigt und müssen für die Fronendausgabe nicht
+Attribut vom Typ "Dezimal" oder "Text" anzulegen z.B. als "geo_lat" und "geo_long". Die
+Attribute werden nur für die Filterung benötigt und müssen für die Fronendausgabe nicht
 eingerichtet werden.
 
 |img_attribute_01|
@@ -65,14 +65,15 @@ Unter Filtersets wird ein neues Filterset z.B. mit der Bezeichnung
 "Umkreissuche" mit den folgenden Einstellungen:
 
 * Typ: Umkreissuche
-* Datenmodus: Multimodus (z.Z. nur Multimodus verfügbar)
+* Datenmodus: Multimodus (z. Z. nur Multimodus verfügbar)
 * Attribute für Breite und Länge: entsprechende Attribute auswählen
 * Label: Bezeichnung für die Eingabe der Adresse ("Mittelpunkt") - z.B. "Adresse"
 * Bereichslabel: Bezeichnung für die Angabe der Größe des Radius - z.B. "Radius in km"
 * Bereichsmodus: Auswahl, ob freies Eingabefeld oder feste Werte (Auswahlmodus)
 * Ländermodus: Vorgabe ob und wenn ja welches Land der Adresse für die Lookup-
   Suche hinzugefügt werden soll (z.B. Voreinstellung mit "Deutschland")
-* LookUp Service: Auswahl ob Google-Map oder OpenStreetMap
+* LookUp Service: Auswahl ob Google-Map, OpenStreetMap oder direkte Koordinaten - es
+  können auch mehere Services angelegt werden; diese werden nacheinander abgearbeitet
 
 |img_filter_01|
 
@@ -105,6 +106,10 @@ Hinweise
 Für die Filterung muss die Adresse möglichst genau eingegeben werden. Aktuell
 wird nicht abgefangen, ob es zu einer Adresseingabe mehrere "Fundorte" bei dem
 LookUp-Service gibt.
+
+Wird bei der Datenübergabe im Frontendfilter neben der Adresse auch die konkreten
+Koordinaten übergeben - z. B. mit einer GPS-Bestimmung per JavaScript - sollte bei
+den LookUp-Services die Auswahl Koordinaten an erster Stelle stehen.
 
 Die Auflösung der Adresse zu Längen- und Breitengerad bei der Eingabe im Backend
 ist auch über den LookUp-Service realisierbar - Eine Anleitung dazu folgt. Bis
