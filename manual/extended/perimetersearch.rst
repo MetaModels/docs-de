@@ -113,7 +113,7 @@ den LookUp-Services die Auswahl Koordinaten an erster Stelle stehen.
 
 Die Auflösung einer Adresse zu Längen- und Breitengerad bei der Eingabe im Backend
 ist auch über den LookUp-Service realisierbar -
-`siehe Vortrag zur CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html`_
+`siehe Vortrag zur CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
 
 In einem weiteren Ausbau der Erweiterung werden die Bezeichnungen Mehrsprachig
 werden.
