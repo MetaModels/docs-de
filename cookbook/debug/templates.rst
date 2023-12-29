@@ -27,8 +27,9 @@ Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
    ?>
 
 Anschließend muss man die Seite im Frontend im Debugmodus ansehen. Dazu im
-Backend den Debugmodus im header einschalten, oder für einen dauerhaften Debugmodus
-im Projektordner eine Datei `.env` mit dem Inhalt `APP_ENV=dev` anlegen.
+Backend den Debugmodus im Header einschalten, oder für einen dauerhaften Debugmodus
+im Projektordner eine Datei `.env` bzw. `.env.local` mit dem Inhalt `APP_ENV=dev`
+anlegen (Seite sollte dann nicht öffentlich zugänglich sein).
 
 Anschließend kann man das Array in der Debug-Toolbar über das "Fadenkreuz-Icon"
 untersuchen:
@@ -36,6 +37,10 @@ untersuchen:
 |img_symfony-toolbar|
 
 Mit der Prüfung "isDebug()" stört das `dump` nicht den normalen Aufruf der Seite.
+
+Mit MM 2.2 gibt es ein eigenes Template `metamodel_prerendered_debug.html5`, welches
+man in den Rendersettings der FE-Ausgabe auswählen kann - Werte der MM-Liste werden
+mit dem Template erstmal keine ausgegeben.
 
 Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
 :ref:`rst_cookbook_frontend_array-helper`, die eine Ausgabe im Quelltext für ein
