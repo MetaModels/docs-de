@@ -3,7 +3,7 @@
 Debug Templates
 ===============
 
-Benötigt man für die Ausgabe z.B. einer Liste für das Frontend ein
+Benötigt man für die Ausgabe z. B. einer Liste für das Frontend ein
 eigenes Template oder möchte man bei einem vorhanden Template wissen,
 welche Attribute an das Template übermittelt werden, kann man diese
 sich mit der Debug-Toolbar von Symfony sehr komfortabel ausgeben lassen.
