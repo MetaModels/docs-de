@@ -4,7 +4,7 @@ MetaModels-2-Isotope
 ####################
 
 .. warning:: MetaModels-2-Isotope ist noch im Fundraising und wird erst nach
-   Erreichen der Zielsumme von 6.500€ freigeschaltet. |br|
+   Erreichen der Zielsumme von aktuell 7.374 € freigeschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
