@@ -21,19 +21,20 @@ Die folgenden zwei Screenshots zeigen eine mögliche Eingabe im Backend und was 
 |img_settings-wizard_02|
 
 Der folgende Code kann im Kopfbereich des Listentemplates eingebaut werden und zeigt als Beispiel den Zugriff auf
-den Wert des ersten Eintrages:
+die Werte inklusive eines Defaultwertes:
 
 .. code-block:: php
    :linenos:
 
    <?php
-   // Get value for key1.
-   $valueOne = null;
-   if (count($this->parameter)) {
-       $valueOne =
-           $this->parameter[array_search('key1', array_column($this->parameter, 'key'))]['value'];
-   }
-   // dump($this->parameter, $valueOne);
+   // Get value for "key".
+   $extract = fn(string $keyName, string $default = ''): string =>
+       (false !== $index = \array_search($keyName, \array_column($this->parameter, 'key'), true))
+       ? $this->parameter[$index]['value']
+       : $default;
+   $valueOne = $extract('key1', '7');
+   $valueTwo = $extract('key2', '42');
+   // dump($this->parameter, $valueOne, $valueTwo);
 
 
 .. |img_settings-wizard_01| image:: /_img/screenshots/metamodel_new_features/settings-wizard_01.jpg
