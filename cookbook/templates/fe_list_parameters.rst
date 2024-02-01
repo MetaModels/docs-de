@@ -32,8 +32,8 @@ die Werte inklusive eines Defaultwertes:
        (false !== $index = \array_search($keyName, \array_column($this->parameter, 'key'), true))
        ? $this->parameter[$index]['value']
        : $default;
-   $valueOne = $extract('key1', '7');
-   $valueTwo = $extract('key2', '42');
+   $valueOne = $extract('key1', 'value0');
+   $valueTwo = $extract('key2', '');
    // dump($this->parameter, $valueOne, $valueTwo);
 
 
