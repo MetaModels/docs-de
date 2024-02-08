@@ -56,7 +56,7 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 
 * C 5.x + MM 3.0 + PHP 8.x - aktuell in Entwicklung...
 * C 5.3 + MM 2.4 + PHP 8.2 - aktuell in Entwicklung...
-* :ref:`C 4.13 + MM 2.3 + PHP 8.1 <installation-von-mm-2-3-fur-contao-4-13-und-php-8>`
+* :ref:`C 4.13 + MM 2.3 + PHP 8.1 <installation-von-mm-2-3-fur-contao-4-13-und-php-8>` - Zugang per "EAP"
 * :ref:`C 4.9 + MM 2.2 + PHP 7.4 <installation-von-mm-2-2-fur-contao-4-9>`
 * :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <mm-installation-von-2-1-und-alter>`
 * :ref:`C 3.5 + MM 2.0 + PHP 5.6 <mm-installation-von-2-1-und-alter>`
