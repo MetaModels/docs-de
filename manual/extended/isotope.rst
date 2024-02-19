@@ -227,6 +227,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * Oliver Willmes - `oliverwillmes.de <https://www.oliverwillmes.de>`_: 390 €
 * iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 390 €
 * ghost.company - `ghostcompany.com <http://www.ghostcompany.com>`_: 490 €
+* iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 390 €
 
 (*Spenden in Netto)
 
