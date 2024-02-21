@@ -30,7 +30,7 @@ für die Anzeige kombiniert werden.
    use Terminal42\ServiceAnnotationBundle\Annotation\ServiceTag;
 
    /**
-    * @ServiceTag("kernel.event_listener", event="dc-general.view.contao2backend.get-property-options")
+    * @ServiceTag("kernel.event_listener", event="dc-general.view.contao2backend.get-property-options", priority="100")
     */
    class GetPropertyOptionsListener
    {
@@ -62,7 +62,7 @@ für die Anzeige kombiniert werden.
            }
 
            // Generate own options list.
-           $members     = MemberModel::findAll(); // add e.g. filter for not disabled...
+           $members     = MemberModel::findAll(['order' => 'lastname ASC']); // add e.g. filter for not disabled...
            $aliasColumn = $attribute->get('select_alias');
 
            $options = [];
