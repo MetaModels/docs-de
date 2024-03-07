@@ -13,6 +13,9 @@ sofort mit dem Speichern angelegt. Es ist notwendig, eine Datenbank-Migration mi
 Manager oder Install-Tool durchzuführen. Analog dem Vorgehen, wenn per DCA Änderungen an der Datenbank
 anstehen. Entsprechende Hinweise sind bei der Eingabemaske des Models und der Attribute hinterlegt.
 
+.. note:: Der Schemamanager kann nicht beeinflussen, in welcher Reihenfolge die Migrationen abgearbeitet werden.
+   Deshalb bitte nach dem Erstellen der Tabelle(n) erst eine Migration auslösen und dann erst die Attribute anlegen!
+
 Hintergründe
 -------------
 
