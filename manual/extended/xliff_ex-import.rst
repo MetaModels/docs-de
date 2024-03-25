@@ -57,8 +57,8 @@ Installation per Contao-Manager oder Composer
 
 Voraussetzungen für die Installation:
 
-* MetaModels core 2.1/2.2
-* Contao 4.4.x/4.9.x
+* MetaModels core 2.1/2.2/2.3
+* Contao 4.4.x/4.9.x/4.13.x
 
 
 Konfiguration
