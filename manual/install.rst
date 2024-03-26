@@ -268,6 +268,10 @@ eintragen) z.B.
            {
                "type": "vcs",
                "url": "https://github.com/byteworks-ch/contao-metamodelsattribute_multi.git"
+           },
+           {
+               "type": "git",
+               "url": "git@gitlab.com:MetaModels/filter_parent.git"
            }
        ],
        ...
