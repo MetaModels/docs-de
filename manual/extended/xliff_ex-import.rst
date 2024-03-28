@@ -82,7 +82,7 @@ Somit ist die Konfigurationsdatei in die Bereiche ``dictionaries`` und
 
 .. note:: wenn folgende Meldung beim `composer update` erscheint |br|
    `No default map builder defined, please install an extension that provides "cyberspectrum_i18n.contao.default_map_builder".` |br|
-   ist das ein Hinweis, dass eine Erweiterung wie `Changelanguage <https://github.com/terminal42/contao-changelanguage>` o.ä. fehlt
+   ist das ein Hinweis, dass eine Erweiterung wie `Changelanguage <https://github.com/terminal42/contao-changelanguage>`_ o.ä. fehlt
 
 dictionaries
 ............
