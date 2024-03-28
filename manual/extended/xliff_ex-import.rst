@@ -71,7 +71,7 @@ Zunächst wird ein Ordner ``/translations`` im Installationsverzeichnis
 von Contao anlegt. Dort ist die Ablage der Exportierten XLIFF-Dateien
 bzw. von dort werden diese wieder beim Import eingelesen.
 
-Weiterhin ist im Ordner ``/app`` oder ``/app/Resources`` eine Konfigurationsdatei
+Weiterhin ist im Projektordner der Contao Instalation eine Konfigurationsdatei
 ``.translation-jobs.yml`` anzulegen. Mit dieser Konfigurationsdatei wird
 festgelegt, was exportiert bzw. importiert werden soll - z.B. nur Contao oder
 nur MM oder beides - sowie werden hier einzelne Jobs definiert, die per
@@ -79,6 +79,10 @@ Konsolenaufruf gestartet werden.
 
 Somit ist die Konfigurationsdatei in die Bereiche ``dictionaries`` und
 ``jobs`` eingeteilt - die Parameter sind wie folgt (`siehe auch Beispiel <#beispiel>`_):
+
+...note: wenn folgende Meldung beim `composer update` erscheint |br|
+   `No default map builder defined, please install an extension that provides "cyberspectrum_i18n.contao.default_map_builder".` |br|
+   ist das ein Hinweis, dass eine Erweiterung wie `Changelanguage <https://github.com/terminal42/contao-changelanguage>` o.ä. fehlt
 
 dictionaries
 ............
@@ -138,12 +142,12 @@ Export
 Der Export erfolgt über einen Konsolenaufruf mit einem Jobnamen
 als Parameter - z.B.
 
-``php vendor/bin/contao-console i18n:process export-all``
+``php vendor/bin/contao-console i18n:process export-all -c`pwd`/.translation-jobs.yml``
 
 Es kann aber auch eine einzelne Sprache exportiert werden, wenn
 ein entsprechender Job definiert wurde - z.B.
 
-``php vendor/bin/contao-console i18n:process export-en-ru``
+``php vendor/bin/contao-console i18n:process export-en-ru -c`pwd`/.translation-jobs.yml``
 
 Mit dem Parameter ``--help`` werden alle Parameter ausgegeben z.B.
 der Verbose-Parameter (``-v, -vv -vvv``) für genauere weitere Informationen
@@ -155,11 +159,11 @@ Import
 
 Der Import erfolgt analog dem Export - z.B. 
 
-``php vendor/bin/contao-console i18n:process import-all``
+``php vendor/bin/contao-console i18n:process import-all -c`pwd`/.translation-jobs.yml``
 
 oder
 
-``php vendor/bin/contao-console i18n:process import-en-ru``
+``php vendor/bin/contao-console i18n:process import-en-ru -c`pwd`/.translation-jobs.yml``
 
 
 Debug
@@ -302,6 +306,7 @@ Spenden
 Ein Dank für die Spenden* für die Erweiterung an:
 
 * N.N.: 2.700 €
+* iMi: 350 €
 
 
 (Spenden in Netto)
