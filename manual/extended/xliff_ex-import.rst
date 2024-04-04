@@ -25,6 +25,9 @@ kann diese wieder importiert werden.
 Der Export und Import erfolgt über Konsolenaufrufe - die Konfiguration
 über eine selbst zu erstellende YAML-Datei.
 
+Für die Zuordnung der Contao-Inhalte ist ein Mapping-Provider notwendig - aktuell wird die Erweiterung
+`Changelanguage <https://github.com/terminal42/contao-changelanguage>`_ unterstützt.
+
 Aktuell werden folgende Module unterstützt:
 
 * Contao (Core)
