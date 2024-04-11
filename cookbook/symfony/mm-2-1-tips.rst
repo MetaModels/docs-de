@@ -69,9 +69,9 @@ Mit
 werden alle Pakete ausgegeben.
 
 Bei einer Entwicklungsversion z. B. bei Bezug aus dem "EAP" gibt es noch keine Versionsnummer - man kann aber
-die Nummer des aktuellen Commits aus der `composer.lock` ermitteln. Man kann in der Datei z. B. nach 
-`"name": "metamodels/core"` suchen. In dem Knoten `reference` steht die Commit-Nummer - die Angabe ersten
-acht Zeichen reicht z. B. `8da81418`.
+die Nummer des aktuellen Commits aus der ``composer.lock`` ermitteln. Man kann in der Datei z. B. nach 
+``"name": "metamodels/core"`` suchen. In dem Knoten ``reference`` steht die Commit-Nummer - die Angabe ersten
+acht Zeichen reicht z. B. ``8da81418``.
 
 
 Cache leeren
@@ -98,7 +98,7 @@ Die Symfony-Toolbar erleichtert die Anzeige von Templatewerten und das Debugging
 der Erstellung eines Projektes mit MetaModels.
 
 Den Debugmodus kann man aus dem Backend oder Contao-Manager aktivieren oder dauerhaft über
-einen Eintrag Environment-Datei `.env` bzw. `.env.local` mit dem Eintrag
+einen Eintrag Environment-Datei ``.env`` bzw. ``.env.local`` mit dem Eintrag
 
 ``APP_ENV=dev``
 
@@ -129,7 +129,7 @@ Abschalten der Warnings im Debugmode
 Möchte man sich eine Debugausgabe ansehen kann es vorkommen, dass durch eine Warning-Meldung die Anzeige
 nicht zustande kommt. Die Warning-Meldung kann z. B. aus einem Theme oder einer anderen Erweiterung kommen
 und mit MetaModels nichts weiter zu tun haben. Damit man dennoch seine gewünschte Anzeige über die
-Symfony-Toolbar angezeigt bekommt, kann man die Warnings unterdrücken. Dazu in der `config.yml` folgenden
+Symfony-Toolbar angezeigt bekommt, kann man die Warnings unterdrücken. Dazu in der ``config.yml`` folgenden
 Eintrag einfügen:
 
 .. code-block:: php
