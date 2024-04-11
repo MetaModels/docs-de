@@ -185,7 +185,7 @@ Ein Debugaufruf kann z.B. wie folgt aussehen:
 ``php vendor/bin/contao-console debug:i18n-map tl_article.tl_content en de``
 
 Es folgt eine tabellarische Auflistung des Mappings. Gegebenenfalls werden
-vorweg Hinweise auf Probleme ausgegeben wie z.B.
+vorweg Hinweise auf Probleme ausgegeben wie z. B.:
 
 .. code-block:: bash
    
@@ -193,8 +193,25 @@ vorweg Hinweise auf Probleme ausgegeben wie z.B.
    ["id" => 17,"index" => 0,"guessed" => 13,"msg_type" => "article_fallback_guess"]
 
 
-Hier sollte man den Artikel mit der ID 17 im Backend aufsuchen und
-die Angabe des Fallbackartikels prüfen.
+Hier sollte man den Artikel mit der ID 17 im Backend aufsuchen und die Angabe des Fallbackartikels prüfen.
+
+.. code-block:: bash
+   
+   WARNING   [app] Content element 6997 has different type as element in main. Element skipped.
+   ["id" => 6997,"mainId" => 7515,"msg_type" => "article_content_type_mismatch"]
+
+Der Mapping-Provider "Change-Language" ermöglicht nur die Referenzierung auf Ebene der Seiten. Die Artikel
+und deren Inhaltselemente werden anhand ihrer Reihenfolge verglichen. Wenn es dabei zu Duifferenzen des Typs
+kommt, wird die obige Meldung ausgegeben; die ID des CE in der Hauptsprache wäre hier die "7515". 
+
+Wenn z. B. in der zu übersetzenden Sprache Elemente vorhanden sind, die in der Hauptsprache nicht ermittelt
+werden können, kommt folgende Meldung:
+
+.. code-block:: bash
+   
+   WARNING   [app] Content element 7956 has no mapping in main. Element skipped.
+   ["id" => 7956,"msg_type" => "article_content_no_main"]
+
 
 Beispiel
 --------
