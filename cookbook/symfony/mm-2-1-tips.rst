@@ -22,7 +22,7 @@ Ist die PHP-Version nicht gleich, muss man jeweils mit einem Pfad zum PHP-Binary
 die Befehle aufrufen. Den Pfad erhlt man z.B. beim Systemcheck des
 Contao-Managers mit angezeigt oder aus der Doku/Wiki des Providers.
 
-``/usr/bin/php74 -v``
+``/usr/bin/php82 -v``
 
 
 Composer-Update
@@ -30,11 +30,15 @@ Composer-Update
 
 Mit folgendem Befehl wird ein Update eingeleitet:
 
-``/usr/bin/php81 web/contao-manager.phar.php composer update -v``
+``/usr/bin/php82 web/contao-manager.phar.php composer update -v``
 
 oder mit Speicher- und Laufzeitzuweisung
 
-``/usr/bin/php81 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
+``/usr/bin/php82 -d memory_limit=-1 -d max_execution_time=900 public/contao-manager.phar.php composer update -v``
+
+bzw. bei älteren Instalationen mit dem Pfad `web`
+
+``/usr/bin/php82 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
 
 Mit dem Parameter "-v" bzw. "-vv" oder "-vvv" erhalt man verschiedene Detailstufen der Ausgabe. Mit dem
 zusätzlichen Parameter "--dry-run" wird ein "Trockenlauf" als Test durchegführt.
@@ -44,8 +48,11 @@ durchgeführt werden (wird gern vergessen :D).
 
 Die composer.phar sollte regelmäßig aktualisiert werden - dazu folgenden Befehl aufrufen:
 
-``/usr/bin/php81 web/contao-manager.phar.php self-update``
+``/usr/bin/php82 web/contao-manager.phar.php self-update``
 
+Die Migration der Datenbank kann wie folgt angestoßen werden - :ref:`siehe Schemamanager <component_schema-manager>`
+
+``/usr/bin/php82 vendor/bin/contao-console contao:migrate``
 
 Paketversion ermitteln
 ----------------------
@@ -53,13 +60,18 @@ Paketversion ermitteln
 Bei Fehlermeldungen oder Nachfragen bei Entwicklern ist die Auskunft über die installierte Version
 einer Erweiterung wichtig. Das kann man über den Paketnamen ermitteln z.B. für den DC_General
 
-``/usr/bin/php81 web/contao-manager.phar.php composer show | grep dc-general``
+``/usr/bin/php82 public/contao-manager.phar.php composer show | grep dc-general``
 
 Mit
 
-``/usr/bin/php81 web/contao-manager.phar.php composer show``
+``/usr/bin/php82 public/contao-manager.phar.php composer show``
 
 werden alle Pakete ausgegeben.
+
+Bei einer Entwicklungsversion z. B. bei Bezug aus dem "EAP" gibt es noch keine Versionsnummer - man kann aber
+die Nummer des aktuellen Commits aus der `composer.lock` ermitteln. Man kann in der Datei z. B. nach 
+`"name": "metamodels/core"` suchen. In dem Knoten `reference` steht die Commit-Nummer - die Angabe ersten
+acht Zeichen reicht z. B. `8da81418`.
 
 
 Cache leeren
@@ -69,20 +81,14 @@ Bei Anpassungen den Contao-Cache leeren:
 
 "Soft" (Empfehlung):
 
-``vendor/bin/contao-console cache:clear --env=prod`` |br|
-``vendor/bin/contao-console cache:warmup``
-
-bzw. mit dem Parameter ``--env=dev`` wenn man die Seite mit "app_dev.php" 
-im Entwicklungsmodus aufruft. Muss der Pfad zu PHP mit aufgerufen werden,
-ist dieser (z.B. ``/usr/bin/php73``) vor das "vendor" zu setzen.
+``/usr/bin/php82 vendor/bin/contao-console cache:clear --env=prod`` |br|
+``/usr/bin/php82 vendor/bin/contao-console cache:warmup``
 
 oder die "harte Tour":
 
 ``rm -rf var/cache/{dev,prod}``
 
 und löscht "alles" aus dev und prod.
-
-In einem Script als Kombination - `siehe Gist von Sven Baumann <https://gist.github.com/baumannsven/dabcc9fa16ca89007103b5795c1e031e>`_
 
 
 Symfony-Toolbar
@@ -91,22 +97,12 @@ Symfony-Toolbar
 Die Symfony-Toolbar erleichtert die Anzeige von Templatewerten und das Debugging während
 der Erstellung eines Projektes mit MetaModels.
 
-Ab Contao 4.9 kann diese über den Debugmodus aus dem Backend oder Contao-Manager aktiviert
-werden, oder über Environment-Datei `.env` mit dem Eintrag
+Den Debugmodus kann man aus dem Backend oder Contao-Manager aktivieren oder dauerhaft über
+einen Eintrag Environment-Datei `.env` bzw. `.env.local` mit dem Eintrag
 
 ``APP_ENV=dev``
 
-In Contao 4.4 ist der Debugmodus per `app_dev` zu aktivieren - der Seitenaufruf ist dann
-"domain.tld/app_dev.php/...". Dazu muss ein Zugang für app_dev eingerichtet werden über
-
-``vendor/bin/contao-console contao:install-web-dir --user=ichbins --password=totalgeheim``
-
-oder ab Contao 4.5 über den Contao-Manager.
-
-Für den app_dev-Zugang kann aber nur ein User angelegt werden.
-
-Achtung: sofern der Zugang zur Seite über htaccess geschützt ist, müssen user+passwort
-für htaccess und app_dev die selben sein!
+Die dauerhafte Aktivierung sollte nur lokal oder bei anderweitig geschützten Seiten erfolgen.
 
 Im Debugmodus wird auch das Caching von Contao unterbunden und man muss den Cache nicht
 so häufig leeren - bedeutet aber auch, dass die Seite ggf. "anders aussieht". Zudem wird
@@ -143,6 +139,9 @@ Eintrag einfügen:
     framework:
       profiler:
         only_exceptions: true
+    # oder
+    contao:
+        error_level: 8181
 
 
 .. |img_symfony-toolbar| image:: /_img/screenshots/cookbook/debug/symfony-toolbar.jpg
