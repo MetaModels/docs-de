@@ -51,6 +51,21 @@ Allgemein und Core
 * Models, die als Kindtabelle verknüpft sind, können nun Varianten beinhalten (`#1054 <https://github.com/MetaModels/core/issues/1054>`_)
 * Liste im BE kann nach nach Kalenderwoche gruppiert werden - die Formatierung über einen Sprachschlüssen individuell je
   Sprache angepasst möglich
+* Übersetzungen wurde vom `CCA-Translator <https://github.com/contao-community-alliance/translator>`_ und den
+  `Global-Lang-Arrays <https://symfony.com/doc/current/translation.html>`_ zum Symfony-Translator umgestellt. Damit
+  werden die Übersetzungen im entsprechenden Symfony-Message-Catalog vorgehalten und beschleunigen den Seitenaufbau im BE.
+  Die eigenen Übersetzungen können nun auch im Xliff-Format gepflegt werden. |br|
+  Im BE ist nur an wenigen Stellen etwas von dem Wechsel zu spüren - gefixt werden konnte z. B. die Tabellenansicht der
+  Items, wenn ein Attribut der Liste nicht in der zugehörigen Eingabemaske vorhanden war. Da erschien bisher nur der
+  Übersetzungsschlüssel - nun der entsprechende Titel des Attributes.
+* es wurde ein Wechsel des Routings vorgenommen: Die Masken von MM im BE werden künftig nicht mehr über den
+  GET-Parameter ``...contao?do=metamodels`` angesteuert, sondern über die Route ``...contao/metamodels``. Hierdurch war eine
+  Verschlankung z. B. die Rechtevergabe im BE möglich. Bisher mussten für die Benutzergruppen sowohl bei den Eingabe-
+  und Renderzuordnungen ("letztes Icon") als auch bei den Benutzergruppen-Einstellungen von Contao entsprechende Klicks
+  durchgeführt werden - die Einstellungen bei Contao sind weg gefallen und man muss nur noch in MM die Rechte zuteilen
+  (Eingabemaske + Zuordnungen).
+* der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
+  entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
 
 
 Attribute
