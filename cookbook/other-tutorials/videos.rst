@@ -10,8 +10,8 @@ Videoreihe von Almut Müller:
 
 Verschiedene Videos:
 
-* `Vortrag "MetaModels erweitern und ausbauen" Contao-Konf 2023 <https://contao-konferenz.de/ingolf-steinhardt.html>`_
-* `Vortrag "MetaModels - Booster für den Content" Contao-Konf 2017 <https://www.youtube.com/watch?v=gV1kaxohX1A>`_
+* `Vortrag "MetaModels erweitern und ausbauen" Contao-Konf 2023 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
+* `Vortrag "MetaModels - Booster für den Content" Contao-Konf 2017 <https://www.e-spin.de/metamodels-vortrag-contao-konferenz-2017.html>`_
 * `Vortrag "Buchungssystem mit MetaModels" Contao-Konf 2016 <https://www.youtube.com/watch?v=jnDOyW0C4_c>`_
 * `Vortrag "MetaModels 2.0 für Einsteiger" Contao-Konf 2015 <https://www.youtube.com/watch?v=i-Iq8l4956c>`_
 
