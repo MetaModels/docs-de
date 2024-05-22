@@ -24,6 +24,9 @@ Zudem gibt es auch das Bundle `metamodels/bundle_all <https://extensions.contao.
 welches neben dem `bundle_start` auch die mehrsprachigen Pakete mit installiert (Hinweis: die Pakete `translatedselect`
 `translatedtags` sind hier seit MM 2.1 nicht mehr inkludiert, da diese nur für Spezialfälle einzusetzen sind).
 
+Die beiden Bundles sind nur für die Evaluation oder ersten Gehversuche gedacht - in einem Live-System sollten aber nur
+der Core und die notwendigen Attribute und Filter als separate Pakete installiert werden.
+
 Weitere Module wie "Registerfilter", "Umkreissuche", "Bewertung" usw. sind als separate Pakete
 hinzu zu fügen - siehe :ref:`extended_index`
 
