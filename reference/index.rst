@@ -8,6 +8,7 @@ oder mehr erstellen wollen.
         :maxdepth: 2
 
         api
-        `DC_General <https://dc-general.readthedocs.io>`_
         faq
         glossary
+
+Mehr zum `DC_General <https://dc-general.readthedocs.io>`_.
