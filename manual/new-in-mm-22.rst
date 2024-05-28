@@ -12,6 +12,19 @@ Für einen Check nach einem Upgrade zu MM 2.2 sind :ref:`unten weitere Hinweise 
 Allgemein und Core
 ------------------
 
+MetaModels 2.2 bringt eine volle Kompatibilität zu Contao 4.9 mit sowie verschiedene Features und
+Optimierungen. Zum Beispiel ist MM 2.2 kompatibel zum `strict mode` von höheren MySQL-Versionen oder
+aktueller MariaDB oder die manuelle Dateisortierung.
+
+Die Installationsvoraussetzungen für MetaModels 2.2 sind:
+
+* ein laufendes Contao 4.9.x (LTS)
+* PHP 7.4
+* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+* ``memory_limit`` 512MB oder mehr (Empfehlung)
+
+Höhere Versionen von Contao können möglich sein, werden aber nicht offiziell supportet.
+
 * kompatibel zum `strict mode` von MySQL und MariaDB; alle Queries auf queryBuilder umgeschrieben und bei den
   Abfragen einen Tabellenpräfix eingefügt - damit fällt die prüfung auf die von MySQL-Reservierten Wörter weg
 * verschiedene Optimierungen für eine schnellere Anzeige von Daten

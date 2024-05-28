@@ -65,6 +65,26 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 * :ref:`C 3.5 + MM 2.0 + PHP 5.6 <mm-installation-von-2-1-und-alter>`
 
 
+Installation von MM 2.4 für Contao 5.3 und PHP 8
+-------------------------------------------------
+
+MetaModels 2.4 bringt eine volle Kompatibilität zu Contao 5.3 und PHP 8.2. MM 2.4 ist eine Anpassung der
+Version 2.3 an die neue Contao- und PHP-Version.
+
+Die Installationsvoraussetzungen für MetaModels 2.4 sind:
+
+* ein laufendes Contao 5.3.x (LTS)
+* ab PHP 8.2
+* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+* ``memory_limit`` 512MB oder mehr (Empfehlung)
+* bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
+
+Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
+
+Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Funktionen von MM 2.3 <new_in_mm230>` zu
+beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-manager>`.
+
+
 Installation von MM 2.3 für Contao 4.13 und PHP 8
 -------------------------------------------------
 
@@ -130,27 +150,6 @@ Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u. a. bei MM für die Anzeigen
 im Backend zuständig ist und viele tolle Funktionen mitbringt.
 
-
-Installation von MM 2.2 für Contao 4.9
---------------------------------------
-
-MetaModels 2.2 bringt eine volle Kompatibilität zu Contao 4.9 mit sowie verschiedene Features und
-Optimierungen. Zum Beispiel ist MM 2.2 kompatibel zum `strict mode` von höheren MySQL-Versionen oder
-aktueller MariaDB oder die manuelle Dateisortierung.
-
-Die Installationsvoraussetzungen für MetaModels 2.2 sind:
-
-* ein laufendes Contao 4.9.x (LTS)
-* PHP 7.4
-* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
-* ``memory_limit`` 512MB oder mehr (Empfehlung)
-
-Höhere Versionen von Contao können möglich sein, werden aber nicht offiziell supportet.
-
-**Weitere Features von MM 2.2:**
-Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>` zusammengestellt - bitte
-beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm220>`.
-
 .. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um finanzielle
    Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
    und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzten Zuwendungen, sind
@@ -161,6 +160,7 @@ beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm220>`.
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 
+* :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>`
 * :ref:`cookbook_move_mm2.0_to_2.1`
 * :ref:`cookbook_install_mm2.0-and-older`
 
