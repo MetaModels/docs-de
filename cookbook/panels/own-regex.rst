@@ -12,6 +12,9 @@ muss die Prüfung mit "Contao-Boardmitteln" zunächst zur Verfügung stehen.
 
 Dafür wird der Hook "addCustomRegex" wie folgt angelegt - siehe `API: addCustomRegex <https://docs.contao.org/books/api/extensions/hooks/addCustomRegexp.html>`_
 
+.. note:: Die folgende Beschreibung ist noch für Contao 4.4 - aktuelle Implementierungen sollten im Ordner `src/`
+   angelegt werden
+
 * einen Ordner für das eigene Modul unter /system/modules anlegen - z.B. "/metamodels_mycustoms"
 * in dem Ordner metamodels_mycustoms zwei weitere Ordner "/config" und "/classes" anlegen
 * im Ordner /classes die Datei "MyClass.php" anlegen wie in der Contao API beschrieben
