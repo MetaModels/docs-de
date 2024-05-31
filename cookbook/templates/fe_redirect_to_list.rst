@@ -1,7 +1,7 @@
 .. _rst_cookbook_templates_fe_redirect_to_list:
 
-Automatische Umleitung von Detailseite zur Listenseite
-======================================================
+Automatische Umleitung von Detailseite zur Listenseite oder "Error 404"
+=======================================================================
 
 Die Datenausgabe auf der Detailseite wird häufig über einen oder mehrere
 Parameter gesteuert bzw. die Ausgabe gefiltert - meist über das `auto_item`.
