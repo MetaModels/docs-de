@@ -25,7 +25,7 @@ einige Tipps, wie die Ansicht beschleunigt werden kann:
    nicht automatisch durch MM erzeugt werden. Es sollten die Spalten der Tabelle einen Index bekommen,
    die in einer Suche verwendet werden z. B. Spalte "surname" in Tabelle "mm_employees". Das kann mit dem folgenden
    Query angelegt werden: |br|
-   ```create index mm_employees_surname_id_index on mm_employees (surname, id);```|br|
+   ```create index mm_employees_surname_id_index on mm_employees (surname, id);``` |br|
    Ebenso kann es bei Eingabemasken zu einem verzögerten Aufbau kommen - z. B. bei Referenzierungen auf andere Tabellen
    wie ein Select auf Mitglieder - dann auch hier einen Index auf die entsprechende Spalte anlegen |br|
    ```create index mm_employees_member_index on mm_employees (member);```
