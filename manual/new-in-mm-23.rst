@@ -144,7 +144,8 @@ oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen
 im Blick behalten werden:
 
 * wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
-  "Pseudo-Fehlern" zu vermeiden
+  "Pseudo-Fehlern" (z. B. `Cannot assign null ... $intAmount of type int <https://now.metamodel.me/de/mm-eap-newsletter/details/eap-info-mm-2-3-dezember-ii-2023>`_)
+  zu vermeiden
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen -
   :ref:`siehe Schemamanager <component_schema-manager>`
