@@ -48,6 +48,7 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
     :maxdepth: 1
 
     schema-manager
+    translations
     new-mm
     attribute
     rendersettings
