@@ -44,7 +44,7 @@ Der Cache liegt üblicher Weise in den Ordnern
 - var/cache/prod/translations
 
 Die XLIFF-Dateien liegen nun bei den MM-Repos im Ordner ``Resources/translations/`` - einige wenige Übersetzungen,
-die direkt nach Contao gereicht werden, mussten wir in ``Resources/contao/languages`` belassen.
+die direkt nach Contao gereicht werden, mussten in ``Resources/contao/languages`` bleiben.
 
 
 Eigene Anpassung von Übersetzungen
@@ -58,7 +58,7 @@ MetaModels in Version 1.2 - der Aufbau unterscheidet sich etwas.
 
 Beispiel: möchte man für Deutsch den Button "Filtern" in "Suche" umbenennen, muss eine Datei angelegt werden als
 
-- contao/Resources/translations/metamodels_filter.de.xlf oder
+- translations/metamodels_filter.de.xlf oder
 - src/Resources/translations/metamodels_filter.de.xlf
 
 mit dem Inhalt
