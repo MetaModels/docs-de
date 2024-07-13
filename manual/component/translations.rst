@@ -66,7 +66,8 @@ mit dem Inhalt
 .. code-block:: xliff
    :linenos:
 
-   <?xml version="1.0" ?><xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+   <?xml version="1.0" ?>
+   <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
      <file source-language="en" datatype="plaintext" original="src/CoreBundle/Resources/translations/metamodels_filter.en.xlf" target-language="de">
        <body>
          <trans-unit id="submit" resname="submit">
