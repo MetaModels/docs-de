@@ -46,6 +46,9 @@ Der Cache liegt üblicher Weise in den Ordnern
 Die XLIFF-Dateien liegen nun bei den MM-Repos im Ordner ``Resources/translations/`` - einige wenige Übersetzungen,
 die direkt nach Contao gereicht werden, mussten in ``Resources/contao/languages`` bleiben.
 
+Die Übersetzungen kann man nun leicht über die Symfony-Toolbar nachvollziehen. In dem Panel "Translation" werden Angaben
+zu den gefundenen und nicht gefundenen Übersetzungen sowie den Fallbacks aufgelistet.
+
 
 Eigene Anpassung von Übersetzungen
 ----------------------------------
