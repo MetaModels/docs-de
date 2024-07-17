@@ -161,7 +161,7 @@ im Blick behalten werden:
 * bei FEE Check Upload-Modus :ref:`Dateiupload <extended_frontend_editing_upload>`
 * bei FEE Check Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>`
 * Check Änderungen beim Template mm_form_field_dropzone.html5
-* Check der eigenen Übersetzungen - ggf. Umstellung auf Xliff-Format
+* Check der eigenen Übersetzungen - `Umstellung auf Xliff-Format <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_
 
 
 Re-Finanzierung
