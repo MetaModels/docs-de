@@ -66,7 +66,10 @@ Allgemein und Core
   Verschlankung z. B. die Rechtevergabe im BE möglich. Bisher mussten für die Benutzergruppen sowohl bei den Eingabe-
   und Renderzuordnungen ("letztes Icon") als auch bei den Benutzergruppen-Einstellungen von Contao entsprechende Klicks
   durchgeführt werden - die Einstellungen bei Contao sind weg gefallen und man muss nur noch in MM die Rechte zuteilen
-  (Eingabemaske + Zuordnungen).
+  (Eingabemaske + Zuordnungen). |br|
+  Mit dem neuen Routing gibt es ein Probleme mit dem Umschalten des Debugmodus im BE - Contao erwartet den wert für den
+  Referer in einer bestimmten Form, den wir aktuell nicht einfach umschreiben können; nach dem Umschalten landet man auf
+  einer "Defaultseite" von Contao - weitere Auswirkungen hat das nicht.
 * der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
   entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
 
