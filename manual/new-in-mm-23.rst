@@ -58,6 +58,7 @@ Allgemein und Core
   Im BE ist nur an wenigen Stellen etwas von dem Wechsel zu spüren - gefixt werden konnte z. B. die Tabellenansicht der
   Items, wenn ein Attribut der Liste nicht in der zugehörigen Eingabemaske vorhanden war. Da erschien bisher nur der
   Übersetzungsschlüssel - nun der entsprechende Titel des Attributes. |br|
+  Bestehende eigene Übersetzungstexte, die als PHP-Array angelegt wurden, müssen in eine XLIFF-Datei übertragen werden. |br|
   Mehr zu dem Thema unter :ref:`component_translations`
 * es wurde ein Wechsel des Routings vorgenommen: Die Masken von MM im BE werden künftig nicht mehr über den
   GET-Parameter ``...contao?do=metamodels`` angesteuert, sondern über die Route ``...contao/metamodels``. Hierdurch war eine
@@ -75,7 +76,6 @@ Attribute
 * bei allen Attributen wurden die HTML5-Templates überarbeitet: CSS-Klasse mit Attributtyp und Ausgabetyp, PHP-Shortcode,
   umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
 * bei allen Attributen kann das Template für das Backend per Select ausgewählt werden - für das Frontend siehe FEE
-
 
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
@@ -113,6 +113,9 @@ Filter
       Links für die Suche-Indexierung nicht mehr folgt
     * im Template sind Blocks für `formlabel` und `formfield` eingefügt
     * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
+* Veröffentlichungsstatus (Checkbox)
+    * die Option "Filter nicht in Frontendvorschau nutzen" reagiert nun auf den Contao-Status "Vorschau" - bisher auf
+      Login im Backend
 
 
 Frontend-Editing (FEE)

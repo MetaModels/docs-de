@@ -14,19 +14,21 @@ aber nicht die eingegeben "Nutzdaten". Ab MetaModels Version 2.3 übernimmt die 
 `Symfony-Translation <https://symfony.com/doc/current/translation.html>`_, welche sich durch verschiedene Vorteile
 wie z. B. ein gutes Caching auszeichnet.
 
-Zum Laden von neuen oder geänderten Eingaben muss der Cache Symfony-Translations gelöscht werden (s. u.).
+Zum Laden von neuen oder geänderten Eingaben muss der Symfony-Translations-Cache gelöscht werden.
 
-Die Übersetzungen selbst werden über die Webseite von `Transifex <https://app.transifex.com/metamodels/>`_ gemanaged.
-An der Übersetzung unserer Basissprache Englisch in andere Sprachen kann sich jeder über Transifex beteiligen.
+Die Übersetzungen selbst werden weiterhin über die Webseite von `Transifex <https://app.transifex.com/metamodels/>`_
+gemanaged. An der Übersetzung unserer Basissprache Englisch in andere Sprachen kann sich jeder über Transifex beteiligen.
 
+Bestehende eigene Übersetzungstexte, die als PHP-Array angelegt wurden, müssen in eine XLIFF-Datei übertragen werden
+(siehe "Eigene Anpassungen von Übersetzungen").
 
 Hintergründe
 -------------
 
 In Contao und auch MetaModels werden immer mehr native Komponenten von Symfony eingesetzt und bestehende
-Eigenentwicklungen substituiert. In der MetaModels-Version 2.3 wurde die Übersetzung auf die Symfony-Komponenten
-`Translation <https://symfony.com/doc/current/translation.html>`_ umgebaut und die Übersetzungen direkt im Format
-XLIFF vorgehalten.
+Eigenentwicklungen substituiert. In der MetaModels-Version 2.3 wurde die Übersetzung weitestgehend auf die
+Symfony-Komponente `Translation <https://symfony.com/doc/current/translation.html>`_ umgebaut und die Übersetzungen
+direkt im Format XLIFF vorgehalten.
 
 Die Symfony-Translation bietet ein sehr gutes Caching der übersetzten Texte und beschleunigt damit den Aufbau des
 Backends. Dieser Cache wird - sofern nicht schon vorhanden - bei Start von Contao einmal erzeugt und steht anschließend
@@ -53,9 +55,7 @@ zu den gefundenen und nicht gefundenen Übersetzungen sowie den Fallbacks aufgel
 Eigene Anpassung von Übersetzungen
 ----------------------------------
 
-Bestehende eigene Übersetzungstexte, die als PHP-Array angelegt wurden, werden weiterhin geladen.
-
-Neue Überschreibungen sollten als XLIFF-Datei angelegt werden. Den Aufbau kann man sich bei der Datei ansehen, dessen
+Neue Überschreibungen müssen als XLIFF-Datei angelegt werden. Den Aufbau kann man sich bei der Datei ansehen, dessen
 Wert man abändern möchte. Dabei ist zu beachten, dass die XLIFF-Dateien beim DCG in Version 2.0 vorliegen und bei
 MetaModels in Version 1.2 - der Aufbau unterscheidet sich etwas.
 
