@@ -58,7 +58,8 @@ Allgemein und Core
   Im BE ist nur an wenigen Stellen etwas von dem Wechsel zu spüren - gefixt werden konnte z. B. die Tabellenansicht der
   Items, wenn ein Attribut der Liste nicht in der zugehörigen Eingabemaske vorhanden war. Da erschien bisher nur der
   Übersetzungsschlüssel - nun der entsprechende Titel des Attributes. |br|
-  Bestehende eigene Übersetzungstexte, die als PHP-Array angelegt wurden, müssen in eine XLIFF-Datei übertragen werden. |br|
+  Bestehende eigene Übersetzungstexte, die als PHP-Array angelegt wurden,
+  `müssen in eine XLIFF-Datei übertragen werden <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_. |br|
   Mehr zu dem Thema unter :ref:`component_translations`
 * es wurde ein Wechsel des Routings vorgenommen: Die Masken von MM im BE werden künftig nicht mehr über den
   GET-Parameter ``...contao?do=metamodels`` angesteuert, sondern über die Route ``...contao/metamodels``. Hierdurch war eine
