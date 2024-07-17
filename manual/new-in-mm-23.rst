@@ -106,6 +106,10 @@ Filter
 * Eigenes SQL
    * bei dem Inserttag-Parameter "aggregate" wurde nun der Typ "list" hinzugefügt - der wurde zwar schon immer in der Infobox beschrieben,
      war aber bisher nicht implementiert; damit können nun kommaseparierte Listenwerte als GET-Wert übergeben werden
+* Einfache Abfrage
+    * ist die Option "Statischer Parameter" gesetzt, kann in CE-/Modul-Liste für die Filterregel ein Wert ausgewählt
+      werden - neu ist die Option "ohne Datenwert [null]", wenn keine Auswahl - auch kein Leerstring - gesetzt werden
+      soll
 * Einzelauswahl [select]
     * Attributstyp Numerisch (Integer) möglich
     * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
@@ -165,6 +169,7 @@ im Blick behalten werden:
 * bei FEE Check Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>`
 * Check Änderungen beim Template mm_form_field_dropzone.html5
 * Check der eigenen Übersetzungen - `Umstellung auf Xliff-Format <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_
+* Prüfung :ref:`eigener Defaultvorgaben für die Eingabemaske <rst_cookbook_panels_default-values>`
 
 
 Re-Finanzierung
