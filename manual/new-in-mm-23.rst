@@ -62,11 +62,11 @@ Allgemein und Core
   `müssen in eine XLIFF-Datei übertragen werden <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_. |br|
   Mehr zu dem Thema unter :ref:`component_translations`
 * es wurde ein Wechsel des Routings vorgenommen: Die Masken von MM im BE werden künftig nicht mehr über den
-  GET-Parameter ``...contao?do=metamodels`` angesteuert, sondern über die Route ``...contao/metamodels``. Hierdurch war eine
-  Verschlankung z. B. die Rechtevergabe im BE möglich. Bisher mussten für die Benutzergruppen sowohl bei den Eingabe-
-  und Renderzuordnungen ("letztes Icon") als auch bei den Benutzergruppen-Einstellungen von Contao entsprechende Klicks
-  durchgeführt werden - die Einstellungen bei Contao sind weg gefallen und man muss nur noch in MM die Rechte zuteilen
-  (Eingabemaske + Zuordnungen). |br|
+  GET-Parameter ``...contao?do=metamodels_<model-name>`` angesteuert, sondern über die Route ``...contao/metamodels/<model-name>``.
+  Hierdurch war eine Verschlankung z. B. die Rechtevergabe im BE möglich. Bisher mussten für die Benutzergruppen sowohl
+  bei den Eingabe- und Renderzuordnungen ("letztes Icon") als auch bei den Benutzergruppen-Einstellungen von Contao
+  entsprechende Klicks durchgeführt werden - die Einstellungen bei Contao sind weg gefallen und man muss nur noch in
+  MM die Rechte zuteilen (Eingabemaske + Zuordnungen). |br|
   Mit dem neuen Routing gibt es ein Probleme mit dem Umschalten des Debugmodus im BE - Contao erwartet den wert für den
   Referer in einer bestimmten Form, den wir aktuell nicht einfach umschreiben können; nach dem Umschalten landet man auf
   einer "Defaultseite" von Contao - weitere Auswirkungen hat das nicht.
