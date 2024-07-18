@@ -71,7 +71,8 @@ Allgemein und Core
   Referer in einer bestimmten Form, den wir aktuell nicht einfach umschreiben können; nach dem Umschalten landet man auf
   einer "Defaultseite" von Contao - weitere Auswirkungen hat das nicht.
 * bei den Rendereinstellungen kann nun für die Links der Weiterleitungen (jumoTo) der Referenztyp zur Generierung der
-  URL angegeben werden - z. B. ist es nun möglich, einen absolute URL inkl. Domain zu definieren
+  URL angegeben werden - z. B. ist es nun möglich, einen absolute URL inkl. Domain zu definieren; siehe
+  `Symfony UrlGeneratorInterface <https://github.com/symfony/routing/blob/f8dd6f80c96aeec9b13fc13757842342e05c4878/Generator/UrlGeneratorInterface.php#L34-L55>`_
 * der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
   entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
 
