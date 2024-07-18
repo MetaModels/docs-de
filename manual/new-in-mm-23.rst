@@ -70,6 +70,8 @@ Allgemein und Core
   Mit dem neuen Routing gibt es ein Probleme mit dem Umschalten des Debugmodus im BE - Contao erwartet den wert für den
   Referer in einer bestimmten Form, den wir aktuell nicht einfach umschreiben können; nach dem Umschalten landet man auf
   einer "Defaultseite" von Contao - weitere Auswirkungen hat das nicht.
+* bei den Rendereinstellungen kann nun für die Links der Weiterleitungen (jumoTo) der Referenztyp zur Generierung der
+  URL angegeben werden - z. B. ist es nun möglich, einen absoluten Pfad inkl. Domain zu definieren
 * der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
   entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
 
@@ -170,6 +172,8 @@ im Blick behalten werden:
 * Check Änderungen beim Template mm_form_field_dropzone.html5
 * Check der eigenen Übersetzungen - `Umstellung auf Xliff-Format <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_
 * Prüfung :ref:`eigener Defaultvorgaben für die Eingabemaske <rst_cookbook_panels_default-values>`
+* Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
+  und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
 
 
 Re-Finanzierung

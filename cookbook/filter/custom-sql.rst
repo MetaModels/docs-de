@@ -533,8 +533,8 @@ Frontend und Backend zu erreichen. Seit MM 2.2 werden die beim Attribut Select u
 eingestellten Filter auch im Frontend angewendet, so dass es Problemen mit Filterregeln
 kommen kann, die nur in der Eingabemaske zum Tragen kommen sollen.
 
-Man kann eine Abfrage auf den aktuellen Request-String setzen und dort nach "contao"
-als erstes Wort suchen.
+Man kann eine Abfrage auf den aktuellen Request-String setzen und dort nach dem eigenen Modelnamen wie z. B.
+"mm_employees" als erstes Wort suchen.
 
 .. code-block:: php
    :linenos:
@@ -542,11 +542,15 @@ als erstes Wort suchen.
    SELECT artd.id FROM mm_article_details artd
    LEFT JOIN tl_metamodel_tag_relation rel ON (artd.id = rel.item_id)
    WHERE
-   IF (SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1) = 'contao',
+   IF (SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1) = 'mm_employees',
       rel.att_id = 43 AND                                             -- 43 ID des Attributes [tags]
       rel.value_id = SUBSTRING_INDEX({{param::get?name=id}},'::',-1), -- variable ID aus URL für Artikel/Produkt
       1=1
    )
+
+.. note:: Mit MM-Version 2.3-beta1 hat sich das Routing im BE geändert - statt ``domain.de/contao?do=metamodel_mm_employees&act=edit...``
+   kommt nun ein ``domain.de/contao/metamodel/mm_employees?act=edit``, d. h. vor der Änderung wurde bei der Abfrage
+   ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)`` der Wert "contao" geliefert.
 
 Kommentare im SQL-Query
 ***********************
