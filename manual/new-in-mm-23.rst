@@ -109,6 +109,8 @@ Filter
 * Eigenes SQL
    * bei dem Inserttag-Parameter "aggregate" wurde nun der Typ "list" hinzugefügt - der wurde zwar schon immer in der Infobox beschrieben,
      war aber bisher nicht implementiert; damit können nun kommaseparierte Listenwerte als GET-Wert übergeben werden
+   * Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
+     und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
 * Einfache Abfrage
     * ist die Option "Statischer Parameter" gesetzt, kann in CE-/Modul-Liste für die Filterregel ein Wert ausgewählt
       werden - neu ist die Option "ohne Datenwert [null]", wenn keine Auswahl - auch kein Leerstring - gesetzt werden
