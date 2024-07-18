@@ -36,7 +36,7 @@ Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
 "Suche Items für die Attribut 'name' wenn GET-Parameter 'name' 
 gesetzt ist oder gebe alle Items aus (keine Filterung)."
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -50,7 +50,7 @@ Filterung nach Datum
 "Suche Items für die Attribut 'date_start' größer oder gleich dem 
 heutigen Datum ist - also in der Zukunft liegt"
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -59,7 +59,7 @@ heutigen Datum ist - also in der Zukunft liegt"
 
 oder
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -75,7 +75,7 @@ heutigen Datum ist - also in der Zukunft liegt - oder die Items bei
 denen das aktuelle Datum zwischen 'date_start' und 'date_end' liegt
 (laufend)"
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -97,7 +97,7 @@ Unix-Zeitstempel ist und das Attribut 'stop' noch nicht erreicht ist.
 Leere Attributwerte werden als nicht relevant umgesetzt (dann nur 
 'start' bzw. 'stop' relevant)." [von "Cyberlussi"]
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id`
@@ -107,7 +107,7 @@ Leere Attributwerte werden als nicht relevant umgesetzt (dann nur
 
 Alternativ
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` FROM {{table}}
@@ -124,7 +124,7 @@ aber erst ab einem bestimmten Datum angezeigt werden dürfen - sofern gesetzt.
 Zur Prüfung kann im FE an die URL ein GET-Parameter angehangen werden - Datumsformat ist
 "YYYY-MM-DD" z. B. "domain.tld/meine-liste.html?now=2023-07-10".
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT id FROM {{table}}
@@ -138,7 +138,7 @@ Filterung nach Datum (start) letzen 12 Monate
 *********************************************
 Archivfilter für vergangene Items der letzten 12 Monate:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT id FROM {{table}}
@@ -151,7 +151,7 @@ Filterung nach Kind-Elementen eines Eltern-Elements
 "Suche alle Kind-Elemente für ein gegebens Eltern-Element über den Alias-Parameter
 - z.B. um auf einer Detailseite alle zugehörigen 'Kind-Elemente' auszugeben."
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -171,7 +171,7 @@ Filterung nach Eltern-Element eines Kind-Elements
 "Suche das Eltern-Element für ein gegebens Kind-Element über den Alias-Parameter
 - z.B. um auf einer Detailseite das zugehörige 'Eltern-Element' auszugeben."
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -186,7 +186,7 @@ Filterung nach Eltern-Element eines Kind-Elements
 
 oder kürzer
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `pid` as id
@@ -208,7 +208,7 @@ weiteren Regeln wird diese Menge nur noch gekürzt. Die Sortierrichtung ist bei 
 immer ASC - möchte man eine andere Richtung, dann die Angabe bei jeder angegebenen 
 Sortierspalte mit angeben.
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -222,7 +222,7 @@ Sortierungen der Ausgabe nach einer Nummer und NULL-Werten oder Zufall
 Zu beachten ist, dass diese SQL-Regel im Filter als *erste Regel* eingebaut wird.
 Anzeige der Items nach einer eigenen Sortierungsnummer aber alle Items ohne Nummer (NULL) ans Ende:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -232,7 +232,7 @@ Anzeige der Items nach einer eigenen Sortierungsnummer aber alle Items ohne Numm
 Man kann auch einzelne Items als Erste anzeigen lassen (Attribut "Prio-Slider" = 1) und
 den Rest per Zufall:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` 
@@ -248,7 +248,7 @@ referenziert ist und man möchte die Produkte so ausgeben, dass diese erst nach 
 manuellen Sortierung (sorting) der Partner sortiert ist und anschließend nach dem eigentlichen
 Produktnamen, kann man das mit den folgenden Code erreichen:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT pro.id FROM mm_products AS pro
@@ -271,7 +271,7 @@ MySQL-Funktionen möglich, so dass man bei dynamischen Defaultwerten auf
 einen Workaround per "SQL-IF" zurückgreifen muss.
 siehe auch `Github #880 <https://github.com/MetaModels/core/issues/880>`_
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` FROM mm_monate 
@@ -290,7 +290,7 @@ die verwendet werden, wenn der Filterparameter nicht gesetzt ist. Im Param-Tag
 ist aktuell wird akltuell die Eingabe von `''` oder `""` gecastet, so dass die
 Filterung nicht korrekt erfolgt; anzuwenden ist dies z.B. bei Checkboxwerten.
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` FROM mm_mitarbeiter 
@@ -332,7 +332,7 @@ Relationstabelle "tl_metamodel_tag_relation" gehen. Wichtig ist die Ermittlung
 der Attribut-ID für "rel.att_id", d.h. in den Attributen von "Mitarbeitern"
 hat die Mehrfachauswahl z.B. die ID 5 (zu ermitteln über den i-Button).
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT DISTINCT(rel.value_id) as id FROM mm_mitarbeiter as ma
@@ -348,7 +348,7 @@ Für eine Listnsicht der Mitarbeiter, sollen nur diejenigen ausgegeben
 werden, die in einer Abteilung arbeiten deren "Score" größer als 99 ist.
 
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` FROM mm_mitarbeiter
@@ -359,7 +359,7 @@ werden, die in einer Abteilung arbeiten deren "Score" größer als 99 ist.
 
 oder
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT ma.id FROM mm_mitarbeiter ma
@@ -375,7 +375,7 @@ um auf einzelnen Seiten einen Mitarbeiter als Verantwortlichen darzustellen. Auf
 entsprechenden Seiten kann ein MM-Listenelement eingefügt werden, der die zugehörigen
 Mitarbeiter ausgibt. Für die Filterung kann das folgende Query verwendet werden:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT ma.id FROM mm_mitarbeiter ma
@@ -396,7 +396,7 @@ zur Verfügung. Möchte man z.B. bei seinem Datensatz eine Verbindung zur Mitgli
 "tl_member" haben aber die Eingrenzung, dass ein Mitglied nur einmal ausgewählt werden darf,
 dann folgenden String einsetzen:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    (SELECT tl_member.id FROM tl_member
@@ -417,7 +417,7 @@ Tabellennamen gekoppelt und muss für die Verwendung in einem eigenen SQL-Query
 separiert werden. Das erfolgt z.B. über den den Befehl `SUBSTRING_INDEX` im Query,
 wie das folgende Beispiel zeigt:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    -- URL: ....&id=mm_mitarbeiter::51&...
@@ -443,7 +443,7 @@ Mitarbeiter auf die eingeschränkt werden, die zur selben Abteilung gehören. "G
 wird auf den POST-Parameter der Abteilung und anschließend kann mit QUERY-P (POST)
 oder QUERY-G (GET) die Mitarbeiterliste eingegrenzt werden.
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT `id` FROM  mm_mitarbeiter
@@ -458,7 +458,7 @@ als Einzelauswahl eingebunden sind. Wird in der Eingabemaske der Maschinen eine 
 ausgewählt, sollen bei dem Select der Unterkategorien nur noch die zugehörigen Elemente auftauchen.
 Dazu wäre bei dem Model der Unterkategorien folgende SQL-Filterregel einzubauen:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT unterkategorie.id FROM mm_markt_unterkategorie AS unterkategorie
@@ -486,7 +486,7 @@ Zum Beispiel sollen beim Attribut "Reisebausteine" die möglichen Auswahlen auf 
 des Attributes "Reiseziele" eingegrenzt werden. Die folgende Vorlage soll als Anregung
 dienen - ggf. gibt es elegantere Lösungen.
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
    
    SELECT rb.id FROM mm_reisebausteine AS rb
@@ -509,7 +509,7 @@ auf die Länder begrenzen, die noch nicht zugewiesen wurden, kann man bei dem At
 (ID: 42) auf die Länder einen Filter aktivieren. In dem Filter kann man eine Filterregel "Eigenes SQL"
 wie folgt anlegen:
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
 
    SELECT `id`
@@ -536,7 +536,7 @@ kommen kann, die nur in der Eingabemaske zum Tragen kommen sollen.
 Man kann eine Abfrage auf den aktuellen Request-String setzen und dort nach dem eigenen Modelnamen wie z. B.
 "mm_employees" als erstes Wort suchen.
 
-.. code-block:: php
+.. code-block:: sql
    :linenos:
 
    SELECT artd.id FROM mm_article_details artd
