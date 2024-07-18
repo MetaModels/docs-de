@@ -71,7 +71,7 @@ Allgemein und Core
   Referer in einer bestimmten Form, den wir aktuell nicht einfach umschreiben können; nach dem Umschalten landet man auf
   einer "Defaultseite" von Contao - weitere Auswirkungen hat das nicht.
 * bei den Rendereinstellungen kann nun für die Links der Weiterleitungen (jumoTo) der Referenztyp zur Generierung der
-  URL angegeben werden - z. B. ist es nun möglich, einen absoluten Pfad inkl. Domain zu definieren
+  URL angegeben werden - z. B. ist es nun möglich, einen absolute URL inkl. Domain zu definieren
 * der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
   entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
 
