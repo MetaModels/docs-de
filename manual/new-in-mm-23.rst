@@ -168,6 +168,7 @@ im Blick behalten werden:
   :ref:`siehe Schemamanager <component_schema-manager>`
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
+* Check der HTML5-Templates mit Übersetzungen - z. B. ContentArticle
 * bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 * Filter mit "auto_item" Routenpriorität prüfen - siehe :ref:`rst_cookbook_tips_set-route-priority`
 * bei FEE Check Upload-Modus :ref:`Dateiupload <extended_frontend_editing_upload>`
