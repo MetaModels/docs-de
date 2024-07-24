@@ -84,12 +84,18 @@ Attribute
   umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
 * bei allen Attributen kann das Template für das Backend per Select ausgewählt werden - für das Frontend siehe FEE
 
+* Datei
+    * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` - siehe
+    `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
 * Tabelle-Multi (MCW)
     * Support für readonly und CSS-Klassen für tl_class des Widgets
 * Text-Tabelle
     * Support für readonly
+* Übersetzte Datei
+    * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` - siehe
+    `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
 * Übersetzte Text-Tabelle
     * Support für readonly
 * Übersetzte Tabelle-Multi (MCW)
