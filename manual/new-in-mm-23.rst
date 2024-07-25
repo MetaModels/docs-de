@@ -113,7 +113,7 @@ Filter
 * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
   Links für die Suche-Indexierung nicht mehr folgt
 
-* Checkbox-Status (ehem. Veröffentlichungsstatus)
+* Checkbox-Status (ehem. Veröffentlichungsstatus) und Übersetzter Checkbox-Status (ehem. Übersetzter Veröffentlichungsstatus)
     * die Filterregel wurde von "Veröffentlichungsstatus" in "Checkbox-Status" umbenannt, da nicht zwingend mit der
       Checkbox eine Veröffentlichung gesteuert wird
     * die Option "Filter nicht in Frontendvorschau nutzen" reagiert nun auf den Contao-Status "Vorschau" - bisher auf
