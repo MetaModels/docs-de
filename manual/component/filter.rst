@@ -52,11 +52,10 @@ Typen von Filterregeln
   Container für weitere Filterregeln mit UND-Verknüpfung
 * **ODER-Bedingung (OR)** (core): |br|
   Container für weitere Filterregeln mit ODER-Verknüpfung
-* **Veröffentlichungsstatus** (filter_checkbox): |br|
-  prüft ein Attributwert auf 1; kann Attribut "published" sein
-* **Übersetzter Veröffentlichungsstatus** (filter_checkbox): |br|
-  prüft ein übersetzten Attributwert auf 1; kann Attribut
-  "published" sein
+* **Checkbox-Status** (filter_checkbox): |br|
+  prüft ein Attributwert auf 1; (ehem. "Veröffentlichungsstatus")
+* **Übersetzter Checkbox-Status** (filter_checkbox): |br|
+  prüft ein übersetzten Attributwert auf 1; (ehem. "Übersetzter Veröffentlichungsstatus")
 * **Ja / Nein** (filter_checkbox): |br|
   Ja/Nein-Auswahl z.B. als Radio-Buttons
 * **Wert von/bis für ein Feld** (filter_fromto): |br|
