@@ -112,9 +112,16 @@ Filter
   eines eingeloggten Mitgliedes filtert
 * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
   Links für die Suche-Indexierung nicht mehr folgt
+
+* Checkbox-Status (ehem. Veröffentlichungsstatus)
+    * die Filterregel wurde in "Checkbox-Status" umbenannt, da nicht zwingend mit der Checkbox eine Veröffentlichung
+      gesteuert wird
+    * die Option "Filter nicht in Frontendvorschau nutzen" reagiert nun auf den Contao-Status "Vorschau" - bisher auf
+      Login im Backend
 * Eigenes SQL
-   * bei dem Inserttag-Parameter "aggregate" wurde nun der Typ "list" hinzugefügt - der wurde zwar schon immer in der Infobox beschrieben,
-     war aber bisher nicht implementiert; damit können nun kommaseparierte Listenwerte als GET-Wert übergeben werden
+   * bei dem Inserttag-Parameter "aggregate" wurde nun der Typ "list" hinzugefügt - der wurde zwar schon immer in der
+     Infobox beschrieben, war aber bisher nicht implementiert; damit können nun kommaseparierte Listenwerte als
+     GET-Wert übergeben werden
    * Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
      und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
 * Einfache Abfrage
@@ -129,12 +136,8 @@ Filter
     * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
 * Register
     * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
-      Links für die Suche-Indexierung nicht mehr folgt
+      Links für die Suche-Indexierung nicht mehr folgt (``data-escargot-ignore``)
     * im Template sind Blocks für `formlabel` und `formfield` eingefügt
-    * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
-* Veröffentlichungsstatus (Checkbox)
-    * die Option "Filter nicht in Frontendvorschau nutzen" reagiert nun auf den Contao-Status "Vorschau" - bisher auf
-      Login im Backend
 
 
 Frontend-Editing (FEE)
