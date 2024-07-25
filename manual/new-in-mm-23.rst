@@ -114,8 +114,8 @@ Filter
   Links für die Suche-Indexierung nicht mehr folgt
 
 * Checkbox-Status (ehem. Veröffentlichungsstatus)
-    * die Filterregel wurde in "Checkbox-Status" umbenannt, da nicht zwingend mit der Checkbox eine Veröffentlichung
-      gesteuert wird
+    * die Filterregel wurde von "Veröffentlichungsstatus" in "Checkbox-Status" umbenannt, da nicht zwingend mit der
+      Checkbox eine Veröffentlichung gesteuert wird
     * die Option "Filter nicht in Frontendvorschau nutzen" reagiert nun auf den Contao-Status "Vorschau" - bisher auf
       Login im Backend
 * Eigenes SQL
