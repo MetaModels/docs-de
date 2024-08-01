@@ -85,8 +85,8 @@ Attribute
 * bei allen Attributen kann das Template für das Backend per Select ausgewählt werden - für das Frontend siehe FEE
 
 * Datei
-    * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` - siehe
-    `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
+    * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
+    siehe `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
 * Inhalt eines Artikels
     * Anpassung des Templates
 * Langtext
