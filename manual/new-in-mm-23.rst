@@ -87,6 +87,8 @@ Attribute
 * Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` - siehe
     `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
+* Inhalt eines Artikels
+    * Anpassung des Templates
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
 * Tabelle-Multi (MCW)
@@ -96,6 +98,8 @@ Attribute
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` - siehe
     `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
+* Übersetzter Inhalt eines Artikels
+    * Anpassung des Templates
 * Übersetzte Text-Tabelle
     * Support für readonly
 * Übersetzte Tabelle-Multi (MCW)
@@ -152,12 +156,12 @@ Frontend-Editing (FEE)
 * bei der Eingabemaske kann eingestellt werden, dass in der Überschrift der Maske beim Editieren Werte aus dem Item
   angezeigt werden (`#14 <https://github.com/MetaModels/contao-frontend-editing/issues/43>`_) - :ref:`siehe FEE <extended_frontend_editing_headlines>`
 * der "Create"-Link ist im Standardtemplate des FE-Moduls nicht mehr dabei - das Template wurde an das des CE angeglichen
-* Upload Modi "Einzelner Datei-Upload" sind deprecated
 * Änderung der Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>` - ggf. anpassen
 * Thumbnails von Bilddateien in der Dropzone werden nach einem Seitenreload nun angezeigt
 * Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen nichtübersetzten Attributen
 * bei überschreiben der Buttons für die Eingabemaske, kann nun bei "Parameter" neben den "Simple-Tokens" auch ein
   Inserttag eingefügt werden
+* das Template der Dropzone wurde angepasst
 
 
 .. _check_upgrade_mm230:
@@ -175,14 +179,14 @@ im Blick behalten werden:
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen -
   :ref:`siehe Schemamanager <component_schema-manager>`
-* Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute)
+* gespeicherte Bookmarks zu MM im BE sind aufgrund des neuen Routings nicht mehr gültig - `siehe Newsletter <https://now.metamodel.me/de/mm-eap-newsletter/details/eap-info-mm-2-3-juli-ii-2024#nl-reader>`_
+* Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute, Filter und FEE)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * Check der HTML5-Templates mit Übersetzungen - z. B. ContentArticle
 * bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 * Filter mit "auto_item" Routenpriorität prüfen - siehe :ref:`rst_cookbook_tips_set-route-priority`
 * bei FEE Check Upload-Modus :ref:`Dateiupload <extended_frontend_editing_upload>`
 * bei FEE Check Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>`
-* Check Änderungen beim Template mm_form_field_dropzone.html5
 * Check der eigenen Übersetzungen - `Umstellung auf Xliff-Format <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_
 * Prüfung :ref:`eigener Defaultvorgaben für die Eingabemaske <rst_cookbook_panels_default-values>`
 * Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
