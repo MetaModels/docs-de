@@ -86,7 +86,7 @@ Attribute
 
 * Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
-      siehe `contao.image.sizes:... <https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
+      siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Inhalt eines Artikels
     * Anpassung des Templates
 * Langtext
@@ -97,7 +97,7 @@ Attribute
     * Support für readonly
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
-      siehe `contao.image.sizes:... <https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
+      siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Übersetzter Inhalt eines Artikels
     * Anpassung des Templates
 * Übersetzte Text-Tabelle
