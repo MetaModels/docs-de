@@ -97,7 +97,7 @@ Attribute
     * Support für readonly
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` - siehe
-    `contao.image.sizes:...<https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
+    `contao.image.sizes:... <https://docs.contao.org/manual/de/system/einstellungen/#config-yml>`_
 * Übersetzter Inhalt eines Artikels
     * Anpassung des Templates
 * Übersetzte Text-Tabelle
