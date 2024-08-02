@@ -164,6 +164,14 @@ Frontend-Editing (FEE)
 * das Template der Dropzone wurde angepasst
 
 
+Known-Issues
+------------
+
+* bei Umschaltung zu/vom Debugmodus im BE per Button stimmt die Referenzseite nicht mehr und man muss die Seite
+  erneut ansteuern - z. B. mit "zurück" im Browser und Reload der Seite |br|
+  Contao bietet aktuell keine Möglichkeit, an der Stelle den Referer zu beinflussen
+
+
 .. _check_upgrade_mm230:
 Check für Upgrade auf MM 2.3
 ----------------------------
