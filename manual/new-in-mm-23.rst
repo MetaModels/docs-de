@@ -164,6 +164,7 @@ Frontend-Editing (FEE)
 * das Template der Dropzone wurde angepasst
 * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` bei den Thumbnails -
   siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
+* Option "Einzelner Datei-Upload" wird wieder unterstützt
 
 
 Known-Issues
