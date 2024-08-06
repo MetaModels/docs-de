@@ -161,7 +161,7 @@ Frontend-Editing (FEE)
 * Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen nichtübersetzten Attributen
 * bei überschreiben der Buttons für die Eingabemaske, kann nun bei "Parameter" neben den "Simple-Tokens" auch ein
   Inserttag eingefügt werden
-* das Template der Dropzone wurde angepasst
+* das Template der Dropzone wurde angepasst - ggf. eigene Anpassungen prüfen
 * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` bei den Thumbnails -
   siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Option "Einzelner Datei-Upload" wird wieder unterstützt
