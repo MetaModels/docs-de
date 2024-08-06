@@ -133,7 +133,7 @@ Filter
       werden - neu ist die Option "ohne Datenwert [null]", wenn keine Auswahl - auch kein Leerstring - gesetzt werden
       soll
 * Einzelauswahl [select]
-    * Attributstyp Numerisch (Integer) möglich
+    * Attributstyp Numerisch (Integer) und Kombinierte Werte möglich
     * Template Listenausgabe Attribut ``data-escargot-ignore`` eingefügt, damit Links nicht indexiert werden
 * Mehrfachauswahl [Tags]
     * Attributstyp Numerisch (Integer) möglich
