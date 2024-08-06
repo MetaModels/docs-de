@@ -162,6 +162,8 @@ Frontend-Editing (FEE)
 * bei überschreiben der Buttons für die Eingabemaske, kann nun bei "Parameter" neben den "Simple-Tokens" auch ein
   Inserttag eingefügt werden
 * das Template der Dropzone wurde angepasst
+* Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` bei den Thumbnails -
+  siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 
 
 Known-Issues
