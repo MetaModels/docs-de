@@ -40,11 +40,11 @@ hinzu zu fügen - siehe :ref:`extended_index`
 Neben dem Contao-Manager ist die Installation der Pakete und Bundles direkt über die Konsole per
 Composer möglich - z.B. mit
 
-``php web/contao-manager.phar.php composer require metamodels/core``
+``php public/contao-manager.phar.php composer require metamodels/core``
 
 bzw.
 
-``php web/contao-manager.phar.php composer require metamodels/bundle_start``
+``php public/contao-manager.phar.php composer require metamodels/bundle_start``
 
 Statt `php` ist ggf. der Pfad zum entsprechenden PHP-Binary anzugeben -
 siehe :ref:`rst_cookbook_symfony_mm-2-1-tips`.
