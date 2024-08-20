@@ -58,13 +58,13 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 -----------------------
 
 * C 5.x/6.x + MM 3.0 + PHP 8.x - aktuell in Planung...
-* :ref:`C 5.3 + MM 2.4 + PHP 8.2 <installation-von-mm-2-4-fur-contao-5-3-und-php-8>` - aktuell in Entwicklung... EAP wahrscheinlich ab Herbst 2024
-* :ref:`C 4.13 + MM 2.3 + PHP 8.1 <installation-von-mm-2-3-fur-contao-4-13-und-php-8>` - Zugang per "EAP"
-* :ref:`C 4.9 + MM 2.2 + PHP 7.4 <installation-von-mm-2-2-fur-contao-4-9>`
-* :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <mm-installation-von-2-1-und-alter>`
-* :ref:`C 3.5 + MM 2.0 + PHP 5.6 <mm-installation-von-2-1-und-alter>`
+* :ref:`C 5.3 + MM 2.4 + PHP 8.2 <install_mm240>` - aktuell in Entwicklung... EAP wahrscheinlich ab Herbst 2024
+* :ref:`C 4.13 + MM 2.3 + PHP 8.1 <install_mm230>` - Zugang per "EAP"
+* :ref:`C 4.9 + MM 2.2 + PHP 7.4 <install_mm-old>`
+* :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <install_mm-old>`
+* :ref:`C 3.5 + MM 2.0 + PHP 5.6 <install_mm-old>`
 
-
+.. _install_mm240:
 Installation von MM 2.4 für Contao 5.3 und PHP 8
 -------------------------------------------------
 
@@ -122,6 +122,7 @@ Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2
 beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm240>`.
 
 
+.. _install_mm230:
 Installation von MM 2.3 für Contao 4.13 und PHP 8
 -------------------------------------------------
 
@@ -156,6 +157,7 @@ im Backend zuständig ist und viele tolle Funktionen mitbringt.
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
 
+.. _install_mm-old:
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 

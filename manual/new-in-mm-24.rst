@@ -1,4 +1,4 @@
-.. _new_in_mm230:
+.. _new_in_mm240:
 
 Änderungen und Features von MM 2.4
 ==================================
