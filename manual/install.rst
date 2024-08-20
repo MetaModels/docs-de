@@ -69,7 +69,8 @@ Installation von MM 2.4 für Contao 5.3 und PHP 8
 -------------------------------------------------
 
 MetaModels 2.4 bringt eine volle Kompatibilität zu Contao 5.3 und PHP 8.2. MM 2.4 ist eine Anpassung der
-Version 2.3 an die neue Contao- und PHP-Version.
+Version 2.3 an die neue Contao- und PHP-Versionund bringt natürlich
+:ref:`alle Änderungen und Features aus MM 2.3 mit <new_in_mm230>`.
 
 Die Installationsvoraussetzungen für MetaModels 2.4 sind:
 
