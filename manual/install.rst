@@ -57,8 +57,8 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 Übersicht der Versionen
 -----------------------
 
-* C 5.x + MM 3.0 + PHP 8.x - aktuell in Planung...
-* C 5.3 + MM 2.4 + PHP 8.2 - aktuell in Entwicklung... EAP wahrscheinlich ab Ende 2024
+* C 5.x/6.x + MM 3.0 + PHP 8.x - aktuell in Planung...
+* :ref:`C 5.3 + MM 2.4 + PHP 8.2 <installation-von-mm-2-4-fur-contao-5-3-und-php-8>` - aktuell in Entwicklung... EAP wahrscheinlich ab Herbst 2024
 * :ref:`C 4.13 + MM 2.3 + PHP 8.1 <installation-von-mm-2-3-fur-contao-4-13-und-php-8>` - Zugang per "EAP"
 * :ref:`C 4.9 + MM 2.2 + PHP 7.4 <installation-von-mm-2-2-fur-contao-4-9>`
 * :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <mm-installation-von-2-1-und-alter>`
@@ -78,12 +78,48 @@ Die Installationsvoraussetzungen für MetaModels 2.4 sind:
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 * ``memory_limit`` 512MB oder mehr (Empfehlung)
 * bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
-  (wahrscheinlich ab Ende 2024)
+  (wahrscheinlich ab Herbst 2024)
 
 Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
 
-Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Funktionen von MM 2.3 <new_in_mm230>` zu
-beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-manager>`.
+Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Funktionen von MM 2.4 <new_in_mm240>` zu
+beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-manager>` und XLIFF-Übersetzungen
+:ref:`component_translations`.
+
+.. seealso::
+   Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
+   immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
+   bei einem `composer install` die Pakete nicht gefunden werden können und eine Fehlermeldung kommt. |br|
+   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen. |br|
+   |br|
+   In den Paketen werden die Abhängigkeiten der Pakete nicht auf die DEV-Version eingetragen - das kann bedeuten,
+   dass man z. B. `attribute_numeric` für `attribute_timestamp` selbständig in die composer.json eintragen muss.
+   Bei Fragen steht der Support zur Seite.
+
+   Kommt beim Update die Meldung |br|
+   ``The checksum verification of the file failed...`` |br|
+   bitte die ``composer.lock`` löschen und das Update neu starten.
+
+   Bei Problemen eines Updates kann es helfen den Composer-Cache zu leeren ``composer clearcache``.
+
+   Kommt eine Meldung |br|
+   ``... Failed to connect to packages.cyberspectrum.de port 443: Connection refused...`` |br|
+   oder |br|
+   `` ...The "https://token:XXX@packages.cyberspectrum.de/r/packages.json" file could not be downloaded (HTTP/2 404 ) ... `` |br|
+   dann ist sehr wahrscheinlich der Packagist-Server down und composer kann die Pakete nicht ziehen. Dann bitte das
+   Update nach einigen Minuten erneut probieren oder das MM-Team kontaktieren.
+
+   Wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
+   "Pseudo-Fehlern" zu vermeiden.
+
+Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.4 kann über den Composer (Konsole)
+oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
+"**early adopter Programm**" - mehr dazu unter Fundraising auf der
+`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_.
+
+**Weitere Features von MM 2.4:** |br|
+Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.4 <new_in_mm240>` zusammengestellt - bitte
+beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm240>`.
 
 
 Installation von MM 2.3 für Contao 4.13 und PHP 8
@@ -93,8 +129,8 @@ MetaModels 2.3 bringt eine volle Kompatibilität zu Contao 4.13 und PHP 8.1. MM 
 Version 2.2 an die neue Contao- und PHP-Version und bringt natürlich
 :ref:`alle Änderungen und Features aus MM 2.2 mit <new_in_mm220>`.
 
-Mit dem neuen Schemamanager muss der Workflow mit MM angepasst werden
-- :ref:`siehe Schemamanager <component_schema-manager>`
+Mit dem neuen Schemamanager und den XLIFF-Dateien muss der Workflow mit MM angepasst werden - siehe
+:ref:`Schemamanager <component_schema-manager>` und :ref:`component_translations`.
 
 Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
@@ -106,44 +142,6 @@ Die Installationsvoraussetzungen für MetaModels 2.3 sind:
 
 Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
 
-.. seealso::
-   Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
-   immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
-   bei einem `composer install` die Pakete nicht gefunden werden können und eine Fehlermeldung kommt. |br|
-   In dem Fall, bitte ein `composer update` zum Aktualisieren der composer.lock aufrufen. |br|
-   |br|
-   In den Paketen werden die Abhängigkeiten der Pakete nicht auf die DEV-Version eingetragen - das kann bedeuten,
-   dass man z. B. `attribute_numeric` für `attribute_timestamp` selbständig in die composer.json eintragen muss.
-   Bei Fragen steht der Support zur Seite.
-   
-   Der DCG wird nun ab 2.2.0 auch über PackDis! ausgeliefert. Dabei haben wir festgestellt,
-   dass der Composer ab und an damit nicht zurecht gekommen ist – warum auch immer… |br|
-   Bei Update kommt z.B. die Meldung |br|
-   ``[InvalidArgumentException]
-   Unknown downloader type: . Available types: git, svn, fossil, hg, perforce, zip, rar, tar, gzip, xz, phar, file, path.`` |br| 
-   Wenn das auftritt, bitte den Ordner vendor/contao-community-alliance/dc-general (ggf. auch
-   /vendor/contao-community-alliance/dc-general-contao-frontend) löschen und das Update neu starten.
-   
-   Kommt beim Update die Meldung |br|
-   ``The checksum verification of the file failed...`` |br|
-   bitte die ``composer.lock`` löschen und das Update neu starten.
-   
-   Bei Problemen eines Updates kann es helfen den Composer-Cache zu leeren ``composer clearcache``.
-   
-   Kommt eine Meldung |br|
-   ``... Failed to connect to packages.cyberspectrum.de port 443: Connection refused...`` |br|
-   dann ist sehr wahrscheinlich der Packagist-Server down und composer kann die Pakete nicht ziehen. Dann bitte das
-   Update nach einigen Minuten erneut probieren oder das MM-Team kontaktieren.
-
-   Wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
-   "Pseudo-Fehlern" zu vermeiden.
-
-Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.3 kann über den Composer (Konsole)
-oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
-"**early adopter Programm**" - mehr dazu unter Fundraising auf der
-`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_.
-
-**Weitere Features von MM 2.3:** |br|
 Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.3 <new_in_mm230>` zusammengestellt - bitte
 beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm230>`.
 

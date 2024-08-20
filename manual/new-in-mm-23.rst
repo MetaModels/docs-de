@@ -9,8 +9,10 @@ Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.3, die durc
 
 Für einen Check nach einem Upgrade zu MM 2.3 sind :ref:`unten weitere Hinweise <check_upgrade_mm230>`.
 
-.. note:: zum Anlegen von mm_*-Tabellen und Spalten der Attribute muss eine DB-Migration durchgeführt werden
-   - siehe :ref:`Schemamanager <component_schema-manager>`
+.. note:: Zum Anlegen von mm_*-Tabellen und Spalten der Attribute muss eine DB-Migration durchgeführt werden -
+   siehe :ref:`Schemamanager <component_schema-manager>`. |br|
+   Nach Anlegen oder Änderungen der Bezeichnungen von Models, Attributen oder Legenden bitte den (Translation-)-Cache
+   löschen - siehe :ref:`component_translations`.
 
 
 Allgemein und Core
