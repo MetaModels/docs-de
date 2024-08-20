@@ -112,7 +112,8 @@ beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-ma
 
    Wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
    "Pseudo-Fehlern" zu vermeiden. Wer das für alle Benutzer machen möchte, kann in der Tabelle `tl_user` die Spalte
-   `session` auf `NULL` setzen.
+   `session` auf `NULL` setzen. Die Fehlermeldung sieht i. E. so aus:|br|
+   ``Cannot assign null to property ContaoCommunityAlliance\DcGeneral\Panel\DefaultLimitElement::$intAmount of type int``
 
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.4 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
