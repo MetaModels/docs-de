@@ -106,7 +106,7 @@ beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-ma
    Kommt eine Meldung |br|
    ``... Failed to connect to packages.cyberspectrum.de port 443: Connection refused...`` |br|
    oder |br|
-   `` ...The "https://token:XXX@packages.cyberspectrum.de/r/packages.json" file could not be downloaded (HTTP/2 404 ) ... `` |br|
+   ``... The "https://token:XXX@packages.cyberspectrum.de/r/packages.json" file could not be downloaded (HTTP/2 404 )...`` |br|
    dann ist sehr wahrscheinlich der Packagist-Server down und composer kann die Pakete nicht ziehen. Dann bitte das
    Update nach einigen Minuten erneut probieren oder das MM-Team kontaktieren.
 
