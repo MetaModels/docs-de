@@ -36,6 +36,7 @@ Frontend-Editing (FEE)
 ----------------------
 
 * Änderung des Templates `form_textfield_multiple` zu `form_text_multiple` in "FormTextFieldMultipleBundle"
+  (Angleichung an Contao 5)
 
 
 Known-Issues
