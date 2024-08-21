@@ -44,7 +44,7 @@ Known-Issues
 
 * bei Umschaltung zu/vom Debugmodus im BE per Button stimmt die Referenzseite nicht mehr und man muss die Seite
   erneut ansteuern - z. B. mit "zurück" im Browser und Reload der Seite |br|
-  Contao bietet aktuell keine Möglichkeit, an der Stelle den Referer zu beinflussen
+  Contao bietet aktuell keine Möglichkeit, an der Stelle den Referer zu beeinflussen
 
 
 .. _check_upgrade_mm240:
