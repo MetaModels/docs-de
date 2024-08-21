@@ -14,12 +14,18 @@ Für einen Check nach einem Upgrade zu MM 2.4 sind :ref:`unten weitere Hinweise 
    Nach Anlegen oder Änderungen der Bezeichnungen von Models, Attributen oder Legenden bitte den (Translation-)-Cache
    löschen - siehe :ref:`component_translations`.
 
+
 Allgemein und Core
 ------------------
 
 
 Attribute
 ---------
+
+* Datei
+    * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+* Übersetzte Datei
+    * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
 
 
 Filter
@@ -50,6 +56,7 @@ oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen
 im Blick behalten werden:
 
 * Änderung des Templates `form_textfield_multiple` zu `form_text_multiple` in "FormTextFieldMultipleBundle" (FEE)
+* Änderung der Templates bei Datei und übersetzte Datei für Ausgabe der Metadaten
 
 
 Re-Finanzierung
