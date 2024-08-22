@@ -186,6 +186,7 @@ Bezeichnungen und DB-Änderungen werden über Migrationen abgefangen. Es gibt ab
 oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen auf MM 2.3 die folgenden Punkte
 im Blick behalten werden:
 
+* bitte alle Hinweise aus :ref:`MM 2.2 <check_upgrade_mm220>` beachten
 * wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
   "Pseudo-Fehlern" (z. B. `Cannot assign null ... $intAmount of type int <https://now.metamodel.me/de/mm-eap-newsletter/details/eap-info-mm-2-3-dezember-ii-2023>`_)
   zu vermeiden

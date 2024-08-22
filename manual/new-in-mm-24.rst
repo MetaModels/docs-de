@@ -56,6 +56,7 @@ Bezeichnungen und DB-Änderungen werden über Migrationen abgefangen. Es gibt ab
 oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen auf MM 2.4 die folgenden Punkte
 im Blick behalten werden:
 
+* bitte alle Hinweise aus :ref:`MM 2.3 <check_upgrade_mm230>` und :ref:`MM 2.2 <check_upgrade_mm220>` beachten
 * Änderung des Templates `form_textfield_multiple` zu `form_text_multiple` in "FormTextFieldMultipleBundle" (FEE)
 * Änderung der Templates bei Datei und übersetzte Datei für Ausgabe der Metadaten
 
