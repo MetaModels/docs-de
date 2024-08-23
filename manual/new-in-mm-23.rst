@@ -144,6 +144,7 @@ Filter
     * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
       Links für die Suche-Indexierung nicht mehr folgt (``data-escargot-ignore``)
     * im Template sind Blocks für `formlabel` und `formfield` eingefügt
+    * es kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
 
 
 Frontend-Editing (FEE)
