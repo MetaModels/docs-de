@@ -18,6 +18,16 @@ Für einen Check nach einem Upgrade zu MM 2.4 sind :ref:`unten weitere Hinweise 
 Allgemein und Core
 ------------------
 
+Mit Contao 5 kommt eine Version von Symfony ins Spiel und wir haben die Mindestversion von PHP auf 8.2 gestellt. Bei
+Contao 5 ist das leicht abgeänderte Backend mit der vollen Breite und neuen Icons am Auffälligsten. Die neuen
+`Angaben zur Breite eines Widgets <https://docs.contao.org/dev/reference/dca/palettes/#arranging-fields>`_ in der
+Eingabemaske wie "w25" oder "w66" können natürlich auch in MM verwendet werden.
+
+Bei eigenen Anpassungen bzw. Programmierungen sind einige Dinge zu beachten, die sich in Contao geändert haben wie
+z. B. die Deprecations aus `C 4.13 <https://github.com/contao/contao/blob/4.13/DEPRECATED.md>`_
+bzw. `C 5 <https://github.com/contao/contao/blob/5.x/DEPRECATED.md>`_, absolute Pfadangaben für Dateien wie Icons
+oder CSS/JS oder vollständige Angaben beim Aufruf von Methoden z. B. "\Contao\Input::get('myvariable')".
+
 
 Attribute
 ---------
@@ -57,8 +67,10 @@ oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen
 im Blick behalten werden:
 
 * bitte alle Hinweise aus :ref:`MM 2.3 <check_upgrade_mm230>` und :ref:`MM 2.2 <check_upgrade_mm220>` beachten
+* Änderung der Templates vom DC_General
 * Änderung des Templates `form_textfield_multiple` zu `form_text_multiple` in "FormTextFieldMultipleBundle" (FEE)
 * Änderung der Templates bei Datei und übersetzte Datei für Ausgabe der Metadaten
+* Check der eigenen Programmierungen an Contao 5 (s.o.)
 
 
 Re-Finanzierung
