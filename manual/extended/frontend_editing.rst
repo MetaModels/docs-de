@@ -349,10 +349,8 @@ Der Upload kann über das Standard-Uploadwidget erfolgen als auch per Drag&Drop 
 `Dropzone <https://www.dropzone.dev/>`_.
 
 Für den Upload muss das entsprechende Attribut vom Typ Datei in der Maske eingebunden sein und als "Widget-Modus"
-"Mehrfacher Datei-Upload" bzw. "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder".
-
-.. note:: Ab MM 2.2 die Widget-Modi "Einzelner Datei-Upload" nicht mehr verwenden - Eingrenzung auf eine Datei per
-   "Doropzone limit"
+"Einzelner Datei-Upload", "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder", "Mehrfacher Datei-Upload"
+und "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder".
 
 |img_fee-upload|
 
