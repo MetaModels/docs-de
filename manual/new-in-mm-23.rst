@@ -189,7 +189,7 @@ im Blick behalten werden:
 
 * bitte alle Hinweise aus :ref:`MM 2.2 <check_upgrade_mm220>` beachten
 * wenn ein Upgrade gemacht wurde, bitte bei dem Benutzer im BE die Sessiondaten löschen um Anzeige von
-  "Pseudo-Fehlern" (z. B. `Cannot assign null ... $intAmount of type int <https://now.metamodel.me/de/mm-eap-newsletter/details/eap-info-mm-2-3-dezember-ii-2023>`_)
+  "Pseudo-Fehlern" (z. B. `Cannot assign null ... $intAmount of type int <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-dezember-ii-2023>`_)
   zu vermeiden
 * bei einem Upgrade kleiner 2.2 bitte die :ref:`Checkliste für MM 2.2 beachten <check_upgrade_mm220>`
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen -
