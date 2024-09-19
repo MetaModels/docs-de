@@ -204,6 +204,7 @@ im Blick behalten werden:
 * bei FEE Check Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>`
 * Check der eigenen Übersetzungen - `Umstellung auf Xliff-Format <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_
 * Prüfung :ref:`eigener Defaultvorgaben für die Eingabemaske <rst_cookbook_panels_default-values>`
+* Prüfung :ref:`der Labels der Eingabemasken bei eigenen Anpassungen - "LABEL NOT SET" <component_translations_lns>`
 * Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
   und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
 
