@@ -5,6 +5,7 @@ Symfony-Translation
 
 .. note:: Die Symfony-Translation ist ab MetaModels Version 2.3 implementiert.
 
+.. _component_translations_info:
 Kurzinfo
 --------
 
@@ -82,3 +83,26 @@ mit dem Inhalt
    </xliff>
 
 Für die Übernahme nicht vergessen, den Translation-Cache zu löschen!
+
+.. _component_translations_lns:
+Meldung "LABEL NOT SET"
+-----------------------
+
+Wird die Meldung "LABEL NOT SET" in der Eingabemaske als Label angezeigt, kann das mehrere Gründe haben:
+
+Der einfachste Grund ist, dass sich an dem Label was geändert hat, aber der Cache nicht erneuert wurde - diesen 
+bitte leeren (:ref:`s. o. <component_translations_info>`)
+
+Hat man eigene Anpassungen per DCA an den Eingabewidgets vorgenommen z. B. für Standardwerte oder um einen eigenes Wizard-Icon
+einzubinden, greift leider die "Contao-Magic" und versucht das Label aus den Array der Übersetzungen hinzuzufügen - die
+gibt es aber mit den Symfony-Translations nicht mehr.
+
+Die Meldung ist leicht zu beheben, wenn man zusätzlich ein Label im DCA-File hinzufügt - der Wert kann leer bleiben z. B.
+für MM "mm_employees" und Attribut "name":
+
+.. code-block:: php
+   :linenos:
+   // src/Resources/contao/dca/mm_employees.php
+
+   // Add label to fix Contao "magic add".
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['name']['label'] = '';
