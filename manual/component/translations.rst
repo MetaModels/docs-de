@@ -102,7 +102,8 @@ für MM "mm_employees" und Attribut "name":
 
 .. code-block:: php
    :linenos:
-   // src/Resources/contao/dca/mm_employees.php
+
+   // src/Resources/contao/dca/mm_employees.php or contao/dca/mm_employees.php
 
    // Add label to fix Contao "magic add".
    $GLOBALS['TL_DCA']['mm_employees']['fields']['name']['label'] = '';
