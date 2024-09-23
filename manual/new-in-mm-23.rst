@@ -195,6 +195,8 @@ im Blick behalten werden:
 * zum Anlegen von mm_*-Tabellen und Spalten der Attribute eine DB-Migration durchführen -
   :ref:`siehe Schemamanager <component_schema-manager>`
 * gespeicherte Bookmarks zu MM im BE sind aufgrund des neuen Routings nicht mehr gültig - `siehe Newsletter <https://now.metamodel.me/de/mm-eap-newsletter/details/eap-info-mm-2-3-juli-ii-2024#nl-reader>`_
+* Berechtigungen bei Benutzergruppen werden nur noch in MM zugeteilt (s.o. "Wechsel des Routings") - überflüssige 
+  Checkboxen bei Benutzergruppen in "Backend-Module" löschen
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute, Filter und FEE)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * Check der HTML5-Templates mit Übersetzungen - z. B. ContentArticle
