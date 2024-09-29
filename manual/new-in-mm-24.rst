@@ -41,7 +41,7 @@ Attribute
 Filter
 ------
 
-* Volltextsuche mit "Loupe" (Neu)
+* Volltextsuche mit "Loupe" (Neu - noch in Arbeit...)
     * Mit der neuen Filterregel wird ein Index über ausgewählte Attribute erstellt, über den anschließend gesucht
       werden kann - siehe `Loupe <https://github.com/loupe-php/loupe>`_
 
