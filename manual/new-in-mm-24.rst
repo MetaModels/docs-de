@@ -41,12 +41,19 @@ Attribute
 Filter
 ------
 
+* Volltextsuche mit "Loupe" (Neu)
+    * Mit der neuen Filterregel wird ein Index über ausgewählte Attribute erstellt, über den anschließend gesucht
+      werden kann - siehe `Loupe <https://github.com/loupe-php/loupe>`_
+
 
 Frontend-Editing (FEE)
 ----------------------
 
 * Änderung des Templates `form_textfield_multiple` zu `form_text_multiple` in "FormTextFieldMultipleBundle"
   (Angleichung an Contao 5)
+* bei den Einstellungen der Eingabemaske für einen Datei-Upload werden bei den Widget-Modi je nach aktivierter
+  Einstellung "Mehrfachbearbeitung" nur noch die passenden Einstellungen für Einzel- oder Mehrfachupload angezeigt - bei
+  einer Umstellung beim Attribut muss das aber entsprechend beim Upload auch umgestellt werden
 
 
 Known-Issues
