@@ -78,6 +78,7 @@ im Blick behalten werden:
 * Änderung des Templates `form_textfield_multiple` zu `form_text_multiple` in "FormTextFieldMultipleBundle" (FEE)
 * Änderung der Templates bei Datei und übersetzte Datei für Ausgabe der Metadaten
 * Check der eigenen Programmierungen an Contao 5 (s.o.)
+* bei FEE mit Dateiupload, Widget-Modus bei Einstellungen des Atttributs in der Eingabemaske prüfen (s. o.)
 
 
 Re-Finanzierung
