@@ -85,11 +85,17 @@ Dateien anhand der UUID suchen:
 
 Die UUID einer Datei oder Ordners kann man in der Dateiverwaltung über den Infobutton ablesen.
 Die Suche in der DB ist etwas schwieriger, da die UUIDs nicht im "Klartext in der DB stehen.
-Für die Suche muss die uuid der DB erst umgewandelt werden:
+Für die Suche muss die uuid der DB erst umgewandelt werden. Dazu kann man die UUID um die
+Bindestriche kürzen und ein "0x" davor setzen. Für eine UUID "2abbf0c1-e76f-43e5-a123-00ac10d40e00"
+wäre das z. B.
 
 .. code-block:: sql
    :linenos:
-   
+
+   SELECT * FROM tl_files
+   WHERE uuid = 0x2abbf0c1e76f43e5a12300ac10d40e00
+
+   -- oder über eine automatische Umwandlung
    SELECT * FROM tl_files
    WHERE LOWER(CONCAT(
         LEFT(HEX(uuid), 8),
@@ -98,15 +104,4 @@ Für die Suche muss die uuid der DB erst umgewandelt werden:
         '-', MID(HEX(uuid), 17,4),
         '-', RIGHT(HEX(uuid), 12))
       ) = '2abbf0c1-e76f-43e5-a123-00ac10d40e00';
-
-   -- oder
-   
-   SELECT * FROM tl_files
-   WHERE LCASE(CONCAT_WS('-',
-          HEX(SUBSTR(uuid,  1, 4)),
-          HEX(SUBSTR(uuid,  5, 2)),
-          HEX(SUBSTR(uuid,  7, 2)),
-          HEX(SUBSTR(uuid,  9, 2)),
-          HEX(SUBSTR(uuid, 11))
-      )) = '2abbf0c1-e76f-43e5-a123-00ac10d40e00';
  
