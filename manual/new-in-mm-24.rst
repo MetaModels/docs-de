@@ -21,7 +21,8 @@ Allgemein und Core
 Mit Contao 5 kommt eine Version von Symfony ins Spiel und wir haben die Mindestversion von PHP auf 8.2 gestellt. Bei
 Contao 5 ist das leicht abgeänderte Backend mit der vollen Breite und neuen Icons am Auffälligsten. Die neuen
 `Angaben zur Breite eines Widgets <https://docs.contao.org/dev/reference/dca/palettes/#arranging-fields>`_ in der
-Eingabemaske wie "w25" oder "w66" können natürlich auch in MM verwendet werden.
+Eingabemaske wie "w25" oder "w66" können natürlich auch in MM verwendet werden. MetaModels unterstützt das
+"Dunkle Design" (Dark-Mode) im Backend inkl. Iconvarianten mit Suffix "--dark".
 
 Bei eigenen Anpassungen bzw. Programmierungen sind einige Dinge zu beachten, die sich in Contao geändert haben wie
 z. B. die Deprecations aus `C 4.13 <https://github.com/contao/contao/blob/4.13/DEPRECATED.md>`_
@@ -32,8 +33,12 @@ oder CSS/JS oder vollständige Angaben beim Aufruf von Methoden z. B. "\Contao\I
 Attribute
 ---------
 
+* Checkbox
+    * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
 * Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+* Übersetzte Checkbox
+    * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
 
@@ -79,6 +84,8 @@ im Blick behalten werden:
 * Änderung der Templates bei Datei und übersetzte Datei für Ausgabe der Metadaten
 * Check der eigenen Programmierungen an Contao 5 (s.o.)
 * bei FEE mit Dateiupload, Widget-Modus bei Einstellungen des Atttributs in der Eingabemaske prüfen (s. o.)
+* für Dark-Mode ggf. weitere Varianten der eigenen Icons mit Suffix "--dark" anlegen - z. B. zu
+  `flag_enabled.svg` und `flag_disabled.svg` ein `flag_enabled--dark.svg` und `flag_disabled--dark.svg`
 
 
 Re-Finanzierung
