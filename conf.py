@@ -47,6 +47,9 @@ html_show_copyright = True
 html_css_files = [
     'style.css',
 ]
+html_context = {
+  'display_github': True,
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
