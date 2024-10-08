@@ -48,7 +48,10 @@ html_css_files = [
     'style.css',
 ]
 html_context = {
-  'display_github': True,
+    'display_github': True,
+    'github_user': 'MetaModels',
+    'github_repo': 'docs-de',
+    #'github_version': 'master/docs/',
 }
 
 # -- Options for LaTeX output ---------------------------------------------
