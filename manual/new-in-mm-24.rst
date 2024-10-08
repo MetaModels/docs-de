@@ -85,7 +85,8 @@ im Blick behalten werden:
 * Check der eigenen Programmierungen an Contao 5 (s.o.)
 * bei FEE mit Dateiupload, Widget-Modus bei Einstellungen des Atttributs in der Eingabemaske prüfen (s. o.)
 * für Dark-Mode ggf. weitere Varianten der eigenen Icons mit Suffix "--dark" anlegen - z. B. zu
-  `flag_enabled.svg` und `flag_disabled.svg` ein `flag_enabled--dark.svg` und `flag_disabled--dark.svg`
+  `flag_enabled.svg` und `flag_disabled.svg` ein `flag_enabled--dark.svg` und `flag_disabled--dark.svg` - siehe
+  `EAP-News Oktober II 2024 <https://now.metamodel.me/de/mm-eap-newsletter-2-4/details/eap-info-mm-2-4-oktober-ii-2024>`_
 
 
 Re-Finanzierung
