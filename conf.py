@@ -51,7 +51,7 @@ html_context = {
     'display_github': True,
     'github_user': 'MetaModels',
     'github_repo': 'docs-de',
-    'github_version': 'tree/de-2.0/',
+    'github_version': 'de-2.0/',
 }
 
 # -- Options for LaTeX output ---------------------------------------------
