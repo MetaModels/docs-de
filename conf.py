@@ -27,8 +27,8 @@ master_doc = 'index'
 project = u'MetaModels'
 #copyright = u'{:d}, <a href="https://now.metamodel.me/de/ueber-uns/team" title="Team MetaModels" target="_blank">Team MetaModels</a>'.format(date.today().year)
 copyright = u'{:d}, Team MetaModels'.format(date.today().year)
-version = '2.3'
-release = '2.3.0'
+version = '2.4'
+release = '2.4.0'
 language = 'de'
 exclude_patterns = ['_build', '_ext']
 pygments_style = 'sphinx'
@@ -37,7 +37,7 @@ pygments_style = 'sphinx'
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['_themes', ]
-# html_static_path = []
+html_static_path = ['_static']
 html_use_modindex = False
 htmlhelp_basename = 'MetaModelsdoc'
 html_favicon = '_img/favicon.ico'
