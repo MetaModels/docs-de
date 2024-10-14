@@ -91,6 +91,9 @@ Attribute
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Inhalt eines Artikels
     * Anpassung des Templates
+    * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
+      Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
+      angepasst werden
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
 * Tabelle-Multi (MCW)
@@ -102,6 +105,9 @@ Attribute
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Übersetzter Inhalt eines Artikels
     * Anpassung des Templates
+    * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
+      Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
+      angepasst werden
 * Übersetzte Text-Tabelle
     * Support für readonly
 * Übersetzte Tabelle-Multi (MCW)
@@ -168,6 +174,7 @@ Frontend-Editing (FEE)
 * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` bei den Thumbnails -
   siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Option "Einzelner Datei-Upload" wird wieder unterstützt
+* Anpassung der BE-Listenausgabe für "Inhalt eines Artikels" sowie "Übersetzter Inhalt eines Artikels"
 
 
 Known-Issues
