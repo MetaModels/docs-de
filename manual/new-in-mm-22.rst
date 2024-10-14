@@ -128,7 +128,7 @@ Attribute
     * ein bei den Attributseinstellungen aktivierter Filter wirkt sich nun auch auf die Ausgabe im FE aus - z. B.
       werden referenzierte Items nicht mehr ausgegeben, wenn ein Filter das begrenzt analog der Darstellung im BE
       (`zu beachten bei "Eigenem SQL" <https://metamodels.readthedocs.io/de/latest/cookbook/filter/custom-sql.html#filterunterscheidung-von-frontend-und-backend>`_)
-* Levenshtein-gestützte Suche (Ähnlichkeitssuche)
+* Levenshtein-gestützte Suche (Volltextindexierung mit Ähnlichkeitssuche)
     * Umbenennung in korrekte Schreibweise ("sht" statt "sth") - bitte in composer.json prüfen
     * Das automatische Abschalten des Autosubmit bei CE/Modul-MM-Filter wurde entfernt - durch die neuen
       Einstellungsmöglichkeiten ist das nicht mehr notwendig
@@ -229,7 +229,7 @@ Filter
     * Attributstyp "Übersetzte Checkbox" möglich
     * Option, dass das Label des FE-Widget nicht ausgegeben wird
     * Angabe CSS-ID und CSS-Klassen für FE-Widget möglich
-* Levenshtein-gestützte Suche (Ähnlichkeitssuche)
+* Levenshtein-gestützte Suche (Volltextindexierung mit Ähnlichkeitssuche)
     * siehe bei Attribute
 * Mehrfachauswahl [Tags]
     * Attributstypen Alias und Übersetzter Alias möglich

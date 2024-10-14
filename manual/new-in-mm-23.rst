@@ -75,6 +75,7 @@ Allgemein und Core
 * bei den Rendereinstellungen kann nun für die Links der Weiterleitungen (jumpTo) der Referenztyp zur Generierung der
   URL angegeben werden - z. B. ist es nun möglich, eine absolute URL inkl. Domain zu definieren; siehe
   `Symfony UrlGeneratorInterface <https://github.com/symfony/routing/blob/f8dd6f80c96aeec9b13fc13757842342e05c4878/Generator/UrlGeneratorInterface.php#L34-L55>`_
+* bei mehrsprachigen Models reagiert das Panel (Filter/Suche) in der BE-Liste auf die Spracheneinstellung der Liste
 * der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
   entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
 
