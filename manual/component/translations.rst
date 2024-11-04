@@ -15,7 +15,12 @@ aber nicht die eingegeben "Nutzdaten". Ab MetaModels Version 2.3 übernimmt die 
 `Symfony-Translation <https://symfony.com/doc/current/translation.html>`_, welche sich durch verschiedene Vorteile
 wie z. B. ein gutes Caching auszeichnet.
 
-Zum Laden von neuen oder geänderten Eingaben muss der Symfony-Translations-Cache gelöscht werden.
+Zum Laden von neuen oder geänderten Eingaben muss der Symfony-Translations-Cache gelöscht werden. Das kann über die
+Konsole oder über den Manager erfolgen.
+
+.. note:: Das Löschen des Symfony-Translations-Cache kann auch im Backend erfolgen - siehe
+   Einstellungen > Systemwartung > Symfony-Translator |br|
+   Achtung: hier wird immer nur der Cache der aktuell eingestellten Arbeitsumgebung (prod oder dev) gelöscht!
 
 Die Übersetzungen selbst werden weiterhin über die Webseite von `Transifex <https://app.transifex.com/metamodels/>`_
 gemanaged. An der Übersetzung unserer Basissprache Englisch in andere Sprachen kann sich jeder über Transifex beteiligen.
@@ -107,3 +112,7 @@ für MM "mm_employees" und Attribut "name":
 
    // Add label to fix Contao "magic add".
    $GLOBALS['TL_DCA']['mm_employees']['fields']['name']['label'] = '';
+
+.. |br| raw:: html
+
+   <br />
