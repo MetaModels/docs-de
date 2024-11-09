@@ -90,13 +90,16 @@ Attribute
 * Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
 * Inhalt eines Artikels
     * Anpassung des Templates
     * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
       Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
       angepasst werden
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
 * Tabelle-Multi (MCW)
     * Support für readonly und CSS-Klassen für tl_class des Widgets
 * Text-Tabelle
@@ -104,11 +107,16 @@ Attribute
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
 * Übersetzter Inhalt eines Artikels
     * Anpassung des Templates
     * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
       Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
       angepasst werden
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+* Übersetzter Langtext
+    * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
 * Übersetzte Text-Tabelle
     * Support für readonly
 * Übersetzte Tabelle-Multi (MCW)
