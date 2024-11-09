@@ -21,6 +21,7 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     attribute_color
     attribute_mcw
     filter_parent
+    file-usage
     metadata_extractor
     xliff_ex-import
 
