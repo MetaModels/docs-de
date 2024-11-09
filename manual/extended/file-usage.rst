@@ -16,7 +16,7 @@ erstellt. Aktuell werden folgende Attribute unterstützt:
 * Langtext
 * Übersetzter Inhalt eines Artikels (ContentArticle)
 * Übersetzte Datei
-* Übersetzte Langtext
+* Übersetzter Langtext
 
 Je nach Attribut wird nach der/den gespeicherten UUID(s) der Datei bzw. Dateien gesucht oder nach vorhandenen Inserttags
 mit Dateieinbindungen. Wie in File-Usage werden keine textuellen Pfadangaben wie `/file/content/my_file.jpg`
