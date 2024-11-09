@@ -91,7 +91,7 @@ Attribute
 * Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
-    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Inhalt eines Artikels
     * Anpassung des Templates
     * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
