@@ -78,6 +78,7 @@ Allgemein und Core
 * bei mehrsprachigen Models reagiert das Panel (Filter/Suche) in der BE-Liste auf die Spracheneinstellung der Liste
 * der Core, Attribute und Filter wurden mit der Toolsammlung `PHPCQ <https://github.com/phpcq/phpcq>`_ geprüft und
   entsprechend angepasst - siehe `Github <https://github.com/MetaModels/core/issues/1502>`_
+* :ref:`File-Usage Integration <rst_extended_file-usage>`
 
 
 Attribute
@@ -96,10 +97,10 @@ Attribute
     * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
       Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
       angepasst werden
-    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
-    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Tabelle-Multi (MCW)
     * Support für readonly und CSS-Klassen für tl_class des Widgets
 * Text-Tabelle
@@ -107,16 +108,16 @@ Attribute
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
-    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Übersetzter Inhalt eines Artikels
     * Anpassung des Templates
     * Änderung der Backendausgabe in der Listenansicht - hier erfolgt statt der Übersicht der Elementtypen das originäre
       Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
       angepasst werden
-    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Übersetzter Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
-    * :ref:`File-Usage Integration <rst_extended_file-usage>`_
+    * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Übersetzte Text-Tabelle
     * Support für readonly
 * Übersetzte Tabelle-Multi (MCW)
