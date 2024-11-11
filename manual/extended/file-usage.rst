@@ -6,7 +6,8 @@ File-Usage Integration
 .. note:: Steht ab MetaModels 2.3 zur Verfügung - für die Aktivierung bitte eine E-Mail an mail@metamodel.me senden.
 
 Mit der Erweiterung `File-Usage <https://github.com/inspiredminds/contao-file-usage>`_ kann man in der Dateiverwaltung
-sehen, ob und wo eine Datei in Contao eingebunden ist.
+sehen, ob und wo eine Datei in Contao eingebunden ist. Der Support für MM ist ab Version 3.0.1 von File-Usage
+gegeben.
 
 Für die Anzeige der Bilder, die in den Datensätzen von MetaModels eingebunden sind, wurden entsprechende Provider
 erstellt. Aktuell werden folgende Attribute unterstützt:
