@@ -38,6 +38,7 @@ API-Abfragen in separate Dateien zu empfehlen. Mehr zu den Abfragen bei :ref:`re
     * Hinweis: Die Ermittlung der Options sollte man in eine Helper-Klasse auslagern - siehe Vortrag CK23 - bzw.
     * per options_callback (https://docs.contao.org/dev/reference/widgets/select/) holen.
     */
+
    use Contao\System;
 
    // POI-Liste.
@@ -87,6 +88,7 @@ Für die Filterung nach der ausgwählten POI-Id kann man eine Filterregel "Eigen
 .. code-block:: SQL
    :linenos:
 
+   -- Filterregel in Filter 11
    SELECT id FROM {{table}}
    WHERE id = {{param::filter?name=poi}}
 
