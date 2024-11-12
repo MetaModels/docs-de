@@ -14,13 +14,13 @@ und diese angezeigt werden sollen, kann man das zum Beispiel mit den folgenden M
 Auswahl und Anzeige mit Erweiterung RockSolid Custom Elements
 -------------------------------------------------------------
 
-RockSolid Custom Elements (RST-CE) geben Ihnen die Möglichkeit, sämtliche im Contao Backend verfügbaren Eingabefelder nach
+RockSolid Custom Elements (RST-CE) geben einem die Möglichkeit, sämtliche im Contao Backend verfügbaren Eingabefelder nach
 belieben als Content Element und/oder Modul zur Verfügung zu stellen. Mehr dazu auf der Webseite von
 `RockSolid <https://rocksolidthemes.com/de/contao/plugins/custom-content-elements>`_ oder
 `Vortrag der CK24 von Marcus Lelle <https://github.com/marcuslelle/contao-rsce>`_.
 
-Im folgenden Beispiel soll ein einzelner Point-of-Interest (POI) durch den Redakteur ausgewählt werden können und
-im FE angezeigt werden. In der Auswahl soll der Name und der Ort erscheinen.
+Im folgenden Beispiel soll ein einzelner Point-of-Interest (POI) durch den Redakteur ausgewählt und im FE angezeigt
+werden können. In der Auswahl soll der Name und der Ort erscheinen.
 
 Wie bei RST-CE üblich, muss eine Konfigurationsdatei für die Anzeige im BE sowie ein Template für die FE-Ausgabe
 erstellt werden. Die Quelltexte sollen nur das Vorgehen verdeutlichen und wie angegeben ist eine Auslagerung der
