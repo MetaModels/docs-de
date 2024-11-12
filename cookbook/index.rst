@@ -40,6 +40,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     tips/set-route-priority.rst
     tips/delete-child-items.rst
     tips/speed-up-backend-list.rst
+    specials/ce_element_for_editors.rst
     specials/export-excel.rst
     other-tutorials/index.rst
     other-tutorials/videos.rst
