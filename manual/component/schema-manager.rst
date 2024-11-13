@@ -45,5 +45,5 @@ Da Doctrine Änderungen bei bestehenden Tabellen oder Spalten in zwei Aktionen a
 Möglichkeit, bestehende Daten zu "retten" - siehe :ref:`Tipps <rst_cookbook_tips_change_table_column_name>`.
 
 Über den Schemamanager können Spaltentypen dauerhaft angepasst werden - die Änderungen werden von der DB-Migration
-mit durchgeführt - siehe ":ref:`<rst_cookbook_panels_manipulate-schema>`".
+mit durchgeführt - siehe :ref:`<rst_cookbook_panels_manipulate-schema>`.
 
