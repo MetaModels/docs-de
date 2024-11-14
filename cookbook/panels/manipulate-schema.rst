@@ -38,6 +38,7 @@ Im folgenden Beispiel wird das Feld des Attributes Langtext von `TEXT` (65535) a
 .. code-block:: yml
    :linenos:
 
+   # src/AppBundle/Resources/config/services.yml
    services:
      # SchemaManagerListener:
      AppBundle\EventListener\SchemaManagerListener:
