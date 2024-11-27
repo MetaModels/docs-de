@@ -100,6 +100,7 @@ Attribute
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+    * Fix der Templates für die Text-Ausgabe: alle HTML-Tags werden entfernt
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Tabelle-Multi (MCW)
     * Support für readonly und CSS-Klassen für tl_class des Widgets
@@ -117,6 +118,7 @@ Attribute
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Übersetzter Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
+    * Fix der Templates für die Text-Ausgabe: alle HTML-Tags werden entfernt
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Übersetzte Text-Tabelle
     * Support für readonly
@@ -217,6 +219,7 @@ im Blick behalten werden:
 * Check der HTML5-Templates - die wurden überarbeitet (siehe Attribute, Filter und FEE)
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * Check der HTML5-Templates mit Übersetzungen - z. B. ContentArticle
+* Fix der Templates für die Text-Ausgabe bei beiden Langtext-Attributen: alle HTML-Tags werden entfernt
 * bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 * Filter mit "auto_item" Routenpriorität prüfen - siehe :ref:`rst_cookbook_tips_set-route-priority`
 * bei FEE Check Upload-Modus :ref:`Dateiupload <extended_frontend_editing_upload>`
