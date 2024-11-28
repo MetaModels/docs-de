@@ -110,7 +110,7 @@ Attribute werden spezielle Tabellen der Erweiterung verwendet und nicht die von 
 MetaModel-Erstellung erzeugten Tabelle.
 
 Zu beachten ist, dass bei Relationen per "Einfachauswahl" oder "Mehrfachauswahl" zwischen
-zwei Metamodel mit Übersetzungen üblicher Weise *nicht* ddie Optionen "Übersetzter Einzelauswahl [select]"
+zwei Metamodel mit Übersetzungen üblicher Weise *nicht* die Optionen "Übersetzter Einzelauswahl [select]"
 und "Übersetzte Mehrfachauswahl [tags]" auszuwählen ist. Das Erkennen bzw. das Umschaltung der Sprache
 macht MetaModels mit den Attributen "Einfachauswahl" und "Mehrfachauswahl" automatisch.
 
