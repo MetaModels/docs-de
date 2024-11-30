@@ -24,9 +24,8 @@ mit Dateieinbindungen. Wie in File-Usage werden keine textuellen Pfadangaben wie
 z. B. in Texten gesucht.
 
 Für MetaModels gibt es eigene Ausgaben mit dem Namen des Models, des Attributes und bei mehrsprachigen Attributen
-auch die Sprache. Über den Stift kommt man direkt zu dem entsprechenden Datensatz. Aktuell gibt es noch keine
-automatische Umschaltung der Sprache in der Eingabemaske anhand eines GET-Parameters - die Sprache muss entsprechend
-manuell umgestellt werden - siehe Screenshot.
+auch die Sprache. Über den Stift kommt man direkt zu dem entsprechenden Datensatz - siehe Screenshot. Bei mehrsprachigen
+MetaModels wird die Sprache der Eingabemaske über einen GET-Parameter entsprechend gesetzt.
 
 |img_mm_file-usage|
 
