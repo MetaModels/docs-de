@@ -51,7 +51,8 @@ Typen von Filterregeln
 * **UND-Bedingung (AND)** (core): |br|
   Container für weitere Filterregeln mit UND-Verknüpfung
 * **ODER-Bedingung (OR)** (core): |br|
-  Container für weitere Filterregeln mit ODER-Verknüpfung
+  Container für weitere Filterregeln mit ODER-Verknüpfung; Option, dass nur erste Regel ausgeführt wird
+  (Checkbox "Nach erstem Treffer beenden")
 * **Checkbox-Status** (filter_checkbox): |br|
   prüft ein Attributwert auf 1; (ehem. "Veröffentlichungsstatus")
 * **Übersetzter Checkbox-Status** (filter_checkbox): |br|
