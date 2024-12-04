@@ -86,6 +86,7 @@ Typen von Filterregeln
   erzeugt einen Volltext-Index von ausgewählten Attributen in einer eigenen SQLite-DB - basiert auf
   `Loupe <https://github.com/loupe-php/loupe>`_
 
+
 Einstellungsparameter
 --------------------
 
