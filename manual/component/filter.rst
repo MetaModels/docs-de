@@ -73,9 +73,18 @@ Typen von Filterregeln
 * **Textfilter** (filter_text): |br|
   filtert nach einer Texteingabe
 * **Umkreissuche** (filter_perimetersearch): |br|
-  filtert nach einer Adresse/Geokoordinaten und einem Umkreis bezogen auf Lat/Long-Werte in den Datensätzen
+  filtert nach einer Adresse/Geokoordinaten und einem Umkreis bezogen auf Lat/Long-Werte in den Datensätzen |br|
+  siehe :ref:`extended_perimetersearch`
 * **Register** (filter_register): |br|
   filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben
+* **Levenshtein-gestützte Suche** (attribute_levenshtein): |br|
+  erzeugt einen Volltext-Index von ausgewählten Attributen inkl. Ähnlichkeitssuche und Autovervollständigung
+* **Filter-Parent** (filter_parent): |br|
+  ermöglicht Items einer vorhandenen Kind-Tabellen nach Eigenschaften der Elterntabelle zu filtern |br|
+  siehe :ref:`rst_extended_filter_parent`
+* **Loupe** (filter_loupe) - noch in Arbeit... -: |br|
+  erzeugt einen Volltext-Index von ausgewählten Attributen in einer eigenen SQLite-DB - basiert auf
+  `Loupe <https://github.com/loupe-php/loupe>`_
 
 Einstellungsparameter
 --------------------
