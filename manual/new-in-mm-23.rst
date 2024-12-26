@@ -30,6 +30,9 @@ Allgemein und Core
   dass die Sortierung auf "Manuell" einzustellen ist (`#1324 <https://github.com/MetaModels/core/issues/1324>`_)
 * die Checkbox "Variante" bei den Attributen ist disabled, wenn das Model nicht-variant ist
   (`#884 <https://github.com/MetaModels/core/issues/884>`_)
+* bei Varianten-Items sind die Buttons zum Verschieben disabled (`#871 <https://github.com/MetaModels/core/issues/871#issuecomment-2558575073>`_)
+* bei Varianten-Items werden die nicht-variant Attribute in der Maske nun nicht mehr ausgeblendet, sondern als
+  readonly dargestellt
 * die Klasse "getSearchablePages" (Indexierung der Detailseiten) wurde komplett neu geschrieben und läuft nun
   effektiver/schneller
 * es gibt ein neues Event zum Manipulieren der Überschrift der Eingabemaske
@@ -47,8 +50,6 @@ Allgemein und Core
   abgeschaltet werden (``legacy_routing: false``)
 * das Sessionhandling wurde von der Contao- zur Symfony-Session umgebaut
 * Behandlung der Routenpriorität - siehe :ref:`rst_cookbook_tips_set-route-priority`
-* bei Varianten-Items werden die nicht-variant Attribute in der Maske nun nicht mehr ausgeblendet, sondern als
-  readonly dargestellt
 * Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - siehe Attribute
 * Models, die als Kindtabelle verknüpft sind, können nun Varianten beinhalten (`#1054 <https://github.com/MetaModels/core/issues/1054>`_)
 * Liste im BE kann nach nach Kalenderwoche gruppiert werden - die Formatierung über einen Sprachschlüssen individuell je
