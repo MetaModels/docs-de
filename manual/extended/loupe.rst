@@ -24,5 +24,5 @@ Buchstaben zwei Schreibfehler.
 Die Indexierung der Inhalte der Attribute erfolgt beim Speichern der Datensätze automatisch. Eine komplette Reindexierung
 erfolgt über ein entsprechendes Icon in der Liste der Filterregeln.
 
-Im Frontend gibt es eine Texteingabe für die Suche. Exakte Wortgruppen können beim Suchstring mit `"` abgegrenzt werden.
-Mit `-` ist der Ausschluss von Wörtern oder Wortgruppen möglich.
+Im Frontend gibt es eine Texteingabe für die Suche. Exakte Wortgruppen können beim Suchstring mit ``"`` abgegrenzt werden.
+Mit ``-`` ist der Ausschluss von Wörtern oder Wortgruppen möglich.
