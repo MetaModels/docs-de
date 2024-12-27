@@ -3,7 +3,7 @@
 Loupe-gestützte Volltextsuche
 #############################
 
-.. note:: Steht ab MetaModels 2.4 zur Verfügung.
+.. note:: Steht ab MetaModels 2.4 zur Verfügung - benötigt mind. PHP 8.3.
 
 `Loupe <https://github.com/loupe-php/loupe>`_ ist eine Volltextsuchmaschine auf der Basis von SQLite. Die
 Implementierung orientiert sich u. a. an der Suchmaschine `Meilisearch <https://www.meilisearch.com/>`_ aber mit dem
