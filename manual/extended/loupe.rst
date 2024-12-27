@@ -26,3 +26,10 @@ erfolgt über ein entsprechendes Icon in der Liste der Filterregeln.
 
 Im Frontend gibt es eine Texteingabe für die Suche. Exakte Wortgruppen können beim Suchstring mit ``"`` abgegrenzt werden.
 Mit ``-`` ist der Ausschluss von Wörtern oder Wortgruppen möglich.
+
+Aktuell werden folgende Attribute indexiert:
+
+- Text
+- Langtext
+- Übersetzter Text
+- Übersetzter Langtext
