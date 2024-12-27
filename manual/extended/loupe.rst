@@ -11,7 +11,7 @@ Vorteil, relativ geringe technische Resourcen zu verlangen - PHP und SQLite reic
 wie Stemming, Ähnlichkeitssuche nach Damerau-Levenshtein, Ranking u.v.a.m implementiert -
 `siehe Loupe <https://github.com/loupe-php/loupe>`_.
 
-Für die Verwendung der Suchmaschine `Loupe`, wurde für MetaModels eine eigene Filterregel gebaut. In den Einstellungen
+Für die Verwendung der Suchmaschine `Loupe` wurde für MetaModels eine eigene Filterregel gebaut. In den Einstellungen
 können die zu indexierenden Attribute ausgewählt und Schwellenwerte für Tippfehler angegeben werden.
 
 Die Reihenfolge der zu indexierenden Attribute geht in das Ranking mit ein, d. h. die Attribute sollten nach ihrer
