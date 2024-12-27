@@ -14,8 +14,8 @@ wie Stemming, Ähnlichkeitssuche nach Damerau-Levenshtein, Ranking u.v.a.m imple
 Für die Verwendung der Suchmaschine `Loupe` wurde für MetaModels eine eigene Filterregel gebaut. In den Einstellungen
 können die zu indexierenden Attribute ausgewählt und Schwellenwerte für Tippfehler angegeben werden.
 
-Die Reihenfolge der zu indexierenden Attribute geht in das Ranking mit ein, d. h. die Attribute sollten nach ihrer
-Wichtigkeit für die Suche sortiert werden.
+Die Reihenfolge der zu indexierenden Attribute geht in das `Ranking <https://github.com/loupe-php/loupe/blob/develop/docs/ranking.md#4-attribute-ranking>`_
+mit ein, d. h. die Attribute sollten nach ihrer Wichtigkeit für die Suche sortiert werden.
 
 Mit den Schwellenwerten für Tippfehler kann angegeben werden, bei welcher Wortlänge wie viele "Schreibfehler" enthalten
 sein dürfen - typische Werte sind z. B. bei einer Wortlänge von fünf Buchstaben ein Schreibfehler und ab neun
