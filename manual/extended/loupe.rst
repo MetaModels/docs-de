@@ -36,3 +36,5 @@ Aktuell werden folgende Attribute indexiert:
 - Langtext
 - Übersetzter Text
 - Übersetzter Langtext
+
+Weitere Attribute wie "Inhalt eines Artikels" oder "Tabelle-Multi (MCW)" können auf Nachfrage implementiert werden.
