@@ -57,7 +57,8 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 Übersicht der Versionen
 -----------------------
 
-* C 5.x/6.x + MM 3.0 + PHP 8.x - aktuell in Planung...
+* C 6.x + MM 3.0 + PHP 8.x - aktuell in Planung...
+* C 5.7 + MM 2.5 + PHP 8.3 - aktuell in Arbeit und Test mit Contao 5.x-dev
 * :ref:`C 5.3 + MM 2.4 + PHP 8.2 <install_mm240>` - Zugang per "EAP"
 * :ref:`C 4.13 + MM 2.3 + PHP 8.1 <install_mm230>` - Zugang per "EAP"
 * :ref:`C 4.9 + MM 2.2 + PHP 7.4 <install_mm-old>`
@@ -69,7 +70,7 @@ Installation von MM 2.4 für Contao 5.3 und PHP 8
 -------------------------------------------------
 
 MetaModels 2.4 bringt eine volle Kompatibilität zu Contao 5.3 und PHP 8.2. MM 2.4 ist eine Anpassung der
-Version 2.3 an die neue Contao- und PHP-Versionund bringt natürlich
+Version 2.3 an die neue Contao- und PHP-Version und bringt natürlich
 :ref:`alle Änderungen und Features aus MM 2.3 mit <new_in_mm230>`.
 
 Die Installationsvoraussetzungen für MetaModels 2.4 sind:
