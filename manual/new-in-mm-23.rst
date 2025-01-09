@@ -92,6 +92,9 @@ Attribute
 * Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
+    * Unterstützung der Dateisuche im Backend - es kann nach einem Dateinamen oder einer UUID gesucht werden; es werden
+      die Items angezeigt, bei denen die Datei eingebunden ist - entweder als direkte Dateiauswahl oder wenn der
+      übergeordnete Ordner ausgewählt wurde
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Inhalt eines Artikels
     * Anpassung des Templates
@@ -110,6 +113,9 @@ Attribute
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
+    * Unterstützung der Dateisuche im Backend - es kann nach einem Dateinamen oder einer UUID gesucht werden; es werden
+      die Items angezeigt, bei denen die Datei eingebunden ist - entweder als direkte Dateiauswahl oder wenn der
+      übergeordnete Ordner ausgewählt wurde
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
 * Übersetzter Inhalt eines Artikels
     * Anpassung des Templates
