@@ -304,7 +304,7 @@ Bei dem Feld Parameter kann auch ein Inserttag eingetragen werden - damit sind w
 Benachrichtigungen über das Notification Center
 -----------------------------------------------
 
-.. note:: Das Feature steht ab MM 2.2 zur Verfügung.
+.. note:: Das Feature steht ab MM 2.2 zur Verfügung - ab MM 2.3 wird das NC 2.x unterstützt.
 
 Ist die Erweiterung `Notification Center <https://github.com/terminal42/contao-notification_center>`_ (NC)
 installiert, kann auf die Veränderung eines Datensatzes getriggert (reagiert) und eine "Benachrichtigung"
@@ -333,6 +333,7 @@ z.B. ##model_name## der Inhalt des Attributes "name".
 
 Ist für einen Triggertyp oder für mehrere eine Benachrichtigung erstellt, kann diese in den Einstellungen
 der Eingabemaske ausgewählt werden.
+
 
 .. _extended_frontend_editing_upload:
 Upload von Dateien - Optional Dropzone

@@ -194,6 +194,9 @@ Frontend-Editing (FEE)
   siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
 * Option "Einzelner Datei-Upload" wird wieder unterstützt
 * Anpassung der BE-Listenausgabe für "Inhalt eines Artikels" sowie "Übersetzter Inhalt eines Artikels"
+* Unterstützung des Notification-Center Version 2.x für Benachrichtigungen beim Anlegen oder Ändern von
+  Datensätzen - beim Upgrade zu NC 2.x werden ggf. vorhandene Keys aus 1.7 in der Tabelle "tl_nc_notification"
+  migriert; siehe Meldung bei der Ausführung der DB Migration
 
 
 Known-Issues
