@@ -41,7 +41,7 @@ Aktuell werden folgende Attribute indexiert:
 
 .. _indexing_loupe:
 Ablauf der Indexierung und Einstellungen
-––––––––––––––––––––––––––––––––––––––––
+----------------------------------------
 
 Wenn ein Datensatz mit geänderten Inhalten der zu indexierenden Attribute gespeichert oder in der Filterregel die
 Reindexierung gestartet wird, erfolgt eine Meldung an den `Symfony-Messenger <https://symfony.com/doc/6.4/messenger.html>`_.
