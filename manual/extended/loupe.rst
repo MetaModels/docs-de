@@ -47,8 +47,9 @@ Wenn ein Datensatz mit geänderten Inhalten der zu indexierenden Attribute gespe
 Reindexierung gestartet wird, erfolgt eine Meldung an den `Symfony-Messenger <https://symfony.com/doc/6.4/messenger.html>`_.
 Gespeichert werden die "Messenger-Aufträge" in der Tabelle ``messenger-messages`` - ggf. wird diese neu erzeugt.
 
-Für die Verarbeitung der Messenger-Jobs sind verschiedene Einstellungen in der ``config.yml`` abzulegen - folgend ein
-Beispiel:
+Für die Verarbeitung der Messenger-Jobs muss eine
+`"Transportkonfiguration" <https://docs.contao.org/dev/framework/async-messaging/#the-transport-configuration>`_
+in der ``config.yml`` angelegt sein - folgend ein Beispiel für Loupe:
 
 .. code-block:: yaml
    :linenos:
