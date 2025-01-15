@@ -45,7 +45,7 @@ Ablauf der Indexierung und Einstellungen
 
 Wenn ein Datensatz mit geänderten Inhalten der zu indexierenden Attribute gespeichert oder in der Filterregel die
 Reindexierung gestartet wird, erfolgt eine Meldung an den `Symfony-Messenger <https://symfony.com/doc/6.4/messenger.html>`_.
-Gespeichert werden die "Messanger-Aufträge" in der Tabelle ``messenger-messages`` - ggf. wird diese neu erzeugt.
+Gespeichert werden die "Messenger-Aufträge" in der Tabelle ``messenger-messages`` - ggf. wird diese neu erzeugt.
 
 Für die Verarbeitung der Messenger-Jobs sind verschiedene Einstellungen in der ``config.yml`` abzulegen - folgend ein
 Beispiel:
