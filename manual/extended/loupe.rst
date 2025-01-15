@@ -49,43 +49,22 @@ eine Meldung an den `Symfony-Messenger <https://symfony.com/doc/6.4/messenger.ht
 übergeben. Mehr zu dem Thema im `Contao-Handbuch <https://docs.contao.org/dev/framework/async-messaging>`_ oder
 `Vortrag zur CK23 <https://www.youtube.com/watch?v=bm9rTe2w1-M>`_.
 
-Gespeichert werden die "Messenger-Aufträge" in der Tabelle ``messenger-messages`` - ggf. wird diese neu erzeugt.
+Gespeichert werden die "Messenger-Aufträge" in der Tabelle ``tl_message_queue`` - ggf. wird diese neu erzeugt.
 
 Für die Verarbeitung der Messenger-Jobs muss eine
 `"Transportkonfiguration" <https://docs.contao.org/dev/framework/async-messaging/#the-transport-configuration>`_
-in der ``config.yml`` angelegt sein - folgend ein Beispiel für Loupe:
+in der ``config.yml`` angelegt sein - folgend für Loupe:
 
 .. code-block:: yaml
    :linenos:
 
    # config/config.yml
    framework:
-     messenger:
-       failure_transport: failed
-       transports:
-         failed:
-           dsn: 'doctrine://default?queue_name=failed'
-         async:
-           dsn: 'doctrine://default'
-           retry_strategy:
-             max_retries: 3
-             delay: 30000
-             multiplier: 2
-             max_delay: 0
-             # jitter: 0.1
-       routing:
-         '*': async
+     routing:
+       '*': contao_prio_normal
 
-Der Messenger wiederum wartet darauf, für die weitere Verarbeitung angestoßen zu werden. Das erfolgt mit dem Befehl
-``messenger:consume``, dem weitere Parameter mit auf den Weg gegeben werden können. Es ist zu empfehlen, die
-Verarbeitung asynchron zu starten, damit gleichzeitig mehrere Jobs abgearbeitet werden können. Zudem sollte ein
-Zeitlimit in Sekunden mit ``-t <n>`` gesetzt werden. Zusammen dann
-
-``php bin/console messenger:consume async -t 50``
-
-Dieser Befehl kann kontinuierlich per Cronjob ausgeführt werden. Zwischen der Startzeit des Cronjobs z. B. jede Minute
-und dem Zeitlimit sollte es ein Puffer geben. Die genauen Einstellungen hängen von den zu verarbeitenden Daten und von
-der Servergeschwindigkeit ab.
+Der Messenger wiederum wartet darauf, für die weitere Verarbeitung angestoßen zu werden. Das erfolgt mit dem Cron-Job
+von Contao - dieser sollte entsprechend `eingerichtet <https://docs.contao.org/manual/de/performance/cronjobs/>`_ sein.
 
 Während der Indexierung wird für jede Filterregel ein eigener Index als SQLite-DB angelegt - bei mehrsprachigen Models
 bzw. mehrsprachigen Attributen gibt es wiederum für jede Sprache einen eigenen Index. Die Daten liegen unter
