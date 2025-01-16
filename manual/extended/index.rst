@@ -14,13 +14,14 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     :maxdepth: 1
     
     frontend_editing
-    notelist
-    isotope
-    leaflet
     perimetersearch
     attribute_color
     attribute_mcw
+    loupe
     filter_parent
+    notelist
+    isotope
+    leaflet
     file-usage
     metadata_extractor
     xliff_ex-import
