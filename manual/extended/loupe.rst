@@ -51,7 +51,7 @@ eine Meldung an den `Symfony-Messenger <https://symfony.com/doc/6.4/messenger.ht
 
 Gespeichert werden die "Messenger-Aufträge" in der Tabelle ``tl_message_queue`` - ggf. wird diese neu erzeugt.
 
-Für die Verarbeitung der Messenger-Jobs muss eine
+Aktuell muss für die Verarbeitung der Messenger-Jobs eine
 `"Transportkonfiguration" <https://docs.contao.org/dev/framework/async-messaging/#the-transport-configuration>`_
 in der ``config.yml`` angelegt sein - folgend für Loupe:
 
@@ -62,6 +62,9 @@ in der ``config.yml`` angelegt sein - folgend für Loupe:
    framework:
      routing:
        '*': contao_prio_normal
+
+In einer der folgenden Versionen nehmen wir eine vollständige Anbindung an die Contao-Implementierung vor, so dass
+das nicht mehr notwendig sein wird.
 
 Der Messenger wiederum wartet darauf, für die weitere Verarbeitung angestoßen zu werden. Das erfolgt mit dem Cron-Job
 von Contao - dieser sollte entsprechend `eingerichtet <https://docs.contao.org/manual/de/performance/cronjobs/>`_ sein.
