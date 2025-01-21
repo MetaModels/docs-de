@@ -39,6 +39,28 @@ Aktuell werden folgende Attribute indexiert:
 - Übersetzter Langtext
 
 
+Sortierung und Ausgabe
+----------------------
+
+Damit die Datensätze (Items) nach der Relevanz (Score) der Suche sortiert werden, muss die Filterregel im Filter an erster
+Stelle stehen. Die erste Filterregel bestimmt immer die Grundlegende Reihenfolge der auszugebenden Datensätze. Zudem
+darf in der Listeneinstellung keine individuelle Sortierung eingestellt sein - diese würde die Reihenfolge überschreiben.
+
+Ist die Filterung mit Loupe in dem Filter vorhanden, ist in dem Ausgabearray der Datensätze ein Key ``loupe`` vorhanden.
+Bei einer Filterung mit Loupe ist in dem Knoten die berechnete Relevanz des Datensatzes als ``score`` angegeben.
+
+Bei den Einstellungen der Filterregel kann die Option "Hervorhebung der Suchbegriffe" aktiviert werden. Ist dies der
+Fall, wird zusätzlich zum Sore noch im Knoten ``formattedHits`` die Attribute ausgegeben, bei denen durch die Suche
+Fundstellen ermittelt werden konnten. Die Fundstellen sind inklusive einer Markierung in dem Array vorhanden.
+
+Als Beispiel der folgende Screenshot - hier wurde nach "Moin" gesucht und es gab zwei Fundstellen. Obwohl beide
+Datensätze das Wort "Moin" in der selben Schreibweise beinhalten, ist das Scoring beim zweiten Datensatz niedriger.
+Das ergibt sich aus der eingestellten Reihenfolge der Attribute in der Filterregel erst Vorname (firstname) und
+dann Name (name).
+
+|img_item_output|
+
+
 .. _indexing_loupe:
 Ablauf der Indexierung und Einstellungen
 ----------------------------------------
@@ -75,3 +97,5 @@ bzw. mehrsprachigen Attributen gibt es wiederum für jede Sprache einen eigenen 
 
 Bei einer kompletten Reindexierung wird die Index-Datenbank vorher geleert.
 
+
+.. |img_item_output| image:: /_img/screenshots/extended/loupe/item_output.png
