@@ -26,7 +26,7 @@ erfolgt über ein entsprechendes Icon in der Liste der Filterregeln. Der genaue 
 sind :ref:`folgend erklärt <indexing_loupe>`.
 
 Die Filterregel sollte bei dem Filter an erste Stelle gesetzt werden, weil damit die Reihenfolge der Ergebnisse (Items)
-bestimmt wird - die Reihenfolge spiegelt das Ranking der Fundstellen wieder.
+bestimmt wird - die Reihenfolge spiegelt das Ranking der Fundstellen wieder (:ref:`s. u. <sorting_loupe>`).
 
 Im Frontend gibt es eine Texteingabe für die Suche. Exakte Wortgruppen können beim Suchstring mit ``"`` abgegrenzt werden.
 Mit ``-`` ist der Ausschluss von Wörtern oder Wortgruppen möglich.
@@ -39,6 +39,7 @@ Aktuell werden folgende Attribute indexiert:
 - Übersetzter Langtext
 
 
+.. _sorting_loupe:
 Sortierung und Ausgabe
 ----------------------
 
