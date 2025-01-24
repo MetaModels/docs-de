@@ -52,6 +52,13 @@ der Listeneinstellung keine individuelle Sortierung eingestellt sein - diese wü
 Ist die Filterung mit Loupe in dem Filter vorhanden, ist in dem Ausgabearray der Datensätze ein Key ``loupe`` vorhanden.
 Bei einer Filterung mit Loupe ist in dem Knoten die berechnete Relevanz des Datensatzes als ``score`` angegeben.
 
+.. code-block:: html
+   :linenos:
+
+   <?php if ($arrItem['loupe']['score'] ?? false): ?>
+       <p>Score: <?= \Contao\System::getFormattedNumber($arrItem['loupe']['score'], 4) ?></p>
+   <?php endif; ?>
+
 Bei den Einstellungen der Filterregel kann die Option "Hervorhebung der Suchbegriffe" aktiviert werden. Ist dies der
 Fall, wird zusätzlich zum Sore noch im Knoten ``formattedHits`` die Attribute ausgegeben, bei denen durch die Suche
 Fundstellen ermittelt werden konnten. Die Fundstellen sind inklusive einer Markierung in dem Array vorhanden.
