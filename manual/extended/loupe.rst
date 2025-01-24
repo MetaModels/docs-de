@@ -44,8 +44,10 @@ Sortierung und Ausgabe
 ----------------------
 
 Damit die Datensätze (Items) nach der Relevanz (Score) der Suche sortiert werden, muss die Filterregel im Filter an erster
-Stelle stehen. Die erste Filterregel bestimmt immer die grundlegende Reihenfolge der auszugebenden Datensätze. Zudem
-darf in der Listeneinstellung keine individuelle Sortierung eingestellt sein - diese würde die Reihenfolge überschreiben.
+Stelle stehen. Die erste Filterregel, die eine Liste mit Ids der Items liefert, bestimmt immer die grundlegende
+Reihenfolge der auszugebenden Datensätze. Das bedeutet, dass man nach der Filterregel Loupe eine Filterregel "Eigenes
+SQL" anlegen kann die eine Sortierung liefert, wenn Loupe gar nicht angesprochen wird - z. B. nach Name. Zudem darf in
+der Listeneinstellung keine individuelle Sortierung eingestellt sein - diese würde die Reihenfolge immer überschreiben.
 
 Ist die Filterung mit Loupe in dem Filter vorhanden, ist in dem Ausgabearray der Datensätze ein Key ``loupe`` vorhanden.
 Bei einer Filterung mit Loupe ist in dem Knoten die berechnete Relevanz des Datensatzes als ``score`` angegeben.
