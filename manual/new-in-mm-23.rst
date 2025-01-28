@@ -89,6 +89,8 @@ Attribute
   umschließendes HTML-Tag mit Ausgabe der optionalen CSS-Klasse
 * bei allen Attributen kann das Template für das Backend per Select ausgewählt werden - für das Frontend siehe FEE
 
+* Alias
+    * Prüfung der Kombination Variant und Unique - `siehe News Januar 2025 <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-januar-i-2025>`_
 * Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
@@ -102,6 +104,8 @@ Attribute
       Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
       angepasst werden
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
+* Kombinierte Werte
+    * Prüfung der Kombination Variant und Unique - `siehe News Januar 2025 <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-januar-i-2025>`_
 * Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
     * Fix der Templates für die Text-Ausgabe: alle HTML-Tags werden entfernt
@@ -110,6 +114,8 @@ Attribute
     * Support für readonly und CSS-Klassen für tl_class des Widgets
 * Text-Tabelle
     * Support für readonly
+* Übersetzter Alias
+    * Prüfung der Kombination Variant und Unique - `siehe News Januar 2025 <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-januar-i-2025>`_
 * Übersetzte Datei
     * Support der vordefinierten Dimensionen für die Bildgrößen der `config.yaml` -
       siehe `contao.image.sizes:... <https://docs.contao.org/dev/framework/image-processing/image-sizes/#size-configuration>`_
@@ -123,6 +129,8 @@ Attribute
       Rendering; das ist z. B. für die Indexierung von Volltextsuchen notwendig - das Template der Ausgabe kann individuell
       angepasst werden
     * :ref:`File-Usage Integration <rst_extended_file-usage>`
+* Übersetzte Kombinierte Werte
+    * Prüfung der Kombination Variant und Unique - `siehe News Januar 2025 <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-januar-i-2025>`_
 * Übersetzter Langtext
     * Langtext unterstützt als TinyMCE und ACE das readonly - `siehe <https://github.com/contao/contao/pull/5985>`_
     * Fix der Templates für die Text-Ausgabe: alle HTML-Tags werden entfernt
@@ -155,6 +163,7 @@ Filter
      GET-Wert übergeben werden
    * Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
      und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
+   * es gib die Möglichkeit, die Ausführung auf bestimmte Umgebungen wie Frontend einzugrenzen
 * Einfache Abfrage
     * ist die Option "Statischer Parameter" gesetzt, kann in CE-/Modul-Liste für die Filterregel ein Wert ausgewählt
       werden - neu ist die Option "ohne Datenwert [null]", wenn keine Auswahl - auch kein Leerstring - gesetzt werden
@@ -239,6 +248,9 @@ im Blick behalten werden:
 * Prüfung :ref:`der Labels der Eingabemasken bei eigenen Anpassungen - "LABEL NOT SET" <component_translations_lns>`
 * Prüfung von eigenen SQL-Queries mit ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)``
   und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
+* bei aktivierter Option "Variant" des Models wird bei Attributen per Migration eine Prüfung auf nicht unterstützte
+  Kombination Variant und Unique vorgenommen -
+  `siehe News Januar 2025 <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-januar-i-2025>`_
 
 
 Re-Finanzierung
