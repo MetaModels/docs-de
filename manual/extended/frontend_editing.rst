@@ -86,6 +86,13 @@ wurde entsprechend der :ref:`Anleitung <component_contentelements>` konfiguriert
 
 |img_metamodellistedit|
 
+Die Listenseite mit den Bearbeitungslinks sollte von der Contao-Indexierung ausgeschlossen werden, damit der Crawler
+nicht den Bearbeitungslinks folgt - insbesondere, wenn die Option "Löschung erlauben" für diese Eingabemaske aktiviert
+ist.
+
+.. note:: In MM 2.3 haben die Bearbeitungslinks die HTML-Attribute `data-escargot-ignore rel="nofollow"`, damit der
+   Contao-Crawler den Links nicht folgt.
+
 Auf der Detail-Seite setzt man ein neues Inhalts-Element "Metamodels Frontend Editing" ein.
 
 |img_metamodelfee|
