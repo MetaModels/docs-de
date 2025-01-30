@@ -15,7 +15,8 @@ Für die Verwendung der Suchmaschine `Loupe` wurde für MetaModels eine eigene F
 können die zu indexierenden Attribute ausgewählt und Schwellenwerte für Tippfehler angegeben werden.
 
 Die Reihenfolge der zu indexierenden Attribute geht in das `Ranking <https://github.com/loupe-php/loupe/blob/develop/docs/ranking.md#4-attribute-ranking>`_
-mit ein, d. h. die Attribute sollten nach ihrer Wichtigkeit für die Suche sortiert werden.
+mit ein, d. h. die Attribute sollten nach ihrer Wichtigkeit für die Suche sortiert werden. Diese Option kann mit der
+Checkbox `Ranking nach Reihenfolge der Attribute deaktivieren` abgeschaltet werden.
 
 Mit den Schwellenwerten für Tippfehler kann angegeben werden, bei welcher Wortlänge wie viele "Schreibfehler" enthalten
 sein dürfen - typische Werte sind z. B. bei einer Wortlänge von fünf Buchstaben ein Schreibfehler und ab neun
