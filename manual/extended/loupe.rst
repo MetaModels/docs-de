@@ -8,7 +8,7 @@ Loupe-gestützte Volltextsuche
 `Loupe <https://github.com/loupe-php/loupe>`_ ist eine Volltextsuchmaschine auf der Basis von SQLite. Die
 Implementierung orientiert sich u. a. an der Suchmaschine `Meilisearch <https://www.meilisearch.com/>`_ aber mit dem
 Vorteil, relativ geringe technische Resourcen zu verlangen - PHP und SQLite reichen. `Loupe` hat verschiedene Features
-wie Stemming, Ähnlichkeitssuche nach Damerau-Levenshtein, Ranking u.v.a.m implementiert -
+wie Stemming, Ähnlichkeitssuche nach Damerau-Levenshtein, Ranking, Stop-words u.v.a.m implementiert -
 `siehe Loupe <https://github.com/loupe-php/loupe>`_.
 
 Für die Verwendung der Suchmaschine `Loupe` wurde für MetaModels eine eigene Filterregel gebaut. In den Einstellungen
