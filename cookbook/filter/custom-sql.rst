@@ -551,6 +551,9 @@ Man kann eine Abfrage auf den aktuellen Request-String setzen und dort nach dem 
    kommt nun ein ``domain.de/contao/metamodel/mm_employees?act=edit``, d. h. vor der Änderung wurde bei der Abfrage
    ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)`` der Wert "contao" geliefert.
 
+.. note:: In MM 2.3 wurde der Filterregel eine Auswahl hinzugefügt, mit der die Ausführungsumgebung wie z. B. "Nur im
+   Backende" bestimmt werden kann. Damit können die SQL-Queries vereinfacht werden.
+
 Kommentare im SQL-Query
 ***********************
 
