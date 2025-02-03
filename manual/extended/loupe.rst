@@ -89,7 +89,7 @@ ist, kann ein eigener Bereich definiert werden - für alle einsprachigen Model k
 
 Folgend ein Beispiel:
 
-.. code-block:: yml
+.. code-block:: yaml
    :linenos:
 
    # config/config.yml
