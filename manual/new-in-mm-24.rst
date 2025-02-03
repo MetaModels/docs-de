@@ -37,6 +37,8 @@ Attribute
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
 * Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+* Land
+    * Änderung der Länderkürzel in Großbuchstaben
 * Langtext
     * Migration für `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Text
@@ -95,6 +97,8 @@ im Blick behalten werden:
 * für Dark-Mode ggf. weitere Varianten der eigenen Icons mit Suffix "--dark" anlegen - z. B. zu
   `flag_enabled.svg` und `flag_disabled.svg` ein `flag_enabled--dark.svg` und `flag_disabled--dark.svg` - siehe
   `EAP-News Oktober II 2024 <https://now.metamodel.me/de/mm-eap-newsletter-2-4/details/eap-info-mm-2-4-oktober-ii-2024>`_
+* bei Attribut Land wurden die Schreibweisen der Länderkürzel auf Großbuchstaben wie in Contao geändert - vorhandene
+  Daten werden mit einer Migration angepasst; ggf. eigene Prüfungen oder Speicherungen anpassen
 
 
 Re-Finanzierung
