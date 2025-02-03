@@ -8,7 +8,7 @@ Loupe-gestützte Volltextsuche
 `Loupe <https://github.com/loupe-php/loupe>`_ ist eine Volltextsuchmaschine auf der Basis von SQLite. Die
 Implementierung orientiert sich u. a. an der Suchmaschine `Meilisearch <https://www.meilisearch.com/>`_ aber mit dem
 Vorteil, relativ geringe technische Resourcen zu verlangen - PHP und SQLite reichen. `Loupe` hat verschiedene Features
-wie Stemming, Ähnlichkeitssuche nach Damerau-Levenshtein, Ranking, Stop-words u.v.a.m implementiert -
+wie Stemming, Ähnlichkeitssuche nach Damerau-Levenshtein, Ranking, Stopp-Wörter u.v.a.m implementiert -
 `siehe Loupe <https://github.com/loupe-php/loupe>`_.
 
 Für die Verwendung der Suchmaschine `Loupe` wurde für MetaModels eine eigene Filterregel gebaut. In den Einstellungen
@@ -70,6 +70,48 @@ Das ergibt sich aus der eingestellten Reihenfolge der Attribute in der Filterreg
 dann Name (name).
 
 |img_item_output|
+
+
+.. _indexing_stop-words:
+Einstellung von Stopp-Wörtern
+-----------------------------
+
+Bei der Suche können einzelne Wörter definiert werden, die für die Suche und Ranking übergangen werden - mehr dazu
+bei `Loupe <https://github.com/loupe-php/loupe/blob/main/docs/searching.md#stop-words`_
+
+Die Behandlung der Stopp-Wörter bezieht auch die Behandlung von Wörtern mit ein, die z. B. per
+`Stemming <https://github.com/loupe-php/loupe/blob/main/docs/tokenizer.md#stemming`_ gebildet werden. Möchte man zum
+Beispiel vermeiden, dass bei der Sucheingabe von ``forms`` auch nach dem häufig vorkommenden ``for`` gesucht wird,
+sollte man ``for`` in der Liste der Stopp-Wörter eintragen.
+
+Die Liste der Stopp-Wörter legt man in der eigenen ``config.yml`` ab. Für jede Sprache die in dem MetaModel angelegt
+ist, kann ein eigener Bereich definiert werden - für alle einsprachigen Model kommt die Liste unter ``default``.
+
+Folgend ein Beispiel:
+
+.. code-block:: yml
+   :linenos:
+
+   # config/config.yml
+   meta_models_filter_loupe:
+     stop_words:
+       default:
+         - ein
+         - der
+         - die
+         - das
+         - für
+       en:
+         - a
+         - an
+         - by
+         - for
+       de:
+         - der
+         - die
+         - das
+         - ein
+         - für
 
 
 .. _indexing_loupe:
