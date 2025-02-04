@@ -84,6 +84,9 @@ Die Behandlung der Stopp-Wörter bezieht auch die Behandlung von Wörtern mit ei
 Beispiel vermeiden, dass bei der Sucheingabe von ``forms`` auch nach dem häufig vorkommenden ``for`` gesucht wird,
 sollte man ``for`` in der Liste der Stopp-Wörter eintragen.
 
+Die Stopp-Wörter werden nicht beim Indexieren ausgeschlossen, sondern erst bei der Suche. Wenn ein Stopp-Wort allein
+als solches eingegeben wird wie ``for``, wird aber dennoch danach gesucht.
+
 Die Liste der Stopp-Wörter legt man in der eigenen ``config.yml`` ab. Für jede Sprache die in dem MetaModel angelegt
 ist, kann ein eigener Bereich definiert werden - für alle einsprachigen Model kommt die Liste unter ``default``.
 
