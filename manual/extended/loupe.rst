@@ -77,7 +77,7 @@ Einstellung von Stopp-Wörtern
 -----------------------------
 
 Bei der Suche können einzelne Wörter definiert werden, die für die Suche und Ranking übergangen werden - mehr dazu
-bei `Loupe <https://github.com/loupe-php/loupe/blob/main/docs/searching.md#stop-words>`_
+bei `Loupe <https://github.com/loupe-php/loupe/blob/main/docs/searching.md#stop-words>`_.
 
 Die Behandlung der Stopp-Wörter bezieht auch die Behandlung von Wörtern mit ein, die z. B. per
 `Stemming <https://github.com/loupe-php/loupe/blob/main/docs/tokenizer.md#stemming>`_ gebildet werden. Möchte man zum
