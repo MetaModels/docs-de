@@ -85,7 +85,7 @@ Typen von Filterregeln
   siehe :ref:`rst_extended_filter_parent`
 * **Loupe** (filter_loupe) [ab MM 2.4]: |br|
   erzeugt einen Volltext-Index von ausgewählten Attributen in einer eigenen SQLite-DB - basiert auf
-  `Loupe <https://github.com/loupe-php/loupe>`_
+  `Loupe <https://github.com/loupe-php/loupe>`_; mehr dazu bei der :ref:`Filterregel Loupe <rst_extended_loupe>`
 
 
 Einstellungsparameter
