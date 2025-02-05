@@ -83,7 +83,7 @@ Typen von Filterregeln
 * **Filter-Parent** (filter_parent): |br|
   ermöglicht Items einer vorhandenen Kind-Tabellen nach Eigenschaften der Elterntabelle zu filtern |br|
   siehe :ref:`rst_extended_filter_parent`
-* **Loupe** (filter_loupe) - noch in Arbeit... -: |br|
+* **Loupe** (filter_loupe) [ab MM 2.4]: |br|
   erzeugt einen Volltext-Index von ausgewählten Attributen in einer eigenen SQLite-DB - basiert auf
   `Loupe <https://github.com/loupe-php/loupe>`_
 
