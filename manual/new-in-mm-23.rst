@@ -206,6 +206,8 @@ Frontend-Editing (FEE)
 * Unterstützung des Notification-Center Version 2.x für Benachrichtigungen beim Anlegen oder Ändern von
   Datensätzen - beim Upgrade zu NC 2.x werden ggf. vorhandene Keys aus 1.7 in der Tabelle "tl_nc_notification"
   migriert; siehe Meldung bei der Ausführung der DB Migration
+* Linkgenerierung für Bearbeitungslinks im FE wurde überarbeitet, so dass der Contao-Crawler den Links für die
+  Suche-Indexierung nicht mehr folgt (``data-escargot-ignore``) - mit dem Link "Löschen" kann das zu Datenverlust führen
 
 
 Known-Issues
@@ -239,10 +241,11 @@ im Blick behalten werden:
 * Check der HTML5-Templates der Filterwidgets, die Linklisten ausgeben - Crawling der URLs wurde unterbunden
 * Check der HTML5-Templates mit Übersetzungen - z. B. ContentArticle
 * Fix der Templates für die Text-Ausgabe bei beiden Langtext-Attributen: alle HTML-Tags werden entfernt
-* bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 * Filter mit "auto_item" Routenpriorität prüfen - siehe :ref:`rst_cookbook_tips_set-route-priority`
+* bei FEE und FE-Modul ggf. das Template umstellen für den "Create"-Link
 * bei FEE Check Upload-Modus :ref:`Dateiupload <extended_frontend_editing_upload>`
 * bei FEE Check Auflösung der Inserttags beim :ref:`Dateiupload <extended_frontend_editing_upload>`
+* bei FEE prüfen, ob Listen- und Bearbeitungsseite von der Contao-Suche ausgeschlossen ist
 * Check der eigenen Übersetzungen - `Umstellung auf Xliff-Format <https://metamodels.readthedocs.io/de/latest/manual/component/translations.html#eigene-anpassung-von-ubersetzungen>`_
 * Prüfung :ref:`eigener Defaultvorgaben für die Eingabemaske <rst_cookbook_panels_default-values>`
 * Prüfung :ref:`der Labels der Eingabemasken bei eigenen Anpassungen - "LABEL NOT SET" <component_translations_lns>`
