@@ -13,7 +13,7 @@ referenzierten Tabelle darstellen, kann das über verschiedene Wege erfolgen:
 Man legt sich im referenzierten Model ein weiteres Attribut an, in dem die Werte
 für die Anzeige kombiniert werden.
 
-**2. Event "GetPropertyOptionsEvent"**
+**2. Event "GetPropertyOptionsEvent"** (Empfehlung)
 
 .. code-block:: php
    :linenos:
