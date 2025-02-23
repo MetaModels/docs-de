@@ -9,16 +9,19 @@ Die Datenbankeigenschaften für Attribute werden über den Schemamanager manipul
 :ref:`component_schema-manager` - und nicht über eine Anpassung des DCA. Geprüft und ausgeführt werden die Änderungen
 beim Ablauf der DB-Migration - diese kann über den Contao-Manager oder über die Konsole angestoßen werden.
 
-Im folgenden Beispiel wird das Feld des Attributes Langtext von `TEXT` (65535) auf `MEDIUMTEXT` (16777215) geändert - siehe
-`Doctrine <https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#mapping-matrix>`_.
+Im folgenden Beispiel wird das Feld des Attributes Langtext `vita` im Model `mm_employees` von `TEXT` (65535)
+auf `MEDIUMTEXT` (16777215) geändert - siehe
+`Doctrine <https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#mapping-matrix>`_ und
+`Github <https://github.com/doctrine/dbal/blob/369ab24fc865939ff451c5214742cebac052f2f1/src/Platforms/AbstractMySQLPlatform.php#L40-L46>`_.
 
 .. code-block:: php
    :linenos:
 
    <?php
-   // src/AppBundle/EventListener/SchemaManagerListener.php
-   namespace AppBundle\EventListener;
+   // src/EventListener/SchemaManagerListener.php
+   namespace App\EventListener;
 
+   use Doctrine\DBAL\Platforms\AbstractMySQLPlatform;
    use MetaModels\Information\MetaModelCollectionInterface;
    use MetaModels\Schema\Doctrine\DoctrineSchemaGeneratorInterface;
    use MetaModels\Schema\Doctrine\DoctrineSchemaInformation;
@@ -33,17 +36,16 @@ Im folgenden Beispiel wird das Feld des Attributes Langtext von `TEXT` (65535) a
 
            $table = $schema->getSchema()->getTable('mm_employees');
 
-           $table->getColumn('vita')->setLength(16777215);
+           $table->getColumn('vita')->setLength(AbstractMySQLPlatform::LENGTH_LIMIT_MEDIUMTEXT);
        }
    }
 
 .. code-block:: yml
    :linenos:
 
-   # src/AppBundle/Resources/config/services.yml
+   # config/services.yml
    services:
-     # SchemaManagerListener:
-     AppBundle\EventListener\SchemaManagerListener:
+     App\EventListener\SchemaManagerListener:
        tags:
          - { name: 'metamodels.schema-generator.doctrine', priority: -20 }
 
