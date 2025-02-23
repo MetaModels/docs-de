@@ -3,6 +3,8 @@
 Anpassung des Schema für Attribute
 ==================================
 
+.. note:: Der Schemamanager ist ab Version 2.3 implementiert.
+
 Die Datenbankeigenschaften für Attribute werden über den Schemamanager manipuliert - mehr dazu beim
 :ref:`component_schema-manager`. Geprüft und ausgeführt werden die Änderungen beim Ablauf der DB-Migration - diese
 kann über den Contao-Manager oder über die Konsole angestoßen werden.
