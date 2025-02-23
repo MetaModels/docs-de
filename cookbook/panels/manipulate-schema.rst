@@ -6,8 +6,8 @@ Anpassung des Schema für Attribute
 .. note:: Der Schemamanager ist ab Version 2.3 implementiert.
 
 Die Datenbankeigenschaften für Attribute werden über den Schemamanager manipuliert - mehr dazu beim
-:ref:`component_schema-manager`. Geprüft und ausgeführt werden die Änderungen beim Ablauf der DB-Migration - diese
-kann über den Contao-Manager oder über die Konsole angestoßen werden.
+:ref:`component_schema-manager` - und nicht über eine Anpassung des DCA. Geprüft und ausgeführt werden die Änderungen
+beim Ablauf der DB-Migration - diese kann über den Contao-Manager oder über die Konsole angestoßen werden.
 
 Im folgenden Beispiel wird das Feld des Attributes Langtext von `TEXT` (65535) auf `MEDIUMTEXT` (16777215) geändert - siehe
 `Doctrine <https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#mapping-matrix>`_.
