@@ -18,15 +18,16 @@ auf `MEDIUMTEXT` (16777215) geändert - siehe
    :linenos:
 
    <?php
-   // src/EventListener/SchemaManagerListener.php
-   namespace App\EventListener;
+   // src/SchemaManager/SchemaManager.php
+   namespace App\SchemaManager;
 
    use Doctrine\DBAL\Platforms\AbstractMySQLPlatform;
    use MetaModels\Information\MetaModelCollectionInterface;
    use MetaModels\Schema\Doctrine\DoctrineSchemaGeneratorInterface;
    use MetaModels\Schema\Doctrine\DoctrineSchemaInformation;
 
-   final class SchemaManagerListener implements DoctrineSchemaGeneratorInterface
+   #[DoctrineSchemaProvider(-20)]
+   final class SchemaManager implements DoctrineSchemaGeneratorInterface
    {
        public function generate(DoctrineSchemaInformation $schema, MetaModelCollectionInterface $collection): void
        {
@@ -40,14 +41,21 @@ auf `MEDIUMTEXT` (16777215) geändert - siehe
        }
    }
 
+Sofern man nicht mit der Registrierung über das Attribut "DoctrineSchemaProvider" arbeiten kann oder möchte, kann als
+Alternative die Registrierung per ``services.yml`` erfolgen.
+
 .. code-block:: yml
    :linenos:
 
    # config/services.yml
    services:
-     App\EventListener\SchemaManagerListener:
+     App\SchemaManager\SchemaManager:
        tags:
          - { name: 'metamodels.schema-generator.doctrine', priority: -20 }
+
+Ob der eigene Schemamanager registriert und geladen wurde, kann man auf Konsole prüfen mit
+
+``php bin/contao-console debug:container``
 
 .. |br| raw:: html
 
