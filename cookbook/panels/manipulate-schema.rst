@@ -55,7 +55,7 @@ Alternative die Registrierung per ``services.yml`` erfolgen.
 
 Ob der eigene Schemamanager registriert und geladen wurde, kann man auf Konsole prüfen mit
 
-``php bin/contao-console debug:container``
+``php vendor/bin/contao-console debug:container``
 
 .. |br| raw:: html
 
