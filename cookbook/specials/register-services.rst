@@ -46,7 +46,7 @@ Datei angelegt und der Cache geleert werden.
    use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 
    #[AsEventListener(PrePersistModelEvent::NAME)]
-   class PrePersistModelEvent1Listener
+   class PrePersistModelEventListener
    {
        public function __invoke(PrePersistModelEvent $event)
        {
@@ -110,7 +110,7 @@ Die Klasse sieht dann wie folgt aus:
 
    use ContaoCommunityAlliance\DcGeneral\Event\PrePersistModelEvent;
 
-   class PrePersistModelEvent2Listener
+   class PrePersistModelEventListener
    {
        public function __invoke(PrePersistModelEvent $event)
        {
@@ -157,7 +157,7 @@ automatisch einbinden.
    use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 
    #[AsEventListener(PrePersistModelEvent::NAME)]
-   class PrePersistModelEvent3Listener
+   class PrePersistModelEventListener
    {
        public function __construct(private readonly IFactory $factory)
        {
@@ -193,7 +193,7 @@ man den Service in der ``services.yml`` als Argument übergibt.
    use ContaoCommunityAlliance\DcGeneral\Event\PrePersistModelEvent;
    use MetaModels\IFactory;
 
-   class PrePersistModelEvent4Listener
+   class PrePersistModelEventListener
    {
        public function __construct(private readonly IFactory $factory)
        {
