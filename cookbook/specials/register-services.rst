@@ -246,12 +246,11 @@ Namespaces arbeiten möchte. In dem Fall, würde man weitere Unterordner z. B. `
 
 Ist dies nicht der Fall, können alle Dateien direkt in ``src/`` mit dem Namespace z. B. ``AppBundle``.
 
-Folgend ein beispielhafter Aufbau
+Folgend ein beispielhafter Aufbau:
 
 |img_register-services_02.png|
 
 Damit die Dateien und der Namespace korrekt gefunden werden, muss die ``composer.json`` wie folgt ergänzt werden:
-
 
 .. code-block:: json
    :linenos:
