@@ -258,11 +258,107 @@ Damit die Dateien und der Namespace korrekt gefunden werden, muss die ``composer
    "autoload": {
      "psr-4": {
          "AppBundle\\": "src/"
+     }
+   },
+
+Folgende zwei Dateien sind für den grundlegenden Aufbau essentiell:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/AppBundle.php
+   namespace AppBundle;
+
+   use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+   /**
+    * This is the local customization bundle.
+    */
+   class AppBundle extends Bundle
+   {
+   }
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/DependencyInjection/AppExtension.php
+   namespace AppBundle\DependencyInjection;
+
+   use Symfony\Component\Config\FileLocator;
+   use Symfony\Component\DependencyInjection\ContainerBuilder;
+   use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+   use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+
+   class AppExtension extends Extension
+   {
+
+       /**
+        * Loads a specific configuration.
+        *
+        * @throws \InvalidArgumentException When provided tag is not defined in this extension
+        */
+       public function load(array $configs, ContainerBuilder $container)
+       {
+           $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+           $loader->load('services.yml');
+       }
+   }
+
+Die folgende Datei ``ContaoManagerPlugin.php`` ist optional und steuert die Reihenfolge wann das eigene Bundle
+gegenüber anderen Bundles geladen wird. Hier kann man z. B. bestimmen, dass das eigene Bundle nach Contao geladen wird -
+es können aber auch weitere Bundles wie z. B. das NotificationCenter angegeben werden. Damit die Datei auch Beachtung
+findet, muss dies in der ``composer.json`` angegeben werden - s. u.
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/ContaoManager/ContaoManagerPlugin.php
+
+   use Contao\CoreBundle\ContaoCoreBundle;
+   use Contao\ManagerBundle\ContaoManagerBundle;
+   use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+   use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+   use Contao\ManagerPlugin\Bundle\Config\ConfigInterface;
+   use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+
+   class ContaoManagerPlugin implements BundlePluginInterface
+   {
+       /**
+        * Gets a list of autoload configurations for this bundle.
+        *
+        * @param ParserInterface $parser
+        *
+        * @return array<ConfigInterface>
+        */
+       public function getBundles(ParserInterface $parser): array
+       {
+           return [
+               BundleConfig::create(AppBundle::class)
+                   ->setLoadAfter(
+                       [
+                           ContaoCoreBundle::class,
+                           ContaoManagerBundle::class
+                       ]
+                   )
+           ];
+       }
+   }
+
+.. code-block:: json
+   :linenos:
+
+   "autoload": {
+     "psr-4": {
+         "AppBundle\\": "src/"
      },
      "classmap": [
          "src/ContaoManager/ContaoManagerPlugin.php"
      ]
    },
+
 
 
 
