@@ -93,8 +93,8 @@ siehe Punkt 2 - oder man fügt folgende Zeilen in die ``services.yml``, um ein a
 
 
 .. _register-services-with-services:
-2 Registrierung per services.yml
---------------------------------
+2 Registrierung ohne Attribut per services.yml
+----------------------------------------------
 
 Als Alternative zur Registrierung per Attribut kann man den Aufruf über die `services.yml` einbinden - insbesondere,
 wenn man verschiedene Einstellungen hat und sich auf die automatische Registrierung nicht verlassen möchte.
@@ -177,8 +177,8 @@ automatisch einbinden.
 
 
 .. _register-services-with-services-and-other:
-4. Registrierung per services.yml und Einbindung weiterer Services
----------------------------------------------------------------
+4. Registrierung  ohne Attribut per services.yml und Einbindung weiterer Services
+---------------------------------------------------------------------------------
 
 Benötigt man in seiner Klasse den Zugriff auf weitere Services, kann man die über den ``constructor`` einbinden, indem
 man den Service in der ``services.yml`` als Argument übergibt.
