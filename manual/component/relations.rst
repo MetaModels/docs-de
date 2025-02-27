@@ -100,7 +100,8 @@ Die Verknüpfung wird über die Einstellungen der Eingabemaske konfiguriert inde
 "Name der Elterntabelle" die entsprechende Tabelle ausgewählt wird - als Elterntabelle können auch andere Contao-Tabellen
 ausgewählt werden.
 
-Zudem ist bis auf Sonderfälle bei "Render-Modus: Elternelement vorhanden" auszuwählen.
+Zudem ist bis auf Sonderfälle bei "Render-Modus: Elternelement vorhanden" auszuwählen - damit wird die gewünschte Relation
+von ``pid`` zu ``id`` beim Anlegen des Kinddatensatzes erzeugt.
 
 Der Zugriff auf die Liste der Kinddatensätze erfolgt über ein Icon in der Zeile der Elterndatensätze bei den
 Bearbeitungsicons - optional ist die Auswahl eigenes eigenen Icons möglich.
