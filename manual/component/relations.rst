@@ -93,7 +93,7 @@ eine Tabelle (Kind), die in ihrer Hierarchie einer übergeordneten Tabelle (Elte
 Mitarbeiter könnten Dienstreisen als Kindtabelle angelegt werden. Die Daten sind üblicher Weise immer einem Mitarbeiter
 zugeordnet und werden als alleinstehende Eingabeliste gepflegt.
 
-Die Relation erfolgt über die Systemspalten ``pid`` und ``id`` wobei die alle ``pid`` der Kinddatensätze die ``id`` des
+Die Relation erfolgt über die Systemspalten ``pid`` und ``id``, wobei die alle ``pid`` der Kinddatensätze die ``id`` des
 Elterndatensatzes beinhalten.
 
 Die Verknüpfung wird über die Einstellungen der Eingabemaske konfiguriert indem bei "Integration: Als Kind-Tabelle" und
@@ -103,7 +103,7 @@ ausgewählt werden.
 Zudem ist bis auf Sonderfälle bei "Render-Modus: Elternelement vorhanden" auszuwählen.
 
 Der Zugriff auf die Liste der Kinddatensätze erfolgt über ein Icon in der Zeile der Elterndatensätze bei den
-Bearbeitungsicons - optional ist die Auswahl eigenes eigenen Icon möglich.
+Bearbeitungsicons - optional ist die Auswahl eigenes eigenen Icons möglich.
 
 Bei der Arbeit mit Kind-Tabellen ist zu beachten, dass "Eltern nicht wissen, dass sie Kinder haben", d. h. in der
 Ausgabe im FE gibt es keine automatische Ausgabe der Kinddaten. Man kann die Kinddatensätze eines Elterndatensatzes
@@ -118,7 +118,7 @@ Varianten
 .........
 
 Der Aufbau mit Varianten ist dann anzuwenden, wenn es zu einem Datensatz bei einzelnen Attributen
-Abweichungen/Variationen gibt. Das könnten zum Beispiel bei einem Produktkatalog sein, wo es einzelne Produkte in
+Abweichungen/Variationen gibt. Das könnten zum Beispiel ein Produktkatalog sein, in dem es einzelne Produkte in
 unterschiedlichen oder abweichenden Farben oder Materialien gibt aber die meisten Attribute identisch bleiben.
 
 Um Varianten für ein Model zu aktivieren, muss man die die entsprechende Checkbox bei dem Model setzen. Anschließend
