@@ -81,7 +81,7 @@ für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unte
 Spezial-Relationen bei MetaModels
 ---------------------------------
 
-Zusätzlich zu den Standard-Relationen gibt es weitere Implementierungen in metaModels, die aufgrund von Anwenderwünschen
+Zusätzlich zu den Standard-Relationen gibt es weitere Implementierungen in MetaModels, die aufgrund von Anwenderwünschen
 implementiert wurden.
 
 
