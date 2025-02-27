@@ -89,9 +89,9 @@ Kind-Tabellen - "n:1"
 .....................
 
 Die Relation von "Kind-Tabellen" folgt dem klassischen Aufbau wie bei Contao z. B. bei News oder Events. Dabei gibt es
-eine Tabelle (Kind), die in ihrer Hierarchie einer übergeordneten Tabelle (Eltern). Als Beispiel für die Mitarbeiter
-könnten Dienstreisen als Kindtabelle angelegt werden. Die Daten sind üblicher Weise immer einem Mitarbeiter zugeordnet
-und werden als alleinstehende Eingabeliste gepflegt.
+eine Tabelle (Kind), die in ihrer Hierarchie einer übergeordneten Tabelle (Eltern) zugewiesen ist. Als Beispiel für die
+Mitarbeiter könnten Dienstreisen als Kindtabelle angelegt werden. Die Daten sind üblicher Weise immer einem Mitarbeiter
+zugeordnet und werden als alleinstehende Eingabeliste gepflegt.
 
 Die Relation erfolgt über die Systemspalten ``pid`` und ``id`` wobei die alle ``pid`` der Kinddatensätze die ``id`` des
 Elterndatensatzes beinhalten.
