@@ -1,7 +1,6 @@
 Textgestaltung:
 
-Der Text sollte in einer neutralen Ansprache des Lesers erfolgen - üblicher
-Weise mit "man".
+Der Text sollte in einer neutralen Ansprache des Lesers erfolgen - üblicherweise mit "man".
 
 Bitte Schachtelsätze vermeiden und längere Absätze in logische Blöcke unterteilen.
 
@@ -70,7 +69,7 @@ http://www.tablesgenerator.com/markdown_tables
 
 
 Bilder:
-Im Text per "Ersetungstoken" z.B. Lorem ipsum |img_filter| bla bla...
+Im Text per "Ersetzungstoken" z.B. Lorem ipsum |img_filter| bla bla...
 
 und unten 
 .. |img_filter| image:: /_img/filter.png

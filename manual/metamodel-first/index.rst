@@ -9,7 +9,8 @@ mit nur wenigen Inhaltsangaben. Die Liste soll im Backend zu befüllen sein
 und kann im Frontend als Tabelle ausgegeben werden. Auf einige Aspekte wie
 Sortierungen, Filterungen usw. wurde absichtlich verzichtet.
 
-Die Umsetzung orientiert sich an den :ref:`component_index`.
+Die Umsetzung orientiert sich an den :ref:`component_index` - dort sind auch mehr Hinweise zu den eingesetzten Templates
+und möglichen Relationen aufgeführt.
 
 Für eine leichtere Übersicht wo was zu finden ist, gibt es den
 :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.

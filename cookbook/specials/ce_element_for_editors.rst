@@ -269,3 +269,6 @@ Auswahl und Anzeige mit eigenem Content-Element
 -----------------------------------------------
 
 ... folgt je nach Finanzierung des Artikels/Handbuchs...
+
+Möchte man die Funktionalität mit "Contao-Boardmitteln" statt mit einer Erweiterung implementieren, so kann man ein
+eigenes Inhaltselement erstellen

@@ -39,8 +39,14 @@ Datensätze einzeln oder als Liste auf der Webseite ausgegeben werden und mit de
 Inhaltselement/Modul "MetaModel-Frontendfilter" steht ein Filter für das Frontend
 zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
 
+Wie die einzelnen Templates zusammenwirken, ist auf der Seite zu den :ref:`component_templates` aufgeführt.
+
 Um einzelne Werte eines Datensatzes (Item) oder die Anzahl aller Datensätze im Contao-Kontext
 auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Verfügung.
+
+Bevor man sich an die Erstellung komplexerer Datenstrukturen in MetaModels macht, sollte man sich unbedingt
+Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models untereinander - machen. Dazu gibt es
+eine Übersichtsseite ":ref:`component_relations`".
 
 
 .. toctree::
@@ -57,7 +63,9 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
     filter
     dca-combine
     contentelements
+    templates
     inserttags
+    relations
 
 
 .. |br| raw:: html
