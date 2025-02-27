@@ -14,13 +14,16 @@ und diese angezeigt werden sollen, kann man das zum Beispiel mit den folgenden M
 Auswahl und Anzeige mit Erweiterung RockSolid Custom Elements
 -------------------------------------------------------------
 
-RockSolid Custom Elements (RST-CE) geben einem die Möglichkeit, sämtliche im Contao Backend verfügbaren Eingabefelder nach
-belieben als Content Element und/oder Modul zur Verfügung zu stellen. Mehr dazu auf der Webseite von
+RockSolid Custom Elements (RST-CE) geben einem die Möglichkeit, sämtliche im Contao Backend verfügbaren Eingabefelder
+nach belieben als Content Element und/oder Modul zur Verfügung zu stellen. Mehr dazu auf der Webseite von
 `RockSolid <https://rocksolidthemes.com/de/contao/plugins/custom-content-elements>`_ oder
 `Vortrag der CK24 von Marcus Lelle <https://github.com/marcuslelle/contao-rsce>`_.
 
 Im folgenden Beispiel soll ein einzelner Point-of-Interest (POI) durch den Redakteur ausgewählt und im FE angezeigt
 werden können. In der Auswahl soll der Name und der Ort erscheinen.
+
+Konfiguration in RST-CE
+.......................
 
 Wie bei RST-CE üblich, muss eine Konfigurationsdatei für die Anzeige im BE sowie ein Template für die FE-Ausgabe
 erstellt werden. Die Quelltexte sollen nur das Vorgehen verdeutlichen und wie angegeben ist eine Auslagerung der
@@ -31,7 +34,7 @@ API-Abfragen in separate Dateien zu empfehlen. Mehr zu den Abfragen bei :ref:`re
    :linenos:
 
    <?php
-   //rsce_mm_poi_single_config.php
+   // rsce_mm_poi_single_config.php
    /**
     * Auswahl eines POI in RST-CE.
     *
@@ -82,7 +85,10 @@ API-Abfragen in separate Dateien zu empfehlen. Mehr zu den Abfragen bei :ref:`re
        ],
    ];
 
-Für die Filterung nach der ausgwählten POI-Id kann man eine Filterregel "Eigenes SQL" anlegen und dort über den
+Filter in MM
+............
+
+Für die Filterung nach der ausgewählten POI-Id kann man eine Filterregel "Eigenes SQL" anlegen und dort über den
 übergebenen Parameter aus `$filterUrl` entsprechend filtern.
 
 .. code-block:: SQL
@@ -93,6 +99,12 @@ Für die Filterung nach der ausgwählten POI-Id kann man eine Filterregel "Eigen
    WHERE id = {{param::filter?name=poi}}
 
 Weiterhin könnte man z. B. in dem SQL oder in einer weiteren Filterregel nach dem Veröffentlichungsstatus filtern.
+
+Ausgabetemplate in HTML5
+........................
+
+Für die Ausgabe muss noch ein entsprechendes Template angelegt werden - hier ist die Namenskonvention von RST-CE zu
+beachten.
 
 .. code-block:: php
    :linenos:
@@ -149,6 +161,108 @@ Weiterhin könnte man z. B. in dem SQL oder in einer weiteren Filterregel nach d
    <?php else : ?>
        <p class="info">Kein POI ausgewählt!</p>
    <?php endif; ?>
+
+Ausgabe in Twig
+...............
+
+Für die Ausgabe in Twig muss man die auszugebenden Daten an das Template übergeben - eine Abfrage im Template wie bei
+HTML5 ist in Twig nicht möglich.
+
+Die Daten für Twig werden in einer `TwigFunktion` geholt und bereit gestellt:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/Twig/AppExtension.php
+   namespace App\Twig;
+
+   use MetaModels\Filter\Setting\FilterSettingFactory;
+   use MetaModels\IFactory;
+   use MetaModels\IMetaModel;
+   use MetaModels\Render\Setting\RenderSettingFactory;
+   use Twig\Extension\AbstractExtension;
+   use Twig\TwigFunction;
+
+   class AppExtension extends AbstractExtension
+   {
+       public function __construct(
+           private readonly IFactory $factory,
+           private readonly FilterSettingFactory $filterFactory,
+           private readonly RenderSettingFactory $renderFactory,
+       ) {
+       }
+
+       public function getFunctions(): array
+       {
+           return [
+               new TwigFunction('getPoiById', [$this, 'getPoiById']),
+           ];
+       }
+
+       public function getPoiById(int $id): array
+       {
+           // Name der MetaModel Tabelle.
+           $modelName = 'mm_poi';
+           // ID des Filters "FE POI Einzelansicht: POI-Auswahl + Veröffentlicht".
+           $filterId = 11;
+           // Filterwert POI-Id.
+           $filterUrl = ['poi' => $id];
+           // ID der Render-Einstellungen "FE Detailansicht - POI Einzelansicht ".
+           $renderId = 20;
+
+           // Item ermitteln.
+           $model            = $this->factory->getMetaModel($modelName);
+           $filter           = $model->getEmptyFilter();
+           $filterCollection = $this->filterFactory->createCollection($filterId);
+           $filterCollection->addRules($filter, $filterUrl);
+
+           // Items rendern.
+           return $model->findByFilter($filter)->parseAll(
+               'html5',
+               $this->renderFactory->createCollection($model, $renderId)
+           );
+       }
+   }
+
+Registrierung in der ``service.yml``:
+
+.. code-block:: yaml
+   :linenos:
+
+   # config/services.yml
+   services:
+     _defaults:
+       autoconfigure: true
+
+     App\Twig\AppExtension:
+       arguments:
+         $factory: '@metamodels.factory'
+         $filterFactory: '@metamodels.filter_setting_factory'
+         $renderFactory: '@metamodels.render_setting_factory'
+
+Ausgabe im Twig-Template:
+
+.. code-block:: twig
+   :linenos:
+
+   {{ rsce_mm_poi_single.html.twig }}
+   {% set pois = getPoiById(poi) %}
+   <div{% if id %} id={{ id }}{% endif %}{% if class %} class="{{ class }}"{% endif %}>
+       {% if pois|length > 0 %}
+           <div class="layout_full">
+               {% for poi in pois %}
+                   <div class="poi_item">
+                       <h2>{{ poi.html5.name|raw }}</h2>
+                       <p>{{ poi.html5.city|raw }}</p>
+                       {{ ... }}
+                   </div>
+               {% endfor %}
+           </div>
+       {% else %}
+           <p class="info">Kein POI ausgewählt!</p>
+       {% endif %}
+   </div>
 
 
 Auswahl und Anzeige mit eigenem Content-Element
