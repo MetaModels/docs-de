@@ -20,8 +20,8 @@ z. B. ``<?= $arrItem['html5']['my_image'] ?>``.
 Anforderungen für die Ausgabe gesetzt werden wie z. B. Auflistung als ``ul`` oder ``div``, Markup für Galerien oder
 Slider usw.
 
-Diese Ausgaben und Anpassungsmöglichkeiten reichen für eine Vielzahl an Ausgabewünschen aus. Wenn aber z. B. Bilder
-ausgegeben werden sollten, die über eine :ref:`Relation <component_relations>` eingebunden ist - über den
+Diese Ausgaben und Anpassungsmöglichkeiten reichen für eine Vielzahl an Ausgabewünschen aus. Wenn aber Bilder
+ausgegeben werden sollten, die z. B. über eine :ref:`Relation <component_relations>` eingebunden sind - über den
 ``raw``-Knoten -, dann stehen diese nur als Originalbild über den Pfad bzw. UUID zur Verfügung.
 
 Um auch diese Bilder im eigenen Template zu manipulieren, sollen die folgenden Snippets eine Hilfestellung geben.
