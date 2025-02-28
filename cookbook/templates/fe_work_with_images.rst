@@ -3,8 +3,8 @@
 Arbeiten mit Bildern in Templates
 =================================
 
-Für die Ausgabe von einem oder mehreren Bildern in MetaModels steht das Attribut Datei zur Verfügung. In der Eingabemaske
-gibt es zur Auswahl einen Button der ein Popup zur Auswahl öffnet.
+Für die Ausgabe von einem oder mehreren Bildern in MetaModels steht das Attribut Datei zur Verfügung. Zur Auswahl einer
+Datei oder mehrere Dateien gibt es in der Eingabemaske einen Button der ein Popup zur Ansicht der Dateiverwaltung.
 
 In den Grundeinstellungen des Attributes kann man verschiedene Optionen setzen wie Basispfad, ein oder mehrere Auswahlen,
 Dateitypen usw.
@@ -13,8 +13,8 @@ Bilddateien möchte man in den meisten Fällen auch als Bild ausgeben. Die Einst
 Attribut in den Rendersettings. Hier ist die Checkbox "Als Bildfeld mit Vorschaubild benutzen" zu setzen sowie eine
 Bildgröße zu wählen. Optional ist die Auswahl eines Platzhalterbilds möglich als auch eine Ansicht in einer Lightbox.
 
-In einem individuellen Template im FE ist für die Darstellung als Bild die Ausgabe des html5-Knotens notwendig - z. B.
-``<?= $arrItem['html5']['my_image'] ?>``.
+In einem individuellen Template im FE ist für die Darstellung als Bild die Ausgabe des html5-Knotens notwendig - |br|
+z. B. ``<?= $arrItem['html5']['my_image'] ?>``.
 
 Über die Auswahl bzw. Anpassung des :ref:`Templates für das Attribut <component_templates>`, können weitere
 Anforderungen für die Ausgabe gesetzt werden wie z. B. Auflistung als ``ul`` oder ``div``, Markup für Galerien oder
@@ -168,3 +168,8 @@ siehe `PictureFactory <https://docs.contao.org/dev/framework/image-processing/im
 
 .. note:: Die Seite kann gern um weitere Snippets ergänzt werden - sobald MM auch mit Twig-Templates arbeitet,
    wird die Seite angepasst
+
+
+.. |br| raw:: html
+
+   <br />
