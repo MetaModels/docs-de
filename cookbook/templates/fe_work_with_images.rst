@@ -11,7 +11,8 @@ Dateitypen usw.
 
 Bilddateien möchte man in den meisten Fällen auch als Bild ausgeben. Die Einstellungen hierfür finden sich für das
 Attribut in den Rendersettings. Hier ist die Checkbox "Als Bildfeld mit Vorschaubild benutzen" zu setzen sowie eine
-Bildgröße zu wählen. Optional ist die Auswahl eines Platzhalterbilds möglich als auch eine Ansicht in einer Lightbox.
+Bildgröße zu wählen (das gilt auch für Anzeige im BE in der Listendarstellung). Optional ist die Auswahl eines
+Platzhalterbilds möglich als auch eine Ansicht in einer Lightbox.
 
 In einem individuellen Template im FE ist für die Darstellung als Bild die Ausgabe des html5-Knotens notwendig - |br|
 z. B. ``<?= $arrItem['html5']['my_image'] ?>``.
