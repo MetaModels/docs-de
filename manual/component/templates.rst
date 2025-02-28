@@ -26,6 +26,10 @@ eine individuelle Ausgabe vorgenommen. Diese Templates werden bei den Einstellun
    den Rendersettings aktivierten Attribute ausgegeben. Für eine individuelle Ausgabe kann man sich ein eigenes
    Template auf der Basis von ``metamodel_prerendered_debug`` erstellen und sein HTML-Markup einfügen.
 
+Die Ausgabe von vorgerenderten (prerendered) Ausgaben der Widgets macht die Ausgabe sehr einfach - das Rendern kostet
+aber entsprechend Rechenzeit. Bei sehr vielen gleichzeitigen Ausgaben kann das zu Problemen mit der Serverbelastung
+führen. Als Alternative kann man ungerenderte Ausgaben in der CE-Modul-MM-Liste aktivieren.
+
 Die **dritte Stufe** bilden die Templates der Attribute ``mm_attr_<Attributstyp>``. Die Auswahl erfolgt bei den Rendersettings
 in den einzelnen Attributen. Diese Templates werden eher dann modifiziert, wenn diese Anpassung auch bei verschiedenen
 Rendersettings zum Tragen kommt - z. B. gibt es für das Attribut Datei ein Template als Ausgabe mit "ul" und eins als
