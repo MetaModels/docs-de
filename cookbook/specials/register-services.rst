@@ -227,9 +227,10 @@ man den Service in der ``services.yml`` als Argument übergibt.
 5. Alle Dateien in src/ und Namespace App
 -----------------------------------------
 
-Möchte man zur einfacheren Datenpflege alle Dateien - also auch z. B. die `service.yml` - kompakt im Ordner `src`
+Möchte man zur einfacheren Datenpflege alle Dateien - also auch z. B. die `service.yml` - kompakt im Ordner `src/`
 haben aber dennoch mit dem Namespace `App` arbeiten, so kann man sich das Beispiel vom Vortrag cd CK23 auf
-`Github <https://github.com/e-spin/vortrag-contao-konferenz-2023/tree/main/src>`_ ansehen.
+`Github <https://github.com/e-spin/vortrag-contao-konferenz-2023/tree/main/src>`_ ansehen bzw. den Ordner `src/` zum
+Testen downloaden und die ``composer.json`` entsprechend anpassen.
 
 Zu beachten ist der Eintrag
 `foo <https://github.com/e-spin/vortrag-contao-konferenz-2023/blob/main/src/Resources/config/foo.yml>`_ -
@@ -237,8 +238,8 @@ der ist notwendig um einige "Contao-Magic" für den Namespace zu umgehen...
 
 
 .. _register-services-all-in-src-own-namespace:
-6. Alle Dateien in src/ und eigener Namespace
----------------------------------------------
+6. Alle Dateien in src/ und eigene Bundles
+------------------------------------------
 
 Möchte man mit einem eigenen Namespace arbeiten und weniger Contao- bzw. Symfony-Magic, so müssen einige Dateien mehr
 in ``src/`` angelegt werden. Das kann z. B. dann sinnvoll sein, wenn man mit mehreren separaten Bundles und ihren
