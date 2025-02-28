@@ -18,6 +18,9 @@ der Mitarbeiter ändern.
 MetaModels bietet für solche Verknüpfungen vorgefertigte Attribute und Einstellungen an. Folgend werden diese mit ihren
 Einsatzmöglichkeiten und Besonderheiten vorgestellt.
 
+Bei allen Varianten ist es zu empfehlen, sich die Daten in der Datenbank mit einem geeigneten Tool wie phpMyAdmin o. ä.
+anzusehen.
+
 Standard-Relationen
 -------------------
 
