@@ -3,64 +3,168 @@
 Arbeiten mit Bildern in Templates
 =================================
 
-.. note:: Das Feature .
+Für die Ausgabe von einem oder mehreren Bildern in MetaModels steht das Attribut Datei zur Verfügung. In der Eingabemaske
+gibt es zur Auswahl einen Button der ein Popup zur Auswahl öffnet.
 
-https://community.contao.org/de/showthread.php?74016-Thumbnail-mit-wichtigem-Teil-erstellen
+In den Grundeinstellungen des Attributes kann man verschiedene Optionen setzen wie Basispfad, ein oder mehrere Auswahlen,
+Dateitypen usw.
 
-/home/lenovo/Projects/Firma/Monotomic/Projekte/Bilder-in-MM/metamodel_prerendered_article_detail_headerimage.html5
+Bilddateien möchte man in den meisten Fällen auch als Bild ausgeben. Die Einstellungen hierfür finden sich für das
+Attribut in den Rendersettings. Hier ist die Checkbox "Als Bildfeld mit Vorschaubild benutzen" zu setzen sowie eine
+Bildgröße zu wählen. Optional ist die Auswahl eines Platzhalterbilds möglich als auch eine Ansicht in einer Lightbox.
+
+In einem individuellen Template im FE ist für die Darstellung als Bild die Ausgabe des html5-Knotens notwendig - z. B.
+``<?= $arrItem['html5']['my_image'] ?>``.
+
+Über die Auswahl bzw. Anpassung des :ref:`Templates für das Attribut <component_templates>`, können weitere
+Anforderungen für die Ausgabe gesetzt werden wie z. B. Auflistung als ``ul`` oder ``div``, Markup für Galerien oder
+Slider usw.
+
+Diese Ausgaben und Anpassungsmöglichkeiten reichen für eine Vielzahl an Ausgabewünschen aus. Wenn aber z. B. Bilder
+ausgegeben werden sollten, die über eine :ref:`Relation <component_relations>` eingebunden ist - über den
+``raw``-Knoten -, dann stehen diese nur als Originalbild über den Pfad bzw. UUID zur Verfügung.
+
+Um auch diese Bilder im eigenen Template zu manipulieren, sollen die folgenden Snippets eine Hilfestellung geben.
+
+Mehr zu den Methoden ist im Contao-Handbuch bei
+`Image processing <https://docs.contao.org/dev/framework/image-processing/index.html`_ zu finden.
+
+
+Ausgabe eines Bildes, der per Einzelauswahl eingebunden ist
+-----------------------------------------------------------
+
+Insert-Tags
+...........
+
+siehe `Insert-Tags <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#verschiedenes>`_
 
 .. code-block:: php
    :linenos:
 
-    <?php
-    use Contao\FrontendTemplate;
-    use Contao\StringUtil;
-    use Contao\System;
+   <?php if (!empty($arrItem['raw']['speaker']['biography_image']): ?>
+       {{image::<?= $arrItem['raw']['speaker']['biography_image'] ?>?width=180&height=180&mode=crop&class=img--circle}}
+       <!-- ODER -->
+       {{picture::<?= $arrItem['raw']['speaker']['biography_image'] ?>?size=_image_circle}}
+   <?php endif; ?>
 
-    $container      = System::getContainer();
-    $rootDir        = $container->getParameter('kernel.project_dir');
-    $pictureFactory = $container->get('contao.image.picture_factory');
+Beispiel für ``$size`` (`siehe <https://docs.contao.org/dev/framework/image-processing/image-sizes/index.html>`_):
+
+.. code-block:: yaml
+   :linenos:
+
+   # config/config.yml
+   contao:
+       image:
+           sizes:
+               _defaults:
+                   formats:
+                       jpg: [webp, jpg]
+                       webp: [webp, jpg]
+                       png: [webp, png]
+                   densities: 0.5x, 2x, 3x
+                   lazy_loading: true
+                   resize_mode: proportional
+               image_circle:
+                   width: 180
+                   height: 180
+                   resize_mode: crop
+                   zoom: 100
+                   css_class: img--circle
 
 
-        // siehe https://github.com/contao/contao/blob/ab81c7aebc14b671e0a5127804460d5a9709c62f/core-bundle/src/InsertTag/Resolver/LegacyInsertTag.php#L590-L603
-        // würde man in Helper auslagern oder eher das verwenden https://docs.contao.org/dev/framework/image-processing/image-studio/#using-the-figurebuilder
-        if (!empty($arrItem['raw']['speaker']['biography_image'])) {
-            $staticUrl = $container->get('contao.assets.files_context')->getStaticUrl();
-            $picture   = $pictureFactory->create($rootDir . '/' . $arrItem['raw']['speaker']['biography_image'], '_image_circle');
+Image-Studio FigureRenderer
+...........................
 
-            $data = [
-                'img'     => $picture->getImg($rootDir, $staticUrl),
-                'sources' => $picture->getSources($rootDir, $staticUrl),
-                'alt'     => StringUtil::specialcharsAttribute(''),
-                'class'   => StringUtil::specialcharsAttribute(''),
-            ];
+* ``$from``: Pfad zur Datei
+* ``$size``: s. o.
+* ``$configuration``: Konfigurationsangaben z. B. Metadaten
+* ``$template``: Ausgabetemplate
 
-            $pictureTemplate = new FrontendTemplate('picture_default');
-            $pictureTemplate->setData($data);
+.. code-block:: php
+   :linenos:
 
-            echo $pictureTemplate->parse();
+   <?php
+   if (!empty($arrItem['raw']['speaker']['biography_image'])) {
+      $from          = $arrItem['raw']['speaker']['biography_image'];
+      $size          = '_image_circle';
+      $configuration = [];
+      $template      = 'image';
+      echo $container->get('contao.image.studio.figure_renderer')->render($from, $size, $configuration, $template);
+   }
+   ?>
 
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            // oder eher das verwenden https://docs.contao.org/dev/framework/image-processing/image-studio/#using-the-figurebuilder
-            $figure = $container
-                ->get('contao.image.studio')
-                ->createFigureBuilder()
-                ->fromPath($arrItem['raw']['speaker']['biography_image'])
-                ->setSize('_image_circle')
-                ->build();
 
-            $template = new FrontendTemplate('image');
+Image-Studio FigureBuilder
+..........................
 
-            $figure->applyLegacyTemplateData($template);
-            //$template->setData($figure->getLegacyTemplateData());
-            echo $template->parse();
+siehe `FigureBuilder <https://docs.contao.org/dev/framework/image-processing/image-studio/index.html#using-the-figurebuilder>`_
 
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            // oder
-            $from          = $arrItem['raw']['speaker']['biography_image'];
-            $size          = '_image_circle';
-            $configuration = [];
-            $template      = 'image';
-            echo $container->get('contao.image.studio.figure_renderer')->render($from, $size, $configuration, $template);
-        }
-       ?>
+* ``fromPath``: Pfad zur Datei
+* ``setSize``: s. o.
+* ``$configuration``: Konfigurationsangaben z. B. Metadaten
+* ``$template``: Ausgabetemplate
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   if (!empty($arrItem['raw']['speaker']['biography_image'])) {
+       $figure = $container
+         ->get('contao.image.studio')
+         ->createFigureBuilder()
+         ->fromPath($arrItem['raw']['speaker']['biography_image'])
+         ->setSize('_image_circle')
+         ->build();
+
+       $template = new FrontendTemplate('image');
+
+       $figure->applyLegacyTemplateData($template);
+       //$template->setData($figure->getLegacyTemplateData()); // Alternative
+       echo $template->parse();
+   }
+   ?>
+
+
+Image-Studio PictureFactory
+...........................
+
+siehe `PictureFactory <https://docs.contao.org/dev/framework/image-processing/image-picture-factory/index.html#picture-factory>`_
+
+* ``setSize``: s. o.
+* ``$data``: Bilddaten + Metadaten
+* ``$pictureTemplate``: Ausgabetemplate
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // würde man in Helper auslagern
+   use Contao\FrontendTemplate;
+   use Contao\StringUtil;
+   use Contao\System;
+
+   $container      = System::getContainer();
+   $rootDir        = $container->getParameter('kernel.project_dir');
+   $pictureFactory = $container->get('contao.image.picture_factory');
+
+   // ...
+   if (!empty($arrItem['raw']['speaker']['biography_image'])) {
+      $staticUrl = $container->get('contao.assets.files_context')->getStaticUrl();
+      $picture   = $pictureFactory->create($rootDir . '/' . $arrItem['raw']['speaker']['biography_image'], '_image_circle');
+
+      $data = [
+         'img'     => $picture->getImg($rootDir, $staticUrl),
+         'sources' => $picture->getSources($rootDir, $staticUrl),
+         'alt'     => StringUtil::specialcharsAttribute(''),
+         'class'   => StringUtil::specialcharsAttribute(''),
+      ];
+
+      $pictureTemplate = new FrontendTemplate('picture_default');
+      $pictureTemplate->setData($data);
+
+      echo $pictureTemplate->parse();
+   }
+   ?>
+
+.. note:: Die Seite kann gern um weitere Snippets ergänzt werden - sobald MM auch mit Twig-Templates arbeitet,
+   wird die Seite angepasst
