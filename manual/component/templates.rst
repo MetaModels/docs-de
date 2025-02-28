@@ -22,6 +22,10 @@ Die **zweite Stufe** bildet das Template des Renderings ``metamodel_prerendered`
 werden in einer Schleife alle Datensätze ausgegeben. In dem Template werden üblicher Weise die meisten Anpassungen an
 eine individuelle Ausgabe vorgenommen. Diese Templates werden bei den Einstellungen des Renderings ausgewählt.
 
+.. note:: Das Standardtemplate ``metamodel_prerendered`` ist für die erste Ausgabe ausreichend und es werden alle bei
+   den Rendersettings aktivierten Attribute ausgegeben. Für eine individuelle Ausgabe kann man sich ein eigenes
+   Template auf der Basis von ``metamodel_prerendered_debug`` erstellen und sein HTML-Markup einfügen.
+
 Die **dritte Stufe** bilden die Templates der Attribute ``mm_attr_<Attributstyp>``. Die Auswahl erfolgt bei den Rendersettings
 in den einzelnen Attributen. Diese Templates werden eher dann modifiziert, wenn diese Anpassung auch bei verschiedenen
 Rendersettings zum Tragen kommt - z. B. gibt es für das Attribut Datei ein Template als Ausgabe mit "ul" und eins als
