@@ -30,7 +30,7 @@ Mehr zu den Methoden ist im Contao-Handbuch bei
 `Image processing <https://docs.contao.org/dev/framework/image-processing/index.html>`_ zu finden.
 
 
-Ausgabe eines Bildes, der per Einzelauswahl eingebunden ist
+Ausgabe eines Bildes, das per Einzelauswahl eingebunden ist
 -----------------------------------------------------------
 
 Insert-Tags
