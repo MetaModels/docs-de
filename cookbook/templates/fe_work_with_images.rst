@@ -27,7 +27,7 @@ ausgegeben werden sollten, die z. B. über eine :ref:`Relation <component_relati
 Um auch diese Bilder im eigenen Template zu manipulieren, sollen die folgenden Snippets eine Hilfestellung geben.
 
 Mehr zu den Methoden ist im Contao-Handbuch bei
-`Image processing <https://docs.contao.org/dev/framework/image-processing/index.html`_ zu finden.
+`Image processing <https://docs.contao.org/dev/framework/image-processing/index.html>`_ zu finden.
 
 
 Ausgabe eines Bildes, der per Einzelauswahl eingebunden ist
