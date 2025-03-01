@@ -117,6 +117,13 @@ Für die Filterung der Kinddatensätze gibt es weiterhin eine Sonderfilterregel 
 Damit können alle Kinddatensätze nach Eigenschaften der Elterndaten gefiltert werden - z. B. "Filtere alle Dienstreisen
 nach Mitarbeitern aus Abteilung Vertrieb".
 
+Wird ein Elterndatensatz gelöscht, so werden nicht automatisch auch die Kinddatensätze mit gelöscht. Möchte man dieses
+Verhalten, so kann man das einstellen - siehe :ref:`rst_cookbook_tips_delete_child_items`.
+
+Ebenso gibt es keinen Automatismus, wenn Elterdatensätze kopiert werden das die Kinddatensätze mit kopiert werden. Möchte
+man dieses Verhalten, so kann man das z. B. mit dem PostDuplicateModelEvent des DC_G erreichen - siehe
+`"MM DeepCopy Feature" <https://github.com/w3scout/mm-deepcopy-eventlistener>`_.
+
 
 Varianten
 .........

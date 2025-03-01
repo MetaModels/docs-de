@@ -1,6 +1,6 @@
 .. _rst_cookbook_tips_delete_child_items:
 
-Automatisches löschen von Datensätzen in Kindtabellen
+Automatisches Löschen von Datensätzen in Kindtabellen
 =====================================================
 
 Werden in MetaModels Tabellen als Kindtabellen verknüpft, so werden die (Kind)Datensätze aktuell nicht automatisch
