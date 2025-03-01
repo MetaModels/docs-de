@@ -11,8 +11,8 @@ Man erstellt also einen Filter für "Abteilung xy" und wählt diesen bei den Ein
 Wenn man nun aber auf mehreren Seiten jeweils eine spezielle Abteilung ausgeben möchte, ist es recht umständlich und
 unübersichtlich für jede Abteilung einen separaten Filter anzulegen.
 
-Das kann man umgehen, wenn als Filterregel "Einfache Abfrage" eingebunden ist und man dort die Checkbox
-"Statischer Parameter" setzt.
+Das kann man umgehen, wenn als Filterregel "Einfache Abfrage" für das Attribut "Abteilung" eingebunden ist und man dort
+die Checkbox "Statischer Parameter" setzt.
 
 Ist dies erfolgt, so wird in CE-/FE-Modul MM-Liste bei den Filtereinstellungen ein zusätzliches Selectfeld eingeblendet.
 In diesem wären in unserem Beispielfall alle Abteilungen aufgeführt und man kann eine anzuzeigende Abteilung auswählen.
