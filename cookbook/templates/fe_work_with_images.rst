@@ -30,6 +30,9 @@ Um auch diese Bilder im eigenen Template zu manipulieren, sollen die folgenden S
 Mehr zu den Methoden ist im Contao-Handbuch bei
 `Image processing <https://docs.contao.org/dev/framework/image-processing/index.html>`_ zu finden.
 
+Zum Thema `responsive Images` gibt es einen (noch immer aktuellen)
+`Vortrag von Peter Müller von der CK2016 <https://www.youtube.com/watch?v=ub8yROSQyQ4>`_.
+
 
 Ausgabe eines Bildes, das per Einzelauswahl eingebunden ist
 -----------------------------------------------------------
