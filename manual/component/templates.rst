@@ -30,11 +30,17 @@ Die Ausgabe von vorgerenderten (prerendered) Ausgaben der Widgets macht die Ausg
 aber entsprechend Rechenzeit. Bei sehr vielen gleichzeitigen Ausgaben kann das zu Problemen mit der Serverbelastung
 führen. Als Alternative kann man ungerenderte Ausgaben in der CE-Modul-MM-Liste aktivieren.
 
+Dem Listentemplate kann man für FE-Ausgabe noch Parameter übergeben die z. B. für eine Steuerung eines Sliders oder
+Übersetzungen usw. - siehe ":ref:`rst_cookbook_templates_fe_list_parameters`".
+
 Die **dritte Stufe** bilden die Templates der Attribute ``mm_attr_<Attributstyp>``. Die Auswahl erfolgt bei den Rendersettings
 in den einzelnen Attributen. Diese Templates werden eher dann modifiziert, wenn diese Anpassung auch bei verschiedenen
 Rendersettings zum Tragen kommt - z. B. gibt es für das Attribut Datei ein Template als Ausgabe mit "ul" und eins als
 "div". In den Attributseinstellungen der Rendersettings kann auch eine individuelle CSS-Klasse an das Template
 übergeben werden.
+
+In den Templates von MM können auch die Templates von Contao eingebunden werden um zum Beispiel beim Attribut Text
+eine Ausgabe als You-Tube-ContentElement zu erhalten - siehe ":ref:`rst_cookbook_templates_fe_template_ce_elements`".
 
 **Zusätzlich** gibt es ein Template für die Ausgabe der Paginierung ``mm_pagination`` und eins für die Action-Buttons
 ``mm_actionbutton``.
