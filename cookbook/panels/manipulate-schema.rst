@@ -57,6 +57,8 @@ Ob der eigene Schemamanager registriert und geladen wurde, kann man auf Konsole 
 
 ``php vendor/bin/contao-console debug:container``
 
+Mehr Informationen zum Thema ":ref:`rst_cookbook_specials_register-services`".
+
 .. |br| raw:: html
 
    <br />
