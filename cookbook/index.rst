@@ -38,6 +38,7 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     templates/flatpickr-integration.rst
     templates/fe_template_ce_elements.rst
     templates/fe_template_schema_org.rst
+    templates/fe_work_with_images.rst
     tips/change-table-column-name.rst
     tips/set-route-priority.rst
     tips/delete-child-items.rst

@@ -241,6 +241,8 @@ Registrierung in der ``service.yml``:
          $filterFactory: '@metamodels.filter_setting_factory'
          $renderFactory: '@metamodels.render_setting_factory'
 
+Mehr Informationen zum Thema ":ref:`rst_cookbook_specials_register-services`".
+
 Ausgabe im Twig-Template:
 
 .. code-block:: twig
