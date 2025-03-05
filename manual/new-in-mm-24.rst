@@ -37,6 +37,8 @@ Attribute
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
 * Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+* Inhalt eines Artikels
+    * Support für Einsatz in einer Kindtabelle
 * Land
     * Änderung der Länderkürzel in Großbuchstaben
 * Langtext
@@ -47,6 +49,8 @@ Attribute
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+* Übersetzter Inhalt eines Artikels
+    * Support für Einsatz in einer Kindtabelle
 * Übersetzter Langtext
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Übersetzter Text
