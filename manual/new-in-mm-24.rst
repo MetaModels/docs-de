@@ -37,12 +37,16 @@ Attribute
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
 * Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+* Einzelauswahl [select]
+    * Support für Einsatz mit Popup-Widget in einer Kindtabelle
 * Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
 * Land
     * Änderung der Länderkürzel in Großbuchstaben
 * Langtext
     * Migration für `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
+* Mehrfachauswahl [tags]
+    * Support für Einsatz in einer Kindtabelle
 * Text
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Übersetzte Checkbox
