@@ -49,6 +49,8 @@ siehe `Insert-Tags <https://docs.contao.org/manual/de/artikelverwaltung/insert-t
        {{image::<?= $arrItem['raw']['speaker']['biography_image'] ?>?width=180&height=180&mode=crop&class=img--circle}}
        <!-- ODER -->
        {{picture::<?= $arrItem['raw']['speaker']['biography_image'] ?>?size=_image_circle}}
+       <!-- ODER -->
+       {{figure::<?= $arrItem['raw']['speaker']['biography_image'] ?>?size=_image_circle}}
    <?php endif; ?>
 
 Beispiel für ``$size`` (`siehe <https://docs.contao.org/dev/framework/image-processing/image-sizes/index.html>`_):
