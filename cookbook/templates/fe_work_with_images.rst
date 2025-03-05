@@ -50,7 +50,7 @@ siehe `Insert-Tags <https://docs.contao.org/manual/de/artikelverwaltung/insert-t
        <!-- ODER -->
        {{picture::<?= $arrItem['raw']['speaker']['biography_image'] ?>?size=_image_circle}}
        <!-- ODER -->
-       {{figure::<?= $arrItem['raw']['speaker']['biography_image'] ?>?size=_image_circle}}
+       {{figure::<?= $arrItem['raw']['speaker']['biography_image'] ?>?size=_image_circle&metadata[title]=<?= $arrItem['raw']['speaker']['full_name'] ?>}}
    <?php endif; ?>
 
 Beispiel für ``$size`` (`siehe <https://docs.contao.org/dev/framework/image-processing/image-sizes/index.html>`_):
