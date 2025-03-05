@@ -69,6 +69,8 @@ Frontend-Editing (FEE)
 * bei den Einstellungen der Eingabemaske für einen Datei-Upload werden bei den Widget-Modi je nach aktivierter
   Einstellung "Mehrfachbearbeitung" nur noch die passenden Einstellungen für Einzel- oder Mehrfachupload angezeigt - bei
   einer Umstellung beim Attribut muss das aber entsprechend beim Upload auch umgestellt werden
+* die Anpassung des Zielverzeichnisses oder Dateinamen mit dem Insert-Tag ``{{post::*}}`` ist nicht mehr möglich, da diese
+  in Contao 5 nicht mehr vorhanden ist
 
 
 Known-Issues
@@ -99,6 +101,7 @@ im Blick behalten werden:
   `EAP-News Oktober II 2024 <https://now.metamodel.me/de/mm-eap-newsletter-2-4/details/eap-info-mm-2-4-oktober-ii-2024>`_
 * bei Attribut Land wurden die Schreibweisen der Länderkürzel auf Großbuchstaben wie in Contao geändert - vorhandene
   Daten werden mit einer Migration angepasst; ggf. eigene Prüfungen oder Speicherungen anpassen
+* bei FFE und Dateiupload: prüfen ob Insert-Tag ``{{post::*}}`` verwendet wurde und anpassen (s. o.)
 
 
 Re-Finanzierung

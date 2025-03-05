@@ -169,6 +169,9 @@ Ebene bei ``pid`` die jeweilige ``id`` der übergeordneten Ebene enthält.
 Wird ein Model mit Hierarchie von einem anderen Model über eine Relation eingebunden (Einzel- oder Mehrfachauswahl),
 so spiegelt sich die Hierarchie nicht im Aufbau der Selectauswahl oder Checkboxliste wieder.
 
+Models mit einer Hierarchie / Baumstruktur können (aktuell) nicht als Kind-Tabelle eingesetzt werden, da die ``pid``
+als Relation zum Elterndatensatz verwendet wird.
+
 
 .. |br| raw:: html
 
