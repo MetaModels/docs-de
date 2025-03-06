@@ -14,6 +14,8 @@ Attribut in den Rendersettings. Hier ist die Checkbox "Als Bildfeld mit Vorschau
 Bildgröße zu wählen (das gilt auch für Anzeige im BE in der Listendarstellung). Optional ist die Auswahl eines
 Platzhalterbilds möglich als auch eine Ansicht in einer Lightbox.
 
+Die Einstellung gilt für die Anzeige sowohl für das FE als auch im BE (sofern dort die Bilder ausgegeben werden).
+
 In einem individuellen Template im FE ist für die Darstellung als Bild die Ausgabe des html5-Knotens notwendig - |br|
 z. B. ``<?= $arrItem['html5']['my_image'] ?>``.
 

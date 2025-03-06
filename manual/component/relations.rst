@@ -124,6 +124,8 @@ Ebenso gibt es keinen Automatismus, wenn Elterdatensätze kopiert werden das die
 man dieses Verhalten, so kann man das z. B. mit dem PostDuplicateModelEvent des DC_G erreichen - siehe
 `"MM DeepCopy Feature" <https://github.com/w3scout/mm-deepcopy-eventlistener>`_.
 
+Bitte bei Verwendung von Varianten oder Hierarchie/Baumstruktur in Kindtabellen den aktuellen Stand prüfen (s. u.).
+
 
 Varianten
 .........
@@ -155,6 +157,8 @@ Diese zweistufige Hierarchie wird durch die Systemspalten ``varbase`` und ``varg
 * Kinddatensätze haben bei ``varbase`` eine ``0`` und bei ``vargroup`` die ID des Elterndatensatzes
 
 In der :ref:`MM-API <ref_api_interf_mm>` gibt es verschiedene Abfragemöglichkeiten nach den Variantentypen.
+
+Mit MM 2.3 können Varianten auch in Kindtabellen verwendet werden.
 
 
 Hierarchie / Baumstruktur
