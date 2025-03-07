@@ -53,6 +53,9 @@ Hat man ein individuelles Template als ``html5`` angelegt z. B. ``mm_attr_text_s
 ``mm_attr_text_special.text`` gesucht - wird das nicht gefunden, kommt das Standardtemplate ``mm_attr_text.html5``
 zum Einsatz.
 
+Neben ``.text`` und ``.html5`` könnte es in Zukunft weitere Formate wie ``.json`` oder ``.xml`` geben - das Format
+``.xhtml`` ist inzwischen nicht mehr dabei.
+
 **Zusätzlich** gibt es ein Template für die Ausgabe der Paginierung ``mm_pagination`` und eins für die Action-Buttons
 ``mm_actionbutton``.
 
