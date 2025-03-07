@@ -1,7 +1,7 @@
 .. _rst_cookbook_tips_index:
 
-Tipps
-=====
+Tipps (divers)
+==============
 
 Diverse Tipps.
 

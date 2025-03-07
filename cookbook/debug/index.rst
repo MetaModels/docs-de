@@ -9,7 +9,7 @@ Tipps zum Debugging von MM bzw. Contao.
 .. toctree::
     :maxdepth: 1
 
-    debug/templates.rst
-    debug/sql-tips.rst
+    templates.rst
+    sql-tips.rst
 
 
