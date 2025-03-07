@@ -4,7 +4,7 @@ Merkliste für MetaModels
 ========================
 
 .. warning:: Die Merkliste ist sofort einsatzbereit (siehe Installation) wird
-   aber erst nach Erreichen der aktuellen Fundrasingsumme von 6.020€ frei geschaltet. |br|
+   aber erst nach Erreichen der aktuellen Fundrasingsumme von 6.300€ frei geschaltet. |br|
    Für einen Zugang bitte eine E-Mail an info@e-spin.de
 
 Die Merkliste (Notelist) erweitert MetaModels um die Möglichkeit, in der
@@ -41,9 +41,9 @@ Installation per Contao-Manager oder Composer
 
 Voraussetzungen für die Installation:
 
-* PHP 7.2 || PHP 8.1
-* Contao 4.4.x/4.9.x || 4.13.x
-* MetaModels core 2.1/2.2 und DCG 2.1/2.2 || MetaModels core 2.3 und DCG 2.3
+* PHP 7.2 || PHP 8.1 || PHP 8.2
+* Contao 4.4.x/4.9.x || 4.13.x || 5.3
+* MetaModels core 2.1/2.2 und DCG 2.1/2.2 || MetaModels core 2.3 und DCG 2.3 || MetaModels core 2.4 und DCG 2.4
 * Zugang zum geschützten Repository - Daten nach Spende
 
 
@@ -309,7 +309,8 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
 * `Nationalfonds AT <https://www.nationalfonds.org>`_: 350 €
 * `AFM-Werbestudio <https://www.afm-werbestudio.de>`_: 350 €
-* `Ulf Spethmann <https://derdigitalist.de/>`_: 350 €
+* `Ulf Spethmann <https://derdigitalist.de>`_: 350 €
+* `Sienos <https://www.sineos.de>`_: 350 €
 
 
 (Spenden in Netto)
