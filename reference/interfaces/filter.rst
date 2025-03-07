@@ -71,8 +71,11 @@ aufgerufenen Klassen sollten als qualifizierter Import per "use" eingebunden wer
    $filter->addFilterRule(new \MetaModels\Filter\Rules\SearchAttribute($attribute, $value, $languages));
 
    // eigenes SQL:
-   $query = sprintf('SELECT * FROM %s WHERE published = 1', $modelName);
+   $query = \sprintf('SELECT * FROM %s WHERE published = 1', $modelName);
    $filter->addFilterRule(new \MetaModels\Filter\Rules\SimpleQuery($query));
+   // Alternativ siehe https://www.doctrine-project.org/projects/doctrine-dbal/en/4.2/reference/data-retrieval-and-manipulation.html
+   $query = \sprintf('SELECT * FROM %s WHERE published = ?', $modelName);
+   $filter->addFilterRule(new \MetaModels\Filter\Rules\SimpleQuery($query, [1]));
 
    // Filterung mit mehreren Regeln:
    // Verknüpfung mit ConditionAnd() oder ConditionOr()
