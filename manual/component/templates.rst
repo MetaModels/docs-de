@@ -43,11 +43,15 @@ In den Templates von MM können auch die Templates von Contao eingebunden werden
 eine Ausgabe als You-Tube-ContentElement zu erhalten - siehe ":ref:`rst_cookbook_templates_fe_template_ce_elements`".
 
 Für die Listen- und Attributstemplates ("Stufe zwei und drei") gibt es die **Templates in den Typen bzw. Extension
-``.text`` und ``.html5``** und immer gleichlautendem Dateinamen. Das Rendering ``.text`` ist immer vorhanden und wird in
-der Ausgabe im Knoten ``text`` als auch in ``raw`` verwendet. Ob auch ``.html5`` verwendet wird, hängt von den
+``.text`` und ``.html5``** und immer gleichlautendem Dateinamen. Das Rendering als ``.text`` ist immer vorhanden und
+wird in der Ausgabe im Knoten ``text`` als auch in ``raw`` verwendet. Ob auch ``.html5`` verwendet wird, hängt von den
 Einstellungen des Rendersettings ab. Die Ausgabe kann durch die Wahl bei "Ausgabeformat" beeinflusst werden. Ist dort
 keine Auswahl getroffen, wird die Standardausgabe der Webseite verwendet - im BE und FE üblicher Weise ``HTML5``. Es ist
 aber auch möglich die Ausgabe auf ein entsprechendes Format festzulegen wie z. B. ``Text``.
+
+Hat man ein individuelles Template als ``html5`` angelegt z. B. ``mm_attr_text_special.html5`` wird auch nach
+``mm_attr_text_special.text`` gesucht - wird das nicht gefunden, kommt das Standardtemplate ``mm_attr_text.html5``
+zum Einsatz.
 
 **Zusätzlich** gibt es ein Template für die Ausgabe der Paginierung ``mm_pagination`` und eins für die Action-Buttons
 ``mm_actionbutton``.
