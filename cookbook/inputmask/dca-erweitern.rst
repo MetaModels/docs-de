@@ -1,4 +1,4 @@
-.. _rst_cookbook_panels_regex:
+.. _rst_cookbook_inputmask_dca:
 
 DCA erweitern
 =============

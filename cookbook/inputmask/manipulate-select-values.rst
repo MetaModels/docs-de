@@ -1,4 +1,4 @@
-.. _rst_cookbook_panels_manipulate-select-values:
+.. _rst_cookbook_inputmask_manipulate-select-values:
 
 Eingabemaske: Einzelauswahl um weitere Werte ergänzen
 =====================================================
@@ -118,7 +118,7 @@ Im Attribut "Select" eingestellte Filter für das Backend werden hiermit
 übergangen.
 
 
-.. |img_manipulate-select-values_01| image:: /_img/screenshots/cookbook/panels/manipulate-select-values_01.jpg
+.. |img_manipulate-select-values_01| image:: /_img/screenshots/cookbook/inputmask/manipulate-select-values_01.jpg
 
 .. |br| raw:: html
 

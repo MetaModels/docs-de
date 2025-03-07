@@ -1,5 +1,5 @@
-MetaModels Referenz
-===================
+MetaModels Referenz und API
+===========================
 
 Die Referenzen sind hauptsächlich für Entwickler gedacht, die MetaModels erweitern wollen oder eigene Attribute, Filter
 oder mehr erstellen wollen.

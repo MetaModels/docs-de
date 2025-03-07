@@ -16,40 +16,15 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
 
     checklists/index.rst
     symfony/mm-2-1-tips.rst
-    panels/manipulate-schema.rst
-    panels/default-values.rst
-    panels/own-regex.rst
-    panels/checkbox-negation.rst
-    panels/manipulate-select-values.rst
-    filter/custom-sql.rst
-    filter/filter-with-forwarding.rst
-    filter/exclusion.rst
-    filter/search-text-at-two-fields.rst
-    filter/filter-with-static-parameter.rst
-    filter/exclude-url-from-search-index.rst
-    frontend/output-item-count.rst
-    frontend/array-helper.rst
-    renderings/encrypt-email.rst
-    debug/templates.rst
-    debug/sql-tips.rst
-    templates/fe_list_sorting.rst
-    templates/fe_list_parameters.rst
-    templates/fe_redirect_to_list.rst
-    templates/flatpickr-integration.rst
-    templates/fe_template_ce_elements.rst
-    templates/fe_template_schema_org.rst
-    templates/fe_work_with_images.rst
-    tips/change-table-column-name.rst
-    tips/set-route-priority.rst
-    tips/delete-child-items.rst
-    tips/speed-up-backend-list.rst
-    specials/ce_element_for_editors.rst
-    specials/export-excel.rst
+    debug/index.rst
+    inputmask/index.rst
+    filter/index.rst
+    frontend/index.rst
+    templates/index.rst
+    tips/index.rst
+    specials/index.rst
     other-tutorials/index.rst
-    other-tutorials/videos.rst
-    reference/interfaces/metamodels.rst
-    reference/interfaces/filter.rst
-
+    reference/index.rst
 
 .. _manual@metamodel.me: manual\@metamodel.me?Subject=Mein%20Rezept%20f%FCr%20das%20MM-Kochbuch&Body=Mein%20Rezept%3A%0A
 

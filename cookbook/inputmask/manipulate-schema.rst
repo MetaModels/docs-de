@@ -1,4 +1,4 @@
-.. _rst_cookbook_panels_manipulate-schema:
+.. _rst_cookbook_inputmask_manipulate-schema:
 
 Anpassung des Schema für Attribute
 ==================================

@@ -1,4 +1,4 @@
-.. _rst_cookbook_panels_default-values:
+.. _rst_cookbook_inputmask_default-values:
 
 Eingabemaske: automatische Wertevorgaben
 ========================================

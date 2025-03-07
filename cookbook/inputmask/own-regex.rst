@@ -1,4 +1,4 @@
-.. _rst_cookbook_panels_regex:
+.. _rst_cookbook_inputmask_regex:
 
 Eingabemaske: eigene RegEx-Prüfung
 ==================================
@@ -10,7 +10,8 @@ eingebaut werden.
 Um diesen einzubauen bzw. für das Feld in der Eingabemaske zu aktivieren,
 muss die Prüfung mit "Contao-Boardmitteln" zunächst zur Verfügung stehen.
 
-Dafür wird der Hook "addCustomRegex" wie folgt angelegt - siehe `API: addCustomRegex <https://docs.contao.org/books/api/extensions/hooks/addCustomRegexp.html>`_
+Dafür wird der Hook "addCustomRegex" wie folgt angelegt - siehe
+`API: addCustomRegex <https://docs.contao.org/books/api/extensions/hooks/addCustomRegexp.html>`_
 
 .. note:: Die folgende Beschreibung ist noch für Contao 4.4 - aktuelle Implementierungen sollten im Ordner `src/`
    angelegt werden
@@ -30,10 +31,11 @@ Fall sein, ggf. alle Caches im Backend löschen und die Dateien kontrollieren.
 
 |img_own-regex|
 
+
 Quelltexte
 ----------
 
-In den Dateien gefindet sich der folgende Quelltext:
+In den Dateien befindet sich der folgende Quelltext:
 
 Datei /system/modules/metamodels_mycustoms/classes/MyClass.php
 
@@ -121,5 +123,5 @@ findet man genauere RegEx-Überprüfungen oder man könnte hier auch eine Prüfu
 eine Liste mit in Deutschland vergebenen PLZ einbinden.
 
 
-.. |img_own-regex| image:: /_img/screenshots/cookbook/panels/own-regex.jpg
+.. |img_own-regex| image:: /_img/screenshots/cookbook/inputmask/own-regex.jpg
 

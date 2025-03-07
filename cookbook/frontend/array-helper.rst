@@ -1,7 +1,7 @@
 .. _rst_cookbook_frontend_array-helper:
 
 Array-Helper
-===============
+============
 
 In vielen Fällen baut man sich sein Template für die Frontend-
 Ausgabe aus HTML und "echo" der PHP-Variablen des Ausgabe-Arrays
@@ -26,28 +26,30 @@ ergänzt:
     <?php
     // http://stackoverflow.com/a/14518402
     function printArray($array, $path=false, $top=true) {
-    	$data = ""; $delimiter = "~~|~~"; $p = null;
-    	if(is_array($array)){
-    	  foreach($array as $key => $a){
-    	    if(!is_array($a) || empty($a)){
-    	      if(is_array($a)){
-    	      	$data .= $path."['{$key}'] = array();".$delimiter;
-    	      } else {
-    	        $data .= $path."['{$key}'] = \"".addslashes($a)."\";".$delimiter;
-    	      }
-    	    } else {
-    	      $data .= printArray($a, $path."['{$key}']", false);
-    	    }    
-    	  }
-    	}
-    	if($top){
-    	  $return = "";
-    	  foreach(explode($delimiter, $data) as $value){
-    	    if(!empty($value)){ $return .= '$arrItem'.$value."\n"; }
-    	  };
-    	  return $return;
-    	}
-    	return $data;
+        $data = ""; $delimiter = "~~|~~"; $p = null;
+        if(is_array($array)){
+            foreach($array as $key => $a){
+                if(!is_array($a) || empty($a)){
+                    if(is_array($a)){
+                        $data .= $path."['{$key}'] = array();".$delimiter;
+                    } else {
+                        $data .= $path."['{$key}'] = \"".addslashes($a)."\";".$delimiter;
+                    }
+                } else {
+                    $data .= printArray($a, $path."['{$key}']", false);
+                }
+            }
+        }
+        if($top){
+            $return = "";
+            foreach(explode($delimiter, $data) as $value){
+                if(!empty($value)){ $return .= '$arrItem'.$value."\n"; }
+            };
+
+            return $return;
+        }
+
+        return $data;
     }
     
     echo "<!-- DEBUG START\n";

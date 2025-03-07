@@ -1,4 +1,4 @@
-.. _rst_cookbook_panels_checkbox-negation:
+.. _rst_cookbook_inputmask_checkbox-negation:
 
 Ansichtsbedingung: Anzeige wenn Checkbox nicht gesetzt
 ======================================================
@@ -30,9 +30,9 @@ E-Mail ausgeblendet
 
 |img_checkbox-negation_03|
 
-.. |img_checkbox-negation_01| image:: /_img/screenshots/cookbook/panels/checkbox-negation_01.jpg
-.. |img_checkbox-negation_02| image:: /_img/screenshots/cookbook/panels/checkbox-negation_02.jpg
-.. |img_checkbox-negation_03| image:: /_img/screenshots/cookbook/panels/checkbox-negation_03.jpg
+.. |img_checkbox-negation_01| image:: /_img/screenshots/cookbook/inputmask/checkbox-negation_01.jpg
+.. |img_checkbox-negation_02| image:: /_img/screenshots/cookbook/inputmask/checkbox-negation_02.jpg
+.. |img_checkbox-negation_03| image:: /_img/screenshots/cookbook/inputmask/checkbox-negation_03.jpg
 
 
 .. |br| raw:: html
