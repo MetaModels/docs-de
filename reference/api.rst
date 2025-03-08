@@ -5,8 +5,7 @@ MetaModels API
 
 .. warning:: Noch im Aufbau!
 
-Die MetaModels API bildet die Schnittstelle zur eigenen Programmierung und
-Erweiterung.
+Die MetaModels API bildet die Schnittstelle zur eigenen Programmierung und Erweiterung.
 
 
 .. _ref_api_interf:
