@@ -497,10 +497,10 @@ speichert den aktuellen Wert bzw. Werte für das Item
 Beispiel:
 .........
 
-Das folgende Beispiel soll einen kleinen Einstieg in die Arbeit mit den
-Interfaces demonstrieren. Das Beispiel kann z.B. in eine Template-Datei
-eingefügt und per Inserttag ``{{file::mm_interfaces.html5}}`` in einem 
-Artikel-Inhaltselement ausgegeben werden.
+Das folgende Beispiel soll einen kleinen Einstieg in die Arbeit mit den Interfaces demonstrieren. Zum Testen der Arbeit
+mit der API kann man sich mit dem
+`Vortrag von Ingolf Steinhardt zur CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
+inspirieren lassen.
 
 Beispiele für den Einsatz von Filtern sind hier zu finden :ref:`ref_api_interf_filter`
 
