@@ -17,21 +17,20 @@ Abstand zwischen den zwei Punkten wird mit der `Haversine-Formel <https://en.wik
 ermittelt.
 
 Die Berechnung der Entfernung der Datensätze zur eingegebenen Adresse
-erfolgt auf der Grundlage des Längen- und Breitengerades. Diese beiden Werte
+erfolgt auf der Grundlage des Längen- und Breitengrades. Diese beiden Werte
 müssen jeweils für die im MetaModel gespeicherte Adresse als auch für die
 eingegebene Adresse vorliegen.
 
 Für die im MetaModel gespeicherten Adressen muss jeweils ein Attribut für
 den Längengrad (longitude) und den Breitengrad (latitude) z.B. als "geo_lat"
-und "geo_long" mit dem Typ "Text" angelegt werden.
+und "geo_long" mit dem Typ "Dezimal" oder "Text" angelegt werden.
 
-Die Auflösung der eingegebenen Adresse in Längen- und Breitengerad erfolgt
+Die Auflösung der eingegebenen Adresse in Längen- und Breitengrad erfolgt
 direkt beim Absenden der Filteranfrage im Frontend über einen "Lookup" -
 für diesen stehen die Services von Google-Maps oder OpenStreetMap zur
 Verfügung.
 
-Es folgt eine Kurzanleitung zur Konfiguration der Umkreissuche, die weiter
-ergänzt wird.
+Es folgt eine Kurzanleitung zur Konfiguration der Umkreissuche.
 
 
 Filter installieren
@@ -47,7 +46,7 @@ Attribute anlegen
 
 Für den Längengrad (longitude) und den Breitengrad (latitude) ist jeweils ein
 Attribut vom Typ "Dezimal" oder "Text" anzulegen z.B. als "geo_lat" und "geo_long". Die
-Attribute werden nur für die Filterung benötigt und müssen für die Fronendausgabe nicht
+Attribute werden nur für die Filterung benötigt und müssen für die Frontendausgabe nicht
 eingerichtet werden.
 
 |img_attribute_01|
@@ -73,7 +72,7 @@ Unter Filtersets wird ein neues Filterset z.B. mit der Bezeichnung
 * Ländermodus: Vorgabe ob und wenn ja welches Land der Adresse für die Lookup-
   Suche hinzugefügt werden soll (z.B. Voreinstellung mit "Deutschland")
 * LookUp Service: Auswahl ob Google-Map, OpenStreetMap oder direkte Koordinaten - es
-  können auch mehere Services angelegt werden; diese werden nacheinander abgearbeitet
+  können auch mehrere Services angelegt werden; diese werden nacheinander abgearbeitet
 
 |img_filter_01|
 
@@ -120,6 +119,56 @@ werden.
 
 Fehler und Hinweise bitte bei `Github einpflegen <https://github.com/MetaModels/filter_perimetersearch>`_
 - auch Finanzierungen weiterer Funktionen bzw. der Weiterentwicklung sind willkommen.
+
+
+.. _extended_geodistance:
+Geo-Entfernung
+==============
+
+Die Umkreissuche ermittelt die Datensätze, die sich innerhalb eines Umkreises befindet. Möchte man zudem noch wissen,
+wie weit die Datenpunkte von der Bezugsadresse entfernt sind, muss man zusätzlich das Attribut "Geo-Entfernung"
+installieren. Dieses "virtuelle Attribut" ist lediglich dafür zuständig, bei einer Filterung per Umkreissuche die
+entsprechende Entfernung zu berechnen und den Datensätzen zu übergeben. Der Standardwert des Attributes ist ``-1``. Die
+Ausgabe ist in km.
+
+Attribute anlegen
+-----------------
+
+Die Einstellungen des Attributes sind analog denen der Filterregel - zu beachten ist das Feld "GET-Parameter für Adresse"
+dessen Wert identisch mit dem Wert "URL-Parameter" der Filterregel Umkreissuche sein muss.
+
+* GET-Parameter für Adresse: URL-Parameter der Filterregel Umkreissuche
+* Datenmodus: Multimodus (z. Z. nur Multimodus verfügbar)
+* Attribute für Breite und Länge: entsprechende Attribute auswählen
+* Ländervorgabe: Vorgabe ob und wenn ja welches Land der Adresse für die Lookup-
+  Suche hinzugefügt werden soll (z.B. Voreinstellung mit "Deutschland")
+* LookUp Services: Auswahl ob Google-Map, OpenStreetMap oder direkte Koordinaten - es
+  können auch mehrere Services angelegt werden; diese werden nacheinander abgearbeitet
+
+Hinweise
+--------
+
+Sollen die Ergebnisse in der MM-Liste nach einer Umkreissuche nach der Geo-Entfernung sortiert werden, muss man bei
+der Option "Sortieren nach" das Attribut der Geo-Entfernung auswählen sowie Aufsteigend (ASC).
+
+Möchte man die Liste als Standard nach einem anderen Attribut wie Name o. ä. sortiert haben nur bei der Umkreissuche
+umschalten, muss man das entsprechend konfigurieren. Zunächst muss eine Aktivierung der Checkbox "Überschreiben der
+Sortierung erlauben" erfolgen. Damit kann die Sortierung dynamisch angepasst bzw. gewechselt werden.
+
+Dafür kann man z. B. im :ref:`Template der MM-Liste <component_templates>` eine automatische Umleitung einrichten - ob
+die Umkreissuche aktiv ist, ermittelt man z. B. über ``filterParams`` mit dem URL-Parameter ``adresse``
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   if(\array_key_exists('adresse', $this->filterParams) {
+       // Umleitung Sortierung Geo-Abstand (mit Parameter)...
+   } else {
+       // Umleitung Sortierung Standardsortierung (ohne Parameter)...
+   }
+
+Mehr zu den :ref:`Sortierungsparametern hier <rst_cookbook_templates_fe_list_sorting>`.
 
 
 
