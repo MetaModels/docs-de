@@ -68,7 +68,8 @@ Unter Filtersets wird ein neues Filterset z.B. mit der Bezeichnung
 * Attribute für Breite und Länge: entsprechende Attribute auswählen
 * Label: Bezeichnung für die Eingabe der Adresse ("Mittelpunkt") - z.B. "Adresse"
 * Bereichslabel: Bezeichnung für die Angabe der Größe des Radius - z.B. "Radius in km"
-* Bereichsmodus: Auswahl, ob freies Eingabefeld oder feste Werte (Auswahlmodus)
+* Bereichsmodus: Auswahl, ob freies Eingabefeld oder feste Werte (Auswahlmodus) - bei einer Liste von festen Werten kann
+  der Standartwert vorgegeben werden
 * Ländermodus: Vorgabe ob und wenn ja welches Land der Adresse für die Lookup-
   Suche hinzugefügt werden soll (z.B. Voreinstellung mit "Deutschland")
 * LookUp Service: Auswahl ob Google-Map, OpenStreetMap oder direkte Koordinaten - es
