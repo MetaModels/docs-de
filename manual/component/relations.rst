@@ -4,12 +4,12 @@ Relationen in MetaModels
 ========================
 
 Eines der Hauptaufgaben bei MM ist es, über einen geeigneten Aufbau der Models eine passende Datenstruktur zu erstellen.
-Dazu gehört die Aufteilung gleichartiger Werte in separate Model und eine Relation (Verknüpfung) zwischen den Models
+Dazu gehört die Aufteilung gleichartiger Werte in separate Models und eine Relation (Verknüpfung) zwischen den Models
 herzustellen. Üblicher Weise spricht man dann von einer
 `Normalisierung <https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)>`_ bei relationalen Datenbanken.
 
 Zum Beispiel würde man den Namen einer Abteilung nicht im Datensatz eines Mitarbeiters mit abspeichern. Stattdessen
-legt man eine eigene Tabelle "Abteilung" an und speichert in Tabelle "Mitarbeiter" nur die Relation - also die ID
+legt man eine eigene Tabelle "Abteilung" an und speichert in der Tabelle "Mitarbeiter" nur die Relation - also die ID
 des entsprechenden Datensatzes aus "Abteilung".
 
 So kann man z. B. den Namen der Abteilung (Werbung zu Marketing) an einer Stelle ändern und muss nicht alle Datensätze
@@ -72,7 +72,7 @@ Möchte man eine Relation zu mehreren Werten wie z. B. Mitarbeiter zu mehren Spr
 In der Eingabemaske im BE wird mit dem Attribut standardmäßig eine Checkboxliste erzeugt - es gibt aber auch noch
 weitere Optionen bei den Einstellungen des Attributs bei der Eingabemaske.
 
-Mei dem Attribut gibt es zu beachten, dass die Werte wie bei m:n-Relationen in einer separaten Relationstabelle
+Bei dem Attribut gibt es zu beachten, dass die Werte wie bei m:n-Relationen in einer separaten Relationstabelle
 ``tl_metamodels_tag_relations`` gespeichert werden. Bei eigenen SQL-Queries muss man diese Tabelle mit
 einbinden.
 
@@ -96,7 +96,7 @@ eine Tabelle (Kind), die in ihrer Hierarchie einer übergeordneten Tabelle (Elte
 Mitarbeiter könnten Dienstreisen als Kindtabelle angelegt werden. Die Daten sind üblicher Weise immer einem Mitarbeiter
 zugeordnet und werden als alleinstehende Eingabeliste gepflegt.
 
-Die Relation erfolgt über die Systemspalten ``pid`` und ``id``, wobei die alle ``pid`` der Kinddatensätze die ``id`` des
+Die Relation erfolgt über die Systemspalten ``pid`` und ``id``, wobei die ``pid`` der Kinddatensätze die ``id`` des
 Elterndatensatzes beinhalten.
 
 Die Verknüpfung wird über die Einstellungen der Eingabemaske konfiguriert indem bei "Integration: Als Kind-Tabelle" und
@@ -107,7 +107,7 @@ Zudem ist bis auf Sonderfälle bei "Render-Modus: Elternelement vorhanden" auszu
 von ``pid`` zu ``id`` beim Anlegen des Kinddatensatzes erzeugt.
 
 Der Zugriff auf die Liste der Kinddatensätze erfolgt über ein Icon in der Zeile der Elterndatensätze bei den
-Bearbeitungsicons - optional ist die Auswahl eigenes eigenen Icons möglich.
+Bearbeitungsicons - optional ist die Auswahl eines eigenen Icons möglich.
 
 Bei der Arbeit mit Kind-Tabellen ist zu beachten, dass "Eltern nicht wissen, dass sie Kinder haben", d. h. in der
 Ausgabe im FE gibt es keine automatische Ausgabe der Kinddaten. Man kann die Kinddatensätze eines Elterndatensatzes
@@ -120,7 +120,7 @@ nach Mitarbeitern aus Abteilung Vertrieb".
 Wird ein Elterndatensatz gelöscht, so werden nicht automatisch auch die Kinddatensätze mit gelöscht. Möchte man dieses
 Verhalten, so kann man das einstellen - siehe :ref:`rst_cookbook_tips_delete_child_items`.
 
-Ebenso gibt es keinen Automatismus, wenn Elterdatensätze kopiert werden das die Kinddatensätze mit kopiert werden. Möchte
+Ebenso gibt es keinen Automatismus, dass die Kinddatensätze mit kopiert werden, wenn Elterdatensätze kopiert werden. Möchte
 man dieses Verhalten, so kann man das z. B. mit dem PostDuplicateModelEvent des DC_G erreichen - siehe
 `"MM DeepCopy Feature" <https://github.com/w3scout/mm-deepcopy-eventlistener>`_.
 
@@ -138,14 +138,14 @@ Um Varianten für ein Model zu aktivieren, muss man die die entsprechende Checkb
 ist bei den Attributen die Checkbox "Variant" aktiv und kann gesetzt werden. Für alle Attribute die variant/variable
 sein sollen, ist die Checkbox zu setzen - in dem Beispiel oben die Farbe und/oder Material.
 
-Die Elterndatensätze wie gehabt ausgefüllt werden - in der BE-Liste der Datensätze gibt es bei Varianten ein zusätzliches
+Wenn die Elterndatensätze wie gehabt ausgefüllt wurden erscheint in der BE-Liste der Datensätze bei Varianten ein zusätzliches
 Icon, um Kinddatensätze anzulegen. Die Eingabemaske zum Editieren eines Kinddatensatzes ist soweit identisch mit der
 Maske des Elterndatensatzes, jedoch sind nur die Attribute bearbeitbar, die als Variant spezifiziert wurden - alle
 anderen (invarianten) Widgets sind automatisch nur-lesend (readonly).
 
 Das besondere an Varianten ist, dass alle nicht-varianten Werte aus dem Elterndatensatz automatisch an die
-Kinddatensätze übertragen werden - das nicht nur beim Erstellen, sondern auch bei Änderungen. In den Kinddatensätzen
-sind somit immer die aktuellen Werte des Elterndatensatzes vorhanden und muss von dort nicht extra abgefragt werden.
+Kinddatensätze übertragen werden - und das nicht nur beim Erstellen, sondern auch bei Änderungen. In den Kinddatensätzen
+sind somit immer die aktuellen Werte des Elterndatensatzes vorhanden und müssen von dort nicht extra abgefragt werden.
 
 Dadurch muss man Attributen, die eindeutige Werte (unique) enthalten (z. B. Alias) etwas mehr Beachtung schenken. Die
 Prüfung auf Eindeutigkeit bezieht sich auf alle Datensätze in der Tabelle und nicht nur auf Elterndatensätze. Bei
@@ -167,7 +167,7 @@ Hierarchie / Baumstruktur
 Um eine Baumstruktur wie z. B. der Seitenbaum von Contao zu erstellen, kann man in den Einstellungen der Eingabemaske
 bei "Render-Modus: Hierarchie" wählen. Zudem muss die Standardsortierung auf "Manuell" gesetzt werden.
 
-Die Relation in der hierarchischen Struktur wir klassisch über ``id`` ``pid`` aufgebaut, wobei jede tiefergelegene
+Die Relation in der hierarchischen Struktur wird klassisch über ``id`` ``pid`` aufgebaut, wobei jede tiefergelegene
 Ebene bei ``pid`` die jeweilige ``id`` der übergeordneten Ebene enthält.
 
 Wird ein Model mit Hierarchie von einem anderen Model über eine Relation eingebunden (Einzel- oder Mehrfachauswahl),

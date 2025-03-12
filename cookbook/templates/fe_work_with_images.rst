@@ -4,7 +4,7 @@ Arbeiten mit Bildern in Templates
 =================================
 
 Für die Ausgabe von einem oder mehreren Bildern in MetaModels steht das Attribut Datei zur Verfügung. Zur Auswahl einer
-Datei oder mehrere Dateien gibt es in der Eingabemaske einen Button der ein Popup zur Ansicht der Dateiverwaltung.
+Datei oder mehrere Dateien gibt es in der Eingabemaske einen Button der ein Popup zur Ansicht der Dateiverwaltung öffnet.
 
 In den Grundeinstellungen des Attributes kann man verschiedene Optionen setzen wie Basispfad, ein oder mehrere Auswahlen,
 Dateitypen usw.
