@@ -270,7 +270,349 @@ Ausgabe im Twig-Template:
 Auswahl und Anzeige mit eigenem Content-Element
 -----------------------------------------------
 
-... folgt je nach Finanzierung des Artikels/Handbuchs...
-
 Möchte man die Funktionalität mit "Contao-Boardmitteln" statt mit einer Erweiterung implementieren, so kann man ein
-eigenes Inhaltselement erstellen...
+eigenes Inhaltselement erstellen.
+
+In dem Beispiel soll eine Liste von MM-Datensätzen als Produkte auswählbar sein und auf der Webseite dargestellt werden.
+Die Reihenfolge der Ausgabe soll individuell einstellbar sein.
+
+Zunächst wird eine DCA-Konfiguration und die Übersetzungen angelegt. Für die individuelle Reihenfolge wird der
+``inputType`` als ``checkboxWizard`` definiert. Nach dem Anlegen der DCA-Definition muss eine Migration der Datenbank
+erfolgen.
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // contao/dca/tl_content.php
+   use Doctrine\DBAL\Platforms\MySQLPlatform;
+
+   $GLOBALS['TL_DCA']['tl_content']['palettes']['mm_products'] = '
+       {type_legend},type,headline;
+       {mm_products_legend},mm_products;
+       {protected_legend:hide},protected;
+       {expert_legend:hide},guests,cssID;
+       {invisible_legend:hide},invisible,start,stop;';
+
+   $GLOBALS['TL_DCA']['tl_content']['fields']['mm_products'] = [
+       'label'            => &$GLOBALS['TL_LANG']['tl_content']['mm_products'],
+       'inputType'        => 'checkboxWizard',
+       //'options_callback' => See attribute config in MmProductsCallbackListener
+       'eval'             => [
+           'mandatory' => true,
+           'multiple'  => true,
+           'tl_class'  => 'w50',
+       ],
+       'sql'              => [
+           'type'    => 'blob',
+           'length'  => MySQLPlatform::LENGTH_LIMIT_BLOB,
+           'notnull' => false,
+       ],
+   ];
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // contao/languages/en/tl_content.php
+
+   // CTE
+   $GLOBALS['TL_LANG']['CTE']['mm_products'] = ['CE Product selection', 'CE Product selection for MM products'];
+   // Legends
+   $GLOBALS['TL_LANG']['tl_content']['mm_products_legend'] = 'Product selection';
+   // Fields
+   $GLOBALS['TL_LANG']['tl_content']['mm_products'] = ['Product selection', 'Select several products.'];
+
+
+Für die Generierung der Auswahlliste für das neue ContentElement müssen die Datensätze aus MM ausgelesen werden.
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/EventListener/DataContainer/MmProductsCallbackListener.php
+   namespace App\EventListener\DataContainer;
+
+   use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
+   use Contao\DataContainer;
+   use MetaModels\Filter\Setting\FilterSettingFactory;
+   use MetaModels\IFactory;
+   use MetaModels\IMetaModel;
+
+   use function sprintf;
+
+   #[AsCallback(table: 'tl_content', target: 'fields.mm_products.options')]
+   class MmProductsCallbackListener
+   {
+       public function __construct(
+           private readonly IFactory $factory,
+           private readonly FilterSettingFactory $filterFactory,
+       ) {
+       }
+
+       public function __invoke(DataContainer|null $dc = null): array
+       {
+           // Produkt-Liste.
+           $options = [];
+
+           // Name der MetaModel Tabelle.
+           $modelName = 'mm_products';
+           // ID des Filters "Liste Veröffentlicht".
+           $filterId = 4;
+
+           // Items ermitteln - sortiert nach Name.
+           $model = $this->factory->getMetaModel($modelName);
+           assert($model instanceof IMetaModel);
+           $filter           = $model->getEmptyFilter();
+           $filterCollection = $this->filterFactory->createCollection($filterId);
+           $filterCollection->addRules($filter, []);
+           $items = $model->findByFilter($filter, 'name');
+
+           if ($items->getCount()) {
+               foreach ($items as $item) {
+                   $options[$item->get('id')] =
+                       \sprintf('%s - %s [%s]', $item->get('name'), $item->get('measures'), $item->get('articleno'));
+               }
+           }
+
+           return $options;
+       }
+   }
+
+Im nächsten Schritt wird die Ausgabe der Produkte erstellt. Dazu wird ein Controller benötigt, ein Ausgabetemplate in
+Twig sowie eine zugehörige Twig-Funktion.
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/Controller/ContentElement/MmProductsElement.php
+   namespace App\Controller\ContentElement;
+
+   use Contao\BackendTemplate;
+   use Contao\ContentModel;
+   use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
+   use Contao\CoreBundle\Routing\ScopeMatcher;
+   use Contao\CoreBundle\ServiceAnnotation\ContentElement;
+   use Contao\CoreBundle\Twig\FragmentTemplate;
+   use Contao\PageModel;
+   use Contao\StringUtil;
+   use MetaModels\Filter\Setting\FilterSettingFactory;
+   use MetaModels\IFactory;
+   use MetaModels\IMetaModel;
+   use MetaModels\Render\Setting\RenderSettingFactory;
+   use Symfony\Component\HttpFoundation\Request;
+   use Symfony\Component\HttpFoundation\RequestStack;
+   use Symfony\Component\HttpFoundation\Response;
+
+   use function implode;
+   use function is_array;
+
+   /**
+    * @ContentElement("mm_products",
+    *   category="texts",
+    *   template="ce_mm_products",
+    * )
+    */
+   class MmProductsElement extends AbstractContentElementController
+   {
+       public function __construct(
+           private readonly IFactory $factory,
+           private readonly FilterSettingFactory $filterFactory,
+           private readonly RenderSettingFactory $renderFactory,
+           private readonly ScopeMatcher $scopeMatcher,
+           private readonly RequestStack $requestStack,
+       ) {
+       }
+
+       protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
+       {
+           $arrHeadline = StringUtil::deserialize($model->headline, true);
+           $headline    = is_array($arrHeadline) ? $arrHeadline['value'] ?? '' : $arrHeadline;
+           $template->set('headline', $headline);
+           $template->set('hl', $arrHeadline['unit'] ?? 'h2');
+
+           $productsList = StringUtil::deserialize($model->mm_products, true);
+
+           if ($this->isBackend()) {
+               $template = new BackendTemplate('be_wildcard');
+               $template->title    = $headline;
+               $template->wildcard = 'Produkte: ' . \implode(', ', $productsList);
+
+               return $template->getResponse();
+           }
+
+           $arrCssId = StringUtil::deserialize($model->cssID, true);
+           $template->set('id', $arrCssId[0] ?? '');
+           $template->set('class', $arrCssId[1] ?? '');
+
+           $template->set('products', $this->getProductsByIds($productsList));
+
+           // ID des AnfrageFormulars in DE.
+           $template->set('pageAlias', PageModel::findById(5)->alias);
+
+           return $template->getResponse();
+       }
+
+       protected function getProductsByIds(array $ids): array
+       {
+           // Name der MetaModel Tabelle.
+           $modelName = 'mm_products';
+           // ID des Filters "Liste Veröffentlicht + Produkt-Ids".
+           $filterId = 5;
+           // Filterwert products.
+           $filterUrl = ['products' => $ids];
+           // ID der Render-Einstellungen "Produkt-Liste".
+           $renderId = 4;
+
+           // Items ermitteln.
+           $model = $this->factory->getMetaModel($modelName);
+           assert($model instanceof IMetaModel);
+           $filter           = $model->getEmptyFilter();
+           $filterCollection = $this->filterFactory->createCollection($filterId);
+           $filterCollection->addRules($filter, $filterUrl);
+
+           // Items rendern.
+           return $model->findByFilter($filter)->parseAll(
+               'html5',
+               $this->renderFactory->createCollection($model, $renderId)
+           );
+       }
+
+       public function isBackend(): bool
+       {
+           if ($request = $this->requestStack->getCurrentRequest()) {
+               return $this->scopeMatcher->isBackendRequest($request);
+           }
+
+           return false;
+       }
+   }
+
+.. code-block:: twig
+   :linenos:
+
+   {# templates/orion/ce_mm_products.html.twig #}
+   {% if headline %}
+       <{{ hl }}>{{ headline }}</{{ hl }}>
+   {% endif %}
+   <div{% if id %} id={{ id }}{% endif %}{% if class %} class="{{ class }}"{% endif %}>
+       {% if products|length > 0 %}
+       <div class="product__list">
+           {% for product in products %}
+               <div class="product">
+                   <div class="product__image">
+                       {{ product.html5.list_image|raw }}
+                   </div>
+                   <div class="product__features">
+                       <div class="product__name"><a href="{{ product.actions.jumpTo.href }}">{{ product.text.name }}</a></div>
+                       {% if product.text.sub_headline %}
+                           <div class="product__subheadline">({{ product.text.sub_headline }})</div>
+                       {% endif %}
+                       {% if product.text.measures %}
+                           <div class="product__measures">{{ product.text.measures }}</div>
+                       {% endif %}
+                   </div>
+                   {% if product.text.inquiry %}
+                       <div class="inquiry">
+                           <a href="{{ pageAlias }}?articlno={{ product.text.articleno }}&name={{ product.text.name }}" class="inquiry__button">Anfragen</a>
+                       </div>
+                   {% endif %}
+               </div>
+           {% endfor %}
+       </div>
+       {% else %}
+           <p class="info">Kein Produkt ausgewählt!</p>
+       {% endif %}
+   </div>
+
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // src/Twig/AppExtension.php
+   namespace App\Twig;
+
+   use MetaModels\Filter\Setting\FilterSettingFactory;
+   use MetaModels\IFactory;
+   use MetaModels\IMetaModel;
+   use MetaModels\Render\Setting\RenderSettingFactory;
+   use Twig\Extension\AbstractExtension;
+   use Twig\TwigFunction;
+
+   class AppExtension extends AbstractExtension
+   {
+       public function __construct(
+           private readonly IFactory $factory,
+           private readonly FilterSettingFactory $filterFactory,
+           private readonly RenderSettingFactory $renderFactory,
+       ) {
+       }
+
+       public function getFunctions(): array
+       {
+           return [
+               new TwigFunction('getProductsByIds', [$this, 'getProductsByIds']),
+           ];
+       }
+
+       public function getProductsByIds(array $ids): array
+       {
+           // Name der MetaModel Tabelle.
+           $modelName = 'mm_products';
+           // ID des Filters "Liste Veröffentlicht".
+           $filterId = 5;
+           // Filterwert products.
+           $filterUrl = ['products' => $ids];
+           // ID der Render-Einstellungen "Produkt-Liste".
+           $renderId = 4;
+
+           // Items ermitteln.
+           $model = $this->factory->getMetaModel($modelName);
+           assert($model instanceof IMetaModel);
+           $filter           = $model->getEmptyFilter();
+           $filterCollection = $this->filterFactory->createCollection($filterId);
+           $filterCollection->addRules($filter, $filterUrl);
+
+           // Items rendern.
+           return $model->findByFilter($filter)->parseAll(
+               'html5',
+               $this->renderFactory->createCollection($model, $renderId)
+           );
+       }
+   }
+
+Damit die Klassen alle geladen werden, gibt es verschiedene Wege - siehe ":ref:`rst_cookbook_specials_register-services`.
+Mit einer eigenen ``services.yml`` sieht das wie folgt aus:
+
+
+.. code-block:: yaml
+   :linenos:
+
+   # config/services.yml
+   services:
+     _defaults:
+       autoconfigure: true
+
+     App\Controller\ContentElement\MmProductsElement:
+       arguments:
+         $factory: '@metamodels.factory'
+         $filterFactory: '@metamodels.filter_setting_factory'
+         $renderFactory: '@metamodels.render_setting_factory'
+         $scopeMatcher: '@contao.routing.scope_matcher'
+         $requestStack: '@request_stack'
+
+     App\EventListener\DataContainer\MmProductsCallbackListener:
+       arguments:
+         $factory: '@metamodels.factory'
+         $filterFactory: '@metamodels.filter_setting_factory'
+
+     App\Twig\AppExtension:
+       arguments:
+         $factory: '@metamodels.factory'
+         $filterFactory: '@metamodels.filter_setting_factory'
+         $renderFactory: '@metamodels.render_setting_factory'
+
+
+Ob alles geladen wird, kann per Konsolenaufruf getestet werden - Cache leeren und ggf. "composer install" ausführen.
