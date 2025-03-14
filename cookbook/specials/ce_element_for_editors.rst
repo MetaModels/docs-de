@@ -446,7 +446,7 @@ Twig.
            if ($this->isBackend()) {
                $template = new BackendTemplate('be_wildcard');
                $template->title    = $headline;
-               $template->wildcard = 'Produkte: ' . \implode(', ', $productsList);
+               $template->wildcard = 'Produkte: ' . implode(', ', $productsList);
 
                return $template->getResponse();
            }
