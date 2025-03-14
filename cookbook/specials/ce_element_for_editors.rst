@@ -11,6 +11,7 @@ Gibt es den Wunsch, dass Redeakteure bei einem festgelegten MetaModel einfach ei
 und diese angezeigt werden sollen, kann man das zum Beispiel mit den folgenden Methoden durchführen.
 
 
+.. _rst_cookbook_specials_ce_element_for_editors_rstce:
 Auswahl und Anzeige mit Erweiterung RockSolid Custom Elements
 -------------------------------------------------------------
 
@@ -267,6 +268,7 @@ Ausgabe im Twig-Template:
    </div>
 
 
+.. _rst_cookbook_specials_ce_element_for_editors_ce:
 Auswahl und Anzeige mit eigenem Content-Element
 -----------------------------------------------
 
@@ -275,6 +277,10 @@ eigenes Inhaltselement erstellen.
 
 In dem Beispiel soll eine Liste von MM-Datensätzen als Produkte auswählbar sein und auf der Webseite dargestellt werden.
 Die Reihenfolge der Ausgabe soll individuell einstellbar sein.
+
+
+Contentelement und Callback
+...........................
 
 Zunächst wird eine DCA-Konfiguration und die Übersetzungen angelegt. Für die individuelle Reihenfolge wird der
 ``inputType`` als ``checkboxWizard`` definiert. Nach dem Anlegen der DCA-Definition muss eine Migration der Datenbank
@@ -378,6 +384,9 @@ Für die Generierung der Auswahlliste für das neue ContentElement müssen die D
            return $options;
        }
    }
+
+Ausgabe in Twig mit eigenem Controller
+......................................
 
 Im nächsten Schritt wird die Ausgabe der Produkte erstellt. Dazu wird ein Controller benötigt, ein Ausgabetemplate in
 Twig sowie eine zugehörige Twig-Funktion.
@@ -582,6 +591,10 @@ Twig sowie eine zugehörige Twig-Funktion.
            );
        }
    }
+
+
+Services laden
+..............
 
 Damit die Klassen alle geladen werden, gibt es verschiedene Wege - siehe ":ref:`rst_cookbook_specials_register-services`.
 Mit einer eigenen ``services.yml`` sieht das wie folgt aus:
