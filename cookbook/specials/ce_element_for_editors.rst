@@ -389,7 +389,7 @@ Ausgabe in Twig mit eigenem Controller
 ......................................
 
 Im nächsten Schritt wird die Ausgabe der Produkte erstellt. Dazu wird ein Controller benötigt, ein Ausgabetemplate in
-Twig sowie eine zugehörige Twig-Funktion.
+Twig.
 
 .. code-block:: php
    :linenos:
@@ -536,63 +536,6 @@ Twig sowie eine zugehörige Twig-Funktion.
    </div>
 
 
-.. code-block:: php
-   :linenos:
-
-   <?php
-   // src/Twig/AppExtension.php
-   namespace App\Twig;
-
-   use MetaModels\Filter\Setting\FilterSettingFactory;
-   use MetaModels\IFactory;
-   use MetaModels\IMetaModel;
-   use MetaModels\Render\Setting\RenderSettingFactory;
-   use Twig\Extension\AbstractExtension;
-   use Twig\TwigFunction;
-
-   class AppExtension extends AbstractExtension
-   {
-       public function __construct(
-           private readonly IFactory $factory,
-           private readonly FilterSettingFactory $filterFactory,
-           private readonly RenderSettingFactory $renderFactory,
-       ) {
-       }
-
-       public function getFunctions(): array
-       {
-           return [
-               new TwigFunction('getProductsByIds', [$this, 'getProductsByIds']),
-           ];
-       }
-
-       public function getProductsByIds(array $ids): array
-       {
-           // Name der MetaModel Tabelle.
-           $modelName = 'mm_products';
-           // ID des Filters "Liste Veröffentlicht".
-           $filterId = 5;
-           // Filterwert products.
-           $filterUrl = ['products' => $ids];
-           // ID der Render-Einstellungen "Produkt-Liste".
-           $renderId = 4;
-
-           // Items ermitteln.
-           $model = $this->factory->getMetaModel($modelName);
-           assert($model instanceof IMetaModel);
-           $filter           = $model->getEmptyFilter();
-           $filterCollection = $this->filterFactory->createCollection($filterId);
-           $filterCollection->addRules($filter, $filterUrl);
-
-           // Items rendern.
-           return $model->findByFilter($filter)->parseAll(
-               'html5',
-               $this->renderFactory->createCollection($model, $renderId)
-           );
-       }
-   }
-
-
 Services laden
 ..............
 
@@ -620,12 +563,5 @@ Mit einer eigenen ``services.yml`` sieht das wie folgt aus:
        arguments:
          $factory: '@metamodels.factory'
          $filterFactory: '@metamodels.filter_setting_factory'
-
-     App\Twig\AppExtension:
-       arguments:
-         $factory: '@metamodels.factory'
-         $filterFactory: '@metamodels.filter_setting_factory'
-         $renderFactory: '@metamodels.render_setting_factory'
-
 
 Ob alles geladen wird, kann per Konsolenaufruf getestet werden - Cache leeren und ggf. "composer install" ausführen.
