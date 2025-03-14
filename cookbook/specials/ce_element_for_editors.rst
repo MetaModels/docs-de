@@ -596,7 +596,7 @@ Twig sowie eine zugehörige Twig-Funktion.
 Services laden
 ..............
 
-Damit die Klassen alle geladen werden, gibt es verschiedene Wege - siehe ":ref:`rst_cookbook_specials_register-services`.
+Damit die Klassen alle geladen werden, gibt es verschiedene Wege - siehe ":ref:`rst_cookbook_specials_register-services`".
 Mit einer eigenen ``services.yml`` sieht das wie folgt aus:
 
 
