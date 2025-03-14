@@ -32,7 +32,7 @@ Die EventListener oder auch andere Services werden analog den
 1. Registrierung per Attribut
 -----------------------------
 
-Die Registrierung per Attribut bieter die einfachste Variante der Implementierung - es muss lediglich folgende
+Die Registrierung per Attribut bietet die einfachste Variante der Implementierung - es muss lediglich folgende
 Datei angelegt und der Cache geleert werden.
 
 .. code-block:: php
@@ -228,9 +228,9 @@ man den Service in der ``services.yml`` als Argument übergibt.
 -----------------------------------------
 
 Möchte man zur einfacheren Datenpflege alle Dateien - also auch z. B. die `service.yml` - kompakt im Ordner `src/`
-haben aber dennoch mit dem Namespace `App` arbeiten, so kann man sich das Beispiel vom Vortrag cd CK23 auf
-`Github <https://github.com/e-spin/vortrag-contao-konferenz-2023/tree/main/src>`_ ansehen bzw. den Ordner `src/` zum
-Testen downloaden und die ``composer.json`` entsprechend anpassen.
+haben aber dennoch mit dem Namespace `App` arbeiten, so kann man sich das Beispiel vom `Vortrag von Ingolf Steinhardt
+zur CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_ ansehen bzw. den
+Ordner `src/` zum Testen downloaden und die ``composer.json`` entsprechend anpassen.
 
 Zu beachten ist der Eintrag
 `foo <https://github.com/e-spin/vortrag-contao-konferenz-2023/blob/main/src/Resources/config/foo.yml>`_ -
