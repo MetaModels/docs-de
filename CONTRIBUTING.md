@@ -71,18 +71,15 @@ wie css, yaml, xml möglich.
 ### Verlinkungen
 
 oberhalb der zu verlinkenden Überschrift
-```.. _rst_features:```
+``` .. _rst_features: ```
 
 als Link einfügen z.B. per
-```:ref:`rst_features````
+``` :ref:`rst_features` ```
 
 oder mit eigenem Linktext
-```:ref:`Neue Funktionen <rst_features>````
-
-Bei den neueren Verlinkungen habe ich die Form <dateiname>_<überschrift-mit-bindestrich> gewählt - z.B.
-```.. _introdution_was-ist-metamodels:```
+``` :ref:`Neue Funktionen <rst_features>` ```
 
 
 externe Verlinkungen:
 ``` `Google <https://www.google.de>`_ ```
-offensichtlich gibt es keine Möglichkeit das Attribut "target" anzugeben :-(
+offensichtlich gibt es keine Möglichkeit das Attribut "target" anzugeben...
