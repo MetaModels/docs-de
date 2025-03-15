@@ -41,10 +41,11 @@ H3 Überschrift
  
 Bilder sind im Ordner ``_img/screenshots/..``
 
-Im Text per "Ersetzungstoken" einfügen z.B. Lorem ipsum |img_multi-textfilter_01| bla bla...
+Im Text per "Ersetzungstoken" einfügen z.B. Lorem ipsum ``` |img_multi-textfilter_01| ``` bla bla...
 
 und unten auf der Seite
-.. |img_multi-textfilter_01| image:: /_img/screenshots/cookbook/filter/multi-textfilter_01.jpg
+
+``` .. |img_multi-textfilter_01| image:: /_img/screenshots/cookbook/filter/multi-textfilter_01.jpg ```
 
 ### Code
 
