@@ -7,16 +7,17 @@ Die einfachste Art am Handbuch mitzuarbeiten ist über ein Github-Account mit de
 Seiten als "Pull-Request" (PR) anfügen kann.
 
 Bei kleineren Änderungen der im Handbuch angezeigte Seite kann man dem Link oben rechts "Auf GitHub bearbeiten" folgen
-und den Text direkt im Browser anpassen und einen PR erstellen.
+und den Text direkt im Browser anpassen sowie einen PR erstellen.
 
 Bei umfangreicheren Änderungen bzw. komplett neuen Artikeln ist es zu empfehlen, einen Fork des Handbuchs zu erstellen
-und einen Clone lokal zu bearbeiten.
+und den Clone lokal zu bearbeiten.
 
 Alternativ kann man auch seinen Artikel an mail@metamodels.me senden.
 
-Die Texte sind in [reStructuredText](https://de.wikipedia.org/wiki/ReStructuredText) ausgezeichnet, welches Ähnlich
+Die Texte sind in [reStructuredText](https://de.wikipedia.org/wiki/ReStructuredText) ausgezeichnet, welches ähnlich
 wie [Markdown](https://de.wikipedia.org/wiki/Markdown) aufgebaut ist. Die Konvertierung auf der Seite Readthedocs
-übernimmt das Tool "[Sphinx](https://www.sphinx-doc.org/)".
+übernimmt das Tool "[Sphinx](https://www.sphinx-doc.org/)". Wer möchte, kann Sphinx auch lokal installieren und das
+gesamte Handbuch in das gewünschte Format wie HTML, EPUB, PDF usw. konvertieren.
 
 ## Hinweise zum Schreiben der Texte
 
