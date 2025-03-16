@@ -87,5 +87,5 @@ oder mit eigenem Linktext
 
 
 externe Verlinkungen:
-``` `Google <https://www.google.de>`_ ```
+``` `Contao <https://www.contao.org>`_ ```
 offensichtlich gibt es keine Möglichkeit das Attribut "target" anzugeben...
