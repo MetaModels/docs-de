@@ -1,7 +1,8 @@
 # Mitwirken am MM-Handbuch
 
 Eine Mitarbeit am MM-Handbuch ist herzlich willkommen. Die Daten werden hier auf Github verwaltet und nach Freigabe
-automatisch bei [Readthedocs](https://about.readthedocs.com) zu einer HTML-Seite konvertiert.
+automatisch bei [Readthedocs](https://about.readthedocs.com) zu einer HTML-Seite als
+[MM-Handbuch](https://metamodels.readthedocs.io/de/latest/index.html) konvertiert.
 
 Die einfachste Art am Handbuch mitzuarbeiten ist über ein Github-Account mit dem man Änderungen oder komplett neue
 Seiten als "Pull-Request" (PR) anfügen kann.

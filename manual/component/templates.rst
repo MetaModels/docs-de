@@ -51,7 +51,23 @@ aber auch möglich die Ausgabe auf ein entsprechendes Format festzulegen wie z. 
 
 Hat man ein individuelles Template als ``html5`` angelegt z. B. ``mm_attr_text_special.html5`` wird auch nach
 ``mm_attr_text_special.text`` gesucht - wird das nicht gefunden, kommt das Standardtemplate ``mm_attr_text.html5``
-zum Einsatz.
+zum Einsatz. Die Anzeige bei eigenen html5-Templates kann man optimieren, indem man ein ein zugehöriges text-Template
+anlegt - damit verkürzt sich die Suche nach einem passenden Template.
+
+Möchte man die text-Templates im Backend bei Templates editierbar haben, sollten folgende Einträge in der eigenen
+``tl_templates.php`` angelegt werden:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // contao/dca/tl_templates.php
+   if (!empty($GLOBALS['TL_DCA']['tl_templates']['config']['validFileTypes'])) {
+       $GLOBALS['TL_DCA']['tl_templates']['config']['validFileTypes'] .= ',text';
+   }
+   if (!empty($GLOBALS['TL_DCA']['tl_templates']['config']['editableFileTypes'])) {
+       $GLOBALS['TL_DCA']['tl_templates']['config']['editableFileTypes'] .= ',text';
+   }
 
 Neben ``.text`` und ``.html5`` könnte es in Zukunft weitere Formate wie ``.json`` oder ``.xml`` geben - das Format
 ``.xhtml`` ist inzwischen nicht mehr dabei.
