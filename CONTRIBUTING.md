@@ -10,7 +10,8 @@ Bei kleineren Änderungen der im Handbuch angezeigte Seite kann man dem Link obe
 und den Text direkt im Browser anpassen sowie einen PR erstellen.
 
 Bei umfangreicheren Änderungen bzw. komplett neuen Artikeln ist es zu empfehlen, einen Fork des Handbuchs zu erstellen
-und den Clone lokal zu bearbeiten.
+und den Clone lokal zu bearbeiten. Gern mal einen Blick in eine bestehende Datei werfen - damit sieht man den Aufbau
+und Formatierungen meist recht gut.
 
 Alternativ kann man auch seinen Artikel an mail@metamodels.me senden.
 
@@ -24,6 +25,9 @@ gesamte Handbuch in das gewünschte Format wie HTML, EPUB, PDF usw. konvertieren
 Der Text sollte in einer neutralen Ansprache des Lesers erfolgen - üblicherweise mit "man".
 
 Bitte Schachtelsätze vermeiden und längere Absätze in logische Blöcke unterteilen.
+
+Nach dem Schreiben eines neuen Artikels, die Anleitung selbst nochmal "nachklicken" - damit findet man Lücken und Fehler
+im Ablauf.
 
 ### Überschriften:
 
