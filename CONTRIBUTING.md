@@ -62,12 +62,12 @@ Block:
 .. code-block:: php
    :linenos:
 
-   // redirect if data empty
-   if (count($this->data) == 0) {
-       $pageId  = 192; // Page id 
-       $page    = \PageModel::findByPK($pageId);
+   // Redirect if data empty.
+   if (!count($this->data)) {
+       $pageId  = 42; // Page id 
+       $page    = \Contao\PageModel::findByPK($pageId);
        $pageURL = $page->getFrontendUrl();
-       \Controller::redirect($pageURL);
+       \Contao\Controller::redirect($pageURL);
    }
 ```
 
