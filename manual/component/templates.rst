@@ -31,8 +31,9 @@ aber entsprechend Rechenzeit. Bei sehr vielen gleichzeitigen Ausgaben kann das z
 führen. Als Alternative kann man ungerenderte Ausgaben in der CE-Modul-MM-Liste aktivieren.
 
 Möchte man in das Listentemplate bestimmte Anzeigebedingungen einbauen z. B. Anzeige von Blöcken nur wenn Werte
-gesetzt sind oder einen bestimmten Wert haben, sollte die Bedingung immer mit Werten aus dem raw-Knoten (ggf. text-Knoten
-sofern Templates nicht angepasst wurden) erfolgen. Im html5-Knoten sind üblicher Weise immer Tags vorhanden.
+gesetzt sind oder einen bestimmten Wert haben, sollte die Prüfung der Bedingung immer mit Werten aus dem raw-Knoten
+erfolgen (ggf. text-Knoten sofern Templates nicht angepasst wurden). Im html5-Knoten sind üblicher Weise immer Tags
+vorhanden, so dass diese für eine Prüfung meist unbrauchbar sind.
 
 Dem Listentemplate kann man für FE-Ausgabe noch Parameter übergeben die z. B. für eine Steuerung eines Sliders oder
 Übersetzungen usw. - siehe ":ref:`rst_cookbook_templates_fe_list_parameters`".
