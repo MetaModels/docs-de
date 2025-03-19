@@ -23,7 +23,7 @@ wird von der Eingabemaske "kurz vor dem Speichern in die DB" aufgerufen, sofern 
 Event können z. B. eingegebene Daten manipuliert oder neue dynamisch generiert werden.
 
 Die EventListener oder auch andere Services werden analog den
-`Contao-Hooks registriert <https://docs.contao.org/dev/framework/hooks/#registering-hooks>`_ registriert.
+`Contao-Hooks registriert <https://docs.contao.org/dev/framework/hooks/#registering-hooks>`_.
 
 .. note:: Vorausgesetzt wird mind. Contao 4.13 und PHP 8
 
