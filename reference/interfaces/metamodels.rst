@@ -510,57 +510,42 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    :linenos:
    
    <?php
-   /* Parameter (Beispiel) */
-   
+   // Beispiel für Implementierung in einer Template-Datei zum Testen.
+   // In einer Live-Umgebung sollte man mit einer "Helper-Klasse" arbeiten und die Services dort "injecten"
+
+
    // Name der MetaModel Tabelle (siehe "Das erstes Metamodel")
    $modelName = 'mm_mitarbeiterliste';
    // ID der Render-Einstellungen "FE-Liste"
    $renderId = 2;
    // ID des Filters
    $filterId = 1;
-   
-   /* Interface */
 
-   // Den 'service container' kann man erhalten, wenn man ihn aus dem globalen Scope holt,
-   // oder aber indem man auf das Event \MetaModelsEvents::SUBSYSTEM_BOOT (oder eines der
-   // konkretisierten Events für Backend/Frontend) lauscht.
-   // (Container nur notwendig, wenn außerhalb des MM-Zugriffs)
+   // MM-Factories
+   $factory       = \Contao\System::getContainer()->get('metamodels.factory');
+   $renderFactory = \Contao\System::getContainer()->get('metamodels.render_setting_factory');
 
-   /* --- MM 2.0 --- */
-   /** @var \MetaModels\IMetaModelsServiceContainer $container */ 
-   //$container = $GLOBALS['container']['metamodels-service-container']; 
-   // MM Factory
-   //$factory = $container->getFactory();
-   
-   /* --- MM 2.1 --- */
-   /** @var $container */
-   $factory = $this->getContainer()->get('metamodels.factory');
-   // alternativ
-   //$factory = \Contao\System::getContainer()->get('metamodels.factory');
-
-   /* --- MM 2.x --- */
    // MetaModel erzeugen, wenn Tabellen/MetaModel-Name bekannt.
    $model = $factory->getMetaModel($modelName);
    // MetaModel erzeugen, wenn nur id bekannt ($metaModelId == tl_metamodel.id des MetaModel).
    //$model = $factory->getMetaModel($factory->translateIdToMetaModelName($metaModelId));
-   // leerer Filter
+
+   // leerer Filter - siehe auch "Filter-Interfaces"
    $filter = $model->getEmptyFilter();
-   // vordefinierter Filter über die Filter-Id
+   // vordefinierter Filter über die Filter-Id; als zweiter Parameter kann Array mit Werten an Filter übergeben werden
    //$filter = $model->prepareFilter($filterId, []);
-   // alle Items
+
+   // alle Items mit Filter holen
    $items = $model->findByFilter($filter);
-   // alle Items geparst zu Array mit HTML5 Knoten
-   $arrItems = $items->parseAll('html5', $model->getView($renderId));
-   // alternativ nur Knoten raw und text
-   //$arrItems = $items->parseAll('text');
-   //dump($arrItems);
-   
-   /* Ausgabe */
-   
+
    // Anzahl der Items
    echo 'Anzahl: '.$items->getCount()."<br>\n";
-   
-   // Variante 1 - Items-Objekt
+   // oder Prüfung
+   if (!$items->getCount()) {
+       return;
+   }
+
+   // Ausgabe: Variante 1 - Items-Objekt
    /*
    foreach ($items as $item)
    {
@@ -568,11 +553,19 @@ Das Beispiel bezieht sich auf den Ausbau von ":ref:`mm_first_index`".
    }
    */
    
-   // Variante 2 - Items-Array
+   // Ausgabe: Variante 2 - Items-Array
+   // alle Items geparst zu Array mit HTML5 Knoten
+   $arrItems = $items->parseAll('html5', $renderFactory->createCollection($model, $renderId));
+   // alternativ nur Knoten raw und text
+   //$arrItems = $items->parseAll('text');
    foreach ($arrItems as $arrItem)
    {
        echo $arrItem['html5']['name']."<br>\n";
    }
+
+   // Ausgabe: Variante 3 - nur aktuelles Item verarbeiten
+   $item = $items->getItem()->parseValue('text', $renderFactory->createCollection($model, $renderId));
+   echo $item['text']['name']."<br>\n";
 
 
 .. |br| raw:: html
