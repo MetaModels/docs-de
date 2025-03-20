@@ -3,10 +3,6 @@
 Merkliste für MetaModels
 ========================
 
-.. warning:: Die Merkliste ist sofort einsatzbereit (siehe Installation) wird
-   aber erst nach Erreichen der aktuellen Fundrasingsumme von 6.300€ frei geschaltet. |br|
-   Für einen Zugang bitte eine E-Mail an info@e-spin.de
-
 Die Merkliste (Notelist) erweitert MetaModels um die Möglichkeit, in der
 FE-Ausgabe einzelne Datensätze (Items) einer Merkliste hinzuzufügen (add).
 
@@ -41,10 +37,24 @@ Installation per Contao-Manager oder Composer
 
 Voraussetzungen für die Installation:
 
-* PHP 7.2 || PHP 8.1 || PHP 8.2
-* Contao 4.4.x/4.9.x || 4.13.x || 5.3
-* MetaModels core 2.1/2.2 und DCG 2.1/2.2 || MetaModels core 2.3 und DCG 2.3 || MetaModels core 2.4 und DCG 2.4
+**Contao 5.3:**
+
+* ^PHP 8.2
+* MetaModels 2.4
+* Notelist 2.4
+* optional Notification Center 2.3
 * Zugang zum geschützten Repository - Daten nach Spende
+
+.. warning:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
+   Fundrasingsumme von 2.300€ frei geschaltet. |br|
+   Für einen Zugang bitte eine E-Mail an info@e-spin.de
+
+**Contao 4.13:**
+
+* ^PHP 8.1
+* MetaModels 2.3
+* Notelist 2.3
+* optional Notification Center 1.7 oder 2.3
 
 
 Merkliste anlegen
@@ -82,7 +92,7 @@ eine oder mehrere der angelegten Merklisten aktiviert werden kann.
 
 |img_notelist_ce_mm-list|
 
-Die Reihenfolge der "Action-Ausgaben" ist über die Sortrierung der Merklisten per
+Die Reihenfolge der "Action-Ausgaben" ist über die Sortierung der Merklisten per
 Drag&Drop veränderbar.
 
 Wird für die Ausgabe das Standardtemplate verwendet müssen keine weiteren Änderungen
@@ -91,7 +101,7 @@ Link zum Hinzufügen zur Merkliste vorweisen.
 
 Verwendet man ein eigenes Template, so ist für die neuen Links eine entsprechend
 Anpassung notwendig. Die Links sind im Knoten `action` enthalten und können
-z.B. mit dem folgenden Code ausgegeben werden:
+z.B. mit dem folgenden Code ausgegeben werden (Ziffer entspricht der ID der Merkliste):
 
 .. code-block:: html
    :linenos:
@@ -132,7 +142,7 @@ gehören, sieht die Liste wie folgt aus:
 Datenanzeige und Übernahme im Formular
 --------------------------------------
 
-Im Formulargeneratorsteht ein neues Widget `MetaModels note list` zur Verfügung.
+Im Formulargenerator steht ein neues Widget `MetaModels note list` zur Verfügung.
 Mit den Einstellungen wird sowohl die Anzeige im Formular als auch in der E-Mail
 gesteuert.
 
@@ -143,23 +153,37 @@ Formularverarbeitung die Liste geleert werden soll.
 
 |img_nodelist_form_widget|
 
-Das optionale Template "Custom email template" bindet alle Renderings der
-E-Mail-Ausgaben der Merklisten ein und "umschließt" diese. Achtung: in den
-Einstellungen von Contao muss bei "Unterstützte Templateformate" unbedingt die
-Extension `text` eingetragen sein! Aktuell können die Merklistdaten in der E-Mail
-nur als (Plain-)Text übermittelt werden - die Rendereinstellungen "Ausgabeformat"
-für das Listing in der E-Mail ist entsprechend auf "Text" einzustellen.
+Für die unterschiedlichen Ausgabebereiche gibt es entsprechende Templates, die ineinander verschachtelt sind.
 
-Im Formular werden die entsprechenden Datensätze über die gewählte Render-Einstellung
-ausgegeben.
+Für die Ausgabe der Merkliste im Formularwidget bildet das Template in "Formularfeld-Template"
+``form_metamodels_notelist.html5`` den Wrapper für alle auszugebenden Merklisten und gibt je Liste den Namen und alle Items
+aus. Die Liste der Items wird über die Auswahl in "Form rendersettings" gesteuert - über das Rendersetting ist das
+übliche MM-Listentemplate (``metamodels_prerendered.html5``) eingebunden.
 
-|img_nodelist_form_fe_list|
+Analog erfolgt die Ausgabe für die E-Mail. Das Wrapper-Template für alle auszugebenden Merklisten kann in "Email template"
+ausgewählt werden ``email_metamodels_notelist.text.html.twig``. Die Liste der Items wird über die Auswahl in
+"Email rendersettings" gesteuert - über das Rendersetting ist das übliche MM-Listentemplate eingebunden - aber hier wird
+die Text-Variante verwendet - also ``metamodels_prerendered.text``.
 
-Eine Bearbeitung z.B. Löschen der Elemente der Merkliste ist im Formular nicht möglich,
-da bei einem Reload der Seite schon im Formular eingegebene Daten verloren gehen würden.
+Als Vorlage für die Rendersettings stehen mit der Erweiterung die Dateien ``metamodel_prerendered_notelists_form.html5``
+und ``metamodel_prerendered_notelists_form.text`` zur Verfügung. Mit den Templates werden auch automatisch die Daten mit
+ausgegeben, die zusätzlichen jedem Datensatz der Merkliste mitgegeben werden können (Payload). Das ist über ein
+:ref:`"Mini"-Formular <rst_extended_notelist_additional_form>` oder :ref:`Event-Listener <rst_extended_notelist_additional_events>`
+möglich.
 
-Man kann vor der Ausgabe des Formulares eine Liste mit allen Elementen der Merkliste
-ausgeben und dort diese einzeln bearbeiten oder die gesamte Liste löschen.
+In den Listentemplates ist neben den üblichen Knoten ``raw`` ``text`` auch ``notelists_names`` als Liste der
+Notelist-Namen vorhanden.
+
+Der Payload wird über die Knoten ``notelists_payload_values`` ``notelists_payload_labels`` übermittelt.
+
+Mite den Werten ist eine individuelle Gestaltung der Ausgabe im Formular-Widget als auch in der E-Mail möglich. Die
+vorhandenen Templates können wie üblich mit eigenen Varianten überschrieben werden.
+
+.. note:: Eine Bearbeitung z. B. Löschen der Elemente der Merkliste ist im Formular nicht möglich, da bei einem Reload
+   der Seite die schon im Formular eingegebene Daten verloren gehen würden.
+
+Man kann vor der Ausgabe des Formulars eine Liste mit allen Elementen der Merkliste
+ausgeben und dort diese einzeln bearbeiten oder die gesamte Liste löschen - siehe Link.
 
 .. code-block:: html
    :linenos:
@@ -174,7 +198,7 @@ angepasst werden. Für die Versendung stehen die Contao-Formularoption oder auch
 
 |img_notelist_email_list|
 
-
+.. _rst_extended_notelist_additional_form:
 Übermittlung zusätzlicher Daten für jedes Item
 ----------------------------------------------
 
@@ -203,9 +227,10 @@ ist das entsprechende MetaModels):
 * Anzahl aller Items der Merkliste ID 1: {{metamodels_notelist::sum::mm_mitarbeiterliste::1}}
 * Anzahl aller Items der Merkliste ID 1 und 2: {{metamodels_notelist::sum::mm_mitarbeiterliste::1,2}}
 
-Ist kein Item in der Merkliste, wird 0 (Null) ausgebeben.
+Ist kein Item in der Merkliste, wird 0 (Null) ausgegeben.
 
 
+.. _rst_extended_notelist_additional_events:
 Events
 ------
 
@@ -285,14 +310,19 @@ Known Issues and Next Features
 * Seite(n) mit Notelist dürfen nicht gecached werden
 * Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex oder eigene Dateien anlegen)
 * Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
-* in Contao 4.9/4.13 muss Template angepasst werden, da Contao .text nicht mehr unterstützt - Fix
-  kommt noch (Workaround: Template als .html5 anlegen)
+* in Contao ab 4.9 können die Templates mit den Extensions ``.text`` und ``.twig`` nicht mehr im bereich Templates
+  erzeugt werden, da Contao das nicht mehr unterstützt - die Dateien per SSH/SFTP oder Lokal anlegen
 
 
 Spenden
 -------
 
 Ein Dank für die Spenden* für die Erweiterung an:
+
+Version 2.4:
+
+
+Version 2.0 bis 2.3:
 
 * `Sebastian Krull <http://www.sebastiankrull.de>`_: 350 €
 * `Westwerk GmbH & Co. KG <https://www.westwerk.ac>`_: 350 €
@@ -313,7 +343,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * `Sienos <https://www.sineos.de>`_: 350 €
 
 
-(Spenden in Netto)
+(*Spenden in Netto)
 
 
 .. |br| raw:: html
