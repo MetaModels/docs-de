@@ -5,16 +5,16 @@ Individuelle Parameter für die MM-Listenausgabe im Frontend
 
 .. note:: Das Feature steht ab MM 2.2 zur Verfügung.
 
-In den Einstellungen der Listenausgabe (CE/FE-Modul) gibt es die Option, eigne Werte an das Template übergeben zu
-können. Das Können Texte oder Zahlenwerte sein. Damit ist es einem Redakteur leicht möglich, bei selbem FE-Template
+In den Einstellungen der Listenausgabe (CE/FE-Modul) gibt es die Option, eigene Werte an das Template übergeben zu
+können. Das können Texte oder Zahlenwerte sein. Damit ist es einem Redakteur leicht möglich, bei selbem FE-Template
 der Listenausgabe dies mit Parametern zu steuern oder abzuwandeln. Damit kann man ein Listentemplate weiter
 verallgemeinern und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe
 oder JavaScript-Inhalte steuern.
 
-Über einen MCW können eigene „Key-Value-Pärchen“ erstellt werden, die im Template über „$this->params“ als Array zur
+Über einen MCW können eigene „Key-Value-Paare“ erstellt werden, die im Template über ``$this->params`` als Array zur
 Verfügung stehen.
 
-Die folgenden zwei Screenshots zeigen eine mögliche Eingabe im Backend und was beim Template ankommt:
+Die folgenden zwei Screenshots zeigen eine mögliche Eingabe im Backend und was an das Template übergeben wird:
 
 |img_settings-wizard_01|
 
