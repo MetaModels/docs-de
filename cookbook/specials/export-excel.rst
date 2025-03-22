@@ -61,7 +61,8 @@ Daten in Excel
 --------------
 
 Zur Übernahme in Excel kann die :download:`Beispieldatei </_download/Movie-Database.xlsx.zip>` verwendet werden
-oder man startet mit einer neuen Datei.
+oder man startet mit einer neuen Datei. Mehr dazu bei
+`Excel <https://support.microsoft.com/de-de/office/importieren-von-daten-aus-dem-web-a1a6b325-17f3-45c8-ae72-c421cb2a8e90>`_.
 
 Im Tab "Daten" wählt man als Datenquelle das Web.
 
