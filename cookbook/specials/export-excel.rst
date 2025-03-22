@@ -81,8 +81,16 @@ Mit "Laden" werden die Einstellungen abgeschlossen und die Daten sind sichtbar.
 |img_excel-export_04|
 
 
-Daten in Calc
---------------
+Daten in LibreOffice Calc
+-------------------------
+
+Siehe `Handbuch LibreOffice <https://help.libreoffice.org/latest/de/text/scalc/01/04090000.html>`_ - nach Eingabe der
+URL Enter drücken und einige Sekunden warten bis Auswahl der HTML-Tabellen sich füllt.
+
+
+
+Daten in OpenOffice Calc
+------------------------
 
 Zur Übernahme in Calc kann die :download:`Beispieldatei </_download/Movie-Database.ods.zip>` verwendet werden
 oder man startet mit einem neuen Tabellendokument.
@@ -97,7 +105,7 @@ klicken. Anschließend die Tabelle "HTML_export" (Tabellen-ID "export") auswähl
 
 |img_oo-export_02|
 
-Anschließend stehen die Daten in dem Tabellenblatt zur verfügung.
+Anschließend stehen die Daten in dem Tabellenblatt zur Verfügung.
 
 |img_oo-export_03|
 
