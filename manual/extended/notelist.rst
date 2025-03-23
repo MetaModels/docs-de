@@ -319,10 +319,12 @@ Spenden
 
 Ein Dank für die Spenden* für die Erweiterung an:
 
-Version 2.4:
+**Version 2.4:**
+
+* noch keine
 
 
-Version 2.0 bis 2.3:
+**Version 2.0 bis 2.3:**
 
 * `Sebastian Krull <http://www.sebastiankrull.de>`_: 350 €
 * `Westwerk GmbH & Co. KG <https://www.westwerk.ac>`_: 350 €
