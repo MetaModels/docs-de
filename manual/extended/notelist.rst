@@ -308,9 +308,8 @@ Known Issues and Next Features
 ------------------------------
 
 * Seite(n) mit Notelist dürfen nicht gecached werden
-* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex oder eigene Dateien anlegen)
 * Datenübergabe an Formular als HTML (z.Z. nur als Text möglich)
-* in Contao ab 4.9 können die Templates mit den Extensions ``.text`` und ``.twig`` nicht mehr im bereich Templates
+* in Contao ab 4.9 können die Templates mit den Extensions ``.text`` und ``.twig`` nicht mehr im Bereich Templates
   erzeugt werden, da Contao das nicht mehr unterstützt - die Dateien per SSH/SFTP oder Lokal anlegen
 
 
