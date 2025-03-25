@@ -53,8 +53,6 @@ eine Übersichtsseite ":ref:`component_relations`".
     :hidden:
     :maxdepth: 1
 
-    schema-manager
-    translations
     new-mm
     attribute
     rendersettings
@@ -63,10 +61,11 @@ eine Übersichtsseite ":ref:`component_relations`".
     filter
     dca-combine
     contentelements
+    relations
+    schema-manager
+    translations
     templates
     inserttags
-    relations
-
 
 .. |br| raw:: html
 
