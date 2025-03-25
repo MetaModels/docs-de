@@ -21,6 +21,25 @@ Einsatzmöglichkeiten und Besonderheiten vorgestellt.
 Bei allen Varianten ist es zu empfehlen, sich die Daten in der Datenbank mit einem geeigneten Tool wie phpMyAdmin o. ä.
 anzusehen.
 
+Datenbankstruktur
+-----------------
+
+Die Gesamtzahl der MetaModels und deren Verknüpfungen ergeben eine Datenbankstruktur, mit der die Daten in gewünschter
+Weise gespeichert, ausgegeben und gefiltert werden kann. Insbesondere bei komplexeren Aufgabenstellungen kann eine gute
+Planung nachträgliche Änderungen vermeiden.
+
+Es ist zu empfehlen, dass die Struktur der MetaModels und deren Verknüpfungen grafisch festgehalten wird. Das hilft sowohl
+bei der Erstellung als auch bei der Dokumentation.
+
+Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gib aber auch diverse Tools wie z. B.
+`yEd <https://www.yworks.com/products/yed>`_ oder die Online-Variante `yEd live <https://www.yworks.com/yed-live/>`_.
+
+Als Beispiel eine Struktur für Mitarbeiten inkl. Verknüpfungen zu Abteilung und Projekten sowie eine Eigenreferenz
+für eine Urlaubsvertretung:
+
+|img_db-schema_01|
+
+
 Standard-Relationen
 -------------------
 
@@ -180,3 +199,6 @@ als Relation zum Elterndatensatz verwendet wird.
 .. |br| raw:: html
 
    <br />
+
+.. |img_db-schema_01| image:: /_img/screenshots/metamodel_first/db-schema_01.png
+
