@@ -64,7 +64,7 @@ Filterregeln "Eigenes SQL" sehr gut.
 
 Im Handbuch finden sich weitere Tipps:
 
-   - :ref:`rst_cookbook_panels_manipulate-select-values`
+   - :ref:`rst_cookbook_inputmask_manipulate-select-values`
    - :ref:`rst_cookbook_filter_custom-sql`
 
 
