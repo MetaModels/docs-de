@@ -107,7 +107,7 @@ sieht die Ausgabe schon besser aus - siehe Screenshot
 Detailseite eines Datensatzes
 -----------------------------
 
-Typischer Weise werden in der Listenansicht nicht alle Elemente eines Datensatzes angezeigt, sondern nur diejenigen,
+Typischer Weise werden in der Listenansicht nicht alle Inhalte eines Datensatzes angezeigt, sondern nur diejenigen,
 die für eine Suche oder Auswahl notwendig sind. Den kompletten Datensatz kann man auf einer Detailseite präsentieren.
 
 Dazu muss zunächst eine Detailseite in Contao angelegt werden - z. B. ``domain.tld/mitarbeiter-details.html``.
