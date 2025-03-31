@@ -120,13 +120,15 @@ individuell gestaltet werden.
 
 Damit auf der Seite nicht alle Datensätze sondern nur der gewünschte ausgegeben wird, ist ein entsprechender Filter
 notwendig. Als Filterregeln ist die "Einfache Abfrage" zu empfehlen und als Attribut ein Alias. Zudem sind nach Bedarf
-noch weitere Filterregeln wie "Veröffentlicht" o. ä. möglich. Der angelegte Filter ist in MM-Liste auszuwählen.
+noch weitere Filterregeln wie "Veröffentlicht" o. ä. möglich. Der angelegte Filter ist in MM-Liste der Detailseite
+auszuwählen.
 
 Mit einer URL wie z. B. ``domain.tld/mitarbeiter-details/alias/avery-amir.html`` sollte der entsprechende Datensatz
 ausgegeben werden.
 
-Damit in der Listendarstellung automatisch die Verlinkungen zu Detailseite erzeugt werden, ist im Rendersetting in
-der Sektion "Einstellungen der Weiterleitung (jump-to)" die Detailseite mit dem entsprechenden Filter auszuwählen.
+Damit in der Listendarstellung automatisch die Verlinkungen zu Detailseite erzeugt werden, ist im Rendersetting der
+List in der Sektion "Einstellungen der Weiterleitung (jump-to)" die Detailseite mit dem entsprechenden Filter
+auszuwählen. Die Ausgabe der Links im Template ist im Knoten ``actions``.
 
 
 
