@@ -102,6 +102,35 @@ sieht die Ausgabe schon besser aus - siehe Screenshot
 
 |img_contentelements_07|
 
+
+.. _mm_first_contentelements_detailpage:
+Detailseite eines Datensatzes
+-----------------------------
+
+Typischer Weise werden in der Listenansicht nicht alle Elemente eines Datensatzes angezeigt, sondern nur diejenigen,
+die für eine Suche oder Auswahl notwendig sind. Den kompletten Datensatz kann man auf einer Detailseite präsentieren.
+
+Dazu muss zunächst eine Detailseite in Contao angelegt werden - z. B. ``domain.tld/mitarbeiter-details.html``.
+
+In diese Seite wird ein Contentelement MM-Liste als Modul oder CE eingefügt - MetaModel ist wieder ``mm_employees``.
+
+Weiterhin wird ein Rendersetting für die Ausgabe benötigt - hier sollte man für die Detailseite ein separates
+Rendersetting "FE - Details" anlegen. Mit einem eigenen :ref:`Template <component_templates>` kann die Ausgabe
+individuell gestaltet werden.
+
+Damit auf der Seite nicht alle Datensätze sondern nur der gewünschte ausgegeben wird, ist ein entsprechender Filter
+notwendig. Als Filterregeln ist die "Einfache Abfrage" zu empfehlen und als Attribut ein Alias. Zudem sind nach Bedarf
+noch weitere Filterregeln wie "Veröffentlicht" o. ä. möglich. Der angelegte Filter ist in MM-Liste auszuwählen.
+
+Mit einer URL wie z. B. ``domain.tld/mitarbeiter-details/alias/avery-amir.html`` sollte der entsprechende Datensatz
+ausgegeben werden.
+
+Damit in der Listendarstellung automatisch die Verlinkungen zu Detailseite erzeugt werden, ist im Rendersetting in
+der Sektion "Einstellungen der Weiterleitung (jump-to)" die Detailseite mit dem entsprechenden Filter auszuwählen.
+
+
+
+
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_metamodels| image:: /_img/icons/metamodels.png
 
