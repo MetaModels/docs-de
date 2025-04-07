@@ -9,7 +9,7 @@ Diese Anleitung beschreibt, wie in einer MetaModels-Installation unter Contao 5.
 Voraussetzungen
 ---------------
 * Contao 5.3 mit MetaModels 2.4
-* 2 Google Maps API Schlüssel (serverseitig für Geocoding -> API_KEY_SERVER)
+* Google Maps API Schlüssel (serverseitig für Geocoding -> API_KEY_SERVER)
 * Felder im MetaModel: strasse, plz, ort, latitude, longitude
 
 Schritt 1: Anlegen des EventListeners
