@@ -12,13 +12,15 @@ Voraussetzungen
 
 * Contao 5.3
 * MetaModels 2.4
-* Google Maps API-Key (Webseitig für Kartenanzeige -> API_KEY_WEBSITE)
-* MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuelle Felder wie z. B. ``name``
+* Google Maps API-Key (Webseitig für Kartenanzeige → ``API_KEY_WEBSITE``)
+* MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuelle Felder wie z. B. ``name``
+
+Die Ausgabe erfolgt im MetaModels-Template, z. B. ``mm_dienstleister_map.html5``. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im Frontend ausgegeben wird.
 
 Marker vorbereiten
 ------------------
 
-Im MetaModels-Template wird zunächst ein Array mit allen Koordinaten erstellt:
+Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
 
 .. code-block:: php
 
@@ -49,7 +51,7 @@ Die Map wird direkt im Template ausgegeben. Hier ein minimales Beispiel:
    <script>
      function initMap() {
        const map = new google.maps.Map(document.getElementById("map"), {
-         center: { lat: 52.553807, lng: 13.405007 }, // Fallback-Zentrum
+         center: { lat: 52.553807, lng: 13.405007 },
          zoom: 10,
          mapTypeId: google.maps.MapTypeId.ROADMAP
        });
@@ -95,7 +97,4 @@ Die Map wird direkt im Template ausgegeben. Hier ein minimales Beispiel:
 Hinweise
 --------
 
-* Die Ausgabe erfolgt im MetaModels-Template, z. B. ``mm_dienstleister_map.html5``.
-* ``{{ markers|json_encode|raw }}`` funktioniert nur in Twig-Templates. In PHP-Templates muss stattdessen ``<?php echo json_encode($markers); ?>`` verwendet werden.
-* Bei vielen Einträgen empfiehlt sich ein Clustering-Plugin.
 * Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool eingebunden werden.
