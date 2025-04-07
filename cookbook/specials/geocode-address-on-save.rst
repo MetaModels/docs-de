@@ -121,6 +121,8 @@ Einen bestehenden Datensatz im Back-End bearbeiten, die Felder ``strasse``, ``pl
 
 Hinweise
 --------
-* Der PrePersistModelEvent wird nur bei geänderten Datensätzen ausgelöst.
+
+* Der ``PrePersistModelEvent`` wird nur bei geänderten Datensätzen ausgelöst.
 * Für serverseitige Geocoding-Anfragen muss der API-Schlüssel auf die Server-IP freigeschaltet sein.
 * Für die Anzeige der Karte wird ein separater, auf Websites beschränkter API-Schlüssel benötigt.
+* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter :doc:`display-markers-on-map` beschrieben.
