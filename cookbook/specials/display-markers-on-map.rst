@@ -36,7 +36,7 @@ Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
 
 Map einbinden
 -------------
-Die Map wird direkt im Template ausgegeben. Hier ein minimales Beispiel:
+Die Map wird im gleichen Template ausgegeben. Der verwendete API-Key muss für die Kartenanzeige im Frontend freigegeben sein (API_KEY_WEBSITE). Hier ein minimales Beispiel:
 
 .. code-block:: html
 
