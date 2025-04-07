@@ -14,7 +14,7 @@ Voraussetzungen
 
 Schritt 1: Anlegen des EventListeners
 ---------------------------------------
-Erstellen der Datei ``src/EventListener/PrePersistModelEventListener.php`` mit folgendem Inhalt:
+Erstellen der Datei ``src/EventListener/PrePersistModelEventListener.php`` mit folgendem Inhalt. Achte darauf, ``API_KEY_SERVER`` im Code durch deinen serverseitigen API-Schlüssel zu ersetzen:
 
 .. code-block:: php
 
