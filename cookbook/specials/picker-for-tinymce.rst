@@ -3,7 +3,8 @@
 jumpTo-Picker (Detailseite) für den TinyMCE
 ===========================================
 
-.. note:: Vorausgesetzt wird mind. MM 2.4
+.. note:: Vorausgesetzt wird mind. MM 2.4 |br|
+   Wer das Feature einsetzen möchte, erhält weitere Informationen zur Konfiguration auf Anfrage an mail@metamodel.me
 
 MM hat einen Insert-Tag, mit dem für ein definiertes Rendersetting der Link zur Detailseite (jumpTo) ausgegeben werden
 kann - mehr dazu bei :ref:`Insert-Tags <component_inserttags_jumpto>`.
@@ -45,3 +46,7 @@ der Ausgabe im Frontend eine URL ausgegeben.
 
 .. |img_picker_01.png| image:: /_img/screenshots/extended/picker/picker_01.png
 .. |img_picker_02.png| image:: /_img/screenshots/extended/picker/picker_02.png
+
+.. |br| raw:: html
+
+   <br />
