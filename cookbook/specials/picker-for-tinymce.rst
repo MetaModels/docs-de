@@ -44,6 +44,15 @@ der Ausgabe im Frontend eine URL ausgegeben.
 |img_picker_02.png|
 
 
+Spenden
+-------
+
+Ein Dank für die Spenden für das Feature an:
+
+* `BAR PACIFICO <https://www.bar-pacifico.de/>`_
+
+
+
 .. |img_picker_01.png| image:: /_img/screenshots/extended/picker/picker_01.png
 .. |img_picker_02.png| image:: /_img/screenshots/extended/picker/picker_02.png
 
