@@ -12,7 +12,7 @@ Für Redakteure die im "normalen Content" der Webseite eine Verlinkung zu einer 
 ist die Suche nach dem richtigen Insert-Tag sowie die passenden IDs von Rendersetting und Datensatz möglicher Weise zu
 herausfordernd.
 
-Dafür kann im TinyMCE im Picker ein neuer Reiter definiert werden, mit dem sich diese Aufgabe leicht lösen lässt. Über
+Dafür kann im TinyMCE-Link-Picker ein neuer Reiter definiert werden, mit dem sich diese Aufgabe leicht lösen lässt. Über
 eine Konfiguration von MM wird eine solche Auswahl im TinyMCE erzeugt - siehe Beispiel im Screenshot.
 
 |img_picker_01.png|
