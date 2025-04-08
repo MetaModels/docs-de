@@ -38,7 +38,7 @@ Das Erscheinungsbild des MetaModel im Picker wird durch das für die jeweilige B
 definiert. Dabei ist zu beachten, dass bei einer Darstellung als Tabelle im Picker nur das erste Attribut angezeigt
 wird (siehe Screenshot).
 
-Wird eine Auswahl im Picker getroffen, wird die ID des Datensatzes (24) in den Insert-Tag automatisch eingefügt und in
+Wird eine Auswahl im Picker getroffen, wird die ID des Datensatzes (27) in den Insert-Tag automatisch eingefügt und in
 der Ausgabe im Frontend eine URL ausgegeben.
 
 |img_picker_02.png|
