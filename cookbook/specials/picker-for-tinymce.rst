@@ -29,14 +29,16 @@ Typische Prioritäten von Contao sind:
 - News: 128
 - Events: 96
 - FAQ: 64
+- Artikel: 0
 
 Im Beispiel des Screenshots hat der MM-Picker eine Priorität von 144.
 
 Das Erscheinungsbild des MetaModel im Picker wird durch das für die jeweilige Benutzergruppe eingestellte Rendersetting
-definiert. Dabei ist zu beachten, dass bei einer Darstellung als Tabelle im Picker nur das erste Attribut angezeigt wird.
+definiert. Dabei ist zu beachten, dass bei einer Darstellung als Tabelle im Picker nur das erste Attribut angezeigt
+wird (siehe Screenshot).
 
-Wird eine Auswahl im Picker getroffen, wird die ID des Datensatzes in den Insert-Tag automatisch eingefügt und in der
-Ausgabe im Frontend eine URL ausgegeben.
+Wird eine Auswahl im Picker getroffen, wird die ID des Datensatzes (24) in den Insert-Tag automatisch eingefügt und in
+der Ausgabe im Frontend eine URL ausgegeben.
 
 |img_picker_02.png|
 
