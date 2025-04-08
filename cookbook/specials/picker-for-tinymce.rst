@@ -9,7 +9,8 @@ MM hat einen Insert-Tag, mit dem für ein definiertes Rendersetting der Link zur
 kann - mehr dazu bei :ref:`Insert-Tags <component_inserttags_jumpto>`.
 
 Für Redakteure die im "normalen Content" der Webseite eine Verlinkung zu einer bestimmten Detailseite einbauen wollen,
-ist die Suche nach dem richtigen Insert-Tag sowie die passenden IDs von Rendersetting und Datensatz zu herausfordernd.
+ist die Suche nach dem richtigen Insert-Tag sowie die passenden IDs von Rendersetting und Datensatz möglicher Weise zu
+herausfordernd.
 
 Dafür kann im TinyMCE im Picker ein neuer Reiter definiert werden, mit dem sich diese Aufgabe leicht lösen lässt. Über
 eine Konfiguration von MM wird eine solche Auswahl im TinyMCE erzeugt - siehe Beispiel im Screenshot.
