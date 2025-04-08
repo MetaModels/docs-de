@@ -10,5 +10,6 @@ Spezialaufgaben und deren Lösung mit MM.
     :maxdepth: 1
 
     ce_element_for_editors.rst
+    picker-for-tinymce.rst
     export-excel.rst
     register-services.rst

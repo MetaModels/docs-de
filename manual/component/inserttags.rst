@@ -21,6 +21,7 @@ Eigene Insert-Tags können über den Contao-Hook
 mit der :ref:`MM-API <ref_api>` leicht selbst erstellt werden.
 
 
+.. _component_inserttags_count:
 Gesamtanzahl von Items
 ----------------------
 
@@ -33,6 +34,7 @@ ausgegeben.
   ``{{mm::total::mm::mm_employees}}``, ``{{mm::total::mm::1}}``, ``{{mm::total::mm::1::44}}``
 
 
+.. _component_inserttags_items:
 Ausgabe eines/mehrerer Items
 ----------------------------
 
@@ -42,6 +44,7 @@ Ausgabe eines oder mehrerer Items mit optionaler Angabe des Ausgabetyps.
   ``{{mm::item::mm_employees::1,3,42::5}}``, ``{{mm::item::1::1,3,42::5}}``
 
 
+.. _component_inserttags_attributes:
 Ausgabe eines Attributes
 ------------------------
 
@@ -51,6 +54,7 @@ Ausgabe eines Attributes mit optionaler Angabe des Ausgabetyps.
   ``{{mm::attribute::mm_employees::42::5::combined_name}}``, ``{{mm::attribute::mm_employees::42::5::date_start::raw}}``
 
 
+.. _component_inserttags_jumpto:
 Ausgabe von Parametern der Weiterleitung zur Detailseite
 --------------------------------------------------------
 
