@@ -11,6 +11,7 @@ Voraussetzungen
 * Contao 5.3 mit MetaModels 2.4
 * Google Maps API Schlüssel (serverseitig für Geocoding -> API_KEY_SERVER)
 * Felder im MetaModel: strasse, plz, ort, latitude, longitude
+* Die Felder latitude ud longitude müssen vom Typ "Dezimal" (metamodels/attribute_decimal) sein.
 
 Schritt 1: Anlegen des EventListeners
 ---------------------------------------
