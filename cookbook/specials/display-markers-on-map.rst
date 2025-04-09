@@ -3,8 +3,7 @@ Standorte als Marker auf einer Google-Map ausgeben
 
 Ziel
 ----
-Auf einer Seite sollen die (ggf. gefilterten) Einträge eines MetaModels (z. B. Dienstleister) als Marker auf einer Google-Karte dargestellt werden.
-Die Geo-Koordinaten wurden dabei bereits in den Feldern ``latitude`` und ``longitude`` gespeichert (siehe :doc:`geocode-address-on-save`).
+Auf einer Seite sollen die (ggf. gefilterten) Einträge eines MetaModels als Marker auf einer Google-Karte dargestellt werden.
 
 Voraussetzungen
 ---------------
@@ -118,3 +117,4 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung
 Hinweise
 --------
 * Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool eingebunden werden.
+* Wie die nötigen Koordinaten automatisch beim Speichern erzeugt werden können, ist unter "`Automatisches Erzeugen und Speichern von Koordinaten <https://github.com/Webstylerin/docs-de/edit/de-2.0/cookbook/specials/geocode-address-on-save.rst>`_" beschrieben. 
