@@ -7,9 +7,9 @@ Auf einer Seite sollen die (ggf. gefilterten) Einträge eines MetaModels als Mar
 
 Voraussetzungen
 ---------------
-* Contao 5.3 mit MetaModels 2.4, ebenfalls erfolgreich mit Contao 4.13 und MetaModels 2.3 getestet.
-* Google Maps API-Key für Kartenanzeige → ``API_KEY_WEBSITE`` (Anwendung: Websites; API: Maps JavaScript API)
-* MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuellen Feldern wie z. B. ``name``
+* Contao 5.3 mit MetaModels 2.4, ebenfalls erfolgreich mit Contao 4.13 und MetaModels 2.3 getestet
+* Google Maps API-Schlüssel für Kartenanzeige → ``API_KEY_WEBSITE`` (Anwendung: Websites; API: Maps JavaScript API)
+* MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuellen Feldern wie in diesem Beispiel ``name``
 
 Die Ausgabe erfolgt im MetaModels-Template, als Grundlage nutze ich ``metamodel_prerendered.html5``. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im Frontend ausgegeben wird.
 
@@ -117,4 +117,4 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung
 Hinweise
 --------
 * Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool eingebunden werden.
-* Wie die nötigen Koordinaten automatisch beim Speichern erzeugt werden können, ist unter "`Automatisches Erzeugen und Speichern von Koordinaten <https://github.com/Webstylerin/docs-de/edit/de-2.0/cookbook/specials/geocode-address-on-save.rst>`_" beschrieben. 
+* Wie Koordinaten beim Speichern automatisch erzeugt und gespeichert werden, ist unter "`Automatisches Erzeugen und Speichern von Koordinaten <https://github.com/Webstylerin/docs-de/edit/de-2.0/cookbook/specials/geocode-address-on-save.rst>`_" beschrieben. 
