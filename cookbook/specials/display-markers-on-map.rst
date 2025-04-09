@@ -32,11 +32,12 @@ Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
           ];
       }
     ?>
+    //Weitere Listen-Ausgabe
   <?php endforeach; ?>
 
 Map einbinden
 -------------
-Die Map wird im gleichen Template ausgegeben. Der verwendete API-Key muss für die Kartenanzeige im Frontend freigegeben sein (API_KEY_WEBSITE). Hier ein minimales Beispiel:
+Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Der verwendete API-Key muss für die Kartenanzeige im Frontend freigegeben sein (API_KEY_WEBSITE). Hier ein minimales Beispiel:
 
 .. code-block:: html
 
