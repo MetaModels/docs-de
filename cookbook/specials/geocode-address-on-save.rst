@@ -4,7 +4,7 @@ Automatisches Erzeugen und Speichern von Koordinaten
 
 Einleitung
 ----------
-Diese Anleitung beschreibt, wie in einer MetaModels-Installation unter Contao 5.3 automatisch Koordinaten aus Adressdaten erzeugt und gespeichert werden können.
+Diese Anleitung beschreibt, wie in einer MetaModels-Installation automatisch Koordinaten aus Adressdaten erzeugt und gespeichert werden können.
 
 Voraussetzungen
 ---------------
@@ -15,7 +15,8 @@ Voraussetzungen
 
 Schritt 1: Anlegen des EventListeners
 ---------------------------------------
-Erstellen der Datei ``src/EventListener/PrePersistModelEventListener.php`` mit folgendem Inhalt. Achtung: ``API_KEY_SERVER`` muss durch den entsprechenden API-Schlüssel ersetzt werden.
+Erstellen der Datei ``src/EventListener/PrePersistModelEventListener.php`` mit folgendem Inhalt.
+Achtung: ``API_KEY_SERVER`` muss durch den entsprechenden API-Schlüssel ersetzt werden.
 
 .. code-block:: php
 
@@ -127,4 +128,4 @@ Hinweise
 * Der ``PrePersistModelEvent`` wird nur bei geänderten Datensätzen ausgelöst.
 * Für serverseitige Geocoding-Anfragen muss der API-Schlüssel auf die Server-IP freigeschaltet sein.
 * Für die Anzeige der Karte wird ein separater, auf Websites beschränkter API-Schlüssel benötigt.
-* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter :doc:`display-markers-on-map` beschrieben.
+* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter :doc:`Display Markers on Map <display-markers-on-map>` beschrieben.
