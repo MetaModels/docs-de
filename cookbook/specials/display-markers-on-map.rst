@@ -41,54 +41,80 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Der ver
 
 .. code-block:: html
 
-  <script async src="https://maps.googleapis.com/maps/api/js?key=API_KEY_WEBSITE&callback=initMap&language=de&region=DE"></script>
-  <div id="map" style="height: 400px; width: 100%;"></div>
+      <div class="dienstleister-map">
+      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkOCCggA1fsmogpSjk-rxUEQv6uQYQFyc&callback=initMap&language=de&region=DE"></script>
 
-  <script>
-    function initMap() {
-      const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 52.553807, lng: 13.405007 },
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
+      <div id="map" style="height: 400px; width: 100%;"></div>
 
-      const markers = {{ markers|json_encode|raw }};
-      const bounds = new google.maps.LatLngBounds();
-      const infowindow = new google.maps.InfoWindow();
-      const minZoom = 11;
+      <script>
+        function initMap() {
+          const mapOptions = {
+            center: { lat: 52.553807, lng: 13.405007 }, // Standard für Berlin
+            zoom: 10,
+            zoomControl: true,
+            streetViewControl: true,
+            mapTypeControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+              {
+                "featureType": "poi.business",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },
+              {
+                "featureType": "poi.park",
+                "elementType": "labels.text",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              }
+            ]
+          };
 
-      if (markers.length === 0) {
-        return;
-      }
+          const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+          var markers = <?php echo json_encode($markers, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
 
-      markers.forEach(function(markerData) {
-        const marker = new google.maps.Marker({
-          position: { lat: markerData.lat, lng: markerData.lng },
-          map: map,
-          title: markerData.title
-        });
+          var bounds = new google.maps.LatLngBounds();
+          var infowindow = new google.maps.InfoWindow();
+          var minZoom = 11;
 
-        marker.addListener("click", function() {
-          let content = "<strong>" + markerData.title + "</strong>";
-          if (markerData.website) {
-            content += "<br>" + markerData.website;
+          if (markers.length === 0) {
+            map.setCenter({ lat: 52.553807, lng: 13.405007 });
+            map.setZoom(minZoom);
+            return;
           }
-          infowindow.setContent(content);
-          infowindow.open(map, marker);
-        });
 
-        bounds.extend(marker.position);
-      });
+          markers.forEach(function(markerData) {
+            let marker = new google.maps.Marker({
+              position: { lat: markerData.lat, lng: markerData.lng },
+              map: map,
+              title: markerData.title,
+              clickable: true
+            });
 
-      map.fitBounds(bounds);
+            marker.addListener("click", function() {
+              let content = "<strong>" + markerData.title + "</strong>";
+              if (markerData.website) {
+                content += "<br>" + markerData.website;
+              }
+              infowindow.setContent(content);
+              infowindow.open(map, marker);
+            });
 
-      google.maps.event.addListenerOnce(map, 'zoom_changed', function() {
-        if (map.getZoom() > minZoom) {
-          map.setZoom(minZoom);
+            bounds.extend(marker.position);
+          });
+
+          map.fitBounds(bounds);
+
+          google.maps.event.addListenerOnce(map, 'zoom_changed', function() {
+            if (map.getZoom() > minZoom) {
+              map.setZoom(minZoom);
+            }
+          });
         }
-      });
-    }
-  </script>
+      </script>
+    </div>
 
 Hinweise
 --------
