@@ -13,7 +13,7 @@ Voraussetzungen
 * Google Maps API-Key (Webseitig für Kartenanzeige → ``API_KEY_WEBSITE``)
 * MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuellen Feldern wie z. B. ``name``
 
-Die Ausgabe erfolgt im MetaModels-Template, z. B. ``mm_dienstleister_map.html5``. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im Frontend ausgegeben wird.
+Die Ausgabe erfolgt im MetaModels-Template, als Grundlage nutze ich ``metamodel_prerendered.html5``. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im Frontend ausgegeben wird.
 
 Marker vorbereiten
 ------------------
