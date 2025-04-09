@@ -1,20 +1,28 @@
+.. _rst_cookbook_specials_marker-for-gmap:
+
 Standorte als Marker auf einer Google-Map ausgeben
 ===================================================
+
 
 Ziel
 ----
 Auf einer Seite sollen die (ggf. gefilterten) Einträge eines MetaModels als Marker auf einer Google-Karte dargestellt werden.
 
+
 Voraussetzungen
 ---------------
+
 * Contao 5.3 mit MetaModels 2.4, ebenfalls erfolgreich mit Contao 4.13 und MetaModels 2.3 getestet
 * Google Maps API-Schlüssel für Kartenanzeige → ``API_KEY_WEBSITE`` (Anwendung: Websites; API: Maps JavaScript API)
 * MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuellen Feldern wie in diesem Beispiel ``name``
 
-Die Ausgabe erfolgt im MetaModels-Template, als Grundlage nutze ich ``metamodel_prerendered.html5``. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im Frontend ausgegeben wird.
+Die Ausgabe erfolgt im MetaModels-Template der Rendersettings. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im
+Frontend ausgegeben wird - siehe :ref:`Templates <component_templates>`. Man kann sich vom Template ``metamodel_prerendered.html5`` eine
+Variante z. B. als ``metamodel_pre_gmap-with-marker.html5`` erstellen und entsprechend bei den Rendersettings auswählen. 
 
 Marker vorbereiten
 ------------------
+
 Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
 
 .. code-block:: php
@@ -24,8 +32,8 @@ Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
     <?php
       if (!empty($arrItem['text']['latitude']) && !empty($arrItem['text']['longitude'])) {
           $markers[] = [
-              'lat' => (float) $arrItem['text']['latitude'],
-              'lng' => (float) $arrItem['text']['longitude'],
+              'lat'   => (float) $arrItem['text']['latitude'],
+              'lng'   => (float) $arrItem['text']['longitude'],
               'title' => htmlspecialchars($arrItem['text']['name'], ENT_QUOTES, 'UTF-8'),
           ];
       }
@@ -33,13 +41,16 @@ Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
     <?php //Weitere Listen-Ausgaben … ?>
   <?php endforeach; ?>
 
+
 Map einbinden
 -------------
-Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung: ``API_KEY_WEBSITE`` muss durch den entsprechenden API-Schlüssel ersetzt werden.
+
+Die Map auch in dem angelegten Template nach der "foreach-Schleife" ausgegeben. Achtung: ``API_KEY_WEBSITE`` muss durch den entsprechenden
+API-Schlüssel ersetzt werden. Das PHP-Array wird für die Schleifenausgabe in JavaScript in einen entsprechenden JSON-String umgewandelt.
 
 .. code-block:: html
 
-      <div class="dienstleister-map">
+      <div class="map_wrapper">
       <script async src="https://maps.googleapis.com/maps/api/js?key=API_KEY_WEBSITE&callback=initMap&language=de&region=DE"></script>
 
       <div id="map" style="height: 400px; width: 100%;"></div>
@@ -70,8 +81,10 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung
             ]
           };
 
+          // Map initialisieren
           const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-          var markers = <?php echo json_encode($markers, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
+          // Marker-Array als JSON
+          var markers = <?= json_encode($markers, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>;
 
           var bounds = new google.maps.LatLngBounds();
           var infowindow = new google.maps.InfoWindow();
@@ -83,6 +96,7 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung
             return;
           }
 
+          // Erstellen der Marker aus den JSON-Daten
           markers.forEach(function(markerData) {
             let marker = new google.maps.Marker({
               position: { lat: markerData.lat, lng: markerData.lng },
@@ -91,6 +105,7 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung
               clickable: true
             });
 
+            // Erstellen der Info-Ausgabe z. B. mit Titel und URL
             marker.addListener("click", function() {
               let content = "<strong>" + markerData.title + "</strong>";
               if (markerData.website) {
@@ -114,7 +129,10 @@ Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung
       </script>
     </div>
 
+
 Hinweise
 --------
-* Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool eingebunden werden.
-* Wie Koordinaten beim Speichern automatisch erzeugt und gespeichert werden, ist unter "`Automatisches Erzeugen und Speichern von Koordinaten <https://github.com/Webstylerin/docs-de/edit/de-2.0/cookbook/specials/geocode-address-on-save.rst>`_" beschrieben. 
+
+* Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool freigegeben werden.
+* Wie Koordinaten beim Speichern automatisch erzeugt und gespeichert werden, ist unter
+  :ref:`rst_cookbook_specials_generate-geocoordinates`" beschrieben. 
