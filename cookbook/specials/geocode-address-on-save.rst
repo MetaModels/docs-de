@@ -11,7 +11,7 @@ Voraussetzungen
 * Contao 5.3 mit MetaModels 2.4
 * Google Maps API Schlüssel (serverseitig für Geocoding -> API_KEY_SERVER)
 * Felder im MetaModel: strasse, plz, ort, latitude, longitude
-* Die Felder latitude ud longitude müssen vom Typ "Dezimal" (metamodels/attribute_decimal) sein.
+* Die Felder latitude und longitude sind vom Typ "Dezimal" (metamodels/attribute_decimal)
 
 Schritt 1: Anlegen des EventListeners
 ---------------------------------------
@@ -114,7 +114,8 @@ Sicherstellen, dass diese Datei in die Hauptkonfiguration eingebunden ist, z. 
 
   # config/services.yaml
   imports:
-    - { resource: '%kernel.project_dir%/src/Resources/config/service.yml' }
+    - { resource: '../src/Resources/config/service.yml' }
+
 
 Testen
 -------
