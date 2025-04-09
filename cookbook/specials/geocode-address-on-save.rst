@@ -128,4 +128,4 @@ Hinweise
 * Der ``PrePersistModelEvent`` wird nur bei geänderten Datensätzen ausgelöst.
 * Für serverseitige Geocoding-Anfragen muss der API-Schlüssel auf die Server-IP freigeschaltet sein.
 * Für die Anzeige der Karte wird ein separater, auf Websites beschränkter API-Schlüssel benötigt.
-* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter :doc:`Display Markers on Map <display-markers-on-map>` beschrieben. `Contao <https://www.contao.org>`_
+* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter `<display-markers-on-map>` beschrieben. 
