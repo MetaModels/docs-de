@@ -32,7 +32,7 @@ Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
           ];
       }
     ?>
-    //Weitere Listen-Ausgabe
+    <?php //Weitere Listen-Ausgaben … ?>
   <?php endforeach; ?>
 
 Map einbinden
