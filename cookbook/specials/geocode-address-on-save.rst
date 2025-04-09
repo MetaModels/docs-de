@@ -128,4 +128,4 @@ Hinweise
 * Der ``PrePersistModelEvent`` wird nur bei geänderten Datensätzen ausgelöst.
 * Für serverseitige Geocoding-Anfragen muss der API-Schlüssel auf die Server-IP freigeschaltet sein.
 * Für die Anzeige der Karte wird ein separater, auf Websites beschränkter API-Schlüssel benötigt.
-* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter `Automatisches Erzeugen und Speichern von Koordinaten <https://github.com/Webstylerin/docs-de/blob/de-2.0/cookbook/specials/display-markers-on-map.rst>`_. beschrieben. 
+* Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter "`Standorte als Marker auf einer Google-Map ausgeben <https://github.com/Webstylerin/docs-de/blob/de-2.0/cookbook/specials/display-markers-on-map.rst>`_" beschrieben. 
