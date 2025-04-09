@@ -36,12 +36,12 @@ Im Template wird zunächst ein Array mit allen Koordinaten erstellt:
 
 Map einbinden
 -------------
-Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Der verwendete API-Key muss für die Kartenanzeige im Frontend freigegeben sein (API_KEY_WEBSITE). Hier ein minimales Beispiel:
+Die Map wird im gleichen Template ausgegeben, nach der foreach-Schleife. Achtung: ``API_KEY_WEBSITE`` muss durch den entsprechenden API-Schlüssel ersetzt werden.
 
 .. code-block:: html
 
       <div class="dienstleister-map">
-      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkOCCggA1fsmogpSjk-rxUEQv6uQYQFyc&callback=initMap&language=de&region=DE"></script>
+      <script async src="https://maps.googleapis.com/maps/api/js?key=API_KEY_WEBSITE&callback=initMap&language=de&region=DE"></script>
 
       <div id="map" style="height: 400px; width: 100%;"></div>
 
