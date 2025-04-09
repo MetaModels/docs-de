@@ -8,9 +8,8 @@ Die Geo-Koordinaten wurden dabei bereits in den Feldern ``latitude`` und ``longi
 
 Voraussetzungen
 ---------------
-* Contao 5.3
-* MetaModels 2.4
-* Google Maps API-Key (Webseitig für Kartenanzeige → ``API_KEY_WEBSITE``)
+* Contao 5.3 mit MetaModels 2.4, ebenfalls erfolgreich mit Contao 4.13 und MetaModels 2.3 getestet.
+* Google Maps API-Key für Kartenanzeige → ``API_KEY_WEBSITE`` (Anwendung: Websites; API: Maps JavaScript API)
 * MetaModels-Template mit Zugriff auf ``latitude``, ``longitude`` und optional individuellen Feldern wie z. B. ``name``
 
 Die Ausgabe erfolgt im MetaModels-Template, als Grundlage nutze ich ``metamodel_prerendered.html5``. Dabei handelt es sich um das Template, mit dem die MetaModels-Liste im Frontend ausgegeben wird.
