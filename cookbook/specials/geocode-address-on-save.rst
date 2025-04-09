@@ -8,7 +8,7 @@ Diese Anleitung beschreibt, wie in einer MetaModels-Installation automatisch Koo
 
 Voraussetzungen
 ---------------
-* Contao 5.3 mit MetaModels 2.4, ebenfalls erfolgreich mit Contao 4.13 und MetaModels 2.3 getestet.
+* Contao 5.3 mit MetaModels 2.4, ebenfalls erfolgreich mit Contao 4.13 und MetaModels 2.3 getestet
 * Google Maps API-Key für Koordinaten-Erstellung → ``API_KEY_SERVER`` (Anwendung: IP-Adressen; API: Geocoding API)
 * Felder im MetaModel: ``strasse``, ``plz``, ``ort``, ``latitude``, ``longitude``
 * Die Felder ``latitude`` und ``longitude`` sind vom Typ "Dezimal" (metamodels/attribute_decimal)
@@ -126,6 +126,4 @@ Hinweise
 --------
 
 * Der ``PrePersistModelEvent`` wird nur bei geänderten Datensätzen ausgelöst.
-* Für serverseitige Geocoding-Anfragen muss der API-Schlüssel auf die Server-IP freigeschaltet sein.
-* Für die Anzeige der Karte wird ein separater, auf Websites beschränkter API-Schlüssel benötigt.
 * Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter "`Standorte als Marker auf einer Google-Map ausgeben <https://github.com/Webstylerin/docs-de/blob/de-2.0/cookbook/specials/display-markers-on-map.rst>`_" beschrieben. 
