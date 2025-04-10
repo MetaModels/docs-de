@@ -157,7 +157,7 @@ Hinweise
 
 * Der ``PrePersistModelEvent`` wird nur bei geänderten Datensätzen ausgelöst.
 * Wie die gespeicherten Koordinaten auf einer Karte als Marker angezeigt werden können, ist unter
-  ":ref:`rst_cookbook_specials_marker-for-gmap`_" beschrieben.
+  ":ref:`rst_cookbook_specials_marker-for-gmap`" beschrieben.
 * Sofern der :ref:`Filter Umkreissuche (metamodels/filter_perimetersearch) <extended_perimetersearch>` implementiert ist,
   kann zur Ermittlung der Koordinaten auch eines der implementierten Services verwendet werden.
 * Der EventListener kann auch über PHP-Annotation bzw. -Attribute eingebunden werden - siehe
