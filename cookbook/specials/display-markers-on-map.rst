@@ -134,8 +134,8 @@ Hinweise
 --------
 
 * Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool freigegeben werden.
-* Wie Koordinaten beim Speichern automatisch erzeugt und gespeichert werden, ist unter
-  :ref:`rst_cookbook_specials_generate-geocoordinates`" beschrieben. 
+* Wie Koordinaten einer Adresse beim Speichern automatisch abgerufen und gespeichert werden, ist unter
+  ":ref:`rst_cookbook_specials_generate-geocoordinates`" beschrieben.
 
 
 **Dank**
