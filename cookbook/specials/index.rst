@@ -11,5 +11,7 @@ Spezialaufgaben und deren Lösung mit MM.
 
     ce_element_for_editors.rst
     picker-for-tinymce.rst
+    display-markers-on-map.rst
+    geocode-address-on-save.rst
     export-excel.rst
     register-services.rst

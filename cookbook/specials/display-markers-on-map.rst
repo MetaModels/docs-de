@@ -136,3 +136,8 @@ Hinweise
 * Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool freigegeben werden.
 * Wie Koordinaten beim Speichern automatisch erzeugt und gespeichert werden, ist unter
   :ref:`rst_cookbook_specials_generate-geocoordinates`" beschrieben. 
+
+
+**Dank**
+
+Dank an `Nicole Weiß - Webstylisten.de <https://webstylisten.de>`_ für den Artikel.
