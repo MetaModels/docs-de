@@ -211,6 +211,13 @@ Frontend-Editing (FEE)
   Suche-Indexierung nicht mehr folgt (``data-escargot-ignore``) - mit dem Link "Löschen" kann das zu Datenverlust führen
 
 
+Erweiterungen
+-------------
+
+* :ref:`Merkliste (Notelist) <rst_extended_notelist>` wurde für MM 2.3 frei gegeben
+
+
+
 Known-Issues
 ------------
 
