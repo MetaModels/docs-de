@@ -51,10 +51,11 @@ der Ausgabe im Frontend eine URL ausgegeben.
 dcaPicker
 ---------
 
-Man kann den Picker auch in einem eigen DCA einbauen. Das kann z. B. im :ref:`rst_extended_attribute_mcw`,
+Man kann den Picker auch in einem eigenen DCA einbauen. Das kann z. B. im :ref:`rst_extended_attribute_mcw`,
 RS-CustomElement oder einer eigenen DCA-Anpassung sein. Hierfür wird ein eigener Picker-Provider zur Verfügung gestellt,
 dessen Name sich aus dem Tabellenname des Model und der ID des Rendersettings in der Form
-``metamodelPicker_<mm_tablename>_<rendersetting-id>``. Eine Konfiguration im Attribute MCW könnte z. B wie folgt aussehen:
+``metamodelPicker_<mm_tablename>_<rendersetting-id>`` zusammen setzt. Eine Konfiguration im Attribute MCW könnte z. B.
+wie folgt aussehen:
 
 .. code-block:: php
    :linenos:
