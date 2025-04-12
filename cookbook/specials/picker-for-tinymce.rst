@@ -68,7 +68,7 @@ dessen Name sich aus dem Tabellenname des Model und der ID des Rendersettings in
             'inputType' => 'text',
             'eval'      => [
                 'fieldType'  => 'radio',
-                'dcaPicker'  => ['providers' => ['metamodelPicker_mm_employees_2']],
+                'dcaPicker'  => ['providers' => ['metamodelPicker_mm_employees_4']],
                 'tl_class'   => 'wizard',
             ],
         ],
