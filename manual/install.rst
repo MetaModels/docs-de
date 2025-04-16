@@ -80,6 +80,8 @@ Die Installationsvoraussetzungen für MetaModels 2.4 sind:
 * MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
 * ``memory_limit`` 512MB oder mehr (Empfehlung)
 * bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
+  - `MM Core <https://github.com/MetaModels/core/tree/release/2.4.0>`_ ist schon frei verfügbar
+* für kleinere Projekte steht `Paket "Basic 1" zur Verfügung <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
 
 Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
 
