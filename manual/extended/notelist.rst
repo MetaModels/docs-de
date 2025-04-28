@@ -39,15 +39,15 @@ Voraussetzungen für die Installation:
 
 **Contao 5.3:**
 
+.. warning:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
+   Fundrasingsumme von 2.300€ frei geschaltet. |br|
+   Für einen Zugang bitte eine E-Mail an info@e-spin.de
+
 * ^PHP 8.2
 * MetaModels 2.4
 * Notelist 2.4
 * optional Notification Center 2.3
 * Zugang zum geschützten Repository - Daten nach Spende
-
-.. warning:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
-   Fundrasingsumme von 2.300€ frei geschaltet. |br|
-   Für einen Zugang bitte eine E-Mail an info@e-spin.de
 
 **Contao 4.13:**
 
