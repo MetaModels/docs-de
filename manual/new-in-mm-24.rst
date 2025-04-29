@@ -29,6 +29,9 @@ z. B. die Deprecations aus `C 4.13 <https://github.com/contao/contao/blob/4.13/D
 bzw. `C 5 <https://github.com/contao/contao/blob/5.x/DEPRECATED.md>`_, absolute Pfadangaben für Dateien wie Icons
 oder CSS/JS oder vollständige Angaben beim Aufruf von Methoden z. B. ``\Contao\Input::get('myvariable')``.
 
+Bei den Bildgrößen gibt es verschiedene Standardvorgaben wie "Mitte-Mitte" nicht mehr - dafür eigene Bildgrößen
+definieren und z. B. bei den Rendersettings anpassen.
+
 Für den TinyMCE kann man einen Link-Picker auf Detailseiten konfigurieren - siehe
 :ref:`rst_cookbook_specials_picker-for-tinymce`.
 
@@ -113,6 +116,7 @@ im Blick behalten werden:
 * bei Attribut Land wurden die Schreibweisen der Länderkürzel auf Großbuchstaben wie in Contao geändert - vorhandene
   Daten werden mit einer Migration angepasst; ggf. eigene Prüfungen oder Speicherungen anpassen
 * bei FFE und Dateiupload: prüfen ob Insert-Tag ``{{post::*}}`` verwendet wurde und anpassen (s. o.)
+* Auswahl der Bildgrößen prüfen - verschiedene Standardvorgaben wie "Mitte-Mitte" gibt es nicht mehr
 
 
 Re-Finanzierung
