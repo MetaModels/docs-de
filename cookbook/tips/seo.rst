@@ -45,7 +45,7 @@ Möchte man individuellere Einstellungsmöglichkeiten, kann man für Title und D
 Damit kann der Redakteur unabhängig von anderen Attributen die Angaben optimieren.
 
 Als weitere Möglichkeit der Datenübergabe, kann man die Erstellung von Title und Description im Rendertemplate
-vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z. B. mit folgenden Snippets im Template erfolgen:
+vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z. B. mit folgendem Snippet im Template erfolgen:
 
 .. code-block:: php
    :linenos:
