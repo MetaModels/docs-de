@@ -19,6 +19,9 @@ Die Auszeichnungen können z. B. mit folgenden Tools geprüft werden:
 * `Rich-Suchergebnisse <https://search.google.com/test/rich-results>`_
 * `Schema-Validierung <https://validator.schema.org/>`_
 
+Mehr zum Thema ist auf der Seit :ref`rst_cookbook_tips_seo` zu finden.
+
+
 Auszeichnung mit ``Microdata``
 ------------------------------
 
