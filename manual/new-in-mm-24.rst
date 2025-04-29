@@ -27,7 +27,7 @@ Eingabemaske wie "w25" oder "w66" können natürlich auch in MM verwendet werden
 Bei eigenen Anpassungen bzw. Programmierungen sind einige Dinge zu beachten, die sich in Contao geändert haben wie
 z. B. die Deprecations aus `C 4.13 <https://github.com/contao/contao/blob/4.13/DEPRECATED.md>`_
 bzw. `C 5 <https://github.com/contao/contao/blob/5.x/DEPRECATED.md>`_, absolute Pfadangaben für Dateien wie Icons
-oder CSS/JS oder vollständige Angaben beim Aufruf von Methoden z. B. "\Contao\Input::get('myvariable')".
+oder CSS/JS oder vollständige Angaben beim Aufruf von Methoden z. B. ``\Contao\Input::get('myvariable')``.
 
 Für den TinyMCE kann man einen Link-Picker auf Detailseiten konfigurieren - siehe
 :ref:`rst_cookbook_specials_picker-for-tinymce`.
