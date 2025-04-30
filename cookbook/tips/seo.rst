@@ -41,6 +41,10 @@ Meta-Daten Title und Description
 Diese Einstellungen beziehen sich wiederum vorwiegend auf die Einstellungen einer Detailseite. Im CE bzw. FE-Modul
 MM-Liste gibt es jeweils eine Selectauswahl mit vorhandenen Attributen für Title und Description.
 
+Die Description sollte den Inhalt der Seite prägnant beschreiben. Eine `maximale Zeichenanzahl gibt z. B. Google nicht
+vor <https://developers.google.com/search/docs/appearance/snippet?hl=de#meta-descriptions>`_, aber auf vielen SEO-Seiten
+wird eine Zeichenzahl von max. 150 bis 160 genannt - Contao selbst begrenzt das in der fe_page auf 320 Zeichen.
+
 Möchte man individuellere Einstellungsmöglichkeiten, kann man für Title und Description eigene Textattribute anlegen.
 Damit kann der Redakteur unabhängig von anderen Attributen die Angaben optimieren.
 
@@ -64,7 +68,7 @@ vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z. B. mit folgend
    ...
    <?php
    $htmlHeadBag->setTitle($htmlDecoder->inputEncodedToPlainText($arrItem['text']['title'] . ' - ' $arrItem['text']['art_no']));
-   $htmlHeadBag->setMetaDescription(StringUtil::substr($htmlDecoder->inputEncodedToPlainText($arrItem['text']['title'] . ' - ' $arrItem['text']['description']), 160));
+   $htmlHeadBag->setMetaDescription(StringUtil::substr($htmlDecoder->inputEncodedToPlainText($arrItem['text']['title'] . ' - ' $arrItem['text']['description']), 320));
    ?>
 
 Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung stellen und die eingebundenen Services
