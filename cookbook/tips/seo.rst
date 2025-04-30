@@ -88,6 +88,22 @@ Die Angabe von ``rel="next"`` und ``rel="prev"`` wird
 andere Suchmaschinen wie Bing scheinen das noch auszuwerten und einige Browser verwenden die Links in den Meta-Daten zum
 Vorladen der Seite.
 
+Wer die Angaben im ``head`` der Seite ausgeben möchte, kann ein eigenes Template ``mm_pagination.html5`` anlegen und
+dort die Meta-Angaben ergänzen - z. B. mit
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // templates/mm_pagination.html5
+   ...
+   <?php if ($this->hasPrevious): ?>
+      <?php $GLOBALS['TL_HEAD'][] = '<link rel="prev" href="' . $this->previous['href'] . '" />' ?>
+   ...
+   <?php if ($this->hasNext): ?>
+      <?php $GLOBALS['TL_HEAD'][] = '<link rel="next" href="' . $this->next['href'] . '" />' ?>
+   ...
+
 
 Strukturierte Daten
 ...................
