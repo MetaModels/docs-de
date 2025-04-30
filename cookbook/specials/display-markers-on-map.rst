@@ -134,6 +134,8 @@ Hinweise
 --------
 
 * Für eine datenschutzkonforme Nutzung sollte die Karte über ein Consent-Tool freigegeben werden.
+* Die Ausgabe beim Rendern kann beschleunigt werden, wenn in den Einstellungen CE MM-Liste die Option
+  `'Keine geparsten Items über "$data" ausgeben'` angewählt wird - ein Rendern der Daten ist nicht notwendig.
 * Wie Koordinaten einer Adresse beim Speichern automatisch abgerufen und gespeichert werden, ist unter
   ":ref:`rst_cookbook_specials_generate-geocoordinates`" beschrieben.
 
