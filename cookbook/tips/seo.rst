@@ -68,7 +68,7 @@ vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z. B. mit folgend
    ...
    <?php
    $htmlHeadBag->setTitle($htmlDecoder->inputEncodedToPlainText($arrItem['text']['title'] . ' - ' $arrItem['text']['art_no']));
-   $htmlHeadBag->setMetaDescription(StringUtil::substr($htmlDecoder->inputEncodedToPlainText($arrItem['text']['title'] . ' - ' $arrItem['text']['description']), 320));
+   $htmlHeadBag->setMetaDescription(StringUtil::substr($htmlDecoder->inputEncodedToPlainText($arrItem['text']['title'] . ' - ' $arrItem['text']['description']), 160));
    ?>
 
 Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung stellen und die eingebundenen Services
