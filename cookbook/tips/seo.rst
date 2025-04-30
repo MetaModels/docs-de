@@ -71,6 +71,24 @@ Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung st
 injecten.
 
 
+Paginierung der Listenausgabe
+.............................
+
+Längere Ausgabelisten sollten paginiert werden - zum einen, weil die Seite für den User besser zu überblicken ist und
+schneller läd, als auch für ein besseres Ranking bei der Performancebewertung durch die Suchmaschinen.
+
+Die Ausgabeseite sollte in den Metadaten eine Angabe zur
+`kanonischen URL <https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls>`_ haben - das
+kann man in den Seiteneigenschaften aktivieren. Google macht die Einschränkung, dass die erste Seite (Basisseite) nicht
+als kanonische Seite ausgezeichnet werden soll, sondern nur alle weiteren Paginierungsseiten -
+`siehe Google "URLs richtig verwenden" <https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading?hl=de#use-urls-correctly>`_
+
+Die Angabe von ``rel="next"`` und ``rel="prev"`` wird
+`lt. Google nicht mehr beachtet <https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading?hl=de#use-urls-correctly>`_ -
+andere Suchmaschinen wie Bing scheinen das noch auszuwerten und einige Browser verwenden die Links in den Meta-Daten zum
+Vorladen der Seite.
+
+
 Strukturierte Daten
 ...................
 
