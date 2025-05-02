@@ -75,6 +75,44 @@ Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung st
 injecten.
 
 
+Meta-Daten hreflang
+...................
+
+Gibt es bei einem mehrsprachigen Aufbau einer Seite die Ausgabe auch in einer oder mehrerer anderen Sprache, kann dies
+mit der Angabe eines Links in ``hreflang`` der Suchmaschine mit auf dem Weg gegeben werden. Um einen Wechsel der Sprache
+dem besucher im Frontend bereit zu stellen, gibt es verschiedene Erweiterungen - häufig wird hier
+"`ChangeLanguage <https://github.com/terminal42/contao-changelanguage>`_" eingesetzt.
+
+Diese Erweiterung erzeugt automatisch die Meta-Daten für ``hreflang`` sofern die entsprechenden Relationen in den
+Seiteneigenschaften ausgewählt wurden.
+
+Die im Quelltext ausgegebenen Links gehen ohne weitere Anpassungen aber nur zum jeweiligen Seiten-Alias der anderen
+Seiten ohne übermittlung der Filterparameter z. B. der Detailseite.
+
+Die Erweiterung "ChangeLanguage" bietet in den Seiteneinstellungen die Option an "Query-Parameter beibehalten" mit Keys
+zu befüllen. Die entsprechenden Key-Value-Pare werden dann auch mit an die anderen Sprachenlinks angehangen. Der Key
+``auto_item`` wird per se aber nicht unterstützt.
+
+Für einen Sprachenwechsel einer Detailseite kann man folgende Konfiguration einsetzen:
+
+* Filter "Details" mit Filterregel "Einfache Abfrage" mit Attribut "Alias" - "URL-Parameter" auf ``alias`` belassen und
+  nicht auf ``auto_item`` setzen
+* in Seiteneigenschaften "Query-Parameter beibehalten" auf allen Detailseiten "alias" eintragen
+
+Das Ergebnis sieht dann i. E. wie folgt aus:
+
+.. code-block:: html
+   :linenos:
+
+   <link rel="alternate" hreflang="de" href="http://my-domain.tld/de/details/alias/mayer-herbert">
+   <link rel="alternate" hreflang="x-default" href="http://my-domain.tld/de/details/alias/mayer-herbert">
+   <link rel="alternate" hreflang="en" href="http://my-domain.tld/en/details/alias/mayer-herbert">
+
+Möchte man Verlinkungen mit ``auto_item`` erstellen oder von mehrsprachigen Attributen die Key und Values in übersetzter
+Fassung in die URL einbringen, so muss man das mit einer eigenen Anpassung z. B. über den Hook
+"`changelanguageNavigation <https://extensions.terminal42.ch/docs/changelanguage/en/developers/>`_" erfolgen.
+
+
 Paginierung der Listenausgabe
 .............................
 
