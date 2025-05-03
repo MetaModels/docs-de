@@ -119,7 +119,7 @@ Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übers
 Bei der Filterregel "Levenshtein-gestützte Suche" ist es bei der Attributseinstellung "Attribute zum Indexieren" auch
 möglich, mehrsprachige Attribute auszuwählen.
 
-Die Filterregel ":ref:`Loupe-gestützte Volltextsuche <rst_extended_loupe>`_ unterstützt aktuell die mehrsprachigen
+Die Filterregel ":ref:`Loupe-gestützte Volltextsuche <rst_extended_loupe>` unterstützt aktuell die mehrsprachigen
 Attribute Text und Langtext.
 
 
