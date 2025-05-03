@@ -9,6 +9,7 @@ können als eigene Templatevarianten angepasst und geladen werden.
 Neben den hier aufgeführten Templates können einzelne Attribute oder Erweiterungen separate Templates mitbringen.
 
 
+.. _component_templates_fe-list:
 Frontend-Liste
 --------------
 

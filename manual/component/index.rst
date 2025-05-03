@@ -14,6 +14,9 @@ ohne "s" geschrieben, auch wenn dies z.B. durch den Genitiv erforderlich wäre.
 Der Begriff **MetaModels** (Plural) steht allein als Bezeichnung für das
 Erweiterungspaket für Contao.
 
+Bevor man sich an die Erstellung komplexerer Datenstrukturen in MetaModels macht, sollte man sich unbedingt
+Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models untereinander - machen. Dazu gibt es
+eine Übersichtsseite ":ref:`component_relations`".
 
 Nach dem Erstellen eines MetaModel stehen die folgenden Komponenten zur Bearbeitung zur Verfügung:
 
@@ -41,12 +44,11 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
 
 Wie die einzelnen Templates zusammenwirken, ist auf der Seite zu den :ref:`component_templates` aufgeführt.
 
+MetaModels ist sehr gut auf die Arbeit mit mehrsprachigen Inhalten ausgerichtet -
+:ref:`mehr zur Mehrsprachigkeit in MM. <component_multi-language>`_
+
 Um einzelne Werte eines Datensatzes (Item) oder die Anzahl aller Datensätze im Contao-Kontext
 auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Verfügung.
-
-Bevor man sich an die Erstellung komplexerer Datenstrukturen in MetaModels macht, sollte man sich unbedingt
-Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models untereinander - machen. Dazu gibt es
-eine Übersichtsseite ":ref:`component_relations`".
 
 
 .. toctree::
@@ -65,6 +67,7 @@ eine Übersichtsseite ":ref:`component_relations`".
     schema-manager
     translations
     templates
+    multi-language
     inserttags
 
 .. |br| raw:: html

@@ -75,6 +75,7 @@ Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung st
 injecten.
 
 
+.. _rst_cookbook_tips_seo_metadata-hreflang:
 Meta-Daten hreflang
 ...................
 
@@ -111,6 +112,8 @@ Das Ergebnis sieht dann i. E. wie folgt aus:
 Möchte man Verlinkungen mit ``auto_item`` erstellen oder von mehrsprachigen Attributen die Key und Values in übersetzter
 Fassung in die URL einbringen, so muss man das mit einer eigenen Anpassung z. B. über den Hook
 "`changelanguageNavigation <https://extensions.terminal42.ch/docs/changelanguage/en/developers/>`_" erfolgen.
+
+:ref:`Mehr zur Mehrsprachigkeit in MM. <component_multi-language>`_
 
 
 Paginierung der Listenausgabe
@@ -158,8 +161,3 @@ Mit diesen "Hilfsdaten" kann eine Suchmaschine die Inhalte z. B. einer FAQ-Ausga
 Wohnungsanzeige, Kochrezept usw. zuordnen.
 
 Wie diese Daten eingebaut werden können, steht im Artikel ":ref:`rst_cookbook_templates_fe_template_schema_org`".
-
-
-.. |br| raw:: html
-
-   <br />

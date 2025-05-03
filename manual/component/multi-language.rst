@@ -1,0 +1,128 @@
+.. _component_multi-language:
+
+Mehrsprachigkeit in MetaModels
+==============================
+
+MetaModels ist sehr gut auf mehrsprachige Inhalte ausgerichtet. MM stellt für die mehrsprachigen Inhalte eigene
+Attribute wie z. B. `Übersetzter Text`, `Übersetzter Alias`, `Übersetzte Datei` usw. zur Verfügung. Für Attribute deren
+Werte Sprachen unabhängig sind wie z. B. die Zahlenwerte gibt es diese Varianten nicht.
+
+Bevor man mit der Erstellung der Models startet sollte man gut überlegen, ob die Inhalte mehrsprachig abgelegt werden
+sollen. Die mehrsprachigen Inhalte werden in eigenen Tabellen abgelegt und nicht in der eigenen ``mm_*``, so dass ein
+späterer Wechsel mit entsprechender Nachpflege verbunden ist.
+
+
+Models
+------
+
+Die Mehrsprachigkeit eines Models wird beim Anlegen festgelegt. Mit Aktivierung der Option "Übersetzung" kann man
+eine Liste mit zu pflegenden Sprachen anlegen. Aktiviert man auch die Option "Support für Territory-Angabe in der
+Sprache", werden zu den Angaben der Hauptsprachen wie ``de``, ``en``, ``fr`` auch die territorialen Zusätze
+wie ``de_DE``, ``de_AT``, ``de_CH`` usw. in der Liste freigeschaltet.
+
+Eine Sprache muss die Fallbacksprache sein. Die Datensätze für die Fallbacksprache müssen immer vorhanden sein. Muss
+die Fallbacksprache später gewechselt werden, muss das entsprechend in der DB geprüft und korrigiert werden.
+
+Legt man mehrere Models an, die auch noch durch Relationen verbunden sind ist es ratsam, bei allen Models das selbe
+Sprachenschema und Fallbacksprache anzulegen. Es ist auch sinnvoll nur die Sprachen anzulegen, die Contao über seine
+Startpunkte definiert hat.
+
+Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben.
+
+
+Attribute
+---------
+
+Ist die Option "Übersetzung" aktiviert, stehen beim Anlegen der Attribute auch die mehrsprachigen Varianten zur
+Verfügung. Je nach Installation kann das wie folgt sein:
+
+* Übersetzte Checkbox
+* Übersetzte Datei
+* Übersetzte Einzelauswahl [select] *
+* Übersetzte Mehrfachauswahl [tags] *
+* Übersetzte Tabelle multi (MCW)
+* Übersetzte Text-Tabelle
+* Übersetzte URL
+* Übersetzte kombinierte Werte
+* Übersetzter Alias
+* Übersetzter Inhalt eines Artikels
+* Übersetzter Langtext
+* Übersetzter Text
+
+*: die **nicht-übersetzten Attribute Einzelauswahl und Mehrfachauswahl unterstützen per se die Mehrsprachigkeit** bei
+Relationen zu MetaModel-Tabellen. Die beiden hier aufgeführten Attribute sind für Spezialfälle wie z. B. Relationen
+zu nicht-MM-Tabellen mit mehrsprachigen Inhalten. Diese Tabellen müssen aber eine Spalte mit dem Sprachschlüssel haben.
+Man kann dafür auch einsprachige MetaModel-Tabellen verwenden mit einem Attribut für den Sprachenschlüssel. Damit ist
+es möglich je Sprache nicht nur eine entsprechende Übersetzung zu liefern, sondern ganz andere Inhalte. Beispielsweise
+könnte eine Wanderung für englischsprachige Besucher "linksrum" und für deutschsprachige Besucher "rechtsrum" gehen.
+
+Bei einem mehrsprachigen MetaModel stehen bei allen Attributsdefinition für die Felder "Name" und "Beschreibung" je
+Sprache ein Feld zur Verfügung. Diese übersetzten Angaben werden in der Eingabemaske automatisch in der Sprache
+ausgegeben wenn die passende Backendsprache im Benutzerprofil ausgewählt wurde.
+
+Zudem kann im :ref:`Template des Renderings <component_templates_fe-list>`_ über den Knoten ``attributes`` auf
+den übersetzten Wert "Name" zugegriffen werden - es wird automatisch die Sprache der Contao Frontendausgabe oder der
+Fallbackwert ausgegeben. Im Template könnte eine Ausgabe wie folgt aussehen:
+
+.. code-block:: html
+   :linenos:
+
+    <p><strong><?= $arrItem['attributes']['name'] ?>:</strong> <?= $arrItem['text']['name'] ?></p>
+    <p><strong><?= $arrItem['attributes']['city'] ?>:</strong> <?= $arrItem['text']['city'] ?></p>
+    <p><strong><?= $arrItem['attributes']['description'] ?>:</strong> <?= $arrItem['text']['description'] ?></p>
+
+Damit ist eine bequeme Handhabung der mehrsprachigen "Labels" in einem Template möglich.
+
+
+Eingabemaske / Eingabe
+----------------------
+
+In der Eingabemaske im Backend haben die Widgets der mehrsprachigen Attribute zur Unterscheidung ein farbiges
+Flaggen-Icon. Die Umschaltung der Sprachen erfolgt direkt im Header der Eingabemaske.
+
+Beim Neuanlegen eines Datensatzes wird immer erst die Fallbacksprache befüllt - wenn in der Maske noch eine andere
+Sprache angezeigt werden wird die mit dem Speichern umgeschaltet. Sind alle Felder ausgefüllt, muss der Datensatz
+gespeichert werden - anschließend kann die Umschaltung zu einer anderen Sprache erfolgen.
+
+Sind die Felder mit der Fallbacksprache befüllt, gespeichert und es wird auf eine andere Sprache umgeschaltet, ist
+in den Textfeldern der Text der Fallbacksprache zu sehen. Damit soll eine Übersetzung erleichtert werden. Diese
+angezeigten (Hilfs-)Texte werden aber beim Speichern nicht mit in die DB übertragen. Zum Speichern eines Textes
+in einer nicht-Fallbacksprache, muss sich dieser von der Fallbackeingabe unterscheiden. Wenn z. B. ein Abteilungsname
+"Marketing" ist und Deutsch die Fallbacksprache, würde das Wort "Marketing" nicht als Wort bei Englisch gespeichert
+werden.
+
+
+BE-Listenansicht
+----------------
+
+In der Listenansicht im Backend gibt es im Header auch einen Umschalter für die Sprache - werden in der Liste
+mehrsprachige Attribute ausgegeben, ist dann die Anzeige entsprechend der Sprache.
+
+
+Filter
+------
+
+Die meisten Filterregeln suchen in der Sprache, die im Frontend gerade die aktive (Contao-)Sprache ist. Bei einigen
+Filterregeln wie "Einfache Abfrage", "Einzelauswahl", "Mehrfachauswahl", "Textfilter" gibt es die Option
+"Alle Sprachen durchsuchen", sofern ein mehrsprachiges Attribut ausgewählt wurde.
+
+Diese Option kann z. B. verwendet werden, wenn man bei einer Detailseite einen
+:ref:`Sprachenwechsler wie "ChangeLanguage" <rst_cookbook_tips_seo_metadata-hreflang>` hat und den Filterwert nicht für
+andere Sprachen anpassen möchte. Man kann bei der Filterregel "Einfache Abfrage" die Option "Alle Sprachen durchsuchen"
+aktivieren und die Detailseite kann sowohl mit |br|
+``https://my-domain.tld/en/dessert/details/marinated-strawberries`` als auch mit |br|
+``https://my-domain.tld/en/dessert/details/marinierte-erdbeeren`` |br|
+aufrufen.
+
+Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
+
+Bei der Filterregel "Levenshtein-gestützte Suche" ist es bei der Attributseinstellung "Attribute zum Indexieren" auch
+möglich, mehrsprachige Attribute auszuwählen.
+
+Die Filterregel ":ref:`Loupe-gestützte Volltextsuche <rst_extended_loupe>`_ unterstützt aktuell die mehrsprachigen
+Attribute Text und Langtext.
+
+
+.. |br| raw:: html
+
+   <br />
