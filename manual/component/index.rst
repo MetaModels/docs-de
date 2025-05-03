@@ -45,7 +45,7 @@ zur Verfügung - mehr dazu unter :ref:`component_contentelements`.
 Wie die einzelnen Templates zusammenwirken, ist auf der Seite zu den :ref:`component_templates` aufgeführt.
 
 MetaModels ist sehr gut auf die Arbeit mit mehrsprachigen Inhalten ausgerichtet -
-:ref:`mehr zur Mehrsprachigkeit in MM. <component_multi-language>`_
+:ref:`mehr zur Mehrsprachigkeit in MM. <component_multi-language>`
 
 Um einzelne Werte eines Datensatzes (Item) oder die Anzahl aller Datensätze im Contao-Kontext
 auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Verfügung.
