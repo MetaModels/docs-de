@@ -90,3 +90,23 @@ oder mit eigenem Linktext
 externe Verlinkungen:
 ``` `Contao <https://www.contao.org>`_ ```
 offensichtlich gibt es keine Möglichkeit das Attribut "target" anzugeben...
+
+
+### Aufzählungen
+
+Aufzählungen mit Bullets (ul) können als Liste mit vorangestelltem ``* `` erzeugt werden - als geordnete Aufzählung
+(ol) mit ``* ``. Vor und nach der Liste muss eine Leerzeile vorhanden sein. Ist ein text zu lang uns soll umgebrochen
+werden, müssen auf die neue Zeile so viele Leerzeichen bist zum Textanfang eingefügt werden.
+
+```
+* kurzer Text
+* langer Text ... Lorem ipsum dolor sit amet consectetur. Proin pellentesque dui montes proin. At nunc feugiat
+  posuere volutpat malesuada. Nisl pretium dolor ut lacus a pulvinar ac vitae. Id varius vestibulum elementum
+  tristique morbi neque at. Praesent tincidunt enim feugiat nunc sit consectetur.
+* noch ein kurzer Text
+```
+
+### Textformatierung
+
+* Fett: ``**Mein fetter Text**``
+* Kursiv: ``*Mein kursiver Text*``

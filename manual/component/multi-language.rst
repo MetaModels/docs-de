@@ -49,7 +49,7 @@ Verfügung. Je nach Installation kann das wie folgt sein:
 * Übersetzter Langtext
 * Übersetzter Text
 
-*: die **nicht-übersetzten Attribute Einzelauswahl und Mehrfachauswahl unterstützen per se die Mehrsprachigkeit** bei
+\*: die **nicht-übersetzten Attribute Einzelauswahl und Mehrfachauswahl unterstützen per se die Mehrsprachigkeit** bei
 Relationen zu MetaModel-Tabellen. Die beiden hier aufgeführten Attribute sind für Spezialfälle wie z. B. Relationen
 zu nicht-MM-Tabellen mit mehrsprachigen Inhalten. Diese Tabellen müssen aber eine Spalte mit dem Sprachschlüssel haben.
 Man kann dafür auch einsprachige MetaModel-Tabellen verwenden mit einem Attribut für den Sprachenschlüssel. Damit ist
