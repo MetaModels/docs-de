@@ -60,7 +60,7 @@ Bei einem mehrsprachigen MetaModel stehen bei allen Attributsdefinition für die
 Sprache ein Feld zur Verfügung. Diese übersetzten Angaben werden in der Eingabemaske automatisch in der Sprache
 ausgegeben wenn die passende Backendsprache im Benutzerprofil ausgewählt wurde.
 
-Zudem kann im :ref:`Template des Renderings <component_templates_fe-list>`_ über den Knoten ``attributes`` auf
+Zudem kann im :ref:`Template des Renderings <component_templates_fe-list>` über den Knoten ``attributes`` auf
 den übersetzten Wert "Name" zugegriffen werden - es wird automatisch die Sprache der Contao Frontendausgabe oder der
 Fallbackwert ausgegeben. Im Template könnte eine Ausgabe wie folgt aussehen:
 
