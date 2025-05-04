@@ -30,6 +30,7 @@ Startpunkte definiert hat.
 Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben.
 
 
+.. _component_multi-language_attribute:
 Attribute
 ---------
 

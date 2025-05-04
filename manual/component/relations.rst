@@ -40,6 +40,7 @@ für eine Urlaubsvertretung:
 |img_db-schema_01|
 
 
+.. _component_relations_standard-relations:
 Standard-Relationen
 -------------------
 
@@ -55,7 +56,10 @@ Relationstabelle - wenn diese eine MM-Tabelle mit weiteren Relationen ist, dann 
 
 Zum Beispiel: wenn man bei Mitarbeiter eine Relation zu Abteilung hat und Abteilung wiederum eine Relation zum
 Abteilungsleiter (Model "Mitarbeiter"), so kann man in einer Liste aller Mitarbeiter neben dem Abteilungsnamen auch Name
-Bild des Abteilungsleiters ausgeben - dazu sind keine weiteren Abfragen notwendig.
+Bild des Abteilungsleiters ausgeben - dazu sind keine weiteren Abfragen notwendig. Als Ausgabe im Template könnte
+das i. E. so aussehen:
+
+``<p><strong>Abteilungsleiter:</strong> <?= $item['raw']['division']['__SELECT_RAW__']['manager']['__SELECT_RAW__']['name'] ?></p>``
 
 Die Auswahlen im Backend können über Filter manipuliert werden - zum Beispiel wenn man in der Eingabemaske eines
 Mitarbeiters die Urlaubsvertretung auswählen möchte und in der Liste alle Mitarbeite aufgelistet sind. Die Auswahl

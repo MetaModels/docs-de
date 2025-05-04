@@ -17,7 +17,7 @@ Für die Ausgabe im Frontend steht eine dreistufige Hierarchie von Templates zur
 
 Die **erste Stufe** sind die Templates der MetaModels-Liste als Content-Element ``ce_metamodel_list`` bzw. FE-Modul
 ``mod_metamodel_list``. Dieses Template dient als "Wrapper" für die Ausgabe und wird im jeweiligen Content-Element bzw.
-FE-Modul ausgewählt. Hier ist als Standard die Listenausgabe und die Paginierung eingebunden.
+FE-Modul ausgewählt. Hier ist als Standard die Listenausgabe ("zweite Stufe") und die Paginierung eingebunden.
 
 Die **zweite Stufe** bildet das Template des Renderings ``metamodel_prerendered`` bzw. ``metamodel_unrendered`` - hier
 werden in einer Schleife alle Datensätze ausgegeben. In dem Template werden üblicher Weise die meisten Anpassungen an
@@ -26,6 +26,30 @@ eine individuelle Ausgabe vorgenommen. Diese Templates werden bei den Einstellun
 .. note:: Das Standardtemplate ``metamodel_prerendered`` ist für die erste Ausgabe ausreichend und es werden alle bei
    den Rendersettings aktivierten Attribute ausgegeben. Für eine individuelle Ausgabe kann man sich ein eigenes
    Template auf der Basis von ``metamodel_prerendered_debug`` erstellen und sein HTML-Markup einfügen.
+
+Im Template kann man auf verschiedene Daten zugreifen - z. B.
+
+* ``$this->total``: :ref:`gesamte Anzahl der Items <rst_cookbook_frontend_output-item-count>`
+* ``$this->data``: Array mit allen Datensätzen (s. u.)
+* ``$this->generateSortingLink``: :ref:`Links für die Umschaltung der Sortierung <rst_cookbook_templates_fe_list_sorting>`
+* ``$this->renderSortingLink``: :ref:`Links für die Umschaltung der Sortierung <rst_cookbook_templates_fe_list_sorting>`
+* ``$this->filterParams``: wenn die Liste gefiltert wird, hat man hier Zugriff auf die Filterdaten
+* ``$this->parameter``: :ref:`rst_cookbook_templates_fe_list_parameters`
+
+Für die Ausgabe der Datensätze wird im Template eine Schleife über die Daten von ``foreach ($this->data as $item)``
+eingebaut. In jedem ``$item`` hat man Zugriff auf die folgenden Knoten des Arrays eines Datensatzes:
+
+* ``$this->raw``: Rohdaten des Datensatzes inkl. die Systemspalten wie ``id``, ``tstamp`` usw., Zahlenwerte wie auch das
+  Datum werden hier wie in der DB gespeichert ausgegeben; bei Relations-Attributen hat man hier die Möglichkeit, weiter
+  auf den verknüpften Datensatz zuzugreifen (siehe ":ref:`component_relations_standard-relations`")
+* ``$this->text``: Liste mit Ausgabe in der Text-Repräsentation (Template aus "dritte Stufe")
+* ``$this->html5``: Liste mitAusgabe in der HTML-Repräsentation (Template aus "dritte Stufe")
+* ``$this->attributes``: Liste mit Ausgabe des Wertes "Name" aus der Konfiguration des Attributes (:ref:`bei
+  Mehrsprachigkeit in entsprechender Übersetzung <component_multi-language_attribute>`)
+* ``$this->actions``: Knoten ``jumpTo`` mit Link aus den Rendersettings - meist Link zur Detailseite; es können aber
+  auch weitere Angaben z. B. aus der :ref:`Merkliste <rst_extended_notelist>` vorhanden sein.
+* ``$this->jumpTo``: Knoten ist deprecated - Knoten ``$this->actions`` verwenden
+* weitere Knoten z. B. aus der :ref:`Merkliste <rst_extended_notelist>`
 
 Die Ausgabe von vorgerenderten (prerendered) Ausgaben der Widgets macht die Ausgabe sehr einfach - das Rendern kostet
 aber entsprechend Rechenzeit. Bei sehr vielen gleichzeitigen Ausgaben kann das zu Problemen mit der Serverbelastung

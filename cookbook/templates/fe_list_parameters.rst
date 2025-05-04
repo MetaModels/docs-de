@@ -11,7 +11,7 @@ der Listenausgabe dies mit Parametern zu steuern oder abzuwandeln. Damit kann ma
 verallgemeinern und über das Backend z. B. mit Bezeichnungen, Übersetzungen oder Parameter für die Ausgabe
 oder JavaScript-Inhalte steuern.
 
-Über einen MCW können eigene „Key-Value-Paare“ erstellt werden, die im Template über ``$this->params`` als Array zur
+Über einen MCW können eigene „Key-Value-Paare“ erstellt werden, die im Template über ``$this->parameter`` als Array zur
 Verfügung stehen.
 
 Die folgenden zwei Screenshots zeigen eine mögliche Eingabe im Backend und was an das Template übergeben wird:
@@ -20,8 +20,8 @@ Die folgenden zwei Screenshots zeigen eine mögliche Eingabe im Backend und was 
 
 |img_settings-wizard_02|
 
-Der folgende Code kann im Kopfbereich des Listentemplates eingebaut werden und zeigt als Beispiel den Zugriff auf
-die Werte inklusive eines Defaultwertes:
+Der folgende Code kann im Kopfbereich des :ref:`Listentemplates <component_templates_fe-list>` eingebaut werden und
+zeigt als Beispiel den Zugriff auf die Werte inklusive eines Defaultwertes:
 
 .. code-block:: php
    :linenos:
