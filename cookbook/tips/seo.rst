@@ -113,7 +113,7 @@ Möchte man Verlinkungen mit ``auto_item`` erstellen oder von mehrsprachigen Att
 Fassung in die URL einbringen, so muss man das mit einer eigenen Anpassung z. B. über den Hook
 "`changelanguageNavigation <https://extensions.terminal42.ch/docs/changelanguage/en/developers/>`_" erfolgen.
 
-:ref:`Mehr zur Mehrsprachigkeit in MM. <component_multi-language>`_
+:ref:`Mehr zur Mehrsprachigkeit in MM. <component_multi-language>`
 
 
 Paginierung der Listenausgabe
