@@ -9,7 +9,7 @@ Werte Sprachen unabhängig sind, wie z. B. die Zahlenwerte, gibt es diese Varian
 
 Bevor man mit der Erstellung der Models startet sollte man gut überlegen, ob die Inhalte mehrsprachig abgelegt werden
 sollen. Die mehrsprachigen Inhalte werden in eigenen Tabellen abgelegt und nicht in der eigenen ``mm_*``, so dass ein
-späterer Wechsel mit entsprechender Nachpflege verbunden ist.
+späterer Wechsel zu einer Mehrsprachigkeit mit entsprechender Nachpflege verbunden ist.
 
 
 Models
