@@ -33,13 +33,13 @@ Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben
 Attribute
 ---------
 
-Ist die Option "Übersetzung" aktiviert, stehen beim Anlegen der Attribute auch die mehrsprachigen Varianten zur
-Verfügung. Je nach Installation kann das wie folgt sein:
+Ist die Option "Übersetzung" bei einem Model aktiviert, stehen beim Anlegen der Attribute auch die mehrsprachigen
+Varianten zur Verfügung. Je nach Installation kann das wie folgt sein:
 
 * Übersetzte Checkbox
 * Übersetzte Datei
-* Übersetzte Einzelauswahl [select] *
-* Übersetzte Mehrfachauswahl [tags] *
+* *Übersetzte Einzelauswahl [select]* *
+* *Übersetzte Mehrfachauswahl [tags]* *
 * Übersetzte Tabelle multi (MCW)
 * Übersetzte Text-Tabelle
 * Übersetzte URL
