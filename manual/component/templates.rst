@@ -43,8 +43,8 @@ eingebaut. In jedem ``$item`` hat man Zugriff auf die folgenden Knoten des Array
   Datum werden hier wie in der DB gespeichert ausgegeben; bei Relations-Attributen hat man hier die Möglichkeit, weiter
   auf den verknüpften Datensatz zuzugreifen (siehe ":ref:`component_relations_standard-relations`")
 * ``$this->text``: Liste mit Ausgabe in der Text-Repräsentation (Template aus "dritte Stufe")
-* ``$this->html5``: Liste mitAusgabe in der HTML-Repräsentation (Template aus "dritte Stufe")
-* ``$this->attributes``: Liste mit Ausgabe des Wertes "Name" aus der Konfiguration des Attributes (:ref:`bei
+* ``$this->html5``: Liste mit Ausgabe in der HTML-Repräsentation (Template aus "dritte Stufe")
+* ``$this->attributes``: Liste mit Ausgabe des Wertes "Name" aus der Konfiguration des jeweiligen Attributes (:ref:`bei
   Mehrsprachigkeit in entsprechender Übersetzung <component_multi-language_attribute>`)
 * ``$this->actions``: Knoten ``jumpTo`` mit Link aus den Rendersettings - meist Link zur Detailseite; es können aber
   auch weitere Angaben z. B. aus der :ref:`Merkliste <rst_extended_notelist>` vorhanden sein.
