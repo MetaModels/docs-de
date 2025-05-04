@@ -5,7 +5,7 @@ Mehrsprachigkeit in MetaModels
 
 MetaModels ist sehr gut auf mehrsprachige Inhalte ausgerichtet. MM stellt für die mehrsprachigen Inhalte eigene
 Attribute wie z. B. `Übersetzter Text`, `Übersetzter Alias`, `Übersetzte Datei` usw. zur Verfügung. Für Attribute deren
-Werte Sprachen unabhängig sind wie z. B. die Zahlenwerte gibt es diese Varianten nicht.
+Werte Sprachen unabhängig sind, wie z. B. die Zahlenwerte, gibt es diese Varianten nicht.
 
 Bevor man mit der Erstellung der Models startet sollte man gut überlegen, ob die Inhalte mehrsprachig abgelegt werden
 sollen. Die mehrsprachigen Inhalte werden in eigenen Tabellen abgelegt und nicht in der eigenen ``mm_*``, so dass ein
