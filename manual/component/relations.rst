@@ -70,10 +70,9 @@ Im Backend können die Auswahlen der beiden Standard-Relationen Einzel- bzw. Meh
 werden - zum Beispiel wenn man in der Eingabemaske eines Mitarbeiters die Urlaubsvertretung auswählen möchte und in
 der Liste alle Mitarbeite aufgelistet sind. Die Auswahl könnte man eingrenzen auf Mitarbeiter der eigenen Abteilung und
 sich selbst ausschließen. Ein weiteres Beispiel sind abhängige Relationen wie ein Select auf Land und ein weiteres auf
-Bundesland, wobei dann bei den Bundesländern nur noch die zugehörigen Datensätze angezeigt werden sollen. |br|
-Für diese Eingrenzungen eignet sich die Filterregel "Eigenes SQL" sehr gut.
+Bundesland, wobei dann bei den Bundesländern nur noch die zugehörigen Datensätze angezeigt werden sollen.
 
-Im Handbuch finden sich weitere Tipps:
+Für diese Eingrenzungen eignet sich die Filterregel "Eigenes SQL" sehr gut - im Handbuch finden sich weitere Tipps:
 
    - :ref:`rst_cookbook_inputmask_manipulate-select-values`
    - :ref:`rst_cookbook_filter_custom-sql`
