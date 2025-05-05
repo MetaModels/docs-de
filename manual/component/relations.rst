@@ -53,7 +53,7 @@ sein - MM kümmert sich um die passenden Übersetzungen.
 
 In der Ausgabe im FE hat man im Knoten ``raw`` den Zugriff auf alle Attribute/Werte des verknüpften Datensatzes aus der
 Relationstabelle - wenn diese eine MM-Tabelle mit weiteren Relationen ist, dann auch tiefergehend auch auf diese Daten.
-Diese Struktur kann man im Debugmodus über eine .ref:`Dump-Ausgabe <rst_cookbook_symfony_mm-2-1-tips_toolbar>` gut
+Diese Struktur kann man im Debugmodus über eine :ref:`Dump-Ausgabe <rst_cookbook_debug_templates>` gut
 analysieren.
 
 Zum Beispiel: wenn man bei Mitarbeiter eine Relation zu Abteilung hat und Abteilung wiederum eine Relation zum
