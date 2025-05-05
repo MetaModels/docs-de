@@ -91,6 +91,7 @@ oder die "harte Tour":
 und löscht "alles" aus dev und prod.
 
 
+.. _rst_cookbook_symfony_mm-2-1-tips_toolbar:
 Symfony-Toolbar
 ---------------
 

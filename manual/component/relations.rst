@@ -53,6 +53,8 @@ sein - MM kümmert sich um die passenden Übersetzungen.
 
 In der Ausgabe im FE hat man im Knoten ``raw`` den Zugriff auf alle Attribute/Werte des verknüpften Datensatzes aus der
 Relationstabelle - wenn diese eine MM-Tabelle mit weiteren Relationen ist, dann auch tiefergehend auch auf diese Daten.
+Diese Struktur kann man im Debugmodus über eine .ref:`Dump-Ausgabe <rst_cookbook_symfony_mm-2-1-tips_toolbar>` gut
+analysieren.
 
 Zum Beispiel: wenn man bei Mitarbeiter eine Relation zu Abteilung hat und Abteilung wiederum eine Relation zum
 Abteilungsleiter (Model "Mitarbeiter"), so kann man in einer Liste aller Mitarbeiter neben dem Abteilungsnamen auch Name
@@ -61,10 +63,15 @@ das i. E. so aussehen:
 
 ``<p><strong>Abteilungsleiter:</strong> <?= $item['raw']['division']['__SELECT_RAW__']['manager']['__SELECT_RAW__']['name'] ?></p>``
 
-Die Auswahlen im Backend können über Filter manipuliert werden - zum Beispiel wenn man in der Eingabemaske eines
-Mitarbeiters die Urlaubsvertretung auswählen möchte und in der Liste alle Mitarbeite aufgelistet sind. Die Auswahl
-könnte man eingrenzen auf Mitarbeiter der eigenen Abteilung und sich selbst ausschließen. Dazu eignen sich
-Filterregeln "Eigenes SQL" sehr gut.
+Zur einfachen Übernahme des "Array-Pfades" kann man sich eine Ausgabe über den
+":ref:`rst_cookbook_frontend_array-helper`" generieren.
+
+Im Backend können die Auswahlen der beiden Standard-Relationen Einzel- bzw. Mehrfachauswahl über Filter eingegrenzt
+werden - zum Beispiel wenn man in der Eingabemaske eines Mitarbeiters die Urlaubsvertretung auswählen möchte und in
+der Liste alle Mitarbeite aufgelistet sind. Die Auswahl könnte man eingrenzen auf Mitarbeiter der eigenen Abteilung und
+sich selbst ausschließen. Ein weiteres Beispiel sind abhängige Relationen wie ein Select auf Land und ein weiteres auf
+Bundesland, wobei dann bei den Bundesländern nur noch die zugehörigen Datensätze angezeigt werden sollen. |br|
+Für diese Eingrenzungen eignet sich die Filterregel "Eigenes SQL" sehr gut.
 
 Im Handbuch finden sich weitere Tipps:
 
