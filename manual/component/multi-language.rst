@@ -81,12 +81,16 @@ In der Eingabemaske im Backend haben die Widgets der mehrsprachigen Attribute zu
 Flaggen-Icon. Die Umschaltung der Sprachen erfolgt direkt im Header der Eingabemaske.
 
 Beim Neuanlegen eines Datensatzes wird immer erst die Fallbacksprache befüllt - wenn in der Maske noch eine andere
-Sprache verfügbar ist, wird auf die mit dem Speichern umgeschaltet. Sind alle Felder ausgefüllt, muss der Datensatz
-gespeichert werden - anschließend kann die Umschaltung zu einer anderen Sprache erfolgen.
+Sprache als die Fallbacksprache eingestellt ist, wird mit dem Speichern auf die Fallbacksprache umgeschaltet.
 
-Sind die Felder mit der Fallbacksprache befüllt, gespeichert und es wird auf eine andere Sprache umgeschaltet, ist
-in den Textfeldern der Text der Fallbacksprache zu sehen. Damit soll eine Übersetzung erleichtert werden. Diese
-angezeigten (Hilfs-)Texte werden aber beim Speichern nicht mit in die DB übertragen. Zum Speichern eines Textes
+Das Speichern eines Datensatzes bzw. einer Eingabe erfolgt nicht automatisch bei der Umschaltung zu einer anderen
+Sprache vor dem Umschalten müssen die Eingaben mit Speichern gesichert werden.
+
+Nachdem die Felder in der Fallbacksprache befüllt und gespeichert sind, kann auf eine beliebige anderer gewechselt
+werden. In den mehrsprachigen Textfeldern ist zunächst der Text aus der Fallbacksprache zu sehen. Damit soll eine
+Übersetzung erleichtert werden.
+
+Diese angezeigten (Hilfs-)Texte werden aber beim Speichern nicht mit in die DB übertragen. Zum Speichern eines Textes
 in einer nicht-Fallbacksprache, muss sich dieser von der Fallbackeingabe unterscheiden. Wenn z. B. ein Abteilungsname
 "Marketing" ist und Deutsch die Fallbacksprache, würde das Wort "Marketing" nicht als Wort bei Englisch gespeichert
 werden.
