@@ -3,7 +3,7 @@
 Suchmaschinenoptimierung (SEO)
 ==============================
 
-Damit die Inhalte, die aus MM in der Webseite gut gefunden bzw. indexiert werden können, kann man den "Bots" mit
+Damit die Inhalte aus MM in der Webseite gut gefunden bzw. indexiert werden können, kann man den "Bots" mit
 verschiedenen Einstellungen unter die Arme greifen.
 
 Contao-Suche
@@ -18,7 +18,7 @@ Für eine Indexierung müssen in den Einstellungen der Seite die üblichen Freig
 ausgeschlossen sein.
 
 Möchte man die Indexierung der Detailseiten über die ``sitemap.xml`` unterstützen, so kann man das in MM mit dem
-Anlegen einer eigenen Indexierung - siehe :ref:`component_searchable-pages`.
+Anlegen einer eigenen Indexierung erreichen - siehe :ref:`component_searchable-pages`.
 
 Bei Seiten mit FE-Filter die Linklisten enthalten, sollte beachtet werden, :ref:`wie man die Links aus dem Crawling
 ausschließt <rst_cookbook_filter_exclude-url-from-search-index>`.
@@ -30,7 +30,7 @@ SEO für Google & Co.
 "Sprechende" URLs
 .................
 
-Hier geht es in den meisten Fällen um die Verlinkung zur Detailseite z. B. von einer Listenseite. Üblicher Weise
+Hier geht es in den meisten Fällen um die Verlinkung zur Detailseite z.B. von einer Listenseite. Üblicherweise
 wird für die Filterung auf der Detailseite der Alias des Items verwendet. In den Einstellungen des Attributes `Alias`
 bzw. `Übersetzter Alias` kann die gewünschte Kombination aus anderen Attributwerten definiert werden.
 
@@ -41,7 +41,7 @@ Meta-Daten Title und Description
 Diese Einstellungen beziehen sich wiederum vorwiegend auf die Einstellungen einer Detailseite. Im CE bzw. FE-Modul
 MM-Liste gibt es jeweils eine Selectauswahl mit vorhandenen Attributen für Title und Description.
 
-Die Description sollte den Inhalt der Seite prägnant beschreiben. Eine `maximale Zeichenanzahl gibt z. B. Google nicht
+Die Description sollte den Inhalt der Seite prägnant beschreiben. Eine `maximale Zeichenanzahl gibt z.B. Google nicht
 vor <https://developers.google.com/search/docs/appearance/snippet?hl=de#meta-descriptions>`_, aber auf vielen SEO-Seiten
 wird eine Zeichenzahl von max. 150 bis 160 genannt - Contao selbst begrenzt das in der fe_page auf 320 Zeichen.
 
@@ -49,7 +49,7 @@ Möchte man individuellere Einstellungsmöglichkeiten, kann man für Title und D
 Damit kann der Redakteur unabhängig von anderen Attributen die Angaben optimieren.
 
 Als weitere Möglichkeit der Datenübergabe, kann man die Erstellung von Title und Description im Rendertemplate
-vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z. B. mit folgendem Snippet im Template erfolgen:
+vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z.B. mit folgendem Snippet im Template erfolgen:
 
 .. code-block:: php
    :linenos:
@@ -80,23 +80,23 @@ Meta-Daten hreflang
 ...................
 
 Gibt es bei einem mehrsprachigen Aufbau einer Seite die Ausgabe auch in einer oder mehrerer anderen Sprache, kann dies
-mit der Angabe eines Links in ``hreflang`` der Suchmaschine mit auf dem Weg gegeben werden. Um einen Wechsel der Sprache
-dem besucher im Frontend bereit zu stellen, gibt es verschiedene Erweiterungen - häufig wird hier
+mit der Angabe eines Links in ``hreflang`` der Suchmaschine mit auf den Weg gegeben werden. Um einen Wechsel der Sprache
+dem Besucher im Frontend bereit zu stellen, gibt es verschiedene Erweiterungen - häufig wird hier
 "`ChangeLanguage <https://github.com/terminal42/contao-changelanguage>`_" eingesetzt.
 
-Diese Erweiterung erzeugt automatisch die Meta-Daten für ``hreflang`` sofern die entsprechenden Relationen in den
+Diese Erweiterung erzeugt automatisch die Meta-Daten für ``hreflang``, sofern die entsprechenden Relationen in den
 Seiteneigenschaften ausgewählt wurden.
 
-Die im Quelltext ausgegebenen Links gehen ohne weitere Anpassungen aber nur zum jeweiligen Seiten-Alias der anderen
-Seiten ohne übermittlung der Filterparameter z. B. der Detailseite.
+Die im Quelltext ausgegebenen Links funktionieren ohne weitere Anpassungen, aber nur zum jeweiligen Seiten-Alias der anderen
+Seiten ohne Übermittlung der Filterparameter z.B. der Detailseite.
 
-Die Erweiterung "ChangeLanguage" bietet in den Seiteneinstellungen die Option an "Query-Parameter beibehalten" mit Keys
-zu befüllen. Die entsprechenden Key-Value-Pare werden dann auch mit an die anderen Sprachenlinks angehangen. Der Key
+Die Erweiterung "ChangeLanguage" bietet in den Seiteneinstellungen die Option "Query-Parameter beibehalten" mit Keys
+zu befüllen. Die entsprechenden Key-Value-Pare werden dann auch mit an die anderen Sprachenlinks angehängt. Der Key
 ``auto_item`` wird per se aber nicht unterstützt.
 
 Für einen Sprachenwechsel einer Detailseite kann man folgende Konfiguration einsetzen:
 
-* Filter "Details" mit Filterregel "Einfache Abfrage" mit Attribut "Alias" - "URL-Parameter" auf ``alias`` belassen und
+* Filter "Details" mit Filterregel "Einfache Abfrage" für Attribut "Alias" - "URL-Parameter" auf ``alias`` belassen und
   nicht auf ``auto_item`` setzen
 * in Seiteneigenschaften "Query-Parameter beibehalten" auf allen Detailseiten "alias" eintragen
 
@@ -110,7 +110,7 @@ Das Ergebnis sieht dann i. E. wie folgt aus:
    <link rel="alternate" hreflang="en" href="http://my-domain.tld/en/details/alias/mayer-herbert">
 
 Möchte man Verlinkungen mit ``auto_item`` erstellen oder von mehrsprachigen Attributen die Key und Values in übersetzter
-Fassung in die URL einbringen, so muss man das mit einer eigenen Anpassung z. B. über den Hook
+Fassung in die URL einbringen, so muss das mit einer eigenen Anpassung z.B. über den Hook
 "`changelanguageNavigation <https://extensions.terminal42.ch/docs/changelanguage/en/developers/>`_" erfolgen.
 
 :ref:`Mehr zur Mehrsprachigkeit in MM. <component_multi-language>`
@@ -134,7 +134,7 @@ andere Suchmaschinen wie Bing scheinen das noch auszuwerten und einige Browser v
 Vorladen der Seite.
 
 Wer die Angaben im ``head`` der Seite ausgeben möchte, kann ein eigenes Template ``mm_pagination.html5`` anlegen und
-dort die Meta-Angaben ergänzen - z. B. mit
+dort die Meta-Angaben ergänzen - z.B. mit
 
 .. code-block:: php
    :linenos:
@@ -157,7 +157,7 @@ Für die semantische Zuordnung der ausgegebenen Inhalte können zusätzlich s.g.
 <https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data>`_" im Quelltext
 mit ausgegeben werden.
 
-Mit diesen "Hilfsdaten" kann eine Suchmaschine die Inhalte z. B. einer FAQ-Ausgabe, einem Event, Jobsuche,
+Mit diesen "Hilfsdaten" kann eine Suchmaschine die Inhalte z.B. einer FAQ-Ausgabe, einem Event, Jobsuche,
 Wohnungsanzeige, Kochrezept usw. zuordnen.
 
 Wie diese Daten eingebaut werden können, steht im Artikel ":ref:`rst_cookbook_templates_fe_template_schema_org`".
