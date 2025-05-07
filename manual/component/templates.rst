@@ -41,7 +41,8 @@ eingebaut. In jedem ``$item`` hat man Zugriff auf die folgenden Knoten des Array
 
 * ``$this->raw``: Rohdaten des Datensatzes inkl. die Systemspalten wie ``id``, ``tstamp`` usw., Zahlenwerte wie auch das
   Datum werden hier wie in der DB gespeichert ausgegeben; bei Relations-Attributen hat man hier die Möglichkeit, weiter
-  auf den verknüpften Datensatz zuzugreifen (siehe ":ref:`component_relations_standard-relations`")
+  auf den verknüpften Datensatz zuzugreifen (siehe ":ref:`component_relations_standard-relations`"); bei Dateien hat man
+  Zugriff auf die Meta-Daten, Pfadangaben, UUID; usw.
 * ``$this->text``: Liste mit Ausgabe in der Text-Repräsentation (Template aus "dritte Stufe")
 * ``$this->html5``: Liste mit Ausgabe in der HTML-Repräsentation (Template aus "dritte Stufe")
 * ``$this->attributes``: Liste mit Ausgabe des Wertes "Name" aus der Konfiguration des jeweiligen Attributes (:ref:`bei
