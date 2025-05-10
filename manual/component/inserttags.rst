@@ -64,6 +64,9 @@ Ausgabe der URL, Bezeichnung, Seiten-ID oder Werte des Knotens "param" wie z. B.
 * ``{{mm::jumpTo::[MM Table-Name|ID]::[Item ID]::[ID render setting](::[Parameter (Default:url)|label|page|params.attname])}}`` - z. B.
   ``{{mm::jumpTo::mm_employees::42::5}}``, ``{{mm::jumpTo::mm_employees::42::5::page}}``, ``{{mm::jumpTo::mm_employees::42::5::params.alias}}``
 
+Die Verlinkung mit der :ref:`Ausgabe einer URL zur Detailseite kann auch über einen Picker erfolgen
+<rst_cookbook_specials_picker-for-tinymce>`, was für Redakteure leichter zu handhaben ist.
+
 
 
 .. |br| raw:: html
