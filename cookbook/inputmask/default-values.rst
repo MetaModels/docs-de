@@ -51,7 +51,8 @@ Vorgaben mit Legacy-Code
 
 .. note:: Die Vorgaben mit dem Legacy-Code sollten nicht mehr verwendet werden. Ab MM 2.3 muss für eine korrekte
           Ausgabe des Labels bei dem Feld zusätzlich ein Eintrag mit Leerstring angelegt werden - z. B.  |br|
-          ``$GLOBALS['TL_DCA']['<MM-Table-Name>']['fields']['<Field-Column-Name>']['label'] = '';``
+          ``$GLOBALS['TL_DCA']['<MM-Table-Name>']['fields']['<Field-Column-Name>']['label'] = '';``  |br|
+         ansonsten ist statt des Labels ein "LABEL NOT SET: <column>" zu sehen
 
 Die Eingabefelder von MetaModels sind (fast) identisch den Feldern vom Contao-Core oder den üblichen Erweiterungen zu
 behandeln, die mit einem DCA-Array erstellt wurden. Unterschiede ergeben sich teilweise durch die dynamische Generierung
