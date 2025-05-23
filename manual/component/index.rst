@@ -18,7 +18,7 @@ Bevor man sich an die Erstellung komplexerer Datenstrukturen in MetaModels macht
 Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models untereinander - machen. Dazu gibt es
 eine Übersichtsseite ":ref:`component_relations`".
 
-Nach dem Erstellen eines MetaModel stehen die folgenden Komponenten zur Bearbeitung zur Verfügung:
+Nach dem Erstellen eines MetaModel stehen die folgenden Hauptkomponenten zur Bearbeitung zur Verfügung:
 
  |img_fields|  :ref:`component_attribute` |br|
  |img_rendersettings|  :ref:`component_rendersettings` |br|
@@ -31,6 +31,9 @@ Bei der Erstellung eines (einfachen) MetaModel können die Komponenten in der au
 Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels - also im
 Zusammenspiel mehrerer MetaModel miteinander - kommt man nicht umhin, einzelne Eingaben
 in einem vorhandenen MetaModel weiter zu ergänzen oder abzuändern.
+
+Neben den Hauptkomponenten gibt es weitere Einstellungsmöglichkeiten wie das Anlegen von Guppierung/Sortierung der Items
+in einer BE-Liste oder :ref:`Anzeigebedingungen der Eingabewidgets einer Eingabemaske <component_dca_visibility-conditions>.
 
 .. _rst_component_index_mm_lageplan:
 Für eine leichtere Übersicht wo was zu finden ist, gibt es den
@@ -59,6 +62,7 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
     attribute
     rendersettings
     dca
+    dca-visibility-conditions
     searchable-pages
     filter
     dca-combine

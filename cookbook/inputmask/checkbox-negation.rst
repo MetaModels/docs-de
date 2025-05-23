@@ -3,6 +3,10 @@
 Ansichtsbedingung: Anzeige wenn Checkbox nicht gesetzt
 ======================================================
 
+.. note:: Die Konfiguration ist ab Version 2.3 nicht mehr notwendig - Wert "-" und "Inaktiv" ist gleichwertig, so dass
+   das Select nach dem Speichern wieder auf den ersten Wert "-" zurück springt.
+
+
 Möchte man eine Ansichtsbedingung erstellen bei welcher das entsprechende
 Feld angezeigt wird, wenn eine Checkbox **nicht** gesetzt ist, so ist das
 mit den einem Trigger auf den Wert der Checkbox "Inaktiv" nicht zu erreichen.
