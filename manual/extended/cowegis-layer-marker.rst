@@ -239,12 +239,21 @@ Standardicon von Leaflet ausgespielt.
 
 |img_screenshot_06|
 
-In der Karte sieht das dann wie folgt aus
+In der Karte sieht das dann wie folgt aus:
 
 |img_screenshot_07|
 
 Popup konfigurieren
 ...................
+
+Die Anzeige der Popups kann ebenfalls unter Vorlagen konfiguriert werden. Dazu zur Ansicht "Popups verwalten"
+wechseln und "Popup erstellen" ausführen - anschließend die gewünschten Einstellungen vornehmen.
+
+Anschließend ist in den Einstellungen von Layer den MetaModels Marker die Anzeige der individuellen Popups
+möglich. Im Abschnitt Popup bei "Popup-Voreinstellung" die gewünschte Vorlage aktivieren. Folgend eine Anzeige mi
+geöffnetem Popup und Tooltipp.
+
+|img_screenshot_08|
 
 Kontrollelemente anlegen
 ........................
@@ -273,3 +282,4 @@ weitere Layer anlegen
 .. |img_screenshot_05| image:: /_img/screenshots/extended/cowegis_layer/screenshot_05.png
 .. |img_screenshot_06| image:: /_img/screenshots/extended/cowegis_layer/screenshot_06.png
 .. |img_screenshot_07| image:: /_img/screenshots/extended/cowegis_layer/screenshot_07.png
+.. |img_screenshot_08| image:: /_img/screenshots/extended/cowegis_layer/screenshot_08.png
