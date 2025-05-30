@@ -140,6 +140,9 @@ Alternativ zu einem einzelnen Attribut, kann auch für das Popup eine eigene
 möglich, die Ausgabe mehrerer Attribute zu kombinieren und mit einem eigenen Template auszugeben. Zudem ist die
 einfache Ausgabe von Detaillinks (jumpTo) möglich.
 
+Für die drei Textausgaben (Popup sowie Title- und Alt-Attribut) können sowohl einsprachige als auch übersetzte
+MetaModels-Attribute zum Einsatz kommen - eine mehrsprachige Ausgabe ist also kein Problem.
+
 Sind alle Attribute angelegt und mit Daten befüllt, folgt im nächsten Schritt die Einbindung bzw. die automatische
 Erstellung der Marker in Cowegis.
 
