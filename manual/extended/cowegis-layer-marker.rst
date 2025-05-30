@@ -176,8 +176,72 @@ Folgend ein Beispiel, wie die Marker auf einer Karte aussehen könnten:
 Optionale Einstellungen
 -----------------------
 
+Die Ausgabe kann an den verschiedensten Stellen an die eigenen Wünsche und Anforderungen angepasst werden. Zum Beispiel
+kann beim Layer mit den MetaModels Markern im Abschnitt Konfiguration die Transparenz gesetzt werden oder ob die Icons
+per Tab ansteuerbar sind.
+
 Icons konfigurieren
 ...................
+
+Die Anpassung der Anzeige der Marker-Icons ist auf vielfältige Weise anpassbar. Als Standard wird das folgende Icon
+von `Leaflet <https://leafletjs.com/>`_ in der Größe 41x25px ausgegeben:
+
+|img_marker-icon|
+
+Eigene Icons kann man bei Vorlagen mit "Icon erstellen" anlegen. Aktuell stehen die folgenden Typen zur Auswahl:
+
+* Datei
+* DIV
+* SVG
+* Font-Awesome
+
+**Datei** |br|
+Beim `Typ `Datei` <https://leafletjs.com/reference.html#icon>`_ kann man eine Datei aus der Dateiverwaltung auswählen.
+Wer keine eigene Datei zur Verfügung hat, kann sich z. B. bei einigen Iconfonts wie
+`Lucide <https://lucide.dev/icons/?search=map>`_ eine Icon holen. Der Typ Datei unterstützt neben PNG auch SVG. Die
+Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
+`iconSize mit Angabe von BreitexHöhe in Pixeln <https://leafletjs.com/reference.html#icon>`_ angepasst werden; z. B.
+"42x42".
+
+|img_screenshot_03|
+
+**DIV** |br|
+Beim `Typ `DIV` <https://leafletjs.com/reference.html#divicon>`_ kann in das Feld "HTML" beliebiger HTML-Content
+eingefügt werden - das kann auch ein SVG-Quelltext sein; iconSize wieder als BreitexHöhe in Pixeln z. B. "80x80"
+
+**SVG** |br|
+Beim Typ `SVG` wird ein Standardmarker ausgegeben der neben der Größe (iconSize) in der Farbe angepasst werden kann;
+der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. "#42".
+
+|img_screenshot_03|
+
+**Font-Awesome** |br|
+Beim `Typ `Font-Awesome` <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker ausgegeben
+der neben der Größe (iconSize) in der Farbe angepasst werden kann. In dem Marker kann ein Icon aus dem `Font-Awesome`
+ausgegeben werden - aktuell stehen die Icons aus `Font-Awesome Free Version 6 zur Verfügung
+<https://fontawesome.com/v6/search?ic=free>`_ z. B. "fa-mug-hot".
+
+**Icon-Vorlage in MetaModels auswählen**
+In MetaModels steht ein neues Attribut "Cowegis Marker" zur Verfügung, mit dem man eine Icon-Vorlage aus Cowegis
+in MM speichern kann. Dazu wird wie üblich das entsprechende Attribut angelegt und in der Eingabemaske frei geschaltet.
+Wenn ein Datensatz bearbeitet wird, kann über ein Select eine Icon-Vorlage ausgewählt werden; gespeichert wird die
+ID der Vorlage. In der Listenausgabe der Render-Einstellung wird als Standard der Name der Vorlage ausgegeben -
+ändert man das Template des Attributes auf ``mm_attr_marker_icon_image``, wird neben dem Namen auch eine Vorschau
+des Icons ausgegeben (Aktuell nur für Typ "Datei").
+
+|img_screenshot_05|
+
+Anschließend kann man in den Einstellungen von Layer den MetaModels Marker die Anzeige der individuellen Icons
+anpassen. Im Abschnitt Icon gibt es die Auswahl "Icon-Attribut" mit dem man das angelegte Attribut "Cowegis Marker"
+auswählen kann. Als Fallback zu der Einstellung kann ein eigenes Standardicon definiert werden - hier ist in dem
+Select die Auswahl einer angelegten Icon-Vorlage möglich. Sollte diese Einstellung auch nicht greifen, wird das
+Standardicon von Leaflet ausgespielt.
+
+|img_screenshot_06|
+
+In der Karte sieht das dann wie folgt aus
+
+|img_screenshot_07|
 
 Popup konfigurieren
 ...................
@@ -190,13 +254,22 @@ weitere Layer anlegen
 
 
 
+.. |br| raw:: html
+
+   <br />
 
 .. |img_copy| image:: /_img/screenshots/extended/cowegis_layer/copy.svg
 .. |img_delete| image:: /_img/screenshots/extended/cowegis_layer/delete.svg
 .. |img_edit| image:: /_img/screenshots/extended/cowegis_layer/edit.svg
 .. |img_layers| image:: /_img/screenshots/extended/cowegis_layer/layers.svg
+.. |img_marker-icon| image:: /_img/screenshots/extended/cowegis_layer/marker-icon.png
 .. |img_map| image:: /_img/screenshots/extended/cowegis_layer/map.png
 .. |img_map_1| image:: /_img/screenshots/extended/cowegis_layer/map_1.png
 .. |img_metamodels_marker.svg| image:: /_img/screenshots/extended/cowegis_layer/metamodels_marker.svg
 .. |img_screenshot_01| image:: /_img/screenshots/extended/cowegis_layer/screenshot_01.png
 .. |img_screenshot_02| image:: /_img/screenshots/extended/cowegis_layer/screenshot_02.png
+.. |img_screenshot_03| image:: /_img/screenshots/extended/cowegis_layer/screenshot_03.png
+.. |img_screenshot_04| image:: /_img/screenshots/extended/cowegis_layer/screenshot_04.png
+.. |img_screenshot_05| image:: /_img/screenshots/extended/cowegis_layer/screenshot_05.png
+.. |img_screenshot_06| image:: /_img/screenshots/extended/cowegis_layer/screenshot_06.png
+.. |img_screenshot_07| image:: /_img/screenshots/extended/cowegis_layer/screenshot_07.png
