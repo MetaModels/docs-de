@@ -196,7 +196,7 @@ Eigene Icons kann man bei Vorlagen mit "Icon erstellen" anlegen. Aktuell stehen 
 * Font-Awesome
 
 **Datei** |br|
-Beim "Typ "Datei"`" <https://leafletjs.com/reference.html#icon>`_ kann man eine Datei aus der Dateiverwaltung auswählen.
+Beim `Typ "Datei" <https://leafletjs.com/reference.html#icon>`_ kann man eine Datei aus der Dateiverwaltung auswählen.
 Wer keine eigene Datei zur Verfügung hat, kann sich z. B. bei einigen Iconfonts wie
 `Lucide <https://lucide.dev/icons/?search=map>`_ eine Icon holen. Der Typ Datei unterstützt neben PNG auch SVG. Die
 Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
@@ -206,7 +206,7 @@ Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
 |img_screenshot_03|
 
 **DIV** |br|
-Beim "Typ "DIV" <https://leafletjs.com/reference.html#divicon>`_ kann in das Feld "HTML" beliebiger HTML-Content
+Beim `Typ "DIV" <https://leafletjs.com/reference.html#divicon>`_ kann in das Feld "HTML" beliebiger HTML-Content
 eingefügt werden - das kann auch ein SVG-Quelltext sein; iconSize wieder als BreitexHöhe in Pixeln z. B. "80x80"
 
 **SVG** |br|
