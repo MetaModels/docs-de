@@ -258,6 +258,23 @@ geöffnetem Popup und Tooltipp.
 Kontrollelemente anlegen
 ........................
 
+Unter Karten ist in der Zeile der angelegten Karte das Icon für das Anlegen der Kontrollelemente |img_control|. Über
+"Kontrollelement erstellen" können verschiedene Kontrollelemente angelegt werden wie z. B.:
+
+* Copyright-Leiste: Das `Kontrollelement zur Namensnennung <https://leafletjs.com/reference.html#control-attribution>`_
+  erlaubt es, Urheber in einer kleinen Textbox auf der Karte anzuzeigen.
+* Fullscreen-Kontrollelement: Diese Einstellung fügt einen Button hinzu, der den
+  `Fullscreen-Modus <https://github.com/brunob/leaflet.fullscreen>`_ umschaltet.
+* Layer-Kontrollelement: Das `Layer-Kontrollelement <https://leafletjs.com/reference.html#control-layers>`_ gibt
+  Benutzern die Möglichkeit, zwischen verschiedenen Layern zu wechseln und Overlays an- oder auszuschalten.
+* Lade-Indikator: `Leaflet.loading <https://github.com/ebrelsford/Leaflet.loading>`_ ist ein einfacher Ladeindikator
+  als Kontrollelement.
+* Maßstabs-Kontrollelement: Einfaches `Maßstabs-Kontrollelement <https://leafletjs.com/reference.html#control-scale>`_,
+  das den aktuellen Maßstab der Kartenmitte anzeigt.
+* Zoom-Kontrollelement: Diese Komponente ermöglicht eine `Kontrolle des Zoomverhaltens
+  <https://leafletjs.com/reference.html#control-zoom>`_.
+
+
 weitere Layer anlegen
 .....................
 
@@ -267,6 +284,7 @@ weitere Layer anlegen
 
    <br />
 
+.. |img_control| image:: /_img/screenshots/extended/cowegis_layer/control.png
 .. |img_copy| image:: /_img/screenshots/extended/cowegis_layer/copy.svg
 .. |img_delete| image:: /_img/screenshots/extended/cowegis_layer/delete.svg
 .. |img_edit| image:: /_img/screenshots/extended/cowegis_layer/edit.svg
