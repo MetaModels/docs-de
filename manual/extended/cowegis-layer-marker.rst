@@ -131,11 +131,14 @@ Dem Marker-Icon kann optional ein Text für das Title- bzw. Alt-Attribut überge
 Attribut Text benötigt. Der Text darf keine HTML-Formatierung beinhalten, welches die HTML-Ausgabe stört.
 
 Bei dem Marker ist es möglich, kei Klick eine Infobox als Popup anzeigen zu lassen. Der Inhalt kann aus einem Attribut
-Text oder Langtext kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten.
+z. B. Text oder Langtext kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten. Wie das Attribut gerendert
+wird, bestimmt die Auswahl der Render-Einstellung - das Attribut sollte als Element in der Render-Einstellung
+vorhanden sein.
 
-Alternativ dazu kann auch für das Popup eine eigene :ref:`Render-Einstellung <component_rendersettings>` angelegt werden.
-Mit einer separaten Render-Einstellung ist es möglich, die Ausgabe mehrerer Attribute zu kombinieren und mit einem
-eigenen Template auszugeben. Zudem ist die einfache Ausgabe von Detaillinks (jumpTo) möglich.
+Alternativ zu einem einzelnen Attribut, kann auch für das Popup eine eigene
+:ref:`Render-Einstellung <component_rendersettings>` angelegt werden. Mit einer separaten Render-Einstellung ist es
+möglich, die Ausgabe mehrerer Attribute zu kombinieren und mit einem eigenen Template auszugeben. Zudem ist die
+einfache Ausgabe von Detaillinks (jumpTo) möglich.
 
 Sind alle Attribute angelegt und mit Daten befüllt, folgt im nächsten Schritt die Einbindung bzw. die automatische
 Erstellung der Marker in Cowegis.
@@ -217,9 +220,11 @@ der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. ``#42``.
 
 **Font-Awesome** |br|
 Beim `Typ "Font-Awesome" <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker ausgegeben
-der neben der Größe (iconSize) in der Farbe angepasst werden kann. In dem Marker kann ein Icon aus dem `Font-Awesome`
-ausgegeben werden - aktuell stehen die Icons aus `Font-Awesome Free Version 6 zur Verfügung
-<https://fontawesome.com/v6/search?ic=free>`_ z. B. "fa-mug-hot".
+der neben der Größe (iconSize) in der Farbe angepasst werden kann. Die Icons von Font-Awesome werden mit der Erweiterung
+Cowegis schon mitgeliefert.
+
+In dem Marker kann damit ein Icon aus dem `Font-Awesome` ausgegeben werden - aktuell stehen die Icons aus
+`Font-Awesome Free Version 6 zur Verfügung <https://fontawesome.com/v6/search?ic=free>`_ z. B. "fa-mug-hot".
 
 **Icon-Vorlage in MetaModels auswählen**
 In MetaModels steht ein neues Attribut "Cowegis Marker" zur Verfügung, mit dem man eine Icon-Vorlage aus Cowegis
