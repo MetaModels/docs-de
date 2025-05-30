@@ -255,7 +255,7 @@ Die Anzeige der Popups kann ebenfalls unter Vorlagen konfiguriert werden. Dazu z
 wechseln und "Popup erstellen" ausführen - anschließend die gewünschten Einstellungen vornehmen.
 
 Anschließend ist in den Einstellungen von Layer den MetaModels Marker die Anzeige der individuellen Popups
-möglich. Im Abschnitt Popup bei "Popup-Voreinstellung" die gewünschte Vorlage aktivieren. Folgend eine Anzeige mi
+möglich. Im Abschnitt Popup bei "Popup-Voreinstellung" die gewünschte Vorlage aktivieren. Folgend eine Anzeige mit
 geöffnetem Popup und Tooltipp.
 
 |img_screenshot_08|
