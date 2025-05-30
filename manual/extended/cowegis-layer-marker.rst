@@ -213,7 +213,7 @@ eingefügt werden - das kann auch ein SVG-Quelltext sein; iconSize wieder als Br
 Beim Typ `SVG` wird ein Standardmarker ausgegeben der neben der Größe (iconSize) in der Farbe angepasst werden kann;
 der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. "#42".
 
-|img_screenshot_03|
+|img_screenshot_04|
 
 **Font-Awesome** |br|
 Beim `Typ `Font-Awesome` <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker ausgegeben
