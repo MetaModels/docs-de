@@ -5,7 +5,8 @@ Cowegis-Layer Integration für Marker
 
 Mit `Cowegis-Layer` wird die Darstellung von Markern aus MetaModels in der Contao-Erweiterung
 `Cowegis <https://github.com/cowegis>`_ ermöglicht. Mit Cowegis können verschiedene Karten, Marker, Polygone usw.
-konfiguriert und über `Leaflet <https://leafletjs.com/>`_ ausgegeben werden.
+konfiguriert und über `Leaflet <https://leafletjs.com/>`_ ausgegeben werden. Die Erweiterung arbeitet sowohl
+mit einsprachigen als auch mit mehrsprachigen MetaModels zusammen.
 
 .. note:: Diese Erweiterung steht ab MM 2.4 mit Contao 5.3 zur Verfügung - für eine Freischaltung bitte
    eine E-Mail an mail@metamodel.me senden.
