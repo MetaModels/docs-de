@@ -53,8 +53,8 @@ Der Ablauf für die Erstellung einer Karte mit Markern aus MetaModels-Daten ist 
 * weitere Layer anlegen
 
 Die meisten Eingabewerte haben ihre Entsprechung bei dem Projekt `Leaflet <https://leafletjs.com/>`_ welches die
-JavaScript-Bibliothek für die Kartendarstellung mitbringt. Bei unklaren Parametern ist es ratsam, einen Blick in die
-Beispiele und die Dokumentation zu werfen.
+JavaScript-Bibliothek für die Kartendarstellung mitbringt. Bei unklaren Parametern ist es ratsam, dort einen Blick in
+die Beispiele und die Dokumentation zu werfen.
 
 
 Vorbereitung
@@ -66,9 +66,9 @@ Layer anlegen
 Im Bereich Layer wird ein neuer Layer für die Kartendarstellung angelegt. Dazu stehen als Typen "Kachel-Layer" oder
 "Vorkonfiguriere Karte" zur Verfügung.
 
-Beim Typ "Kachel-Layer" muss man eine passendes URL-Template einfügen. Diese findet man z. B. bei den entsprechenden
+Beim Typ "Kachel-Layer" muss man ein passendes URL-Template einfügen. Diese findet man z. B. bei den entsprechenden
 Kartenanbietern oder kann die URLs aus den `Leaflet-Providern <https://github.com/leaflet-extras/leaflet-providers/blob/master/leaflet-providers.js>`_
-auslesen. Die typische URL für OSM ist ``https://tile.openstreetmap.org/{z}/{x}/{y}.png``. Bei dem Layertyp stehen
+auslesen. Die typische URL für OSM ist ``https://tile.openstreetmap.org/{z}/{x}/{y}.png``. Bei diesem Layertyp stehen
 die möglichen Konfigurationsparameter für individuelle Einstellungen zur Verfügung.
 
 Eine einfachere Variante ist der Typ "Vorkonfiguriere Karte". Hier können die typischen Kartenprovider wie OSM, MapBox,
