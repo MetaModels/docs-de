@@ -278,6 +278,26 @@ Unter Karten ist in der Zeile der angelegten Karte das Icon für das Anlegen der
 weitere Layer anlegen
 .....................
 
+Zum Abschluss können weitere Layer angelegt werden die z. B. fixe Marker anzeigt, deren Daten nicht aus MetaModels
+stammen oder weitere Kartentypen. Ist das Layer-Kontrollelement eingerichtet, kann darüber der Benutzer Layer ein bzw.
+ausschalten.
+
+Ein Layertyp ist der `"Marker Cluster" <https://github.com/Leaflet/Leaflet.markercluster>`_ mit dem mehrere Marker bei
+kleinem Zoomlevel zu einem Kreis-Icon mit Angabe der Anzahl dargestellt werden. Nach dem Anlegen des Marker Cluster
+werden ein oder mehrere Marker-Layer als Unterebene des Marker-Cluster eingefügt - schon vorhandene Marker-Layer werden
+dahin verschoben.
+
+|img_screenshot_09|
+
+Der neue Layer Marker-Cluster muss auch in der Karte unter Layer aktiviert werden.
+
+|img_screenshot_10|
+
+je nach Zoomlevel werden nahe beieinander liegende Marker zusammen gefasst. Die Farbe des Cluster-Icons richtet sich
+nach der Anzahl der enthaltenen Elemente und kann per CSS angepasst werden. Klickt man auf einen Cluster, wird der Zoom
+so verändert, dass der Inhalt zu sehen ist.
+
+|img_screenshot_11|
 
 
 .. |br| raw:: html
@@ -301,3 +321,6 @@ weitere Layer anlegen
 .. |img_screenshot_06| image:: /_img/screenshots/extended/cowegis_layer/screenshot_06.png
 .. |img_screenshot_07| image:: /_img/screenshots/extended/cowegis_layer/screenshot_07.png
 .. |img_screenshot_08| image:: /_img/screenshots/extended/cowegis_layer/screenshot_08.png
+.. |img_screenshot_09| image:: /_img/screenshots/extended/cowegis_layer/screenshot_09.png
+.. |img_screenshot_10| image:: /_img/screenshots/extended/cowegis_layer/screenshot_10.png
+.. |img_screenshot_11| image:: /_img/screenshots/extended/cowegis_layer/screenshot_11.png
