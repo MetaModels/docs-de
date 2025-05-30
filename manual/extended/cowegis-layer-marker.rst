@@ -195,8 +195,8 @@ weitere Layer anlegen
 .. |img_delete| image:: /_img/screenshots/extended/cowegis_layer/delete.svg
 .. |img_edit| image:: /_img/screenshots/extended/cowegis_layer/edit.svg
 .. |img_layers| image:: /_img/screenshots/extended/cowegis_layer/layers.svg
-.. |img_map| image:: /_img/screenshots/extended/cowegis_layer/map.svg
-.. |img_map_1| image:: /_img/screenshots/extended/cowegis_layer/map_1.svg
+.. |img_map| image:: /_img/screenshots/extended/cowegis_layer/map.png
+.. |img_map_1| image:: /_img/screenshots/extended/cowegis_layer/map_1.png
 .. |img_metamodels_marker.svg| image:: /_img/screenshots/extended/cowegis_layer/metamodels_marker.svg
 .. |img_screenshot_01| image:: /_img/screenshots/extended/cowegis_layer/screenshot_01.png
 .. |img_screenshot_02| image:: /_img/screenshots/extended/cowegis_layer/screenshot_02.png
