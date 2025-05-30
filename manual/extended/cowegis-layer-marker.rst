@@ -298,7 +298,7 @@ Der neue Layer Marker-Cluster muss auch in der Karte unter Layer aktiviert werde
 
 |img_screenshot_10|
 
-je nach Zoomlevel werden nahe beieinander liegende Marker zusammen gefasst. Die Farbe des Cluster-Icons richtet sich
+Je nach Zoomlevel werden nahe beieinander liegende Marker zusammen gefasst. Die Farbe des Cluster-Icons richtet sich
 nach der Anzahl der enthaltenen Elemente und kann per CSS angepasst werden. Klickt man auf einen Cluster, wird der Zoom
 so verändert, dass der Inhalt zu sehen ist.
 
