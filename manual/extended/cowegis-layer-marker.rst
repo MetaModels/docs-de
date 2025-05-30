@@ -122,8 +122,8 @@ folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden se
 * Popup (optional)
 
 Die Koordinaten des Markers können in einem Wert als kommaseparierte Zahlen oder als Einzelwerte gespeichert werden. Für
-den ersten Fall sollte ein Attribut Text angelegt sein, welches das Tupel (52.510885,13.3989367) oder Tripel
-(52.510885,13.3989367,35) aufnimmt. Sollten die Koordinaten einzeln gespeichert werden, so sind zwei bzw. drei
+den ersten Fall sollte ein Attribut Text angelegt sein, welches das Tupel (``52.510885,13.3989367``) oder Tripel
+(``52.510885,13.3989367,36``) aufnimmt. Sollten die Koordinaten einzeln gespeichert werden, so sind zwei bzw. drei
 Attribute Dezimal anzulegen. Die Variante mit einzelnen Koordinatenwerten muss verwendet werden, sofern die Datensätze
 mit einer :ref:`Umkreissuche aus MetaModels <extended_perimetersearch>` gefiltert werden sollen.
 
