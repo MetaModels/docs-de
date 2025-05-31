@@ -219,7 +219,42 @@ Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
 
 **DIV** |br|
 Beim `Typ "DIV" <https://leafletjs.com/reference.html#divicon>`_ kann in das Feld "HTML" beliebiger HTML-Content
-eingefügt werden - das kann auch ein SVG-Quelltext sein; iconSize wieder als BreitexHöhe in Pixeln z. B. ``80,80``
+eingefügt werden - das kann auch ein SVG-Quelltext sein. Folgend ein Beispiel als Div-Container und CSS (iconSize
+``80,40``);
+
+|img_screenshot_12|
+
+.. code-block:: html
+   :linenos:
+
+   <style>
+   .marker-bubble {
+       position: relative;
+       background: #00aabb;
+       border-radius: .4em;
+       text-align: center;
+       padding: .6rem;
+       color: #FFFFFF;
+   }
+
+   .marker-bubble:after {
+       content: '';
+       position: absolute;
+       bottom: 0;
+       left: 50%;
+       width: 0;
+       height: 0;
+       border: 1.719em solid transparent;
+       border-top-color: #00aabb;
+       border-bottom: 0;
+       border-left: 0;
+       margin-left: -0.859em;
+       margin-bottom: -1.7em;
+   }
+   </style>
+   <div class="marker-bubble">
+       Moin!
+   </div>
 
 **SVG** |br|
 Beim Typ "SVG" wird ein Standardmarker ausgegeben der neben der Größe (iconSize) in der Farbe angepasst werden kann;
@@ -338,3 +373,4 @@ so verändert, dass der Inhalt zu sehen ist.
 .. |img_screenshot_09| image:: /_img/screenshots/extended/cowegis_layer/screenshot_09.png
 .. |img_screenshot_10| image:: /_img/screenshots/extended/cowegis_layer/screenshot_10.png
 .. |img_screenshot_11| image:: /_img/screenshots/extended/cowegis_layer/screenshot_11.png
+.. |img_screenshot_12| image:: /_img/screenshots/extended/cowegis_layer/screenshot_12.png
