@@ -212,7 +212,7 @@ Beim `Typ "Datei" <https://leafletjs.com/reference.html#icon>`_ kann man eine Da
 Wer keine eigene Datei zur Verfügung hat, kann sich z. B. bei einigen Iconfonts wie
 `Lucide <https://lucide.dev/icons/?search=map>`_ eine Icon holen. Der Typ Datei unterstützt neben PNG auch SVG. Die
 Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
-`iconSize mit Angabe von ``Breite,Höhe`` in Pixeln <https://leafletjs.com/reference.html#icon>`_ angepasst werden; z. B.
+`iconSize mit Angabe von \`\`Breite,Höhe\`\` in Pixeln <https://leafletjs.com/reference.html#icon>`_ angepasst werden; z. B.
 ``42,42``.
 
 |img_screenshot_03|
