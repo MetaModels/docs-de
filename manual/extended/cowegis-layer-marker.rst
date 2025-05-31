@@ -33,7 +33,7 @@ Allgemeines Vorgehen
 --------------------
 
 Eine Karte besteht in Cowegis aus mehreren Layern (Schichten) die verschiedene Inhalte in der Gesamtansicht Karte
-ausgeben. Grundlegend ist natürlich ein Layer mit den Kartendaten. Da diese Karte aus einzelnen Kacheln (Tiles)
+ausgeben. Grundlegend ist natürlich ein Layer mit den Kartendaten. Da diese Kartendaten aus einzelnen Kacheln (Tiles)
 aufgebaut wird, ist häufig von Kacheln oder Tiles zu lesen. Auf einer Karte können wiederum verschiedene Elemente wie
 Marker, Polygone o. ä. über eigene Layer eingeblendet werden.
 
@@ -41,7 +41,7 @@ Der Ablauf für die Erstellung einer Karte mit Markern aus MetaModels-Daten ist 
 
 **Vorbereitung:**
 
-* Layer anlegen
+* Layer für Kartendaten anlegen
 * Karte anlegen
 * Karte anzeigen
 
