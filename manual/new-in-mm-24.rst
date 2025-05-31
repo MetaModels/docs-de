@@ -41,6 +41,8 @@ Attribute
 
 * Checkbox
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
+* Cowegis Marker (NEU)
+    * Auswahl von Markern in Cowegis zur Anzeige auf einer Karte - `siehe "Cowegis-Layer Integration für Marker" <extended_cowegis-layer-marker>`
 * Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
 * Einzelauswahl [select]

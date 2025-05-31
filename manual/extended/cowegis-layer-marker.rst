@@ -1,7 +1,7 @@
 .. _extended_cowegis-layer-marker:
 
 Cowegis-Layer Integration für Marker
-===================================
+====================================
 
 Mit `Cowegis-Layer` wird die Darstellung von Markern aus MetaModels in der Contao-Erweiterung
 `Cowegis <https://github.com/cowegis>`_ ermöglicht. Mit Cowegis können verschiedene Karten, Marker, Polygone usw.
