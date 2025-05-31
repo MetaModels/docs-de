@@ -228,6 +228,7 @@ eingefügt werden - das kann auch ein SVG-Quelltext sein. Folgend ein Beispiel a
    :linenos:
 
    <style>
+   /* http://projects.verou.me/bubbly/ */
    .marker-bubble {
        position: relative;
        background: #00aabb;
