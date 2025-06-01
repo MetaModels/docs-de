@@ -350,7 +350,7 @@ Der neue Layer Marker-Cluster muss auch in der Karte unter Layer aktiviert werde
 |img_screenshot_10|
 
 Je nach Zoomlevel werden nahe beieinander liegende Marker zusammen gefasst. Die Farbe des Cluster-Icons richtet sich
-nach der Anzahl der enthaltenen Elemente und
+nach der `Anzahl der enthaltenen Elemente <https://github.com/Leaflet/Leaflet.markercluster/blob/c0f055bd5dcd1d6a733090d0cf024d7362d77bc8/src/MarkerClusterGroup.js#L824-L831>`_ und
 `kann per CSS angepasst werden <https://github.com/Leaflet/Leaflet.markercluster/blob/c0f055bd5dcd1d6a733090d0cf024d7362d77bc8/dist/MarkerCluster.Default.css#L1-L20>`_.
 Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu sehen ist.
 
