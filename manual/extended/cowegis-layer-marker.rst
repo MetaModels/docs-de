@@ -132,14 +132,14 @@ folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden se
 Die Koordinaten des Markers können in einem Wert als kommaseparierte Zahlen oder als Einzelwerte gespeichert werden. Für
 den ersten Fall sollte ein Attribut Text angelegt sein, welches das Tupel (``52.510885,13.3989367``) oder Tripel
 (``52.510885,13.3989367,36``) aufnimmt. Sollten die Koordinaten einzeln gespeichert werden, so sind zwei bzw. drei
-Attribute Dezimal anzulegen. Die Variante mit einzelnen Koordinatenwerten muss verwendet werden, sofern die Datensätze
+Attribute "Dezimal" anzulegen. Die Variante mit einzelnen Koordinatenwerten muss verwendet werden, sofern die Datensätze
 mit einer :ref:`Umkreissuche aus MetaModels <extended_perimetersearch>` gefiltert werden sollen.
 
 Dem Marker-Icon kann optional ein Text für das Title- bzw. Alt-Attribut übergeben werden. Dafür wird ein entsprechendes
-Attribut Text benötigt. Der Text darf keine HTML-Formatierung beinhalten, welches die HTML-Ausgabe stört.
+Attribut "Text" benötigt. Der Text darf keine HTML-Formatierung beinhalten, welches die HTML-Ausgabe stört.
 
 Bei dem Marker ist es möglich, kei Klick eine Infobox als Popup anzeigen zu lassen. Der Inhalt kann aus einem Attribut
-z. B. Text oder Langtext kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten. Wie das Attribut gerendert
+z. B. "Text" oder "Langtext" kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten. Wie das Attribut gerendert
 wird, bestimmt die Auswahl der Render-Einstellung - das Attribut sollte als Element in der Render-Einstellung
 vorhanden sein.
 
@@ -149,7 +149,7 @@ möglich, die Ausgabe mehrerer Attribute zu kombinieren und mit einem eigenen Te
 einfache Ausgabe von Detaillinks (jumpTo) möglich.
 
 Für die drei Textausgaben (Popup sowie Title- und Alt-Attribut) können sowohl einsprachige als auch übersetzte
-MetaModels-Attribute zum Einsatz kommen - eine mehrsprachige Ausgabe ist also kein Problem.
+MetaModels-Attribute zum Einsatz kommen - eine mehrsprachige Ausgabe wird unterstützt.
 
 Sind alle Attribute angelegt und mit Daten befüllt, folgt im nächsten Schritt die Einbindung bzw. die automatische
 Erstellung der Marker in Cowegis.
