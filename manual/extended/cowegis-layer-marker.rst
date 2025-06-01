@@ -120,12 +120,14 @@ MetaModels Daten erstellen
 ..........................
 
 Möchte man Datensätze als Marker auf einer Karte anzeigen, so sind verschiedene Daten in MetaModels zu pflegen. Für
-folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden sein:
+folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden sein (inkl. Angabe unterstützter Attribute):
 
-* Koordinaten (Latitude und Longitude pflicht, Altitude optional)
-* Title-Attribut (optional)
-* Alt-Attribut (optional)
-* Popup (optional)
+* Koordinaten (Latitude und Longitude Pflicht, Altitude optional) - Dezimal bei Einzelangabe bzw Text für
+  kommaseparierte Angabe
+* Title-Attribut (optional) - Text, Kombinierte Werte, Übersetzter Text, Übersetzte kombinierte Werte
+* Alt-Attribut (optional) - Text, Kombinierte Werte, Übersetzter Text, Übersetzte kombinierte Werte
+* Popup (optional) - Text, Langtext, Kombinierte Werte, Übersetzter Text, Übersetzter Langtext, Übersetzte
+  kombinierte Werte
 
 Die Koordinaten des Markers können in einem Wert als kommaseparierte Zahlen oder als Einzelwerte gespeichert werden. Für
 den ersten Fall sollte ein Attribut Text angelegt sein, welches das Tupel (``52.510885,13.3989367``) oder Tripel
