@@ -112,6 +112,10 @@ Im nächsten Schritt kann man die erstellte Karte als Content-Element oder Front
 entsprechende Bearbeitungsmaske und wählt als Typ "Cowegis-Karte" aus. Nach Auswahl der Cowegis-Karte und Eingabe einer
 Kartenbreite und -höhe ist nach dem Speichern die Karte auf der entsprechenden Frontendausgabe sichtbar.
 
+Für die Parameter "Zentrieren" mit ``52.510885,13.3989367`` und "Zoom-Faktor" ``14`` sieht die Ausgabe der Karte in
+etwa wie folgt aus:
+
+|img_screenshot_13|
 
 Anzeige der MetaModels Daten
 ----------------------------
@@ -377,3 +381,4 @@ so verändert, dass der Inhalt zu sehen ist.
 .. |img_screenshot_10| image:: /_img/screenshots/extended/cowegis_layer/screenshot_10.png
 .. |img_screenshot_11| image:: /_img/screenshots/extended/cowegis_layer/screenshot_11.png
 .. |img_screenshot_12| image:: /_img/screenshots/extended/cowegis_layer/screenshot_12.png
+.. |img_screenshot_13| image:: /_img/screenshots/extended/cowegis_layer/screenshot_13.png
