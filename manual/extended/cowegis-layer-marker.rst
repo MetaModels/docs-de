@@ -173,6 +173,9 @@ Auswahl eines MetaModel-Attributes für das Title- bzw. Alt-Attribut des Icons k
 Im optionalen Abschnitt Popup kann mit "Popup hinzufügen" bestimmt werden, ob ein Popup erscheinen soll und wenn ja,
 ob der Inhalt aus einem MetaModel-Attribut oder über eine separate Render-Einstellung erfolgen soll.
 
+Folgend ein Beispiel der Konfigurationseinstellungen:
+
+|img_screenshot_14|
 
 Marker Layer in Karte einbinden
 ...............................
@@ -383,3 +386,4 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 .. |img_screenshot_11| image:: /_img/screenshots/extended/cowegis_layer/screenshot_11.png
 .. |img_screenshot_12| image:: /_img/screenshots/extended/cowegis_layer/screenshot_12.png
 .. |img_screenshot_13| image:: /_img/screenshots/extended/cowegis_layer/screenshot_13.png
+.. |img_screenshot_14| image:: /_img/screenshots/extended/cowegis_layer/screenshot_14.png
