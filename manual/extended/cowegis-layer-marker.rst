@@ -95,7 +95,7 @@ Nach dem Speichern und Schließen gibt es einen neuen dem Listeneintrag der neue
 
 |img_screenshot_16|
 
-Über das Icon für die Layeransicht |img_layers| gelangt man zur  Liste der angelegten Layer.
+Über das Icon für die Layeransicht |img_layers| gelangt man zur Liste der angelegten Layer.
 
 |img_screenshot_17|
 
