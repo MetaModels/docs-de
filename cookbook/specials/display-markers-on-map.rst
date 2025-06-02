@@ -3,7 +3,7 @@
 Standorte als Marker auf einer Google-Map ausgeben
 ===================================================
 
-.. note:: Als Alternative für die Ausgabe über ein Template steht die Erweiterung
+.. note:: Als Alternative zu der Ausgabe über ein Template steht die Erweiterung
    :ref:`Cowegis-Layer <extended_cowegis-layer-marker>` zur Verfügung.
 
 
