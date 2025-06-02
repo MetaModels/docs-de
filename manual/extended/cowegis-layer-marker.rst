@@ -103,7 +103,8 @@ Ion ist disabled |img_map_1| - werden die Kartendaten im Frontend ausgespielt. D
 werden, aktiv verschiedene Layer wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
 
 Das Karten-Icon ist also nicht das übliche "Auge-Icon" zum Deaktivieren - um einen Layer zu deaktivieren, muss man die
-Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren.
+Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
+in der Listenansicht klicken.
 
 Karte anzeigen
 ..............
