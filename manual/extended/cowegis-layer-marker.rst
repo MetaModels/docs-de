@@ -94,7 +94,7 @@ bzw. angepasst werden.
 Nach dem Speichern und Schließen ist in dem Listeneintrag der neuen Karte das Icon für die Liste der angelegten Layer
 |img_layers| über welches diese Liste geöffnet wird.
 
-|img_screenshot_15|
+|img_screenshot_16|
 
 Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt. Das grüne Plus-Icon wechselt zu einem
 roten X-Icon |img_delete| und ein Icon Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift öffnet die übliche
@@ -395,3 +395,4 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 .. |img_screenshot_13| image:: /_img/screenshots/extended/cowegis_layer/screenshot_13.png
 .. |img_screenshot_14| image:: /_img/screenshots/extended/cowegis_layer/screenshot_14.png
 .. |img_screenshot_15| image:: /_img/screenshots/extended/cowegis_layer/screenshot_15.png
+.. |img_screenshot_16| image:: /_img/screenshots/extended/cowegis_layer/screenshot_16.png
