@@ -85,7 +85,7 @@ Karte anlegen und anzeigen
 ..........................
 
 Im nächsten Schritt wird im Punkt Karten eine neue Karte über "Karte erstellen" angelegt. Hier ist lediglich der Titel
-ein Pflichtfeld. Man sollte aber Koordinaten för eine Zentrierung und einen initialen Zoomfaktor eingeben. Die
+ein Pflichtfeld. Man sollte aber Koordinaten für eine Zentrierung und einen initialen Zoomfaktor eingeben. Die
 Koordinaten für die Zentrierung lassen sich über eine Adresse ermitteln. Dazu das Kartenpopup über das Karten-Icon
 |img_map| öffnen, rechts oben bei Suche eine Adresse eingeben und mit Enter bestätigen. Mit Klick auf den Button
 "Anwenden" werden die Koordinaten übernommen. Die weiteren Parameter können zu einem späteren Zeitpunkt eingestellt
