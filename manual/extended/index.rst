@@ -21,6 +21,7 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     filter_parent
     notelist
     isotope
+    cowegis-layer-marker
     leaflet
     file-usage
     metadata_extractor

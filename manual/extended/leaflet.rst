@@ -3,14 +3,14 @@
 Leaflet-Maps Integration
 ########################
 
-.. note:: Die Erweiterung `Contao-Leaflet <https://github.com/netzmacht/contao-leaflet-metamodels>`_ wurde für Contao 5 nicht weiter
-   geführt - dafür gibt es nun eine Alternative `Cowegis <https://github.com/cowegis/>`_.
+.. note:: Die Erweiterung `Contao-Leaflet <https://github.com/netzmacht/contao-leaflet-metamodels>`_ wurde für
+   Contao 5 nicht weiter geführt - dafür gibt es nun eine Alternative :ref:`Cowegis-Layer <extended_cowegis-layer-marker>`.
 
 Mit der `Leaflet-Maps Integration <https://github.com/netzmacht/contao-leaflet-metamodels>`_ wird die Darstellung von MetaModels in der
 Erweiterung `netzmacht/contao-leaflet-maps`_ ermöglicht.
 
-.. note:: Diese Dokumentation bezieht sich ausschließlich auf Contao 4, auch
-   wenn die Erweiterung auch für Contao 3.5. bereitgestellt wird.
+.. note:: Diese Dokumentation bezieht sich ausschließlich auf Contao 4, auch wenn die Erweiterung auch für Contao 3.5.
+   bereitgestellt wird.
 
 
 Funktionen
