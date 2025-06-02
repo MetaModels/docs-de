@@ -92,15 +92,19 @@ Koordinaten für die Zentrierung lassen sich über eine Adresse ermitteln. Dazu 
 bzw. angepasst werden.
 
 Nach dem Speichern und Schließen ist in dem Listeneintrag der neuen Karte das Icon für die Liste der angelegten Layer
-|img_layers| über welches diese Liste geöffnet wird. Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer
-hinzugefügt.
+|img_layers| über welches diese Liste geöffnet wird.
 
-Das grüne Plus-Icon wechselt zu einem roten X-Icon |img_delete| und ein Icon Stift |img_edit| und Karte |img_map| kommen
-hinzu. Der Stift öffnet die übliche Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer
-standardmäßig eingeblendet werden soll oder nicht. Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das
-Ion ist disabled |img_map_1| - werden die Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann
-über ein Kontrollelement ein- bzw. wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben
-werden, aktiv verschiedene Layer wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
+|img_screenshot_15|
+
+Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt. Das grüne Plus-Icon wechselt zu einem
+roten X-Icon |img_delete| und ein Icon Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift öffnet die übliche
+Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer standardmäßig eingeblendet
+werden soll oder nicht.
+
+Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
+Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Kontrollelement ein- bzw.
+wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene Layer
+wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
 
 Das Karten-Icon ist also nicht das übliche "Auge-Icon" zum Deaktivieren - um einen Layer zu deaktivieren, muss man die
 Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
