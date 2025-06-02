@@ -106,6 +106,8 @@ Das Karten-Icon ist also nicht das übliche "Auge-Icon" zum Deaktivieren - um ei
 Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
 in der Listenansicht klicken.
 
+|img_screenshot_15|
+
 Karte anzeigen
 ..............
 
@@ -388,3 +390,4 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 .. |img_screenshot_12| image:: /_img/screenshots/extended/cowegis_layer/screenshot_12.png
 .. |img_screenshot_13| image:: /_img/screenshots/extended/cowegis_layer/screenshot_13.png
 .. |img_screenshot_14| image:: /_img/screenshots/extended/cowegis_layer/screenshot_14.png
+.. |img_screenshot_15| image:: /_img/screenshots/extended/cowegis_layer/screenshot_15.png
