@@ -368,7 +368,7 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 .. |img_copy| image:: /_img/screenshots/extended/cowegis_layer/copy.svg
 .. |img_delete| image:: /_img/screenshots/extended/cowegis_layer/delete.svg
 .. |img_edit| image:: /_img/screenshots/extended/cowegis_layer/edit.svg
-.. |img_layers| image:: /_img/screenshots/extended/cowegis_layer/layers.svg
+.. |img_layers| image:: /_img/screenshots/extended/cowegis_layer/layers.png
 .. |img_marker-icon| image:: /_img/screenshots/extended/cowegis_layer/marker-icon.png
 .. |img_map| image:: /_img/screenshots/extended/cowegis_layer/map.png
 .. |img_map_1| image:: /_img/screenshots/extended/cowegis_layer/map_1.png
