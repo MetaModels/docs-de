@@ -42,7 +42,7 @@ Der Ablauf für die Erstellung einer Karte mit Markern aus MetaModels-Daten ist 
 **Vorbereitung:**
 
 * Layer für Kartendaten anlegen
-* Karte anlegen
+* Karte anlegen und Layer einbinden
 * Karte anzeigen
 
 **Anzeige der MetaModels Daten**
@@ -81,8 +81,8 @@ Eine einfachere Variante ist der Typ "Vorkonfiguriere Karte". Hier können die t
 usw. in einem Select ausgewählt werden - die spezifischen Parameter der jeweiligen Provider werden automatisch mit
 eingebunden.
 
-Karte anlegen und anzeigen
-..........................
+Karte anlegen und Layer einbinden
+.................................
 
 Im nächsten Schritt wird im Punkt Karten eine neue Karte über "Karte erstellen" angelegt. Hier ist lediglich der Titel
 ein Pflichtfeld. Man sollte aber Koordinaten für eine Zentrierung und einen initialen Zoomfaktor eingeben. Die
