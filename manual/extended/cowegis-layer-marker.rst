@@ -99,13 +99,13 @@ Nach dem Speichern und Schließen gibt es einen neuen dem Listeneintrag der neue
 
 |img_screenshot_17|
 
-Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt. Das grüne Plus-Icon wechselt zu einem
+Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt bzw. aktiviert. Das grüne Plus-Icon wechselt zu einem
 roten X-Icon |img_delete| und ein Icon Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift öffnet die übliche
 Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer standardmäßig eingeblendet
 werden soll oder nicht.
 
 Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
-Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Kontrollelement ein- bzw.
+Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Kontrollelement (s. u.) ein- bzw.
 wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene Layer
 wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
 
