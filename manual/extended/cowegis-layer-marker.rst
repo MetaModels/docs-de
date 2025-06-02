@@ -105,9 +105,9 @@ Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten
 werden soll oder nicht.
 
 Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
-Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Kontrollelement (s. u.) ein- bzw.
-wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene Layer
-wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
+Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Layer Kontrollelement (s. u.)
+ein- bzw. wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene
+Layer wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
 
 Das Karten-Icon ist also nicht das übliche "Auge-Icon" zum Deaktivieren - um einen Layer zu deaktivieren, muss man die
 Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
