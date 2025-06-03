@@ -527,6 +527,9 @@ wie folgt anlegen:
 Filterunterscheidung von Frontend und Backend
 *********************************************
 
+.. note:: In MM 2.3 wurde der Filterregel eine Auswahl hinzugefügt, mit der die Ausführungsumgebung wie z. B. "Nur im
+   Backende" bestimmt werden kann. Damit können die SQL-Queries vereinfacht werden.
+
 Bei den Filterungen mit eigenem SQL kann es notwendig sein, eine Unterscheidung zwischen
 Frontend und Backend zu erreichen. Seit MM 2.2 werden die beim Attribut Select und Tags
 eingestellten Filter auch im Frontend angewendet, so dass es Problemen mit Filterregeln
@@ -551,8 +554,6 @@ Man kann eine Abfrage auf den aktuellen Request-String setzen und dort nach dem 
    kommt nun ein ``domain.de/contao/metamodel/mm_employees?act=edit``, d. h. vor der Änderung wurde bei der Abfrage
    ``SUBSTRING_INDEX(SUBSTRING_INDEX('{{env::request}}', '/', -1), '?', 1)`` der Wert "contao" geliefert.
 
-.. note:: In MM 2.3 wurde der Filterregel eine Auswahl hinzugefügt, mit der die Ausführungsumgebung wie z. B. "Nur im
-   Backende" bestimmt werden kann. Damit können die SQL-Queries vereinfacht werden.
 
 Kommentare im SQL-Query
 ***********************
