@@ -528,7 +528,7 @@ Filterunterscheidung von Frontend und Backend
 *********************************************
 
 .. note:: In MM 2.3 wurde der Filterregel eine Auswahl hinzugefügt, mit der die Ausführungsumgebung wie z. B. "Nur im
-   Backende" bestimmt werden kann. Damit können die SQL-Queries vereinfacht werden.
+   Backend" bestimmt werden kann. Damit können die SQL-Queries vereinfacht werden.
 
 Bei den Filterungen mit eigenem SQL kann es notwendig sein, eine Unterscheidung zwischen
 Frontend und Backend zu erreichen. Seit MM 2.2 werden die beim Attribut Select und Tags
