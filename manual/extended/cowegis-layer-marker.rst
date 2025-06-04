@@ -21,7 +21,7 @@ installieren:
 * `Cowegis Contao Monolingual Pack <https://github.com/cowegis/cowegis-contao-monolingual-pack>`_
 * `Cowegis Contao Multilingual Pack <https://github.com/cowegis/cowegis-contao-multilingual-pack>`_
 
-Für die mehrsprachige Ausgabe von Daten aus MetaModels - z.B. für Texte in den Popups - reicht das Monolingual Pack.
+Für die mehrsprachige Ausgabe von Daten aus MetaModels - z. B. für Texte in den Popups - reicht das Monolingual Pack.
 Das Multilingual Pack ist für eigene Übersetzungen bei den Karten (verwendet die Erweiterung
 `DC_Multilingual <https://github.com/terminal42/contao-DC_Multilingual>`_).
 
@@ -72,7 +72,7 @@ Layer anlegen
 Im Bereich Layer wird ein neuer Layer für die Kartendarstellung angelegt. Dazu stehen als Typen "Kachel-Layer" oder
 "Vorkonfiguriere Karte" zur Verfügung.
 
-Beim Typ "Kachel-Layer" muss man ein passendes URL-Template einfügen. Diese findet man z.B. bei den entsprechenden
+Beim Typ "Kachel-Layer" muss man ein passendes URL-Template einfügen. Diese findet man z. B. bei den entsprechenden
 Kartenanbietern oder kann die URLs aus den `Leaflet-Providern <https://github.com/leaflet-extras/leaflet-providers/blob/master/leaflet-providers.js>`_
 auslesen. Die typische URL für OSM ist ``https://tile.openstreetmap.org/{z}/{x}/{y}.png``. Bei diesem Layertyp stehen
 die möglichen Konfigurationsparameter für individuelle Einstellungen zur Verfügung.
@@ -107,7 +107,7 @@ werden soll oder nicht.
 Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
 Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Layer Kontrollelement (s. u.)
 ein- bzw. wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene
-Layer wie Kartentypen z.B. mit/ohne ÖPNV oder mit/ohne Markern oder Polygonen.
+Layer wie Kartentypen z. B. mit/ohne ÖPNV oder mit/ohne Markern oder Polygonen.
 
 Das Karten-Icon ist also nicht das übliche "Auge-Icon" zur Deaktivierung eines Datensatzes. Um einen Layer zu deaktivieren, muss man stattdessen
 die Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
@@ -153,7 +153,7 @@ Dem Marker-Icon kann optional ein Text für das Title- bzw. Alt-Attribut überge
 Attribut "Text" benötigt. Der Text darf keine HTML-Formatierung beinhalten, welches die HTML-Ausgabe stört.
 
 Bei dem Marker ist es möglich, bei Klick eine Infobox als Popup anzeigen zu lassen. Der Inhalt kann aus einem Attribut
-z.B. "Text" oder "Langtext" kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten. Wie das Attribut gerendert
+z. B. "Text" oder "Langtext" kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten. Wie das Attribut gerendert
 wird, bestimmt die Auswahl der Render-Einstellung - das Attribut sollte als Element in der Render-Einstellung
 vorhanden sein.
 
@@ -228,10 +228,10 @@ Eigene Icons kann man bei Vorlagen mit "Icon erstellen" anlegen. Aktuell stehen 
 
 **Datei** |br|
 Beim `Typ "Datei" <https://leafletjs.com/reference.html#icon>`_ kann man eine Datei aus der Dateiverwaltung auswählen.
-Wer keine eigene Datei zur Verfügung hat, kann sich z.B. bei einigen Iconfonts wie
+Wer keine eigene Datei zur Verfügung hat, kann sich z. B. bei einigen Iconfonts wie
 `Lucide <https://lucide.dev/icons/?search=map>`_ ein Icon holen. Der Typ Datei unterstützt neben PNG auch SVG. Die
 Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
-`iconSize mit Angabe von "Breite,Höhe" in Pixeln <https://leafletjs.com/reference.html#icon>`_ angepasst werden; z.B.
+`iconSize mit Angabe von "Breite,Höhe" in Pixeln <https://leafletjs.com/reference.html#icon>`_ angepasst werden; z. B.
 ``42,42``.
 
 |img_screenshot_03|
@@ -278,7 +278,7 @@ eingefügt werden - das kann auch ein SVG-Quelltext sein. Folgend ein Beispiel a
 
 **SVG** |br|
 Beim Typ "SVG" wird ein Standardmarker ausgegeben der neben der Größe (iconSize) auch in der Farbe angepasst werden kann;
-der Inhalt des Feldes "Content" wird im Icon ausgegeben z.B. ``#42``.
+der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. ``#42``.
 
 |img_screenshot_04|
 
@@ -288,7 +288,7 @@ der neben der Größe (iconSize) auch in der Farbe angepasst werden kann. Die Ic
 Cowegis schon mitgeliefert.
 
 In dem Marker kann damit ein Icon aus dem `Font-Awesome` ausgegeben werden - aktuell stehen die Icons aus
-`Font-Awesome Free Version 6 zur Verfügung <https://fontawesome.com/v6/search?ic=free>`_ z.B. "fa-mug-hot".
+`Font-Awesome Free Version 6 zur Verfügung <https://fontawesome.com/v6/search?ic=free>`_ z. B. "fa-mug-hot".
 
 **Icon-Vorlage in MetaModels auswählen**
 In MetaModels steht ein neues Attribut "Cowegis Marker" zur Verfügung, mit dem man eine Icon-Vorlage aus Cowegis
@@ -328,7 +328,7 @@ Kontrollelemente anlegen
 ........................
 
 Unter den Karten ist in der Zeile jeder Karte das Icon |img_control| für das Anlegen der Kontrollelemente verfügbar. Über
-"Kontrollelement erstellen" können verschiedene Kontrollelemente angelegt werden wie z.B.:
+"Kontrollelement erstellen" können verschiedene Kontrollelemente angelegt werden wie z. B.:
 
 * Copyright-Leiste: Das `Kontrollelement zur Namensnennung <https://leafletjs.com/reference.html#control-attribution>`_
   erlaubt es, Urheber in einer kleinen Textbox auf der Karte anzuzeigen.
@@ -347,7 +347,7 @@ Unter den Karten ist in der Zeile jeder Karte das Icon |img_control| für das An
 weitere Layer anlegen
 .....................
 
-Zum Abschluss können weitere Layer angelegt werden die z.B. fixe Marker anzeigen, deren Daten nicht aus MetaModels
+Zum Abschluss können weitere Layer angelegt werden die z. B. fixe Marker anzeigen, deren Daten nicht aus MetaModels
 stammen oder weitere Kartentypen. Ist das Layer-Kontrollelement eingerichtet, kann darüber der Frontend Besuchern die Layer ein bzw.
 ausschalten.
 
