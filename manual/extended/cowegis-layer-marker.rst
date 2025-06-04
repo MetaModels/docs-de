@@ -91,7 +91,7 @@ Koordinaten für die Zentrierung lassen sich über eine Adresse ermitteln. Dazu 
 "Anwenden" werden die Koordinaten übernommen. Die weiteren Parameter können zu einem späteren Zeitpunkt eingestellt
 bzw. angepasst werden.
 
-Nach dem Speichern und Schließen gibt es einen neuen dem Listeneintrag der neuen Karte.
+Nach dem Speichern und Schließen gibt es einen neuen Listeneintrag mit der neuen Karte.
 
 |img_screenshot_16|
 
@@ -100,17 +100,17 @@ Nach dem Speichern und Schließen gibt es einen neuen dem Listeneintrag der neue
 |img_screenshot_17|
 
 Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt bzw. aktiviert. Das grüne Plus-Icon wechselt zu einem
-roten X-Icon |img_delete| und ein Icon Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift öffnet die übliche
+roten X-Icon |img_delete| und die Icons Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift öffnet die übliche
 Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer standardmäßig eingeblendet
 werden soll oder nicht.
 
 Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
 Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Layer Kontrollelement (s. u.)
 ein- bzw. wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene
-Layer wie Kartentypen z. B. mit/ohne OPNV oder nit/ohne Markern oder Polygonen.
+Layer wie Kartentypen z. B. mit/ohne ÖPNV oder mit/ohne Markern oder Polygonen.
 
-Das Karten-Icon ist also nicht das übliche "Auge-Icon" zum Deaktivieren - um einen Layer zu deaktivieren, muss man die
-Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
+Das Karten-Icon ist also nicht das übliche "Auge-Icon" zur Deaktivierung eines Datensatzes. Um einen Layer zu deaktivieren, muss man stattdessen
+die Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
 in der Listenansicht klicken.
 
 |img_screenshot_15|
@@ -119,8 +119,8 @@ Karte anzeigen
 ..............
 
 Im nächsten Schritt kann man die erstellte Karte als Content-Element oder Frontend-Modul anlegen. Dazu geht man in die
-entsprechende Bearbeitungsmaske und wählt als Typ "Cowegis-Karte" aus. Nach Auswahl der Cowegis-Karte und Eingabe einer
-Kartenbreite und -höhe ist nach dem Speichern die Karte auf der entsprechenden Frontendausgabe sichtbar.
+entsprechende Bearbeitungsmaske und wählt als Typ "Cowegis-Karte" aus. Nach Auswahl der Cowegis-Karte, Eingabe einer
+Kartenbreite sowie -höhe und dem Speichern ist die Karte auf der entsprechenden Frontendausgabe sichtbar.
 
 Für die Parameter "Zentrieren" mit ``52.510885,13.3989367`` und "Zoom-Faktor" ``14`` sieht die Ausgabe der Karte in
 etwa wie folgt aus:
@@ -136,7 +136,7 @@ MetaModels Daten erstellen
 Möchte man Datensätze als Marker auf einer Karte anzeigen, so sind verschiedene Daten in MetaModels zu pflegen. Für
 folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden sein (inkl. Angabe unterstützter Attribute):
 
-* Koordinaten (Latitude und Longitude Pflicht, Altitude optional) - Dezimal bei Einzelangabe bzw Text für
+* Koordinaten (Latitude und Longitude Pflicht, Altitude optional) - Dezimal bei Einzelangabe bzw. Text für
   kommaseparierte Angabe
 * Title-Attribut (optional) - Text, Kombinierte Werte, Übersetzter Text, Übersetzte kombinierte Werte
 * Alt-Attribut (optional) - Text, Kombinierte Werte, Übersetzter Text, Übersetzte kombinierte Werte
@@ -146,13 +146,13 @@ folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden se
 Die Koordinaten des Markers können in einem Wert als kommaseparierte Zahlen oder als Einzelwerte gespeichert werden. Für
 den ersten Fall sollte ein Attribut Text angelegt sein, welches das Tupel (``52.510885,13.3989367``) oder Tripel
 (``52.510885,13.3989367,36``) aufnimmt. Sollten die Koordinaten einzeln gespeichert werden, so sind zwei bzw. drei
-Attribute "Dezimal" anzulegen. Die Variante mit einzelnen Koordinatenwerten muss verwendet werden, sofern die Datensätze
+Attribute "Dezimal" anzulegen. Die Variante mit einzelnen Koordinatenwerten ist zu verwenden, sofern die Datensätze
 mit einer :ref:`Umkreissuche aus MetaModels <extended_perimetersearch>` gefiltert werden sollen.
 
 Dem Marker-Icon kann optional ein Text für das Title- bzw. Alt-Attribut übergeben werden. Dafür wird ein entsprechendes
 Attribut "Text" benötigt. Der Text darf keine HTML-Formatierung beinhalten, welches die HTML-Ausgabe stört.
 
-Bei dem Marker ist es möglich, kei Klick eine Infobox als Popup anzeigen zu lassen. Der Inhalt kann aus einem Attribut
+Bei dem Marker ist es möglich, bei Klick eine Infobox als Popup anzeigen zu lassen. Der Inhalt kann aus einem Attribut
 z. B. "Text" oder "Langtext" kommen und darf auch HTML-Formatierungen wie Links o. ä. beinhalten. Wie das Attribut gerendert
 wird, bestimmt die Auswahl der Render-Einstellung - das Attribut sollte als Element in der Render-Einstellung
 vorhanden sein.
@@ -175,9 +175,9 @@ Nachdem alle Vorbereitungen in MM erfolgt sind, kann ein entsprechender Layer f�
 Dazu in Cowegis unter Layer mit "Layer erstellen" einen neuen Layer vom Typ "MetaModels Marker" anlegen. Mit der
 Typauswahl werden die passenden Eingabewidgets in der Maske angezeigt. Im Abschnitt "MetaModel" ist das gewünschte
 Model auszuwählen. Im Abschnitt Koordinaten ist die Auswahl zwischen einem oder mehreren Attributen für die Koordinaten
-möglich. Je nach Auswahl steht ein oder drei Select zur Verfügung.
+möglich. Je nach Auswahl stehen ein oder drei Selects zur Verfügung.
 
-Die Anpassungen im Abschnitt Icon sind optional. Auf die Anpassungen des Icons wir weiter unten eingegangen. Die
+Die Anpassungen im Abschnitt Icon sind optional. Auf die Anpassungen des Icons wird weiter unten eingegangen. Die
 Auswahl eines MetaModel-Attributes für das Title- bzw. Alt-Attribut des Icons kann nun vorgenommen werden.
 
 Im optionalen Abschnitt Popup kann mit "Popup hinzufügen" bestimmt werden, ob ein Popup erscheinen soll und wenn ja,
@@ -214,7 +214,7 @@ per Tab ansteuerbar sind.
 Icons konfigurieren
 ...................
 
-Die Anpassung der Anzeige der Marker-Icons ist auf vielfältige Weise anpassbar. Als Standard wird das folgende Icon
+Die Anpassung der Anzeige der Marker-Icons ist auf vielfältige Weise möglich. Als Standard wird das folgende Icon
 von `Leaflet <https://leafletjs.com/>`_ in der Größe 25x41px ausgegeben:
 
 |img_marker-icon|
@@ -229,7 +229,7 @@ Eigene Icons kann man bei Vorlagen mit "Icon erstellen" anlegen. Aktuell stehen 
 **Datei** |br|
 Beim `Typ "Datei" <https://leafletjs.com/reference.html#icon>`_ kann man eine Datei aus der Dateiverwaltung auswählen.
 Wer keine eigene Datei zur Verfügung hat, kann sich z. B. bei einigen Iconfonts wie
-`Lucide <https://lucide.dev/icons/?search=map>`_ eine Icon holen. Der Typ Datei unterstützt neben PNG auch SVG. Die
+`Lucide <https://lucide.dev/icons/?search=map>`_ ein Icon holen. Der Typ Datei unterstützt neben PNG auch SVG. Die
 Darstellung der Icongröße wird durch die Ursprungsdatei bestimmt oder kann bei
 `iconSize mit Angabe von "Breite,Höhe" in Pixeln <https://leafletjs.com/reference.html#icon>`_ angepasst werden; z. B.
 ``42,42``.
@@ -277,14 +277,14 @@ eingefügt werden - das kann auch ein SVG-Quelltext sein. Folgend ein Beispiel a
    </div>
 
 **SVG** |br|
-Beim Typ "SVG" wird ein Standardmarker ausgegeben der neben der Größe (iconSize) in der Farbe angepasst werden kann;
+Beim Typ "SVG" wird ein Standardmarker ausgegeben der neben der Größe (iconSize) auch in der Farbe angepasst werden kann;
 der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. ``#42``.
 
 |img_screenshot_04|
 
 **Font-Awesome** |br|
 Beim `Typ "Font-Awesome" <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker ausgegeben
-der neben der Größe (iconSize) in der Farbe angepasst werden kann. Die Icons von Font-Awesome werden mit der Erweiterung
+der neben der Größe (iconSize) auch in der Farbe angepasst werden kann. Die Icons von Font-Awesome werden mit der Erweiterung
 Cowegis schon mitgeliefert.
 
 In dem Marker kann damit ein Icon aus dem `Font-Awesome` ausgegeben werden - aktuell stehen die Icons aus
@@ -292,19 +292,19 @@ In dem Marker kann damit ein Icon aus dem `Font-Awesome` ausgegeben werden - akt
 
 **Icon-Vorlage in MetaModels auswählen**
 In MetaModels steht ein neues Attribut "Cowegis Marker" zur Verfügung, mit dem man eine Icon-Vorlage aus Cowegis
-in MM speichern kann. Dazu wird wie üblich das entsprechende Attribut angelegt und in der Eingabemaske frei geschaltet.
+in MM speichern kann. Dazu wird wie üblich das entsprechende Attribut angelegt und in der Eingabemaske freigeschaltet.
 Wenn ein Datensatz bearbeitet wird, kann über ein Select eine Icon-Vorlage ausgewählt werden; gespeichert wird die
 ID der Vorlage. In der Listenausgabe der Render-Einstellung wird als Standard der Name der Vorlage ausgegeben -
 ändert man das Template des Attributes auf ``mm_attr_marker_icon_image``, wird neben dem Namen auch eine Vorschau
-des Icons ausgegeben (Aktuell nur für Typ "Datei").
+des Icons ausgegeben (aktuell nur für Typ "Datei").
 
 |img_screenshot_05|
 
-Anschließend kann man in den Einstellungen von Layer den MetaModels Marker die Anzeige der individuellen Icons
+Anschließend kann man in den Einstellungen von Layer vom Typ „MetaModels Marker“ die Anzeige der individuellen Icons
 anpassen. Im Abschnitt Icon gibt es die Auswahl "Icon-Attribut" mit dem man das angelegte Attribut "Cowegis Marker"
 auswählen kann. Als Fallback zu der Einstellung kann ein eigenes Standardicon definiert werden - hier ist in dem
 Select die Auswahl einer angelegten Icon-Vorlage möglich. Sollte diese Einstellung auch nicht greifen, wird das
-Standardicon von Leaflet ausgespielt.
+Standard-Icon von Leaflet ausgespielt.
 
 |img_screenshot_06|
 
@@ -318,7 +318,7 @@ Popup konfigurieren
 Die Anzeige der Popups kann ebenfalls unter Vorlagen konfiguriert werden. Dazu zur Ansicht "Popups verwalten"
 wechseln und "Popup erstellen" ausführen - anschließend die gewünschten Einstellungen vornehmen.
 
-Anschließend ist in den Einstellungen von Layer den MetaModels Marker die Anzeige der individuellen Popups
+Danach ist in den Einstellungen von Layer vom Typ „MetaModels Marker“ die Anzeige der individuellen Popups
 möglich. Im Abschnitt Popup bei "Popup-Voreinstellung" die gewünschte Vorlage aktivieren. Folgend eine Anzeige mit
 geöffnetem Popup und Tooltipp.
 
@@ -327,7 +327,7 @@ geöffnetem Popup und Tooltipp.
 Kontrollelemente anlegen
 ........................
 
-Unter Karten ist in der Zeile der angelegten Karte das Icon für das Anlegen der Kontrollelemente |img_control|. Über
+Unter den Karten ist in der Zeile jeder Karte das Icon |img_control| für das Anlegen der Kontrollelemente verfügbar. Über
 "Kontrollelement erstellen" können verschiedene Kontrollelemente angelegt werden wie z. B.:
 
 * Copyright-Leiste: Das `Kontrollelement zur Namensnennung <https://leafletjs.com/reference.html#control-attribution>`_
@@ -335,7 +335,7 @@ Unter Karten ist in der Zeile der angelegten Karte das Icon für das Anlegen der
 * Fullscreen-Kontrollelement: Diese Einstellung fügt einen Button hinzu, der den
   `Fullscreen-Modus <https://github.com/brunob/leaflet.fullscreen>`_ umschaltet.
 * Layer-Kontrollelement: Das `Layer-Kontrollelement <https://leafletjs.com/reference.html#control-layers>`_ gibt
-  Benutzern die Möglichkeit, zwischen verschiedenen Layern zu wechseln und Overlays an- oder auszuschalten.
+  Frontend Besuchern die Möglichkeit, zwischen verschiedenen Layern zu wechseln und Overlays an- oder auszuschalten.
 * Lade-Indikator: `Leaflet.loading <https://github.com/ebrelsford/Leaflet.loading>`_ ist ein einfacher Ladeindikator
   als Kontrollelement.
 * Maßstabs-Kontrollelement: Einfaches `Maßstabs-Kontrollelement <https://leafletjs.com/reference.html#control-scale>`_,
@@ -347,8 +347,8 @@ Unter Karten ist in der Zeile der angelegten Karte das Icon für das Anlegen der
 weitere Layer anlegen
 .....................
 
-Zum Abschluss können weitere Layer angelegt werden die z. B. fixe Marker anzeigt, deren Daten nicht aus MetaModels
-stammen oder weitere Kartentypen. Ist das Layer-Kontrollelement eingerichtet, kann darüber der Benutzer Layer ein bzw.
+Zum Abschluss können weitere Layer angelegt werden die z. B. fixe Marker anzeigen, deren Daten nicht aus MetaModels
+stammen oder weitere Kartentypen. Ist das Layer-Kontrollelement eingerichtet, kann darüber der Frontend Besuchern die Layer ein bzw.
 ausschalten.
 
 Ein Layertyp ist der `"Marker Cluster" <https://github.com/Leaflet/Leaflet.markercluster>`_ mit dem mehrere Marker bei
