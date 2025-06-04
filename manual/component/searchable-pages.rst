@@ -55,6 +55,13 @@ sollen - z. B. um nur veröffentlichte Datensätze aufzunehmen.
 Die Erstellung der sitemap.xml erfolgt seit Contao 4.11 dynamisch beim Aufruf und wird nicht mehr im Order `share`
 abgelegt.
 
+Tipps
+-----
+
+* :ref:`rst_cookbook_filter_exclude-url-from-search-index`
+* :ref:`rst_cookbook_tips_seo_structured-data` bzw.
+* :ref:`rst_cookbook_templates_fe_template_schema_org`
+
 
 .. |img_searchable_pages_32| image:: /_img/icons/searchable_pages_32.png
 .. |img_searchable_pages| image:: /_img/icons/searchable_pages.png

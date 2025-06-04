@@ -149,7 +149,7 @@ dort die Meta-Angaben ergänzen - z.B. mit
       <?php $GLOBALS['TL_HEAD'][] = '<link rel="next" href="' . $this->next['href'] . '" />' ?>
    ...
 
-
+.. _rst_cookbook_tips_seo_structured-data:
 Strukturierte Daten
 ...................
 
