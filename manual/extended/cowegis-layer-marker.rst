@@ -284,11 +284,21 @@ der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. ``#42``.
 
 **Font-Awesome** |br|
 Beim `Typ "Font-Awesome" <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker ausgegeben
-der neben der Größe (iconSize) auch in der Farbe angepasst werden kann. Die Icons von Font-Awesome werden mit der Erweiterung
-Cowegis schon mitgeliefert.
+der neben der Größe (iconSize) auch in der Farbe angepasst werden kann. Die Icons von Font-Awesome werden mit der
+Erweiterung Cowegis schon mitgeliefert.
 
 In dem Marker kann damit ein Icon aus dem `Font-Awesome` ausgegeben werden - aktuell stehen die Icons aus
-`Font-Awesome Free Version 6 zur Verfügung <https://fontawesome.com/v6/search?ic=free>`_ z. B. "fa-mug-hot".
+`Font-Awesome Free Version 6 zur Verfügung <https://fontawesome.com/v6/search?ic=free>`_ zur Verfügung
+z. B. "fa-envelope".
+
+|img_screenshot_18|
+
+Dabei ist zu beachten, dass der Iconname bei "Icon-CSS-Klasse" ohne den Präfix z. B. "fa-" eingegeben werden muss - also
+``envelope``. Zudem muss eine Auswahl des passenden Sets aus "Solid, Brand, Regular" des gewünschten Icons erfolgen.
+
+Die Größe des Markers wird mit der Angabe "Icon-Größe" angepasst und bezieht sich auf den kompletten Div-Container, der
+das SVG für den "Tropfen" als auch für das Font-Awesome-SVG umschliesst. Der Div-Container hat als Standard eine Größe
+von ``26,40`` in Pixeln - für eine Vergrößerung um 50% wäre ``39,60`` einzugeben.
 
 **Icon-Vorlage in MetaModels auswählen**
 In MetaModels steht ein neues Attribut "Cowegis Marker" zur Verfügung, mit dem man eine Icon-Vorlage aus Cowegis
@@ -400,3 +410,4 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 .. |img_screenshot_15| image:: /_img/screenshots/extended/cowegis_layer/screenshot_15.png
 .. |img_screenshot_16| image:: /_img/screenshots/extended/cowegis_layer/screenshot_16.png
 .. |img_screenshot_17| image:: /_img/screenshots/extended/cowegis_layer/screenshot_17.png
+.. |img_screenshot_18| image:: /_img/screenshots/extended/cowegis_layer/screenshot_18.png
