@@ -163,7 +163,7 @@ die Umkreissuche aktiv ist, ermittelt man z. B. über ``filterParams`` mit dem U
    :linenos:
 
    <?php
-   if(\array_key_exists('adresse', $this->filterParams) {
+   if(\array_key_exists('adresse', $this->filterParams)) {
        // Umleitung Sortierung Geo-Abstand (mit Parameter)...
    } else {
        // Umleitung Sortierung Standardsortierung (ohne Parameter)...
