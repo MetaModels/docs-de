@@ -33,9 +33,9 @@ Allgemeines Vorgehen
 --------------------
 
 Eine Karte besteht in Cowegis aus mehreren Layern (Schichten) die verschiedene Inhalte in der Gesamtansicht Karte
-ausgeben. Grundlegend ist natürlich ein Layer mit den Kartendaten. Da diese Kartendaten aus einzelnen Kacheln (Tiles)
-aufgebaut wird, ist häufig von Kacheln oder Tiles zu lesen. Auf einer Karte können wiederum verschiedene Elemente wie
-Marker, Polygone o. ä. über eigene Layer eingeblendet werden.
+kombinieren. Grundlegend ist natürlich ein Layer mit den Kartendaten. Da diese Kartendaten aus einzelnen Kacheln (Tiles)
+aufgebaut wird, ist häufig von `Kacheln` oder `Tiles` zu lesen. Auf diesem "Karten"-Layer können wiederum verschiedene
+Elemente wie Marker, Polygone o. ä. über eigene Layer eingeblendet werden.
 
 Der Ablauf für die Erstellung einer Karte mit Markern aus MetaModels-Daten ist wie folgt:
 
@@ -78,18 +78,24 @@ auslesen. Die typische URL für OSM ist ``https://tile.openstreetmap.org/{z}/{x}
 die möglichen Konfigurationsparameter für individuelle Einstellungen zur Verfügung.
 
 Eine einfachere Variante ist der Typ "Vorkonfiguriere Karte". Hier können die typischen Kartenprovider wie OSM, MapBox,
-usw. in einem Select ausgewählt werden - die spezifischen Parameter der jeweiligen Provider werden automatisch mit
+usw. in einem Select ausgewählt werden - die spezifischen Parameter der jeweiligen Provider werden hier automatisch mit
 eingebunden.
 
 Karte anlegen und Layer einbinden
 .................................
 
-Im nächsten Schritt wird im Punkt Karten eine neue Karte über "Karte erstellen" angelegt. Hier ist lediglich der Titel
-ein Pflichtfeld. Man sollte aber Koordinaten für eine Zentrierung und einen initialen Zoomfaktor eingeben. Die
-Koordinaten für die Zentrierung lassen sich über eine Adresse ermitteln. Dazu das Kartenpopup über das Karten-Icon
+Im nächsten Schritt wird im Punkt `Karten` eine neue Karte über "Karte erstellen" angelegt. Hier ist lediglich der Titel
+ein Pflichtfeld.
+
+Man kann Koordinaten für eine initiale Zentrierung und Zoomfaktor eingeben. Die Koordinaten für die Zentrierung
+lassen sich über eine Adresse ermitteln. Dazu das Karten-Popup über das Karten-Icon
 |img_map| öffnen, rechts oben bei Suche eine Adresse eingeben und mit Enter bestätigen. Mit Klick auf den Button
 "Anwenden" werden die Koordinaten übernommen. Die weiteren Parameter können zu einem späteren Zeitpunkt eingestellt
 bzw. angepasst werden.
+
+Ist keine initiale Zentrierung angegeben, sollte man sicherstellen, dass die Karte durch andere Einstellungen sich
+entsprechend positioniert. Zum Beispiel kann das erfolgen, wenn man bei den aktivierten Layern (Marker) einer Karte
+die Option "Grenzen anpassen" aktiviert (s.u.).
 
 Nach dem Speichern und Schließen gibt es einen neuen Listeneintrag mit der neuen Karte.
 
@@ -99,19 +105,22 @@ Nach dem Speichern und Schließen gibt es einen neuen Listeneintrag mit der neue
 
 |img_screenshot_17|
 
-Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt bzw. aktiviert. Das grüne Plus-Icon wechselt zu einem
-roten X-Icon |img_delete| und die Icons Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift öffnet die übliche
-Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer standardmäßig eingeblendet
-werden soll oder nicht.
+Mit dem grünen Plus-Icon |img_copy| wird der erstellte Karten-Layer hinzugefügt bzw. aktiviert. Das grüne Plus-Icon
+wechselt zu einem roten X-Icon |img_delete| und die Icons Stift |img_edit| und Karte |img_map| kommen hinzu. Der Stift
+öffnet die übliche Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer standardmäßig
+eingeblendet werden soll oder nicht.
+
+Sollen die Kartengrenzen auf einen Layer wie z. B. einen Marker-Layer reagieren, so ist die Option "Grenzen anpassen"
+zu aktivieren (s.o.).
 
 Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
 Kartendaten im Frontend ausgespielt. Die Anzeige ist aber unterbunden und kann über ein Layer Kontrollelement (s. u.)
 ein- bzw. wieder ausgeblendet werden. Damit kann dem Seitenbesucher die Möglichkeit gegeben werden, aktiv verschiedene
 Layer wie Kartentypen z. B. mit/ohne ÖPNV oder mit/ohne Markern oder Polygonen.
 
-Das Karten-Icon ist also nicht das übliche "Auge-Icon" zur Deaktivierung eines Datensatzes. Um einen Layer zu deaktivieren, muss man stattdessen
-die Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv" deaktivieren oder das roten X-Icon |img_delete|
-in der Listenansicht klicken.
+Das Karten-Icon ist also nicht das übliche "Auge-Icon" zur Deaktivierung eines Datensatzes. Um einen Layer zu
+deaktivieren, muss man stattdessen die Bearbeitungsmaske über den Stift öffnen und über die Checkbox "Aktiv"
+deaktivieren oder das roten X-Icon |img_delete| in der Listenansicht klicken.
 
 |img_screenshot_15|
 
@@ -172,6 +181,7 @@ Marker Layer erstellen
 ......................
 
 Nachdem alle Vorbereitungen in MM erfolgt sind, kann ein entsprechender Layer für die Ausgabe der Marker angelegt werden.
+
 Dazu in Cowegis unter Layer mit "Layer erstellen" einen neuen Layer vom Typ "MetaModels Marker" anlegen. Mit der
 Typauswahl werden die passenden Eingabewidgets in der Maske angezeigt. Im Abschnitt "MetaModel" ist das gewünschte
 Model auszuwählen. Im Abschnitt Koordinaten ist die Auswahl zwischen einem oder mehreren Attributen für die Koordinaten
@@ -283,18 +293,19 @@ der Inhalt des Feldes "Content" wird im Icon ausgegeben z. B. ``#42``.
 |img_screenshot_04|
 
 **Font-Awesome** |br|
-Beim `Typ "Font-Awesome" <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker ausgegeben
-der neben der Größe (iconSize) auch in der Farbe angepasst werden kann. Die Icons von Font-Awesome werden mit der
-Erweiterung Cowegis schon mitgeliefert.
+Beim `Typ "Font-Awesome" <https://github.com/lennardv2/Leaflet.awesome-markers>`_ wird ein Standardmarker inklusive
+einem Icons von Font-Awesome ausgegeben. Der Marker kann neben der Größe (iconSize) auch in der Farbe angepasst werden.
+Die Icons von Font-Awesome werden mit der Erweiterung Cowegis schon mitgeliefert - die Auswahl erfolgt über die
+entsprechende Eingabe des Iconnamens bzw. CSS-Klasse.
 
-In dem Marker kann damit ein Icon aus dem `Font-Awesome` ausgegeben werden - aktuell stehen die Icons aus
+In dem Marker stehen aktuell stehen die Icons aus
 `Font-Awesome Free Version 6 zur Verfügung <https://fontawesome.com/v6/search?ic=free>`_ zur Verfügung
-z. B. "fa-envelope".
+z. B. "`fa-envelope <https://fontawesome.com/icons/envelope?f=classic&s=solid>`_".
 
 |img_screenshot_18|
 
 Dabei ist zu beachten, dass der Iconname bei "Icon-CSS-Klasse" ohne den Präfix z. B. "fa-" eingegeben werden muss - also
-``envelope``. Zudem muss eine Auswahl des passenden Sets aus "Solid, Brand, Regular" des gewünschten Icons erfolgen.
+``envelope``. Zudem muss eine Auswahl des passenden Sets aus "Regular, Solid, Brands" des gewünschten Icons erfolgen.
 
 Die Größe des Markers wird mit der Angabe "Icon-Größe" angepasst und bezieht sich auf den kompletten Div-Container, der
 das SVG für den "Tropfen" als auch für das Font-Awesome-SVG umschliesst. Der Div-Container hat als Standard eine Größe
