@@ -3,7 +3,7 @@
 Filter-by-releated für MetaModels
 =================================
 
-.. warning:: Der Filter-by-releated ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z.Z.
+.. warning:: Der Filter-by-releated ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z. Z.
    3.575,00 € frei geschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
