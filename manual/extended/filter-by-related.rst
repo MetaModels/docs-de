@@ -81,4 +81,4 @@ Ein Dank für die Spenden* für die Erweiterung an:
    <br />
 
 
-.. |img_filterparameter| image:: /_img/screenshots/extended/filter_parent/filterparameter.jpg
+.. |img_filterparameter| image:: /_img/screenshots/extended/filter-by-related/filterparameter.jpg
