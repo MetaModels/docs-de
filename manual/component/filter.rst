@@ -80,9 +80,10 @@ Typen von Filterregeln
   filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben
 * **Levenshtein-gestützte Suche** (attribute_levenshtein): |br|
   erzeugt einen Volltext-Index von ausgewählten Attributen inkl. Ähnlichkeitssuche und Autovervollständigung
-* **Filter-Parent** (filter_parent): |br|
-  ermöglicht Items einer vorhandenen Kind-Tabellen nach Eigenschaften der Elterntabelle zu filtern |br|
-  siehe :ref:`rst_extended_filter_parent`
+* **Filter-by-related** (filter_by_related): |br|
+  ermöglicht Items mit Eigenschaften aus einem verknüpften (Relation) MetaMdel zu filtern; Relationen können per
+  Kindtabelle oder Einzelauswahl (Select) aufgebaut sein |br|
+  siehe :ref:`rst_extended_filter_by_related`
 * **Loupe** (filter_loupe) [ab MM 2.4]: |br|
   erzeugt einen Volltext-Index von ausgewählten Attributen in einer eigenen SQLite-DB - basiert auf
   `Loupe <https://github.com/loupe-php/loupe>`_; mehr dazu bei der :ref:`Filterregel Loupe <rst_extended_loupe>`

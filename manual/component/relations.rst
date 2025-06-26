@@ -142,7 +142,7 @@ Bei der Arbeit mit Kind-Tabellen ist zu beachten, dass "Eltern nicht wissen, das
 Ausgabe im FE gibt es keine automatische Ausgabe der Kinddaten. Man kann die Kinddatensätze eines Elterndatensatzes
 aber anhand der "id-pid-Relation" filtern - z. B. mit Filterregel "Eigenes SQL".
 
-Für die Filterung der Kinddatensätze gibt es weiterhin eine Sonderfilterregel ":ref:`Elternfilter <rst_extended_filter_parent>`.
+Für die Filterung der Kinddatensätze gibt es weiterhin eine Sonderfilterregel ":ref:`Elternfilter <rst_extended_filter_by_related>`.
 Damit können alle Kinddatensätze nach Eigenschaften der Elterndaten gefiltert werden - z. B. "Filtere alle Dienstreisen
 nach Mitarbeitern aus Abteilung Vertrieb".
 
