@@ -1,7 +1,7 @@
 .. _rst_extended_filter_by_related:
 
-Filter-Parent für MetaModels
-============================
+Filter-by-releated für MetaModels
+=================================
 
 .. warning:: Der Filter-by-releated ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z.Z.
    3.575,00 € frei geschaltet. |br|
