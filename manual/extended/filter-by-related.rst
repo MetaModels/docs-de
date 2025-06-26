@@ -3,11 +3,10 @@
 Filter-by-releated für MetaModels
 =================================
 
-.. warning:: Der Filter-by-releated ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z. Z.
+.. note:: Der Filter-by-releated ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z. Z.
    3.575,00 € frei geschaltet. |br|
-   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
-
-.. note:: Die Filterregel "Filter-Parent" ist in dieser Filterregel mit aufgegangen - die Beschränkung der Relation
+   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_  |br|
+   Die Filterregel "Filter-Parent" ist in dieser Filterregel mit aufgegangen - die Beschränkung der Relation
    auf Kindtabellen wurde aufgehoben.
 
 Der Filter-by-releated ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als
