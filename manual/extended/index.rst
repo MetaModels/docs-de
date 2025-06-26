@@ -18,7 +18,7 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     attribute_color
     attribute_mcw
     loupe
-    filter_parent
+    filter-by-related
     notelist
     isotope
     cowegis-layer-marker
