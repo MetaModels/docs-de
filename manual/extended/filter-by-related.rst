@@ -1,15 +1,15 @@
 .. _rst_extended_filter_by_related:
 
-Filter-by-releated für MetaModels
+Filter-by-related für MetaModels
 =================================
 
-.. note:: Der Filter-by-releated ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z. Z.
+.. note:: Der Filter-by-related ist noch im Fundraising und wird erst nach Erreichen der Zielsumme von z. Z.
    3.575,00 € frei geschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_  |br|
    Die Filterregel "Filter-Parent" ist in dieser Filterregel mit aufgegangen - die Beschränkung der Relation
    auf Kindtabellen wurde aufgehoben.
 
-Der Filter-by-releated ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als
+Der Filter-by-related ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als
 Relationen ist eine Einzelauswahl (Select) oder Kindtabelle möglich.
 
 Beispiele: Wir haben Mitarbeiter und Dienstreisen - die Dienstreisen sind als Kindtabelle der Mitarbeiter definiert.
