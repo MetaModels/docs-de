@@ -194,10 +194,13 @@ bearbeiten oder die gesamte Liste löschen - siehe Link.
 Die Daten werden per E-Mail übertragen und können über das E-Mail-Template in der Ausgabe angepasst werden. Für die
 Versendung stehen die Contao-Formularoption oder auch das "Notification Center (NC)" zur Verfügung.
 
-Bei Verwendung des NC kann auch Textausgabe des E-Mail-Renderings in HTML konvertiert werden z. B. die Zeilenumbrüche
-in ``<br>``-Tags.
-
 |img_notelist_email_list|
+
+Bei Verwendung des NC kann auch die Textausgabe des E-Mail-Renderings in HTML über ein eigenes Simple-Token konvertiert
+werden z. B. die Zeilenumbrüche in ``<br>``-Tags. Im
+`NCpro <https://extensions.terminal42.ch/docs/notification-center-pro/de/eigene-tokens/>`_ ist es sehr einfach im
+Backend eigene Token zu definieren - die Twig-Filter ``nl2br`` und ``raw`` helfen bei der Ausgabe.
+
 
 .. _rst_extended_notelist_additional_form:
 Übermittlung zusätzlicher Daten für jedes Item
