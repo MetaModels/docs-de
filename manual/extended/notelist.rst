@@ -142,37 +142,36 @@ gehören, sieht die Liste wie folgt aus:
 Datenanzeige und Übernahme im Formular
 --------------------------------------
 
-Im Formulargenerator steht ein neues Widget `MetaModels note list` zur Verfügung.
-Mit den Einstellungen wird sowohl die Anzeige im Formular als auch in der E-Mail
-gesteuert.
+Im Formulargenerator steht ein neues Widget "MetaModels Merkliste" zur Verfügung. Mit diesem Widget wird sowohl die
+Anzeige der Datensätze einer Merkliste im Formular als auch in der E-Mail gesteuert. Wurden für ein MetaModel mehrere
+Merklisten angelegt, so können auch mehrere ausgegeben werden.
 
-Dazu kann eine oder mehrere Merklisten aktiviert und jeweils eine Render-Einstellung
-für die FE-Ausgabe und die E-Mail-Ausgabe ausgewählt werden. Zusätzlich kann für
-jede Merkliste über die Checkbox "Clear list" bestimmt werden, ob nach der
-Formularverarbeitung die Liste geleert werden soll.
+Die Konfigurationsmöglichkeiten mussten in die möglichen Schnittstellen eines Contao-Widgets eingeschleust werden, so
+dass an mehreren Stellen Auswahlen getroffen werden müssen.
+
+In dem Bereich "Template-Einstellungen" gibt es jeweils für die Ausgabe im Formular (Formularfeld-Template) als auch
+in der E-Mail (E-Mail-Template) ein Template, welches als "Wrapper" die Ausgabeliste umschließt. In den Templates
+werden in einer Schleife alle Merklisten mit Ausgabe des Namens und darin alle Datensätze ausgegeben (siehe Bereich
+"Feldkonfiguration"). Zu beachten ist, dass das Template für das Formular ``form_metamodels_notelist.html5`` noch ein
+"altes" Template ist - hingegen für die E-Mail schon ein Twig-Template ``email_metamodels_notelist.text.html.twig``.
+
+Im Bereich "Feldkonfiguration" kann ausgewählt werden, welche Merkliste bzw. Merklisten ausgegeben werden sollen. Für
+die Listenausgabe im Formular als auch in der E-Mail müssen entsprechende Rendereinstellungen angelegt sein, welche
+die gewünschten Attribute ausgeben. Zusätzlich kann für jede Merkliste über die Checkbox "Liste leeren" bestimmt werden,
+ob nach der Formularverarbeitung die Liste geleert werden soll.
 
 |img_nodelist_form_widget|
 
-Für die unterschiedlichen Ausgabebereiche gibt es entsprechende Templates, die ineinander verschachtelt sind.
+Bei den Rendereinstellungen ist zu beachten, dass für die Ausgabe in einer E-Mail aktuell nur das Textformat unterstützt
+wird. Als Vorlage für die Rendereinstellungen stehen mit der Erweiterung die Dateien
+``metamodel_prerendered_notelists_form.html5`` und ``metamodel_prerendered_notelists_form.text`` zur Verfügung.
 
-Für die Ausgabe der Merkliste im Formularwidget bildet das Template in "Formularfeld-Template"
-``form_metamodels_notelist.html5`` den Wrapper für alle auszugebenden Merklisten und gibt je Liste den Namen und alle Items
-aus. Die Liste der Items wird über die Auswahl in "Form rendersettings" gesteuert - über das Rendersetting ist das
-übliche MM-Listentemplate (``metamodels_prerendered.html5``) eingebunden.
-
-Analog erfolgt die Ausgabe für die E-Mail. Das Wrapper-Template für alle auszugebenden Merklisten kann in "Email template"
-ausgewählt werden ``email_metamodels_notelist.text.html.twig``. Die Liste der Items wird über die Auswahl in
-"Email rendersettings" gesteuert - über das Rendersetting ist das übliche MM-Listentemplate eingebunden - aber hier wird
-die Text-Variante verwendet - also ``metamodels_prerendered.text``.
-
-Als Vorlage für die Rendersettings stehen mit der Erweiterung die Dateien ``metamodel_prerendered_notelists_form.html5``
-und ``metamodel_prerendered_notelists_form.text`` zur Verfügung. Mit den Templates werden auch automatisch die Daten mit
-ausgegeben, die zusätzlichen jedem Datensatz der Merkliste mitgegeben werden können (Payload). Das ist über ein
-:ref:`"Mini"-Formular <rst_extended_notelist_additional_form>` oder :ref:`Event-Listener <rst_extended_notelist_additional_events>`
-möglich.
+Mit denTemplates werden auch automatisch die Daten mit ausgegeben, die zusätzlichen jedem Datensatz der Merkliste
+mitgegeben werden können (Payload). Das ist über ein :ref:`"Mini"-Formular <rst_extended_notelist_additional_form>`
+oder :ref:`Event-Listener <rst_extended_notelist_additional_events>` möglich.
 
 In den Listentemplates ist neben den üblichen Knoten ``raw`` ``text`` auch ``notelists_names`` als Liste der
-Notelist-Namen vorhanden.
+Merklisten-Namen vorhanden.
 
 Der Payload wird über die Knoten ``notelists_payload_values`` ``notelists_payload_labels`` übermittelt.
 
@@ -182,8 +181,8 @@ vorhandenen Templates können wie üblich mit eigenen Varianten überschrieben w
 .. note:: Eine Bearbeitung z. B. Löschen der Elemente der Merkliste ist im Formular nicht möglich, da bei einem Reload
    der Seite die schon im Formular eingegebene Daten verloren gehen würden.
 
-Man kann vor der Ausgabe des Formulars eine Liste mit allen Elementen der Merkliste
-ausgeben und dort diese einzeln bearbeiten oder die gesamte Liste löschen - siehe Link.
+Man kann vor der Ausgabe des Formulars eine Liste mit allen Elementen der Merkliste ausgeben und dort diese einzeln
+bearbeiten oder die gesamte Liste löschen - siehe Link.
 
 .. code-block:: html
    :linenos:
@@ -192,9 +191,11 @@ ausgeben und dort diese einzeln bearbeiten oder die gesamte Liste löschen - sie
 
 |img_nodelist_form_fe_list_edit_items|
 
-Die Daten werden per E-Mail übertragen und können über das E-Mail-Template in der Ausgabe
-angepasst werden. Für die Versendung stehen die Contao-Formularoption oder auch das
-"Notification Center (NC)" zur Verfügung.
+Die Daten werden per E-Mail übertragen und können über das E-Mail-Template in der Ausgabe angepasst werden. Für die
+Versendung stehen die Contao-Formularoption oder auch das "Notification Center (NC)" zur Verfügung.
+
+Bei Verwendung des NC kann auch Textausgabe des E-Mail-Renderings in HTML konvertiert werden z. B. die Zeilenumbrüche
+in ``<br>``-Tags.
 
 |img_notelist_email_list|
 
