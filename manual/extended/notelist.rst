@@ -312,7 +312,7 @@ Known Issues and Next Features
 ------------------------------
 
 * Seite(n) mit Merkliste/Notelist dürfen nicht gecached werden
-* Datenübergabe an Formular als HTML (z.Z. nur als Text möglich) - Workaround mit Notification Center möglich
+* Datenübergabe an Formular nur als Text möglich - for HTML-Ausgabe Workaround mit Notification Center möglich
 * in Contao ab 4.9 können die Templates mit den Extensions ``.text`` und ``.twig`` nicht mehr im Bereich Templates
   erzeugt werden, da Contao das nicht mehr unterstützt - die Dateien per SSH/SFTP oder Lokal anlegen
 
