@@ -39,7 +39,7 @@ Voraussetzungen für die Installation:
 
 **Contao 5.3:**
 
-.. warning:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
+.. note:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
    Fundrasingsumme von 4.350€ frei geschaltet. |br|
    Für einen Zugang bitte eine E-Mail an info@e-spin.de
 
