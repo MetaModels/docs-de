@@ -46,7 +46,7 @@ Voraussetzungen für die Installation:
 * ^PHP 8.2
 * MetaModels 2.4
 * Notelist 2.4
-* optional Notification Center 2.3
+* optional Notification Center 2.3 oder NCPro
 * Zugang zum geschützten Repository - Daten nach Spende
 
 **Contao 4.13:**
