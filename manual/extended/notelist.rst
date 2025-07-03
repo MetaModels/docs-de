@@ -324,7 +324,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 **Version 2.4:**
 
-* noch keine
+* `dpmed GmbH <https://www.dpmed.de>`_
 
 
 **Version 2.0 bis 2.3:**
