@@ -324,7 +324,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 **Version 2.4:**
 
-* `dpmed GmbH <https://www.dpmed.de>`_
+* `dpmed GmbH <https://www.dpmed.de>`_: 350 €
 
 
 **Version 2.0 bis 2.3:**
