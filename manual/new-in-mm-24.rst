@@ -41,6 +41,7 @@ Attribute
 
 * Checkbox
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
+    * Template ``mm_attr_checkbox_icon.html5`` für Anzeige im Backend als &#9745; bzw. &#9744;
 * Cowegis Marker (NEU)
     * Auswahl von Markern in Cowegis zur Anzeige auf einer Karte -
       :ref:`siehe "Cowegis-Layer Integration für Marker" <extended_cowegis-layer-marker>`
@@ -60,6 +61,7 @@ Attribute
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Übersetzte Checkbox
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
+    * Template ``mm_attr_translatedcheckbox_icon.html5`` für Anzeige im Backend als &#9745; bzw. &#9744;
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
 * Übersetzter Inhalt eines Artikels
@@ -73,6 +75,16 @@ Attribute
 Filter
 ------
 
+* Filter-by-related
+    * :ref:`ersetzt den Filter "Filter-Parent" <rst_extended_filter_by_related>`
+    * die Filterregel ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als
+      Relationen ist eine Einzelauswahl (Select) oder Kindtabelle möglich.
+* Wert von/bis für ein Attribut (from-to)
+    * Min- und Max-Werte stehen im Template als ``optionsMin`` und ``optionsMax`` zur Verfügung
+    * neues Template mit Typ ``date`` als ``mm_filteritem_datepicker.html5``
+* Wert von/bis für zwei Attribute (range)
+    * Min- und Max-Werte stehen im Template als ``optionsMin`` und ``optionsMax`` zur Verfügung
+    * neues Template mit Typ ``date`` als ``mm_filteritem_datepicker.html5``
 * Volltextsuche mit "Loupe"
     * Mit der neuen Filterregel wird ein Index über ausgewählte Attribute erstellt, über den anschließend gesucht
       werden kann - siehe :ref:`Loupe <rst_extended_loupe>`
