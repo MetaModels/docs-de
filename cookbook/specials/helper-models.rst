@@ -47,7 +47,7 @@ wäre das:
 |img_helper-models_02|
 
 Neben dieser Variante mit zwei Tabellen ist es auch möglich, mit einer Tabelle zu arbeiten z. B. mit den Optionen
-Varianten oder Render-Modus "Hierarchie" - die Filtereinstellungen müssen dann entsprechend angepasst werden.
+"Varianten" oder Render-Modus "Hierarchie" - die Filtereinstellungen müssen dann entsprechend angepasst werden.
 
 
 .. |img_helper-models_01| image:: /_img/screenshots/cookbook/specials/helper-models_01.png
