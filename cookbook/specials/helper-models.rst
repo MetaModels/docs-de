@@ -51,4 +51,4 @@ Neben dieser Variante mit zwei Tabellen ist es auch möglich, mit einer Tabelle 
 
 
 .. |img_helper-models_01| image:: /_img/screenshots/cookbook/specials/helper-models_01.png
-.. |img_helper-models_02| image:: /_img/screenshots/cookbook/specials/helper-models_02png
+.. |img_helper-models_02| image:: /_img/screenshots/cookbook/specials/helper-models_02.png
