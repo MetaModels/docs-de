@@ -15,7 +15,7 @@ gepflegt werden und in der Eingabemaske über eine Filterung nur die passenden W
 
 Nachteil dieser Variante ist aber, dass man bei Anpassungen unflexibel ist und ggf. einzelne Wertebereiche wieder in
 ein separates Model überführen muss. Zum Beispiel, wenn zu einem späteren Zeitpunkt die Einträge "Rabatte" neben der
-bezeichnung auch noch numerischen Rabattwert bekommen sollen.
+Bezeichnung auch noch numerischen Rabattwert bekommen sollen.
 
 Ein Beispiel für einen möglichen Aufbau ist wie folgt: Man erstellt zwei MetaModel - eins für die Bezeichnungen der
 Bezeichnungsgruppen z. B. "Taxo-Gruppen" und ein MetaModel für die Bezeichnungswerte z. B. "Taxo-Werte". In dem Model,
@@ -51,4 +51,4 @@ Varianten oder Render-Modus "Hierarchie" - die Filtereinstellungen müssen dann 
 
 
 .. |img_helper-models_01| image:: /_img/screenshots/cookbook/specials/helper-models_01.png
-.. |img_helper-models_02| image:: /_img/screenshots/cookbook/specials/helper-2png
+.. |img_helper-models_02| image:: /_img/screenshots/cookbook/specials/helper-models_02png
