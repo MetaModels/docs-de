@@ -391,6 +391,16 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 |img_screenshot_11|
 
 
+Spenden
+-------
+
+Ein Dank für die Spenden* für die Erweiterung an:
+
+* `AntwortInternet <https://www.antwortinternet.com/>`_: 200 €
+
+(*Spenden in Netto)
+
+
 .. |br| raw:: html
 
    <br />
