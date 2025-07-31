@@ -165,7 +165,7 @@ Filter
      und Anpassung an neues Routing - siehe :ref:`rst_cookbook_filter_custom-sql`
    * es gib die Möglichkeit, die Ausführung auf bestimmte Umgebungen wie Frontend einzugrenzen
 * Einfache Abfrage
-    * ist die Option "Statischer Parameter" gesetzt, kann in CE-/Modul-Liste für die Filterregel ein Wert ausgewählt
+    * ist die Option "Statischer Parameter" gesetzt, kann in CE-/Modul-MM-Liste für die Filterregel ein Wert ausgewählt
       werden - neu ist die Option "ohne Datenwert [null]", wenn keine Auswahl - auch kein Leerstring - gesetzt werden
       soll
 * Einzelauswahl [select]
@@ -261,6 +261,8 @@ im Blick behalten werden:
 * bei aktivierter Option "Variant" des Models wird bei Attributen per Migration eine Prüfung auf nicht unterstützte
   Kombination Variant und Unique vorgenommen -
   `siehe News Januar 2025 <https://now.metamodel.me/de/mm-eap-newsletter-2-3/details/eap-info-mm-2-3-januar-i-2025>`_
+* bei MM-Liste und Preset über "Einfache Abfrage" mit "Statischem Parameter" neue Einstellung "- ohne Datenwert [null] -"
+  beachten
 
 
 Re-Finanzierung

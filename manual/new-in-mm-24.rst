@@ -75,6 +75,9 @@ Attribute
 Filter
 ------
 
+* Einfache Abfrage
+    * ist die Option "Statischer Parameter" gesetzt, kann neben dem CE-/Modul MM-Liste auch in MM-Filter für die
+      Filterregel ein Wert als Preset ausgewählt werden - siehe `Ticket #345 <https://github.com/MetaModels/core/issues/345>`_
 * Filter-by-related
     * :ref:`ersetzt den Filter "Filter-Parent" <rst_extended_filter_by_related>`
     * die Filterregel ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als

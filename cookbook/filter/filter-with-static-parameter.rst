@@ -19,6 +19,9 @@ In diesem wären in unserem Beispielfall alle Abteilungen aufgeführt und man ka
 
 |img_static-parameter.png|
 
+Bei der Auswahl "Filterwert für Attribute *" stehen neben den Attributswerten auch die Einstellung "-" für einen
+Leerstring und "- ohne Datenwert [null] -" für den DB-Wert "NULL" zur Verfügung.
+
 Es ist auch möglich, mehrere "Einfache Abfrage"-Regeln einzusetzen, wenn z. B. zwei Abteilungen ausgewählt werden können
 oder eine Abteilung sowie noch eine weitere Kategorisierung.
 
