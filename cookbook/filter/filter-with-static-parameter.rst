@@ -1,7 +1,7 @@
 .. _rst_cookbook_filter_filter-with-static-parameter:
 
-Eingrenzung der Items in CE-/FE-Modul MM-Liste
-==============================================
+Eingrenzung der Items in CE-/FE-Modul MM-Liste und MM-Filter
+============================================================
 
 Die Ausgabe einer MM-Liste kann man über einen Filter steuern - zum Beispiel wenn man eine Liste von Mitarbeitern hat,
 die nach der Abteilung gefiltert ausgegeben werden sollen.
