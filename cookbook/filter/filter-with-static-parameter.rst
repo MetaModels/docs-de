@@ -19,10 +19,19 @@ In diesem wären in unserem Beispielfall alle Abteilungen aufgeführt und man ka
 
 |img_static-parameter.png|
 
-Es ist auch möglich, mehrere "Einfache Abfrage"-Regeln einzusetzen.
+Es ist auch möglich, mehrere "Einfache Abfrage"-Regeln einzusetzen, wenn z. B. zwei Abteilungen ausgewählt werden können
+oder eine Abteilung sowie noch eine weitere Kategorisierung.
 
 Als Alternative kann man für Redakteure auch ein
 :ref:`entsprechendes vordefiniertes Contentelement <rst_cookbook_specials_ce_element_for_editors>` zur Verfügung stellen.
+
+.. note:: Ab Version 2.4 ist die Einstellung auch beim MM-Filter möglich.
+
+Beim Contentelement sowie das FE-Modul MM-Filter kann nun wie MM-Liste mit einem Preset versehen werden. Ist eine
+Filterregel "Einfache Abfrage" mit der Option "Statischer Parameter" gesetzt, so erscheinen die Auswahlmöglichkeiten
+für "Filtereinstellungen überschreiben" auch hier und grenzt die übrigen Filterwerte entsprechend ein, sofern bei denen
+die Option "Nur verbleibende Werte" gesetzt wurde.
+
 
 
 .. |img_static-parameter.png| image:: /_img/screenshots/cookbook/filter/static-parameter.png
