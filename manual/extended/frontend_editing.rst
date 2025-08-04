@@ -222,6 +222,8 @@ Möchte man einen "Deeplink" für eine Bearbeitung inkl. Sprachenauswahl setzen,
 ``domain.com/en/fee-processing?act=edit&id=mm_employees_trans%::42&__setlng=de``- der Parameter wird nach einem Reload
 automatisch entfernt.
 
+|img_fee-multilanguage|
+
 
 Einstellen der Zugangsberechtigung für die Bearbeitung
 ------------------------------------------------------
@@ -423,6 +425,8 @@ Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
 
 .. |img_fee-own-headline| image:: /_img/screenshots/extended/frontend_editing/fee-own-headline.png
 .. |img_fee-own-headline2| image:: /_img/screenshots/extended/frontend_editing/fee-own-headline2.png
+
+.. |img_fee-multilanguage| image:: /_img/screenshots/extended/frontend_editing/fee-multilanguage.png
 
 .. |img_fee-rights-at-inputmask| image:: /_img/screenshots/extended/frontend_editing/fee-rights-at-inputmask.png
 .. |img_fee-member-filterrule| image:: /_img/screenshots/extended/frontend_editing/fee-member-filterrule.png
