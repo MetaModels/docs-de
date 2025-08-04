@@ -33,7 +33,6 @@ der Freigabe ist im folgenden Ticket auf Github zusammengefasst: `FEE Issue #15 
 
 Folgende Model-Typen werden aktuell noch nicht unterstützt:
 
-* Mehrsprachige Model (`#21 <https://github.com/MetaModels/contao-frontend-editing/issues/21>`_)
 * Model mit Varianten (`#20 <https://github.com/MetaModels/contao-frontend-editing/issues/20>`_)
 * Kindtabellen (`#19 <https://github.com/MetaModels/contao-frontend-editing/issues/19>`_)
 * Model mit Hierarchie (`#18 <https://github.com/MetaModels/contao-frontend-editing/issues/18>`_)
@@ -204,6 +203,24 @@ Einstellung im BE: |br|
 
 Ausgabe im FE: |br|
 |img_fee-own-headline2|
+
+
+.. _extended_frontend_editing_multilanguage:
+Mehrsprachigkeit
+----------------
+
+.. note:: Das Feature steht ab MM 2.4 zur Verfügung.
+
+Bei mehrsprachigen MetaModels wird in der Eingabemaske im Frontend ein Sprachenwechsler wie im Backend ausgegeben. Man
+kann den Sprachenwechsler über das Template ``dcfe_general_edit.html5`` anpassen.
+
+Es ist zu beachten, dass wie im Backend beim Erstellen eines neuen Datensatzes immer erst die Fallbacksprache
+ausgefüllt werden muss - die Eingabemaske springt automatisch auf die entsprechende Sprache.
+
+Möchte man einen "Deeplink" für eine Bearbeitung inkl. Sprachenauswahl setzen, so kann man den GET-Parameter
+``__setlng`` mit entsprechendem Sprachenkürzel verwenden z. B.
+``domain.com/en/fee-processing?act=edit&id=mm_employees_trans%::42&__setlng=de``- der Parameter wird nach einem Reload
+automatisch entfernt.
 
 
 Einstellen der Zugangsberechtigung für die Bearbeitung

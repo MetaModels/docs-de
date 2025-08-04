@@ -103,6 +103,8 @@ Frontend-Editing (FEE)
   einer Umstellung beim Attribut muss das aber entsprechend beim Upload auch umgestellt werden
 * die Anpassung des Zielverzeichnisses oder Dateinamen mit dem Insert-Tag ``{{post::*}}`` ist nicht mehr möglich, da diese
   in Contao 5 nicht mehr vorhanden ist
+* Unterstützung von mehrsprachigen MetaModels - in der FE-Maske gib es einen Sprachenwechsler wie im BE; siehe
+  :ref:`FEE <extended_frontend_editing_multilanguage>`
 
 
 Known-Issues
