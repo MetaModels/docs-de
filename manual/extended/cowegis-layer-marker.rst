@@ -11,6 +11,7 @@ mit einsprachigen als auch mit mehrsprachigen MetaModels zusammen.
 .. note:: Diese Erweiterung steht ab MM 2.4 mit Contao 5.3 zur Verfügung - für eine Freischaltung bitte
    eine E-Mail an mail@metamodel.me senden.
 
+
 Installation
 ------------
 
@@ -389,6 +390,17 @@ nach der `Anzahl der enthaltenen Elemente <https://github.com/Leaflet/Leaflet.ma
 Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu sehen ist.
 
 |img_screenshot_11|
+
+
+Umbau von Leaflet-Maps Integration
+----------------------------------
+
+Wer von :ref:`Leaflet-Maps Integration <rst_extended_leaflet>` auf Cowegis-Layer umstellt, sollte folgende Punkte
+beachten:
+
+* für Lat-/Long-Werte sind bei Einzelangabe als Attributstyp nur noch Dezimal zugelassen (s. o. "MetaModels Daten
+  erstellen") - wer vorher die Werte in Attributstyp Text gespeichert hatte, muss
+  :ref:`diesen Typ anpassen <rst_cookbook_tips_change_table_column_name>`
 
 
 Spenden
