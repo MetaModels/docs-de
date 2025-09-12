@@ -14,11 +14,11 @@ Folgend ist eine Übersicht, mit welchen Attributen die gewünschten Daten gespe
 Text
 ----
 
-+--------------+--------------+---------------+---------------+-----------------+---------------+
-| **Datentyp** | **Attribut** | **Paketname** | **Bemerkung** | **Filterregel** | **Bemerkung** |
-+==============+==============+===============+===============+=================+===============+
-| Kurze Texte | Text | `attribute_text <https://github.com/MetaModels/attribute_text>`_ | Textsuche |br| Einzelauswahl |br| Mehrfachauswahl |br| Einfache Abfrage |br| Register |br| Levenshtein |br| Loupe | bis 255 Zeichen |br| Anzahl des Attributes druch DB limitiert |
-+--------------+--------------+---------------+---------------+-----------------+---------------+
+.. csv-table::
+   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
+   :widths: 10, 10, 10, 10, 10
+
+    "Kurze Texte", "Text", `attribute_text <https://github.com/MetaModels/attribute_text>`_, "Textsuche, Einzelauswahl, Mehrfachauswahl, Einfache Abfrage, Register, Levenshtein, Loupe", "bis 255 Zeichen; Anzahl des Attributes durch DB limitiert"
 
 
 .. |br| raw:: html
