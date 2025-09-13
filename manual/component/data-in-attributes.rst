@@ -60,9 +60,9 @@ Boolescher Wert
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
    :widths: 10, 10, 10, 10, 10
 
-    "Boolescher Wert", "Checkbox", `attribute_checkbox <https://github.com/MetaModels/attribute_checkbox>`_, "Checkbox-Status", ""
+    "Boolescher Wert", "Checkbox", `attribute_checkbox <https://github.com/MetaModels/attribute_checkbox>`_, "Checkbox-Status", "Anzeige in BE-Liste als Toogle-Icon möglich"
     "Mehrsprachig"
-    "Boolescher Wert mehrsprachig", "Übersetzte Checkbox", `attribute_translatedcheckbox <https://github.com/MetaModels/attribute_translatedcheckbox>`_, "Übersetzter Checkbox-Status", ""
+    "Boolescher Wert mehrsprachig", "Übersetzte Checkbox", `attribute_translatedcheckbox <https://github.com/MetaModels/attribute_translatedcheckbox>`_, "Übersetzter Checkbox-Status", "siehe Checkbox"
 
 
 Relationen
