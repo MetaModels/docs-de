@@ -36,6 +36,18 @@ Zahlen
     "Datum oder Zeit", "Datum", `attribute_timestamp <https://github.com/MetaModels/attribute_timestamp>`_, "Wert von/bis für ein Datumsattribut, |br| Wert von/bis für zwei Datumsattribute", "Speicherung als UNIX-Zeitstempel; |br| Eingabe kann auf nur Datum oder nur |br| Zeit eingegrenzt werden"
     "Geokoordinaten", "siehe Dezimal", , "Umkreissuche", "für Latitude und Longitude jeweils |br| ein Attribut anlegen"
 
+Dateien
+-------
+
+.. csv-table::
+   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
+   :widths: 10, 10, 10, 10, 10
+
+    "Datei", "Datei", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von Bildern ist Bildgröße wählbar"
+    "Mehrsprachig"
+    "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "siehe Datei"
+
+
 Relationen
 ----------
 
