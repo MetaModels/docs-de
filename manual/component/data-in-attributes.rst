@@ -95,9 +95,12 @@ Weitere Daten
     "Sprachenkürzel", "Sprachenschlüssel", `attribute_langcode <https://github.com/MetaModels/attribute_langcode>`_, , "mögliche Sprachen eingrenzbar"
     "Geo-Entfernung", "Geo-Entfernung", `attribute_geodistance <https://github.com/MetaModels/attribute_geodistance>`_, , "Zusatzangabe für Umkreissuche"
     "Sterne-Bewertung", "Bewertung", `attribute_rating <https://github.com/MetaModels/attribute_rating>`_, , "Anzahl der Sterne wählbar"
-    "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`siehe Attribut für Multi-Column-Wizard<rst_extended_attribute_mcw>`"
+    "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
+    "Pin für Cowegis-Map", "Cowegis-Marker", `cowegis-layer <https://github.com/MetaModels/cowegis-layer>`_, , ":ref:`siehe Cowegis-Layer Integration für Marker <extended_cowegis-layer-marker>`"
     "Mehrsprachig"
     "Inhaltselemente mehrsprachig", "Übersetzter Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
+    "MCW-Tabelle mehrsprachig", "Übersetzte Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "siehe Tabelle multi (MCW)"
+
 
 
 
