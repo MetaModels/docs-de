@@ -28,9 +28,9 @@ Texte
     "Kurze Texte mehrsprachig", "Übersetzter Text", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "bis 255 Zeichen"
     "Lange Texte mehrsprachig", "Übersetzter Langtext", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "siehe Langtext"
     "Text als Alias mehrsprachig", "Übersetzter Alias", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "siehe Alias"
-    "Kombinierte Werte mehrsprachig", "Übersetzte Kombinierte Einträge", `attribute_translatedcombinedvalues <https://github.com/MetaModels/attribute_translatedcombinedvalues>`_, "siehe Kombinierte Einträge", "siehe Kombinierte Einträge"
-    "Text als Tabelle mehrsprachig", "Übersetzte Text-Tabelle", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", "siehe Text-Tabelle"
-    "Text als URL mehrsprachig", "Übersetzte URL", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", "siehe URL"
+    "Kombinierte |br| Werte mehrsprachig", "Übersetzte |br| Kombinierte Einträge", `attribute_translatedcombinedvalues <https://github.com/MetaModels/attribute_translatedcombinedvalues>`_, "siehe |br| Kombinierte Einträge", "siehe Kombinierte Einträge"
+    "Text als |br| Tabelle mehrsprachig", "Übersetzte |br| Text-Tabelle", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", "siehe Text-Tabelle"
+    "Text als |br| URL mehrsprachig", "Übersetzte URL", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", "siehe URL"
 
 Zahlen
 ------
@@ -100,8 +100,6 @@ Weitere Daten
     "Mehrsprachig"
     "Inhaltselemente mehrsprachig", "Übersetzter Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
     "MCW-Tabelle mehrsprachig", "Übersetzte Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "siehe Tabelle multi (MCW)"
-
-
 
 
 .. |br| raw:: html
