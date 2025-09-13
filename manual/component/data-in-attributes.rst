@@ -31,10 +31,10 @@ Zahlen
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
    :widths: 10, 10, 10, 10, 10
 
-    "Ganzzahlige Werte", "Numerisch", `attribute_numeric <https://github.com/MetaModels/attribute_numeric>`_, "Wert von/bis für ein Attribut, |br| Wert von/bis für zwei Attribute", "für PLZ oder Telefonnummern Attribut Text verwenden"
+    "Ganzzahlige Werte", "Numerisch", `attribute_numeric <https://github.com/MetaModels/attribute_numeric>`_, "Wert von/bis für ein Attribut, |br| Wert von/bis für zwei Attribute", "für PLZ oder Telefonnummern Attribut |br| Text verwenden"
     "Dezimalzahlen", "Dezimal", `attribute_decimal <https://github.com/MetaModels/attribute_decimal>`_, "Wert von/bis für ein Attribut, |br| Wert von/bis für zwei Attribute", "Eingabe mit Punkt als Dezimaltrenner"
-    "Datum oder Zeit", "Datum", `attribute_timestamp <https://github.com/MetaModels/attribute_timestamp>`_, "Wert von/bis für ein Datumsattribut, |br| Wert von/bis für zwei Datumsattribute", "Speicherung als UNIX-Zeitstempel; |br| Eingabe kann auf nur Datum oder nur Zeit eingegrenzt werden"
-    "Geokoordinaten", "siehe Dezimal", , "Umkreissuche", "für Latitude und Longitude jeweils ein Attribut anlegen"
+    "Datum oder Zeit", "Datum", `attribute_timestamp <https://github.com/MetaModels/attribute_timestamp>`_, "Wert von/bis für ein Datumsattribut, |br| Wert von/bis für zwei Datumsattribute", "Speicherung als UNIX-Zeitstempel; |br| Eingabe kann auf nur Datum oder nur |br| Zeit eingegrenzt werden"
+    "Geokoordinaten", "siehe Dezimal", , "Umkreissuche", "für Latitude und Longitude jeweils |br| ein Attribut anlegen"
 
 
 
