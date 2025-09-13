@@ -53,6 +53,17 @@ Dateien
     "Mehrsprachig"
     "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "siehe Datei"
 
+Boolescher Wert
+------
+
+.. csv-table::
+   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
+   :widths: 10, 10, 10, 10, 10
+
+    "Boolescher Wert", "Checkbox", `attribute_checkbox <https://github.com/MetaModels/attribute_checkbox>`_, "Checkbox-Status", ""
+    "Mehrsprachig"
+    "Boolescher Wert mehrsprachig", "Übersetzte Checkbox", `attribute_translatedcheckbox <https://github.com/MetaModels/attribute_translatedcheckbox>`_, "Übersetzter Checkbox-Status", ""
+
 
 Relationen
 ----------
