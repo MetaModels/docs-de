@@ -98,8 +98,8 @@ Weitere Daten
     "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
     "Pin für Cowegis-Map", "Cowegis-Marker", `cowegis-layer <https://github.com/MetaModels/cowegis-layer>`_, , ":ref:`siehe Cowegis-Layer Integration für Marker <extended_cowegis-layer-marker>`"
     "Mehrsprachig"
-    "Inhaltselemente mehrsprachig", "Übersetzter Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
-    "MCW-Tabelle mehrsprachig", "Übersetzte Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "siehe Tabelle multi (MCW)"
+    "Inhaltselemente |br| mehrsprachig", "Übersetzter |br| Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
+    "MCW-Tabelle |br| mehrsprachig", "Übersetzte |br| Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "siehe Tabelle multi (MCW)"
 
 
 .. |br| raw:: html
