@@ -21,12 +21,14 @@ Texte
     "Kurze Texte", "Text", `attribute_text <https://github.com/MetaModels/attribute_text>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Anzahl des Attributes durch |br| DB limitiert"
     "Lange Texte", "Langtext", `attribute_longtext <https://github.com/MetaModels/attribute_longtext>`_, "Textsuche, |br| Levenshtein, |br| Loupe", "bis 65535 Zeichen; |br| :ref:`anpassbar <rst_cookbook_inputmask_manipulate-select-values>`"
     "Text als Alias", "Alias", `attribute_alias <https://github.com/MetaModels/attribute_alias>`_, "Textsuche, |br| Einfache Abfrage, |br| Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Generierung aus ein |br| ein oder mehreren Attributen"
+    "Kombinierte Werte", "Kombinierte Einträge", `attribute_combinedvalues <https://github.com/MetaModels/attribute_combinedvalues>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Ergebnisstring per sprintf definierbar"
     "Text als Tabelle", "Text-Tabelle", `attribute_tabletext <https://github.com/MetaModels/attribute_tabletext>`_, "Levenshtein, |br| Loupe", "bis 255 Zeichen je Zelle"
     "Text als URL", "URL", `attribute_url <https://github.com/MetaModels/attribute_url>`_, "Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Anzahl Zeichen für Titel und URL"
     "Mehrsprachig"
     "Kurze Texte mehrsprachig", "Übersetzter Text", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "bis 255 Zeichen"
     "Lange Texte mehrsprachig", "Übersetzter Langtext", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "siehe Langtext"
     "Text als Alias mehrsprachig", "Übersetzter Alias", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "siehe Alias"
+    "Kombinierte Werte mehrsprachig", "Übersetzte Kombinierte Einträge", `attribute_translatedcombinedvalues <https://github.com/MetaModels/attribute_translatedcombinedvalues>`_, "siehe Kombinierte Einträge", "siehe Kombinierte Einträge"
     "Text als Tabelle mehrsprachig", "Übersetzte Text-Tabelle", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", "siehe Text-Tabelle"
     "Text als URL mehrsprachig", "Übersetzte URL", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", "siehe URL"
 
@@ -86,6 +88,16 @@ Weitere Daten
 .. csv-table::
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
    :widths: 10, 10, 10, 10, 10
+
+    "Farbwert", "Farbwähler", `attribute_color <https://github.com/MetaModels/attribute_color>`_, , "Opacity/Transparency auch wählbar; |br| Sortierung nach Farbe möglich; |br| :ref:`siehe Attribut Color <rst_extended_attribute_color>`"
+    "Inhaltselemente", "Inhalt eines Artikels", `attribute_contentarticle <https://github.com/MetaModels/attribute_contentarticle>`_, , "mehrere Inhaltselemente wie beim Artikel"
+    "Ländernamen", "Land", `attribute_country <https://github.com/MetaModels/attribute_country>`_, , "mögliche Länder eingrenzbar"
+    "Sprachenkürzel", "Sprachenschlüssel", `attribute_langcode <https://github.com/MetaModels/attribute_langcode>`_, , "mögliche Sprachen eingrenzbar"
+    "Geo-Entfernung", "Geo-Entfernung", `attribute_geodistance <https://github.com/MetaModels/attribute_geodistance>`_, , "Zusatzangabe für Umkreissuche"
+    "Sterne-Bewertung", "Bewertung", `attribute_rating <https://github.com/MetaModels/attribute_rating>`_, , "Anzahl der Sterne wählbar"
+    "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`siehe Attribut für Multi-Column-Wizard<rst_extended_attribute_mcw>`"
+    "Mehrsprachig"
+    "Inhaltselemente mehrsprachig", "Übersetzter Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
 
 
 
