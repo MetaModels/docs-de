@@ -9,7 +9,7 @@ realen Daten wie z. B. Texte, Zahlen, Datum, PLZ usw. abspeichern kann. Datei si
 (MySQL/MariaDB) als auch die Eingabemöglichkeiten über die Widgets von Contao zu beachten.
 
 Folgend ist eine Übersicht, mit welchen Attributen die gewünschten Daten gespeichert werden können. Zusätzlich ist bei
-"Filterregeln" angegeben, welche Filterregeln für die Filterung/Suche im Frontend verwendet werden können.
+"Filterregel" angegeben, welche Filterregeln für die Filterung/Suche im Frontend verwendet werden können.
 
 Text
 ----
@@ -35,6 +35,19 @@ Zahlen
     "Dezimalzahlen", "Dezimal", `attribute_decimal <https://github.com/MetaModels/attribute_decimal>`_, "Wert von/bis für ein Attribut, |br| Wert von/bis für zwei Attribute", "Eingabe mit Punkt als Dezimaltrenner"
     "Datum oder Zeit", "Datum", `attribute_timestamp <https://github.com/MetaModels/attribute_timestamp>`_, "Wert von/bis für ein Datumsattribut, |br| Wert von/bis für zwei Datumsattribute", "Speicherung als UNIX-Zeitstempel; |br| Eingabe kann auf nur Datum oder nur |br| Zeit eingegrenzt werden"
     "Geokoordinaten", "siehe Dezimal", , "Umkreissuche", "für Latitude und Longitude jeweils |br| ein Attribut anlegen"
+
+Relationen
+----------
+
+.. csv-table::
+   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
+   :widths: 10, 10, 10, 10, 10
+
+    "1:n", "Einzelauswahl [Select]", `attribute_select <https://github.com/MetaModels/attribute_select>`_, "Einzelauswahl", "Relation zu anderer Tabelle für einen Wert |br| MM-Tabellen oder weitere Contao-Tabellen"
+    "m:n", "Mehrfachauswahl [Tags]", `attribute_tags <https://github.com/MetaModels/attribute_tags>`_, "Mehrfachauswahl", "Relation zu anderer Tabelle für mehrere Werte |br| MM-Tabellen oder weitere Contao-Tabellen"
+
+
+
 
 
 
