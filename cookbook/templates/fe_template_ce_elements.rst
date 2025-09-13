@@ -31,7 +31,7 @@ In dem Template folgenden Code eingeben:
    $model = new ContentModel();
    $model->setRow($contentData);
 
-   $content = new ContentYouTube($model);
+   $content = new \Contao\ContentYouTube($model);
 
    echo $content->generate();
 
