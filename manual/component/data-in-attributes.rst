@@ -43,13 +43,13 @@ Relationen
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
    :widths: 10, 10, 10, 10, 10
 
-    "1:n", "Einzelauswahl [select]", `attribute_select <https://github.com/MetaModels/attribute_select>`_, "Einzelauswahl", "Relation zu anderer Tabelle für einen Wert |br| MM-Tabellen oder weitere Contao-Tabellen"
-    "m:n", "Mehrfachauswahl [tags]", `attribute_tags <https://github.com/MetaModels/attribute_tags>`_, "Mehrfachauswahl", "Relation zu anderer Tabelle für mehrere Werte |br| MM-Tabellen oder weitere Contao-Tabellen"
-    "Mehrsprachig |br| Einzel- und Mehrfachauswahl können per se mit mehrsprachigen MMs umgehen"
+    "1:n", "Einzelauswahl [select]", `attribute_select <https://github.com/MetaModels/attribute_select>`_, "Einzelauswahl, |br| Filter auf Attribut des Modells mit einer Relation", "Relation zu anderer Tabelle für einen Wert |br| MM-Tabellen oder weitere Contao-Tabellen"
+    "m:n", "Mehrfachauswahl [tags]", `attribute_tags <https://github.com/MetaModels/attribute_tags>`_, "Mehrfachauswahl, |br| Filter auf Attribut des Modells mit einer Relation", "Relation zu anderer Tabelle für mehrere Werte |br| MM-Tabellen oder weitere Contao-Tabellen"
+    "Mehrsprachig |br| Einzel- und Mehrfachauswahl können |br| per se mit mehrsprachigen MMs umgehen"
     "1:n", "Übersetzte Einzelauswahl [select]", `attribute_translatedselect <https://github.com/MetaModels/attribute_translatedselect>`_, "Einzelauswahl", "nur für Spezialfälle mit eigener Spalte für Sprachschlüssel"
     "m:n", "Übersetzte Mehrfachauswahl [tags]", `attribute_translatedtags <https://github.com/MetaModels/attribute_translatedtags>`_, "Mehrfachauswahl", "nur für Spezialfälle mit eigener Spalte für Sprachschlüssel"
 
-
+Weitere Informationen finden sich auf der Seite :ref:`component_relations`.
 
 
 
