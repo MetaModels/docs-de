@@ -18,7 +18,7 @@ Text
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
    :widths: 10, 10, 10, 10, 10
 
-    "Kurze Texte", "Text", `attribute_text <https://github.com/MetaModels/attribute_text>`_, "Textsuche,|br|Einzelauswahl, Mehrfachauswahl, Einfache Abfrage, Register, Levenshtein, Loupe", "bis 255 Zeichen; Anzahl des Attributes durch DB limitiert"
+    "Kurze Texte", "Text", `attribute_text <https://github.com/MetaModels/attribute_text>`_, "Textsuche, |br| Einzelauswahl, Mehrfachauswahl, Einfache Abfrage, Register, Levenshtein, Loupe", "bis 255 Zeichen; Anzahl des Attributes durch DB limitiert"
     "Kurze Texte mehrsprachig", "Übersetzter Text", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "bis 255 Zeichen"
     "Lange Texte", "Langtext", `attribute_longtext <https://github.com/MetaModels/attribute_longtext>`_, "Textsuche, Levenshtein, Loupe", "bis 65535 Zeichen; :ref:`anpassbar <rst_cookbook_inputmask_manipulate-select-values>`"
     "Lange Texte mehrsprachig", "Übersetzter Langtext", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "siehe Langtext"
