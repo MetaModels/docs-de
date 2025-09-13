@@ -2,3 +2,8 @@
     width: 90%;
     max-width: 1100px !important;
 }
+
+.wy-table-responsive td,
+.wy-table-responsive th {
+    vertical-align: top;
+}
