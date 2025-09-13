@@ -3,6 +3,7 @@
 FE-Templates über Content-Elemente erstellen
 ============================================
 
+.. _rst_cookbook_templates_fe_template_ce_elements_youtube:
 CE YouTube
 ----------
 
@@ -50,6 +51,7 @@ Für eine kompakte Darstellung und Eingabe in der Eingabemaske, könnte man sich
 einzeilige "Multi-Eingabe" erstellen - siehe :ref:`rst_extended_attribute_mcw`.
 
 
+.. _rst_cookbook_templates_fe_template_ce_elements_rstslider:
 FE-Modul RockSolid Slider
 -------------------------
 

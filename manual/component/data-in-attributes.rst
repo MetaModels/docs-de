@@ -55,6 +55,8 @@ Dateien
     "Mehrsprachig"
     "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "siehe Datei"
 
+Übergabe z. B. an ein :ref:`Rocksilid-Slider <rst_cookbook_templates_fe_template_ce_elements_rstslider>`.
+
 Boolescher Wert
 ------
 
@@ -101,6 +103,7 @@ Weitere Daten
     "Inhaltselemente |br| mehrsprachig", "Übersetzter |br| Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
     "MCW-Tabelle |br| mehrsprachig", "Übersetzte |br| Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "siehe Tabelle multi (MCW)"
 
+Ausgabe z. B. als :ref:`CE-YouTube <rst_cookbook_templates_fe_template_ce_elements_youtube>`.
 
 .. |br| raw:: html
 
