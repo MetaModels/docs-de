@@ -11,8 +11,8 @@ realen Daten wie z. B. Texte, Zahlen, Datum, PLZ usw. abspeichern kann. Datei si
 Folgend ist eine Übersicht, mit welchen Attributen die gewünschten Daten gespeichert werden können. Zusätzlich ist bei
 "Filterregel" angegeben, welche Filterregeln für die Filterung/Suche im Frontend verwendet werden können.
 
-Text
-----
+Texte
+-----
 
 .. csv-table::
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
@@ -20,9 +20,15 @@ Text
 
     "Kurze Texte", "Text", `attribute_text <https://github.com/MetaModels/attribute_text>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Anzahl des Attributes durch DB limitiert"
     "Lange Texte", "Langtext", `attribute_longtext <https://github.com/MetaModels/attribute_longtext>`_, "Textsuche, |br| Levenshtein, |br| Loupe", "bis 65535 Zeichen; |br| :ref:`anpassbar <rst_cookbook_inputmask_manipulate-select-values>`"
+    "Text als Alias", "Alias", `attribute_alias <https://github.com/MetaModels/attribute_alias>`_, "Textsuche, |br| Einfache Abfrage, |br| Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Generierung aus ein ein oder mehreren Attributen"
+    "Text als Tabelle", "Text-Tabelle", `attribute_tabletext <https://github.com/MetaModels/attribute_tabletext>`_, "Levenshtein, |br| Loupe", "bis 255 Zeichen je Zelle"
+    "Text als URL", "URL", `attribute_url <https://github.com/MetaModels/attribute_url>`_, "Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Anzahl Zeichen für Titel und URL"
     "Mehrsprachig"
     "Kurze Texte mehrsprachig", "Übersetzter Text", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "bis 255 Zeichen"
     "Lange Texte mehrsprachig", "Übersetzter Langtext", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "siehe Langtext"
+    "Text als Alias mehrsprachig", "Übersetzter Alias", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "siehe Alias"
+    "Text als Tabelle mehrsprachig", "Übersetzte Text-Tabelle", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", "siehe Text-Tabelle"
+    "Text als URL mehrsprachig", "Übersetzte URL", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", "siehe URL"
 
 Zahlen
 ------
@@ -61,8 +67,14 @@ Relationen
     "1:n", "Übersetzte Einzelauswahl [select]", `attribute_translatedselect <https://github.com/MetaModels/attribute_translatedselect>`_, "Einzelauswahl", "nur für Spezialfälle mit eigener Spalte für Sprachschlüssel"
     "m:n", "Übersetzte Mehrfachauswahl [tags]", `attribute_translatedtags <https://github.com/MetaModels/attribute_translatedtags>`_, "Mehrfachauswahl", "nur für Spezialfälle mit eigener Spalte für Sprachschlüssel"
 
-Weitere Informationen finden sich auf der Seite :ref:`component_relations`.
+Weitere Informationen findet man auf der Seite :ref:`component_relations`.
 
+Weitere Daten
+-------------
+
+.. csv-table::
+   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
+   :widths: 10, 10, 10, 10, 10
 
 
 
