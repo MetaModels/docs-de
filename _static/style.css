@@ -5,5 +5,5 @@
 
 .wy-table-responsive td,
 .wy-table-responsive th {
-    vertical-align: top;
+    vertical-align: top !important;
 }
