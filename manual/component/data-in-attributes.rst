@@ -51,7 +51,7 @@ Dateien
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
    :widths: 10, 10, 10, 10, 10
 
-    "Datei", "Datei", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von Bildern ist Bildgröße wählbar"
+    "Datei", "Datei", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von :ref:`Bildern ist Bildgröße <rst_cookbook_templates_fe_work_with_images>` wählbar"
     "Mehrsprachig"
     "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "siehe Datei"
 
