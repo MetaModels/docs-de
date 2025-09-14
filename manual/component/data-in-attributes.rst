@@ -95,7 +95,7 @@ Weitere Daten
     "Inhaltselemente", "Inhalt eines Artikels", `attribute_contentarticle <https://github.com/MetaModels/attribute_contentarticle>`_, , "mehrere Inhaltselemente wie beim Artikel"
     "Ländernamen", "Land", `attribute_country <https://github.com/MetaModels/attribute_country>`_, , "mögliche Länder eingrenzbar"
     "Sprachenkürzel", "Sprachenschlüssel", `attribute_langcode <https://github.com/MetaModels/attribute_langcode>`_, , "mögliche Sprachen eingrenzbar"
-    "Geo-Entfernung", "Geo-Entfernung", `attribute_geodistance <https://github.com/MetaModels/attribute_geodistance>`_, , "Zusatzangabe für Umkreissuche"
+    "Geo-Entfernung", "Geo-Entfernung", `attribute_geodistance <https://github.com/MetaModels/attribute_geodistance>`_, , "Zusatzangabe für Sortierung |br| der Umkreissuche"
     "Sterne-Bewertung", "Bewertung", `attribute_rating <https://github.com/MetaModels/attribute_rating>`_, , "Anzahl der Sterne wählbar"
     "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
     "Pin für Cowegis-Map", "Cowegis-Marker", `cowegis-layer <https://github.com/MetaModels/cowegis-layer>`_, , ":ref:`siehe Cowegis-Layer Integration für Marker <extended_cowegis-layer-marker>`"
