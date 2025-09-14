@@ -5,8 +5,8 @@ Datentypen als Attribute anlegen
 
 Bei der Planung wie man sein MetaModels aufbauen möchte, ist neben dem Aufbau der
 :ref:`Datenbankstruktur <component_relations_database_structure>` wichtig, mit welchen Möglichkeiten ich meine
-realen Daten wie z. B. Texte, Zahlen, Datum, PLZ usw. abspeichern kann. Datei sind sowohl die Datentypen der Datenbank
-(MySQL/MariaDB) als auch die Eingabemöglichkeiten über die Widgets von Contao zu beachten.
+realen Daten wie z. B. Texte, Zahlen, Datum, PLZ usw. abspeichern kann. Dabei sind sowohl die Datentypen der Datenbank
+(MySQL/MariaDB) als auch die Eingabemöglichkeiten über die Widgets von Contao zu berücksichtigen.
 
 Folgend ist eine Übersicht, mit welchen Attributen die gewünschten Daten gespeichert werden können. Zusätzlich ist bei
 "Filterregel" angegeben, welche Filterregeln für die Filterung/Suche im Frontend verwendet werden können.
