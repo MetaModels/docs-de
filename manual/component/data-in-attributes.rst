@@ -24,7 +24,7 @@ Texte
     "Kombinierte Werte", "Kombinierte Einträge", `attribute_combinedvalues <https://github.com/MetaModels/attribute_combinedvalues>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Ergebnisstring per sprintf definierbar"
     "Text als Tabelle", "Text-Tabelle", `attribute_tabletext <https://github.com/MetaModels/attribute_tabletext>`_, "Levenshtein, |br| Loupe", "bis 255 Zeichen je Zelle"
     "Text als URL", "URL", `attribute_url <https://github.com/MetaModels/attribute_url>`_, "Levenshtein, |br| Loupe", "bis 255 Zeichen; |br| Anzahl Zeichen für Titel und URL"
-    "Mehrsprachig"
+    "_Mehrsprachig_"
     "Kurze Texte mehrsprachig", "Übersetzter Text", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "bis 255 Zeichen"
     "Lange Texte mehrsprachig", "Übersetzter Langtext", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "siehe Langtext"
     "Text als Alias mehrsprachig", "Übersetzter Alias", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "siehe Alias"
@@ -52,7 +52,7 @@ Dateien
    :widths: 10, 10, 10, 10, 10
 
     "Datei", "Datei", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von :ref:`Bildern ist Bildgröße <rst_cookbook_templates_fe_work_with_images>` wählbar"
-    "Mehrsprachig"
+    "_Mehrsprachig_"
     "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "siehe Datei"
 
 Übergabe z. B. an ein :ref:`Rocksilid-Slider <rst_cookbook_templates_fe_template_ce_elements_rstslider>`.
@@ -65,7 +65,7 @@ Boolescher Wert
    :widths: 10, 10, 10, 10, 10
 
     "Boolescher Wert", "Checkbox", `attribute_checkbox <https://github.com/MetaModels/attribute_checkbox>`_, "Checkbox-Status", "Anzeige in BE-Liste als Toogle-Icon möglich"
-    "Mehrsprachig"
+    "_Mehrsprachig_"
     "Boolescher Wert mehrsprachig", "Übersetzte Checkbox", `attribute_translatedcheckbox <https://github.com/MetaModels/attribute_translatedcheckbox>`_, "Übersetzter Checkbox-Status", "siehe Checkbox"
 
 
@@ -78,7 +78,7 @@ Relationen
 
     "1:n", "Einzelauswahl [select]", `attribute_select <https://github.com/MetaModels/attribute_select>`_, "Einzelauswahl, |br| Filter auf Attribut des Modells mit einer Relation", "Relation zu anderer Tabelle für einen Wert |br| MM-Tabellen oder weitere Contao-Tabellen"
     "m:n", "Mehrfachauswahl [tags]", `attribute_tags <https://github.com/MetaModels/attribute_tags>`_, "Mehrfachauswahl, |br| Filter auf Attribut des Modells mit einer Relation", "Relation zu anderer Tabelle für mehrere Werte |br| MM-Tabellen oder weitere Contao-Tabellen"
-    "Mehrsprachig |br| Einzel- und Mehrfachauswahl können |br| per se mit mehrsprachigen MMs umgehen"
+    "_Mehrsprachig_ |br| Einzel- und Mehrfachauswahl können |br| per se mit mehrsprachigen MMs umgehen"
     "1:n", "Übersetzte Einzelauswahl [select]", `attribute_translatedselect <https://github.com/MetaModels/attribute_translatedselect>`_, "Einzelauswahl", "nur für Spezialfälle mit eigener Spalte für Sprachschlüssel"
     "m:n", "Übersetzte Mehrfachauswahl [tags]", `attribute_translatedtags <https://github.com/MetaModels/attribute_translatedtags>`_, "Mehrfachauswahl", "nur für Spezialfälle mit eigener Spalte für Sprachschlüssel"
 
@@ -99,7 +99,7 @@ Weitere Daten
     "Sterne-Bewertung", "Bewertung", `attribute_rating <https://github.com/MetaModels/attribute_rating>`_, , "Anzahl der Sterne wählbar"
     "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
     "Pin für Cowegis-Map", "Cowegis-Marker", `cowegis-layer <https://github.com/MetaModels/cowegis-layer>`_, , ":ref:`siehe Cowegis-Layer Integration für Marker <extended_cowegis-layer-marker>`"
-    "Mehrsprachig"
+    "_Mehrsprachig_"
     "Inhaltselemente |br| mehrsprachig", "Übersetzter |br| Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "siehe Inhalt eines Artikels"
     "MCW-Tabelle |br| mehrsprachig", "Übersetzte |br| Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "siehe Tabelle multi (MCW)"
 
