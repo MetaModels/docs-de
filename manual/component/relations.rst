@@ -212,4 +212,5 @@ als Relation zum Elterndatensatz verwendet wird.
    <br />
 
 .. |img_db-schema_01| image:: /_img/screenshots/metamodel_first/db-schema_01.png
+   :width: 400px
 
