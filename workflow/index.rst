@@ -116,10 +116,10 @@ Schritt 4: Weitere Optionen für Ausgabe aus Schritt 2
 -----------------------------------------------------
 
 - 2.c: Inhaltselement "MetaModel-Liste" aus Schritt 2
-    * Filter auswählen
-    * Sortierung nach einem Attribut definieren - :ref:`siehe auch Sondersortierung <rst_cookbook_filter_custom-sql_sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`
+    - Filter auswählen
+    - Sortierung nach einem Attribut definieren - :ref:`siehe auch Sondersortierung <rst_cookbook_filter_custom-sql_sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`
       oder :ref:`Sortierlinks <rst_cookbook_templates_fe_list_sorting>`
-    * Limit und Paginierung einstellen
+    - Limit und Paginierung einstellen
 - 3.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Filter" <component_contentelements>` anlegen
 - 3.b: MetaModel auswählen sowie den Filter (meist identisch dem aus der MM-Liste) mit den gewünschten Filterregeln
 
