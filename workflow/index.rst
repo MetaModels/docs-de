@@ -93,7 +93,7 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
 * 4.b: |img_dca_setting| :ref:`Atttribute für Eingabemaske <component_dca>`
     * CSS-Klasse wie w50
     * Pflichtfeld, Nur lesen (Readonly)
-    * Option, ob das Attribut filterbar und/oder in BE-Liste suchbar sein soll
+    * Option, ob das Attribut in BE-Liste filterbar und/oder suchbar sein soll
     * Legenden hinzufügen, um größere Eingabemasken logisch zu unterteilen
 * 4.c: |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>`
     * Standard-Sortierung anlegen oder weitere Sortierungen für Auswahl in Liste
