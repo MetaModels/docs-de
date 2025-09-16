@@ -69,8 +69,8 @@ Schritt 2: Basisausgabe
 * 2.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Liste" <component_contentelements>` anlegen
 * 2.b: In der MetaModel-Liste das angelegte MetaModel sowie die Render-Einstellung auswählen und speichern
 
-Im Frontend sollte nun auf der angelegten Seite eine Liste mit den eingegebenen Test-Datensätzen aus Schritt 1 zu
-sehen sein.
+**Im Frontend sollte nun auf der angelegten Seite eine Liste mit den eingegebenen Test-Datensätzen aus Schritt 1 zu
+sehen sein.**
 
 Schritt 3: Einstellungen aus Schritt 1 anpassen
 -----------------------------------------------
@@ -106,8 +106,9 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
     * Verschachtelungen mit AND bzw. OR möglich
     * ohne weitere Angabe sind alle Filterregeln automatisch mit AND verknüpft
 
-Mit den erfolgten Anpassungen sollte die Anzeige im Backend und Frontend den individuellen Wünschen entsprechen. Neben
-den aufgeführten Optionen gibt es weitere Möglichkeiten, die auf den verlinkten Seiten nachzulesen sind.
+**Mit den erfolgten Anpassungen sollte die Anzeige im Backend und Frontend den individuellen Wünschen entsprechen.**
+
+Neben den aufgeführten Optionen gibt es weitere Möglichkeiten, die auf den verlinkten Seiten nachzulesen sind.
 
 Schritt 4: Weitere Optionen für Ausgabe
 ---------------------------------------
@@ -120,8 +121,10 @@ Schritt 4: Weitere Optionen für Ausgabe
 * 3.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Filter" <component_contentelements>` anlegen
 * 3.b: MetaModel auswählen sowie den Filter (meist identisch dem aus der MM-Liste) mit den gewünschten Filterregeln
 
-Auf der Seite sollte im Frontend ein Filter mit entsprechenden Filterwidgets zu sehen sein und die Liste auf die
-Filterung reagieren.
+**Auf der Seite sollte im Frontend ein Filter mit entsprechenden Filterwidgets zu sehen sein und die Liste auf die
+Filterung reagieren.**
+
+Die Ausgabe im Frontend kann mit verschiedenen Einstellungen für eine :ref:`rst_cookbook_tips_seo` angepasst werden.
 
 Tipps:
 ------
