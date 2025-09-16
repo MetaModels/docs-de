@@ -96,7 +96,9 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
     * Option, ob das Attribut filterbar und/oder suchbar sein soll
     * Legenden hinzufügen, um größere Eingabemasken logisch zu unterteilen
 * 4.c: |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>`
+    * Standard-Sortierung anlegen oder weitere Sortierungen für Auswahl in Liste
 * 4.d: |img_dca_condition| :ref:`Ansichtsbedingungen anlegen <component_dca_visibility-conditions>`
+    * Eingabewidgets können anhand von Werten anderer Widgets ein bzw. ausgeblendet werden
 * 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
     * Auswahl an Render-Einstellungen und Eingabemasken für Benutzergruppen (BE) oder Mitgliedergruppen (FE) zuweisen
 * 6.a: |img_filter| :ref:`Filter anlegen <component_filter>`
