@@ -15,8 +15,11 @@ Die Gesamtzahl der MetaModels und deren Verknüpfungen ergeben eine Datenbankstr
 Weise gespeichert, ausgegeben und gefiltert werden kann. Insbesondere bei komplexeren Aufgabenstellungen kann eine gute
 Planung nachträgliche Änderungen vermeiden.
 
-Es ist zu empfehlen, dass die Struktur der MetaModels und deren Verknüpfungen grafisch festgehalten wird. Das hilft sowohl
-bei der Erstellung als auch bei der Dokumentation.
+Es ist zu empfehlen, dass die Struktur der MetaModels und deren Verknüpfungen grafisch festgehalten wird. Das hilft
+sowohl bei der Erstellung als auch bei der Dokumentation.
+
+In MetaModels stehen neben den klassischen Relationen wie Einfach- (1:n) oder Mehrfachverknüpfung (m:n) auch weitere
+Optionen zur Verfügung - mehr dazu in dem Artikel :ref:`component_relations`.
 
 Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gib aber auch diverse Tools wie z. B.
 `yEd <https://www.yworks.com/products/yed>`_ oder die Online-Variante `yEd live <https://www.yworks.com/yed-live/>`_.
@@ -26,14 +29,26 @@ für eine Urlaubsvertretung:
 
 |img_db-schema_01|
 
+Für die Datenspeicherung und Relationen werden in MetaModels entsprechend Attribute benötigt - welche dafür zur
+Verfügung stehen, findet man auf :ref:`workflow_data-in-attributes`.
+
+Damit kann man auch auswählen, welche Pakete von MM neben dem Core zusätzlich zu installieren sind.
+
 Schritt 1: Basiseinstellungen für ein MetaModel
 -----------------------------------------------
 
+Für die Basiseinstellungen sind die wichtigsten Einstellungen vorausgewählt, so dass nur die notwendigsten Angaben und
+Auswahlen erfolgen müssen.
+
 * 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>` |br|
-  nach dem Speichern können die Icons wie folgt angesteuert werden |br|
-  |img_workflow_01|
-* 2: |img_fields_32| :ref:`Attribute anlegen <mm_first_attribute>` |br|
+  nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
+* 2: |img_fields| :ref:`Attribute anlegen <mm_first_attribute>` |br|
   Ein Mapping, welche Attribute für welche Daten zur Verfügung stehen, findet man auf :ref:`workflow_data-in-attributes`
+* 3.a: |img_rendersettings| :ref:`Render-Einstellungen anlegen <component_rendersettings>` |br|
+  Grundeinstellung für die Listenansicht
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellungen hinzufügen <component_rendersettings>` |br|
+  bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
+
 
 
 
@@ -46,5 +61,5 @@ Schritt 1: Basiseinstellungen für ein MetaModel
    :width: 400px
 
 .. |img_new| image:: /_img/icons/new.gif
-.. |img_fields_32| image:: /_img/icons/fields_32.png
+.. |img_fields| image:: /_img/icons/fields.png
 .. |img_workflow_01| image:: /_img/screenshots/workflow/workflow_01.png
