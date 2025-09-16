@@ -6,7 +6,7 @@ Arbeitsablauf bei MetaModels
 Der Arbeitsablauf zum Abbilden der eigenen Datentruktur in Metamodels untergliedert sich in einzelne Arbeitsschritte,
 die nacheinander für jedes MetaModel durchgeführt werden müssen. Die folgende Beschreibung richtet sich an Einsteiger
 in MetaModels, die aufgrund einer "best practices" wurde - versierte Benutzer werden bestimmte Schritte weiter
-zusammenfassen und ergänzen.
+zusammenfassen und gleich ergänzen.
 
 Schritt 0: Konzept der Datenstruktur
 ------------------------------------
@@ -58,7 +58,22 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
   angelegte Render-Einstellung und Eingabemaske auswählen und speichern
 
 Ist Punkt 5 abgeschlossen, sollte das neue MetaModel links in der Contao-Navigation in der Sektion "METAMODELS"
-erscheinen. Nun können die ersten Test-Datensätze eingegeben werden.
+erscheinen.
+
+**Nun können bzw. sollten die ersten Test-Datensätze eingegeben werden.**
+
+Schritt 2: Basisausgabe
+-----------------------
+
+* 1: Seite und Artikel in Contao anlegen
+* 2.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Liste" <component_contentelements>` anlegen
+* 2.b: In der MetaModel-Liste das angelegte MetaModel sowie die Render-Einstellung auswählen und speichern
+
+Im Frontend sollte nun auf der angelegten Seite eine Liste mit den eingegebenen Test-Datensätzen aus Schritt 1 zu
+sehen sein.
+
+
+
 
 .. |br| raw:: html
 
