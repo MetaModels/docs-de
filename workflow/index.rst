@@ -112,8 +112,8 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
 
 Neben den aufgeführten Optionen gibt es weitere Möglichkeiten, die auf den verlinkten Seiten nachzulesen sind.
 
-Schritt 4: Weitere Optionen für Ausgabe
----------------------------------------
+Schritt 4: Weitere Optionen für Ausgabe aus Schritt 2
+-----------------------------------------------------
 
 * 2.c: Inhaltselement "MetaModel-Liste" aus Schritt 2
     * Filter auswählen
