@@ -48,7 +48,7 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
       ausführen und Cache leeren
 * 3.a: |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>`
     * Grundeinstellung für die Listenansicht
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung hinzufügen <component_rendersettings>`|
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung hinzufügen <component_rendersettings>`
     * bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
 * 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
     * Grundeinstellung für Eingabemaske
