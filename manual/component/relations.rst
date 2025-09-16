@@ -157,6 +157,7 @@ man dieses Verhalten, so kann man das z. B. mit dem PostDuplicateModelEvent des 
 Bitte bei Verwendung von Varianten oder Hierarchie/Baumstruktur in Kindtabellen den aktuellen Stand prüfen (s. u.).
 
 
+.. _component_relations_variants:
 Varianten
 .........
 

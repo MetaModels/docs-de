@@ -72,6 +72,31 @@ Schritt 2: Basisausgabe
 Im Frontend sollte nun auf der angelegten Seite eine Liste mit den eingegebenen Test-Datensätzen aus Schritt 1 zu
 sehen sein.
 
+Schritt 3: Einstellungen aus Schritt 1 anpassen
+-----------------------------------------------
+
+* 1: |img_new| :ref:`MetaModel <mm_first_new-mm>` |br|
+  :ref:`Mehrsprachigkeit <component_multi-language>`  einstellen, :ref:`Varianten <component_relations_variants>` aktivieren
+* 3.a: |img_rendersettings| :ref:`Render-Einstellung <component_rendersettings>` |br|
+  * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
+  * :ref:`Variante des Templates "metamodels_prerendered" <component_templates>` auswählen für individuelle Ausgabe
+  * Einstellung der "jumpTo"-Seite für :ref:`Detailansicht <component_contentelements>`
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung <component_rendersettings>` |br|
+  * spezifische Einstellungen bei den Attributen vornehmen - z. B. :ref:`Ausgabe von Bildern inkl. Bildgröße <rst_cookbook_templates_fe_work_with_images>`
+  * :ref:`Variante des Templates "mm_atr_<typ>" <component_templates>` auswählen für individuelle Ausgabe
+* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>` |br|
+  * Keys für Ausgabe von Filter, Suche, Sortierung, Limit angeben
+  * Auswahl des Backendbereiches, wo das MetaModel auftauchen soll z. B. Inhalte oder eigener Bereich
+  * Anzeige als Tabelle im Backend
+  * Berechtigungen für Bearbeitung
+* 4.b: |img_dca_setting| :ref:`Atttribute <component_dca>` |br|
+  * CSS-Klasse wie w50
+  * Pflichtfeld, Nur lesen (Readonly)
+  * Option, ob das Attribut filterbar und/oder suchbar sein soll
+* 4.c: |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>` |br|
+* 4.d: |img_dca_condition| :ref:`Ansichtsbedingungen anlegen <component_dca_visibility-conditions>` |br|
+* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>` |br|
+  Auswahl an Render-Einstellungen und Eingabemasken für Benutzergruppen (BE) oder Mitgliedergruppen (FE) zuweisen
 
 
 
@@ -89,5 +114,6 @@ sehen sein.
 .. |img_rendersetting| image:: /_img/icons/rendersetting.png
 .. |img_dca| image:: /_img/icons/dca.png
 .. |img_dca_setting| image:: /_img/icons/dca_setting.png
-
+.. |img_dca_groupsortsettings| image:: /_img/icons/dca_groupsortsettings.png
+.. |img_dca_condition| image:: /_img/icons/dca_condition.png
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
