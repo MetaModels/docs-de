@@ -38,20 +38,27 @@ Schritt 1: Basiseinstellungen für ein MetaModel
 -----------------------------------------------
 
 Für die Basiseinstellungen sind die wichtigsten Einstellungen vorausgewählt, so dass nur die notwendigsten Angaben und
-Auswahlen erfolgen müssen.
+Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist, gibt es den
+:download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.
 
 * 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>` |br|
   nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
 * 2: |img_fields| :ref:`Attribute anlegen <mm_first_attribute>` |br|
-  Ein Mapping, welche Attribute für welche Daten zur Verfügung stehen, findet man auf :ref:`workflow_data-in-attributes`
-* 3.a: |img_rendersettings| :ref:`Render-Einstellungen anlegen <component_rendersettings>` |br|
+  nach dem Anlegen aller Attribute unbedingt :ref:`DB-Migration <component_schema-manager>` (Contao-Manager oder Konsole)
+  ausführen und Cache leeren
+* 3.a: |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>` |br|
   Grundeinstellung für die Listenansicht
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellungen hinzufügen <component_rendersettings>` |br|
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung hinzufügen <component_rendersettings>` |br|
   bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
+* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>` |br|
+  Grundeinstellung für Eingabemaske
+* 4.b: |img_dca_setting| :ref:`Atttribute in für Eingabemaske anlegen <component_dca>` |br|
+  bestimmt, welche Attribute in der jeweiligen Eingabemaske für eine Ansicht zur Verfügung stehen
+* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>` |br|
+  angelegte Render-Einstellung und Eingabemaske auswählen und speichern
 
-
-
-
+Ist Punkt 5 abgeschlossen, sollte das neue MetaModel links in der Contao-Navigation in der Sektion "METAMODELS"
+erscheinen. Nun können die ersten Test-Datensätze eingegeben werden.
 
 .. |br| raw:: html
 
@@ -63,3 +70,9 @@ Auswahlen erfolgen müssen.
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_fields| image:: /_img/icons/fields.png
 .. |img_workflow_01| image:: /_img/screenshots/workflow/workflow_01.png
+.. |img_rendersettings| image:: /_img/icons/rendersettings.png
+.. |img_rendersetting| image:: /_img/icons/rendersetting.png
+.. |img_dca| image:: /_img/icons/dca.png
+.. |img_dca_setting| image:: /_img/icons/dca_setting.png
+
+.. |img_dca_combine| image:: /_img/icons/dca_combine.png
