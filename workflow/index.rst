@@ -98,6 +98,9 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
 * 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>` |br|
   Auswahl an Render-Einstellungen und Eingabemasken für Benutzergruppen (BE) oder Mitgliedergruppen (FE) zuweisen
 
+Schritt 4: Weitere Optionen für Ausgabe
+---------------------------------------
+
 
 
 .. |br| raw:: html
