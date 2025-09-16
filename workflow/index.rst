@@ -66,7 +66,7 @@ Schritt 2: Basisausgabe
 -----------------------
 
 * **1: Seite und Artikel in Contao anlegen**
-* **2.a: In dem Artikel ein :ref:`Inhaltselement MetaModel-Liste <component_contentelements>` anlegen**
+* 2.a: In dem Artikel ein :ref:`Inhaltselement MetaModel-Liste <component_contentelements>` anlegen
 * **2.b: In der MetaModel-Liste das angelegte MetaModel sowie die Render-Einstellung auswählen und speichern**
 
 **Im Frontend sollte nun auf der angelegten Seite eine Liste mit den eingegebenen Test-Datensätzen aus Schritt 1 zu
