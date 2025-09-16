@@ -41,21 +41,21 @@ Für die Basiseinstellungen sind die wichtigsten Einstellungen vorausgewählt, s
 Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist, gibt es den
 :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.
 
-* 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>` |br|
-  nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
-* 2: |img_fields| :ref:`Attribute anlegen <mm_first_attribute>` |br|
-  nach dem Anlegen aller Attribute unbedingt :ref:`DB-Migration <component_schema-manager>` (Contao-Manager oder Konsole)
-  ausführen und Cache leeren
-* 3.a: |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>` |br|
-  Grundeinstellung für die Listenansicht
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung hinzufügen <component_rendersettings>` |br|
-  bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
-* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>` |br|
-  Grundeinstellung für Eingabemaske
-* 4.b: |img_dca_setting| :ref:`Atttribute in für Eingabemaske anlegen <component_dca>` |br|
-  bestimmt, welche Attribute in der jeweiligen Eingabemaske für eine Ansicht zur Verfügung stehen
-* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>` |br|
-  angelegte Render-Einstellung und Eingabemaske auswählen und speichern
+* 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>`
+    * nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
+* 2: |img_fields| :ref:`Attribute anlegen <mm_first_attribute>`
+    * nach dem Anlegen aller Attribute unbedingt :ref:`DB-Migration <component_schema-manager>` (Contao-Manager oder Konsole)
+      ausführen und Cache leeren
+* 3.a: |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>`
+    * Grundeinstellung für die Listenansicht
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung hinzufügen <component_rendersettings>`|
+    * bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
+* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
+    * Grundeinstellung für Eingabemaske
+* 4.b: |img_dca_setting| :ref:`Atttribute in für Eingabemaske anlegen <component_dca>`
+    * bestimmt, welche Attribute in der jeweiligen Eingabemaske für eine Ansicht zur Verfügung stehen
+* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
+    * angelegte Render-Einstellung und Eingabemaske auswählen und speichern
 
 Ist Punkt 5 abgeschlossen, sollte das neue MetaModel links in der Contao-Navigation in der Sektion "METAMODELS"
 erscheinen.
@@ -75,28 +75,36 @@ sehen sein.
 Schritt 3: Einstellungen aus Schritt 1 anpassen
 -----------------------------------------------
 
-* 1: |img_new| :ref:`MetaModel <mm_first_new-mm>` |br|
-  :ref:`Mehrsprachigkeit <component_multi-language>`  einstellen, :ref:`Varianten <component_relations_variants>` aktivieren
-* 3.a: |img_rendersettings| :ref:`Render-Einstellung <component_rendersettings>` |br|
+* 1: |img_new| :ref:`MetaModel <mm_first_new-mm>`
+    * :ref:`Mehrsprachigkeit <component_multi-language>`  einstellen
+    * :ref:`Varianten <component_relations_variants>` aktivieren
+* 3.a: |img_rendersettings| :ref:`Render-Einstellung <component_rendersettings>`
     * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
     * :ref:`Variante des Templates "metamodels_prerendered" <component_templates>` auswählen für individuelle Ausgabe
     * Einstellung der "jumpTo"-Seite für :ref:`Detailansicht <component_contentelements>`
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung <component_rendersettings>` |br|
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung <component_rendersettings>`
     * spezifische Einstellungen bei den Attributen vornehmen - z. B. :ref:`Ausgabe von Bildern inkl. Bildgröße <rst_cookbook_templates_fe_work_with_images>`
     * :ref:`Variante des Templates "mm_atr_<typ>" <component_templates>` auswählen für individuelle Ausgabe
-* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>` |br|
+* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
     * Keys für Ausgabe von Filter, Suche, Sortierung, Limit angeben
     * Auswahl des Backendbereiches, wo das MetaModel auftauchen soll z. B. Inhalte oder eigener Bereich
     * Anzeige als Tabelle im Backend
     * Berechtigungen für Bearbeitung
-* 4.b: |img_dca_setting| :ref:`Atttribute <component_dca>` |br|
+* 4.b: |img_dca_setting| :ref:`Atttribute für Eingabemaske <component_dca>`
     * CSS-Klasse wie w50
     * Pflichtfeld, Nur lesen (Readonly)
     * Option, ob das Attribut filterbar und/oder suchbar sein soll
-* 4.c: |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>` |br|
-* 4.d: |img_dca_condition| :ref:`Ansichtsbedingungen anlegen <component_dca_visibility-conditions>` |br|
-* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>` |br|
-  Auswahl an Render-Einstellungen und Eingabemasken für Benutzergruppen (BE) oder Mitgliedergruppen (FE) zuweisen
+    * Legenden hinzufügen, um größere Eingabemasken logisch zu unterteilen
+* 4.c: |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>`
+* 4.d: |img_dca_condition| :ref:`Ansichtsbedingungen anlegen <component_dca_visibility-conditions>`
+* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
+    * Auswahl an Render-Einstellungen und Eingabemasken für Benutzergruppen (BE) oder Mitgliedergruppen (FE) zuweisen
+* 6.a: |img_filter| :ref:`Filter anlegen <component_filter>`
+    * Name für Filter vergeben
+* 6.b: |img_filter_setting| :ref:`Filterregeln anlegen <component_filter>`
+    * Filterregeln einfügen
+    * Verschachtelungen mit AND bzw. OR möglich
+    * ohne weitere Angabe sind alle Filterregeln automatisch mit AND verknüpft
 
 Mit den erfolgten Anpassungen sollte die Anzeige im Backend und Frontend den individuellen Wünschen entsprechen. Neben
 den aufgeführten Optionen gibt es weitere Möglichkeiten, die auf den verlinkten Seiten nachzulesen sind.
@@ -104,6 +112,26 @@ den aufgeführten Optionen gibt es weitere Möglichkeiten, die auf den verlinkte
 Schritt 4: Weitere Optionen für Ausgabe
 ---------------------------------------
 
+* 2.c: Inhaltselement "MetaModel-Liste" aus Schritt 2
+    * Filter auswählen
+    * Sortierung nach einem Attribut definieren - :ref:`siehe auch Sondersortierung <rst_cookbook_filter_custom-sql_sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`
+      oder :ref:`Sortierlinks <rst_cookbook_templates_fe_list_sorting>`
+    * Limit und Paginierung einstellen
+* 3.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Filter" <component_contentelements>` anlegen
+* 3.b: MetaModel auswählen sowie den Filter (meist identisch dem aus der MM-Liste) mit den gewünschten Filterregeln
+
+Auf der Seite sollte im Frontend ein Filter mit entsprechenden Filterwidgets zu sehen sein und die Liste auf die
+Filterung reagieren.
+
+Tipps:
+------
+
+* für "MM-Starter" ist zu empfehlen, das Beispiel :ref:`"Das erste MetaModel" <mm_first_index>` aufzubauen
+* den :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` ggf. ausdrucken und bereit legen
+* beim Anlegen der Models "von Außen nach Innen" vorgehen - im Beispiel oben also erst Abteilung und Projekte und dann
+  Mitarbeiter - damit sind die Models beim Anlegen der Attribute für die Referenzen (hier die Einzelauswahl) schon
+  in der Auswahl vorhanden
+* das Anlegen der Attribute bei Render-Einstellung und Eingabemaske wird mit den Button "Alle hinzufügen" vereinfacht
 
 
 .. |br| raw:: html
@@ -123,3 +151,6 @@ Schritt 4: Weitere Optionen für Ausgabe
 .. |img_dca_groupsortsettings| image:: /_img/icons/dca_groupsortsettings.png
 .. |img_dca_condition| image:: /_img/icons/dca_condition.png
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
+.. |img_filter| image:: /_img/icons/filter.png
+.. |img_filter_setting| image:: /_img/icons/filter_setting.png
+
