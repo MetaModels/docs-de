@@ -65,9 +65,9 @@ erscheinen.
 Schritt 2: Basisausgabe
 -----------------------
 
-- **1: Seite und Artikel in Contao anlegen**
-- **2.a: In dem Artikel ein :ref:`Inhaltselement MetaModel-Liste <component_contentelements>` anlegen**
-- **2.b: In der MetaModel-Liste das angelegte MetaModel sowie die Render-Einstellung auswählen und speichern**
+- 1: Seite und Artikel in Contao anlegen
+- 2.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Liste" <component_contentelements>` anlegen
+- 2.b: In der MetaModel-Liste das angelegte MetaModel sowie die Render-Einstellung auswählen und speichern
 
 **Im Frontend sollte nun auf der angelegten Seite eine Liste mit den eingegebenen Test-Datensätzen aus Schritt 1 zu
 sehen sein.**
@@ -120,8 +120,8 @@ Schritt 4: Weitere Optionen für Ausgabe aus Schritt 2
     * Sortierung nach einem Attribut definieren - :ref:`siehe auch Sondersortierung <rst_cookbook_filter_custom-sql_sortierung-der-ausgabe-nach-mehr-als-einem-attribut-fest>`
       oder :ref:`Sortierlinks <rst_cookbook_templates_fe_list_sorting>`
     * Limit und Paginierung einstellen
-* **3.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Filter" <component_contentelements>` anlegen**
-* **3.b: MetaModel auswählen sowie den Filter (meist identisch dem aus der MM-Liste) mit den gewünschten Filterregeln**
+* 3.a: In dem Artikel ein :ref:`Inhaltselement "MetaModel-Filter" <component_contentelements>` anlegen
+* 3.b: MetaModel auswählen sowie den Filter (meist identisch dem aus der MM-Liste) mit den gewünschten Filterregeln
 
 **Auf der Seite sollte im Frontend ein Filter mit entsprechenden Filterwidgets zu sehen sein und die Liste auf die
 Filterung reagieren.**
