@@ -140,6 +140,7 @@ Tipps:
 * vor dem Start prüfen, ob man die Model bzw. Attribute mehrsprachig benötigt - ein späterere Wechsel ist nicht leicht
   möglich
 * das Anlegen der Attribute bei Render-Einstellung und Eingabemaske wird mit den Button "Alle hinzufügen" vereinfacht
+* es gibt eine Reihe von :ref:`Checklisten <rst_cookbook_checklists_index>`, die bei der Arbeit helfen
 
 
 .. |br| raw:: html
