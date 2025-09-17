@@ -133,6 +133,8 @@ Tipps:
 
 * für "MM-Starter" ist zu empfehlen, das Beispiel :ref:`"Das erste MetaModel" <mm_first_index>` aufzubauen
 * den :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` ggf. ausdrucken und bereit legen
+* Datentruktur grafisch darstellen - es müssen nicht alle Attribute eingetragen werden - es hilft beim Aufbau und
+  Kommunikation mit Kunden und Annfragen zum Support
 * beim Anlegen der Models "von Außen nach Innen" vorgehen - im Beispiel oben also erst Abteilung und Projekte und dann
   Mitarbeiter - damit sind die Models beim Anlegen der Attribute für die Referenzen (hier die Einzelauswahl) schon
   in der Auswahl vorhanden
