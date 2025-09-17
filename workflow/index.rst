@@ -77,7 +77,7 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
 -----------------------------------------------
 
 * 1: |img_new| :ref:`MetaModel <mm_first_new-mm>`
-    * :ref:`Varianten <component_relations_variants>` aktivieren
+    * :ref:`Varianten <component_relations_variants>` aktivieren, wenn für Datenstruktur erforderlich
 * 3.a: |img_rendersettings| :ref:`Render-Einstellung <component_rendersettings>`
     * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
     * :ref:`Variante des Templates "metamodels_prerendered" <component_templates>` auswählen für individuelle Ausgabe
