@@ -42,6 +42,7 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
 :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` zum Download.
 
 * 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>`
+    * :ref:`Mehrsprachigkeit <component_multi-language>` einstellen sofern notwendig
     * nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
 * 2: |img_fields| :ref:`Attribute anlegen <mm_first_attribute>`
     * nach dem Anlegen aller Attribute unbedingt :ref:`DB-Migration <component_schema-manager>` (Contao-Manager oder Konsole)
@@ -76,7 +77,6 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
 -----------------------------------------------
 
 * 1: |img_new| :ref:`MetaModel <mm_first_new-mm>`
-    * :ref:`Mehrsprachigkeit <component_multi-language>`  einstellen
     * :ref:`Varianten <component_relations_variants>` aktivieren
 * 3.a: |img_rendersettings| :ref:`Render-Einstellung <component_rendersettings>`
     * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
