@@ -141,7 +141,8 @@ Tipps:
 * bei größeren Datenstrukturen kann man zusammengehörige Models mit einem eigenen "Präfix" wie "events" versehen, so
   dass die Tabellen z. B. lauten "mm_events_categories", "mm_events_contacts" usw. - die Tabelle der Models kann dann
   nach "mm_events_" gefiltert werden und ist übersichtlicher bei der Bearbeitung
-* gleichartige Attribute nacheinander anlegen - bei "Speichern und neu" wird vorheriger Attributstyp beibehalten
+* gleichartige Attribute nacheinander anlegen - bei "Speichern und neu" wird vorheriger Attributstyp beibehalten und
+  spart die Auswahl
 * nach Anlegen eines Models oder Attributes DB-Migration durchführen und Cache leeren
 * vor dem Start prüfen, ob man die Model bzw. Attribute mehrsprachig benötigt - ein späterere Wechsel ist nicht leicht
   möglich
