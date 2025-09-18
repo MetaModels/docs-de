@@ -138,6 +138,9 @@ Tipps:
 * beim Anlegen der Models "von Außen nach Innen" vorgehen - im Beispiel oben also erst Abteilung und Projekte und dann
   Mitarbeiter - damit sind die Models beim Anlegen der Attribute für die Referenzen (hier die Einzelauswahl) schon
   in der Auswahl vorhanden
+* bei größeren Datenstrukturen kann man zusammengehörige Models mit einem eigenen "Präfix" wie "events" versehen, so
+  dass die Tabellen z. B. lauten "mm_events_categories", "mm_events_contacts" usw. - die Tabelle der Models kann dann
+  nach "mm_events_" gefiltert werden und ist übersichtlicher bei der Bearbeitung
 * gleichartige Attribute nacheinander anlegen - bei "Speichern und neu" wird vorheriger Attributstyp beibehalten
 * nach Anlegen eines Models oder Attributes DB-Migration durchführen und Cache leeren
 * vor dem Start prüfen, ob man die Model bzw. Attribute mehrsprachig benötigt - ein späterere Wechsel ist nicht leicht
