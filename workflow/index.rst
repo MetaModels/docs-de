@@ -76,21 +76,21 @@ sehen sein.**
 Schritt 3: Einstellungen aus Schritt 1 anpassen
 -----------------------------------------------
 
-* 1: |img_new| :ref:`MetaModel <mm_first_new-mm>`
+* 1: |img_new| :ref:`MetaModel anpassen <mm_first_new-mm>`
     * :ref:`Varianten <component_relations_variants>` aktivieren, wenn für Datenstruktur erforderlich
-* 3.a: |img_rendersettings| :ref:`Render-Einstellung <component_rendersettings>`
+* 3.a: |img_rendersettings| :ref:`Render-Einstellung anpassen <component_rendersettings>`
     * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
     * :ref:`Variante des Templates "metamodels_prerendered" <component_templates>` auswählen für individuelle Ausgabe
     * Einstellung der "jumpTo"-Seite für :ref:`Detailansicht <component_contentelements>`
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung <component_rendersettings>`
+* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung anpassen <component_rendersettings>`
     * spezifische Einstellungen bei den Attributen vornehmen - z. B. :ref:`Ausgabe von Bildern inkl. Bildgröße <rst_cookbook_templates_fe_work_with_images>`
     * :ref:`Variante des Templates "mm_atr_<typ>" <component_templates>` auswählen für individuelle Ausgabe
-* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
+* 4.a: |img_dca| :ref:`Eingabemaske anpassen <component_dca>`
     * Keys für Ausgabe von Filter, Suche, Sortierung, Limit angeben
     * Auswahl des Backendbereiches, wo das MetaModel auftauchen soll z. B. Inhalte oder eigener Bereich
     * Anzeige als Tabelle im Backend
     * Berechtigungen für Bearbeitung
-* 4.b: |img_dca_setting| :ref:`Atttribute für Eingabemaske <component_dca>`
+* 4.b: |img_dca_setting| :ref:`Atttribute für Eingabemaske anpassen <component_dca>`
     * CSS-Klasse wie w50
     * Pflichtfeld, Nur lesen (Readonly)
     * Option, ob das Attribut in BE-Liste filterbar und/oder suchbar sein soll
