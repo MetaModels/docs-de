@@ -498,6 +498,22 @@ Twig.
        }
    }
 
+
+Für die Filterung nach der ausgewählten Produkt-Ids kann man eine Filterregel "Eigenes SQL" anlegen und dort über den
+übergebenen Parameter aus `$filterUrl` entsprechend filtern - hier wird eine Reihe von IDs übergeben, deren Reihenfolge
+unverändert bleiben soll.
+
+.. code-block:: SQL
+   :linenos:
+
+   -- Filterregel in Filter 11
+   SELECT id FROM {{table}}
+   WHERE id IN({{param::filter?name=products&aggregate=set&default=0}})
+   ORDER BY FIELD(id, {{param::filter?name=products&aggregate=set&default=0}})
+
+Weiterhin könnte man z. B. in dem SQL oder in einer weiteren Filterregel nach dem Veröffentlichungsstatus filtern.
+
+
 .. code-block:: twig
    :linenos:
 
