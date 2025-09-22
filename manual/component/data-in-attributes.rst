@@ -1,4 +1,4 @@
-.. _workflow_data-in-attributes:
+.. _component_data-in-attributes:
 
 Datentypen als Attribute anlegen
 ================================

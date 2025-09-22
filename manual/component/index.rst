@@ -14,6 +14,11 @@ ohne "s" geschrieben, auch wenn dies z.B. durch den Genitiv erforderlich wäre.
 Der Begriff **MetaModels** (Plural) steht allein als Bezeichnung für das
 Erweiterungspaket für Contao.
 
+Für Neu- oder Wiedereinsteiger in MetaModels ist es möglicher Weise etwas schwierig, einen passenden Arbeitsablauf für
+die Erstellung zu finden. Für diese Zielgruppe gibt es einen :ref:`einfachen Arbeitsablauf für den Umgang mit MetaModels
+<component_workflow>`. Dort sind auch einige :ref:`Tipps für den Start <component_workflow_tips>` sowie eine
+:ref:`Übersicht, mit welchen Attributen man was speichern kann`.
+
 Bevor man sich an die Erstellung komplexerer Datenstrukturen in MetaModels macht, sollte man sich unbedingt
 Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models untereinander - machen. Dazu gibt es
 eine Übersichtsseite ":ref:`component_relations`".
@@ -58,6 +63,7 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
     :hidden:
     :maxdepth: 1
 
+    workflow
     new-mm
     attribute
     rendersettings
@@ -71,6 +77,7 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
     schema-manager
     translations
     templates
+    data-in-attributes
     multi-language
     inserttags
 

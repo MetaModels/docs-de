@@ -1,4 +1,4 @@
-.. _workflow_index:
+.. _component_workflow:
 
 Arbeitsablauf bei MetaModels
 ============================
@@ -7,6 +7,8 @@ Der Arbeitsablauf zum Abbilden der eigenen Datentruktur in Metamodels unterglied
 die nacheinander für jedes MetaModel durchgeführt werden müssen. Die folgende Beschreibung richtet sich an Einsteiger
 in MetaModels, die aufgrund einer "best practices" wurde - versierte Benutzer werden bestimmte Schritte weiter
 zusammenfassen und gleich ergänzen.
+
+Die einzelnen Schritte sind ausführlicher in den weiteren Artikeln des Bereiches :ref:`component_index` ausgeführt.
 
 Schritt 0: Konzept der Datenstruktur
 ------------------------------------
@@ -30,7 +32,7 @@ für eine Urlaubsvertretung:
 |img_db-schema_01|
 
 Für die Datenspeicherung und Relationen werden in MetaModels entsprechend Attribute benötigt - welche dafür zur
-Verfügung stehen, findet man auf :ref:`workflow_data-in-attributes`.
+Verfügung stehen, findet man auf :ref:`component_data-in-attributes`.
 
 Damit kann man auch auswählen, welche Pakete von MM neben dem Core zusätzlich zu installieren sind.
 
@@ -128,6 +130,7 @@ Filterung reagieren.**
 
 Die Ausgabe im Frontend kann mit verschiedenen Einstellungen für eine :ref:`rst_cookbook_tips_seo` angepasst werden.
 
+.. _component_workflow_tips:
 Tipps:
 ------
 
