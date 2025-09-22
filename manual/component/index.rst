@@ -17,7 +17,7 @@ Erweiterungspaket für Contao.
 Für Neu- oder Wiedereinsteiger in MetaModels ist es möglicher Weise etwas schwierig, einen passenden Arbeitsablauf für
 die Erstellung zu finden. Für diese Zielgruppe gibt es einen :ref:`einfachen Arbeitsablauf für den Umgang mit MetaModels
 <component_workflow>`. Dort sind auch einige :ref:`Tipps für den Start <component_workflow_tips>` sowie eine
-:ref:`Übersicht, mit welchen Attributen man was speichern kann`.
+:ref:`Übersicht, mit welchen Attributen man was speichern kann <component_data-in-attributes>`.
 
 Bevor man sich an die Erstellung komplexerer Datenstrukturen in MetaModels macht, sollte man sich unbedingt
 Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models untereinander - machen. Dazu gibt es
