@@ -60,12 +60,13 @@ eine Erweiterung auf einer flexiblen und gut erweiterbaren Codebasis zu schaffen
 Mit der Version 2.0 von MetaModels für Contao 3.x lag das Ergebnis von vielen Stunden
 der Diskussion um die "beste Lösung" und harter Programmierung vor.
 
-Weiter ging es mit Version 2.1 als Migration von 2.0 für Contao 4.4 zur aktuellen Version
-2.2 für Contao 4.9.
-
+Weiter ging es mit Version 2.1 als Migration von 2.0 für Contao 4.4.
 Bei diesen Umstellungen wurde vieles im "Unterbau" angepasst und "alte Zöpfe" abgeschnitten,
 viele kleine Bugs gefixt sowie die DB-Abfragen Symfony-like umgestellt. Eine Zusammenstellung
 für MM 2.2 ist :ref:`hier zu finden <new_in_mm220>`.
+
+Der weitere Weg führte über :ref:`MM 2.3 für Contao 4.13 <new_in_mm230>` zu :ref:`MM 2.4 für Contao 5.3
+<new_in_mm240>` - ein MM 2.5 für Contao 5.7 ist in Arbeit.
 
 Für MM 3.0 gibt es auch schon Planungen - :ref:`siehe <planning_mm30>`.
 
