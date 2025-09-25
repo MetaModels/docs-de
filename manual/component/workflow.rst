@@ -147,7 +147,7 @@ Tipps:
 * gleichartige Attribute nacheinander anlegen - bei "Speichern und neu" wird vorheriger Attributstyp beibehalten und
   spart die Auswahl
 * für "Hilfsangaben" wie Anrede, Maßeinheiten o. ä. muss man nicht jeweils ein MetaModel als Referenz anlegen - mit
-  z. B. :ref:`zwei Models und einem Filter kann man das auch lösen <rst_cookbook_specials_helper-models>`
+  z. B. :ref:`einem Model und einem Filter kann man das auch lösen <rst_cookbook_specials_helper-models>`
 * nach Anlegen eines Models oder Attributes DB-Migration durchführen und Cache leeren
 * vor dem Start prüfen, ob man die Model bzw. Attribute mehrsprachig benötigt - ein späterere Wechsel ist nicht leicht
   möglich
