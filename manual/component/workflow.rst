@@ -5,7 +5,7 @@ Arbeitsablauf bei MetaModels
 
 Der Arbeitsablauf zum Abbilden der eigenen Datentruktur in Metamodels untergliedert sich in einzelne Arbeitsschritte,
 die nacheinander für jedes MetaModel durchgeführt werden müssen. Die folgende Beschreibung richtet sich an Einsteiger
-in MetaModels, die aufgrund einer "best practices" wurde - versierte Benutzer werden bestimmte Schritte weiter
+in MetaModels, die aufgrund einer "best practice" erstellt wurde - versierte Benutzer werden bestimmte Schritte weiter
 zusammenfassen und gleich ergänzen.
 
 Die einzelnen Schritte sind ausführlicher in den weiteren Artikeln des Bereiches :ref:`component_index` ausgeführt.
@@ -14,8 +14,8 @@ Schritt 0: Konzept der Datenstruktur
 ------------------------------------
 
 Die Gesamtzahl der MetaModels und deren Verknüpfungen ergeben eine Datenbankstruktur, mit der die Daten in gewünschter
-Weise gespeichert, ausgegeben und gefiltert werden kann. Insbesondere bei komplexeren Aufgabenstellungen kann eine gute
-Planung nachträgliche Änderungen vermeiden.
+Weise gespeichert, ausgegeben und gefiltert werden können. Insbesondere bei komplexeren Aufgabenstellungen hilft eine gute
+Planung um nachträgliche Änderungen zu vermeiden.
 
 Es ist zu empfehlen, dass die Struktur der MetaModels und deren Verknüpfungen grafisch festgehalten wird. Das hilft
 sowohl bei der Erstellung als auch bei der Dokumentation.
@@ -26,7 +26,7 @@ Optionen zur Verfügung - mehr dazu in dem Artikel :ref:`component_relations`.
 Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gib aber auch diverse Tools wie z. B.
 `yEd <https://www.yworks.com/products/yed>`_ oder die Online-Variante `yEd live <https://www.yworks.com/yed-live/>`_.
 
-Als Beispiel eine Struktur für Mitarbeiten inkl. Verknüpfungen zu Abteilung und Projekten sowie eine Eigenreferenz
+Als Beispiel eine Struktur für Mitarbeiter inkl. Verknüpfungen zu Abteilung und Projekten sowie eine Eigenreferenz
 für eine Urlaubsvertretung:
 
 |img_db-schema_01|
@@ -51,11 +51,11 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
       ausführen und Cache leeren
 * 3.a: |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>`
     * Grundeinstellung für die Listenansicht
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung hinzufügen <component_rendersettings>`
+* 3.b: |img_rendersetting| :ref:`Attribute in Render-Einstellung hinzufügen <component_rendersettings>`
     * bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
 * 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
     * Grundeinstellung für Eingabemaske
-* 4.b: |img_dca_setting| :ref:`Atttribute in für Eingabemaske anlegen <component_dca>`
+* 4.b: |img_dca_setting| :ref:`Attribute in für Eingabemaske anlegen <component_dca>`
     * bestimmt, welche Attribute in der jeweiligen Eingabemaske für eine Ansicht zur Verfügung stehen
 * 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
     * angelegte Render-Einstellung und Eingabemaske auswählen und speichern
@@ -84,15 +84,15 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
     * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
     * :ref:`Variante des Templates "metamodels_prerendered" <component_templates>` auswählen für individuelle Ausgabe
     * Einstellung der "jumpTo"-Seite für :ref:`Detailansicht <component_contentelements>`
-* 3.b: |img_rendersetting| :ref:`Atttribute in Render-Einstellung anpassen <component_rendersettings>`
+* 3.b: |img_rendersetting| :ref:`Attribute in Render-Einstellung anpassen <component_rendersettings>`
     * spezifische Einstellungen bei den Attributen vornehmen - z. B. :ref:`Ausgabe von Bildern inkl. Bildgröße <rst_cookbook_templates_fe_work_with_images>`
-    * :ref:`Variante des Templates "mm_atr_<typ>" <component_templates>` auswählen für individuelle Ausgabe
+    * :ref:`Variante des Templates "mm_attr_<typ>" <component_templates>` auswählen für individuelle Ausgabe
 * 4.a: |img_dca| :ref:`Eingabemaske anpassen <component_dca>`
     * Keys für Ausgabe von Filter, Suche, Sortierung, Limit angeben
     * Auswahl des Backendbereiches, wo das MetaModel auftauchen soll z. B. Inhalte oder eigener Bereich
     * Anzeige als Tabelle im Backend
     * Berechtigungen für Bearbeitung
-* 4.b: |img_dca_setting| :ref:`Atttribute für Eingabemaske anpassen <component_dca>`
+* 4.b: |img_dca_setting| :ref:`Attribute für Eingabemaske anpassen <component_dca>`
     * CSS-Klasse wie w50
     * Pflichtfeld, Nur lesen (Readonly)
     * Option, ob das Attribut in BE-Liste filterbar und/oder suchbar sein soll
@@ -137,7 +137,7 @@ Tipps:
 * für "MM-Starter" ist zu empfehlen, das Beispiel :ref:`"Das erste MetaModel" <mm_first_index>` aufzubauen
 * den :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` ggf. ausdrucken und bereit legen
 * Datentruktur grafisch darstellen - es müssen nicht alle Attribute eingetragen werden - es hilft beim Aufbau und
-  Kommunikation mit Kunden und Annfragen zum Support
+  Kommunikation mit Kunden und Anfragen zum Support
 * beim Anlegen der Models "von Außen nach Innen" vorgehen - im Beispiel oben also erst Abteilung und Projekte und dann
   Mitarbeiter - damit sind die Models beim Anlegen der Attribute für die Referenzen (hier die Einzelauswahl) schon
   in der Auswahl vorhanden
