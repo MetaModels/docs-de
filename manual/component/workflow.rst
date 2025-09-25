@@ -3,7 +3,7 @@
 Arbeitsablauf bei MetaModels
 ============================
 
-Der Arbeitsablauf zum Abbilden der eigenen Datentruktur in Metamodels untergliedert sich in einzelne Arbeitsschritte,
+Der Arbeitsablauf zum Abbilden der eigenen Datenstruktur in Metamodels untergliedert sich in einzelne Arbeitsschritte,
 die nacheinander für jedes MetaModel durchgeführt werden müssen. Die folgende Beschreibung richtet sich an Einsteiger
 in MetaModels, die aufgrund einer "best practice" erstellt wurde - versierte Benutzer werden bestimmte Schritte weiter
 zusammenfassen und gleich ergänzen.
@@ -136,7 +136,7 @@ Tipps:
 
 * für "MM-Starter" ist zu empfehlen, das Beispiel :ref:`"Das erste MetaModel" <mm_first_index>` aufzubauen
 * den :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` ggf. ausdrucken und bereit legen
-* Datentruktur grafisch darstellen - es müssen nicht alle Attribute eingetragen werden - es hilft beim Aufbau und
+* Datenstruktur grafisch darstellen - es müssen nicht alle Attribute eingetragen werden - es hilft beim Aufbau und
   Kommunikation mit Kunden und Anfragen zum Support
 * beim Anlegen der Models "von Außen nach Innen" vorgehen - im Beispiel oben also erst Abteilung und Projekte und dann
   Mitarbeiter - damit sind die Models beim Anlegen der Attribute für die Referenzen (hier die Einzelauswahl) schon
@@ -147,9 +147,9 @@ Tipps:
 * gleichartige Attribute nacheinander anlegen - bei "Speichern und neu" wird vorheriger Attributstyp beibehalten und
   spart die Auswahl
 * für "Hilfsangaben" wie Anrede, Maßeinheiten o. ä. muss man nicht jeweils ein MetaModel als Referenz anlegen - mit
-  z. B. :ref:`einem Hilfsmodel-Konstrukr kann man das auch lösen <rst_cookbook_specials_helper-models>`
+  z. B. :ref:`einem Hilfsmodel-Konstrukt kann man das auch lösen <rst_cookbook_specials_helper-models>`
 * nach Anlegen eines Models oder Attributes DB-Migration durchführen und Cache leeren
-* vor dem Start prüfen, ob man die Model bzw. Attribute mehrsprachig benötigt - ein späterere Wechsel ist nicht leicht
+* vor dem Start prüfen, ob man die Model bzw. Attribute mehrsprachig benötigt - ein späterer Wechsel ist nicht leicht
   möglich
 * das Anlegen der Attribute bei Render-Einstellung und Eingabemaske wird mit den Button "Alle hinzufügen" vereinfacht
 * es gibt eine Reihe von :ref:`Checklisten <rst_cookbook_checklists_index>`, die bei der Arbeit helfen
