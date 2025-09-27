@@ -1,7 +1,7 @@
 .. _rst_cookbook_specials_helper-models:
 
-Verschiedene Auswahldaten in einem MetaModel zusammen fassen
-============================================================
+Hilfsmodel - verschiedene Auswahldaten in einem MetaModel zusammen fassen
+=========================================================================
 
 Beim Aufbau einer Datenstruktur kommt es häufig vor, dass man einfache Auswahlen wie z. B. Anrede, Akad. Titel,
 Geschlecht, Farben, Maßeinheiten, Rabatte, usw. benötigt. Diese müsste man als einzelne Models anlegen und bei dem
@@ -10,7 +10,7 @@ gewünschten Model als Relation per Einzel- oder Mehrfachauswahl einbinden.
 Dies hätte zur Folge, dass man eine Vielzahl an Models anlegen müsste, die letztendlich jeweils nur aus zwei Attributen
 bestehen als Name und Alias.
 
-Den Aufbau und die Pflege dieser "Hilfsangaben" kann man vereinfachen, in dem die Daten in einem bzw. zwei Models
+Den Aufbau und die Pflege dieser "Hilfsangaben" kann man vereinfachen, in dem die Daten in einem Hilfsmodel-Konstrukt
 gepflegt werden und in der Eingabemaske über eine Filterung nur die passenden Werte anzeigt.
 
 Nachteil dieser Variante ist aber, dass man bei Anpassungen unflexibel ist und ggf. einzelne Wertebereiche wieder in
