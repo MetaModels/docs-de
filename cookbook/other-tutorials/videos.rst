@@ -10,6 +10,8 @@ Videoreihe von Almut Müller:
 
 Verschiedene Videos:
 
+* `Vortrag "Umsetzung einer Projektaufgabe mit MetaModels (MM I)" Contao-Konf 2025 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2025.html#mm-1>`_
+* `Vortrag "Sonderfunktionen in MetaModels (MM II)" Contao-Konf 2025 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2025.html#mm-2>`_
 * `Vortrag "MetaModels erweitern und ausbauen" Contao-Konf 2023 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
 * `Vortrag "MetaModels - Booster für den Content" Contao-Konf 2017 <https://www.e-spin.de/metamodels-vortrag-contao-konferenz-2017.html>`_
 * `Vortrag "Buchungssystem mit MetaModels" Contao-Konf 2016 <https://www.youtube.com/watch?v=jnDOyW0C4_c>`_
