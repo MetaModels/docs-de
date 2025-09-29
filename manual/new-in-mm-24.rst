@@ -51,6 +51,8 @@ Attribute
     * Support für Einsatz mit Popup-Widget in einer Kindtabelle
 * Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
+* Kombinierte Werte
+    * Option "Immer speichern" (alwaysSave) aktiviert - speichern auch ohne Werteänderung
 * Land
     * Änderung der Länderkürzel in Großbuchstaben
 * Langtext
@@ -66,6 +68,8 @@ Attribute
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
 * Übersetzter Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
+* Übersetzte Kombinierte Werte
+    * Option "Immer speichern" (alwaysSave) aktiviert - speichern auch ohne Werteänderung
 * Übersetzter Langtext
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Übersetzter Text
@@ -105,6 +109,7 @@ Frontend-Editing (FEE)
   in Contao 5 nicht mehr vorhanden ist
 * Unterstützung von mehrsprachigen MetaModels - in der FE-Maske gib es einen Sprachenwechsler wie im BE; siehe
   :ref:`FEE <extended_frontend_editing_multilanguage>`
+* Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen übersetzten Attributen
 
 
 Known-Issues
