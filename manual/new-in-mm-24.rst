@@ -32,8 +32,13 @@ oder CSS/JS oder vollständige Angaben beim Aufruf von Methoden z. B. ``\Contao\
 Bei den Bildgrößen gibt es verschiedene Standardvorgaben wie "Mitte-Mitte" nicht mehr - dafür eigene Bildgrößen
 definieren und z. B. bei den Rendersettings anpassen.
 
+Die Verlinkungen im CE und Modul zu Model, Filter usw. öffnen nun in einem separaten Tab im Browser.
+
 Für den TinyMCE kann man einen Link-Picker auf Detailseiten konfigurieren - siehe
 :ref:`rst_cookbook_specials_picker-for-tinymce`.
+
+Für die Suche der verwendeten Dateien wird die Erweiterung "Contao File Usage" unterstützt - siehe
+:ref:`rst_extended_file-usage`.
 
 
 Attribute
