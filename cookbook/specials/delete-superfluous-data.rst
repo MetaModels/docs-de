@@ -1,4 +1,4 @@
-.. _rst_cookbook_delete-superfluous-data:
+.. _rst_cookbook_specials_delete-superfluous-data:
 
 Löschen von überflüssigen Daten
 ===============================
