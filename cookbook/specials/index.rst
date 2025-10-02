@@ -16,3 +16,4 @@ Spezialaufgaben und deren Lösung mit MM.
     geocode-address-on-save.rst
     export-excel.rst
     register-services.rst
+    delete-superfluous-data.rst
