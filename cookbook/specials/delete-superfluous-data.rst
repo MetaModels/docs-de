@@ -6,7 +6,7 @@ Löschen von überflüssigen Daten
 .. note:: Vor dem Löschen unbedingt eine Datensicherung durchführen! - |br|
    z. B. mit ``php vendor/bin/contao-console contao:backup:create``
 
-Werden Models oder Attribute gelöscht kann es vorkommen, dass nicht alle Datensätze mit gelöscht werden. Das ist bei
+Werden Models oder Attribute gelöscht, kann es vorkommen, dass nicht alle Datensätze mitgelöscht werden. Das ist bei
 allen Attributen der Fall, die ihre Daten nicht direkt in der MetaModel-Tabelle ``mm_*`` speichern, sondern eigene
 Tabellen verwenden. Das ist bei folgenden Attributen der Fall:
 
