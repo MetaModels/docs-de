@@ -22,7 +22,7 @@ Tabellen verwenden. Das ist bei folgenden Attributen der Fall:
 * Übersetzter Text [tl_metamodel_translatedtext]
 * Übersetzte URL [tl_metamodel_translatedurl]
 
-Zum Anzeigen und Löschen gibt es ein :download:`Shell-Script (check-mm-values.sh) zum Download <_download/check-mm-values.sh>`.
+Zum Anzeigen und Löschen gibt es ein :download:`Shell-Script (check-mm-values.sh) zum Download </_download/check-mm-values.sh>`.
 
 Das Script muss in den Basisordner von Contao geladen und ausführbar gemacht werden. Dazu die Berechtigungen auf ``755``
 stellen - per SFTP-Programm oder auf Konsole mit ``chmod 755 check-mm-values.sh``.
