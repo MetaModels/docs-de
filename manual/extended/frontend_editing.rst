@@ -44,6 +44,7 @@ Projekt und auch die `finanzielle Unterstützung <https://now.metamodel.me/de/un
 wichtig!
 
 
+.. _rst_extended_frontend_editing_installation:
 Installation
 ------------
 
