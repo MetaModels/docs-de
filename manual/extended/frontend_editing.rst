@@ -29,7 +29,7 @@ keine direkte Aufgabe des FEE. Bei den entsprechenden Widget werden CSS-Klassen
 ausgegeben, anhand derer man per JavaScript verschiedene Widgets einbinden kann.
 
 Mit MM 2.2 stehen im Prinzip alle (einsprachigen) Attribute für ein Frontend-Editing zur Verfügung. Welche Attribute im
-FEE eingesetzt werden können, ist in der :ref: `Auflistung der Attribute <component_data-in-attributes>` zu finden
+FEE eingesetzt werden können, ist in der :ref:`Auflistung der Attribute <component_data-in-attributes>` zu finden
 
 Folgende Model-Typen werden aktuell noch nicht unterstützt:
 
