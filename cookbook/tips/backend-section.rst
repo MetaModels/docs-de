@@ -7,6 +7,8 @@ Den Zugriff auf die Eingabe der MetaModel-Daten möchte man häufig in einer eig
 unterbringen. Dafür muss man eine entsprechende Gruppe anlegen, der man in den Eigenschaften der Eingabe unter
 "Backend-Bereich" das oder die gewünschten Model zuweisen kann.
 
+|img_be-section|
+
 Dafür benötigt man ein SVG-Icon sowie eine Zuweisung per Contao-MenuEvent - geplant ist, das zukünftig über einen
 `Eintrag in der config.yaml konfigurieren <https://github.com/MetaModels/core/issues/1519>`_ zu können.
 
@@ -106,3 +108,6 @@ Der Listener im Pfad ``src/EventListener/BackendMenuListener.php`` ablegen und `
    ?>
 
 Der Listener und ein Dummy-SVG steht :download:`hier zum Download </_download/BE-section.zip>` bereit.
+
+
+.. |img_be-section| image:: /_img/screenshots/cookbook/tips/be-section_01.png
