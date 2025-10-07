@@ -39,6 +39,7 @@ Der Listener im Pfad ``src/EventListener/BackendMenuListener.php`` ablegen und `
    :linenos:
 
    <?php
+
    namespace App\EventListener;
 
    use Contao\CoreBundle\Event\MenuEvent;
