@@ -24,15 +24,15 @@ Texte
     "Lange Texte", "Langtext", `attribute_longtext <https://github.com/MetaModels/attribute_longtext>`_, "Textsuche, |br| Levenshtein, |br| Loupe", "**✓**", "bis 65535 Zeichen; |br| :ref:`anpassbar <rst_cookbook_inputmask_manipulate-select-values>`"
     "Text als Alias", "Alias", `attribute_alias <https://github.com/MetaModels/attribute_alias>`_, "Textsuche, |br| Einfache Abfrage, |br| Levenshtein, |br| Loupe", "**✓**", "bis 255 Zeichen; |br| Generierung aus ein |br| ein oder mehreren Attributen"
     "Kombinierte Werte", "Kombinierte Einträge", `attribute_combinedvalues <https://github.com/MetaModels/attribute_combinedvalues>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "**✓**", "bis 255 Zeichen; |br| Ergebnisstring per ``sprintf`` definierbar"
-    "Text als Tabelle", "Text-Tabelle", `attribute_tabletext <https://github.com/MetaModels/attribute_tabletext>`_, "Levenshtein, |br| Loupe", ":ref:`**✓** <rst_extended_frontend_editing_installation>`", "bis 255 Zeichen je Zelle"
-    "Text als URL", "URL", `attribute_url <https://github.com/MetaModels/attribute_url>`_, "Levenshtein, |br| Loupe", ":ref:`✓ <rst_extended_frontend_editing_installation>`", "bis 255 Zeichen; |br| Anzahl Zeichen für Titel und URL"
+    "Text als Tabelle", "Text-Tabelle", `attribute_tabletext <https://github.com/MetaModels/attribute_tabletext>`_, "Levenshtein, |br| Loupe", "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", "bis 255 Zeichen je Zelle"
+    "Text als URL", "URL", `attribute_url <https://github.com/MetaModels/attribute_url>`_, "Levenshtein, |br| Loupe", "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", "bis 255 Zeichen; |br| Anzahl Zeichen für Titel und URL"
     "*Mehrsprachig*"
     "Kurze Texte mehrsprachig", "Übersetzter Text", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "**✓**", "bis 255 Zeichen"
     "Lange Texte mehrsprachig", "Übersetzter Langtext", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "**✓**", "siehe Langtext"
     "Text als Alias mehrsprachig", "Übersetzter Alias", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "**✓**", "siehe Alias"
     "Kombinierte |br| Werte mehrsprachig", "Übersetzte |br| Kombinierte Einträge", `attribute_translatedcombinedvalues <https://github.com/MetaModels/attribute_translatedcombinedvalues>`_, "siehe |br| Kombinierte Einträge", "**✓**", "siehe Kombinierte Einträge"
-    "Text als |br| Tabelle mehrsprachig", "Übersetzte |br| Text-Tabelle", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", ":ref:`**✓** <rst_extended_frontend_editing_installation>`", "siehe Text-Tabelle"
-    "Text als |br| URL mehrsprachig", "Übersetzte URL", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", ":ref:`**✓** <rst_extended_frontend_editing_installation>`", "siehe URL"
+    "Text als |br| Tabelle mehrsprachig", "Übersetzte |br| Text-Tabelle", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", "siehe Text-Tabelle"
+    "Text als |br| URL mehrsprachig", "Übersetzte URL", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", "siehe URL"
 
 Zahlen
 ------
@@ -53,9 +53,9 @@ Dateien
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "FEE", "Bemerkung"
    :widths: 10, 10, 10, 10, 10, 10
 
-    "Datei", "Datei", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "✓ Upload", "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von :ref:`Bildern ist Bildgröße <rst_cookbook_templates_fe_work_with_images>` wählbar"
+    "Datei", "Datei", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "**✓** Upload", "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von :ref:`Bildern ist Bildgröße <rst_cookbook_templates_fe_work_with_images>` wählbar"
     "*Mehrsprachig*"
-    "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "✓ Upload", "siehe Datei"
+    "Datei mehrsprachig", "Übersetzte Datei", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "**✓** Upload", "siehe Datei"
 
 Übergabe z. B. an ein :ref:`Rocksilid-Slider <rst_cookbook_templates_fe_template_ce_elements_rstslider>`.
 
@@ -68,7 +68,7 @@ Boolescher Wert
 
     "Boolescher Wert", "Checkbox", `attribute_checkbox <https://github.com/MetaModels/attribute_checkbox>`_, "Checkbox-Status", "**✓**", "Anzeige in BE-Liste als Toogle-Icon möglich"
     "*Mehrsprachig*"
-    "Boolescher Wert mehrsprachig", "Übersetzte Checkbox", `attribute_translatedcheckbox <https://github.com/MetaModels/attribute_translatedcheckbox>`_, "**✓**", "Übersetzter Checkbox-Status", "siehe Checkbox"
+    "Boolescher Wert mehrsprachig", "Übersetzte Checkbox", `attribute_translatedcheckbox <https://github.com/MetaModels/attribute_translatedcheckbox>`_, "Übersetzter Checkbox-Status", "**✓**", "siehe Checkbox"
 
 
 Relationen
@@ -90,8 +90,8 @@ Weitere Daten
 -------------
 
 .. csv-table::
-   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "Bemerkung"
-   :widths: 10, 10, 10, 10, 10
+   :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "FEE", "Bemerkung"
+   :widths: 10, 10, 10, 10, 10, 10
 
     "Farbwert", "Farbwähler", `attribute_color <https://github.com/MetaModels/attribute_color>`_, , ":ref:`**✓** <rst_extended_frontend_editing_installation>`", "Opacity/Transparency auch wählbar; |br| Sortierung nach Farbe möglich; |br| :ref:`siehe Attribut Color <rst_extended_attribute_color>`"
     "Inhaltselemente", "Inhalt eines Artikels", `attribute_contentarticle <https://github.com/MetaModels/attribute_contentarticle>`_, , "**—**", "mehrere Inhaltselemente wie beim Artikel"
