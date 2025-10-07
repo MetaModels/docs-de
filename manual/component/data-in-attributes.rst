@@ -11,7 +11,7 @@ realen Daten wie z. B. Texte, Zahlen, Datum, PLZ usw. abspeichern kann. Dabei si
 Folgend ist eine Übersicht, mit welchen Attributen die gewünschten Daten gespeichert werden können. Zusätzlich ist bei
 "Filterregel" angegeben, welche :ref:`Filterregeln für die Filterung/Suche <component_filter>` im Frontend verwendet
 werden können. Zudem ist aufgeführt, welche Attribute für das :ref:`Frontend-Editing (FEE) <rst_extended_frontend_editing>`
-zur Verfügung stehen (**✓**) - ggf. sind :ref:`weitere Repositories zu installieren <rst_extended_frontend_editing_installation>`.
+zur Verfügung stehen (✔) - ggf. sind :ref:`weitere Repositories zu installieren <rst_extended_frontend_editing_installation>` (**✓**).
 
 Texte
 -----
