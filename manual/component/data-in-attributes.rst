@@ -93,17 +93,17 @@ Weitere Daten
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "FEE", "Bemerkung"
    :widths: 10, 10, 10, 10, 10, 10
 
-    "Farbwert", "Farbwähler", `attribute_color <https://github.com/MetaModels/attribute_color>`_, , ":ref:`**✓** <rst_extended_frontend_editing_installation>`", "Opacity/Transparency auch wählbar; |br| Sortierung nach Farbe möglich; |br| :ref:`siehe Attribut Color <rst_extended_attribute_color>`"
+    "Farbwert", "Farbwähler", `attribute_color <https://github.com/MetaModels/attribute_color>`_, , "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", "Opacity/Transparency auch wählbar; |br| Sortierung nach Farbe möglich; |br| :ref:`siehe Attribut Color <rst_extended_attribute_color>`"
     "Inhaltselemente", "Inhalt eines Artikels", `attribute_contentarticle <https://github.com/MetaModels/attribute_contentarticle>`_, , "**—**", "mehrere Inhaltselemente wie beim Artikel"
     "Ländernamen", "Land", `attribute_country <https://github.com/MetaModels/attribute_country>`_, , "**✓**", "mögliche Länder eingrenzbar"
     "Sprachenkürzel", "Sprachenschlüssel", `attribute_langcode <https://github.com/MetaModels/attribute_langcode>`_, , "**✓**", "mögliche Sprachen eingrenzbar"
     "Geo-Entfernung", "Geo-Entfernung", `attribute_geodistance <https://github.com/MetaModels/attribute_geodistance>`_, , "**—**", "Zusatzangabe für Sortierung |br| der Umkreissuche"
     "Sterne-Bewertung", "Bewertung", `attribute_rating <https://github.com/MetaModels/attribute_rating>`_, , "**—**", "Anzahl der Sterne wählbar"
-    "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`**✓** <rst_extended_frontend_editing_installation>`", ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
+    "MCW-Tabelle", "Tabelle multi (MCW)", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
     "Pin für Cowegis-Map", "Cowegis-Marker", `cowegis-layer <https://github.com/MetaModels/cowegis-layer>`_, , "**✓**", ":ref:`siehe Cowegis-Layer Integration für Marker <extended_cowegis-layer-marker>`"
     "*Mehrsprachig*"
     "Inhaltselemente |br| mehrsprachig", "Übersetzter |br| Inhalt eines Artikels", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "**—**", "siehe Inhalt eines Artikels"
-    "MCW-Tabelle |br| mehrsprachig", "Übersetzte |br| Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , ":ref:`**✓** <rst_extended_frontend_editing_installation>`", "siehe Tabelle multi (MCW)"
+    "MCW-Tabelle |br| mehrsprachig", "Übersetzte |br| Tabelle multi (MCW)", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , "**:ref:`✓ <rst_extended_frontend_editing_installation>`**", "siehe Tabelle multi (MCW)"
 
 Ausgabe z. B. als :ref:`CE-YouTube <rst_cookbook_templates_fe_template_ce_elements_youtube>`.
 
