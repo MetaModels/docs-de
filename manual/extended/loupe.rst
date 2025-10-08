@@ -38,6 +38,8 @@ Aktuell werden folgende Attribute indexiert:
 - Langtext
 - Übersetzter Text
 - Übersetzter Langtext
+- Einzelauswahl [select]
+- Mehrfachauswahl [tags]
 
 
 .. _sorting_loupe:
