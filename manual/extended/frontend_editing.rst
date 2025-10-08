@@ -420,13 +420,13 @@ Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
 
 .. |img_login| image:: /_img/screenshots/extended/frontend_editing/fee-login.png
 .. |img_liste| image:: /_img/screenshots/extended/frontend_editing/fee-liste.png
-   :width: 600px
+   :width: 700px
 
 .. |img_newfile| image:: /_img/screenshots/extended/frontend_editing/fee-newfile.png
-   :width: 400px
+   :width: 300px
 
 .. |img_editfile| image:: /_img/screenshots/extended/frontend_editing/fee-editfile.png
-   :width: 400px
+   :width: 300px
 
 .. |img_fee-dca-zuordnung| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung.png
 .. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung2.png
