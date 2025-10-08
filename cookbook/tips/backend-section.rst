@@ -13,7 +13,7 @@ Dafür benötigt man ein SVG-Icon sowie eine Zuweisung per Contao-MenuEvent - ge
 `Eintrag in der config.yaml konfigurieren <https://github.com/MetaModels/core/issues/1519>`_ zu können.
 
 SVG-Icons kann man sich z. B. bei `material.io <https://material.io/tools/icons/>`_ downloaden - Breite (width),
-Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Editor anpassen:
+Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Editor anpassen (Zeile 29 bis 33):
 
 .. code-block:: svg
    :linenos:
