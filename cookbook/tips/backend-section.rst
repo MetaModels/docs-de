@@ -13,7 +13,7 @@ Dafür benötigt man ein SVG-Icon sowie eine Zuweisung per Contao-MenuEvent - ge
 `Eintrag in der config.yaml konfigurieren <https://github.com/MetaModels/core/issues/1519>`_ zu können.
 
 SVG-Icons kann man sich z. B. bei `material.io <https://material.io/tools/icons/>`_ downloaden - Breite (width),
-Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Editor anpassen (Zeile 29 bis 33):
+Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Editor anpassen:
 
 .. code-block:: svg
    :linenos:
@@ -25,7 +25,7 @@ Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Edi
 Die Datei kann man z. B. unter ``files/backend/group_icon_mm-test.svg`` abspeichern (Ordner öffentlich machen).
 
 Weiterhin benötigt man einen Event-Listener, der den Eintrag erstellt - über die folgenden Parameter kann die
-Gruppe konfiguriert werden:
+Gruppe konfiguriert werden (Zeile 29 bis 33):
 
 * $nodeName - Alias des Eintrags
 * $nodeTitle - Titel
