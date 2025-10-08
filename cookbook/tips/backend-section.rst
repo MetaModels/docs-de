@@ -25,7 +25,7 @@ Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Edi
 Die Datei kann man z. B. unter ``files/backend/group_icon_mm-test.svg`` abspeichern (Ordner öffentlich machen).
 
 Weiterhin benötigt man einen Event-Listener, der den Eintrag erstellt - über die folgenden Parameter kann die
-Gruppe konfiguriert werden (Zeile 29 bis 33):
+Gruppe konfiguriert werden (Zeile 30 bis 34):
 
 * $nodeName - Alias des Eintrags
 * $nodeTitle - Titel
