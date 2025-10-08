@@ -82,7 +82,7 @@ Breadcrumb (Navigationspfad)
 
 Der letzte Navigationspunkt der Breadcrumb wird automatisch aus dem Seitentitel generiert. Hat man bei einer Detailseite
 den :ref:`Seitentitel dynamisch aus einem MM Attribut <rst_cookbook_tips_seo_metadata-title>` generiert, wird dieser
-in der Breadcrumb nicht angezeigt. Das liegt darin begründet, dass das FE-Modul für die Breadrumb üblicher weise vor
+in der Breadcrumb nicht angezeigt. Das liegt darin begründet, dass das FE-Modul für die Breadrumb üblicherweise vor
 der MM-Liste eingebaut ist und diese Information zu spät bzw. gar nicht erhält.
 
 Abhilfe schafft ein "BreadcrumbController", der die Breadcrumb erst später dem Rendering der Seite hinzufügt. Aktuell
