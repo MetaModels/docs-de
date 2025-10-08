@@ -397,6 +397,10 @@ Folgende Einstellungen stehen zur Verfügung:
    über die Standard-Contao-Auflösung; auf andere Daten der Eingabemaske kann mit ``{{post::<Attribut-Spaltenname>}}``
    zugegriffen werden
 
+.. note:: |sup*| Ab MM 2.4 gibt es den Inserttag ``{{post::<...>}}`` nicht mehr - auf die POST-Daten kann nun mit einem
+   Simple-Token ``##post::<Attribut-Spaltenname>##`` zugegriffen werden z. B. ``##post::lastname##`` - (eigene)
+   Inserttags werden aber auch weiterhin aufgelöst
+
 Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
 
 |img_fee-upload2|
