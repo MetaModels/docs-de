@@ -35,6 +35,7 @@ wird für die Filterung auf der Detailseite der Alias des Items verwendet. In de
 bzw. `Übersetzter Alias` kann die gewünschte Kombination aus anderen Attributwerten definiert werden.
 
 
+.. _rst_cookbook_tips_seo_metadata-title:
 Meta-Daten Title und Description
 ................................
 
@@ -73,6 +74,20 @@ vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z.B. mit folgende
 
 Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung stellen und die eingebundenen Services
 injecten.
+
+
+.. _rst_cookbook_tips_seo_breadcrumb:
+Breadcrumb (Navigationspfad)
+----------------------------
+
+Der letzte Navigationspunkt der Breadcrumb wird automatisch aus dem Seitentitel generiert. Hat man bei einer Detailseite
+den :ref:`Seitentitel dynamisch aus einem MM Attribut <rst_cookbook_tips_seo_metadata-title>` generiert, wird dieser
+in der Breadcrumb nicht angezeigt. Das liegt darin begründet, dass das FE-Modul für die Breadrumb üblicher weise vor
+der MM-Liste eingebaut ist und diese Information zu spät bzw. gar nicht erhält.
+
+Abhilfe schafft ein "BreadcrumbController", der die Breadcrumb erst später dem Rendering der Seite hinzufügt. Aktuell
+kann man `hier einen Beispielcode <https://gist.github.com/fritzmg/e7df2804365fe676b1d88f053a234707?permalink_comment_id=5698503#gistcomment-5698503>`_
+finden - `in Contao 5.7 wird das problem gefixt sein <https://youtu.be/nvIPd3OzXhs?t=1787>`_.
 
 
 .. _rst_cookbook_tips_seo_metadata-hreflang:
