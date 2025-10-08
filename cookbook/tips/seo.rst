@@ -87,7 +87,7 @@ der MM-Liste eingebaut ist und diese Information zu spät bzw. gar nicht erhält
 
 Abhilfe schafft ein "BreadcrumbController", der die Breadcrumb erst später dem Rendering der Seite hinzufügt. Aktuell
 kann man `hier einen Beispielcode <https://gist.github.com/fritzmg/e7df2804365fe676b1d88f053a234707?permalink_comment_id=5698503#gistcomment-5698503>`_
-finden - `in Contao 5.7 wird das problem gefixt sein <https://youtu.be/nvIPd3OzXhs?t=1787>`_.
+finden - `in Contao 5.7 wird das Problem gefixt sein <https://youtu.be/nvIPd3OzXhs?t=1787>`_.
 
 
 .. _rst_cookbook_tips_seo_metadata-hreflang:
