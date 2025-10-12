@@ -110,8 +110,9 @@ Frontend-Editing (FEE)
 * bei den Einstellungen der Eingabemaske für einen Datei-Upload werden bei den Widget-Modi je nach aktivierter
   Einstellung "Mehrfachbearbeitung" nur noch die passenden Einstellungen für Einzel- oder Mehrfachupload angezeigt - bei
   einer Umstellung beim Attribut muss das aber entsprechend beim Upload auch umgestellt werden
-* die Anpassung des Zielverzeichnisses oder Dateinamen mit dem Insert-Tag ``{{post::*}}`` ist nicht mehr möglich, da diese
-  in Contao 5 nicht mehr vorhanden ist
+* die Anpassung des Zielverzeichnisses oder Dateinamen mit dem Insert-Tag ``{{post::<attribute-spaltenname>}}`` ist
+  nicht mehr möglich, da dieser Tag in Contao 5 nicht mehr vorhanden ist - dafür kann nun ein Simple-Token eingesetzt
+  werden als ``##post::<attribute-spaltenname>##`` - :ref:`siehe FEE <extended_frontend_editing_upload>`
 * Unterstützung von mehrsprachigen MetaModels - in der FE-Maske gib es einen Sprachenwechsler wie im BE; siehe
   :ref:`FEE <extended_frontend_editing_multilanguage>`
 * Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen übersetzten Attributen
