@@ -64,6 +64,8 @@ Attribute
     * Migration für `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Mehrfachauswahl [tags]
     * Support für Einsatz in einer Kindtabelle
+* Tabelle-Multi (MCW)
+    * Support für ``'inputType' => 'fileTree'`` mit ``'multiple' => 'true'`` inkl. Verschieben von Dateien
 * Text
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 * Übersetzte Checkbox
@@ -77,6 +79,8 @@ Attribute
     * Option "Immer speichern" (alwaysSave) aktiviert - speichern auch ohne Werteänderung
 * Übersetzter Langtext
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
+* Übersetzte Tabelle-Multi (MCW)
+    * Support für ``'inputType' => 'fileTree'`` mit ``'multiple' => 'true'`` inkl. Verschieben von Dateien
 * Übersetzter Text
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
 
