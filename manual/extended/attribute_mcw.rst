@@ -33,17 +33,19 @@ Die Installation und Verwendung besteht aus den Punkten
 Anpassung der DCA-Konfigurationsdatei
 -------------------------------------
 
-Die DCA-Konfigurationsdatei `config.php` muss an einer geeigneten
-Stelle in der Contao-Installation abgelegt oder eine bestehende Datei
-mit den Angaben ergänzt werden. Das kann z.B. erfolgen in
+Die DCA-Konfigurationsdatei ``<mm-tabellenname>.php`` oder ``config.php`` muss an einer geeigneten Stelle in der
+Contao-Installation abgelegt oder eine bestehende Datei mit den Angaben ergänzt werden. Das kann z. B. erfolgen als
 
-* app/Resources/contao/config/ (ab Contao 4.4)
-* contao/config/ (ab Contao 4.9)
-* src/AppBundle/Resources/contao/config/ (eigenes Bundle)
+* contao/dca/<mm-tabellenname>.php
+* contao/config/config.php
 
-Diese ist Datei entsprechend den eigenen MetaModel-Parametern und den gewünschten
-Feldern mit einem Editor anzupassen - siehe
-`Contao-Wiki <http://de.contaowiki.org/MultiColumnWizard>`_.
+oder in einem eigenen Bundle in
+
+* src/AppBundle/Resources/contao/dca/<mm-tabellenname>.php
+* src/AppBundle/Resources/contao/config/config.php
+
+Diese ist Datei entsprechend den eigenen MetaModel-Parametern und den gewünschten Feldern mit einem Editor anzupassen -
+siehe `Contao-Wiki <http://de.contaowiki.org/MultiColumnWizard>`_.
 
 Eine Konfiguration könnte für das MetaModel "mm_my_table" mit dem MCW-Attribut "my_mcw"
 wie folgt aussehen:
@@ -52,7 +54,7 @@ wie folgt aussehen:
    :linenos:
    
    <?php
-   // /contao/config/config.php
+   // /contao/dca/mm_my_table.php
 
    $GLOBALS['TL_CONFIG']['metamodelsattribute_multi']['mm_my_table']['my_mcw'] = array(
       'minCount'     => 2,
@@ -93,6 +95,50 @@ Ansicht in der Eingabemaske:
 
 |img_input_mask|
 
+.. note:: ab MM 2.4 wird bei den beiden "MM-MCW-Attributen" auch der Inputtyp ``fileTree`` inkl. Mehrfachauswahl
+   Gallerieanzeige und Sortierbarkeit unterstützt.
+
+Die Konfiguration einer Bildauswahl inkl. individueller Sortierung sieht wie folgt aus:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // /contao/dca/mm_my_table.php
+
+   $GLOBALS['TL_CONFIG']['metamodelsattribute_multi']['mm_my_table']['my_mcw'] = [
+       'tl_class'     => 'clr',
+       'minCount'     => 0,
+       'columnFields' => [
+           'col_title'     => [
+               'label'     => 'Title',
+               'exclude'   => true,
+               'inputType' => 'text',
+               'eval'      => [
+                   'style'         => 'width:100%',
+                   'tl_class'      => 'my_class',
+                   'wrapper_style' => 'width:50%',
+               ]
+           ],
+           'col_images' => [
+               'label'     => 'Dateiauswahl',
+               'exclude'   => true,
+               'inputType' => 'fileTree',
+               'eval'      => [
+                   'filesOnly'     => true,
+                   'multiple'      => true,
+                   'fieldType'     => 'checkbox',
+                   'isGallery'     => true,
+                   'orderField'    => 'col_images',
+                   'extensions'    => \Contao\Config::get('validImageTypes'),
+                   'isSortable'    => true,
+                   'style'         => 'width:100%',
+                   'tl_class'      => 'my_class',
+                   'wrapper_style' => 'width:50%',
+               ]
+           ],
+       ],
+   ];
 
 .. |img_input_mask| image:: /_img/screenshots/extended/attribute_mcw/input_mask.jpg
 
