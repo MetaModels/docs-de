@@ -120,6 +120,9 @@ Frontend-Editing (FEE)
 * Unterstützung von mehrsprachigen MetaModels - in der FE-Maske gib es einen Sprachenwechsler wie im BE; siehe
   :ref:`FEE <extended_frontend_editing_multilanguage>`
 * Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen übersetzten Attributen
+* wenn Option "Statischer Parameter" in Filterregel gesetzt ist, dann in MM-Liste den Standardwert bei
+  "Filterwert für Attribut" prüfen - sofern keine Items in der Liste ausgegeben werden auf "ohne Datenwert [null]"
+  stellen
 
 
 Known-Issues
