@@ -158,6 +158,11 @@ Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nic
 Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.3 <new_in_mm230>` zusammengestellt - bitte
 beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm230>`.
 
+.. toctree::
+    :maxdepth: 1
+
+    new-in-mm-23.rst
+
 Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
 `DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u. a. bei MM für die Anzeigen
 im Backend zuständig ist und viele tolle Funktionen mitbringt.
