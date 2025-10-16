@@ -89,6 +89,12 @@ Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Fun
 beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-manager>` und XLIFF-Übersetzungen
 :ref:`component_translations`.
 
+.. toctree::
+    :maxdepth: 1
+
+    new-in-mm-24.rst
+
+
 .. seealso::
    Während der Entwicklungsphase bekommen die über git zur Verfügung gestellten Pakete bei einer Änderung
    immer neue Dateinamen. Diese sind in der composer.lock mit abgespeichert. Dadurch kann es vorkommen, dass
