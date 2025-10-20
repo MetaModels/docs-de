@@ -96,7 +96,7 @@ bzw. angepasst werden.
 
 Ist keine initiale Zentrierung angegeben, sollte man sicherstellen, dass die Karte durch andere Einstellungen sich
 entsprechend positioniert. Zum Beispiel kann das erfolgen, wenn man bei den aktivierten Layern (Marker) einer Karte
-die Option "Grenzen anpassen" aktiviert (s.u.).
+die Option "Grenzen festlegen" aktiviert (s. u.).
 
 Nach dem Speichern und Schließen gibt es einen neuen Listeneintrag mit der neuen Karte.
 
@@ -111,7 +111,7 @@ wechselt zu einem roten X-Icon |img_delete| und die Icons Stift |img_edit| und K
 öffnet die übliche Bearbeitungsmaske und über das Karten-Icon kann definiert werden, ob der Karten-Layer standardmäßig
 eingeblendet werden soll oder nicht.
 
-Sollen die Kartengrenzen auf einen Layer wie z. B. einen Marker-Layer reagieren, so ist die Option "Grenzen anpassen"
+Sollen die Kartengrenzen auf einen Layer wie z. B. einen Marker-Layer reagieren, so ist die Option "Grenzen festlegen"
 zu aktivieren (s.o.).
 
 Auch wenn ein Kartenlayer nicht als Standardlayer definiert ist - das Ion ist disabled |img_map_1| - werden die
@@ -390,6 +390,49 @@ nach der `Anzahl der enthaltenen Elemente <https://github.com/Leaflet/Leaflet.ma
 Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu sehen ist.
 
 |img_screenshot_11|
+
+
+Individuelle Anpassungen per JavaScript
+---------------------------------------
+
+Die Karte kann per JavaScript manipuliert werden z. B. um weitere Marker oder Polygone anzuzeigen. Dabei ist zu beachten,
+das bestimmte Aufrufe ggf. vom Cowegis-JavaScript "überschrieben" werden. Das ist z. B. der Fall, wenn bei den
+Karteneinstellungen "Grenzen festlegen" eine Option angewählt ist, hat die Methode ``fitBounds()`` keine Auswirkung.
+
+Die Option muss dann in den Einstellungen deaktiviert werden und über das eigene Script erfolgen. Mit dem folgenden
+Snippet kann man seine Anpassungen starten.
+
+.. code-block:: html
+   :linenos:
+
+   <script>
+       const element = document.getElementById("<?= $this->mapId ?>");
+
+       const initializeMarker = function () {
+           const map     = element.map;
+           const leaflet = element.leaflet;
+
+           // Own code...
+       }
+
+       if (element.map) {
+           initializeMarker();
+       } else {
+           element.addEventListener('cowegis:ready', initializeMarker);
+       }
+   </script>
+
+
+Debuging
+--------
+
+Während der Entwicklung bzw. Einrichtung des Layers kann es vorkommen, dass die Karte nicht mehr angezeigt wird. Häufig
+besteht der Fehler darin, dass das übermittelte JSON-Array nicht geparst werden kann. In den Dev-Tools des Browsers
+ist dann häufig die Meldung ``SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data``.
+
+In der Netzwerkanalyse sollte der Aufruf an die Cowegis-API zu finden sein - der lautet etwa wie folgt
+``https://domain.tld/cowegis/api/map/3?_locale=de&es5=1&=`` wobei die Zahl die ID der Karte ist. Diesen Aufruf kann man
+in einen eigenen Tabb im Browser öffnen und analysieren.
 
 
 Umbau von Leaflet-Maps Integration
