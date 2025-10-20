@@ -422,6 +422,9 @@ Snippet kann man seine Anpassungen starten.
        }
    </script>
 
+Ein Beispiel wäre eine Angepasste Anzeige nach einer Umkreissuche mit Anzeige des Suchpunktes und Umkreises.
+
+|img_screenshot_19|
 
 Debuging
 --------
@@ -487,3 +490,4 @@ Ein Dank für die Spenden* für die Erweiterung an:
 .. |img_screenshot_16| image:: /_img/screenshots/extended/cowegis_layer/screenshot_16.png
 .. |img_screenshot_17| image:: /_img/screenshots/extended/cowegis_layer/screenshot_17.png
 .. |img_screenshot_18| image:: /_img/screenshots/extended/cowegis_layer/screenshot_18.png
+.. |img_screenshot_19| image:: /_img/screenshots/extended/cowegis_layer/screenshot_19.png
