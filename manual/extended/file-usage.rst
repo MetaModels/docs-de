@@ -33,6 +33,18 @@ MetaModels wird die Sprache der Eingabemaske über einen GET-Parameter entsprech
 
 |img_mm_file-usage|
 
+Spenden
+-------
+
+Ein Dank für die Spenden* für die Erweiterung an (Zielsumme 2.613,75€):
+
+* `GUTcert <https://www.gut-cert.de/>`_: 340 €
+* `AntwortInternet <https://www.antwortinternet.com/>`_: 340 €
+* `AntwortInternet <https://www.antwortinternet.com/>`_: 340 €
+* `P KREATIV <https://p-kreativ.at/>`_: 250 €
+
+(*Spenden in Netto)
+
 .. |manual@metamodel.me| raw:: html
 
    <a href="mailto:manual@metamodel.me">auf Nachfrage</a>
