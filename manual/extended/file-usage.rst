@@ -19,8 +19,7 @@ erstellt. Aktuell werden folgende Attribute unterstützt:
 * Übersetzte Datei
 * Übersetzter Langtext
 
-Eine Unterstützung für Attribut "Text-Tabelle" und "Multi-Table (MCW)" kann
-<a href="mailto:manual@metamodel.me">auf Nachfrage</a> eingebaut werden.
+Eine Unterstützung für Attribut "Text-Tabelle" und "Multi-Table (MCW)" kann |manual@metamodel.me| eingebaut werden.
 
 Je nach Attribut wird nach der/den gespeicherten UUID(s) der Datei bzw. Dateien gesucht oder nach vorhandenen Inserttags
 mit Dateieinbindungen (`file`, `picture`, `figure`).
@@ -33,6 +32,10 @@ auch die Sprache. Über den Stift kommt man direkt zu dem entsprechenden Datensa
 MetaModels wird die Sprache der Eingabemaske über einen GET-Parameter entsprechend gesetzt.
 
 |img_mm_file-usage|
+
+.. |manual@metamodel.me| raw:: html
+
+   <a href="mailto:manual@metamodel.me">auf Nachfrage</a>
 
 .. |img_mm_file-usage| image:: /_img/screenshots/extended/file-usage/mm_file-usage.png
 
