@@ -19,10 +19,11 @@ erstellt. Aktuell werden folgende Attribute unterstützt:
 * Übersetzte Datei
 * Übersetzter Langtext
 
-Eine Unterstützung für Attribut "Multi-Table (MCW)" kann auf Nachfrage eingebaut werden.
+Eine Unterstützung für Attribut "Text-Tabelle" und "Multi-Table (MCW)" kann
+<a href="mailto:manual@metamodel.me">auf Nachfrage</a> eingebaut werden.
 
 Je nach Attribut wird nach der/den gespeicherten UUID(s) der Datei bzw. Dateien gesucht oder nach vorhandenen Inserttags
-mit Dateieinbindungen.
+mit Dateieinbindungen (`file`, `picture`, `figure`).
 
 Wie in `File-Usage ab Version 3.1.0 <https://github.com/inspiredminds/contao-file-usage/releases/tag/3.1.0>`_, werden
 textuellen Pfadangaben wie `/file/content/my_file.jpg` in den HTML-Attributen `href` und `src` z. B. in Texten gesucht.
