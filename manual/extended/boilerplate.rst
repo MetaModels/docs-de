@@ -3,6 +3,8 @@
 MetaModels "Boilerplate"
 ========================
 
+.. warning:: Die Angaben sind veraltet und können/sollten so nicht mehr genutzt werden!
+
 Mit der Erweiterung "Boilerplate" wird ein Contao-Modul für die
 Arbeit mit MetaModels installiert, die verschiedene Vorlagen
 für die individuelle Anpassung von MetaModels beinhaltet.
@@ -43,6 +45,8 @@ beschrieben.
 
 Eigener Navigationspunkt für das Backend
 ----------------------------------------
+
+.. note:: :ref:`rst_cookbook_tips_backend-section`
 
 Als grundlegende Funktion des Moduls ist die Implementierung
 eines eigenen Navigationspunkts aktiviert. Ist die Erweiterung
