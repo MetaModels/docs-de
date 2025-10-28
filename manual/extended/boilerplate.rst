@@ -35,10 +35,6 @@ sollte man lokal speichern und nach den Anpassungen auf den Server
 übertragen. Der Ordner "metamodelsboilerplate" muss dazu in den Ordner
 "/system/modules/" kopiert werden.
 
-.. warning:: Boilerplate noch in der Umstellung! |br|
-   Aktuell bitte die Dateien des "`PullRequest #3 <https://github.com/MetaModels/boilerplate/pull/3>`_"
-   einsetzen.
-
 Die möglichen Anpassungen sind in den folgenden Abschnitten
 beschrieben.
 
