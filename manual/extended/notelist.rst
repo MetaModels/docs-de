@@ -244,7 +244,7 @@ Dieses angelegte Formular steht nun in den Einstellungen der Merkliste zur VerfÃ
 die schon ein Merkliste-Formularelement beinhalten, werden nicht angezeigt (Rekursion!).
 
 In der Listendarstellung wird bei jedem Item nun das Formular inkl. einem "Add/Edit-Button"
-angezeigt. Die Daten werden vom Formular auch mit verarbeitet und z.B. per E-Mail mitgesendet.
+angezeigt. Die Daten werden vom Formular auch mit verarbeitet und z.B. per E-Mail mitgesendet (s. o.).
 
 |img_notelist_fe_list_with_form|
 
