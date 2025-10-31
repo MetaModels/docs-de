@@ -162,9 +162,11 @@ ob nach der Formularverarbeitung die Liste geleert werden soll.
 
 |img_nodelist_form_widget|
 
-Bei den Rendereinstellungen ist zu beachten, dass für die Ausgabe in einer E-Mail aktuell nur das Textformat unterstützt
-wird. Als Vorlage für die Rendereinstellungen stehen mit der Erweiterung die Dateien
-``metamodel_prerendered_notelists_form.html5`` und ``metamodel_prerendered_notelists_form.text`` zur Verfügung.
+Bei den Rendereinstellungen ist zu beachten, dass für die Ausgabe in einer Standard-E-Mail des Contao-Formulars nur das
+Textformat unterstützt wird - für Ausgaben als HTML-E-Mail sollte die Erweiterung
+`Notification-Center <https://github.com/terminal42/contao-notification_center>`_ eingesetzt werden. Als Vorlage für
+die Rendereinstellungen stehen mit der Erweiterung die Dateien ``metamodel_prerendered_notelists_form.html5`` und
+``metamodel_prerendered_notelists_form.text`` zur Verfügung.
 
 Mit denTemplates werden auch automatisch die Daten mit ausgegeben, die zusätzlichen jedem Datensatz der Merkliste
 mitgegeben werden können (Payload). Das ist über ein :ref:`"Mini"-Formular <rst_extended_notelist_additional_form>`
@@ -175,7 +177,22 @@ Merklisten-Namen vorhanden.
 
 Der Payload wird über die Knoten ``notelists_payload_values`` ``notelists_payload_labels`` übermittelt.
 
-Mite den Werten ist eine individuelle Gestaltung der Ausgabe im Formular-Widget als auch in der E-Mail möglich. Die
+Folgend nochmal die Hierarchie der Templates:
+
+Formularausgabe auf Webseite:
+
+* ``form_metamodels_notelist.html5`` - Wrapper aus Formularwidget mit Ausgabe aller Merklisten inkl. Name
+    * ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
+      ``metamodel_prerendered_notelists_form.html5`` auswählen für Ausgabe des Payloads
+
+Ausgabe in der E-Mail:
+
+* ``email_metamodels_notelist.text.html.twig`` - Wrapper aus Formularwidget mit Ausgabe aller Merklisten inkl. Name
+    * ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
+      ``metamodel_prerendered_notelists_form.html5`` auswählen für Ausgabe des Payloads
+
+
+Mit den Werten ist eine individuelle Gestaltung der Ausgabe im Formular-Widget als auch in der E-Mail möglich. Die
 vorhandenen Templates können wie üblich mit eigenen Varianten überschrieben werden.
 
 .. note:: Eine Bearbeitung z. B. Löschen der Elemente der Merkliste ist im Formular nicht möglich, da bei einem Reload
