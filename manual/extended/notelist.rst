@@ -187,7 +187,7 @@ Formularausgabe auf Webseite:
 
 Ausgabe in der E-Mail:
 
-* ``email_metamodels_notelist.text.html.twig`` - Wrapper aus Formularwidget mit Ausgabe aller Merklisten inkl. Name
+* ``email_metamodels_notelist.text.html.twig`` - Wrapper für E-Mail mit Ausgabe aller Merklisten inkl. Name
     * ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
       ``metamodel_prerendered_notelists_form.html5`` auswählen für Ausgabe des Payloads
 
