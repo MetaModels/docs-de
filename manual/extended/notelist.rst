@@ -191,6 +191,18 @@ Ausgabe in der E-Mail:
     - ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
       ``metamodel_prerendered_notelists_form.html5`` auswählen für Ausgabe des Payloads
 
+.. note:: Diese Option steht ab MM 2.4 mit Contao 5.3 zur Verfügung
+
+Für die Ausgabe als HTML-E-Mail sollte die Erweiterung
+`Notification-Center <https://github.com/terminal42/contao-notification_center>`_ eingesetzt werden. Hier stehen eigene
+`Simple-Tokens <https://docs.contao.org/5.x/manual/de/artikelverwaltung/simple-tokens/>`_ zur Verfügung, die mit
+"##mm::" starten - es gibt
+
+- ##mm::notelist_name::<id-notelist>## - Ausgabe des NL-Titels für ID als Text
+- ##mm::notelist::<id-notelist>::<id-rendersetting>## - Ausgabe der NL-Items für ID mit Rendersetting-ID als Text
+- ##mm::notelist::<id-notelist>::<id-rendersetting>::html## - Ausgabe der NL-Items für ID mit Rendersetting-ID als HTML
+
+Bei der Eingabe von "##mm" werden die möglichen Tokens angezeigt.
 
 Mit den Werten ist eine individuelle Gestaltung der Ausgabe im Formular-Widget als auch in der E-Mail möglich. Die
 vorhandenen Templates können wie üblich mit eigenen Varianten überschrieben werden.
