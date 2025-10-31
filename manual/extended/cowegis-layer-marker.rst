@@ -435,7 +435,7 @@ ist dann häufig die Meldung ``SyntaxError: JSON.parse: unexpected character at 
 
 In der Netzwerkanalyse sollte der Aufruf an die Cowegis-API zu finden sein - der lautet etwa wie folgt
 ``https://domain.tld/cowegis/api/map/3?_locale=de&es5=1&=`` wobei die Zahl die ID der Karte ist. Diesen Aufruf kann man
-in einen eigenen Tabb im Browser öffnen und analysieren.
+in einen eigenen Tab im Browser öffnen und analysieren.
 
 
 Umbau von Leaflet-Maps Integration
