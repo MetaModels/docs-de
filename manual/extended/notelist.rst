@@ -198,9 +198,9 @@ Für die Ausgabe als HTML-E-Mail sollte die Erweiterung
 `Simple-Tokens <https://docs.contao.org/5.x/manual/de/artikelverwaltung/simple-tokens/>`_ zur Verfügung, die mit
 "##mm::" starten - es gibt
 
-- ##mm::notelist_name::<id-notelist>## - Ausgabe des NL-Titels für ID als Text
-- ##mm::notelist::<id-notelist>::<id-rendersetting>## - Ausgabe der NL-Items für ID mit Rendersetting-ID als Text
-- ##mm::notelist::<id-notelist>::<id-rendersetting>::html## - Ausgabe der NL-Items für ID mit Rendersetting-ID als HTML
+- ``##mm::notelist_name::<id-notelist>##`` - Ausgabe des NL-Titels für ID als Text
+- ``##mm::notelist::<id-notelist>::<id-rendersetting>##`` - Ausgabe der NL-Items für ID mit Rendersetting-ID als Text
+- ``##mm::notelist::<id-notelist>::<id-rendersetting>::html##`` - Ausgabe der NL-Items für ID mit Rendersetting-ID als HTML
 
 Bei der Eingabe von "##mm" werden die möglichen Tokens angezeigt.
 
