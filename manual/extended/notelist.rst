@@ -40,7 +40,7 @@ Voraussetzungen für die Installation:
 **Contao 5.3:**
 
 .. note:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
-   Fundrasingsumme von 4.000€ frei geschaltet. |br|
+   Fundrasingsumme von 3.685€ frei geschaltet. |br|
    Für einen Zugang bitte eine E-Mail an info@e-spin.de
 
 * ^PHP 8.2
@@ -353,6 +353,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 **Version 2.4:**
 
 * `dpmed GmbH <https://www.dpmed.de>`_: 350 €
+* `afm werbestudio & agentur <https://www.afm-werbestudio.de/>`_: 350 €
 
 
 **Version 2.0 bis 2.3:**
