@@ -181,14 +181,14 @@ Folgend nochmal die Hierarchie der Templates:
 
 Formularausgabe auf Webseite:
 
-* ``form_metamodels_notelist.html5`` - Wrapper aus Formularwidget mit Ausgabe aller Merklisten inkl. Name
-    * ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
+- ``form_metamodels_notelist.html5`` - Wrapper aus Formularwidget mit Ausgabe aller Merklisten inkl. Name
+    - ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
       ``metamodel_prerendered_notelists_form.html5`` auswählen für Ausgabe des Payloads
 
 Ausgabe in der E-Mail:
 
-* ``email_metamodels_notelist.text.html.twig`` - Wrapper für E-Mail mit Ausgabe aller Merklisten inkl. Name
-    * ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
+- ``email_metamodels_notelist.text.html.twig`` - Wrapper für E-Mail mit Ausgabe aller Merklisten inkl. Name
+    - ``metamodel_prerendered.html5`` - Listentemplate aus dem ausgewählten Rendersettings; alternativ das Template
       ``metamodel_prerendered_notelists_form.html5`` auswählen für Ausgabe des Payloads
 
 
@@ -329,7 +329,6 @@ Known Issues and Next Features
 ------------------------------
 
 * Seite(n) mit Merkliste/Notelist dürfen nicht gecached werden
-* Datenübergabe an Formular nur als Text möglich - for HTML-Ausgabe Workaround mit Notification Center möglich
 * in Contao ab 4.9 können die Templates mit den Extensions ``.text`` und ``.twig`` nicht mehr im Bereich Templates
   erzeugt werden, da Contao das nicht mehr unterstützt - die Dateien per SSH/SFTP oder Lokal anlegen
 
