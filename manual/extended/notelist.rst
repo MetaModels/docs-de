@@ -139,6 +139,7 @@ gehören, sieht die Liste wie folgt aus:
 |img_notelist_fe_list_with_filter|
 
 
+.. _rst_extended_notelist_show_at_form:
 Datenanzeige und Übernahme im Formular
 --------------------------------------
 
@@ -244,7 +245,8 @@ Dieses angelegte Formular steht nun in den Einstellungen der Merkliste zur Verf�
 die schon ein Merkliste-Formularelement beinhalten, werden nicht angezeigt (Rekursion!).
 
 In der Listendarstellung wird bei jedem Item nun das Formular inkl. einem "Add/Edit-Button"
-angezeigt. Die Daten werden vom Formular auch mit verarbeitet und z.B. per E-Mail mitgesendet (s. o.).
+angezeigt. Die Daten werden vom Formular auch mit verarbeitet und z.B. per E-Mail mitgesendet
+(:ref:`s. o. <rst_extended_notelist_show_at_form>`).
 
 |img_notelist_fe_list_with_form|
 
