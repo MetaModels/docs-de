@@ -19,40 +19,7 @@ Die Auszeichnungen können z. B. mit folgenden Tools geprüft werden:
 * `Rich-Suchergebnisse <https://search.google.com/test/rich-results>`_
 * `Schema-Validierung <https://validator.schema.org/>`_
 
-Mehr zum Thema ist auf der Seit :ref`rst_cookbook_tips_seo` zu finden.
-
-
-Auszeichnung mit ``Microdata``
-------------------------------
-
-.. code-block:: php
-   :linenos:
-
-   <?php if (count($this->data)): ?>
-       <div class="layout_full">
-           <?php foreach ($this->data as $arrKey => $arrItem): ?>
-               <div class="item <?= $arrItem['class'] ?>" itemscope itemtype="https://schema.org/JobPosting">
-                   <h2 itemprop="title"><?= $arrItem['text']['title'] ?></h2>
-                   <div>
-                       <p><strong>Location:</strong> <span itemprop="jobLocation" itemscope
-                                                           itemtype="https://schema.org/Place">
-                               <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                               <span itemprop="addressLocality"><?= $arrItem['text']['city'] ?></span>
-                                   <span itemprop="addressRegion"><?= $arrItem['text']['region'] ?></span>
-                               </span>
-                           </span>
-                       </p>
-                   </div>
-                   ...
-               </div>
-           <?php endforeach; ?>
-       </div>
-   <?php else : ?>
-       <?php $this->block('noItem'); ?>
-       <p class="info"><?= $this->noItemsMsg ?></p>
-       <?php $this->endblock(); ?>
-   <?php endif; ?>
-
+Mehr zum Thema ist auf der Seit :ref:`rst_cookbook_tips_seo` zu finden.
 
 Auszeichnung mit ``JSON-LD``
 ----------------------------
@@ -125,3 +92,38 @@ weiteren Auszeichnungen ergänzt werden.
 
 Wenn mehrere Datensätze an den Graphen eingefügt werden - z. B. bei einer MM-Listenausgabe - ist die Übergabe einer
 eindeutigen Kennung notwendig ``$jsonLdGraph?->add($schemaData, <Unique-ID>)``.
+
+
+Auszeichnung mit ``Microdata``
+------------------------------
+
+Für die Auszeichnung per "Microdata" bedarf es umfangreicherer Anpassungen des Templates - die Einbindung als JSON-LD
+ist daher zu emplfehlen.
+
+.. code-block:: php
+   :linenos:
+
+   <?php if (count($this->data)): ?>
+       <div class="layout_full">
+           <?php foreach ($this->data as $arrKey => $arrItem): ?>
+               <div class="item <?= $arrItem['class'] ?>" itemscope itemtype="https://schema.org/JobPosting">
+                   <h2 itemprop="title"><?= $arrItem['text']['title'] ?></h2>
+                   <div>
+                       <p><strong>Location:</strong> <span itemprop="jobLocation" itemscope
+                                                           itemtype="https://schema.org/Place">
+                               <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                               <span itemprop="addressLocality"><?= $arrItem['text']['city'] ?></span>
+                                   <span itemprop="addressRegion"><?= $arrItem['text']['region'] ?></span>
+                               </span>
+                           </span>
+                       </p>
+                   </div>
+                   ...
+               </div>
+           <?php endforeach; ?>
+       </div>
+   <?php else : ?>
+       <?php $this->block('noItem'); ?>
+       <p class="info"><?= $this->noItemsMsg ?></p>
+       <?php $this->endblock(); ?>
+   <?php endif; ?>
