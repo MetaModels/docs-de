@@ -126,6 +126,7 @@ gewünschter Position eigene Navigationslinks (siehe ``getSublinks()``) einzubau
            $subLinkList = '<ul class="level_2">';
            foreach ($parsed as $item) {
                $href = $item['actions']['jumpTo']['href'];
+               // Possibly clean up the path+href from GET parameters or anchor links.
                if ($path !== $href) {
                    $subLinkList .= sprintf(
                        '<li><a href="%1$s" title="%2$s">%2$s</a></li>',
