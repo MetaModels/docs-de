@@ -98,7 +98,7 @@ Auszeichnung mit ``Microdata``
 ------------------------------
 
 Für die Auszeichnung per "Microdata" bedarf es umfangreicherer Anpassungen des Templates - die Einbindung als JSON-LD
-ist daher zu emplfehlen.
+ist daher zu empfehlen.
 
 .. code-block:: php
    :linenos:
