@@ -4,15 +4,15 @@ Detailseiten in der Contao-Navigation anzeigen
 ==============================================
 
 In dem FE-Modul der Contao-Navigation werden nur die Seiten als Navigationspunkt ausgegeben, die sich auch im Seitenbaum
-befinden z. B. ``/produkte/uebersicht``. Möchte man zusätzlich zu den Contao-Seiten z. B. auch Detailseiten wie zum
-Beispiel ``/produkt/detail/artikelnummer/1364`` anzeigen, obwohl es nur die Seite ``/produkt/detail`` im Seitenbaum gibt,
-kann man verschiedene Wege dafür gehen.
+befinden z. B. ``/produkte/uebersicht``. Möchte man zusätzlich zu den Contao-Seiten auch Detailseiten wie zum Beispiel 
+``/produkt/detail/artikelnummer/1364`` anzeigen, obwohl es nur die Seite ``/produkt/detail`` im Seitenbaum gibt, kann man
+verschiedene Wege dafür gehen.
 
 
 Eigene Seiten im Seitenbaum mit Alias für Weiterleitung
 -------------------------------------------------------
 
-Wenn es die Seite ``/produkt/detail`` als Contao Seite gibt bei der über die Slugparameter ``artikelnummer/1364`` der
+Wenn es die Seite ``/produkt/detail`` als Contao Seite gibt, bei der über die Slugparameter ``artikelnummer/1364`` der
 gewünschte Artikel angezeigt wird, kann man eine neue Seite im Seitenbaum an der gewünschten Stelle für die
 Navigation einbauen z. B. mit dem Titel "Artikel 1364". Der Alias der Seite wird aber manuell auf den Alias der
 Detailansicht gesetzt ``/produkt/detail/artikelnummer/1364``. Damit beim Aufruf des Navigationslinks für "Artikel 1364"
