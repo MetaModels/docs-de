@@ -34,6 +34,10 @@ definieren und z. B. bei den Rendersettings anpassen.
 
 Die Verlinkungen im CE und Modul zu Model, Filter usw. öffnen nun in einem separaten Tab im Browser.
 
+Der MM-Core unterstützt nun ein individuelles
+"`route_prefix <https://docs.contao.org/5.x/manual/de/system/einstellungen/#zus%C3%A4tzliche-backend-einstellungen>`_",
+um das Backend statt mit ``contao/`` z. B. mit ``admin/`` aufrufen zu können.
+
 Für den TinyMCE kann man einen Link-Picker auf Detailseiten konfigurieren - siehe
 :ref:`rst_cookbook_specials_picker-for-tinymce`.
 
