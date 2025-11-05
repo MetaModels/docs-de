@@ -26,8 +26,8 @@ ParseTemplateListener zum Anpassen der Navigation
 -------------------------------------------------
 
 Mit dem `ParseTemplateListener <https://docs.contao.org/5.x/dev/reference/hooks/parseTemplate/>`_ kann das Template
-``nav_default`` vor der "Auslieferung" noch manipuliert werden. Damit ist es möglich, an gewünschter Position eigene
-Navigationslinks (siehe ``getSublinks()``) einzubauen. Folgend ein Beispielcode:
+``nav_default`` (oder eigenen Varianten davon) vor der "Auslieferung" noch manipuliert werden. Damit ist es möglich, an
+gewünschter Position eigene Navigationslinks (siehe ``getSublinks()``) einzubauen. Folgend ein Beispielcode:
 
 .. code-block:: php
    :linenos:
