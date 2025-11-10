@@ -61,7 +61,8 @@ ergänzt:
     echo "DEBUG ENDE -->\n";
     ?>
 
-Das Template sollte anschließend mit den folgenden Zeilen beginnen:
+Das Template sollte anschließend mit den folgenden Zeilen beginnen - zur besseren Ansicht, auf Quelltextansicht
+umstellen (Strg + u | Cmd + Alt + u):
 
  
 .. code-block:: html
@@ -101,6 +102,7 @@ Das Template sollte anschließend mit den folgenden Zeilen beginnen:
     $arrItem['jumpTo'] = array();
     </pre>
     DEBUG ENDE -->
+    ...
    </html>
 
 Im Template könnte dann z.B. die Ausgabe der Abteilung so aussehen:
