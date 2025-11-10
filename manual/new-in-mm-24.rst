@@ -99,6 +99,8 @@ Filter
     * :ref:`ersetzt den Filter "Filter-Parent" <rst_extended_filter_by_related>`
     * die Filterregel ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als
       Relationen ist eine Einzelauswahl (Select) oder Kindtabelle möglich.
+* Umkreissuche (Perimeterseach)
+    * die Map-Provider ``GoogleMaps`` und ``OpenStreetMaps`` benötigen beim Aufruf als Parameter ein ``HttpClientInterface``
 * Wert von/bis für ein Attribut (from-to)
     * Min- und Max-Werte stehen im Template als ``optionsMin`` und ``optionsMax`` zur Verfügung
     * neues Template mit Typ ``date`` als ``mm_filteritem_datepicker.html5``
@@ -159,6 +161,8 @@ im Blick behalten werden:
 * wenn Option "Statischer Parameter" in Filterregel gesetzt ist, dann in MM-Liste den Standardwert bei
   "Filterwert für Attribut" prüfen - sofern keine Items in der Liste ausgegeben werden auf "ohne Datenwert [null]"
   stellen
+* bei eigenen Abfragen für die Umkreissuche bzw. Ermittlung der Geokoordinaten, bei dem Map-Provider ein
+  ``HttpClientInterface`` als Parameter mit übergeben
 
 
 Re-Finanzierung
