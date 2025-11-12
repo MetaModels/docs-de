@@ -275,7 +275,8 @@ steht dafür ein Eventlistener zur Verfügung.
 Mit dem Eventlistener kann z.B. ein Rückmeldung an die Webseite erfolgen oder
 ein Logging/Tracking der Aktionen.
 
-Als Beispiel für eine Rückmeldung ein Listener wie folgt erstellt werden:
+Als Beispiel für eine Rückmeldung kann ein Listener wie folgt erstellt werden (siehe auch
+:ref:`rst_cookbook_specials_register-services`):
 
 .. code-block:: php
    :linenos:
@@ -327,7 +328,7 @@ erfolgen - z. B. mit folgenden Code in einem eigenen Template als ce_html_messag
    :linenos:
    
    <?php
-   $message = \Message::generateUnwrapped(TL_MODE, true);
+   $message = \Contao\Message::generateUnwrapped(null, true);
    ?>
    <?php if ($message): ?>
    <div class="alert alert-primary" role="alert">
