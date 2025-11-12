@@ -176,3 +176,12 @@ Mit diesen "Hilfsdaten" kann eine Suchmaschine die Inhalte z.B. einer FAQ-Ausgab
 Wohnungsanzeige, Kochrezept usw. zuordnen.
 
 Wie diese Daten eingebaut werden können, steht im Artikel ":ref:`rst_cookbook_templates_fe_template_schema_org`".
+
+Möchte man die Bilder aus Attribut Datei - wie bei Contao üblich - auch mit in den JSON-LD-Daten aufgeführt haben,
+stehen ein entsprechendes Template ``mm_attr_file_contao_image.html5`` zur Verfügung - das muss in den Rendereinstellungen
+für das Attribut ausgewählt oder in das eigene Template übernommen werden.
+
+Zudem gibt es ein Template ``mm_attr_file_contao_image_ofpage.html5``, welches zusätzlich das erste Bild als
+``primaryImageOfPage`` mit in den JSON_LD-Daten mit einpflegt. Ist diese Bildangabe vorhanden, wird dieses Bild z. B.
+bei den Ergebnissen der Contao-Suche mit ausgegeben. Dies erfolgt analog der Detailansichten der News und Events von
+Contao.

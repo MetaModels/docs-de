@@ -56,6 +56,10 @@ Attribute
       :ref:`siehe "Cowegis-Layer Integration für Marker" <extended_cowegis-layer-marker>`
 * Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+    * zwei neue Templates ``mm_attr_file_contao_image.html5`` für die Standardausgabe wie in Contao, was auch die
+      Ausgabe der JSON-LD-Daten beinhaltet sowie ``mm_attr_file_contao_image_ofpage.html5`` für die Standardausgabe
+      wie in Contao sowie wird das erste Bild als ``primaryImageOfPage`` ausgegeben; siehe auch
+      :ref:`SEO-Anpassungen <rst_cookbook_tips_seo_structured-data>`
 * Einzelauswahl [select]
     * Support für Einsatz mit Popup-Widget in einer Kindtabelle
 * Inhalt eines Artikels
@@ -77,6 +81,10 @@ Attribute
     * Template ``mm_attr_translatedcheckbox_icon.html5`` für Anzeige im Backend als ☑ bzw. ☐ in der Listenansicht
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
+    * zwei neue Templates ``mm_attr_file_contao_image.html5`` für die Standardausgabe wie in Contao, was auch die
+      Ausgabe der JSON-LD-Daten beinhaltet sowie ``mm_attr_file_contao_image_ofpage.html5`` für die Standardausgabe
+      wie in Contao sowie wird das erste Bild als ``primaryImageOfPage`` ausgegeben; siehe auch
+      :ref:`SEO-Anpassungen <rst_cookbook_tips_seo_structured-data>`
 * Übersetzter Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
 * Übersetzte Kombinierte Werte
