@@ -25,13 +25,13 @@ für die Umsortierung zu generieren. Es gibt einen "Toggle-Link" der jeweils in 
 umschaltet sowie jeweils für Ab- und Aufsteigend einen Link - entsprechende CSS-Klassen und ein Aktiv-Parameter
 wird auch übergeben. Man kann sich den kompletten Link inkl. CSS-Klassen direkt auch generieren lassen.
 
-Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
+Folgendes Snippet als Beispiel für die Aufrufe des Attributs "Name" mit Spaltenname ``name``:
 
 .. code-block:: php
    :linenos:
 
    <?php
-   //..
+   // Variante 1 mit 'generateSortingLink':
    <?php if ($sortingLinkToggle = $this->generateSortingLink('name', 'toggle')): ?>
    <a href="<?= $sortingLinkToggle['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>" data-escargot-ignore rel="nofollow"><?= $sortingLinkToggle['label'] ?> (toggle)</a><br>
    <?php endif; ?>
@@ -41,6 +41,7 @@ Folgendes Snippet als Beispiel für die Aufrufe des Attributs "name":
    <?php if ($sortingLinkDesc = $this->generateSortingLink('name', 'desc')): ?>
    <a href="<?= $sortingLinkDesc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>" data-escargot-ignore rel="nofollow"><?= $sortingLinkDesc['label'] ?> (desc)</a><br>
    <?php endif; ?>
+   // Variante 2 mit 'renderSortingLink':
    <?= $this->renderSortingLink('name', 'toggle') ?> (toggle)<br>
    <?= $this->renderSortingLink('name', 'asc') ?> (asc)<br>
    <?= $this->renderSortingLink('name', 'desc') ?> (desc)<br>
