@@ -38,6 +38,10 @@ Der MM-Core unterstützt nun ein individuelles
 "`route_prefix <https://docs.contao.org/5.x/manual/de/system/einstellungen/#zus%C3%A4tzliche-backend-einstellungen>`_",
 um das Backend statt mit ``contao/`` z. B. mit ``admin/`` aufrufen zu können.
 
+Bei den Frontendausgaben wurde für sichere JavaScripts und Inline-Styles der Support für die Content Security Policy
+(CSP) eingebaut - `mehr dazu im Newsletter vom November 2025
+<https://now.metamodel.me/de/mm-eap-newsletter-2-4/details/eap-info-mm-2-4-november-i-2025>`_
+
 Für den TinyMCE kann man einen Link-Picker auf Detailseiten konfigurieren - siehe
 :ref:`rst_cookbook_specials_picker-for-tinymce`.
 
@@ -134,6 +138,7 @@ Frontend-Editing (FEE)
 * Unterstützung von mehrsprachigen MetaModels - in der FE-Maske gib es einen Sprachenwechsler wie im BE; siehe
   :ref:`FEE <extended_frontend_editing_multilanguage>`
 * Auswahlmöglichkeit der Form-Templates für die Eingabemaske (FEE) bei allen übersetzten Attributen
+* Support für die Content Security Policy (CSP)
 
 
 Known-Issues
@@ -159,12 +164,13 @@ im Blick behalten werden:
 * Änderung der Templates bei Datei und übersetzte Datei für Ausgabe der Metadaten
 * Check der eigenen Programmierungen an Contao 5 (s.o.)
 * bei FEE mit Dateiupload, Widget-Modus bei Einstellungen des Atttributs in der Eingabemaske prüfen (s. o.)
+* bei FFE und Dateiupload: prüfen ob Insert-Tag ``{{post::*}}`` verwendet wurde und anpassen (s. o.)
+* bei FEE und Link zum Löschen eines Items die Änderungen durch den CSP-Support beachten und ggf. CSS anpassen (S. o.)
 * für Dark-Mode ggf. weitere Varianten der eigenen Icons mit Suffix "--dark" anlegen - z. B. zu
   `flag_enabled.svg` und `flag_disabled.svg` ein `flag_enabled--dark.svg` und `flag_disabled--dark.svg` - siehe
   `EAP-News Oktober II 2024 <https://now.metamodel.me/de/mm-eap-newsletter-2-4/details/eap-info-mm-2-4-oktober-ii-2024>`_
 * bei Attribut Land wurden die Schreibweisen der Länderkürzel auf Großbuchstaben wie in Contao geändert - vorhandene
   Daten werden mit einer Migration angepasst; ggf. eigene Prüfungen oder Speicherungen anpassen
-* bei FFE und Dateiupload: prüfen ob Insert-Tag ``{{post::*}}`` verwendet wurde und anpassen (s. o.)
 * Auswahl der Bildgrößen prüfen - verschiedene Standardvorgaben wie "Mitte-Mitte" gibt es nicht mehr
 * wenn Option "Statischer Parameter" in Filterregel gesetzt ist, dann in MM-Liste den Standardwert bei
   "Filterwert für Attribut" prüfen - sofern keine Items in der Liste ausgegeben werden auf "ohne Datenwert [null]"
