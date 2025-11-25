@@ -41,10 +41,12 @@ Folgendes Snippet als Beispiel für die Aufrufe des Attributs "Name" mit Spalten
    <?php if ($sortingLinkDesc = $this->generateSortingLink('name', 'desc')): ?>
    <a href="<?= $sortingLinkDesc['href'] ?>" class="<?= $sortingLinkToggle['class'] ?>" data-escargot-ignore rel="nofollow"><?= $sortingLinkDesc['label'] ?> (desc)</a><br>
    <?php endif; ?>
+
    // Variante 2 mit 'renderSortingLink':
    <?= $this->renderSortingLink('name', 'toggle') ?> (toggle)<br>
    <?= $this->renderSortingLink('name', 'asc') ?> (asc)<br>
    <?= $this->renderSortingLink('name', 'desc') ?> (desc)<br>
+
    // Liste...
    <?php foreach ($this->data as $arrItem): ?>
 
