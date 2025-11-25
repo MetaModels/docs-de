@@ -517,7 +517,7 @@ Weiterhin könnte man z. B. in dem SQL oder in einer weiteren Filterregel nach d
 .. code-block:: twig
    :linenos:
 
-   {# templates/orion/ce_mm_products.html.twig #}
+   {# templates/ce_mm_products.html.twig #}
    {% if headline %}
        <{{ hl }}>{{ headline }}</{{ hl }}>
    {% endif %}
