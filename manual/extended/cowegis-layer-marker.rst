@@ -392,6 +392,44 @@ Klickt man auf einen Cluster, wird der Zoom so verändert, dass der Inhalt zu se
 |img_screenshot_11|
 
 
+Filterungen aus MM in Karte übernehmen
+--------------------------------------
+
+Häufig wird eine Karte in Verbindung mit einer gefilterten MM-Liste eingebaut - dann möchte man natürlich, dass sich die
+Filterung auch auf die angezeigten Marker auswirkt.
+
+Die Cowegis bezieht seine Daten für die Generierung der Karte und aller weiterer Elemente nicht direkt über das
+Inhaltselement, sondern das Kartenelement holt sich die Daten über einen eigenen Pfad. Dieser Aufruf bekommt aber
+von den Filterdaten aus der URL aber nichts mit.
+
+Daher muss aktuell diesem Aufruf die Filterparameter mit auf den Weg gegeben werden. Je nach Finanzierung der Erweiterung
+kännte man auch allgemeingültige Aufrufe versuchen - bis dahin muss man selbständig die Parameter über ``map-uri``
+übergeben.
+
+Für die Übergabe kann das Template des Cowegis-Content-Elements wie folgt angepasst werden:
+
+.. code-block:: html
+   :linenos:
+
+   <!-- templates/ce_cowegis_map.html5 -->
+   <?php $this->extend('ce_cowegis_map'); ?>
+
+   <?php $this->block('content') ?>
+   <?php
+   $params  = [];
+   $keyList = ['address', 'address_range'];
+   foreach ($keyList as $key) {
+     $params[$key] = \Contao\Input::get($key);
+   }
+   $paramString = http_build_query($params);
+   ?>
+   <cowegis-map id="<?= $this->mapId ?>" style="<?= $this->mapStyle ?>"
+                map-uri="<?= $this->mapUri . '&' . $paramString ?>">
+   </cowegis-map>
+
+   <?php $this->endblock() ?>
+
+
 Individuelle Anpassungen per JavaScript
 ---------------------------------------
 
@@ -425,6 +463,7 @@ Snippet kann man seine Anpassungen starten.
 Ein Beispiel wäre eine Angepasste Anzeige nach einer Umkreissuche mit Anzeige des Suchpunktes und Umkreises.
 
 |img_screenshot_19|
+
 
 Debuging
 --------
