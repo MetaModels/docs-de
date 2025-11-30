@@ -41,10 +41,9 @@ Typen von Filterregeln
 * **Vordefiniertes Itemset** (core): |br|
   Eingabe einer Liste mit IDs, nach denen gefiltert werden soll
 * **Einfache Abfrage** (core): |br|
-  erzeugt eine Filterung nach einem Attribut; für die Filterung
-  kann ein URL-Parameter angegeben werden; mit Option "Statischer Parameter"
-  kann in den Inhaltselementen/FE-Modulen aus einer Select-Liste ein Wert
-  zum Filtern aktiviert werden
+  erzeugt eine Filterung nach einem Attribut; für die Filterung kann ein URL-Parameter angegeben werden; mit Option
+  "Statischer Parameter" kann in den Inhaltselementen/FE-Modulen aus einer Select-Liste ein Wert zum Filtern aktiviert
+  werden
 * **Eigenes SQL** (core): |br|
   eigene SQL-Bedingungen zur Filterung; den |img_help| Hilfe-Assistenten (Popup) beachten |br|
   siehe auch im "Kochbuch" :ref:`rst_cookbook_filter_custom-sql`
@@ -70,9 +69,10 @@ Typen von Filterregeln
 * **Wert von/bis für zwei Datumsfelder** (filter_range): |br|
   zwei Felder mit Werten für Datum; eigenes Template mm_filteritem_datepicker(.html5) - Datum auf YYYY-MM-DD einstellen
 * **Einzelauswahl** (filter_select): |br|
-  einzelne Auswahl eines Wertes z.B. einer Select-Liste
+  einzelne Auswahl eines Wertes z. B. einer Select-Liste; Alternativ die Templates mm_filteritem_radiobutton(.html5) oder
+  mm_filteritem_linklist(.html5)
 * **Mehrfachauswahl** (filter_tags): |br|
-  mehrfache Auswahl von Werten z.B. einer Select-Liste
+  mehrfache Auswahl von Werten z. B. einer Checkbox-Liste; Alternativ das Template mm_filteritem_linklist(.html5)
 * **Textfilter** (filter_text): |br|
   filtert nach einer Texteingabe
 * **Umkreissuche** (filter_perimetersearch): |br|
