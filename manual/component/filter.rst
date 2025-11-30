@@ -62,12 +62,13 @@ Typen von Filterregeln
 * **Wert von/bis für ein Feld** (filter_fromto): |br|
   von/bis-Auswahl für Werte eines Attributwerts
 * **Wert von/bis für ein Datumsfeld** (filter_fromto): |br|
-  von/bis-Auswahl für Datum eines Attributwerts; eigenes Template mm_filteritem_datepicker(.html5) - Datum auf
-  YYYY-MM-DD einstellen
+  von/bis-Auswahl für Datum eines Attributwerts; eigenes Template mm_filteritem_datepicker(.html5) - `Datum auf
+  YYYY-MM-DD einstellen <https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date>`_
 * **Wert von/bis für zwei Felder** (filter_range): |br|
   zwei Felder mit Werten
 * **Wert von/bis für zwei Datumsfelder** (filter_range): |br|
-  zwei Felder mit Werten für Datum; eigenes Template mm_filteritem_datepicker(.html5) - Datum auf YYYY-MM-DD einstellen
+  zwei Felder mit Werten für Datum; eigenes Template mm_filteritem_datepicker(.html5) - `Datum auf YYYY-MM-DD einstellen
+  <https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date>`_
 * **Einzelauswahl** (filter_select): |br|
   einzelne Auswahl eines Wertes z. B. einer Select-Liste; Alternativ die Templates mm_filteritem_radiobutton(.html5) oder
   mm_filteritem_linklist(.html5)
