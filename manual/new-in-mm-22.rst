@@ -256,7 +256,7 @@ Filter
     * Platzhalter für FE-Widget
     * es gibt nun fünf verschiedene Varianten wie der Filter bei dem Vergleich zwischen vorhandene Werten in der DB
       und den eingegebenen Filterwerten reagieren soll; eine Beschreibung der Varianten kann über den 
-      |img_about| Hilfe-Assistenten (Popup) aufgerufen werden.
+      |img_help| Hilfe-Assistenten (Popup) aufgerufen werden.
 
 
 Frontend-Editing (FEE)
@@ -330,6 +330,7 @@ Re-Finanzierung
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
 .. |img_about| image:: /_img/icons/about.png
+.. |img_help| image:: /_img/icons/help.svg
 .. |img_settings-pagination-sort| image:: /_img/screenshots/metamodel_new_features/settings-pagination-sort.jpg
 
 .. |br| raw:: html

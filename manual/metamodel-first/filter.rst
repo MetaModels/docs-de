@@ -55,6 +55,7 @@ aktiviert werden.
 .. |img_filter_setting| image:: /_img/icons/filter_setting.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_about| image:: /_img/icons/about.png
+.. |img_help| image:: /_img/icons/help.svg
 .. |img_pasteinto| image:: /_img/icons/pasteinto.gif
 
 .. |img_filter_01| image:: /_img/screenshots/metamodel_first/filter_01.png

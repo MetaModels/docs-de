@@ -4,7 +4,7 @@ Eigenes SQL
 ===========
 
 Die ersten Hinweise für die Möglichkeiten der Filterregel
-"Eigenes SQL" sind über die |img_about| Hilfe zu finden.
+"Eigenes SQL" sind über die |img_help| Hilfe zu finden.
 
 Nochmal der Hinweis: Auch mit der Filterregel "Eigenes SQL"
 werden nur IDs zur nächsten Filterregel bzw. zum Filterset
@@ -568,5 +568,6 @@ Beispiel:
 
 
 .. |img_about| image:: /_img/icons/about.png
+.. |img_help| image:: /_img/icons/help.svg
 .. |img_sql-comment| image:: /_img/screenshots/cookbook/filter/sql-comment.jpg
 

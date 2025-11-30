@@ -37,7 +37,7 @@ werden. Es stehen zwei Gruppen von Bedingungsstypen zur Verfügung:
 * Bedingungen, die sich auf ein Attribut bzw. ein Eingabewidget beziehen
 * Bedingungen als logische Operatoren (UND/ODER/NICHT)
 
-Als kleine Merkhilfe sind die Typen und ihre Verwendung im |img_about| Hilfe-Assistent abgelegt.
+Als kleine Merkhilfe sind die Typen und ihre Verwendung im |img_help| Hilfe-Assistent abgelegt.
 
 Bei Widgets, die eine Anzeigebedingung implementiert haben, ist das Icon farblich hervorgehoben |img_dca_condition|.
 
@@ -74,6 +74,7 @@ Folgende Typen von Bedingungen sind implementiert:
 .. |img_dca_condition_1| image:: /_img/icons/dca_condition_1.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_about| image:: /_img/icons/about.png
+.. |img_help| image:: /_img/icons/help.svg
 
 .. |br| raw:: html
 

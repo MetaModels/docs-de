@@ -46,7 +46,7 @@ Typen von Filterregeln
   kann in den Inhaltselementen/FE-Modulen aus einer Select-Liste ein Wert
   zum Filtern aktiviert werden
 * **Eigenes SQL** (core): |br|
-  eigene SQL-Bedingungen zur Filterung; den |img_about| Hilfe-Assistenten (Popup) beachten |br|
+  eigene SQL-Bedingungen zur Filterung; den |img_help| Hilfe-Assistenten (Popup) beachten |br|
   siehe auch im "Kochbuch" :ref:`rst_cookbook_filter_custom-sql`
 * **UND-Bedingung (AND)** (core): |br|
   Container für weitere Filterregeln mit UND-Verknüpfung
@@ -54,19 +54,21 @@ Typen von Filterregeln
   Container für weitere Filterregeln mit ODER-Verknüpfung; Option, dass nur erste Regel ausgeführt wird
   (Checkbox "Nach erstem Treffer beenden")
 * **Checkbox-Status** (filter_checkbox): |br|
-  prüft ein Attributwert auf 1; (ehem. "Veröffentlichungsstatus")
+  prüft ein Attributwert auf 1; (ehem. "Veröffentlichungsstatus"); eigenes Template mm_filteritem_checkbox(.html5)
 * **Übersetzter Checkbox-Status** (filter_checkbox): |br|
-  prüft ein übersetzten Attributwert auf 1; (ehem. "Übersetzter Veröffentlichungsstatus")
+  prüft ein übersetzten Attributwert auf 1; (ehem. "Übersetzter Veröffentlichungsstatus"); eigenes Template
+  mm_filteritem_checkbox(.html5)
 * **Ja / Nein** (filter_checkbox): |br|
   Ja/Nein-Auswahl z.B. als Radio-Buttons
 * **Wert von/bis für ein Feld** (filter_fromto): |br|
   von/bis-Auswahl für Werte eines Attributwerts
 * **Wert von/bis für ein Datumsfeld** (filter_fromto): |br|
-  von/bis-Auswahl für Datum eines Attributwerts
+  von/bis-Auswahl für Datum eines Attributwerts; eigenes Template mm_filteritem_datepicker(.html5) - Datum auf
+  YYYY-MM-DD einstellen
 * **Wert von/bis für zwei Felder** (filter_range): |br|
   zwei Felder mit Werten
 * **Wert von/bis für zwei Datumsfelder** (filter_range): |br|
-  zwei Felder mit Werten für Datum
+  zwei Felder mit Werten für Datum; eigenes Template mm_filteritem_datepicker(.html5) - Datum auf YYYY-MM-DD einstellen
 * **Einzelauswahl** (filter_select): |br|
   einzelne Auswahl eines Wertes z.B. einer Select-Liste
 * **Mehrfachauswahl** (filter_tags): |br|
@@ -77,9 +79,11 @@ Typen von Filterregeln
   filtert nach einer Adresse/Geokoordinaten und einem Umkreis bezogen auf Lat/Long-Werte in den Datensätzen |br|
   siehe :ref:`extended_perimetersearch`
 * **Register** (filter_register): |br|
-  filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben
+  filtert nach Anfangsbuchstaben; generiert eine Liste mit allen oder vorhandenen Anfangsbuchstaben; eigenes Template
+  mm_filteritem_register(.html5)
 * **Levenshtein-gestützte Suche** (attribute_levenshtein): |br|
-  erzeugt einen Volltext-Index von ausgewählten Attributen inkl. Ähnlichkeitssuche und Autovervollständigung
+  erzeugt einen Volltext-Index von ausgewählten Attributen inkl. Ähnlichkeitssuche und Autovervollständigung; eigenes
+  Template mm_filteritem_levenshtein(.html5)
 * **Filter-by-related** (filter_by_related): |br|
   ermöglicht Items mit Eigenschaften aus einem verknüpften (Relation) MetaMdel zu filtern; Relationen können per
   Kindtabelle oder Einzelauswahl (Select) aufgebaut sein |br|
@@ -126,6 +130,7 @@ eingefügt werden.
 .. |img_filter_setting| image:: /_img/icons/filter_setting.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_about| image:: /_img/icons/about.png
+.. |img_help| image:: /_img/icons/help.svg
 
 .. |br| raw:: html
 
