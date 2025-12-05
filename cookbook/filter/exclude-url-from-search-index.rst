@@ -44,7 +44,7 @@ gesetzt ist. Das Code-Spippet muss im Template der MM-Liste eingefügt werden.
    }
    ?>
 
-.. note:: Bis einschließlich MM 2.3 / Contao 4.13
+.. note:: Für MM 2.3 / Contao 4.13
 
 .. code-block:: php
    :linenos:
