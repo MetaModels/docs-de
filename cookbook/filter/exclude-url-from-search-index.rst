@@ -21,6 +21,29 @@ hilfreichen Suchergebnissen führen.
 Um dies zu vermeiden, kann z. B. mit dem folgende Code die Indexierung unterbunden werden, wenn eine Filterung
 gesetzt ist. Das Code-Spippet muss im Template der MM-Liste eingefügt werden.
 
+.. note:: Für MM 2.4 / Contao 5.3
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+
+   use Contao\CoreBundle\Routing\ResponseContext\JsonLd\ContaoPageSchema;
+   use Contao\CoreBundle\Routing\ResponseContext\JsonLd\JsonLdManager;
+   use Contao\System;
+
+   if (!empty($this->filterParams)) {
+       $responseContext = System::getContainer()->get('contao.routing.response_context_accessor')->getResponseContext();
+       if ($responseContext?->has(JsonLdManager::class)) {
+           /** @var JsonLdManager $jsonLdManager */
+           $jsonLdManager = $responseContext->get(JsonLdManager::class);
+           $schema        =
+               $jsonLdManager->getGraphForSchema(JsonLdManager::SCHEMA_CONTAO)->get(ContaoPageSchema::class);
+           $schema->setNoSearch(true);
+       }
+   }
+   ?>
+
 .. note:: Bis einschließlich MM 2.3 / Contao 4.13
 
 .. code-block:: php
