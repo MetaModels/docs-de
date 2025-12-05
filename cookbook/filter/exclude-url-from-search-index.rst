@@ -21,6 +21,8 @@ hilfreichen Suchergebnissen führen.
 Um dies zu vermeiden, kann z. B. mit dem folgende Code die Indexierung unterbunden werden, wenn eine Filterung
 gesetzt ist. Das Code-Spippet muss im Template der MM-Liste eingefügt werden.
 
+.. note:: Bis einschließlich MM 2.3 / Contao 4.13
+
 .. code-block:: php
    :linenos:
 
