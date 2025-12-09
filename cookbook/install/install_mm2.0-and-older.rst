@@ -28,6 +28,13 @@ Contao LTS <https://docs.contao.org/books/manual/3.5/de/01-installation/den-live
 
 Seit Januar 2018 wird in MM 2.0 eine PHP-Version von mindestens 5.6 vorausgesetzt.
 
+Bei einem Upgrade von einem "nightly-build" kann es vorkommen, dass zwei Tabellen vom MM-Core noch nicht da sind und
+durch die Contao-Migration nicht angelegt werden können. Ist das der Fall, bitte die folgenden zwei Tabellen selbst
+anlegen:
+
+* tl_metamodel_dcasetting_condition.php
+* tl_metamodel_searchable_pages.php
+
 
 Hinweise und Anleitungen für (noch) ältere Contao- und MM-Versionen
 -------------------------------------------------------------------
