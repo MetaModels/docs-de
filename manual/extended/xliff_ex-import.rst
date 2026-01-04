@@ -318,6 +318,7 @@ Unterstützung anderer Erweiterungen
 
 * MetaModels Backend
 * Isotope 2.x
+* RST Custom-Elements
 
 
 Spenden
