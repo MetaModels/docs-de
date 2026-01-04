@@ -9,6 +9,7 @@ Anpassungsmöglichkeiten von Templates.
 .. toctree::
     :maxdepth: 1
 
+    fe_template_attribute_description.rst
     fe_list_sorting.rst
     fe_list_parameters.rst
     fe_redirect_to_list.rst
