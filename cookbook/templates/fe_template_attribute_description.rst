@@ -46,5 +46,10 @@ reicht ein Item um das MetaModel abzufragen und darüber dessen Attribute. Das `
 Handhabung im weiteren Template. Das Ganze könnte man auch schöner in einen Helper auslagern -
 `siehe Vortrag CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
 
-In der weiteren Ausgabe kann man die Beschreibung über den Spaltennamen des Attributs ausgeben -
+In der weiteren Ausgabe kann man die Beschreibung über den Spaltennamen des Attributs ausgeben - |br|
 z. B. ``<?= $attributeDescriptions['firstname'] ?? '' ?>``
+
+
+.. |br| raw:: html
+
+   <br />
