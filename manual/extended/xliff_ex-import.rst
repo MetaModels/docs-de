@@ -4,7 +4,7 @@ XLIFF-Ex-Import für MetaModels
 ==============================
 
 .. warning:: Das Tool XLIFF-Ex-Import ist noch im Fundraising 
-   und wird erst nach Erreichen der Zielsumme von z.Z. 5.100,00 € frei
+   und wird erst nach Erreichen der Zielsumme von z.Z. 5.397,50 € frei
    geschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
@@ -60,8 +60,8 @@ Installation per Contao-Manager oder Composer
 
 Voraussetzungen für die Installation:
 
-* MetaModels core 2.1/2.2/2.3
-* Contao 4.4.x/4.9.x/4.13.x
+* MetaModels core 2.1/2.2/2.3/2.4
+* Contao 4.4.x/4.9.x/4.13.x/5.3.x
 
 
 Konfiguration
@@ -317,7 +317,7 @@ Ausgabetypen
 Unterstützung anderer Erweiterungen
 
 * MetaModels Backend
-* Isotope
+* Isotope 2,x
 
 
 Spenden
@@ -327,6 +327,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 * N.N.: 2.700 €
 * iMi: 350 €
+* Paus medien: 350 €
 
 
 (Spenden in Netto)
