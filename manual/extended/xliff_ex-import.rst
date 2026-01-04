@@ -28,10 +28,11 @@ Der Export und Import erfolgt über Konsolenaufrufe - die Konfiguration
 Für die Zuordnung der Contao-Inhalte ist ein Mapping-Provider notwendig - aktuell wird die Erweiterung
 `Changelanguage <https://github.com/terminal42/contao-changelanguage>`_ unterstützt.
 
-Aktuell werden folgende Module unterstützt:
+Aktuell werden folgende Module/Erweiterungen unterstützt:
 
 * Contao (Core)
-* MetaModels (Daten)
+* MetaModels (Daten und Backend)
+* Isotope 2.x
 * RockSolid Custom-Elements
 
 Mehr zur weiteren Planung und Ausbau `siehe unten <#erweiterungsmoglichkeiten>`_
@@ -313,12 +314,6 @@ Ausgabetypen
 * po
 * csv
 * xml
-
-Unterstützung anderer Erweiterungen
-
-* MetaModels Backend
-* Isotope 2.x
-* RST Custom-Elements
 
 
 Spenden
