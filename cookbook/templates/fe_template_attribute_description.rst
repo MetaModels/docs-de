@@ -47,4 +47,4 @@ Handhabung im weiteren Template. Das Ganze könnte man auch schöner in einen He
 `siehe Vortrag CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
 
 In der weiteren Ausgabe kann man die Beschreibung über den Spaltennamen des Attributs ausgeben -
-z. B. `` <?= $attributeDescriptions['firstname'] ?? '' ?>``
+z. B. ``<?= $attributeDescriptions['firstname'] ?? '' ?>``
