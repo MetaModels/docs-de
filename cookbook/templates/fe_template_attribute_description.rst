@@ -49,6 +49,8 @@ Handhabung im weiteren Template. Das Ganze könnte man auch schöner in einen He
 In der weiteren Ausgabe kann man die Beschreibung über den Spaltennamen des Attributs ausgeben - |br|
 z. B. ``<?= $attributeDescriptions['firstname'] ?? '' ?>``
 
+Bei mehrsprachingen Models wird die zur FE-Sprache passende Beschreibung ausgegeben.
+
 
 .. |br| raw:: html
 
