@@ -317,7 +317,7 @@ Ausgabetypen
 Unterstützung anderer Erweiterungen
 
 * MetaModels Backend
-* Isotope 2,x
+* Isotope 2.x
 
 
 Spenden
