@@ -114,7 +114,7 @@ Marco Kupic Font Awesome Icon Picker
 
 `Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_.
 
-Für diese Erweiterung muss man sich ein `Icon-Kit bei Font Awesome <https://fontawesome.com/start>`: anlegen - es reicht
+Für diese Erweiterung muss man sich ein `Icon-Kit bei Font Awesome <https://fontawesome.com/start>`_: anlegen - es reicht
 eine kostenfreies Kit. Anschließend müssen die Angaben in der config.yaml eingetragen werden - `siehe Readme
 <https://github.com/markocupic/fontawesome-icon-picker-bundle?tab=readme-ov-file#configuration>`_.
 
