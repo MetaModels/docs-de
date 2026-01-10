@@ -57,6 +57,50 @@ Template:
    // templates/mm_attr_text_rst_icon.html5
    <span class="<?= $this->additional_class ?>" data-icon="&#x<?= $this->raw ?>;"></span>
 
+CSS:
+
+.. code-block:: css
+   :linenos:
+
+   /** Icon font */
+   @font-face {
+     font-family: "RockSolid Icons";
+     src: url("../iconfont/rocksolid-icons.woff2") format("woff2"), url("../iconfont/rocksolid-icons.svg") format("svg");
+     font-weight: normal;
+     font-style: normal;
+   }
+
+   /* Icon attribute */
+   *[data-icon]:before,
+   *[class^="icon-"]:before,
+   *[class*=" icon-"]:before {
+     font: 100%/1 "RockSolid Icons";
+     -webkit-font-smoothing: antialiased;
+     font-smoothing: antialiased;
+     text-rendering: geometricPrecision;
+     text-indent: 0;
+     display: inline-block;
+     position: relative;
+     margin-right: 0.26667em;
+   }
+   *[data-icon]:before {
+     content: attr(data-icon);
+   }
+   *[data-icon].after:before {
+     content: none;
+   }
+   *[data-icon].after:after {
+     font: 100%/1 "RockSolid Icons";
+     content: attr(data-icon);
+     -webkit-font-smoothing: antialiased;
+     font-smoothing: antialiased;
+     text-rendering: geometricPrecision;
+     text-indent: 0;
+     display: inline-block;
+     position: relative;
+     margin-left: 0.26667em;
+   }
+
 Ausgabe BE & FE:
 
 |img_rst_01.png|
