@@ -132,7 +132,7 @@ DCA-Anpassung:
 Template:
 
 Da die Speicherung als serialisiertes Array erfolgt, muss sowohl das Template für ``html5`` als auch für ``text``
-angelegt werden
+angelegt werden.
 
 .. code-block:: php
    :linenos:
@@ -174,6 +174,112 @@ Ausgabe BE & FE:
 |img_mcfa_01.png|
 
 |img_mcfa_02.png|
+
+
+NetGroup IconToolkit
+--------------------
+
+`Erweiterung auf Github <https://github.com/netgroupgmbh/contao-icontoolkit>`_.
+
+Die Erweiterung ist für `Font Awesome <https://fontawesome.com/>`_ konzipiert und liefert diese in der Version 7.1
+mit. Es ist aber auch möglich, eigene Iconfonts zu laden oder einen aktuelleren Iconsatz. Für die Einbindung des
+Fonts, gibt es ein FE-Modul.
+
+DCA-Anpassung:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // contao/dca/mm_employees.php
+   use NetGroup\IconToolkit\Classes\Contao\Widgets\IconPickerWidget;
+
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['ng_icon']['inputType'] = IconPickerWidget::TYPE;
+
+Template:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // templates/mm_attr_text_ng_icon.html5
+   <i class="<?= $this->raw ?><?= $this->additional_class ?>"></i>
+
+Ausgabe BE & FE:
+
+|img_ng_01.png|
+
+|img_ng_02.png|
+
+
+Lukas Bableck SVG Icon-Picker
+-----------------------------
+
+`Erweiterung auf Github <https://github.com/lukasbableck/contao-svg-icon-picker-bundle>`_.
+
+Die Erweiterung ist für `Font Awesome <https://fontawesome.com/>`_ konzipiert - es ist aber auch möglich, eigene
+SVG-Icons zu laden.
+
+Die Icons werden als "echte" SVGs ausgespielt, so dass Anpassungen an Farbgebung usw. möglich sind.
+
+DCA-Anpassung:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // contao/dca/mm_employees.php
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['lbsvg_icon']['inputType']                 = 'svgIconPicker';
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['lbsvg_icon']['eval']['sourceDirectory']   = '/files/themes/svg-icons/svgs-full/regular';
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['lbsvg_icon']['eval']['metadataDirectory'] = '/files/themes/svg-icons/metadata';
+
+Template:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // templates/mm_attr_text_ng_icon.html5
+   use Contao\System;
+   use Lukasbableck\ContaoSVGIconPickerBundle\Twig\Extension;
+
+   $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+   $svgTool = new Extension($rootDir);
+
+   $svg = \str_replace('class="', 'class="' . \trim($this->additional_class) . ' ', $svgTool->renderSVG($this->raw));
+   ?>
+
+   <?= $svg ?>
+
+CSS:
+
+.. code-block:: css
+   :linenos:
+
+   /* Klassen 'lbsvg_icon lbsvg_green' in Rendersettings */
+   svg.lbsvg_icon {
+     width: 33px;
+     height: 33px;
+   }
+
+   svg.lbsvg_green {
+     color: #6bb710;
+   }
+
+
+Ausgabe BE & FE:
+
+|img_lbsvg_01.png|
+
+|img_lbsvg_02.png|
+
+
+Hinweise zu Fontawesome
+-----------------------
+
+Das Fontawesome-Iconpack kann man von der `Webseite downloaden <https://fontawesome.com/download>`_. Die "Free-Variante"
+enthält die Regular, Solid und Brands. Will man die SVG-Icons einsetzen, empielt sich den Ordner ``svg-full/``
+einzubinden - hier sind alle Icons Quadratisch mit entsprechendem Rand.
 
 
 .. |img_lbsvg_01.png| image:: /_img/screenshots/cookbook/specials/icon_picker/lbsvg_01.png
