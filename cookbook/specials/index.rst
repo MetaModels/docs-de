@@ -10,6 +10,7 @@ Spezialaufgaben und deren Lösung mit MM.
     :maxdepth: 1
 
     ce_element_for_editors.rst
+    picker-for-icons.rst
     helper-models.rst
     picker-for-tinymce.rst
     display-markers-on-map.rst
