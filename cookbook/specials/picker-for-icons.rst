@@ -12,7 +12,8 @@ Um diese Funktionalität auch in MM bereit zu stellen, könnte man ein eigenes A
 Icon-Picker speichern nur Strings bzw. serialisierte Arrays, so dass man auch mit kleinen DCA- und Template-Anpassungen
 das Attribut Text verwenden kann.
 
-Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt.
+Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt - bitte die entsprechenden Lizenzbedingungen
+beachten.
 
 
 Voraussetzung
