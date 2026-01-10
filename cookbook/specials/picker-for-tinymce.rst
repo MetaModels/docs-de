@@ -88,7 +88,7 @@ Spenden
 Ein Dank für die Spenden für das Feature an:
 
 * `BAR PACIFICO <https://www.bar-pacifico.de/>`_
-
+* `GUTcert <https://www.gut-cert.de/>`_
 
 
 .. |img_picker_01.png| image:: /_img/screenshots/extended/picker/picker_01.png
