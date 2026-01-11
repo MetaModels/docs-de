@@ -337,7 +337,7 @@ Hinweise zu Lucide-Icons
 ------------------------
 
 Contao setzt ab Version 5.5 im Backend Icons aus dem Paket `Lucide <https://lucide.dev/icons/>`_ ein. Um diese auch im
-FE zu verwenden, gelingt dies am einfachsten mit der Erweiterung "SVG Icon-Picker".
+FE zu verwenden, gelingt dies am einfachsten mit der Erweiterung :ref:`SVG Icon-Picker <picker_lbsvg>`.
 
 Das gesamte Paket kann man sich von Github über
 `"Code > Download ZIP" <https://github.com/lucide-icons/lucide/archive/refs/heads/main.zip>`_ downloaden und entpacken.
