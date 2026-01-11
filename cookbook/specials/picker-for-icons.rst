@@ -315,7 +315,7 @@ enthält die Regular, Solid und Brands. Will man die SVG-Icons einsetzen, empiel
 einzubinden - hier sind alle Icons quadratisch mit entsprechendem Rand.
 
 Wird im FE das CSS von Fontawesom mit ausgespielt wie z. B. bei NG IconToolkit, dann können die entsprechenden
-Stylingklassen wie ``fa-2x``für doppelte Größe bei den Rendersettings angegeben werden. Eine Übersicht dieser Angaben
+Stylingklassen wie ``fa-2x`` für doppelte Größe bei den Rendersettings angegeben werden. Eine Übersicht dieser Angaben
 ist in der `FA-Dokumentation <https://docs.fontawesome.com/web/style/style-cheatsheet>`_ zu finden.
 
 
