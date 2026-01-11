@@ -279,7 +279,8 @@ Hinweise zu Fontawesome
 
 Das Fontawesome-Iconpack kann man von der `Webseite downloaden <https://fontawesome.com/download>`_. Die "Free-Variante"
 enthält die Regular, Solid und Brands. Will man die SVG-Icons einsetzen, empielt sich den Ordner ``svg-full/``
-einzubinden - hier sind alle Icons Quadratisch mit entsprechendem Rand.
+einzubinden - hier sind alle Icons quadratisch mit entsprechendem Rand.
+
 
 
 .. |img_lbsvg_01.png| image:: /_img/screenshots/cookbook/specials/icon_picker/lbsvg_01.png
