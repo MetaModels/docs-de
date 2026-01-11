@@ -9,7 +9,7 @@ eingebunden werden, die entsprechenden CSS-Klassen. Die Auswahl der Icons ist da
 Für Contao gibt es verschiedene Erweiterungen, die einen speziellen Icon-Picker zur Verfügung stellen.
 
 Um diese Funktionalität auch in MM bereit zu stellen, könnte man ein eigenes Attribut erstellen. Die meisten
-Icon-Picker speichern nur Strings bzw. serialisierte Arrays, so dass man auch mit kleinen DCA- und Template-Anpassungen
+Icon-Picker speichern nur Strings bzw. serialisierte Array, so dass man auch mit kleinen DCA- und Template-Anpassungen
 das Attribut Text verwenden kann.
 
 Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt:
