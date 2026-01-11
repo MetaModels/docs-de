@@ -120,8 +120,6 @@ eine kostenfreies Kit. Anschließend müssen die Angaben in der config.yaml eing
 
 Bei den Icons stehen je nach Konfiguration die Label R Regular, S Solid, B Brands als Auswahlbutton zur Verfügung.
 
-
-
 DCA-Anpassung:
 
 .. code-block:: php
@@ -185,6 +183,18 @@ Ausgabe BE & FE:
 |img_mcfa_01.png|
 
 |img_mcfa_02.png|
+
+Aus Datenschutzgründen ist es jedoch vorzuziehen, die individuelle JavaScript-Datei des Icon-Kits nicht per URL
+einzubinden, sonder als Datei auf dem Webserver. Dazu kann man die Datei im Browser über die Dev-Tools über den
+Debugger und "Speichern unter..." downloaden - anschließend die Konfiguration anpassen z. B.
+
+.. code-block:: yml
+   :linenos:
+
+   markocupic_fontawesome_icon_picker:
+     # Get your free kit code at https://fontawesome.com/start
+     #fontawesome_source_path: 'https://kit.fontawesome.com/abd123def.js'
+     fontawesome_source_path: '/files/themes/mcfa/abd123def.js'
 
 
 NetGroup IconToolkit
