@@ -175,7 +175,7 @@ angelegt werden.
    * Array
    * (
    *     [0] => circle-check
-   *     [1] => fa-solid
+   *     [1] => fa-regular
    *     [2] => f058
    * )
    */
