@@ -158,6 +158,7 @@ angelegt werden.
            break;
        case 'far':
            $faType = 'fa-regular';
+           break;
    }
    ?>
    <i class="<?= $faType ?> fa-<?= $mcfaData[0] ?? '' ?><?= $this->additional_class ?>"></i>
@@ -174,6 +175,7 @@ angelegt werden.
            break;
        case 'far':
            $faType = 'fa-regular';
+           break;
    }
    ?>
    <?= $faType ?> fa-<?= $mcfaData[0] ?? '' ?>
