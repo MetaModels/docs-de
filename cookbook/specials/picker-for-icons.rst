@@ -143,8 +143,8 @@ Die Konfiguration sieht dann z. B. wie folgt aus:
      fontawesome_meta_file_path: 'files/themes/fa7_icons/metadata/icons.yml'
 
 Bei den Icons stehen je nach Konfiguration von ``fontawesome_allowed_styles`` und vorhandenen Icons die Label
-R Regular, S Solid, B Brands als Auswahlbutton zur Verfügung - die Reihenfolge bestimmt den angezeigten Iconstyle im
-Widget.
+R Regular, S Solid, B Brands usw. als Auswahlbutton zur Verfügung - die Reihenfolge bestimmt den angezeigten Iconstyle
+im Widget.
 
 Benutzer einer FA-Pro-Variante orientieren sich an der Beschreibung der
 `Readme <https://github.com/markocupic/fontawesome-icon-picker-bundle?tab=readme-ov-file#configuration>`_.
