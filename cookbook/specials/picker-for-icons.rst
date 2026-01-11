@@ -255,7 +255,7 @@ Lukas Bableck SVG Icon-Picker
 `Erweiterung auf Github <https://github.com/lukasbableck/contao-svg-icon-picker-bundle>`_.
 
 Die Erweiterung ist für `Font Awesome <https://fontawesome.com/>`_ konzipiert - es ist aber auch möglich, eigene
-SVG-Icons zu laden.
+SVG-Icons wie z. B. `Lucide <https://lucide.dev/icons/>`_ zu laden.
 
 Die Icons werden als "echte" SVGs ausgespielt, so dass Anpassungen an Farbgebung usw. möglich sind.
 
@@ -321,6 +321,35 @@ einzubinden - hier sind alle Icons quadratisch mit entsprechendem Rand.
 Wird im FE das CSS von Fontawesom mit ausgespielt wie z. B. bei NG IconToolkit, dann können die entsprechenden
 Stylingklassen wie ``fa-2x`` für doppelte Größe bei den Rendersettings angegeben werden. Eine Übersicht dieser Angaben
 ist in der `FA-Dokumentation <https://docs.fontawesome.com/web/style/style-cheatsheet>`_ zu finden.
+
+
+Hinweise zu Lucide-Icons
+------------------------
+
+Contao setzt ab Version 5.5 im Backend Icons aus dem Paket `Lucide <https://lucide.dev/icons/>`_ ein. Um diese auch im
+FE zu verwenden, gelingt dies am einfachsten mit der Erweiterung "SVG Icon-Picker".
+
+Das gesamte Paket kann man sich von Github über
+`"Code > Download ZIP" <https://github.com/lucide-icons/lucide/archive/refs/heads/main.zip>`_ downloaden und entpacken.
+Den Ordner ``icons/`` enthält alle SVG-Icons und muss auf den Webserver in einen geeigneten Ordner unter ``files``.
+
+Anschließend muss der Ordner in der Konfiguration angegeben werden - z. B.
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // contao/dca/mm_employees.php
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['lbsvg_icon']['inputType']                 = 'svgIconPicker';
+   $GLOBALS['TL_DCA']['mm_employees']['fields']['lbsvg_icon']['eval']['sourceDirectory']   = '/files/themes/lucide-icons';
+   //$GLOBALS['TL_DCA']['mm_employees']['fields']['lbsvg_icon']['eval']['metadataDirectory'] = '/files/themes/svg-icons/metadata';
+
+Lucide stellt die Icons nicht automatisch als Font zur Verfügung. Die Dateien können aber in einen Font überführt werden.
+Die SVG-Dateien müssen vorher von Strichen in Füllungen umgewandelt werden - z. B. mit Hilfe des
+`Iconly-Tools „Convert SVG Strokes to Fills” <https://iconly.io/tools/svg-convert-stroke-to-fill>`_ oder dem
+`npm-Paket "svg-outline-stroke" <https://www.npmjs.com/package/svg-outline-stroke>`_. Anschließend kann die
+Lucide-Icon-Schriftart mit `IcoMoon <https://icomoon.io/>`_ oder
+`npm-Paket "fantasticon" <https://github.com/tancredi/fantasticon>`_ generiert werden.
 
 
 
