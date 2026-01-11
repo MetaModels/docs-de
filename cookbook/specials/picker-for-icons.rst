@@ -121,9 +121,9 @@ Ausgabe BE & FE:
 Marco Cupic Font Awesome Icon Picker
 ------------------------------------
 
-`Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_. (ab Version 7.x)
+`Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_.
 
-Ab Version 7 sind für das Widget keine Angaben in der config.yaml notwendig - jedoch werden die Icon-Daten direkt
+Ab Version 7 sind für das Widget keine Angaben in der ``config.yaml`` notwendig - jedoch werden die Icon-Daten direkt
 vom Fontawesome-Server abgerufen. Wer das nicht möchte, kann die Dateien auch direkt auf dem Webserver einbinden.
 Dazu kann man das Iconpaket  von der `Webseite downloaden <https://fontawesome.com/download>`_ und entpacken. Die
 Ordner ``js/``, ``metadata/`` und ``webfonts/`` müssen auf dem Webserver in einen entsprechenden Ordner in ``files/``.
@@ -133,6 +133,7 @@ Die Konfiguration sieht dann z. B. wie folgt aus:
 .. code-block:: php
    :linenos:
 
+   # config/config.yaml
    markocupic_fontawesome_icon_picker:
      fontawesome_source_path: 'files/themes/fa7_icons/js/all.min.js'
      fontawesome_allowed_styles:
