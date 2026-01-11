@@ -331,7 +331,7 @@ FE zu verwenden, gelingt dies am einfachsten mit der Erweiterung "SVG Icon-Picke
 
 Das gesamte Paket kann man sich von Github über
 `"Code > Download ZIP" <https://github.com/lucide-icons/lucide/archive/refs/heads/main.zip>`_ downloaden und entpacken.
-Den Ordner ``icons/`` enthält alle SVG-Icons und muss auf den Webserver in einen geeigneten Ordner unter ``files``.
+Der Ordner ``icons/`` enthält alle SVG-Icons und muss auf den Webserver in einen geeigneten Ordner unter ``files``.
 
 Anschließend muss der Ordner in der Konfiguration angegeben werden - z. B.
 
