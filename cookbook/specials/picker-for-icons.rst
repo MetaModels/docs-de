@@ -199,8 +199,8 @@ Debugger und "Speichern unter..." downloaden - anschließend die Konfiguration a
 
    markocupic_fontawesome_icon_picker:
      # Get your free kit code at https://fontawesome.com/start
-     #fontawesome_source_path: 'https://kit.fontawesome.com/abd123def.js'
-     fontawesome_source_path: '/files/themes/mcfa/abd123def.js'
+     #fontawesome_source_path: 'https://kit.fontawesome.com/abc123def.js'
+     fontawesome_source_path: '/files/themes/mcfa/abc123def.js'
 
 
 NetGroup IconToolkit
