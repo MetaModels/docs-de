@@ -13,7 +13,7 @@ Icon-Picker speichern nur Strings bzw. serialisierte Arrays, so dass man auch mi
 das Attribut Text verwenden kann.
 
 Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt - bitte die entsprechenden Lizenzbedingungen
-beachten.
+der Icons bzw. Fonts beachten.
 
 
 Voraussetzung
