@@ -121,7 +121,7 @@ Ausgabe BE & FE:
 Marco Cupic Font Awesome Icon Picker
 ------------------------------------
 
-`Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_.
+`Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_. (ab Version 7.x)
 
 Für diese Erweiterung muss man sich ein `Icon-Kit bei Font Awesome <https://fontawesome.com/start>`_: anlegen - es reicht
 eine kostenfreies Kit. Anschließend müssen die Angaben in der config.yaml eingetragen werden - `siehe Readme
@@ -153,24 +153,14 @@ angelegt werden.
    * Array
    * (
    *     [0] => circle-check
-   *     [1] => fas
+   *     [1] => fa-solid
    *     [2] => f058
    * )
    */
 
    $mcfaData = \Contao\StringUtil::deserialize($this->raw, true);
-   $faType   = 'fa-regular';
-
-   switch ($mcfaData[1] ?? '') {
-       case 'fas':
-           $faType = 'fa-solid';
-           break;
-       case 'far':
-           $faType = 'fa-regular';
-           break;
-   }
    ?>
-   <i class="<?= $faType ?> fa-<?= $mcfaData[0] ?? '' ?><?= $this->additional_class ?>"></i>
+   <i class="<?= $mcfaData[1] ?? '' ?> fa-<?= $mcfaData[0] ?? '' ?><?= $this->additional_class ?>"></i>
 
 
 .. code-block:: php
@@ -180,18 +170,8 @@ angelegt werden.
    // templates/mm_attr_text_mcfa_icon.text
    <?php
    $mcfaData = \Contao\StringUtil::deserialize($this->raw, true);
-   $faType   = 'fa-regular';
-
-   switch ($mcfaData[1] ?? '') {
-       case 'fas':
-           $faType = 'fa-solid';
-           break;
-       case 'far':
-           $faType = 'fa-regular';
-           break;
-   }
    ?>
-   <?= $faType ?> fa-<?= $mcfaData[0] ?? '' ?>
+   <?= $mcfaData[1] ?? '' ?> fa-<?= $mcfaData[0] ?? '' ?>
 
 Ausgabe BE & FE:
 
