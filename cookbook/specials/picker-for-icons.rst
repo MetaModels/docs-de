@@ -12,8 +12,14 @@ Um diese Funktionalität auch in MM bereit zu stellen, könnte man ein eigenes A
 Icon-Picker speichern nur Strings bzw. serialisierte Arrays, so dass man auch mit kleinen DCA- und Template-Anpassungen
 das Attribut Text verwenden kann.
 
-Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt - bitte die entsprechenden Lizenzbedingungen
-der Icons bzw. Fonts beachten.
+Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt:
+
+- `RockSolid Icon Picker <picker_rst>`
+- `Marco Cupic Font Awesome Icon Picker <picker_mcfa>`
+- `NetGroup IconToolkit <picker_ng>`
+- `Lukas Bableck SVG Icon-Picker <picker_lbsvg>`
+
+Bitte die entsprechenden Lizenzbedingungen der Icons bzw. Fonts beachten!
 
 
 Voraussetzung
@@ -29,6 +35,7 @@ Für die Ausgabe sind eigene Templates - abgeleitet von ``mm_attr_text`` - anzul
 Attributs auszuwählen. Dort können auch zusätzliche CSS-Angaben für Größe oder Farbe hinterlegt werden.
 
 
+.. _picker_rst:
 RockSolid Icon Picker
 ---------------------
 
@@ -109,6 +116,7 @@ Ausgabe BE & FE:
 |img_rst_02.png|
 
 
+.. _picker_mcfa:
 Marco Cupic Font Awesome Icon Picker
 ------------------------------------
 
@@ -203,6 +211,7 @@ Debugger und "Speichern unter..." downloaden - anschließend die Konfiguration a
      fontawesome_source_path: '/files/themes/mcfa/abc123def.js'
 
 
+.. _picker_ng:
 NetGroup IconToolkit
 --------------------
 
@@ -249,6 +258,7 @@ Ausgabe BE & FE:
 |img_ng_02.png|
 
 
+.. _picker_lbsvg:
 Lukas Bableck SVG Icon-Picker
 -----------------------------
 
