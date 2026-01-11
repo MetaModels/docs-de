@@ -109,7 +109,7 @@ Ausgabe BE & FE:
 |img_rst_02.png|
 
 
-Marco Kupic Font Awesome Icon Picker
+Marco Cupic Font Awesome Icon Picker
 ------------------------------------
 
 `Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_.
