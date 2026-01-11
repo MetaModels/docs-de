@@ -120,6 +120,8 @@ eine kostenfreies Kit. Anschließend müssen die Angaben in der config.yaml eing
 
 Bei den Icons stehen je nach Konfiguration die Label R Regular, S Solid, B Brands als Auswahlbutton zur Verfügung.
 
+
+
 DCA-Anpassung:
 
 .. code-block:: php
@@ -140,6 +142,15 @@ angelegt werden.
    <?php
    // templates/mm_attr_text_mcfa_icon.html5
    <?php
+   /** Nach Deserialisierung steht ein Array mit drei Angaben zur Verfügung z. B.
+   * Array
+   * (
+   *     [0] => circle-check
+   *     [1] => fas
+   *     [2] => f058
+   * )
+   */
+
    $mcfaData = \Contao\StringUtil::deserialize($this->raw, true);
    $faType   = 'fa-regular';
 
