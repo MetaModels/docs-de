@@ -205,6 +205,16 @@ Template:
    // templates/mm_attr_text_ng_icon.html5
    <i class="<?= $this->raw ?><?= $this->additional_class ?>"></i>
 
+CSS:
+
+.. code-block:: css
+   :linenos:
+
+   // /* Klassen 'fa-2x fa-green' in Rendersettings */
+   .fa-green {
+     color: #6bb710;
+   }
+
 Ausgabe BE & FE:
 
 |img_ng_01.png|
@@ -280,6 +290,10 @@ Hinweise zu Fontawesome
 Das Fontawesome-Iconpack kann man von der `Webseite downloaden <https://fontawesome.com/download>`_. Die "Free-Variante"
 enthält die Regular, Solid und Brands. Will man die SVG-Icons einsetzen, empielt sich den Ordner ``svg-full/``
 einzubinden - hier sind alle Icons quadratisch mit entsprechendem Rand.
+
+Wird im FE das CSS von Fontawesom mit ausgespielt wie z. B. bei NG IconToolkit, dann können die entsprechenden
+Stylingklassen wie ``fa-2x``für doppelte Größe bei den Rendersettings angegeben werden. Eine Übersicht dieser Angaben
+ist in der `FA-Dokumentation <https://docs.fontawesome.com/web/style/style-cheatsheet>`_ zu finden.
 
 
 
