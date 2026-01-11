@@ -123,11 +123,32 @@ Marco Cupic Font Awesome Icon Picker
 
 `Erweiterung auf Github <https://github.com/markocupic/fontawesome-icon-picker-bundle>`_. (ab Version 7.x)
 
-Für diese Erweiterung muss man sich ein `Icon-Kit bei Font Awesome <https://fontawesome.com/start>`_: anlegen - es reicht
-eine kostenfreies Kit. Anschließend müssen die Angaben in der config.yaml eingetragen werden - `siehe Readme
-<https://github.com/markocupic/fontawesome-icon-picker-bundle?tab=readme-ov-file#configuration>`_.
+Ab Version 7 sind für das Widget keine Angaben in der config.yaml notwendig - jedoch werden die Icon-Daten direkt
+vom Fontawesome-Server abgerufen. Wer das nicht möchte, kann die Dateien auch direkt auf dem Webserver einbinden.
+Dazu kann man das Iconpaket  von der `Webseite downloaden <https://fontawesome.com/download>`_ und entpacken. Die
+Ordner ``js/``, ``metadata/`` und ``webfonts/`` müssen auf dem Webserver in einen entsprechenden Ordner in ``files/``.
 
-Bei den Icons stehen je nach Konfiguration die Label R Regular, S Solid, B Brands als Auswahlbutton zur Verfügung.
+Die Konfiguration sieht dann z. B. wie folgt aus:
+
+.. code-block:: php
+   :linenos:
+
+   markocupic_fontawesome_icon_picker:
+     fontawesome_source_path: 'files/themes/fa7_icons/js/all.min.js'
+     fontawesome_allowed_styles:
+       - fa-regular
+       - fa-solid
+       - fa-brands
+     fontawesome_meta_file_path: 'files/themes/fa7_icons/metadata/icons.yml'
+
+Bei den Icons stehen je nach Konfiguration von ``fontawesome_allowed_styles`` und vorhandenen Icons die Label
+R Regular, S Solid, B Brands als Auswahlbutton zur Verfügung - die Reihenfolge bestimmt den angezeigten Iconstyle im
+Widget.
+
+Benutzer einer FA-Pro-Variante orientieren sich an der Beschreibung der
+`Readme <https://github.com/markocupic/fontawesome-icon-picker-bundle?tab=readme-ov-file#configuration>`_.
+
+Es ist für beide Varianten zu beachten, dass man die Icon-Fonts für das FE selbst per CSS einbinden muss.
 
 DCA-Anpassung:
 
@@ -178,18 +199,6 @@ Ausgabe BE & FE:
 |img_mcfa_01.png|
 
 |img_mcfa_02.png|
-
-Aus Datenschutzgründen ist es jedoch vorzuziehen, die individuelle JavaScript-Datei des Icon-Kits nicht per URL
-einzubinden, sonder als Datei auf dem Webserver. Dazu kann man die Datei im Browser über die Dev-Tools über den
-Debugger und "Speichern unter..." downloaden - anschließend die Konfiguration anpassen z. B.
-
-.. code-block:: yml
-   :linenos:
-
-   markocupic_fontawesome_icon_picker:
-     # Get your free kit code at https://fontawesome.com/start
-     #fontawesome_source_path: 'https://kit.fontawesome.com/abc123def.js'
-     fontawesome_source_path: '/files/themes/mcfa/abc123def.js'
 
 
 .. _picker_ng:
