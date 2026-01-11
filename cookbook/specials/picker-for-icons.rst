@@ -163,6 +163,10 @@ angelegt werden.
    ?>
    <i class="<?= $faType ?> fa-<?= $mcfaData[0] ?? '' ?><?= $this->additional_class ?>"></i>
 
+
+.. code-block:: php
+   :linenos:
+
    <?php
    // templates/mm_attr_text_mcfa_icon.text
    <?php
