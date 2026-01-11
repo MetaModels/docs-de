@@ -272,7 +272,7 @@ Template:
    :linenos:
 
    <?php
-   // templates/mm_attr_text_ng_icon.html5
+   // templates/mm_attr_text_lbsvg_icon.html5
    use Contao\System;
    use Lukasbableck\ContaoSVGIconPickerBundle\Twig\Extension;
 
