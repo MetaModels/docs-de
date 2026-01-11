@@ -14,10 +14,10 @@ das Attribut Text verwenden kann.
 
 Folgend werden die Anpassungen für gängige Picker-Erweiterungen vorgestellt:
 
-- `RockSolid Icon Picker <picker_rst>`
-- `Marco Cupic Font Awesome Icon Picker <picker_mcfa>`
-- `NetGroup IconToolkit <picker_ng>`
-- `Lukas Bableck SVG Icon-Picker <picker_lbsvg>`
+- :ref:`RockSolid Icon Picker <picker_rst>`
+- :ref:`Marco Cupic Font Awesome Icon Picker <picker_mcfa>`
+- :ref:`NetGroup IconToolkit <picker_ng>`
+- :ref:`Lukas Bableck SVG Icon-Picker <picker_lbsvg>`
 
 Bitte die entsprechenden Lizenzbedingungen der Icons bzw. Fonts beachten!
 
