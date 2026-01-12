@@ -170,7 +170,6 @@ angelegt werden.
 
    <?php
    // templates/mm_attr_text_mcfa_icon.html5
-   <?php
    /** Nach Deserialisierung steht ein Array mit drei Angaben zur Verfügung z. B.
    * Array
    * (
