@@ -73,7 +73,8 @@ CSS:
 .. code-block:: css
    :linenos:
 
-   /** Icon font */
+   /* /files/themes/css/icons.css */
+   /* Icon font */
    @font-face {
      font-family: "RockSolid Icons";
      src: url("../iconfont/rocksolid-icons.woff2") format("woff2"), url("../iconfont/rocksolid-icons.svg") format("svg");
