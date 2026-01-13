@@ -26,11 +26,13 @@ Voraussetzung
 -------------
 
 Zunächst muss ein **Attribut Text** angelegt werden inklusive Migration und Einbindung in der Eingabemaske und bei den
-Rendereinstellungen. In den Beispielen ist der Name des MetaModel ``mm_employees`` und der Spaltenname des Attributs
-``*_icon`` (z. B. ``rst_icon``).
+Rendereinstellungen.
 
 Für die DCA-Anpassungen ist eine PHP-Datei ``contao/dca/mm_employees.php`` anzulegen. Erscheint statt des Labels
 "LABEL NOT SET", :ref:`bitte lt. Anleitung fixen <component_translations_lns>`.
+
+Die DCA-Anpassung kann aus den jeweiligen Beispielen übernommen werden - anzupassen sind der Name des MetaModel
+(``mm_employees``) und der Spaltenname des Attributs ``*_icon`` (z. B. ``rst_icon``).
 
 Für die Ausgabe sind eigene Templates - abgeleitet von ``mm_attr_text`` - anzulegen und bei den Rendereinstellungen des
 Attributs auszuwählen. Dort können auch zusätzliche CSS-Angaben für Größe oder Farbe hinterlegt werden.
