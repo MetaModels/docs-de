@@ -25,7 +25,7 @@ Bitte die entsprechenden Lizenzbedingungen der Icons bzw. Fonts beachten!
 Voraussetzung
 -------------
 
-Zunächst muss ein Attribut Text angelegt werden inklusive Migration und Einbindung in der Eingabemaske und bei den
+Zunächst muss ein **Attribut Text** angelegt werden inklusive Migration und Einbindung in der Eingabemaske und bei den
 Rendereinstellungen. In den Beispielen ist der Name des MetaModel ``mm_employees`` und der Spaltenname des Attributs
 ``*_icon``.
 
