@@ -73,7 +73,7 @@ CSS:
 .. code-block:: css
    :linenos:
 
-   /* /files/themes/css/icons.css */
+   /* files/themes/css/icons.css */
    /* Icon font */
    @font-face {
      font-family: "RockSolid Icons";
