@@ -131,6 +131,8 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * Liebchen+Liebchen: 1.210 €
 * Liebchen+Liebchen: 350 €
 * Liebchen+Liebchen: 450 €
+* Liebchen+Liebchen: 570 €
+* Liebchen+Liebchen: 400 €
 
 
 (Spenden in Netto)
