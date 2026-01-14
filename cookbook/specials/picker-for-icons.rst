@@ -370,9 +370,9 @@ Das Styling der Icons kann mit den ``.text-*`` Klassen angepasst werden -
 ``siehe Utilities <https://getbootstrap.com/docs/5.3/utilities/colors/#colors>`_; die Klassen z. B. bei den
 Rendersettings des Attributs eintragen.
 
-Möchte man im FE lieber die Ausgabe als Font, so kann man bei Verwedung der Erweiterung
-:ref:`SVG Icon-Picker <picker_lbsvg>` die SVG-Icons für die Auswahl im Backend verwenden und für das FE das Template
-anpassen - z. B.
+Möchte man im FE lieber die `Ausgabe als Font <https://icons.getbootstrap.com/#icon-font>`_, so kann man bei Verwedung
+der Erweiterung :ref:`SVG Icon-Picker <picker_lbsvg>` die SVG-Icons für die Auswahl im Backend verwenden und für das
+FE das Template anpassen - z. B.
 
 .. code-block:: php
    :linenos:
