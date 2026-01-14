@@ -366,10 +366,6 @@ und in einen geeigneten Ordner unter ``files`` ablegen.
 Für die Verwendung der SVG-Dateien kann man die Erweiterung :ref:`SVG Icon-Picker <picker_lbsvg>` einsetzen - in der
 DCA-Konfiguration für ``sourceDirectory`` den Pfad entsprechend anpassen.
 
-Das Styling der Icons kann mit den ``.text-*`` Klassen angepasst werden -
-``siehe Utilities <https://getbootstrap.com/docs/5.3/utilities/colors/#colors>`_; die Klassen z. B. bei den
-Rendersettings des Attributs eintragen.
-
 Möchte man im FE lieber die `Ausgabe als Font <https://icons.getbootstrap.com/#icon-font>`_, so kann man bei Verwedung
 der Erweiterung :ref:`SVG Icon-Picker <picker_lbsvg>` die SVG-Icons für die Auswahl im Backend verwenden und für das
 FE das Template anpassen - z. B.
@@ -383,6 +379,14 @@ FE das Template anpassen - z. B.
 
 Zusätzlich muss die BS-CSS ``bootstrap-icons.min.css`` für das FE entsprechend eingebunden werden - die Datei ist im
 Downloadpaket mit enthalten.
+
+Eine Anpassung des Styling der Icons ist z. B. mit den
+`Klassen ``text-*`` <https://getbootstrap.com/docs/5.3/utilities/colors/#colors>`_ oder
+`Klassen ``fs-*`` <https://getbootstrap.com/docs/5.3/utilities/text/#font-size>`_ möglich; die Klassen können bei den
+Rendersettings des Attributs eintragen werden. Dafür muss zusätzlich die "normale"
+`Bootstrap-CSS <https://getbootstrap.com/docs/5.3/getting-started/download/>`_ eingebunden sein.
+
+
 
 
 
