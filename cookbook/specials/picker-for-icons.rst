@@ -381,7 +381,8 @@ FE das Template anpassen - z. B.
    // templates/mm_attr_text_lbsvg_bs5_icon.html5
    <i class="bi bi-<?= basename($this->raw, '.svg') ?><?= $this->additional_class ?>"></i>
 
-Der BS5-Icon-Font muss für das FE entsprechend per CSS eingebunden werden.
+Zusätzlich muss die BS-CSS ``bootstrap-icons.min.css`` für das FE entsprechend eingebunden werden - die Datei ist im
+Downloadpaket mit enthalten.
 
 
 
