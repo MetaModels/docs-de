@@ -358,7 +358,7 @@ Lucide-Icon-Schriftart mit `IcoMoon <https://icomoon.io/>`_ oder
 Hinweise zu Bootstrap-Icons
 ---------------------------
 
-Bootstrap 5 beinhaltet einen eigenes Icon-Paket mit SVG-Dateien und einem Font als woff und woff2.
+Bootstrap 5 beinhaltet eine eigenes Icon-Paket mit SVG-Dateien und einem Font als woff und woff2.
 
 Man kann sich das Paket von der `Bootstrap-Webseite downloaden <https://icons.getbootstrap.com/#download>`_, entpacken
 und in einen geeigneten Ordner unter ``files`` ablegen.
