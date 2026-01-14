@@ -380,8 +380,8 @@ Zusätzlich muss die BS-CSS ``bootstrap-icons.min.css`` für das FE entsprechend
 Downloadpaket mit enthalten.
 
 Eine Anpassung des Styling der Icons ist z. B. mit den
-`Klassen ``text-*`` <https://getbootstrap.com/docs/5.3/utilities/colors/#colors>`_ oder
-`Klassen ``fs-*`` <https://getbootstrap.com/docs/5.3/utilities/text/#font-size>`_ möglich; die Klassen können bei den
+`Klassen "text-*" <https://getbootstrap.com/docs/5.3/utilities/colors/#colors>`_ oder
+`Klassen "fs-*" <https://getbootstrap.com/docs/5.3/utilities/text/#font-size>`_ möglich; die Klassen können bei den
 Rendersettings des Attributs eintragen werden. Dafür muss zusätzlich die "normale"
 `Bootstrap-CSS <https://getbootstrap.com/docs/5.3/getting-started/download/>`_ eingebunden sein.
 
