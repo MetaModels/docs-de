@@ -373,7 +373,6 @@ FE das Template anpassen - z. B.
 .. code-block:: php
    :linenos:
 
-   <?php
    // templates/mm_attr_text_lbsvg_bs5_icon.html5
    <i class="bi bi-<?= basename($this->raw, '.svg') ?><?= $this->additional_class ?>"></i>
 
