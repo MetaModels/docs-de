@@ -355,6 +355,35 @@ Lucide-Icon-Schriftart mit `IcoMoon <https://icomoon.io/>`_ oder
 `npm-Paket "fantasticon" <https://github.com/tancredi/fantasticon>`_ generiert werden.
 
 
+Hinweise zu Bootstrap-Icons
+---------------------------
+
+Bootstrap 5 beinhaltet einen eigenes Icon-Paket mit SVG-Dateien und einem Font als woff und woff2.
+
+Man kann sich das Paket von der `Bootstrap-Webseite downloaden <https://icons.getbootstrap.com/#download>`_, entpacken
+und in einen geeigneten Ordner unter ``files`` ablegen.
+
+Für die Verwendung der SVG-Dateien kann man die Erweiterung :ref:`SVG Icon-Picker <picker_lbsvg>` einsetzen - in der
+DCA-Konfiguration für ``sourceDirectory`` den Pfad entsprechend anpassen.
+
+Das Styling der Icons kann mit den ``.text-*`` Klassen angepasst werden -
+``siehe Utilities <https://getbootstrap.com/docs/5.3/utilities/colors/#colors>`_; die Klassen z. B. bei den
+Rendersettings des Attributs eintragen.
+
+Möchte man im FE lieber die Ausgabe als Font, so kann man bei Verwedung der Erweiterung
+:ref:`SVG Icon-Picker <picker_lbsvg>` die SVG-Icons für die Auswahl im Backend verwenden und für das FE das Template
+anpassen - z. B.
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // templates/mm_attr_text_lbsvg_bs5_icon.html5
+   <i class="bi bi-<?= basename($this->raw, '.svg') ?><?= $this->additional_class ?>"></i>
+
+Der BS5-Icon-Font muss für das FE entsprechend per CSS eingebunden werden.
+
+
 
 .. |img_lbsvg_01.png| image:: /_img/screenshots/cookbook/specials/icon_picker/lbsvg_01.png
 .. |img_lbsvg_02.png| image:: /_img/screenshots/cookbook/specials/icon_picker/lbsvg_02.png
