@@ -258,7 +258,7 @@ Lukas Bableck SVG Icon-Picker
 `Erweiterung auf Github <https://github.com/lukasbableck/contao-svg-icon-picker-bundle>`_.
 
 Die Erweiterung ist für `Font Awesome <https://fontawesome.com/>`_ konzipiert - es ist aber auch möglich, eigene
-SVG-Icons wie z. B. `Lucide <https://lucide.dev/icons/>`_ zu laden.
+SVG-Icons wie z. B. `Lucide <https://lucide.dev/icons/>`_ oder `Bootstrap <https://icons.getbootstrap.com>`_ zu laden.
 
 Die Icons werden als "echte" SVGs ausgespielt, so dass Anpassungen an Farbgebung usw. möglich sind.
 
