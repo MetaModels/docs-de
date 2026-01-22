@@ -54,6 +54,9 @@ Beschreibungstexte von Produkten übersetzbar zu machen, die EAN und Maßangaben
 jedoch nicht. Diese Arbeitsweise verringert die Redundanz der einzugebenden
 Daten.
 
+:ref:`Mehr zu den Einstellungen und Handhabung der Mehrsprachigkeit, bei den Komponenten eines
+MetaModel. <component_multi-language>`
+
 Filter
 ------
 
