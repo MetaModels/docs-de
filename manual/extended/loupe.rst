@@ -140,8 +140,9 @@ in der ``config.yml`` angelegt sein - folgend für Loupe:
 
    # config/config.yml
    framework:
-     routing:
-       '*': contao_prio_normal
+     messenger:
+        routing:
+          '*': contao_prio_normal
 
 In einer der folgenden Versionen nehmen wir eine vollständige Anbindung an die Contao-Implementierung vor, so dass
 das nicht mehr notwendig sein wird.
