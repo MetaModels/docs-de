@@ -141,8 +141,11 @@ in der ``config.yml`` angelegt sein - folgend für Loupe:
    # config/config.yml
    framework:
      messenger:
-        routing:
-          '*': contao_prio_normal
+       routing:
+         MetaModels\FilterLoupe\*: contao_prio_high
+   # Alternativ: separate Einstellung möglich
+   #      MetaModels\FilterLoupe\Messenger\IndexMessage: contao_prio_high
+   #      MetaModels\FilterLoupe\Messenger\ReIndexMessage: contao_prio_normal
 
 In einer der folgenden Versionen nehmen wir eine vollständige Anbindung an die Contao-Implementierung vor, so dass
 das nicht mehr notwendig sein wird.
