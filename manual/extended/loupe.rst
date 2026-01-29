@@ -157,7 +157,14 @@ Während der Indexierung wird für jede Filterregel ein eigener Index als SQLite
 bzw. mehrsprachigen Attributen gibt es wiederum für jede Sprache einen eigenen Index. Die Daten liegen unter
 ``var/mm_loupe_index/<id-Loupe-Filterregel>/``.
 
-Bei einer kompletten Reindexierung wird die Index-Datenbank vorher geleert.
+Die Reindexierung kann nach Neuerstellung der Filterregel oder bei Änderungen der Einstellungen manuell angestoßen
+werden. Dabei wird die Index-Datenbank vorher geleert. Der Start erfolgt über das Icon in der Liste der Filterregeln
+oder über Konsole - mit dem optionalen Parameter ``-p`` kann die Anzahl der Items je Eintrag in der ``tl_message_queue``
+angepasst werden; Standard ist 50,
+
+.. code-block:: shell
+
+   php contao/bin/console metamodels:loupe:reindex -p 1000
 
 
 .. |img_item_output| image:: /_img/screenshots/extended/loupe/item_output.png
