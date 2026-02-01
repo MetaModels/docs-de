@@ -22,6 +22,10 @@ In dem Template folgenden Code eingeben:
    :linenos:
 
    <?php
+
+   use Contao\ContentModel;
+   use Contao\ContentYouTube;
+
    $contentData['type']           = 'youtube';
    $contentData['youtube']        = $this->raw . '?rel=0';
    $contentData['youtubeOptions'] = serialize(['youtube_nocookie']);
@@ -31,7 +35,7 @@ In dem Template folgenden Code eingeben:
    $model = new ContentModel();
    $model->setRow($contentData);
 
-   $content = new \Contao\ContentYouTube($model);
+   $content = new ContentYouTube($model);
 
    echo $content->generate();
 
@@ -85,7 +89,7 @@ Zudem wird ein eigenes Template z. B. ``mm_attr_select_rst_slider.html5`` mit fo
    $moduleData['rsts_import_settings']      = 1;
    $moduleData['rsts_import_settings_from'] = 55;
 
-   $model = new ModuleModel();
+   $model = new \Contao\ModuleModel();
    $model->setRow($moduleData);
 
    $module = new MadeYourDay\RockSolidSlider\Module\Slider($model);
