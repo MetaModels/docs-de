@@ -20,6 +20,10 @@ aus MetaModels nicht zurückgreifen und benötigen somit entsprechende Unterstü
 Die "normalen Listenansichten" benötigen diese Sonderbehandlung nicht und die Seiten werden
 automatisch über die Contao-Funktionen korrekt in die Suche oder Sitemap aufgenommen.
 
+Die "Basisseite" wie sie von Contao angelegt wurde, wird aus der sitemap.xml entfernt, d. h. die Seite
+``domain.tld/mein-projekt/detail.html`` taucht in der sitemap.xml nicht auf sondern nur die URLs mit dem Filterparameter
+also z. B. ``domain.tld/mein-projekt/detail/alias-1.html``, ``.../alias-2.html`` usw.
+
 Die Detailseiten werden im FE-Modul "Sitemap" nicht eingebunden.
 
 Zu beachten ist, dass von Contao URLs mit bestimmten Schlüsselwörtern als "Keys" wie `id`, `file`,
