@@ -73,6 +73,18 @@ dann Name (name).
 
 |img_item_output|
 
+Neben der Ausgabe im FE kann - z. B. für ein Check des Indexes - die Suche auch per Konsole durchgeführt werden; als
+Parameter werden die ID der Filterregel und der Suchstring übergeben.
+
+.. code-block:: shell
+
+   php contao/bin/console metamodels:loupe:test-index 11 "Am Ried"
+
+Die Ausgabe beinhaltet neben der Index-ID und dem Score auch die Angabe des Attributs und eine farbliche Kennzeichnung
+des Matches.
+
+|img_console_output|
+
 
 .. _indexing_stop-words:
 Einstellung von Stopp-Wörtern
@@ -159,8 +171,8 @@ bzw. mehrsprachigen Attributen gibt es wiederum für jede Sprache einen eigenen 
 
 Die Reindexierung kann nach Neuerstellung der Filterregel oder bei Änderungen der Einstellungen manuell angestoßen
 werden. Dabei wird die Index-Datenbank vorher geleert. Der Start erfolgt über das Icon in der Liste der Filterregeln
-oder über Konsole - mit dem optionalen Parameter ``-p`` kann die Anzahl der Items je Eintrag in der ``tl_message_queue``
-angepasst werden; Standard ist 50,
+oder über Konsole - mit dem optionalen Parameter ``-p`` kann die Anzahl der Items, die  je Eintrag in der
+``tl_message_queue`` abgearbeitet werden sollen, angepasst werden; Standard ist 50.
 
 .. code-block:: shell
 
@@ -168,3 +180,4 @@ angepasst werden; Standard ist 50,
 
 
 .. |img_item_output| image:: /_img/screenshots/extended/loupe/item_output.png
+.. |img_console_output| image:: /_img/screenshots/extended/loupe/console_output.png
