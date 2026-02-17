@@ -132,6 +132,28 @@ Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren, so kann man
 "ChangeLanguage" für jede Sprache der Filterparameter (z. B. Alias) über einen Hook passend ausgetauscht werden - `siehe
 Doku <https://extensions.terminal42.ch/docs/changelanguage/en/developers/#rewriting-an-url-parameter>`_
 
+Als Einstieg das Snippet: man muss prüfen, ob man sich auf der passenden Detailseite befindet z. B. ID 3, 15, 36 für
+die einzelnen Sprachen. Mit dem aktuellen Wert und der aktuellen Sprache kann der passende Wert ermittelt werden.
+Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
+
+.. code-block:: php
+
+   // ...
+
+   // Right page?
+   if (!\in_array($targetPageId = $event->getNavigationItem()->getTargetPage()->id, [3, 15, 36], true)) {
+       return;
+   }
+
+   // Get alias value.
+   $currentAliasValue = Input::get('auto_item');
+
+   // Search for attribute value in target language.
+   // $newAliasValue = ....
+
+   // Set alias value for target language/page.
+   $event->getUrlParameterBag()->setUrlAttribute('auto_item', $newAliasValue);
+
 Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
 
 Bei der Filterregel "Levenshtein-gestützte Suche" ist es bei der Attributseinstellung "Attribute zum Indexieren" auch
