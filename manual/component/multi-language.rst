@@ -133,8 +133,8 @@ Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren, so kann man
 Doku <https://extensions.terminal42.ch/docs/changelanguage/en/developers/#rewriting-an-url-parameter>`_
 
 Als Einstieg das Snippet: man muss prüfen, ob man sich auf der passenden Detailseite befindet z. B. ID 3, 15, 36 für
-die einzelnen Sprachen. Mit dem aktuellen Wert und der aktuellen Sprache kann der passende Wert ermittelt werden.
-Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
+die einzelnen Sprachen. Mit dem aktuellen Wert und der aktuellen Sprache kann der passende Wert ermittelt werden. Das
+hängt vom jeweiligen Aufbau der MetaModels ab. Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
 
 .. code-block:: php
 
