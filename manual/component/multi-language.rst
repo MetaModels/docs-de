@@ -100,6 +100,11 @@ in einer nicht-Fallbacksprache, muss sich dieser von der Fallbackeingabe untersc
 "Marketing" ist und Deutsch die Fallbacksprache, würde das Wort "Marketing" nicht als Wort bei Englisch gespeichert
 werden.
 
+.. note:: Achtung beim Kopieren von mehrsprachigen Datensätzen: aktuell werden nicht alle Sprachen mit kopiert.
+   Die Sprache im BE sollte beim Duplizieren gleich der Fallback-Sprache sein. Anschließend müssen die weiteren Sprachen
+   nachgepflegt werden. |br|
+   `Siehe Issue <https://github.com/MetaModels/core/issues/598#issuecomment-1912422061>`_
+
 
 BE-Listenansicht
 ----------------
