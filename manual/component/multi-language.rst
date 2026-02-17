@@ -138,21 +138,24 @@ Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
 
 .. code-block:: php
 
-   // ...
+   public function __invoke(ChangelanguageNavigationEvent $event)
+   {
+       // ...
 
-   // Right page?
-   if (!\in_array($targetPageId = $event->getNavigationItem()->getTargetPage()->id, [3, 15, 36], true)) {
-       return;
+       // Right page?
+       if (!\in_array($targetPageId = $event->getNavigationItem()->getTargetPage()->id, [3, 15, 36], true)) {
+           return;
+       }
+
+       // Get alias value.
+       $currentAliasValue = Input::get('auto_item');
+
+       // Search for attribute value in target language.
+       // $newAliasValue = ....
+
+       // Set alias value for target language/page.
+       $event->getUrlParameterBag()->setUrlAttribute('auto_item', $newAliasValue);
    }
-
-   // Get alias value.
-   $currentAliasValue = Input::get('auto_item');
-
-   // Search for attribute value in target language.
-   // $newAliasValue = ....
-
-   // Set alias value for target language/page.
-   $event->getUrlParameterBag()->setUrlAttribute('auto_item', $newAliasValue);
 
 Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
 
