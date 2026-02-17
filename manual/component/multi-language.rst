@@ -8,8 +8,12 @@ Attribute wie z. B. `Übersetzter Text`, `Übersetzter Alias`, `Übersetzte Date
 Werte unabhängig von einer Sprachen sind, wie z. B. die Zahlenwerte, gibt es diese Varianten nicht.
 
 Bevor man mit der Erstellung der Models startet gilt es gut zu überlegen, ob die Inhalte mehrsprachig abgelegt werden
-sollen. Die mehrsprachigen Inhalte werden in separaten Tabellen gespeichert und nicht in der eigenen ``mm_*``, so dass ein
-späterer Wechsel zu einer Mehrsprachigkeit mit entsprechender Nachpflege verbunden ist.
+sollen. Die mehrsprachigen Inhalte werden in separaten Tabellen gespeichert und nicht in der eigenen ``mm_*``, so dass
+ein späterer Wechsel zu einer Mehrsprachigkeit mit entsprechender Nachpflege verbunden ist.
+
+Wenn man einsprachige Werte hat, die man speichern möchte aber die in verschiedenen Sprachen im Frontend ausgegeben
+werden sollen, ist eine Umstellung auf eine Mehrsprachigkeit unkritisch. Es werden lediglich die Attributsbezeichnungen
+entsprechend den Sprachen erweitert - :ref:`siehe unten "Attribute" <component_multi-language_attribute>`.
 
 
 Models
@@ -28,6 +32,7 @@ Sprachenschema und die selbe Fallbacksprache zu definieren. Es ist auch sinnvoll
 über seine Startpunkte definiert hat.
 
 Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben.
+
 
 .. _component_multi-language_attribute:
 Attribute
@@ -117,6 +122,10 @@ aktivieren und die Detailseite kann dann sowohl mit |br|
 ``https://my-domain.tld/en/dessert/details/marinated-strawberries`` als auch mit |br|
 ``https://my-domain.tld/en/dessert/details/marinierte-erdbeeren`` |br|
 aufgerufen werden.
+
+Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren, so kann man bei dem Sprachenwechsler
+"ChangeLanguage" für jede Sprache der Filterparameter (z. B. Alias) über einen Hook passend ausgetauscht werden - `siehe
+Doku <https://extensions.terminal42.ch/docs/changelanguage/en/developers/#rewriting-an-url-parameter>`_
 
 Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
 
