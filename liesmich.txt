@@ -46,7 +46,7 @@ Bei den neueren Verlinkungen habe ich die Form <dateiname>_<überschrift-mit-bin
 
 externe Verlinkungen:
 `Google <https://www.google.de>`_
-offensichtlich gibt es keine Möglichkeit das Attribut "target" anzugeben :-(
+offensichtlich gibt es keine Möglichkeit, das Attribut "target" anzugeben :-(
 
 
 Überschriften:
@@ -78,7 +78,7 @@ Hinweise:
 
 
 HTML-Sonderzeichen usw.:
-per "Ersetzungstoken" z.B. kostet 2.000 |nbsp| EUR
+per "Ersetzungstoken" z. B. kostet 2.000 |nbsp| EUR
 
 .. |nbsp| unicode:: 0xA0 
    :trim:

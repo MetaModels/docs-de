@@ -118,23 +118,59 @@ Filter
 
 Die meisten Filterregeln suchen in der Sprache, die im Frontend gerade die aktive (Contao-)Sprache ist. Bei einigen
 Filterregeln wie "Einfache Abfrage", "Einzelauswahl", "Mehrfachauswahl", "Textfilter" gibt es die Option
-"Alle Sprachen durchsuchen", sofern ein mehrsprachiges Attribut ausgewählt wurde.
+"Alle Sprachen durchsuchen", sofern ein mehrsprachiges Attribut ausgewählt wurde. Diese Option kann man z. B. bei der
+Detailseite (s. u.) einsetzen.
 
-Diese Option kann z. B. verwendet werden, wenn man bei einer Detailseite einen
-:ref:`Sprachenwechsler wie "ChangeLanguage" <rst_cookbook_tips_seo_metadata-hreflang>` hat und den Filterwert nicht für
-andere Sprachen anpassen möchte. Man kann bei der Filterregel "Einfache Abfrage" die Option "Alle Sprachen durchsuchen"
-aktivieren und die Detailseite kann dann sowohl mit |br|
-``https://my-domain.tld/en/dessert/details/marinated-strawberries`` als auch mit |br|
-``https://my-domain.tld/en/dessert/details/marinierte-erdbeeren`` |br|
-aufgerufen werden.
+Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
 
-Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren, so kann man bei dem Sprachenwechsler
-"ChangeLanguage" für jede Sprache der Filterparameter (z. B. Alias) über einen Hook passend ausgetauscht werden - `siehe
+Bei der Filterregel "Levenshtein-gestützte Suche" ist es bei der Attributseinstellung "Attribute zum Indexieren" auch
+möglich, mehrsprachige Attribute auszuwählen.
+
+Die Filterregel ":ref:`Loupe-gestützte Volltextsuche <rst_extended_loupe>`" unterstützt aktuell die mehrsprachigen
+Attribute Text und Langtext.
+
+
+FE-Liste / Detailansicht
+------------------------
+
+Hat man eine Detailseite bei der man üblicher Weise ein Datensatz per Alias anzeigen lassen möchte, soll man mit dem
+Sprachenwechsler zu der Detailseite in einer anderen Sprache wechseln können.
+
+Erweiterungen wie `"ChangeLanguage" <https://github.com/terminal42/contao-changelanguage>`_ "sieht" nur die in
+Contao angelegte Seite - z. B. ``https://my-domain.tld/en/dessert/details`` - ohne den Alias der Filterung.
+
+Um der Erweiterung den Wert für die anderen Sprachen mit auf den Weg zu geben und entsprechend zu filtern, gibt
+es mehrere Möglichkeiten:
+
+**1. Filterregel "Einfache Abfrage" die Option "Alle Sprachen durchsuchen"**
+
+Zunächst müssen alle Detailseiten der einzelnen Sprachen über die Seiteneigenschaften verknüpft werden - Button
+"Seite in Hauptsprache". Zudem muss im Feld "Query-Parameter beibehalten" der "URL-Parameter" aus der Filterregel
+eingetragen werden (alias). Als URL-Parameter darf nicht "auto_item" eingetragen werden, da ChangeLanguage damit nicht
+arbeiten kann.
+
+Zudem wird die Filterregel "Einfache Abfrage" erstellt oder angepasst. Der URL-Parameter darf nicht als "auto_item"
+eingetragen sein und die Option "Alle Sprachen durchsuchen" muss aktiviert sein. Damit kann die Filterung mit allen
+Sprachvarianten erfolgen also mit
+
+``https://my-domain.tld/en/dessert/details/alias/marinated-strawberries`` als auch mit |br|
+``https://my-domain.tld/de/dessert/details/alias/marinated-strawberries`` bzw.
+
+``https://my-domain.tld/en/dessert/details/alias/marinierte-erdbeeren`` als auch mit |br|
+``https://my-domain.tld/de/dessert/details/alias/marinierte-erdbeeren``.
+
+
+**2. Hook "changelanguageNavigation"**
+
+Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren oder mit "auto_item" als "URL-Parameter" arbeiten,
+so kann man bei dem Sprachenwechsler "ChangeLanguage" für jede Sprache der Filterparameter (z. B. Alias) über einen
+Hook passend austauschen - `siehe
 Doku <https://extensions.terminal42.ch/docs/changelanguage/en/developers/#rewriting-an-url-parameter>`_
 
 Als Einstieg das Snippet: man muss prüfen, ob man sich auf der passenden Detailseite befindet z. B. ID 3, 15, 36 für
-die einzelnen Sprachen. Mit dem aktuellen Wert und der aktuellen Sprache kann der passende Wert ermittelt werden. Das
-hängt vom jeweiligen Aufbau der MetaModels ab. Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
+die einzelnen Sprachenseiten. Mit dem aktuellen Wert des Filterparameters und der aktuellen Sprache kann der passende
+Wert für die jeweilige andere Sprache ermittelt werden. Diese Abfrage hängt vom jeweiligen Aufbau der MetaModels ab.
+Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
 
 .. code-block:: php
 
@@ -156,14 +192,6 @@ hängt vom jeweiligen Aufbau der MetaModels ab. Der Hook wird für jede Sprache 
        // Set alias value for target language/page.
        $event->getUrlParameterBag()->setUrlAttribute('auto_item', $newAliasValue);
    }
-
-Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
-
-Bei der Filterregel "Levenshtein-gestützte Suche" ist es bei der Attributseinstellung "Attribute zum Indexieren" auch
-möglich, mehrsprachige Attribute auszuwählen.
-
-Die Filterregel ":ref:`Loupe-gestützte Volltextsuche <rst_extended_loupe>`" unterstützt aktuell die mehrsprachigen
-Attribute Text und Langtext.
 
 
 .. |br| raw:: html
