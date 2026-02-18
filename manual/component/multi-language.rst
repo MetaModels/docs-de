@@ -193,6 +193,8 @@ Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
        $event->getUrlParameterBag()->setUrlAttribute('auto_item', $newAliasValue);
    }
 
+Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten korrekt gesetzt -
+:ref:`siehe SEO <rst_cookbook_tips_seo_metadata-hreflang>`
 
 .. |br| raw:: html
 
