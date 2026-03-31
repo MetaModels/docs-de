@@ -214,6 +214,10 @@ Folgend ein Beispiel, wie die Marker auf einer Karte aussehen könnten:
 
 |img_screenshot_02|
 
+Soll die Kartenzentrierung und Zoom auf die Marker reagieren, so muss die Option "Grenzen anpassen" gesetzt werden.
+
+|img_screenshot_20|
+
 
 Optionale Einstellungen
 -----------------------
@@ -429,6 +433,8 @@ Für die Übergabe kann das Template des Cowegis-Content-Elements wie folgt ange
 
    <?php $this->endblock() ?>
 
+Soll sich die Karte auf die geänderte Anzahl an Markern anpassen, so muss die Option "Grenzen anpassen" bei der
+MM-Karte aktiviert sein (s.o.)
 
 Individuelle Anpassungen per JavaScript
 ---------------------------------------
@@ -534,3 +540,4 @@ Ein Dank für die Spenden* für die Erweiterung an:
 .. |img_screenshot_17| image:: /_img/screenshots/extended/cowegis_layer/screenshot_17.png
 .. |img_screenshot_18| image:: /_img/screenshots/extended/cowegis_layer/screenshot_18.png
 .. |img_screenshot_19| image:: /_img/screenshots/extended/cowegis_layer/screenshot_19.png
+.. |img_screenshot_20| image:: /_img/screenshots/extended/cowegis_layer/screenshot_20.png
