@@ -434,7 +434,7 @@ Für die Übergabe kann das Template des Cowegis-Content-Elements wie folgt ange
    <?php $this->endblock() ?>
 
 Soll sich die Karte auf die geänderte Anzahl an Markern anpassen, so muss die Option "Grenzen anpassen" bei der
-MM-Karte aktiviert sein (s.o.)
+MM-Karte aktiviert sein (s.o.).
 
 Individuelle Anpassungen per JavaScript
 ---------------------------------------
