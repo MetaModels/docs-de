@@ -10,6 +10,7 @@ Tipps zum Filtern von MM Listen.
     :maxdepth: 1
 
     custom-sql.rst
+    expression-rule.rst
     filter-with-forwarding.rst
     exclusion.rst
     search-text-at-two-fields.rst
