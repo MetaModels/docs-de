@@ -52,7 +52,7 @@ Expression: ``filterUrl != []``
 Aufbau:
 
 * Filterregel Expression
-    * Filterregel zum Filtern z. B. Mehrfachauswahl, oder Einfachauswahl
+    * Filterregel zum Filtern z. B. Mehrfachauswahl oder Einfachauswahl
     * Filterregel "Vordefinierter Satz von Items" mit der gewünschten ID des Datensatzes bzw. den IDs der Datensätze
 
 
