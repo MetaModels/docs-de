@@ -39,7 +39,8 @@ Beispiele zum Aufbau:
 
 **Aufgabe:** Zeige Liste erst an, wenn ein Filterwert gesetzt ist. |br|
 **Expression:** ``filterUrl != []`` |br|
-**Aufbau:** |br|
+**Aufbau:**
+
 * Filterregel Expression
 
   * Filterregel zum Filtern z. B. Mehrfachauswahl, oder Einfachauswahl
@@ -49,7 +50,8 @@ Hier muss keine zweite Filterregel als Kindknoten angelegt werden - ist aber opt
 **Aufgabe:** Zeige gefilterte Liste erst an, wenn ein Filterwert gesetzt ist - wenn kein Filter gesetzt ist zeige einen
 festen Datensatz an. |br|
 **Expression:** ``filterUrl != []`` |br|
-**Aufbau:** |br|
+**Aufbau:**
+
 * Filterregel Expression
 
   * Filterregel zum Filtern z. B. Mehrfachauswahl oder Einfachauswahl
