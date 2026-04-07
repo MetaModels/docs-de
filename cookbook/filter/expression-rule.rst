@@ -45,7 +45,7 @@ Beispiele zum Aufbau:
 
   * Filterregel zum Filtern z. B. Mehrfachauswahl, oder Einfachauswahl
 
-Hier muss keine zweite Filterregel als Kindknoten angelegt werden.
+Hier muss keine zweite Filterregel als Kindknoten angelegt werden - ist aber optional möglich.
 
 **Aufgabe:** Zeige gefilterte Liste erst an, wenn ein Filterwert gesetzt ist - wenn kein Filter gesetzt ist zeige einen
 festen Datensatz an. |br|
