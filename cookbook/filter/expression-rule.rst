@@ -61,6 +61,7 @@ festen Datensatz an. |br|
 Beispiele der Expressions:
 **************************
 
+* kein Filterparameter ist gesetzt: ``filterUrl != []``
 * Filterparameter mit URL-Parameter ``kategorien`` muss Wert enthalten: ``(filterUrl['kategorien'] ?? '') != ''``
 * GET-Parameter ``foo`` darf nicht ``1`` sein: ``(!request.query.has('foo') || request.query.get('foo') !== '1')``
 
