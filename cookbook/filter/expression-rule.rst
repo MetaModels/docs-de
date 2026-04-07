@@ -37,23 +37,25 @@ In der Expression-Syntax stehen aktuell folgende Parameter zur Verfügung, die z
 Beispiele zum Aufbau:
 *********************
 
-Aufgabe: Zeige Liste erst an, wenn ein Filterwert gesetzt ist.
-Expression: ``filterUrl != []``
-Aufbau:
+**Aufgabe:** Zeige Liste erst an, wenn ein Filterwert gesetzt ist. |br|
+**Expression:** ``filterUrl != []`` |br|
+**Aufbau:**
 
 * Filterregel Expression
-    * Filterregel zum Filtern z. B. Mehrfachauswahl, oder Einfachauswahl
+
+  * Filterregel zum Filtern z. B. Mehrfachauswahl, oder Einfachauswahl
 
 Hier muss keine zweite Filterregel als Kindknoten angelegt werden.
 
-Aufgabe: Zeige gefilterte Liste erst an, wenn ein Filterwert gesetzt ist - wenn kein Filter gesetzt ist zeige einen
-festen Datensatz an.
-Expression: ``filterUrl != []``
-Aufbau:
+**Aufgabe:** Zeige gefilterte Liste erst an, wenn ein Filterwert gesetzt ist - wenn kein Filter gesetzt ist zeige einen
+festen Datensatz an. |br|
+**Expression:** ``filterUrl != []`` |br|
+**Aufbau:**
 
 * Filterregel Expression
-    * Filterregel zum Filtern z. B. Mehrfachauswahl oder Einfachauswahl
-    * Filterregel "Vordefinierter Satz von Items" mit der gewünschten ID des Datensatzes bzw. den IDs der Datensätze
+
+  * Filterregel zum Filtern z. B. Mehrfachauswahl oder Einfachauswahl
+  * Filterregel "Vordefinierter Satz von Items" mit der gewünschten ID des Datensatzes bzw. den IDs der Datensätze
 
 
 Beispiele der Expressions:
@@ -70,3 +72,6 @@ zu finden.
 .. |img_expression_01| image:: /_img/screenshots/cookbook/filter/expression_01.png
 .. |img_expression_02| image:: /_img/screenshots/cookbook/filter/expression_02.png
 
+.. |br| raw:: html
+
+   <br />
