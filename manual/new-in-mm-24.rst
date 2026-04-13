@@ -80,25 +80,38 @@ Attribute
     * Support für ``'inputType' => 'fileTree'`` mit ``'multiple' => 'true'`` inkl. Verschieben von Dateien
 * Text
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
+* Übersetzter Alias
+    * Spalte ``langcode`` auf ``varchar(64)``
 * Übersetzte Checkbox
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
     * Template ``mm_attr_translatedcheckbox_icon.html5`` für Anzeige im Backend als ☑ bzw. ☐ in der Listenansicht
+    * Spalte ``langcode`` auf ``varchar(64)``
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
     * zwei neue Templates ``mm_attr_file_contao_image.html5`` für die Standardausgabe wie in Contao, was auch die
       Ausgabe der JSON-LD-Daten beinhaltet sowie ``mm_attr_file_contao_image_ofpage.html5`` für die Standardausgabe
       wie in Contao sowie wird das erste Bild als ``primaryImageOfPage`` ausgegeben; siehe auch
       :ref:`SEO-Anpassungen <rst_cookbook_tips_seo_structured-data>`
+    * Spalte ``langcode`` auf ``varchar(64)``
 * Übersetzter Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
+    * Spalte ``mm_lang`` auf ``varchar(64)``
 * Übersetzte Kombinierte Werte
     * Option "Immer speichern" (alwaysSave) aktiviert - speichern auch ohne Werteänderung
 * Übersetzter Langtext
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
+    * Spalte ``langcode`` auf ``varchar(64)``
 * Übersetzte Tabelle-Multi (MCW)
     * Support für ``'inputType' => 'fileTree'`` mit ``'multiple' => 'true'`` inkl. Verschieben von Dateien
+    * Spalte ``langcode`` auf ``varchar(64)``
+* Übersetzte Tabelle-Text
+    * Spalte ``langcode`` auf ``varchar(64)``
 * Übersetzter Text
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
+    * Spalte ``langcode`` auf ``varchar(64)``
+* Übersetzte URL
+    * Spaltenname von ``language`` auf ``langcode`` geändert - Migration vorhanden
+    * Spalte ``langcode`` auf ``varchar(64)``
 
 
 Filter
@@ -107,6 +120,9 @@ Filter
 * Einfache Abfrage
     * ist die Option "Statischer Parameter" gesetzt, kann neben dem CE-/Modul MM-Liste auch in MM-Filter für die
       Filterregel ein Wert als Preset ausgewählt werden - siehe `Ticket #345 <https://github.com/MetaModels/core/issues/345>`_
+* Expression-Regel (Neu)
+    * Mit der Filterregel "Expression" kann die Ausführung weiterer Filterregeln an Bedingungen geknüpft werden - siehe
+      :rel:`rst_cookbook_filter_expression-rule`
 * Filter-by-related
     * :ref:`ersetzt den Filter "Filter-Parent" <rst_extended_filter_by_related>`
     * die Filterregel ermöglicht es, Items nach Eigenschaften eines verknüpften (Relation) MetaModels zu filtern. Als
@@ -171,6 +187,8 @@ im Blick behalten werden:
   `EAP-News Oktober II 2024 <https://now.metamodel.me/de/mm-eap-newsletter-2-4/details/eap-info-mm-2-4-oktober-ii-2024>`_
 * bei Attribut Land wurden die Schreibweisen der Länderkürzel auf Großbuchstaben wie in Contao geändert - vorhandene
   Daten werden mit einer Migration angepasst; ggf. eigene Prüfungen oder Speicherungen anpassen
+* bei Attribut übersetzte URL wurde der Name der Spalte für die Sprachkürzel auf ``langcode`` geändert - ggf. eigene
+  SQL-Abfragen oder Templateausgaben anpassen
 * Auswahl der Bildgrößen prüfen - verschiedene Standardvorgaben wie "Mitte-Mitte" gibt es nicht mehr
 * wenn Option "Statischer Parameter" in Filterregel gesetzt ist, dann in MM-Liste den Standardwert bei
   "Filterwert für Attribut" prüfen - sofern keine Items in der Liste ausgegeben werden auf "ohne Datenwert [null]"

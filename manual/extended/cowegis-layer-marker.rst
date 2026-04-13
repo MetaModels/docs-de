@@ -214,7 +214,8 @@ Folgend ein Beispiel, wie die Marker auf einer Karte aussehen könnten:
 
 |img_screenshot_02|
 
-Soll die Kartenzentrierung und Zoom auf die Marker reagieren, so muss die Option "Grenzen anpassen" gesetzt werden.
+Soll die Kartenzentrierung und Zoom auf die Marker reagieren, so muss die Option "Grenzen anpassen" gesetzt werden -
+ansonsten werden die Standardwerte für Kartenzentrierung und Zoom verwendet.
 
 |img_screenshot_20|
 
