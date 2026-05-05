@@ -132,8 +132,8 @@ Fassung in die URL einbringen, so muss das mit einer eigenen Anpassung z.B. übe
 
 
 .. _rst_cookbook_tips_seo_filter-url:
-SEO-Aspekte: Slug- vs. GET-Parameter in Filter-URLs
-...................................................
+Slug- vs. GET-Parameter in Filter-URLs
+......................................
 
 Ab MM 2.4 kann in jeder Filterregel über die Einstellung "URL-Typ für den Parameter" gewählt werden, ob ein
 Filterparameter als Teil des URL-Pfads (Slug) oder als klassischer GET-Parameter übergeben wird - siehe
