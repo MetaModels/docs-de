@@ -117,6 +117,12 @@ Attribute
 Filter
 ------
 
+Alle Filterregeln, die eine URL erzeugen haben eine neue Einstellung ("URL-Typ für den Parameter") ob die Parameter
+als Slug- oder als GET-Parameter in der URL erscheinen sollen. Aus Gründen der Rückwärtskompatibilität ist die
+Einstellung nach einem Upgrade "Slug oder GET" - diese Einstellung ist deprechated und sollte für jede entsprechende
+Filterregel entweder auf Slug ODER auf GET eingestellt werden. Mehr dazu bei den
+:ref:`SEO-Tipps <rst_cookbook_tips_seo_filter-url>`
+
 * Einfache Abfrage
     * ist die Option "Statischer Parameter" gesetzt, kann neben dem CE-/Modul MM-Liste auch in MM-Filter für die
       Filterregel ein Wert als Preset ausgewählt werden - siehe `Ticket #345 <https://github.com/MetaModels/core/issues/345>`_
@@ -138,6 +144,9 @@ Filter
 * Volltextsuche mit "Loupe"
     * Mit der neuen Filterregel wird ein Index über ausgewählte Attribute erstellt, über den anschließend gesucht
       werden kann - siehe :ref:`Loupe <rst_extended_loupe>`
+* Expression-Regel** (Neu)
+    * damit kann die Ausführung weiterer Filterregeln an Bedingungen geknüpft werden; mehr dazu
+      bei der :ref:`Filterregel Expression <rst_cookbook_filter_expression-rule>`
 
 
 Frontend-Editing (FEE)
@@ -195,6 +204,7 @@ im Blick behalten werden:
   stellen
 * bei eigenen Abfragen für die Umkreissuche bzw. Ermittlung der Geokoordinaten, bei dem Map-Provider ein
   ``HttpClientInterface`` als Parameter mit übergeben
+* bei Filterregeln die Einstellung "URL-Typ für den Parameter" prüfen und auf Slug ODER GET einstellen
 
 
 Re-Finanzierung

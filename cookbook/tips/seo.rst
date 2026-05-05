@@ -131,6 +131,33 @@ Fassung in die URL einbringen, so muss das mit einer eigenen Anpassung z.B. übe
 :ref:`Mehr zur Mehrsprachigkeit in MM. <component_multi-language>`
 
 
+.. _rst_cookbook_tips_seo_filter-url:
+SEO-Aspekte: Slug- vs. GET-Parameter in Filter-URLs
+...................................................
+
+Ab MM 2.4 kann in jeder Filterregel über die Einstellung "URL-Typ für den Parameter" gewählt werden, ob ein
+Filterparameter als Teil des URL-Pfads (Slug) oder als klassischer GET-Parameter übergeben wird - siehe
+:ref:`Einstellungsparameter der Filterregel <component_filter>`.
+
+**Slug-Parameter (sprechende URL-Pfade)** erzeugen saubere, gut lesbare URLs – z. B.
+``/produkte/kategorie/mit-akku`` statt ``/produkte?kategorie=mit-akku``. Sie sind in der Regel die bevorzugte
+Variante für indexierbare Inhalte, da Suchmaschinen diese Form als eigenständige Seite behandeln. Diese Form eignet
+sich besonders dann, wenn Filterkombinationen als eigenständige, indexierbare Landingpages dienen sollen. Allerdings
+kann dies schnell zu einer großen Anzahl potenzieller URL-Varianten führen, was sorgfältig über Canonical-Tags oder
+Indexierungsregeln gesteuert werden sollte.
+
+**GET-Parameter** (z. B. ``?farbe=rot``) werden von Suchmaschinen zwar ebenfalls verarbeitet, gelten jedoch
+als weniger "sprechend" und werden oft als technische Varianten derselben Seite interpretiert. Sie eignen sich daher
+besonders für rein funktionale Filter, die keine eigene SEO-Relevanz haben sollen und typischerweise nicht indexiert
+werden müssen. In Kombination mit geeigneten Canonical-URLs kann so verhindert werden, dass unnötig viele
+Duplicate-Content-Varianten entstehen.
+
+**Empfehlung:** |br|
+Slug-Parameter sollten für filterbare, suchmaschinenrelevante Kombinationen verwendet werden, während GET-Parameter
+besser für rein interaktive oder nicht indexierbare Filter geeignet sind. Die Entscheidung hängt letztlich davon ab,
+ob eine Filterkombination als eigenständige Landingpage funktionieren soll oder lediglich zur internen Navigation dient.
+
+
 Paginierung der Listenausgabe
 .............................
 
@@ -185,3 +212,7 @@ Zudem gibt es ein Template ``mm_attr_file_contao_image_ofpage.html5``, welches z
 ``primaryImageOfPage`` mit in den JSON_LD-Daten mit einpflegt. Ist diese Bildangabe vorhanden, wird dieses Bild z. B.
 bei den Ergebnissen der Contao-Suche mit ausgegeben. Dies erfolgt analog der Detailansichten der News und Events von
 Contao.
+
+.. |br| raw:: html
+
+   <br />

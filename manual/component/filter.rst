@@ -7,6 +7,7 @@
   Filterset erstellen und in Komponenten oder Inhaltselementen/Modulen
   aktivieren
 
+
 Einleitung
 ----------
 
@@ -34,6 +35,7 @@ Die Filtersets können sowohl im Backend als auch im Frontend zum Einsatz kommen
 
 Die Filterregeln können zum Teil dynamisch z.B. über GET/POST-Parameter
 beeinflusst werden, wodurch sich sehr umfangreiche Filterungen ergeben.
+
 
 Typen von Filterregeln
 ----------------------
@@ -85,13 +87,17 @@ Typen von Filterregeln
 * **Levenshtein-gestützte Suche** (attribute_levenshtein): |br|
   erzeugt einen Volltext-Index von ausgewählten Attributen inkl. Ähnlichkeitssuche und Autovervollständigung; eigenes
   Template mm_filteritem_levenshtein(.html5)
-* **Filter-by-related** (filter_by_related): |br|
+* **Filter-by-related** (filter_by_related) [ab MM 2.4]: |br|
   ermöglicht Items mit Eigenschaften aus einem verknüpften (Relation) MetaMdel zu filtern; Relationen können per
   Kindtabelle oder Einzelauswahl (Select) aufgebaut sein |br|
   siehe :ref:`rst_extended_filter_by_related`
 * **Loupe** (filter_loupe) [ab MM 2.4]: |br|
   erzeugt einen Volltext-Index von ausgewählten Attributen in einer eigenen SQLite-DB - basiert auf
   `Loupe <https://github.com/loupe-php/loupe>`_; mehr dazu bei der :ref:`Filterregel Loupe <rst_extended_loupe>`
+* **Expression-Regel** (filter_expression) [ab MM 2.4]: |br|
+  damit kann die Ausführung weiterer Filterregeln an Bedingungen geknüpft werden. Es wird ein Knoten in der
+  Regelliste erzeugt, der ein oder maximal zwei weitere Filterregeln als Kindknoten aufnehmen kann.; mehr dazu
+  bei der :ref:`Filterregel Expression <rst_cookbook_filter_expression-rule>`
 
 
 Einstellungsparameter
@@ -106,6 +112,8 @@ einstellbar:
   in die URL eingebaut, sondern nur der Wert ausgegeben - ``auto_item`` kann nur für eine Filterregel
   verwendet werden. Die Schlüsselwörter ``language`` und ``items`` sind von Contao reserviert - ab
   MM 2.3 werden diese automatisch umgeschrieben und ein ``__`` angehangen, sofern als Spaltenname angelegt.
+* **URL-Typ für den Parameter:** (ab MM 2.4) hier kann eingestellt werden, ob der Filterparameter als Slug- oderrst_cookbook_tips_seo_filter-url
+  GET-Parameter an die URL übergeben wird - mehr dazu bei den :ref:`SEO-Tipps <rst_cookbook_tips_seo_filter-url>`
 * **Template:** Auswahl des Widget-Templates für die FE-Anzeige; neben dem Template ``mm_filteritem_default`` bringen
   verschiedene Filterregeln ihre eigenen Templates mit wie z. B. Checkbox, Levenshtein, Register usw. Die
   Templates können auf dem üblichen Weg von Contao angepasst oder individualisiert werden. Das umschließende
