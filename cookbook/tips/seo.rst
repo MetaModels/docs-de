@@ -145,7 +145,8 @@ Variante für indexierbare Inhalte, da Suchmaschinen diese Form als eigenständi
 sich besonders dann, wenn Filterkombinationen als eigenständige, indexierbare Landingpages dienen sollen. Allerdings
 kann dies schnell zu einer großen Anzahl potenzieller URL-Varianten führen, was sorgfältig über Canonical-Tags oder
 Indexierungsregeln gesteuert werden sollte. Bei Slug-Parameter kann bei der Angabe ``auto_item`` als URL-Parameter der
-Key ausgeblendet werden z. B. für Kategorie ``/produkte/mit-akku`` - ``auto_item`` geht nur für einen URL-Parameter.
+Key ausgeblendet werden z. B. für Kategorie ``/produkte/mit-akku`` - ``auto_item`` geht aber nur für einen
+URL-Parameter.
 
 **GET-Parameter** (z. B. ``?farbe=rot``) werden von Suchmaschinen zwar ebenfalls verarbeitet, gelten jedoch
 als weniger "sprechend" und werden oft als technische Varianten derselben Seite interpretiert. Sie eignen sich daher
