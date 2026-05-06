@@ -78,7 +78,7 @@ injecten.
 
 .. _rst_cookbook_tips_seo_breadcrumb:
 Breadcrumb (Navigationspfad)
-----------------------------
+............................
 
 Der letzte Navigationspunkt der Breadcrumb wird automatisch aus dem Seitentitel generiert. Hat man bei einer Detailseite
 den :ref:`Seitentitel dynamisch aus einem MM Attribut <rst_cookbook_tips_seo_metadata-title>` generiert, wird dieser
@@ -144,18 +144,22 @@ Filterparameter als Teil des URL-Pfads (Slug) oder als klassischer GET-Parameter
 Variante für indexierbare Inhalte, da Suchmaschinen diese Form als eigenständige Seite behandeln. Diese Form eignet
 sich besonders dann, wenn Filterkombinationen als eigenständige, indexierbare Landingpages dienen sollen. Allerdings
 kann dies schnell zu einer großen Anzahl potenzieller URL-Varianten führen, was sorgfältig über Canonical-Tags oder
-Indexierungsregeln gesteuert werden sollte.
+Indexierungsregeln gesteuert werden sollte. Bei Slug-Parameter kann bei der Angabe ``auto_item`` als URL-Parameter der
+Key ausgeblendet werden z. B. für Kategorie ``/produkte/mit-akku`` - ``auto_item`` geht nur für einen URL-Parameter.
 
 **GET-Parameter** (z. B. ``?farbe=rot``) werden von Suchmaschinen zwar ebenfalls verarbeitet, gelten jedoch
 als weniger "sprechend" und werden oft als technische Varianten derselben Seite interpretiert. Sie eignen sich daher
 besonders für rein funktionale Filter, die keine eigene SEO-Relevanz haben sollen und typischerweise nicht indexiert
 werden müssen. In Kombination mit geeigneten Canonical-URLs kann so verhindert werden, dass unnötig viele
-Duplicate-Content-Varianten entstehen.
+Duplicate-Content-Varianten entstehen. Zudem ist es für Trackings wie Google-Analytic möglich, bestimmte GET-Parameter
+aus dem Tracking auszuschließen.
 
 **Empfehlung:** |br|
 Slug-Parameter sollten für filterbare, suchmaschinenrelevante Kombinationen verwendet werden, während GET-Parameter
 besser für rein interaktive oder nicht indexierbare Filter geeignet sind. Die Entscheidung hängt letztlich davon ab,
 ob eine Filterkombination als eigenständige Landingpage funktionieren soll oder lediglich zur internen Navigation dient.
+
+Hinweis: wenn ein Parameter sowohl als Slug als auch GET vorhanden ist, liefert Contao ein 404 zurück.
 
 
 Paginierung der Listenausgabe
