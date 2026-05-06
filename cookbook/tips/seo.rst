@@ -159,7 +159,7 @@ Slug-Parameter sollten für filterbare, suchmaschinenrelevante Kombinationen ver
 besser für rein interaktive oder nicht indexierbare Filter geeignet sind. Die Entscheidung hängt letztlich davon ab,
 ob eine Filterkombination als eigenständige Landingpage funktionieren soll oder lediglich zur internen Navigation dient.
 
-Hinweis: wenn ein Parameter sowohl als Slug als auch GET vorhanden ist, liefert Contao ein 404 zurück.
+Hinweis: wenn ein Parameter sowohl als Slug als auch als GET vorhanden ist, liefert Contao ein 404 zurück.
 
 
 Paginierung der Listenausgabe
