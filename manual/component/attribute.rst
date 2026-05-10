@@ -177,6 +177,12 @@ Die Reihenfolge in der Liste hat keinen weiteren Einfluss.
 Datenbank-Migration durchführen!
 
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   attribute/index
+
 .. |img_fields_32| image:: /_img/icons/fields_32.png
 .. |img_fields| image:: /_img/icons/fields.png
 .. |img_new| image:: /_img/icons/new.gif
