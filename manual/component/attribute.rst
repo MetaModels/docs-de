@@ -181,10 +181,42 @@ Details aller Attribute
 -----------------------
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
 
-   attribute/index
+   attribute/alias
+   attribute/checkbox
+   attribute/combinedvalues
+   attribute/contentarticle
+   attribute/country
+   attribute/decimal
+   attribute/file
+   attribute/langcode
+   attribute/longtext
+   attribute/numeric
+   attribute/select
+   attribute/tabletext
+   attribute/tablemulti
+   attribute/tags
+   attribute/text
+   attribute/timestamp
+   attribute/token
+   attribute/url
+   attribute/translatedalias
+   attribute/translatedcheckbox
+   attribute/translatedcombinedvalues
+   attribute/translatedcontentarticle
+   attribute/translatedfile
+   attribute/translatedlongtext
+   attribute/translatedselect
+   attribute/translatedtabletext
+   attribute/translatedtablemulti
+   attribute/translatedtags
+   attribute/translatedtext
+   attribute/translatedurl
+   attribute/color
+   attribute/geodistance
+   attribute/levenshtein
+   attribute/rating
 
 
 .. |img_fields_32| image:: /_img/icons/fields_32.png
