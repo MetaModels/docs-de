@@ -134,6 +134,36 @@ die Hierarchie beeinflusst werden und die Filterregel z.B. innerhalb einer ODER-
 eingefügt werden.
 
 
+Details aller Filterregeln
+--------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   filter/idlist
+   filter/simplelookup
+   filter/customsql
+   filter/condition-and
+   filter/condition-or
+   filter/expression-rule
+   filter/checkbox
+   filter/translated-checkbox
+   filter/yes-no
+   filter/fromto
+   filter/fromto-date
+   filter/range
+   filter/range-date
+   filter/select
+   filter/tags
+   filter/text
+   filter/perimeter-search
+   filter/register
+   filter/levenshtein
+   filter/by-related
+   filter/loupe
+   filter/parent
+
+
 .. |img_filter_32| image:: /_img/icons/filter_32.png
 .. |img_filter| image:: /_img/icons/filter.png
 .. |img_filter_setting| image:: /_img/icons/filter_setting.png
