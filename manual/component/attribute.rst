@@ -12,7 +12,9 @@ Einleitung
 
 Die Komponente "Attribute" ist eine der grundlegendsten Einstellung in einem MetaModel.
 Mit den Attributen werden die eigenen, spezifischen Datenfelder definiert und in der
-Datenbanktabelle als Spalten angelegt.
+Datenbanktabelle als Spalten angelegt. Auf der Seite :ref:`component_data-in-attributes` ist aufgeführt, welches
+Attribut für welchen Datentyp der Datenbank eingesetzt werden kann. Neben den üblichen Datentypen wie ``varchar``,
+``int``, ``text`` usw. gibt es auch Attribute für spezielle Speicherungen - mehr dazu in der folgenden Aufstellung.
 
 Bei der Erstellung eines Attributs "|img_new| Neues Attribut" sind als Pflichtfelder
 die Auswahl des Attributtyps sowie die Eingabe des Spaltennamens definiert - der
