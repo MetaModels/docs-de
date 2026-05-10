@@ -49,11 +49,10 @@ Varianten überschreiben) bietet das Token-Attribut folgende spezifische Optione
        gelassen, greift ebenfalls dieser Standard.
    * - Zeichenlänge des Tokens
      - Anzahl der zufällig generierten Zeichen (Mindestwert: 3, Standard: 8).
-       Das optionale Präfix wird dabei nicht mitgezählt.
    * - Präfix des Tokens
      - Optionaler fester Text, der jedem Token vorangestellt wird
-       (z. B. ``TKN-`` ergibt ``TKN-aB3xYq``). Das Präfix wird nicht zur
-       Tokenlänge hinzugerechnet.
+       (z. B. ``TKN-`` ergibt ``TKN-aB3xYq``). |br|
+       Das Präfix wird nicht zur Tokenlänge hinzugerechnet.
 
 
 Einstellungen bei den Render-Einstellungen
@@ -123,7 +122,8 @@ Das Token-Attribut kann mit folgenden Filterregeln verwendet werden:
      - Hinweis
    * - Einfache Abfrage
      - Filtert Datensätze nach einem exakten Token-Wert; sinnvoll für
-       URL-basierte Zugangsprüfungen (z. B. ``?token=TKN-aB3xYq``).
+       URL-basierte Zugangsprüfungen |br|
+       (z. B. ``?token=TKN-aB3xYq``).
    * - Eigenes SQL
      - Für komplexere Filterungen, z. B. wenn ein Token nur für bestimmte
        Mitglieder sichtbar sein soll.
