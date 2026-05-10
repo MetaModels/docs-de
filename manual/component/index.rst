@@ -61,7 +61,7 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
 
 .. toctree::
     :hidden:
-    :maxdepth: 2
+    :maxdepth: 1
 
     workflow
     new-mm
