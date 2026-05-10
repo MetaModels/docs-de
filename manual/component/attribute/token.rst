@@ -1,7 +1,7 @@
 .. _component_attribute_token:
 
-Token (ab MM 2.4)
-=================
+|img_token| Token (ab MM 2.4)
+=============================
 
 Das Attribut "Token" erzeugt beim erstmaligen Speichern eines Datensatzes eine
 kryptographisch zufällige, unveränderliche Zeichenfolge (Token). Typische Einsatzbereiche:
@@ -208,6 +208,8 @@ bleibt.
 Der Token wird als ``varchar(255) NULL`` in der MetaModel-Tabelle gespeichert. Ein
 leerer Wert wird als ``NULL`` abgelegt (kompatibel mit MySQL Strict Mode).
 
+
+.. |img_token| image:: /_img/icons/token.png
 
 .. |br| raw:: html
 
