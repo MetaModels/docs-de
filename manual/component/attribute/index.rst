@@ -41,3 +41,6 @@
     rating
     levenshtein
     geodistance
+
+
+.. |img_fields_32| image:: /_img/icons/fields_32.png
