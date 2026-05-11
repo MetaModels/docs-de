@@ -3,29 +3,12 @@
 Eigenes SQL
 ===========
 
-Die ersten Hinweise für die Möglichkeiten der Filterregel
-"Eigenes SQL" sind über die |img_help| Hilfe zu finden.
+Eine ausführliche Beschreibung der Filterregel "Eigenes SQL" ist bei der :ref:`Detailseite der Filterregeln
+<component_filter_customsql>` zu finden - eine Kurzinformation über die |img_help| Hilfe in den Einstellungen.
 
-Nochmal der Hinweis: Auch mit der Filterregel "Eigenes SQL"
-werden nur IDs zur nächsten Filterregel bzw. zum Filterset
-weiter gereicht. Es können keine "Attributwerte" hinzugefügt
-oder berechnet werden, auch wenn das per SQL z.B. durch JOINs
-oder mathematische Anweisungen möglich wäre.
-
-Spaltennamen sollten immer in Backticks ` wie z.B. \`name\`
-gesetzt oder mit dem Tabellennamen bzw. dessen Alias versehen werden (siehe `MySQL Identifier <https://dev.mysql.com/doc/refman/8.0/en/identifiers.html>`_).
-Damit ist die Verwendung auch von in (My)SQL `reservierten Wörter <https://dev.mysql.com/doc/refman/8.0/en/keywords.html>`_
-möglich.
-
-Bei komplexeren Queries ist es ratsam, diese vor dem Einbau mit 
-entsprechenden SQL-Tools wie phpMyAdmin, PHPStorm o. ä. zu testen
-bzw. bei Verschachtelungen Stück für Stück aufzubauen und vorab mit
-festen Werten zu arbeiten. Die entsprechenden Daten sollten dann natürlich
-auch als Items in der DB vorhanden sein. Als letzten Schritt fügt man
-ggf. notwendige dynamische Parameter mit den zur Verfügung stehenden
-Inserttags hinzu. Die MM-SQL-Inserttags werden nur innerhalb der Verarbeitung
-des Query aufgelöst und stehen daher auch nicht allgemein im FE zur
-Verfügung.
+Nochmal der Hinweis: Auch mit der Filterregel "Eigenes SQL" werden nur IDs zur nächsten Filterregel bzw. zum Filterset
+weiter gereicht. Es können keine "Attributwerte" hinzugefügt oder berechnet werden, auch wenn das per SQL z.B. durch
+JOINs oder mathematische Anweisungen möglich wäre.
 
 Folgend einige SQL-Queries als "Zutat" für das eigene "SQL-Menü":
 

@@ -3,14 +3,27 @@
 |img_filter_customsql| Eigenes SQL
 ===================================
 
-Die Filterregel "Eigenes SQL" ermöglicht die Verwendung einer selbst geschriebenen
-SQL-Abfrage zur Filterung von Items. Die Abfrage muss eine Liste von Item-IDs
-zurückgeben. Diese Filterregel richtet sich an fortgeschrittene Anwender, die
-komplexe Filterbedingungen benötigen, die sich nicht mit den vorhandenen Filterregel-
-Typen abbilden lassen – z. B. Vergleiche über mehrere Spalten, Unterabfragen oder
-datumsbezogene Berechnungen.
+Die Filterregel "Eigenes SQL" ermöglicht die Verwendung einer selbst geschriebenen SQL-Abfrage zur Filterung von Items.
+Die Abfrage muss eine Liste von Item-IDs zurückgeben. Diese Filterregel richtet sich an fortgeschrittene Anwender, die
+komplexe Filterbedingungen benötigen, die sich nicht mit den vorhandenen Filterregel-Typen abbilden lassen – z. B.
+Vergleiche über mehrere Spalten, Unterabfragen oder datumsbezogene Berechnungen.
 
 Diese Filterregel hat keine Frontend-Widgetausgabe.
+
+Spaltennamen sollten immer in Backticks ` wie z.B. \`name\` gesetzt oder mit dem Tabellennamen bzw. dessen Alias
+versehen werden (siehe `MySQL Identifier <https://dev.mysql.com/doc/refman/8.0/en/identifiers.html>`_).
+Damit ist die Verwendung auch von in (My)SQL `reservierten Wörter <https://dev.mysql.com/doc/refman/8.0/en/keywords.html>`_
+möglich.
+
+Bei komplexeren Queries ist es ratsam, diese vor dem Einbau mit entsprechenden SQL-Tools wie phpMyAdmin, PHPStorm o. ä.
+zu testen bzw. bei Verschachtelungen Stück für Stück aufzubauen und vorab mit festen Werten zu arbeiten. Die
+entsprechenden Daten sollten dann natürlich auch als Items in der DB vorhanden sein. Als letzten Schritt fügt man
+ggf. notwendige dynamische Parameter mit den zur Verfügung stehenden Inserttags hinzu. Die MM-SQL-Inserttags werden nur
+innerhalb der Verarbeitung des Query aufgelöst und stehen daher auch nicht allgemein im FE zur Verfügung.
+
+Auch mit der Filterregel "Eigenes SQL" werden nur IDs zur nächsten Filterregel bzw. zum Filterset
+weiter gereicht. Es können keine "Attributwerte" hinzugefügt oder berechnet werden, auch wenn das per SQL z.B. durch
+JOINs oder mathematische Anweisungen möglich wäre.
 
 .. seealso:: Praktische Beispiele und Hinweise zur Nutzung finden sich im Kochbuch:
    :ref:`rst_cookbook_filter_custom-sql`
