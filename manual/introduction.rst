@@ -52,6 +52,39 @@ Hooks — profitiert von Grundkenntnissen in HTML, SQL, Contao-Templating und PH
 das Backend allein.
 
 
+Wie fange ich an?
+-----------------
+
+Wer MetaModels noch nicht kennt, findet den einfachsten Einstieg über diese Schritte:
+
+**1. Installation**
+MetaModels wird über den Contao Manager oder Composer eingerichtet. Eine Anleitung dazu
+findet sich im Abschnitt :ref:`manual_install`.
+
+**2. Erstes MetaModel anlegen**
+Der Abschnitt :ref:`mm_first_index` führt anhand eines konkreten Beispiels durch die
+wichtigsten Konzepte:
+
+- Datenmodell anlegen
+- Attribute (Felder) definieren
+- Eingabemaske einrichten
+- Ausgabe im Frontend konfigurieren
+
+**3. Checkliste für den Start**
+Die :ref:`rst_cookbook_checklists_mm-start` im Kochbuch fasst die typischen Schritte beim
+Anlegen eines neuen MetaModels kompakt zusammen — nützlich als Nachschlagewerk für die
+ersten Projekte.
+
+**Tipp für den Einstieg:** Ein einfaches Beispiel — etwa eine Mitarbeiterliste mit Name,
+Funktion und Foto — ist ideal zum Ausprobieren. Es enthält die wesentlichen Bausteine
+(Attribute, Eingabemaske, Ausgabe), bleibt aber überschaubar genug, um die Zusammenhänge
+zu verstehen. Zur Orientierung, wo was ist, lege den
+:download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` griffbereit zur Hand.
+
+Bei Fragen helfen das `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_
+und der `Slack-Channel #metamodels <https://contao.slack.com/archives/CKGEBDV60>`_.
+
+
 Historie der MetaModels
 -----------------------
 
