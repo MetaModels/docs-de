@@ -62,7 +62,7 @@ MetaModels wird über den Contao Manager oder Composer eingerichtet. Eine Anleit
 findet sich im Abschnitt :ref:`manual_install`.
 
 **2. Erstes MetaModel anlegen**
-Der Abschnitt :ref:`mm_first_index` führt anhand eines konkreten Beispiels durch die
+Der Abschnitt ":ref:`mm_first_index`" führt anhand eines konkreten Beispiels durch die
 wichtigsten Konzepte:
 
 - Datenmodell anlegen
