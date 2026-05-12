@@ -55,7 +55,8 @@ das Backend allein.
 Historie der MetaModels
 -----------------------
 
-MetaModels startete als die "next generation" der bekannten und vielfach geschätzten Erweiterung 'Catalog'.
+MetaModels startete 2012 als die "next generation" der bekannten und vielfach geschätzten Erweiterung 'Catalog' - im
+Mai 2013 wurde Version 1.0 veröffentlicht.
 
 Der 'Catalog' ist im Laufe der Zeit zu einer sehr komplexen Erweiterung gewachsen und bot viele Möglichkeiten beim
 Einsatz im Zusammenspiel mit Contao. Leider ist es mit der Zeit immer schwieriger geworden, den Code zu pflegen oder
