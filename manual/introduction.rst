@@ -6,109 +6,79 @@ Vorstellung von MetaModels
 Was ist MetaModels?
 -------------------
 
-MetaModels ist eine Erweiterung für das CMS Contao. Mit der Erweiterung
-ist es möglich, eine Vielzahl von strukturierten Daten einzugeben und diese
-auf der Webseite nach verschiedenen Kriterien wie Listen- und Detailansicht,
-Filterungen, Sortierungen, Paginierungen, Mehrsprachig u.v.a.m. wieder
-auszugeben.
+MetaModels ist eine Erweiterung für das CMS Contao, mit der sich beliebige strukturierte Inhalte ohne Programmierung
+verwalten lassen. Ob Produktkatalog, Veranstaltungskalender, Mitarbeiterliste, Mietobjekte oder Speiseplan — wer in
+Contao eine eigene Datenverwaltung mit individuellen Feldern, Filterung, Sortierung und mehrsprachiger Ausgabe
+benötigt, findet in MetaModels eine fertige Lösung.
 
-Mit "strukturierten Daten" sind Inhalte gemeint, wie sie üblicher Weise in
-einem Datenbankschema mit verschiedenen Tabellen und Relationen abgelegt werden.
-Sehr vereinfacht ausgedrückt könnte man sagen, MetaModels ist das "Access für
-Contao".
+Der entscheidende Vorteil: Statt für jede neue Anforderung eine eigene Erweiterung entwickeln zu lassen, können
+Administratoren neue Datenstrukturen vollständig im Contao-Backend einrichten — ohne Programmierung und ohne
+externe Entwickler. Individuelle Anpassungen lassen sich damit schnell und selbständig umsetzen, auch
+wenn sich Anforderungen im laufenden Betrieb ändern.
 
-MetaModels unterstützt dabei verschiedene Arten von Feldtypen (Attribute) wie z.B.
-Text, Auswahlfelder (Select, Checkboxen, Radiobuttons), Integer/Dezimal, Ja/Nein-Felder,
-Dateiauswahlen usw.
+MetaModels unterstützt dabei viele Feldtypen — Texte, Auswahlfelder, Datum, Dateien, Ja/Nein-Felder u.v.m. — und gibt
+diese im Frontend als Listen, Detailansichten oder gefilterte Ausgaben wieder. Redakteure pflegen ihre Inhalte
+in übersichtlichen Eingabemasken, genau wie sie es aus anderen Bereichen von Contao kennen.
 
-Die Möglichkeiten dieser Dateninhalte erstecken sich von Produktkatalogen,
-Veranstaltungen/Events, Speisenpläne, Adress- oder Mitarbeiterlisten, Häuser, 
-Mietobjekte bis zu Bildergalerien oder mehrsprachigen Text/Bild-Inhalten.
+Weitere Einzelheiten zu den Funktionen sind in der :ref:`rst_features` zu finden.
 
-Die Datenmodelle können in MetaModels im Contao komplett über das Backend erstellt
-werden und es bedarf keiner Programmierung wie für eine dezidierte Erweiterung.
-Zur Erstellung der MetaModels gehört sowohl die Generierung der Eingabemasken 
-für das Backend als auch die Ausgaben für das Frontend mit den optional
-einzusetzenden Filtern.
+Was mit MetaModels in der Praxis entstanden ist, zeigt der
+`MetaModels Showcase <https://now.metamodel.me/de/showcase>`_ oder der
+`Vortrag zur CK17 <https://www.e-spin.de/metamodels-vortrag-contao-konferenz-2017.html>`_.
 
-Die MetaModels-Erweiterung zeichnet sich durch eine hohe Flexibilität in den
-Möglichkeiten der Ein- und Ausgabe von Daten aus und deckt damit viele individuelle
-Wünsche ab. Weitere Einzelheiten sind in der :ref:`rst_features` zu finden.
-Was man mit MetaModels alles umsetzen kann, ist zum Beispiel auf der Webseite
-`MetaModels Showcase <https://now.metamodel.me/de/showcase>`_ oder im `Contao
-Forum <https://community.contao.org/de/showthread.php?40208-Stellt-eure-MetaModel-Websites-vor/>`_
-zu finden.
+Eine `aktives Team in MetaModels <https://now.metamodel.me/de/ueber-uns/team>`_ hilft bei der Umsetzung mit diesem
+Handbuch oder auch dem `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_ und
+`Slack-Channel <https://contao.slack.com/archives/CKGEBDV60>`_.
+
+MetaModels im Vergleich zu anderen Tools
+-----------------------------------------
+
+MetaModels ist besonders dann die richtige Wahl, wenn eine Webseite individuelle Datenbereiche braucht, die über
+einfache Inhaltselemente hinausgehen — und wenn diese Lösung wartbar, erweiterbar und für Redakteure gewohnt bedienbar
+sein soll.
+
+Die klare Stärke liegt in der Arbeitsteilung: Ein Administrator richtet das Datenmodell einmalig ein — Felder,
+Eingabemasken, Filter und Ausgabe. Danach pflegen Redakteure die Inhalte selbstständig, ohne technisches
+Hintergrundwissen zu benötigen.
+
+Im Vergleich zu einer maßgeschneiderten Erweiterung bietet MetaModels einen entscheidenden Vorteil: Änderungen an
+Struktur und Ausgabe sind jederzeit im Backend möglich, ohne Programmierkenntnisse und ohne Deployment. Für ein
+vertreibbares, paketiertes Produkt (z. B. eine kommerzielle Erweiterung) ist hingegen eine eigene Erweiterung
+sinnvoller.
+
+Wer die Möglichkeiten von MetaModels voll ausschöpfen will — z. B. eigene Templates, komplexe SQL-Filter oder
+Hooks — profitiert von Grundkenntnissen in HTML, SQL, Contao-Templating und PHP. Für Standard-Anwendungsfälle reicht
+das Backend allein.
 
 
 Historie der MetaModels
 -----------------------
 
-MetaModels startete als die "next generation" der bekannten und vielfach geschätzten
-Erweiterung 'Catalog'.
+MetaModels startete als die "next generation" der bekannten und vielfach geschätzten Erweiterung 'Catalog'.
 
-Der 'Catalog' ist im Laufe der Zeit zu einer sehr komplexen Erweiterung gewachsen und bot
-viele Möglichkeiten beim Einsatz im Zusammenspiel mit Contao. Leider ist es mit der Zeit
-immer schwieriger geworden, den Code zu pflegen oder neue Funktionen zu implementieren.
+Der 'Catalog' ist im Laufe der Zeit zu einer sehr komplexen Erweiterung gewachsen und bot viele Möglichkeiten beim
+Einsatz im Zusammenspiel mit Contao. Leider ist es mit der Zeit immer schwieriger geworden, den Code zu pflegen oder
+neue Funktionen zu implementieren.
 
-Aus den Erfahrungen, die bei der Entwicklung des Catalog 1 und Catalog 2 gemacht wurden,
-wurde klar, dass für ein "Catalog 3" ein kompletter Neuanfang notwendig war.
+Aus den Erfahrungen, die bei der Entwicklung des Catalog 1 und Catalog 2 gemacht wurden, wurde klar, dass für ein
+"Catalog 3" ein kompletter Neuanfang notwendig war.
 
-Auf dieser Grundlage wurde unter dem Namen "MetaModels" eine komplett neue Erweiterung
-entwickelt, in die viele moderne Programmierparadigmen eingeflossen sind. Ziel war es,
-eine Erweiterung auf einer flexiblen und gut erweiterbaren Codebasis zu schaffen.
+Auf dieser Grundlage wurde unter dem Namen "MetaModels" eine komplett neue Erweiterung entwickelt, in die viele
+moderne Programmierparadigmen eingeflossen sind. Ziel war es, eine Erweiterung auf einer flexiblen und gut
+erweiterbaren Codebasis zu schaffen.
 
-Mit der Version 2.0 von MetaModels für Contao 3.x lag das Ergebnis von vielen Stunden
-der Diskussion um die "beste Lösung" und harter Programmierung vor.
+Mit der Version 2.0 von MetaModels für Contao 3.x lag das Ergebnis von vielen Stunden der Diskussion um die
+"beste Lösung" und harter Programmierung vor.
 
-Weiter ging es mit Version 2.1 als Migration von 2.0 für Contao 4.4.
-Bei diesen Umstellungen wurde vieles im "Unterbau" angepasst und "alte Zöpfe" abgeschnitten,
-viele kleine Bugs gefixt sowie die DB-Abfragen Symfony-like umgestellt. Eine Zusammenstellung
-für MM 2.2 ist :ref:`hier zu finden <new_in_mm220>`.
+Weiter ging es mit Version 2.1 als Migration von 2.0 für Contao 4.4. Bei diesen Umstellungen wurde vieles im
+"Unterbau" angepasst und "alte Zöpfe" abgeschnitten, viele kleine Bugs gefixt sowie die DB-Abfragen Symfony-like
+umgestellt. Eine Zusammenstellung für MM 2.2 ist :ref:`hier zu finden <new_in_mm220>`.
 
 Der weitere Weg führte über :ref:`MM 2.3 für Contao 4.13 <new_in_mm230>` zu :ref:`MM 2.4 für Contao 5.3
-<new_in_mm240>` - ein MM 2.5 für Contao 5.7 ist in Arbeit.
+<new_in_mm240>` mit mehr Standardkomponenten aus Symfony - ein MM 2.5 für Contao 5.7 ist in Arbeit.
 
 Für MM 3.0 gibt es auch schon Planungen - :ref:`siehe <planning_mm30>`.
 
-
-MetaModels im Vergleich zu anderen Tools
-----------------------------------------
-
-MetaModels eignet sich sehr gut für die in vielen Bereichen eingesetzte Arbeitsteilung
-zwischen "Administrator" und "Redakteuren" - soll heißen: der Administrator oder Entwickler
-erstellt das oder die MetaModels mit den Eingabemasken und Ausgabefunktionen und der/die
-Redakteur(e) können die Inhalte pflegen, wie sie das von anderen Bereichen von Contao
-gewohnt sind.
-
-Mit den Eingabemasken kann sehr genau festgelegt werden, wie und welche Daten eingeben 
-werden können oder müssen. Ähnliche Funktionen gibt es z.B. bei den Erweiterungen des
-"[dma_elementgenerator]" oder der "[rocksolid-custom-elements]". Der Unterschied zu 
-diesen Erweiterungen liegt z.B. in der Möglichkeit in MetaModels auch komplexe
-Datenstrukturen abzubilden oder auch in den vielfältigen Ausgaben- und Filterfunktionen.
-
-Inzwischen gibt es weitere Erweiterungen, die sich aus der Idee des 'Catalog' entwickelt
-haben. Nach unserer Einschätzung liegen die Vorteile von MetaModels in dessen wohlstrukturiertem
-und modernen Unterbau (inkl. des DC_General) und der damit einhergehenden umfangreichen
-Anpassbarkeit. Weiterhin sind viele Funktionen wie z.B. die Mehrsprachigkeit im MM-Core
-fest verankert.
-
-Vor der Umsetzung einer Aufgabenstellung steht häufig die Frage "Eigene Erweiterung oder
-Einsatz von MetaModels?". Die Frage kann nicht pauschal beantwortet werden, denn mit beiden
-"geht Vieles" - dennoch folgend einige Aspekte für die Entscheidungsfindung:
-
-**Pro eigene Erweiterung:** Besteht der Wunsch oder die Forderung ein "vertreibbares Paket" zu
-erstellen z.B. um eine kommerzielle Erweiterung zu entwickeln bzw. diese anderen Contao-Benutzern
-"per Knopfdruck" zur Verfügung zu stellen, sollte eher über eine eigene dezidierte Erweiterung
-nachgedacht werden. Für die Erstellung einer eigenen Erweiterung sind aber entsprechende Kenntnisse
-der PHP-Programmierung und der Contao-API Grundvoraussetzung.
-
-**Pro MetaModels:** Besteht der Wunsch oder die Forderung eine sehr individuelle und schnell
-anpassbare Lösung in Contao zu implementieren, ist MetaModels eine gute Wahl. Wenn zudem
-spezifische Funktionen wie die sehr gute Unterstützung der Mehrsprachigkeit gefordert sind,
-kann MetaModels seine Stärken hervorragend ausspielen. Mit MetaModels können auch diejenigen
-Benutzer Lösungen erarbeiten, die ohne Programmierung auskommen wollen oder müssen. Es ist
-aber dennoch anzumerken, dass nur mit einem Grundwissen an PHP, HTML und SQL/Datenbankschema
-die Möglichkeiten von MetaModels ausgeschöpft werden können.
 
 Ressourcen
 ----------
