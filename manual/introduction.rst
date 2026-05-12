@@ -30,6 +30,7 @@ Eine `aktives Team in MetaModels <https://now.metamodel.me/de/ueber-uns/team>`_ 
 Handbuch oder auch dem `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_ und
 `Slack-Channel <https://contao.slack.com/archives/CKGEBDV60>`_.
 
+
 MetaModels im Vergleich zu anderen Tools
 -----------------------------------------
 
