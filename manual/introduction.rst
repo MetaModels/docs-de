@@ -69,6 +69,7 @@ wichtigsten Konzepte:
 - Attribute (Felder) definieren
 - Eingabemaske einrichten
 - Ausgabe im Frontend konfigurieren
+- Filter anlegen und einbinden
 
 **3. Checkliste für den Start** |br|
 Die :ref:`rst_cookbook_checklists_mm-start` im Kochbuch fasst die typischen Schritte beim
