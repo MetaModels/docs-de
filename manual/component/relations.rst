@@ -117,7 +117,7 @@ Spezial-Relationen bei MetaModels
 Zusätzlich zu den Standard-Relationen gibt es weitere Implementierungen in MetaModels, die aufgrund von Anwenderwünschen
 implementiert wurden.
 
-
+.. _component_relations_child-tables:
 Kind-Tabellen - "n:1"
 .....................
 

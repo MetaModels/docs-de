@@ -6,19 +6,20 @@ Funktionsübersicht
 Datenmodelle
 -------------
 
-MetaModels ermöglichen es Datenmodelle komfortabel und (nahezu)
-ohne Beschränkungen im Backend von Contao zu definieren und das ohne
-Programmierung.
+MetaModels ermöglichen es Datenmodelle komfortabel und (nahezu) ohne Beschränkungen im Backend von Contao zu definieren
+und das ohne Programmierung. Zum Aufbau komplexer Datenmodelle stehen verschiedene :ref:`Relationen <component_relations>`
+zur Verfügung, um Daten in eigene Tabellen zu speichern und diese zu verknüpfen - siehe
+`Normalisierung <https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)>`_
 
-In den Datenmodellen stehen verschiedene Datentypen für die Datenfelder
-(Attribute) zur Verfügung wie z.B. Text, Bilder, Zahlen, Datum, Dateien.
-Sollte eine Beschränkung erreicht werden, in dem der gewünschter
-Datentyp nicht verfügbar ist, ist eine Implementierung möglich.
+In den Datenmodellen stehen verschiedene Datentypen für die Datenfelder (Attribute) zur Verfügung wie z.B. Text, Bilder,
+Zahlen, Datum, Dateien - :ref:`hier eine Übersicht von Datentypen zu Attributen <component_data-in-attributes>` bzw.
+eine :ref:`Auflistung aller Attribute <component_attribute_index>`. Sollte eine Beschränkung erreicht werden, in dem
+der gewünschter Datentyp nicht verfügbar ist, ist eine eigene Implementierung mit der :ref:`MM-API <ref_api>` möglich.
 
-Die erstellten Tabellen können untereinander mit Relationen (1:n, m:n)
-verknüpft werden. Es ist auch möglich, die Tabellen an andere Tabellen
-Contao Core anzuknüpfen, "Eltern-Kind-Verbindungen" herzustellen oder
-die Umsetzung von Varianteneingaben.
+Es ist auch möglich, die Tabellen an andere Tabellen Contao Core anzuknüpfen, :ref:`"Eltern-Kind-Verbindungen"
+<component_relations_child-tables>` herzustellen oder die Umsetzung von :ref:`Varianteneingaben
+<component_relations_variants>`.
+
 
 Eingabemasken
 -------------
@@ -39,6 +40,7 @@ Das Backend kann weiterhin dahingehend angepasst werden, dass nur bestimmte
 Gruppen Zugriff auf einzelne Eingabefelder erhalten und obendrein kann auch
 deren Reihenfolge individuell pro Benutzergruppe angepasst werden.
 
+
 Mehrsprachigkeit
 ----------------
 
@@ -57,24 +59,23 @@ Daten.
 :ref:`Mehr zu den Einstellungen und Handhabung der Mehrsprachigkeit, bei den Komponenten eines
 MetaModel. <component_multi-language>`
 
+
 Filter
 ------
 
-MetaModels verfügt über ein mächtiges Filterkonzept, mit dem sich auch komplexe
-Aufgabenstellungen umsetzen lassen. Der Administrator der Webseite kann die
-Filterinteraktionen vollkommen frei an seine Bedürfnisse anpassen. Dies 
-gelingt durch die Konfiguration und Kombination von Filtereinstellungen
-und deren Parametern.
+MetaModels verfügt über ein mächtiges Filterkonzept, mit dem sich auch komplexe Aufgabenstellungen umsetzen lassen.
+Der Administrator der Webseite kann die Filterinteraktionen vollkommen frei an seine Bedürfnisse anpassen. Dies
+gelingt durch die Konfiguration und Kombination von Filtereinstellungen und deren Parametern.
 
-MetaModels legt keine Beschränkungen hinsichtlich der Kombination von
-Filtern auf und beherrscht auch äußerst komplexe Filterszenarien. Dank der offenen
-Struktur der API, können eigene Filter mit geringem Aufwand programmiert werden.
+MetaModels legt keine Beschränkungen hinsichtlich der Kombination von Filtern auf und beherrscht auch äußerst
+komplexe Filterszenarien. Dank der offenen Struktur der :ref:`MM-API <ref_api>`, können eigene Filter mit geringem
+Aufwand programmiert werden.
 
-MetaModels wird mit verschiedenen Filtereinstellungen ausgeliefert,
-um Filter-Eingabefelder im Frontend wie beispielsweise Auswahlboxen, 
-Bereichsfilter, Freitext-Suche usw. zu erzeugen. Kombiniert man
-dieses Filter mit Filtereinstellungen wie UND/ODER-Bedingungen oder
+MetaModels wird mit verschiedenen Filtereinstellungen ausgeliefert, um Filter-Eingabefelder im Frontend wie
+beispielsweise Auswahlboxen, Bereichsfilter, Freitext-Suche usw. zu erzeugen - :ref:`eine Übersicht ist hier
+zu finden <component_filter_index>`. Kombiniert man dieses Filter mit Filtereinstellungen wie UND/ODER-Bedingungen oder
 individuelle SQL Abfragen, entstehen komplexe und interaktive Filter.
+
 
 Dynamische Ansichten
 --------------------
@@ -93,14 +94,15 @@ Der Designer kann für jeden Zweck eine komplett andere Ansicht definieren, sei 
 simple Listenausgabe, einen "Anreißer" für die Startseite oder eine Detailansicht eines
 Datensatzes, und ebenso wann und wo sie eingesetzt werden soll.
 
+
 Erweiterungen
 -------------
 
-Für spezielle Aufgabenstellungen gibt es weitere Pakete, die MetaModels in seinem
-Funktionsumfang wie z.B. eine Umkreissuche, Merkliste oder Schnittstelle zum Shop
-`Isotope` ergännzen bzw. erweitern.
+Für spezielle Aufgabenstellungen gibt es weitere Pakete, die MetaModels in seinem Funktionsumfang wie z. B. eine
+Umkreissuche, Merkliste, Frontend-Editing oder Schnittstelle zum Shop `Isotope` ergänzen bzw. erweitern.
 
 Eine Übersicht ist hier zu finden: :ref:`extended_index`
+
 
 Ausblick
 --------
@@ -111,6 +113,6 @@ einige Punkte, die in der Planung sind:
 * erweiterte Ausgaben wie RSS-Feeds und andere Syndications-Formen, XML, CSV
 * Export/Import-Funktion
 
-Eine schnelle Umsetzung von weiteren Funktionen ist nur mit finanzieller Unterstüzung
+Eine schnelle Umsetzung von weiteren Funktionen ist nur mit finanzieller Unterstützung
 oder der Freigabe von Auftrags-Programmierungen möglich - Informationen dazu auf der 
 `Projektwebseite von MetaModels <https://now.metamodel.me>`_.
