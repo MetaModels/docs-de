@@ -79,7 +79,7 @@ ersten Projekte.
 **Tipp für den Einstieg:** |br|
 Ein einfaches Beispiel — etwa eine Mitarbeiterliste mit Name,
 Funktion und Foto — ist ideal zum Ausprobieren. Es enthält die wesentlichen Bausteine
-(Attribute, Eingabemaske, Ausgabe), bleibt aber überschaubar genug, um die Zusammenhänge
+(Attribute, Eingabemaske, Ausgabe, Filterung), bleibt aber überschaubar genug, um die Zusammenhänge
 zu verstehen. Zur Orientierung, wo was ist, lege den
 :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` griffbereit zur Hand.
 
