@@ -27,12 +27,14 @@ ausschließt <rst_cookbook_filter_exclude-url-from-search-index>`.
 SEO für Google & Co.
 --------------------
 
+.. _rst_cookbook_tips_seo_url:
 "Sprechende" URLs
 .................
 
 Hier geht es in den meisten Fällen um die Verlinkung zur Detailseite z.B. von einer Listenseite. Üblicherweise
-wird für die Filterung auf der Detailseite der Alias des Items verwendet. In den Einstellungen des Attributes `Alias`
-bzw. `Übersetzter Alias` kann die gewünschte Kombination aus anderen Attributwerten definiert werden.
+wird für die Filterung auf der Detailseite der Alias des Items verwendet. In den Einstellungen des Attributes
+:ref:`Alias <component_attribute_alias>` bzw. :ref:`Übersetzter Alias <component_attribute_translatedalias>` kann
+die gewünschte Kombination aus anderen Attributwerten definiert werden.
 
 
 .. _rst_cookbook_tips_seo_metadata-title:

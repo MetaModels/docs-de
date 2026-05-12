@@ -119,9 +119,10 @@ Rendersetting "FE - Details" anlegen. Mit einem eigenen :ref:`Template <componen
 individuell gestaltet werden.
 
 Damit auf der Seite nicht alle Datensätze sondern nur der gewünschte ausgegeben wird, ist ein entsprechender Filter
-notwendig. Als Filterregeln ist die "Einfache Abfrage" zu empfehlen und als Attribut ein Alias. Zudem sind nach Bedarf
-noch weitere Filterregeln wie "Veröffentlicht" o. ä. möglich. Der angelegte Filter ist in MM-Liste der Detailseite
-auszuwählen.
+notwendig. Als Filterregeln ist die :ref:`"Einfache Abfrage" <component_filter_simplelookup>` zu empfehlen und als
+Attribut ein :ref:`Alias <component_attribute_alias>` bzw. :ref:`übersetzter Alias
+<component_attribute_translatedalias>`. Zudem sind nach Bedarf noch weitere Filterregeln wie "Veröffentlicht" o. ä.
+möglich. Der angelegte Filter ist in MM-Liste der Detailseite auszuwählen.
 
 Mit einer URL wie z. B. ``domain.tld/mitarbeiter-details/alias/avery-amir.html`` sollte der entsprechende Datensatz
 ausgegeben werden.

@@ -7,14 +7,14 @@ Das Attribut "Alias" erzeugt einen eindeutigen, URL-tauglichen Kurzbezeichner, d
 Attributen erzeugt wird. Typische Einsatzbereiche sind:
 
 * URL-Parameter bei der Filterung im Frontend (z. B. ``/produkte/mein-produkt``)
-* Lesbare, stabile Bezeichner für Deeplinks oder SEO-URLs
+* Lesbare, stabile Bezeichner für Deeplinks oder :ref:`SEO-URLs <rst_cookbook_tips_seo_url>`
 * Eindeutige Kürzel, die automatisch aus Namen oder Titeln generiert werden
 
 Der Alias wird beim Speichern eines Datensatzes automatisch aus den konfigurierten
 Quell-Attributen zusammengestellt. Dabei kann ein Zeichensatz und eine Konvertierungssprache
 vorgegeben werden, damit Sonderzeichen (z. B. Umlaute) korrekt umgewandelt werden.
 
-.. note:: Ein Alias ist nicht automatisch eindeutig. Soll die Eindeutigkeit sichergestellt
+.. note:: Ein Alias ist nicht automatisch eindeutig (unique). Soll die Eindeutigkeit sichergestellt
    werden, muss die Option "Eindeutige Werte" in den allgemeinen Attribut-Einstellungen
    aktiviert werden.
 
@@ -162,7 +162,7 @@ Das Alias-Attribut kann mit folgenden Filterregeln verwendet werden:
    * - Einfache Abfrage
      - Filtert Datensätze nach einem exakten oder partiellen Alias-Wert; der Alias-Spaltenname
        wird standardmäßig als URL-Parameter verwendet (z. B. ``?alias=mein-produkt`` oder
-       mit ``auto_item`` als ``/mein-produkt``).
+       mit ``auto_item`` als ``/mein-produkt``) - siehe z. B. :ref:`Detailseite <mm_first_contentelements_detailpage>`.
    * - Textsuche
      - Freie Texteingabe im Frontend zur Suche innerhalb des Alias-Feldes.
    * - Levenshtein-gestützte Suche

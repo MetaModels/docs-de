@@ -13,13 +13,13 @@ Typische Einsatzbereiche:
 
 * Mehrsprachige URL-Parameter bei der Filterung (z. B. ``/produkte/mein-produkt``
   auf Deutsch, ``/products/my-product`` auf Englisch)
-* Sprachabhängige SEO-URLs
-* Lesbare, sprachspezifische Bezeichner
+* Lesbare, stabile Bezeichner für Deeplinks oder :ref:`SEO-URLs <rst_cookbook_tips_seo_url>`
+* Eindeutige Kürzel, die automatisch aus Namen oder Titeln generiert werden
 
 .. seealso:: Die einsprachige Variante dieses Attributs ist unter
    :ref:`component_attribute_alias` beschrieben.
 
-.. note:: Ein Alias ist nicht automatisch eindeutig. Soll die Eindeutigkeit
+.. note:: Ein Alias ist nicht automatisch eindeutig (unique). Soll die Eindeutigkeit
    sichergestellt werden, muss die Option "Eindeutige Werte" in den allgemeinen
    Attribut-Einstellungen aktiviert werden.
 
