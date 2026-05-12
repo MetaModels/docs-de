@@ -19,6 +19,16 @@ Typische Einsatzbereiche:
    :ref:`component_attribute_longtext` beschrieben.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedlongtext
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

@@ -18,6 +18,16 @@ Quellfelder ausgewählt werden.
    :ref:`component_attribute_translatedcombinedvalues` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_combinedvalues
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

@@ -20,6 +20,16 @@ Veranstaltungszeiträume.
    :ref:`component_filter_range-date` zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_range
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

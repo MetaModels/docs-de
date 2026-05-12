@@ -16,16 +16,22 @@ Typische Einsatzbereiche:
 * Öffnungszeiten mit Wochentag-Auswahl und Zeitfeldern
 * Konfigurierbare Merkmallisten mit validierter Eingabe
 
-.. note:: Das Attribut "Multi-Tabelle (MCW)" ist eine zusätzliche Erweiterung
-   und muss separat über Composer installiert werden
-   (``metamodels/attribute_tablemulti``).
-
 .. warning:: Die Spaltenstruktur (Anzahl und Typ der Spalten) wird **nicht**
    im MetaModels-Backend konfiguriert, sondern in einer PHP-Konfigurationsdatei
    (``contao/config/config.php``). Dies erfordert Entwicklerkenntnisse.
 
 .. seealso:: Für mehrsprachige MetaModels steht das Attribut
    :ref:`component_attribute_translatedtablemulti` zur Verfügung.
+
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_tablemulti
 
 
 Einstellungen beim Anlegen des Attributs

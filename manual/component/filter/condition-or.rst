@@ -20,6 +20,13 @@ mehr ausgeführt.
 Diese Filterregel hat keine Frontend-Widgetausgabe.
 
 
+Installation
+------------
+
+Diese Filterregel ist Bestandteil von ``metamodels/core`` und nach der
+MetaModels-Grundinstallation ohne weitere Pakete verfügbar.
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

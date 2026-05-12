@@ -13,6 +13,16 @@ Alternativ stehen die Templates ``mm_filteritem_radiobutton.html5`` (Radio-Butto
 und ``mm_filteritem_linklist.html5`` (Link-Liste) zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_select
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

@@ -17,6 +17,16 @@ Google Maps API).
    :ref:`extended_perimetersearch`
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_perimetersearch
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

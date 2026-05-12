@@ -25,6 +25,16 @@ Baum-Picker oder als durchsuchbares Dropdown dargestellt werden.
    Tabelle steht :ref:`component_attribute_translatedtags` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_tags
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

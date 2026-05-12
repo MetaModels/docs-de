@@ -18,6 +18,16 @@ Interne Contao-Links können über den integrierten Seitenpicker ausgewählt wer
    :ref:`component_attribute_translatedurl` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_url
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

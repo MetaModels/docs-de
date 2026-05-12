@@ -28,6 +28,16 @@ Typische Einsatzbereiche:
    generiert. Damit werden ggf. bereits veröffentlichte URLs ungültig.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedalias
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

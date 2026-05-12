@@ -14,6 +14,16 @@ Alternativ steht das Template ``mm_filteritem_linklist.html5`` (Link-Liste) zur 
 einen der gewählten Werte erfüllen müssen.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_tags
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

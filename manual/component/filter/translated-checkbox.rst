@@ -18,6 +18,16 @@ Veröffentlichungszustände pro Sprache gesteuert werden.
    :ref:`component_filter_checkbox` zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_checkbox
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

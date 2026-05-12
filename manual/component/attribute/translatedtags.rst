@@ -26,6 +26,16 @@ Typische Einsatzbereiche:
    :ref:`component_attribute_tags` beschrieben.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedtags
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

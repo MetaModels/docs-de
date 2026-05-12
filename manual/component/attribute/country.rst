@@ -16,6 +16,16 @@ Die verfügbaren Länder können eingeschränkt werden, wenn nur eine Auswahl
 bestimmter Länder sinnvoll ist.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_country
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

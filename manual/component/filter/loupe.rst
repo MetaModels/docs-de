@@ -17,6 +17,16 @@ Konfigurationsmöglichkeiten für Fuzzy-Distanz und Ranking.
    :ref:`rst_extended_loupe`
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_loupe
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

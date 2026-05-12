@@ -17,12 +17,18 @@ Typische Einsatzbereiche:
 Im Backend erscheint ein Widget, das eine Liste der zugeordneten Inhaltselemente
 anzeigt und einen direkten Link zur Inhaltsverwaltung bietet.
 
-.. note:: Das Attribut "Inhalt eines Artikels" ist eine zusätzliche Erweiterung
-   und muss separat über Composer installiert werden
-   (``metamodels/attribute_contentarticle``).
-
 .. seealso:: Für mehrsprachige MetaModels steht das Attribut
    :ref:`component_attribute_translatedcontentarticle` zur Verfügung.
+
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_contentarticle
 
 
 Einstellungen beim Anlegen des Attributs

@@ -17,6 +17,16 @@ und eignet sich für explizite Ja/Nein-Auswahlen im Frontend-Filterwidget.
    aber mit dem Modus "Radio-Buttons" oder "Ja/Nein-Checkbox" konfiguriert.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_checkbox
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

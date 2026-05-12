@@ -16,6 +16,16 @@ Einsatzbereiche:
    verlieren würden.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_numeric
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

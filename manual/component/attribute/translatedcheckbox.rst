@@ -18,6 +18,16 @@ Typische Einsatzbereiche:
    :ref:`component_attribute_checkbox` beschrieben.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedcheckbox
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

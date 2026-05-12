@@ -20,6 +20,16 @@ Typische Einsatzbereiche:
    :ref:`component_attribute_url` beschrieben.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedurl
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

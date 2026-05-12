@@ -29,6 +29,13 @@ JOINs oder mathematische Anweisungen möglich wäre.
    :ref:`rst_cookbook_filter_custom-sql`
 
 
+Installation
+------------
+
+Diese Filterregel ist Bestandteil von ``metamodels/core`` und nach der
+MetaModels-Grundinstallation ohne weitere Pakete verfügbar.
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

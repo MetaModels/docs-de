@@ -19,6 +19,16 @@ für die Autovervollständigung.
    :ref:`component_attribute_levenshtein`
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_levenshtein
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

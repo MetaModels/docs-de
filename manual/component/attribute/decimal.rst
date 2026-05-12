@@ -20,6 +20,16 @@ Genauigkeit). Typische Einsatzbereiche:
    (nicht Komma).
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_decimal
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

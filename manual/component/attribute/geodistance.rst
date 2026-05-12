@@ -16,9 +16,15 @@ Das Attribut selbst speichert keine eigenen Datenwerte, sondern liest
 Koordinaten aus anderen Attributen des MetaModels (Breiten- und Längengrad)
 und berechnet die Entfernung auf Anfrage.
 
-.. note:: Das Attribut "Geo-Entfernung" ist eine zusätzliche Erweiterung und
-   muss separat über Composer installiert werden
-   (``metamodels/attribute_geodistance``).
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_geodistance
 
 
 Einstellungen beim Anlegen des Attributs

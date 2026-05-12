@@ -16,6 +16,16 @@ Frontend-Widget selbst wählen können.
    :ref:`component_filter_translated-checkbox` zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_checkbox
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

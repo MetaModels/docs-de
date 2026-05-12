@@ -15,6 +15,16 @@ Das mitgelieferte Template ``mm_filteritem_register.html5`` ist für die
 Register-spezifische Ausgabe vorgesehen.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_register
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

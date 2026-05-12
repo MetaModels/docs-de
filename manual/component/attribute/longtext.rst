@@ -17,6 +17,16 @@ Die maximale Länge beträgt 65.535 Zeichen (MySQL-Typ ``TEXT``).
    :ref:`component_attribute_translatedlongtext` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_longtext
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

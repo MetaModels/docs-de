@@ -18,6 +18,16 @@ Texte bis zu 255 Zeichen. Typische Einsatzbereiche:
    :ref:`component_attribute_translatedtext` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_text
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

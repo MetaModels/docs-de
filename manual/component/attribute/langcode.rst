@@ -16,6 +16,16 @@ Die verfügbaren Sprachcodes können eingeschränkt werden, wenn nur eine bestim
 Auswahl von Sprachen sinnvoll ist. Die Eingabe erfolgt über Checkboxen.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_langcode
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

@@ -20,6 +20,16 @@ selbst auswählen können.
    :ref:`rst_extended_filter_by_related`
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_by_related
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

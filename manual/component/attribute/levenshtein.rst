@@ -15,8 +15,15 @@ Das Attribut selbst speichert keine eigenen Datenwerte, sondern erstellt und
 pflegt einen separaten Suchindex. Die eigentliche Suche erfolgt über eine
 eigene Filterregel im Frontend.
 
-.. note:: Das Attribut "Levenshtein" ist eine zusätzliche Erweiterung und muss
-   separat über Composer installiert werden (``metamodels/attribute_levenshtein``).
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_levenshtein
 
 
 Einstellungen beim Anlegen des Attributs

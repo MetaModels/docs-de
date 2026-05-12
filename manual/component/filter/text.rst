@@ -13,6 +13,16 @@ Typische Einsatzbereiche: Freitextsuche in Titelfeldern, Stichwortsuche
 in Beschreibungen, oder kombinierte Suchen mit mehreren Filterregeln.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_text
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

@@ -13,6 +13,13 @@ Diese Filterregel hat keine Frontend-Widgetausgabe und wird ausschließlich im
 Backend konfiguriert.
 
 
+Installation
+------------
+
+Diese Filterregel ist Bestandteil von ``metamodels/core`` und nach der
+MetaModels-Grundinstallation ohne weitere Pakete verfügbar.
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

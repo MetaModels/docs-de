@@ -16,6 +16,16 @@ Elternelement selbst auswählen können.
    ab dem Paket ``filter_parent`` zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_parent
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

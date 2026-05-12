@@ -18,6 +18,16 @@ wird zusätzlich ein Umschalter ("Auge-Icon") in der Datensatzliste angezeigt.
    :ref:`component_attribute_translatedcheckbox` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_checkbox
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

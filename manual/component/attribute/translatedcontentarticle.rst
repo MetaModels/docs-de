@@ -15,12 +15,18 @@ Typische Einsatzbereiche:
 * Sprachabhängige Detailseiten-Inhalte mit verschiedenem Aufbau je Sprache
 * Übersetzter redaktioneller Inhalt pro Item
 
-.. note:: Das Attribut "Übersetzter Inhalt eines Artikels" ist eine zusätzliche
-   Erweiterung und muss separat über Composer installiert werden
-   (``metamodels/attribute_translatedcontentarticle``).
-
 .. seealso:: Die einsprachige Variante dieses Attributs ist unter
    :ref:`component_attribute_contentarticle` beschrieben.
+
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedcontentarticle
 
 
 Einstellungen beim Anlegen des Attributs

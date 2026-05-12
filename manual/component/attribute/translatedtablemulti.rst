@@ -14,15 +14,21 @@ Typische Einsatzbereiche:
 * Mehrsprachige technische Spezifikationen mit gemischten Eingabetypen
 * Übersetzte Öffnungszeiten oder Merkmalstabellen
 
-.. note:: Das Attribut "Übersetzte Multi-Tabelle (MCW)" ist eine zusätzliche
-   Erweiterung und muss separat über Composer installiert werden
-   (``metamodels/attribute_translatedtablemulti``).
-
 .. warning:: Die Spaltenstruktur wird **nicht** im MetaModels-Backend konfiguriert,
    sondern in einer PHP-Konfigurationsdatei. Dies erfordert Entwicklerkenntnisse.
 
 .. seealso:: Die einsprachige Variante dieses Attributs ist unter
    :ref:`component_attribute_tablemulti` beschrieben.
+
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedtablemulti
 
 
 Einstellungen beim Anlegen des Attributs

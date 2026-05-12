@@ -23,6 +23,16 @@ Baum-Picker dargestellt werden.
    Tabelle steht :ref:`component_attribute_translatedselect` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_select
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

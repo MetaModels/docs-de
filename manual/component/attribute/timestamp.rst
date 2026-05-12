@@ -17,6 +17,16 @@ Datumsformat angezeigt. Typische Einsatzbereiche:
    werden (z. B. ``FROM_UNIXTIME()`` in MySQL).
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_timestamp
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

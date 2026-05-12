@@ -23,6 +23,16 @@ vorgegeben werden, damit Sonderzeichen (z. B. Umlaute) korrekt umgewandelt werde
    Damit werden ggf. bereits veröffentlichte URLs ungültig.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_alias
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

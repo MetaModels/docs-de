@@ -22,6 +22,16 @@ werden.
    :ref:`component_attribute_translatedtabletext` zur Verfügung.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_tabletext
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

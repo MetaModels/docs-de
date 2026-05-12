@@ -20,6 +20,16 @@ Typische Einsatzbereiche:
    :ref:`component_attribute_tabletext` beschrieben.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_translatedtabletext
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

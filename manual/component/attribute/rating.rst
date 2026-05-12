@@ -15,8 +15,15 @@ Die eigentliche Bewertung erfolgt ausschließlich über AJAX aus dem Frontend �
 das Feld ist im Backend schreibgeschützt. Je Besucher und Item wird eine
 Session-basierte Sperrung vorgenommen, um Mehrfachbewertungen zu verhindern.
 
-.. note:: Das Attribut "Bewertung" ist eine zusätzliche Erweiterung und muss
-   separat über Composer installiert werden (``metamodels/attribute_rating``).
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_rating
 
 
 Einstellungen beim Anlegen des Attributs

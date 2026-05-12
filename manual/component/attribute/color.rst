@@ -14,8 +14,15 @@ Im Backend erscheinen zwei Eingabefelder: ein Textfeld für den Hex-Farbcode (6 
 z. B. ``ff0000``) und ein zweites Feld für den Sättigungswert. Über das Colorpicker-Icon
 kann die Farbe visuell gewählt werden.
 
-.. note:: Das Attribut "Farbwähler" ist eine zusätzliche Erweiterung und muss
-   separat über Composer installiert werden (``metamodels/attribute_color``).
+
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_color
 
 
 Einstellungen beim Anlegen des Attributs

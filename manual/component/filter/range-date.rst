@@ -21,6 +21,16 @@ muss das Datum im Format ``YYYY-MM-DD`` übergeben werden –
    :ref:`component_filter_range` zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_range
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 

@@ -24,6 +24,16 @@ vorhandenen Token nicht (Write-once-Schutz auf Datenbankebene).
    neuen Token.
 
 
+Installation
+------------
+
+Das Attribut wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/attribute_token
+
+
 Einstellungen beim Anlegen des Attributs
 -----------------------------------------
 

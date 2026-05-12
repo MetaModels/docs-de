@@ -19,6 +19,16 @@ Altersangaben, oder allgemeine numerische Bereichsfilter.
    :ref:`component_filter_fromto-date` zur Verfügung.
 
 
+Installation
+------------
+
+Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
+
+.. code-block:: bash
+
+   composer require metamodels/filter_fromto
+
+
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 
