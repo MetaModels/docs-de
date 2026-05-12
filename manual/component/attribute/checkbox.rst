@@ -40,7 +40,7 @@ Varianten überschreiben) bietet das Checkbox-Attribut folgende spezifische Opti
    * - Invertierte Anzeigeoption
      - Kehrt den Umschaltstatus des Icons um: Ein aktiviertes Kontrollkästchen
        (Wert ``1``) zeigt dann das inaktive Symbol, ein deaktiviertes zeigt das
-       aktive Symbol. Sinnvoll z. B. für ein "Verbergen"-Feld.
+       aktive Symbol; Sinnvoll z. B. für ein "Verbergen"-Feld analog beim Contao Contentelement.
    * - Benutzerdefiniertes Icon
      - Aktiviert die Auswahl eigener Icons für die Backend-Listenansicht. Wird
        diese Option gesetzt, erscheinen zwei weitere Felder:
@@ -65,8 +65,11 @@ einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
      - Beschreibung
    * - Template
      - Auswahl eines eigenen Templates für die Ausgabe des Checkbox-Wertes. Wird
-       kein Template angegeben, erfolgt die Ausgabe als einfacher Text (``Aktiv``
-       oder ``Inaktiv``).
+       kein Template angegeben, erfolgt die Ausgabe als einfacher Text (``1`` bei Aktiv
+       oder ```` bei Inaktiv).
+
+       Primär für die Listenanzeige im BE ist das Template ``mm_attr_checkbox_icon``, welches den
+       Staus mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
    * - CSS-Klasse
      - Optionale CSS-Klasse, die dem Ausgabeelement hinzugefügt wird.
 
@@ -106,8 +109,8 @@ zur Verfügung:
      - Macht das Feld zu einem Pflichtfeld (selten sinnvoll bei Checkboxen, da
        ein nicht gesetzter Haken bereits einem definierten Wert entspricht).
    * - Beim Ändern speichern
-     - Das Formular wird automatisch gespeichert, sobald die Checkbox umgeschaltet
-       wird (``submitOnChange``).
+     - Die Eingabemaske wird per Ajax neu geladen, sobald die Checkbox umgeschaltet
+       wird (``submitOnChange``). Die Daten werden dabei noch nicht gespeichert.
 
 **Übersicht (Backend-Filter)**
 
@@ -163,7 +166,7 @@ Filterset mit der Filterregel "Checkbox-Status" (Paket ``filter_checkbox``) erfo
 Die Option "Invertierte Anzeigeoption" dreht nur die *Anzeige* des Icons um —
 der gespeicherte Wert bleibt unverändert (``1`` = aktiv, ``''`` = inaktiv).
 Dies ist nützlich, wenn die Semantik eines Feldes umgekehrt formuliert ist
-(z. B. "Verborgen" statt "Sichtbar").
+(z. B. "Verborgen" statt "Sichtbar") analog beim Contao Contentelement.
 
 **Datenbank-Speicherung**
 

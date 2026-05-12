@@ -36,7 +36,8 @@ spezifische Optionen:
        wird üblicherweise ``published`` verwendet.
    * - Invertierte Anzeigeoption
      - Kehrt den Umschaltstatus des Icons um: Ein aktiviertes Kontrollkästchen
-       zeigt das inaktive Symbol, ein deaktiviertes das aktive.
+       (Wert ``1``) zeigt dann das inaktive Symbol, ein deaktiviertes zeigt das
+       aktive Symbol; Sinnvoll z. B. für ein "Verbergen"-Feld analog beim Contao Contentelement.
    * - Benutzerdefiniertes Icon
      - Aktiviert die Auswahl eigener Icons. Im Gegensatz zur einsprachigen
        Variante können die Icons **je Sprache** separat festgelegt werden
@@ -49,6 +50,25 @@ Einstellungen bei den Render-Einstellungen
 Das Attribut besitzt keine eigenen Render-Einstellungen. In der Attributliste
 einer Render-Einstellung stehen die üblichen Optionen (Template, CSS-Klasse)
 zur Verfügung.
+
+In der Attributliste
+einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Option
+     - Beschreibung
+   * - Template
+     - Auswahl eines eigenen Templates für die Ausgabe des Checkbox-Wertes. Wird
+       kein Template angegeben, erfolgt die Ausgabe als einfacher Text (``1`` bei Aktiv
+       oder ```` bei Inaktiv).
+
+       Primär für die Listenanzeige im BE ist das Template ``mm_attr_checkbox_icon``, welches den
+       Staus mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
+   * - CSS-Klasse
+     - Optionale CSS-Klasse, die dem Ausgabeelement hinzugefügt wird.
 
 
 Einstellungen bei der Eingabemaske
@@ -84,8 +104,8 @@ zur Verfügung:
    * - Pflichtfeld
      - Macht das Feld zu einem Pflichtfeld.
    * - Beim Ändern speichern
-     - Das Formular wird automatisch gespeichert, wenn die Checkbox
-       umgeschaltet wird.
+     - Die Eingabemaske wird per Ajax neu geladen, wenn die Checkbox umgeschaltet
+       wird (``submitOnChange``). Die Daten werden dabei noch nicht gespeichert.
 
 **Übersicht (Backend-Filter)**
 
