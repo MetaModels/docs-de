@@ -57,11 +57,11 @@ Wie fange ich an?
 
 Wer MetaModels noch nicht kennt, findet den einfachsten Einstieg über diese Schritte:
 
-**1. Installation**
+**1. Installation** |br|
 MetaModels wird über den Contao Manager oder Composer eingerichtet. Eine Anleitung dazu
 findet sich im Abschnitt :ref:`manual_install`.
 
-**2. Erstes MetaModel anlegen**
+**2. Erstes MetaModel anlegen** |br|
 Der Abschnitt ":ref:`mm_first_index`" führt anhand eines konkreten Beispiels durch die
 wichtigsten Konzepte:
 
@@ -70,19 +70,22 @@ wichtigsten Konzepte:
 - Eingabemaske einrichten
 - Ausgabe im Frontend konfigurieren
 
-**3. Checkliste für den Start**
+**3. Checkliste für den Start** |br|
 Die :ref:`rst_cookbook_checklists_mm-start` im Kochbuch fasst die typischen Schritte beim
 Anlegen eines neuen MetaModels kompakt zusammen — nützlich als Nachschlagewerk für die
 ersten Projekte.
 
-**Tipp für den Einstieg:** Ein einfaches Beispiel — etwa eine Mitarbeiterliste mit Name,
+**Tipp für den Einstieg:** |br|
+Ein einfaches Beispiel — etwa eine Mitarbeiterliste mit Name,
 Funktion und Foto — ist ideal zum Ausprobieren. Es enthält die wesentlichen Bausteine
 (Attribute, Eingabemaske, Ausgabe), bleibt aber überschaubar genug, um die Zusammenhänge
 zu verstehen. Zur Orientierung, wo was ist, lege den
 :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>` griffbereit zur Hand.
 
 Bei Fragen helfen das `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_
-und der `Slack-Channel #metamodels <https://contao.slack.com/archives/CKGEBDV60>`_.
+und der `Slack-Channel #metamodels <https://contao.slack.com/archives/CKGEBDV60>`_ - bei komplexen Aufgaben kann
+jemand aus dem MM-Team beratend oder als "MM-Coach" zur Seite stehen; Kontakt über
+`mail@metamodels.me <mailto:mail@metamodels.me>`_.
 
 
 Historie der MetaModels
@@ -124,3 +127,9 @@ Ressourcen
 * `MetaModels Contao Community Subforum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_
 * `MetaModels Contao-Slack #metamodels <https://contao.slack.com/archives/CKGEBDV60>`_
 * :download:`"MM-Lageplan" </_download/MM_Lageplan_e-spin-Berlin.pdf>`
+
+
+.. |br| raw:: html
+
+   <br />
+
