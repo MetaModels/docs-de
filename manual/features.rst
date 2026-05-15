@@ -77,6 +77,7 @@ MetaModels legt keine Beschränkungen bei der Kombination von Filtern fest und b
 komplexe Filterszenarien. Dank der offenen Struktur der :ref:`MM-API <ref_api>`, können auch eigene Filterregeln mit
 geringem Aufwand programmiert werden.
 
+
 Dynamische Ansichten
 --------------------
 
