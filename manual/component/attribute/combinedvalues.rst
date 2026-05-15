@@ -7,7 +7,8 @@ Das Attribut "Kombinierte Einträge" fügt Werte aus mehreren vorhandenen Attrib
 zu einem neuen, gespeicherten Textwert zusammen. Typische Einsatzbereiche:
 
 * Zusammensetzen von Vor- und Nachname zu "Nachname, Vorname" für Anzeige oder Suche
-* Erstellen von zusammengesetzten Bezeichnern aus mehreren Feldern
+* Erstellen von zusammengesetzten Bezeichnern aus mehreren Feldern z. B. für Attribut
+  :ref:`Einzelauswahl <component_attribute_select>` oder :ref:`Mehrfachauswahl <component_attribute_tags>`
 * Aufbereitung von Ausgabetexten, die fix kombiniert gespeichert werden sollen
 
 Die Kombination erfolgt über eine ``sprintf``-Formatzeichenkette. Alle vorhandenen
