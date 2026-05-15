@@ -18,6 +18,10 @@ Typische Einsatzbereiche:
 .. seealso:: Die einsprachige Variante dieses Attributs ist unter
    :ref:`component_attribute_longtext` beschrieben.
 
+.. seealso:: Dieses Attribut wird von der :ref:`File-Usage Integration <rst_extended_file-usage>`
+   unterstützt. Damit lässt sich in der Contao-Dateiverwaltung anzeigen, ob und wo eine Datei
+   eingebunden ist.
+
 
 Installation
 ------------

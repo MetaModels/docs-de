@@ -162,7 +162,7 @@ fehl, wird eine ``RuntimeException`` geworfen.
 Token-Generierung durch eigenen Code ersetzt oder erweitert werden. Wird im Listener
 ``setToken()`` aufgerufen, überspringt MetaModels die eingebaute Zufallsgenerierung.
 
-Beispiel-Listener:
+Beispiel-Listener als ``src/EventListener/MyTokenListener.php``:
 
 .. code-block:: php
 

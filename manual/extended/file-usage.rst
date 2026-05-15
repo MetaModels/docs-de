@@ -15,11 +15,11 @@ erstellt. Aktuell werden folgende Attribute unterstützt:
 * Inhalt eines Artikels (ContentArticle)
 * Datei
 * Langtext
+* Multi-Table (MCW)
 * Übersetzter Inhalt eines Artikels (ContentArticle)
 * Übersetzte Datei
 * Übersetzter Langtext
-
-Eine Unterstützung für Attribut "Text-Tabelle" und "Multi-Table (MCW)" kann |manual@metamodel.me| eingebaut werden.
+* übersetzte Multi-Table (MCW)
 
 Je nach Attribut wird nach der/den gespeicherten UUID(s) der Datei bzw. Dateien gesucht oder nach vorhandenen Inserttags
 mit Dateieinbindungen (`file`, `picture`, `figure`).

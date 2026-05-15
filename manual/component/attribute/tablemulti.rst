@@ -23,6 +23,10 @@ Typische Einsatzbereiche:
 .. seealso:: Für mehrsprachige MetaModels steht das Attribut
    :ref:`component_attribute_translatedtablemulti` zur Verfügung.
 
+.. seealso:: Dieses Attribut wird von der :ref:`File-Usage Integration <rst_extended_file-usage>`
+   unterstützt. Damit lässt sich in der Contao-Dateiverwaltung anzeigen, ob und wo eine Datei
+   eingebunden ist.
+
 
 Installation
 ------------
