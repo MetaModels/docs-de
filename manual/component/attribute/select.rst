@@ -3,8 +3,8 @@
 Einzelauswahl [select]
 ======================
 
-Das Attribut "Einzelauswahl [select]" erstellt eine 1:n-Relation zu einer anderen
-Tabelle — entweder einer MetaModels-Tabelle oder einer beliebigen Contao-Tabelle
+Das Attribut "Einzelauswahl [select]" erstellt eine :ref:`1:n-Relation <component_relations_standard-relation-1ton>` zu
+einer anderen Tabelle — entweder einer MetaModels-Tabelle oder einer beliebigen Contao-Tabelle
 (z. B. ``tl_member``, ``tl_page``). In der Datenbank wird die ID des ausgewählten
 Datensatzes gespeichert. Typische Einsatzbereiche:
 
@@ -64,7 +64,7 @@ Varianten überschreiben) bietet das Attribut folgende spezifische Optionen:
    * - SQL (WHERE-Bedingung)
      - Optionale SQL-WHERE-Bedingung zur Einschränkung der Auswahlliste. Der
        Alias ``sourceTable`` steht für die Quelltabelle (z. B.
-       ``sourceTable.published = '1'``).
+       ``sourceTable.published = '1'``). Bedingung filtert nicht, wenn Widgettyp "Popup-Picker ausgewählt wurde.
    * - Filter
      - Auswahl eines MetaModels-Filtersets zur dynamischen Einschränkung der
        Optionen.

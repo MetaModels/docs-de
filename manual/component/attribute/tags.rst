@@ -3,8 +3,8 @@
 Mehrfachauswahl [tags]
 ======================
 
-Das Attribut "Mehrfachauswahl [tags]" erstellt eine m:n-Relation zu einer anderen
-Tabelle — entweder einer MetaModels-Tabelle oder einer beliebigen Contao-Tabelle
+Das Attribut "Mehrfachauswahl [tags]" erstellt eine :ref:`m:n-Relation <component_relations_standard-relation-mton>` zu
+einer anderen Tabelle — entweder einer MetaModels-Tabelle oder einer beliebigen Contao-Tabelle
 (z. B. ``tl_member``, ``tl_page``). Die Verknüpfung wird in einer eigenen
 Relationstabelle (``tl_metamodel_tag_relation``) gespeichert, sodass für das
 Attribut **keine eigene Spalte** in der MetaModel-Tabelle angelegt wird.
@@ -64,7 +64,8 @@ Varianten überschreiben) bietet das Attribut folgende spezifische Optionen:
      - Aufsteigend (A → Z) oder absteigend (Z → A).
    * - SQL (WHERE-Bedingung)
      - Optionale SQL-WHERE-Bedingung zur Einschränkung der Auswahlliste. Der
-       Alias ``t`` steht für die Quelltabelle (z. B. ``t.published = '1'``).
+       Alias ``t`` steht für die Quelltabelle (z. B. ``t.published = '1'``). Bedingung filtert nicht, wenn
+       Widgettyp "Popup-Picker ausgewählt wurde.
    * - Filter
      - Auswahl eines MetaModels-Filtersets zur dynamischen Einschränkung der
        Optionen.

@@ -79,6 +79,7 @@ Für diese Eingrenzungen eignet sich die Filterregel "Eigenes SQL" sehr gut - im
    - :ref:`rst_cookbook_filter_custom-sql`
 
 
+.. _component_relations_standard-relation-1ton:
 Einzelauswahl [Select] - "1:n"
 ..............................
 
@@ -93,6 +94,7 @@ Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
 
 
+.. _component_relations_standard-relation-mton:
 Mehrfachauswahl [Tags] - "m:n"
 ..............................
 
