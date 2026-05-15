@@ -72,7 +72,6 @@ zu finden <component_filter_list>` bzw. :ref:`hier, welche Attribute wie gefilte
 Kombiniert man diesen Filter mit Filtereinstellungen wie UND/ODER-Bedingungen, oder individuelle SQL-Abfragen, entstehen
 komplexe und interaktive Filter.
 
-
 MetaModels legt keine Beschränkungen bei der Kombination von Filtern fest und beherrscht auch äußerst
 komplexe Filterszenarien. Dank der offenen Struktur der :ref:`MM-API <ref_api>`, können auch eigene Filterregeln mit
 geringem Aufwand programmiert werden.
