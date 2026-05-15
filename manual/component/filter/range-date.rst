@@ -95,9 +95,10 @@ Einstellungen für das Frontend-Widget
 Passende Attribute
 ------------------
 
-Die Filterregel "Wert von/bis für zwei Datumsfelder" eignet sich für:
+Die Filterregel "Wert von/bis für zwei Datumsfelder" eignet sich für :ref:`Attribut Datum
+<component_attribute_timestamp>` - soll die Filterung nur für Datumsangaben sein, sollte man bei der Option
+"Handhabung von Datum und Uhrzeit" die Auswahl auf "Nur Datum ohne Uhrzeit speichern" stellen.
 
-* :ref:`Datum <component_attribute_timestamp>`
 
 
 .. |img_filter_range| image:: /_img/icons/filter_range.png

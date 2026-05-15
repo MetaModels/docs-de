@@ -157,6 +157,9 @@ zu beachten, dass der RTE die eingegebenen HTML-Inhalte formatiert und
 beim Speichern Entitäten kodiert. Die Option "HTML-Eingabe erlauben" sollte
 dann in den Funktionen ebenfalls aktiviert sein.
 
+Das Eingabewidget als TinyMCE kann mit :ref:`eigenen jumpTo-Picker zur Detailseite
+<rst_cookbook_specials_picker-for-tinymce>` versehen werden.
+
 **Datenbank-Speicherung**
 
 Der Text wird als ``text NULL`` (bis zu 65.535 Zeichen) gespeichert. Ein leerer

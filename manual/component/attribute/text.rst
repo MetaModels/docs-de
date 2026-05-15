@@ -159,6 +159,11 @@ Das Text-Attribut kann mit folgenden Filterregeln verwendet werden:
 Sonderfunktionen
 -----------------
 
+**Icon-Picker**
+Das Attribut Text eignet sich auch, um einen :ref:`Icon-Picker für die Eingabemaske
+<rst_cookbook_specials_picker-for-icons>` einzubauen.
+
+
 **Datenbank-Speicherung**
 
 Der Text wird als ``varchar(255) NULL`` gespeichert. Ein leerer Wert wird als
