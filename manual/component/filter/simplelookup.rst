@@ -9,8 +9,11 @@ werden oder mit "Statischer Parameter" fest im Inhaltselement bzw. Modul konfigu
 werden. Diese Filterregel eignet sich für einfache Auswahlen wie "Zeige alle Items
 der Kategorie X" oder "Filtere nach einem bestimmten Tag".
 
+Typischer Weise wird diese Filterregel eingesetzt, um einen :ref:`Datensatz als Detailseite anzuzeigen
+<mm_first_contentelements_detailpage>`.
+
 Optional kann ein Frontend-Widget ausgegeben werden, über das Besucher selbst
-einen Wert auswählen können.
+einen Wert auswählen können - damit arbeitet diese Filterregel wie die :ref:`component_filter_select`.
 
 
 Installation
