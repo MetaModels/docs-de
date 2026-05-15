@@ -148,6 +148,7 @@ Die maximale Anzahl der Generierungsversuche, bevor eine Ausnahme ausgelöst wir
 kann projektspezifisch in der ``config/config.yaml`` angepasst werden:
 
 .. code-block:: yaml
+   :linenos:
 
    meta_models_attribute_token:
        max_retries: 5   # Standard: 3
@@ -165,6 +166,9 @@ Token-Generierung durch eigenen Code ersetzt oder erweitert werden. Wird im List
 Beispiel-Listener als ``src/EventListener/MyTokenListener.php``:
 
 .. code-block:: php
+   :linenos:
+
+   <?php
 
    use MetaModels\AttributeTokenBundle\Event\GenerateTokenEvent;
 
@@ -180,6 +184,7 @@ Beispiel-Listener als ``src/EventListener/MyTokenListener.php``:
 Registrierung in ``config/services.yaml``:
 
 .. code-block:: yaml
+   :linenos:
 
    App\EventListener\MyTokenListener:
        tags:
