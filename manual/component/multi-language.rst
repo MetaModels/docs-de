@@ -41,18 +41,18 @@ Attribute
 Ist die Option "Übersetzung" bei einem Model aktiviert, stehen beim Anlegen der Attribute auch die mehrsprachigen
 Varianten zur Verfügung. Je nach Installation kann das wie folgt sein:
 
-* Übersetzte Checkbox
-* Übersetzte Datei
-* *Übersetzte Einzelauswahl [select]* *
-* *Übersetzte Mehrfachauswahl [tags]* *
-* Übersetzte Tabelle multi (MCW)
-* Übersetzte Text-Tabelle
-* Übersetzte URL
-* Übersetzte kombinierte Werte
-* Übersetzter Alias
-* Übersetzter Inhalt eines Artikels
-* Übersetzter Langtext
-* Übersetzter Text
+* :ref:`Übersetzte Checkbox <component_attribute_translatedcheckbox>`
+* :ref:`Übersetzte Datei <component_attribute_translatedfile>`
+* :ref:`Übersetzte Einzelauswahl [select] <component_attribute_translatedselect>` \*
+* :ref:`Übersetzte Mehrfachauswahl [tags] <component_attribute_translatedtags>` \*
+* :ref:`Übersetzte Tabelle multi (MCW) <component_attribute_translatedtablemulti>`
+* :ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`
+* :ref:`Übersetzte URL <component_attribute_translatedurl>`
+* :ref:`Übersetzte kombinierte Werte <component_attribute_translatedcombinedvalues>`
+* :ref:`Übersetzter Alias <component_attribute_translatedalias>`
+* :ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`
+* :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
+* :ref:`Übersetzter Text <component_attribute_translatedtext>`
 
 \*: die **nicht-übersetzten Attribute Einzelauswahl und Mehrfachauswahl unterstützen per se die Mehrsprachigkeit** bei
 Relationen zu MetaModel-Tabellen. Die beiden hier aufgeführten Attribute sind für Spezialfälle wie z. B. Relationen

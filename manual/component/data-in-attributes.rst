@@ -21,7 +21,7 @@ Texte
    :widths: 10, 10, 10, 10, 10, 10
 
     "Kurze Texte", ":ref:`Text <component_attribute_text>`", `attribute_text <https://github.com/MetaModels/attribute_text>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "✔", "bis 255 Zeichen; |br| Anzahl des Attributes durch |br| DB limitiert"
-    "Lange Texte", ":ref:`Langtext <component_attribute_longtext>`", `attribute_longtext <https://github.com/MetaModels/attribute_longtext>`_, "Textsuche, |br| Levenshtein, |br| Loupe", "✔", "bis 65535 Zeichen; |br| :ref:`anpassbar <rst_cookbook_inputmask_manipulate-select-values>`"
+    "Lange Texte", ":ref:`Langtext <component_attribute_longtext>`", `attribute_longtext <https://github.com/MetaModels/attribute_longtext>`_, "Textsuche, |br| Levenshtein, |br| Loupe", "✔", "bis 65535 Zeichen; |br| :ref:`anpassbar <rst_cookbook_inputmask_manipulate-select-values>`; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
     "Text als Alias", ":ref:`Alias <component_attribute_alias>`", `attribute_alias <https://github.com/MetaModels/attribute_alias>`_, "Textsuche, |br| Einfache Abfrage, |br| Levenshtein, |br| Loupe", "✔", "bis 255 Zeichen; |br| Generierung aus ein |br| ein oder mehreren Attributen"
     "Kombinierte Werte", ":ref:`Kombinierte Einträge <component_attribute_combinedvalues>`", `attribute_combinedvalues <https://github.com/MetaModels/attribute_combinedvalues>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "✔", "bis 255 Zeichen; |br| Ergebnisstring per ``sprintf`` definierbar"
     "Text als Tabelle", ":ref:`Text-Tabelle <component_attribute_tabletext>`", `attribute_tabletext <https://github.com/MetaModels/attribute_tabletext>`_, "Levenshtein, |br| Loupe", ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "bis 255 Zeichen je Zelle"
@@ -29,7 +29,7 @@ Texte
     "Text als Token", ":ref:`Token <component_attribute_token>`", `attribute_token <https://github.com/MetaModels/attribute_token>`_, "Textsuche, |br| Einzelauswahl, |br| Mehrfachauswahl, |br| Einfache Abfrage, |br| Register, |br| Levenshtein, |br| Loupe", "✔", "bis 255 Zeichen; |br| Anzahl Zeichen inkl. optionalen Präfix"
     "*Mehrsprachig*"
     "Kurze Texte mehrsprachig", ":ref:`Übersetzter Text <component_attribute_translatedtext>`", `attribute_translatedtext <https://github.com/MetaModels/attribute_translatedtext>`_, "siehe Text", "✔", "bis 255 Zeichen"
-    "Lange Texte mehrsprachig", ":ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "✔", "siehe Langtext"
+    "Lange Texte mehrsprachig", ":ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`", `attribute_translatedlongtext <https://github.com/MetaModels/attribute_translatedlongtext>`_, "siehe Langtext", "✔", "siehe Langtext; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
     "Text als Alias mehrsprachig", ":ref:`Übersetzter Alias <component_attribute_translatedalias>`", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "✔", "siehe Alias"
     "Kombinierte |br| Werte mehrsprachig", ":ref:`Übersetzte Kombinierte Einträge <component_attribute_translatedcombinedvalues>`", `attribute_translatedcombinedvalues <https://github.com/MetaModels/attribute_translatedcombinedvalues>`_, "siehe |br| Kombinierte Einträge", "✔", "siehe Kombinierte Einträge"
     "Text als |br| Tabelle mehrsprachig", ":ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "siehe Text-Tabelle"
@@ -54,9 +54,9 @@ Dateien
    :header: "Datentyp", "Attribut", "Paketname", "Filterregel", "FEE", "Bemerkung"
    :widths: 10, 10, 10, 10, 10, 10
 
-    "Datei", ":ref:`Datei <component_attribute_file>`", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "✔ Upload", "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von :ref:`Bildern ist Bildgröße <rst_cookbook_templates_fe_work_with_images>` wählbar"
+    "Datei", ":ref:`Datei <component_attribute_file>`", `attribute_file <https://github.com/MetaModels/attribute_file>`_, , "✔ Upload", "im BE nach Dateiname oder UUID suchbar; |br| für Ausgabe von :ref:`Bildern ist Bildgröße <rst_cookbook_templates_fe_work_with_images>` wählbar; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
     "*Mehrsprachig*"
-    "Datei mehrsprachig", ":ref:`Übersetzte Datei <component_attribute_translatedfile>`", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "✔ Upload", "siehe Datei"
+    "Datei mehrsprachig", ":ref:`Übersetzte Datei <component_attribute_translatedfile>`", `attribute_translatedfile <https://github.com/MetaModels/attribute_translatedfile>`_, , "✔ Upload", "siehe Datei; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
 
 Übergabe z. B. an ein :ref:`Rocksilid-Slider <rst_cookbook_templates_fe_template_ce_elements_rstslider>`.
 
@@ -95,16 +95,16 @@ Weitere Daten
    :widths: 10, 10, 10, 10, 10, 10
 
     "Farbwert", ":ref:`Farbwähler <component_attribute_color>`", `attribute_color <https://github.com/MetaModels/attribute_color>`_, , ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "Opacity/Transparency auch wählbar; |br| Sortierung nach Farbe möglich; |br| :ref:`siehe Attribut Color <rst_extended_attribute_color>`"
-    "Inhaltselemente", ":ref:`Inhalt eines Artikels <component_attribute_contentarticle>`", `attribute_contentarticle <https://github.com/MetaModels/attribute_contentarticle>`_, , "**—**", "mehrere Inhaltselemente wie beim Artikel"
+    "Inhaltselemente", ":ref:`Inhalt eines Artikels <component_attribute_contentarticle>`", `attribute_contentarticle <https://github.com/MetaModels/attribute_contentarticle>`_, , "**—**", "mehrere Inhaltselemente wie beim Artikel; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
     "Ländernamen", ":ref:`Land <component_attribute_country>`", `attribute_country <https://github.com/MetaModels/attribute_country>`_, , "✔", "mögliche Länder eingrenzbar"
     "Sprachenkürzel", ":ref:`Sprachenschlüssel <component_attribute_langcode>`", `attribute_langcode <https://github.com/MetaModels/attribute_langcode>`_, , "✔", "mögliche Sprachen eingrenzbar"
     "Geo-Entfernung", ":ref:`Geo-Entfernung <component_attribute_geodistance>`", `attribute_geodistance <https://github.com/MetaModels/attribute_geodistance>`_, , "**—**", "Zusatzangabe für Sortierung |br| der Umkreissuche"
     "Sterne-Bewertung", ":ref:`Bewertung <component_attribute_rating>`", `attribute_rating <https://github.com/MetaModels/attribute_rating>`_, , "**—**", "Anzahl der Sterne wählbar"
-    "MCW-Tabelle", ":ref:`Tabelle multi (MCW) <component_attribute_tablemulti>`", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`🗹 <rst_extended_frontend_editing_installation>`", ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`"
+    "MCW-Tabelle", ":ref:`Tabelle multi (MCW) <component_attribute_tablemulti>`", `attribute_tablemulti <https://github.com/MetaModels/attribute_tablemulti>`_, , ":ref:`🗹 <rst_extended_frontend_editing_installation>`", ":ref:`siehe Attribut für Multi-Column-Wizard <rst_extended_attribute_mcw>`; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
     "Pin für Cowegis-Map", "Cowegis-Marker", `cowegis-layer <https://github.com/MetaModels/cowegis-layer>`_, , "✔", ":ref:`siehe Cowegis-Layer Integration für Marker <extended_cowegis-layer-marker>`"
     "*Mehrsprachig*"
-    "Inhaltselemente |br| mehrsprachig", ":ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "**—**", "siehe Inhalt eines Artikels"
-    "MCW-Tabelle |br| mehrsprachig", ":ref:`Übersetzte Tabelle multi (MCW) <component_attribute_translatedtablemulti>`", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "siehe Tabelle multi (MCW)"
+    "Inhaltselemente |br| mehrsprachig", ":ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`", `attribute_translatedcontentarticle <https://github.com/MetaModels/attribute_translatedcontentarticle>`_, , "**—**", "siehe Inhalt eines Artikels; |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
+    "MCW-Tabelle |br| mehrsprachig", ":ref:`Übersetzte Tabelle multi (MCW) <component_attribute_translatedtablemulti>`", `attribute_translatedtablemulti <https://github.com/MetaModels/attribute_translatedtablemulti>`_, , ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "siehe Tabelle multi (MCW); |br| :ref:`File-Usage <rst_extended_file-usage>` ✔"
 
 Ausgabe z. B. als :ref:`CE-YouTube <rst_cookbook_templates_fe_template_ce_elements_youtube>`.
 

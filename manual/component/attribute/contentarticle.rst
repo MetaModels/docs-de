@@ -24,6 +24,9 @@ anzeigt und einen direkten Link zur Inhaltsverwaltung bietet.
    unterstützt. Damit lässt sich in der Contao-Dateiverwaltung anzeigen, ob und wo eine Datei
    eingebunden ist.
 
+.. seealso:: Die Ausgabe von MetaModels-Listen und -Filtern im Frontend ist auf der Seite
+   :ref:`component_contentelements` beschrieben.
+
 
 Installation
 ------------

@@ -24,6 +24,9 @@ Typische Einsatzbereiche:
 .. seealso:: Die einsprachige Variante dieses Attributs ist unter
    :ref:`component_attribute_select` beschrieben.
 
+.. seealso:: Hinweise zur Mehrsprachigkeit in MetaModels sind auf der Seite
+   :ref:`component_multi-language` zu finden.
+
 
 Installation
 ------------

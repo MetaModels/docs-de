@@ -376,7 +376,8 @@ es verschiedene Optionen zur Manipulation des Zielpfades, des Dateinamens und de
 Der Upload kann über das Standard-Uploadwidget erfolgen als auch per Drag&Drop über die
 `Dropzone <https://www.dropzone.dev/>`_.
 
-Für den Upload muss das entsprechende Attribut vom Typ Datei in der Maske eingebunden sein und als "Widget-Modus"
+Für den Upload muss das entsprechende Attribut vom Typ :ref:`Datei <component_attribute_file>`
+(bzw. :ref:`Übersetzte Datei <component_attribute_translatedfile>`) in der Maske eingebunden sein und als "Widget-Modus"
 "Einzelner Datei-Upload", "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder", "Mehrfacher Datei-Upload"
 und "Mehrfacher Datei-Upload mit Anzeige der Vorschaubilder".
 

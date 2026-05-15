@@ -27,6 +27,9 @@ Typische Einsatzbereiche:
    werden bestehende Alias-Werte bei jeder Änderung der Quell-Attribute neu
    generiert. Damit werden ggf. bereits veröffentlichte URLs ungültig.
 
+.. seealso:: Hinweise zur Mehrsprachigkeit in MetaModels sind auf der Seite
+   :ref:`component_multi-language` zu finden.
+
 
 Installation
 ------------

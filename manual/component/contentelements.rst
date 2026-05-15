@@ -38,6 +38,11 @@ zum Zurücksetzen aller Filtereinstellungen im Frontend.
 Für bestimmte Alias-Filter-Kombinationen ist ggf. die Routenpriorität in den
 Seiteneinstellungen zu setzen - siehe :ref:`rst_cookbook_tips_set-route-priority`
 
+.. seealso:: Zur Speicherung von Contao-Inhaltselementen direkt in einem MetaModels-Datensatz
+   stehen die Attribute :ref:`Inhalt eines Artikels <component_attribute_contentarticle>`
+   (einsprachig) bzw. :ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`
+   (mehrsprachig) zur Verfügung.
+
 
 Optionen CE/Modul Liste
 -----------------------

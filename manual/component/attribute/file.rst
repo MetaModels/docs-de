@@ -21,6 +21,9 @@ die Option "Als Bildfeld mit Vorschaubild benutzen" aktiviert werden.
    unterstützt. Damit lässt sich in der Contao-Dateiverwaltung anzeigen, ob und wo eine Datei
    eingebunden ist.
 
+.. seealso:: Für den Datei-Upload im Frontend steht die Erweiterung
+   :ref:`rst_extended_frontend_editing` zur Verfügung.
+
 
 Installation
 ------------

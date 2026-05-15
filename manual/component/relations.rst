@@ -93,6 +93,9 @@ Es gibt auch noch das Attribut "Übersetzte Einzelauswahl [Select]" - dieses ist
 Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen - oder
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
 
+.. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_select`
+   (einsprachig) bzw. :ref:`component_attribute_translatedselect` (mehrsprachig) zu finden.
+
 
 .. _component_relations_standard-relation-mton:
 Mehrfachauswahl [Tags] - "m:n"
@@ -111,6 +114,9 @@ einbinden.
 Es gibt auch noch das Attribut "Übersetzte Mehrfachauswahl [Tags]" - dieses ist hauptsächlich für die Anbindung von
 Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen - oder
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
+
+.. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_tags`
+   (einsprachig) bzw. :ref:`component_attribute_translatedtags` (mehrsprachig) zu finden.
 
 
 Spezial-Relationen bei MetaModels

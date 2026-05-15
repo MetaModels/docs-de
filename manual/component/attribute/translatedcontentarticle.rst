@@ -18,6 +18,9 @@ Typische Einsatzbereiche:
 .. seealso:: Die einsprachige Variante dieses Attributs ist unter
    :ref:`component_attribute_contentarticle` beschrieben.
 
+.. seealso:: Hinweise zur Mehrsprachigkeit in MetaModels sind auf der Seite
+   :ref:`component_multi-language` zu finden.
+
 .. seealso:: Dieses Attribut wird von der :ref:`File-Usage Integration <rst_extended_file-usage>`
    unterstützt. Damit lässt sich in der Contao-Dateiverwaltung anzeigen, ob und wo eine Datei
    eingebunden ist.
