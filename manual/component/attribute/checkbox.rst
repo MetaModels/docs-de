@@ -181,8 +181,7 @@ Dies ist nützlich, wenn die Semantik eines Feldes umgekehrt formuliert ist
 **Datenbank-Speicherung**
 
 Der Wert wird als ``char(1) NOT NULL default ''`` gespeichert:
-``'1'`` steht für aktiv, ``''`` (leerer String) für inaktiv. Im Backend werden
-die Werte als "Aktiv" und "Inaktiv" angezeigt.
+``'1'`` steht für aktiv, ``''`` (leerer String) für inaktiv.
 
 
 .. |img_checkbox| image:: /_img/icons/checkbox.png
