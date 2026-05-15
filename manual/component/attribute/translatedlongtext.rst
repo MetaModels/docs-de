@@ -84,12 +84,17 @@ zur Verfügung:
      - Auswahl eines eigenen Widget-Templates für das Frontend-Editing
        (nur wenn "Frontend Editing" installiert ist).
    * - Rich-Text-Editor (RTE)
-     - Aktivierung und Auswahl eines Rich-Text-Editors (z. B. ``tinyMCE``).
+     - Aktivierung und Auswahl eines Rich-Text-Editors (z. B. ``tinyMCE`` oder ``ace``).
        Ist kein RTE ausgewählt, erscheint ein einfaches Textarea-Feld.
+   * - Syntax-Hervorhebungsmodus
+     - Auswahl des Syntax-Highlighting für Quelltext-Editor ``ace``
    * - Zeilen
-     - Anzahl der sichtbaren Zeilen des Textarea-Feldes (Höhe).
+     - Anzahl der sichtbaren Zeilen des Textarea-Feldes (Höhe) - wird vom Contao-CSS üblicher Weise überschrieben.
+       Wenn das Template ``be_tinyMCE_mm`` oder ``be_ace_mm`` ausgewählt wird, werden die Höhenangaben an das Widget als
+       Option übergeben - beim ``tinyMCE`` als Pixel und beim ``ace`` als Zeilen.
    * - Spalten
-     - Anzahl der sichtbaren Zeichen je Zeile des Textarea-Feldes (Breite).
+     - Anzahl der sichtbaren Zeichen je Zeile des Textarea-Feldes (Breite) - wird vom Contao-CSS üblicher Weise
+       überschrieben.
 
 **Funktionen**
 
