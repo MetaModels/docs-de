@@ -72,12 +72,11 @@ wichtigsten Konzepte:
 - Filter anlegen und einbinden
 
 **3. Checkliste für den Start** |br|
-Die :ref:`rst_cookbook_checklists_mm-start` im Kochbuch fasst die typischen Schritte beim
-Anlegen eines neuen MetaModels kompakt zusammen — nützlich als Nachschlagewerk für die
-ersten Projekte.
+Die Seite mit dem :ref:`component_workflow` fasst die typischen Schritte beim Anlegen eines neuen MetaModels kompakt
+zusammen — nützlich als Nachschlagewerk für die ersten Projekte.
 
 **Tipp für den Einstieg:** |br|
-Ein einfaches Beispiel — etwa eine Mitarbeiterliste mit Name,
+Ein :ref:`einfaches Beispiel <mm_first_index>` — etwa eine Mitarbeiterliste mit Name,
 Funktion und Foto — ist ideal zum Ausprobieren. Es enthält die wesentlichen Bausteine
 (Attribute, Eingabemaske, Ausgabe, Filterung), bleibt aber überschaubar genug, um die Zusammenhänge
 zu verstehen. Zur Orientierung, wo was ist, lege den
