@@ -6,7 +6,7 @@
 .. note:: Diese Filterregel wird nicht weiter entwickelt - Nachfolger ist Filterregel :ref:`component_filter_by-related`,
    welcher diese Funktionalität mit abdeckt.
 
-Die Filterregel "Parent-Filter" (Paket ``filter_parent``) ermöglicht die Filterung
+Die Filterregel "Parent-Filter" (Paket ``filter_parent``, ab MM 2.3) ermöglicht die Filterung
 von Items anhand einer Eltern-Kind-Beziehung zu einem anderen MetaModel. Dabei wird
 ein Item des Ziel-MetaModels über ein Attribut mit einem Item des "Parent"-MetaModels
 verknüpft. Die Filterregel filtert dann auf Items, die mit einem bestimmten
