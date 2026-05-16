@@ -15,6 +15,9 @@ Typischer Weise wird diese Filterregel eingesetzt, um einen :ref:`Datensatz als 
 Optional kann ein Frontend-Widget ausgegeben werden, über das Besucher selbst
 einen Wert auswählen können - damit arbeitet diese Filterregel wie die :ref:`component_filter_select`.
 
+Mit der Option "Statischer Parameter" kann in den CE/FE-Modul MetaModels-Liste und -Filter eine überschreibbare Auswahl
+als Filtereinstellung getroffen werden - siehe :ref:`rst_cookbook_filter_filter-with-static-parameter`.
+
 
 Installation
 ------------
@@ -128,7 +131,7 @@ alle Sprachvarianten für den Vergleich verwendet werden sollen.
 Ist "Statischer Parameter" aktiviert, erscheint im Inhaltselement/Modul eine
 Auswahlliste, über die ein fester Filterwert festgelegt werden kann. Diese
 Einstellung eignet sich für Seiten, die immer eine bestimmte Kategorie anzeigen
-sollen, ohne dass ein URL-Parameter benötigt wird.
+sollen, ohne dass ein URL-Parameter benötigt wird - siehe :ref:`rst_cookbook_filter_filter-with-static-parameter`.
 
 
 .. |img_filter_default| image:: /_img/icons/filter_default.png

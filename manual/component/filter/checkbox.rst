@@ -57,9 +57,6 @@ Einstellungen für das Frontend-Widget
      - Beschreibung
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters für die Übergabe des Filterwerts.
-   * - Statischer Parameter
-     - Ist diese Option aktiv, wird der Filterwert nicht aus der URL gelesen, sondern
-       aus einer Auswahlliste im Inhaltselement/Modul bezogen.
    * - Label
      - Beschriftung des Filterwidgets im Frontend.
    * - Label beim Filterwidget ausblenden
