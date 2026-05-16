@@ -55,8 +55,9 @@ Einstellungen für das Frontend-Widget
 
    * - Einstellung
      - Beschreibung
-   * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters für die Übergabe des Filterwerts.
+       Ohne Angabe wird der Spaltenname des Attributs verwendet. Mit ``auto_item``
+       wird nur der Wert – ohne Schlüssel – in die URL eingebaut.
    * - URL-Typ für den Parameter
      - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
        SEO <rst_cookbook_tips_seo_filter-url>`

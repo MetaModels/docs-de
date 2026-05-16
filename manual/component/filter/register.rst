@@ -43,6 +43,16 @@ Einstellungen beim Anlegen der Filterregel
    * - Attribut
      - Das Textattribut, nach dessen Anfangsbuchstaben gefiltert werden soll
        (z. B. Nachname, Firmenname).
+
+Einstellungen für das Frontend-Widget
+--------------------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Einstellung
+     - Beschreibung
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters für den ausgewählten Buchstaben.
    * - URL-Typ für den Parameter
