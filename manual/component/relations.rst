@@ -95,6 +95,9 @@ Es gibt auch noch das Attribut "Übersetzte Einzelauswahl [Select]" - dieses ist
 Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen - oder
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
 
+Für eine Filterung im Frontend können die Filterregeln :ref:`component_filter_select` oder
+:ref:`component_filter_simplelookup` eingesetzt werden.
+
 .. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_select`
    bzw. :ref:`component_attribute_translatedselect` zu finden.
 
@@ -118,6 +121,8 @@ einbinden.
 Es gibt auch noch das Attribut "Übersetzte Mehrfachauswahl [Tags]" - dieses ist hauptsächlich für die Anbindung von
 Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen - oder
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
+
+Für eine Filterung im Frontend kann die Filterregel :ref:`component_filter_tags` eingesetzt werden.
 
 .. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_tags`
    bzw. :ref:`component_attribute_translatedtags` zu finden. |br|
