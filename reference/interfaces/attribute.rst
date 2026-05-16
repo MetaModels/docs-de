@@ -49,7 +49,7 @@ gibt alle Attributinstanzen eines MetaModel zurück
 gibt das Icon für ein gegebenen Typnamen zurück
 
 
-.. _ref_api_interf_attribute_iattributefactory:
+.. _ref_api_interf_attribute_iattribute:
 
 IAttribute Interface
 ....................
@@ -136,7 +136,7 @@ gibt eine Liste mit IDs von Items zurück, die gleich als der gegebene Wert ist
 wird aufgerufen, wenn ein gegebenes Item gespeichert wird
 
 
-.. _ref_api_interf_attribute_icomplex:
+.. _ref_api_interf_attribute_isimple:
 
 ISimple Interface
 .................
