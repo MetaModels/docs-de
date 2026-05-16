@@ -30,6 +30,8 @@ erscheinen.
   sollte bei den Render-Einstellungen und Eingabemasken anschließend nochmal neu
   hinzugefügt werden.
 
+.. seealso:: Checkliste beim Ändern eines Attributtyps: :ref:`rst_cookbook_checklists_attribut_change`
+
 Je nach Attributtyp stehen nach einem Neu laden der Seite weitere Eingabemöglichkeiten bzw.
 Optionen zur Verfügung. Folgend eine Aufstellung der Attributtypen mit Hinweisen zu den
 spezifischen Optionen:
@@ -177,6 +179,11 @@ alle notwendigen Optionen eingetragen bzw. ausgewählt sind, wird die Einstellun
 gespeichert und es erscheint in der Attributliste der vorhandenen MetaModels.
 Die Reihenfolge in der Liste hat keinen weiteren Einfluss.
 Datenbank-Migration durchführen!
+
+.. seealso:: Im Kochbuch:
+
+   * :ref:`rst_cookbook_checklists_attribut_new`
+   * :ref:`rst_cookbook_tips_speedup_backend`
 
 
 Details aller Attribute

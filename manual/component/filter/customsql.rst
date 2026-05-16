@@ -26,7 +26,8 @@ weiter gereicht. Es können keine "Attributwerte" hinzugefügt oder berechnet we
 JOINs oder mathematische Anweisungen möglich wäre.
 
 .. seealso:: Praktische Beispiele und Hinweise zur Nutzung finden sich im Kochbuch:
-   :ref:`rst_cookbook_filter_custom-sql`
+   :ref:`rst_cookbook_filter_custom-sql` |br|
+   Allgemeine SQL-Tipps: :ref:`rst_cookbook_sql-tips`
 
 
 Installation

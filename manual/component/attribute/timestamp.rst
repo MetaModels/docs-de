@@ -16,6 +16,9 @@ Datumsformat angezeigt. Typische Einsatzbereiche:
    SQL-Filterungen oder -Abfragen müssen ggf. Konvertierungen vorgenommen
    werden (z. B. ``FROM_UNIXTIME()`` in MySQL).
 
+.. seealso:: Für einen modernen Datumspicker im Frontend:
+   :ref:`rst_cookbook_templates_flatpickr-integration`
+
 
 Installation
 ------------

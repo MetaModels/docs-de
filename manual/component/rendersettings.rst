@@ -94,6 +94,8 @@ werden bzw. es müssen nur die aktiviert sein, die in der Listenansicht angezeig
 Bei den einzelnen Attributen kann das zu verwendende Template geändert und/oder eine spezielle
 CSS-Klasse eingetragen werden ("|img_edit| Bearbeiten").
 
+.. seealso:: :ref:`rst_cookbook_rendering_encrypt-email`
+
 
 .. |img_rendersettings_32| image:: /_img/icons/rendersettings_32.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png

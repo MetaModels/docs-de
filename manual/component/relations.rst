@@ -116,7 +116,8 @@ Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
 
 .. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_tags`
-   (einsprachig) bzw. :ref:`component_attribute_translatedtags` (mehrsprachig) zu finden.
+   (einsprachig) bzw. :ref:`component_attribute_translatedtags` (mehrsprachig) zu finden. |br|
+   Hinweise zum Bereinigen überflüssiger Relationsdaten: :ref:`rst_cookbook_specials_delete-superfluous-data`
 
 
 Spezial-Relationen bei MetaModels

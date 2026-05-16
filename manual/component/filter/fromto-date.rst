@@ -23,6 +23,9 @@ muss das Datum im Format ``YYYY-MM-DD`` übergeben werden –
    Für numerische Werte steht die Filterregel
    :ref:`component_filter_fromto` zur Verfügung.
 
+.. seealso:: Für einen modernen Datumspicker im Frontend:
+   :ref:`rst_cookbook_templates_flatpickr-integration`
+
 
 Installation
 ------------

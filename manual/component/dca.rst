@@ -146,6 +146,12 @@ Anschließend können in der Listenansicht der Eingabemasken über das Icon
 "|img_dca_groupsortsettings| Sortierung und Gruppierung" verschiedene Einträge
 für die Sortierung und Gruppierung der gespeicherten Items angelegt werden.
 
+.. seealso:: Im Kochbuch:
+
+   * :ref:`rst_cookbook_inputmask_dca`
+   * :ref:`rst_cookbook_inputmask_default-values`
+   * :ref:`rst_cookbook_inputmask_regex`
+
 
 .. |img_dca_32| image:: /_img/icons/dca_32.png
 .. |img_dca| image:: /_img/icons/dca.png

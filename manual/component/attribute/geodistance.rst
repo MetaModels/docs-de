@@ -16,6 +16,11 @@ Das Attribut selbst speichert keine eigenen Datenwerte, sondern liest
 Koordinaten aus anderen Attributen des MetaModels (Breiten- und Längengrad)
 und berechnet die Entfernung auf Anfrage.
 
+.. seealso:: Im Kochbuch:
+
+   * :ref:`rst_cookbook_specials_generate-geocoordinates`
+   * :ref:`rst_cookbook_specials_marker-for-gmap`
+
 
 Installation
 ------------

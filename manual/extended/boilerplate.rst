@@ -109,7 +109,7 @@ zu finden.
 
 Informationen über Contao Hooks: siehe `Contao-Handbuch <https://docs.contao.org/books/manual/3.4/de/07-contao-anpassen/contao-hooks.html>`_
 
-Ein Beispiel im Zusammenspiel mit MetaModels: siehe :ref:`rst_cookbook_panels_regex`
+Ein Beispiel im Zusammenspiel mit MetaModels: siehe :ref:`rst_cookbook_inputmask_regex`
 
 
 Vorlage für einen (MM/DCG) Event
@@ -127,7 +127,7 @@ Vorlage für Standardvorgaben der Eingabemaske
 Eine Vorlage für Standardvorgaben der Eingabemaske ist im Ordner "/config" mit der Datei "config.php"
 zu finden.
 
-Mehr Informationen unter :ref:`rst_cookbook_panels_default-values`
+Mehr Informationen unter :ref:`rst_cookbook_inputmask_default-values`
 
 
 

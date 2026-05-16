@@ -134,6 +134,12 @@ die Hierarchie beeinflusst werden und die Filterregel z.B. innerhalb einer ODER-
 eingefügt werden.
 
 
+.. seealso:: Im Kochbuch:
+
+   * :ref:`rst_cookbook_checklists_filter`
+   * :ref:`rst_cookbook_filter_exclusion`
+
+
 .. _component_filter_list:
 Details aller Filterregeln
 --------------------------
