@@ -61,6 +61,9 @@ Einstellungen für das Frontend-Widget
      - Der Schlüssel (Key) des URL-Parameters. Der "Von"-Wert erhält das Suffix
        ``__from``, der "Bis"-Wert das Suffix ``__to`` (z. B. ``preis__from``
        und ``preis__to``).
+   * - URL-Typ für den Parameter
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
    * - Label
      - Beschriftung des Filterwidgets.
    * - Label beim Filterwidget ausblenden

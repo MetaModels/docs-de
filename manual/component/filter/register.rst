@@ -45,6 +45,9 @@ Einstellungen beim Anlegen der Filterregel
        (z. B. Nachname, Firmenname).
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters für den ausgewählten Buchstaben.
+   * - URL-Typ für den Parameter
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
    * - Label
      - Beschriftung des Filterwidgets.
    * - Label beim Filterwidget ausblenden

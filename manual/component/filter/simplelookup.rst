@@ -65,11 +65,11 @@ Einstellungen für das Frontend-Widget
        Ohne Angabe wird der Spaltenname des Attributs verwendet. Mit ``auto_item``
        wird nur der Wert – ohne Schlüssel – in die URL eingebaut.
    * - URL-Typ für den Parameter
-     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter oder
-       als beides übergeben wird. (ab MM 2.4)
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
    * - Statischer Parameter
-     - Ist diese Option aktiv, wird der Filterwert nicht aus der URL gelesen, sondern
-       aus einer Auswahlliste im Inhaltselement/Modul bezogen.
+     - Ist diese Option aktiv, kann der Filterwert aus einer Auswahlliste im
+       Inhaltselement/Modul überschreibbar vorbelegt werden.
    * - Frontend Widget bereitstellen
      - Gibt ein Filterwidget im Frontend aus, über das Besucher einen Wert auswählen
        können.

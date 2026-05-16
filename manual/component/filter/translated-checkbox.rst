@@ -49,7 +49,11 @@ Die Einstellungen entsprechen vollständig denen der Filterregel
      - Freitextfeld zur Beschreibung des Zwecks dieser Filterregel.
    * - Attribut
      - Das übersetzte Checkbox-Attribut, dessen Wert geprüft werden soll.
-
+   * - URL-Parameter
+     - Der Schlüssel (Key) des URL-Parameters für die Sucheingabe.
+   * - URL-Typ für den Parameter
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
 
 Einstellungen für das Frontend-Widget
 --------------------------------------

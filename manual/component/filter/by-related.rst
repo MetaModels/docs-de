@@ -16,6 +16,9 @@ Deutschland").
 Optional kann ein Frontend-Widget ausgegeben werden, über das Besucher einen Wert
 selbst auswählen können.
 
+Mit der Option "Statischer Parameter" kann in den CE/FE-Modul MetaModels-Liste und -Filter eine überschreibbare Auswahl
+als Filtereinstellung getroffen werden - siehe :ref:`rst_cookbook_filter_filter-with-static-parameter`.
+
 .. seealso:: Detaillierte Dokumentation zu Filter-by-related:
    :ref:`rst_extended_filter_by_related`
 
@@ -71,9 +74,12 @@ Einstellungen für das Frontend-Widget
      - Beschreibung
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters.
+   * - URL-Typ für den Parameter
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
    * - Statischer Parameter
-     - Ist diese Option aktiv, wird der Filterwert aus einer Auswahlliste im
-       Inhaltselement/Modul bezogen statt aus der URL.
+     - Ist diese Option aktiv, kann der Filterwert aus einer Auswahlliste im
+       Inhaltselement/Modul überschreibbar vorbelegt werden.
    * - Frontend Widget bereitstellen
      - Gibt ein Filterwidget im Frontend aus.
    * - Widget-Typ

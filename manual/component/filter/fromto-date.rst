@@ -67,6 +67,9 @@ Einstellungen für das Frontend-Widget
      - Beschreibung
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters.
+   * - URL-Typ für den Parameter
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
    * - Datumsformat
      - Das Format, in dem das Datum im Frontend-Eingabefeld erwartet wird
        (z. B. ``d.m.Y`` oder ``Y-m-d``). Standard: Contao-Datumsformat aus

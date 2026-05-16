@@ -3,6 +3,9 @@
 |img_filter_default| Parent-Filter
 ====================================
 
+.. note:: Diese Filterregel wird nicht weiter entwickelt - Nachfolger ist Filterregel :ref:`component_filter_by-related`,
+   welcher diese Funktionalität mit abdeckt.
+
 Die Filterregel "Parent-Filter" (Paket ``filter_parent``) ermöglicht die Filterung
 von Items anhand einer Eltern-Kind-Beziehung zu einem anderen MetaModel. Dabei wird
 ein Item des Ziel-MetaModels über ein Attribut mit einem Item des "Parent"-MetaModels
@@ -12,9 +15,8 @@ Elternelement verbunden sind.
 Optional kann ein Frontend-Widget ausgegeben werden, über das Besucher das
 Elternelement selbst auswählen können.
 
-.. note:: Diese Filterregel ist in ``filter.rst`` noch nicht dokumentiert und steht
-   ab dem Paket ``filter_parent`` zur Verfügung.
-
+Mit der Option "Statischer Parameter" kann in den CE/FE-Modul MetaModels-Liste und -Filter eine überschreibbare Auswahl
+als Filtereinstellung getroffen werden - siehe :ref:`rst_cookbook_filter_filter-with-static-parameter`.
 
 Installation
 ------------
@@ -60,9 +62,12 @@ Einstellungen für das Frontend-Widget
      - Beschreibung
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters für die Übergabe des Eltern-IDs.
+   * - URL-Typ für den Parameter
+     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
+       SEO <rst_cookbook_tips_seo_filter-url>`
    * - Statischer Parameter
-     - Ist diese Option aktiv, wird der Filterwert aus einer Auswahlliste im
-       Inhaltselement/Modul bezogen statt aus der URL.
+     - Ist diese Option aktiv, kann der Filterwert aus einer Auswahlliste im
+       Inhaltselement/Modul überschreibbar vorbelegt werden.
    * - Frontend Widget bereitstellen
      - Gibt ein Filterwidget im Frontend aus.
    * - Widget-Typ
