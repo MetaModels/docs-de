@@ -89,12 +89,14 @@ Möchte man eine Relation zu einem Wert wie z. B. Mitarbeiter zu einer Abteilung
 In der Eingabemaske im BE wird mit dem Attribut standardmäßig eine Selectauswahl erzeugt - es gibt aber auch noch
 weitere Optionen bei den Einstellungen des Attributs bei der Eingabemaske.
 
+.. note:: Das Attribut "Einzelauswahl [Select]" kann automatisch auch mit mehrsprachigen MetaModels arbeiten.
+
 Es gibt auch noch das Attribut "Übersetzte Einzelauswahl [Select]" - dieses ist hauptsächlich für die Anbindung von
 Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen - oder
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
 
 .. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_select`
-   (einsprachig) bzw. :ref:`component_attribute_translatedselect` (mehrsprachig) zu finden.
+   bzw. :ref:`component_attribute_translatedselect` zu finden.
 
 
 .. _component_relations_standard-relation-mton:
@@ -111,12 +113,14 @@ Bei dem Attribut gibt es zu beachten, dass die Werte wie bei m:n-Relationen in e
 ``tl_metamodels_tag_relations`` gespeichert werden. Bei eigenen SQL-Queries muss man diese Tabelle mit
 einbinden.
 
+.. note:: Das Attribut "Mehrfachauswahl [Tags]" kann automatisch auch mit mehrsprachigen MetaModels arbeiten.
+
 Es gibt auch noch das Attribut "Übersetzte Mehrfachauswahl [Tags]" - dieses ist hauptsächlich für die Anbindung von
 Tabellen bestimmt, die nicht zu MetaModels gehören und ein eigenständiges Feld für die Sprachvariante besitzen - oder
 für den Spezialfall, dass bei dem referenzierten MetaModel je nach Sprache unterschiedliche Items ausgewählt werden sollen.
 
 .. seealso:: Die vollständige Dokumentation des Attributs ist unter :ref:`component_attribute_tags`
-   (einsprachig) bzw. :ref:`component_attribute_translatedtags` (mehrsprachig) zu finden. |br|
+   bzw. :ref:`component_attribute_translatedtags` zu finden. |br|
    Hinweise zum Bereinigen überflüssiger Relationsdaten: :ref:`rst_cookbook_specials_delete-superfluous-data`
 
 
