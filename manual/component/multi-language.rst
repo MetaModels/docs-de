@@ -55,6 +55,9 @@ Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte 
    Sollte es die Notwendigkeit geben das selbe Wort dennoch in der Übersetzung zu speichern, kann man dieses anpassen,
    speichern und Anpassung rückgängig machen - z. B. Marketing -> MarketingX + speichern -> Marketing + speichern.
 
+.. note:: Werden mehrsprachige Models oder Attribute gelöscht, werden nicht alle Inhalte mit gelöscht - :ref:`hier
+   Hinweise zum Prüfen und löschen <rst_cookbook_specials_delete-superfluous-data>`
+
 
 .. _component_multi-language_attribute:
 Attribute
