@@ -49,7 +49,7 @@ in der gewählten Sprache bearbeiten.
 
 Das Beste hierbei ist, dass Attribute, die nicht übersetzbar sind, auch nicht
 übersetzt werden. Dies ermöglicht es beispielsweise lediglich die Namen und
-Beschreibungstexte von Produkten übersetzbar zu machen, die EAN und Maßangaben
+Beschreibungstexte von Produkten übersetzbar zu machen, die Produktnummer und Maßangaben
 jedoch nicht. Diese Arbeitsweise verringert die Redundanz der einzugebenden
 Daten.
 
