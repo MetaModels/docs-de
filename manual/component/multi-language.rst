@@ -46,7 +46,7 @@ Die Daten in der definierten Fallbacksprache müssen vorhanden sein, damit auch 
 Ausgabe erfolgen kann. Seit MM 2.4 wird die Fallbacksprache in der Eingabemaske mit "[Fb]" im Sprachenwechsler als auch
 in der Überschrift gekennzeichnet.
 
-Wechselt man in der Eingabemaske von der Fallbacksprache zu einer übersetzungssprache, werden in den Textfeldern die
+Wechselt man in der Eingabemaske von der Fallbacksprache zu einer Übersetzungssprache, werden in den Textfeldern die
 Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte erleichtert.
 
 .. note:: Wird ein Fallbacktext nicht übersetzt, so wird dieser auch nicht in der Übersetzungssprache eingespeichert.
