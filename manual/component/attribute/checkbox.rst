@@ -76,7 +76,7 @@ einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
    * - Template
      - Auswahl eines eigenen Templates für die Ausgabe des Checkbox-Wertes. Wird
        kein Template angegeben, erfolgt die Ausgabe als einfacher Text (``1`` bei Aktiv
-       oder ```` bei Inaktiv).
+       oder ``''`` bei Inaktiv).
 
        Primär für die Listenanzeige im BE ist das Template ``mm_attr_checkbox_icon``, welches den
        Staus mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
