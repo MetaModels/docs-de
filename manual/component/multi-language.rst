@@ -51,7 +51,9 @@ Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte 
 
 .. note:: Wird ein Fallbacktext nicht übersetzt, so wird dieser auch nicht in der Übersetzungssprache eingespeichert.
    Dies ist insbesondere zu beachten, wenn ein Begriff in der Fallbacksprache als auch in der Übersetzungssprache
-   gleich ist wie z. B. "Marketing" in Englisch und Deutsch.
+   gleich ist wie z. B. "Marketing" in Englisch und Deutsch. |br|
+   Sollte es die Notwendigkeit geben, das selbe Wort dennoch in der Übersetzung zu speichern, kann man dieses anpassen,
+   speichern und Anpassung rückgängig machen - z. B. Marketing -> MarketingX + speichern -> Marketing + speichern.
 
 
 .. _component_multi-language_attribute:
