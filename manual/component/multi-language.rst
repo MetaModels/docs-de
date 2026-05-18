@@ -34,6 +34,26 @@ Sprachenschema und die selbe Fallbacksprache zu definieren. Es ist auch sinnvoll
 Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben.
 
 
+Speicherung in Datenbank
+------------------------
+
+Gespeichert werden die übersetzten Werte in separaten Tabellen ``tl_metamodel_translated*`` - je nach Attributstyp
+können das unterschiedliche Tabellen sein. Somit erscheinen die Werte nicht in der individuellen Tabelle des angelegten
+Models ``mm_*``. Die Übersetzungstabellen haben eine Referenz zum Attribut ``att_id`` und zum Datensatz ``item_id``
+sowie die Angabe der gespeicherten Sprache ``langcode``.
+
+Die Daten in der definierten Fallbacksprache müssen vorhanden sein, damit auch bei nicht vorhandener Übersetzung eine
+Ausgabe erfolgen kann. Seit MM 2.4 wird die Fallbacksprache in der Eingabemaske mit "[Fb]" im Sprachenwechsler ais auch
+in der Überschrift gekennzeichnet.
+
+Wechselt man in der Eingabemaske von der Fallbacksprache zu einer übersetzungssprache, werden in den Textfeldern die
+Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte erleichtert.
+
+.. note:: Wird ein Fallbacktext nicht übersetzt, so wird dieser auch nicht in der Übersetzungssprache eingespeichert.
+   Dies ist insbesondere zu beachten, wenn ein Begriff in der Fallbacksprache als auch in der Übersetzungssprache
+   gleich ist wie z. B. "Marketing".
+
+
 .. _component_multi-language_attribute:
 Attribute
 ---------
@@ -100,10 +120,8 @@ in einer nicht-Fallbacksprache, muss sich dieser von der Fallbackeingabe untersc
 "Marketing" ist und Deutsch die Fallbacksprache, würde das Wort "Marketing" nicht als Wort bei Englisch gespeichert
 werden.
 
-.. note:: Achtung beim Kopieren von mehrsprachigen Datensätzen: aktuell werden nicht alle Sprachen mit kopiert.
-   Die Sprache im BE sollte beim Duplizieren gleich der Fallback-Sprache sein. Anschließend müssen die weiteren Sprachen
-   nachgepflegt werden. |br|
-   `Siehe Issue <https://github.com/MetaModels/core/issues/598#issuecomment-1912422061>`_
+.. note:: Ab MM 2.4.16 werden beim Kopieren eines Datensatzes alle Sprachen mit kopiert - bei vorhergehenden MM
+   Versionen war das nicht der Fall; `siehe Issue <https://github.com/MetaModels/core/issues/598#issuecomment-1912422061>`_
 
 
 BE-Listenansicht
