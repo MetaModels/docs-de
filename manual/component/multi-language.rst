@@ -43,7 +43,7 @@ Models ``mm_*``. Die Übersetzungstabellen haben eine Referenz zum Attribut ``at
 sowie die Angabe der gespeicherten Sprache ``langcode``.
 
 Die Daten in der definierten Fallbacksprache müssen vorhanden sein, damit auch bei nicht vorhandener Übersetzung eine
-Ausgabe erfolgen kann. Seit MM 2.4 wird die Fallbacksprache in der Eingabemaske mit "[Fb]" im Sprachenwechsler ais auch
+Ausgabe erfolgen kann. Seit MM 2.4 wird die Fallbacksprache in der Eingabemaske mit "[Fb]" im Sprachenwechsler als auch
 in der Überschrift gekennzeichnet.
 
 Wechselt man in der Eingabemaske von der Fallbacksprache zu einer übersetzungssprache, werden in den Textfeldern die
