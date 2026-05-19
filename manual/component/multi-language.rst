@@ -150,8 +150,8 @@ erfolgt der Austausch über das `XLIFF-Format <https://de.wikipedia.org/wiki/XML
 Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wieder importiert - für die
 Übersetzung können entsprechende Agenturen oder Tools eingebunden werden.
 
-Für die Übersetzung im Backend steht die :ref:`Erweiterung "Translator-Bridge" <rst_extended_translator-bridge>` an,
-welche verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
+Für die Übersetzung im Backend steht die :ref:`Erweiterung "Translator-Bridge" <rst_extended_translator-bridge>` zur
+verfügung, welche verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
 Eingabefeld erfolgen oder über einen Tastenkürzel für die aktive Eingabemaske.
 
 
