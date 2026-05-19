@@ -144,7 +144,7 @@ Eingabefeldern auf |img_translated|.
 
 **Erweiterungen zum Übersetzen:**
 
-Für kontinuierliche Übersetzungen bietet sich die :ref:`Erweiterung "rst_extended_xliff_ex-import`" an. Hiermit
+Für kontinuierliche Übersetzungen bietet sich die :ref:`Erweiterung "rst_extended_xliff_ex-import"` an. Hiermit
 erfolgt der Austausch über das `XLIFF-Format <https://de.wikipedia.org/wiki/XML_Localization_Interchange_File_Format>`_.
 
 Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wieder importiert - für die
