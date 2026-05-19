@@ -146,8 +146,7 @@ Das Token-Attribut kann mit folgenden Filterregeln verwendet werden:
        URL-basierte Zugangsprüfungen |br|
        (z. B. ``?token=TKN-aB3xYq``).
    * - Eigenes SQL
-     - Für komplexere Filterungen, z. B. wenn ein Token nur für bestimmte
-       Mitglieder sichtbar sein soll.
+     - Für komplexere Filterungen für Kombinationen mit weiteren Parametern .
 
 
 Sonderfunktionen
