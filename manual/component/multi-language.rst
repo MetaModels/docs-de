@@ -77,10 +77,10 @@ Varianten zur Verfügung. Je nach Installation kann das wie folgt sein:
 * :ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`
 * :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
 * :ref:`Übersetzter Text <component_attribute_translatedtext>`
-* :ref:`Übersetzte Einzelauswahl [select] <component_attribute_translatedselect>` \*
-* :ref:`Übersetzte Mehrfachauswahl [tags] <component_attribute_translatedtags>` \*
+* :ref:`Übersetzte Einzelauswahl [select] <component_attribute_translatedselect>` |*note|
+* :ref:`Übersetzte Mehrfachauswahl [tags] <component_attribute_translatedtags>` |*note|
 
-\*: die **nicht-übersetzten Attribute Einzelauswahl und Mehrfachauswahl unterstützen per se die Mehrsprachigkeit** bei
+|*note|: die **nicht-übersetzten Attribute Einzelauswahl und Mehrfachauswahl unterstützen per se die Mehrsprachigkeit** bei
 Relationen zu MetaModel-Tabellen. Die beiden hier aufgeführten Attribute sind für Spezialfälle wie z. B. Relationen
 zu nicht-MM-Tabellen mit mehrsprachigen Inhalten. Diese Tabellen müssen aber eine Spalte mit dem Sprachschlüssel haben.
 Man kann dafür auch einsprachige MetaModel-Tabellen verwenden mit einem Attribut für den Sprachenschlüssel. Damit ist
@@ -223,3 +223,7 @@ Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten 
 .. |br| raw:: html
 
    <br />
+
+.. |*note| raw:: html
+
+   <strong>*</strong>
