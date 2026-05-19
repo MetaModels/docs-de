@@ -69,7 +69,7 @@ Beispiele für eindeutige Bezeichnungen sind die `Vorgaben bei deutschen Ausweis
 von 26 Zeichen oder den `Record Locator <https://en.wikipedia.org/wiki/Record_locator>`_ wie man ihn von Flugtickets
 kenn mit sechs Zeichen aus ``23456789ABCDEFGHJKMNPQRSTXYZ`` - auf 0, 1, O, I, L wird zur besseren Lesbarkeit verzichtet.
 
-Die Anzahl der möglichen Kombinationen ``V``ergibt sich aus der Anzahl der möglichen Zeichen ``n`` und der Zeichenlänge
+Die Anzahl der möglichen Kombinationen ``V`` ergibt sich aus der Anzahl der möglichen Zeichen ``n`` und der Zeichenlänge
 des Tokens ``k`` - die Formel ist ``V = n**k``.
 
 Bei der Standardeinstellung ``[a-z][A-Z][0-9]`` sind es 62 Zeichen ``n`` und einer Zeichenlänge ``k`` von 8 ergeben
