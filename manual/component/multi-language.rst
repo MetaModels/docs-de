@@ -151,7 +151,7 @@ Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wi
 Übersetzung können entsprechende Agenturen oder Tools eingebunden werden.
 
 Für die Übersetzung im Backend steht die :ref:`Erweiterung "Translator-Bridge" <rst_extended_translator-bridge>` zur
-verfügung, welche verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
+Verfügung, welche verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
 Eingabefeld erfolgen oder über einen Tastenkürzel für die aktive Eingabemaske.
 
 
