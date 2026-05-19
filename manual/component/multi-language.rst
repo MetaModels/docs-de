@@ -5,7 +5,12 @@ Mehrsprachigkeit in MetaModels
 
 MetaModels ist sehr gut auf mehrsprachige Inhalte ausgerichtet. MM stellt für die mehrsprachigen Inhalte eigene
 Attribute wie z. B. `Übersetzter Text`, `Übersetzter Alias`, `Übersetzte Datei` usw. zur Verfügung. Für Attribute deren
-Werte unabhängig von einer Sprachen sind, wie z. B. die Zahlenwerte, gibt es diese Varianten nicht.
+Werte unabhängig von einer Sprachen sind, wie z. B. Zahlenwerte Produkt-IDs usw. , gibt es diese Varianten nicht.
+
+Die Mehrsprachigkeit in MetaModels ist so konzipiert, dass die mehrsprachigen Felder neben der Fallback-Sprache auch in
+den gewünschten Übersetzungen ausgefüllt werden. Sollte das bei einem Feld mal nicht der Fall sein, wird im Frontend
+automatisch der Fallback-Wert ausgegeben. Im Template kann nicht unterschieden werden, ob ein Wert aus der Übersetzung
+oder vom Fallback kommt.
 
 Bevor man mit der Erstellung der Models startet gilt es gut zu überlegen, ob die Inhalte mehrsprachig abgelegt werden
 sollen. Die mehrsprachigen Inhalte werden in separaten Tabellen gespeichert und nicht in der eigenen ``mm_*``, so dass
@@ -31,7 +36,7 @@ Legt man mehrere Models an, die auch noch durch Relationen verbunden sind, ist e
 Sprachenschema und die selbe Fallbacksprache zu definieren. Es ist auch sinnvoll nur die Sprachen anzulegen, die Contao
 über seine Startpunkte definiert hat.
 
-Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben.
+Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben |img_locale|.
 
 
 .. _component_multi-language_save:
@@ -44,11 +49,12 @@ Models ``mm_*``. Die Übersetzungstabellen haben eine Referenz zum Attribut ``at
 sowie die Angabe der gespeicherten Sprache ``langcode``.
 
 Die Daten in der definierten Fallbacksprache müssen vorhanden sein, damit auch bei nicht vorhandener Übersetzung eine
-Ausgabe erfolgen kann. Seit MM 2.4 wird die Fallbacksprache in der Eingabemaske mit "[Fb]" im Sprachenwechsler als auch
-in der Überschrift gekennzeichnet.
+Ausgabe erfolgen kann. Seit MM 2.4 wird die Fallbacksprache in der Eingabemaske mit "|img_fallback|" im
+Sprachenwechsler als auch in der Überschrift gekennzeichnet.
 
 Wechselt man in der Eingabemaske von der Fallbacksprache zu einer Übersetzungssprache, werden in den Textfeldern die
-Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte erleichtert.
+Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte erleichtert. Mehr zum Thema
+Kennzeichnung im Abschnitt ":ref:`component_multi-language_input`".
 
 .. note:: Wird ein Fallbacktext nicht übersetzt, so wird dieser auch nicht in der Übersetzungssprache eingespeichert.
    Dies ist insbesondere zu beachten, wenn ein Begriff in der Fallbacksprache als auch in der Übersetzungssprache
@@ -56,8 +62,11 @@ Eingaben der Fallbacksprache ausgegeben. Damit wird eine Übersetzung der Texte 
    Wird eine Eingabe nach einer Übersetzung wieder auf den Fallback-Inhalt umgeschrieben, so wird der Eintrag für
    die Übersetzungssprache in der Datenbank wieder gelöscht.
 
+.. note:: Ab MM 2.4 werden beim Kopieren eines Datensatzes alle Sprachen mit kopiert -
+   `siehe Issue <https://github.com/MetaModels/core/issues/598#issuecomment-1912422061>`_
+
 .. note:: Werden mehrsprachige Models oder Attribute gelöscht, werden nicht alle Inhalte mit gelöscht - :ref:`hier
-   Hinweise zum Prüfen und löschen <rst_cookbook_specials_delete-superfluous-data>`
+   Hinweise zum Prüfen und Löschen <rst_cookbook_specials_delete-superfluous-data>`
 
 
 .. _component_multi-language_attribute:
@@ -106,29 +115,44 @@ Fallbackwert ausgegeben. Im Template könnte eine Ausgabe wie folgt aussehen:
 Damit ist eine bequeme Handhabung der mehrsprachigen "Labels" in einem Template möglich.
 
 
+.. _component_multi-language_input:
 Eingabemaske / Eingabe
 ----------------------
 
 In der Eingabemaske im Backend haben die Widgets der mehrsprachigen Attribute zur Unterscheidung ein farbiges
-Flaggen-Icon. Die Umschaltung der Sprachen erfolgt direkt im Header der Eingabemaske.
+Flaggen-Icon |img_locale|. Die Umschaltung der Sprachen erfolgt direkt im Header der Eingabemaske. Die Fallbacksprache
+ist sowohl im Sprachenwechsler als auch in der Überschrift entsprechend gekennzeichnet.
 
 Beim Neuanlegen eines Datensatzes wird immer erst die Fallbacksprache befüllt - wenn in der Maske noch eine andere
 Sprache als die Fallbacksprache eingestellt ist, wird mit dem Speichern auf die Fallbacksprache umgeschaltet.
 
-Das Speichern eines Datensatzes bzw. einer Eingabe erfolgt nicht automatisch bei der Umschaltung zu einer anderen
-Sprache vor dem Umschalten müssen die Eingaben mit Speichern gesichert werden.
+.. warning:: Das Speichern eines Datensatzes bzw. einer Eingabe erfolgt nicht automatisch bei der Umschaltung zu einer
+   anderen Sprache - vor dem Umschalten müssen die Eingaben mit "Speichern" gesichert werden!
 
-Nachdem die Felder in der Fallbacksprache befüllt und gespeichert sind, kann auf eine beliebige anderer gewechselt
-werden. In den mehrsprachigen Textfeldern ist zunächst der Text aus der Fallbacksprache zu sehen. Damit soll eine
-Übersetzung erleichtert werden.
+.. warning:: Die folgenden Anzeigen wurden in MM 2.4 eingebaut bzw. angepasst.
 
-Diese angezeigten (Hilfs-)Texte werden aber beim Speichern nicht mit in die DB übertragen. Zum Speichern eines Textes
-in einer nicht-Fallbacksprache, muss sich dieser von der Fallbackeingabe unterscheiden. Wenn z. B. ein Abteilungsname
-"Marketing" ist und Deutsch die Fallbacksprache, würde das Wort "Marketing" nicht als Wort bei Englisch gespeichert
-werden.
+Nachdem die Felder in der Fallbacksprache befüllt und gespeichert sind, kann auf eine beliebige andere Sprache
+gewechselt werden. In den mehrsprachigen Feldern ist zunächst Inhalt aus der Fallbacksprache zu sehen. Zusätzlich wird
+bei dem Titel der Hinweis |img_fallback| eingeblendet, solange kein Inhalt gespeichert wurde, der sich von den
+Fallbackwerten unterscheidet. Damit soll der Status der Übersetzung leichter erkennbar werden.
 
-.. note:: Ab MM 2.4.16 werden beim Kopieren eines Datensatzes alle Sprachen mit kopiert - bei vorhergehenden MM
-   Versionen war das nicht der Fall; `siehe Issue <https://github.com/MetaModels/core/issues/598#issuecomment-1912422061>`_
+Diese angezeigten Fallback-Inhalte werden aber beim Speichern nicht in der jeweiligen Übersetzungssprache in der DB
+gespeichert - siehe ":ref`component_multi-language_save`".
+
+Werden Inhalte in der Übersetzungssprache angelegt und gespeichert, wechselt der Hinweis bei den entsprechenden
+Eingabefeldern auf |img_translated|.
+
+**Erweiterungen zum Übersetzen:**
+
+Für kontinuierliche Übersetzungen bietet sich die Erweiterung ":ref:`rst_extended_xliff_ex-import`" an. Hiermit
+erfolgt der Austausch über das `XLIFF-Format <https://de.wikipedia.org/wiki/XML_Localization_Interchange_File_Format>`_.
+
+Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wieder importiert - für die
+Übersetzung können entsprechende Agenturen oder Tools eingebunden werden.
+
+Für die Übersetzung im Backend steht die Erweiterung "Translator-Bridge" an, welche verschiedene Übersetzungsprovider
+wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je Eingabefeld erfolgen oder über einen Short-Cut
+für die aktive Eingabemaske.
 
 
 BE-Listenansicht
@@ -220,6 +244,11 @@ Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
 
 Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten korrekt gesetzt -
 :ref:`siehe SEO <rst_cookbook_tips_seo_metadata-hreflang>`.
+
+
+.. |img_locale| image:: /_img/icons/locale.png
+.. |img_fallback| image:: /_img/icons/fallback.png
+.. |img_translated| image:: /_img/icons/translated.png
 
 .. |br| raw:: html
 
