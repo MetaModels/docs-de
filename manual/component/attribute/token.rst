@@ -6,7 +6,7 @@
 Das Attribut "Token" erzeugt beim erstmaligen Speichern eines Datensatzes eine
 kryptographisch zufällige, unveränderliche Zeichenfolge (Token). Typische Einsatzbereiche:
 
-* Eindeutige Bestellnummern oder Vorgangsnummern (z. B. ``TKN-aB3xYq``)
+* Eindeutige Bestellnummern oder Vorgangsnummern (z. B. ``TKN-aB3xYqUK``)
 * Zugangsschlüssel oder Freigabe-Links im Frontend
 * Interne Referenz-IDs, die stabil bleiben müssen
 
