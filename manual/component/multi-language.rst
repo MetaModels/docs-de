@@ -144,13 +144,13 @@ Eingabefeldern auf |img_translated|.
 
 **Erweiterungen zum Übersetzen:**
 
-Für kontinuierliche Übersetzungen bietet sich die Erweiterung :ref:`rst_extended_xliff_ex-import` an. Hiermit
+Für **kontinuierliche Übersetzungen** bietet sich die Erweiterung :ref:`rst_extended_xliff_ex-import` an. Hiermit
 erfolgt der Austausch über das `XLIFF-Format <https://de.wikipedia.org/wiki/XML_Localization_Interchange_File_Format>`_.
 
 Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wieder importiert - für die
 Übersetzung können entsprechende Agenturen oder Tools eingebunden werden.
 
-Für die Übersetzung im Backend steht die Erweiterung :ref:`rst_extended_translator-bridge` zur Verfügung, welche
+Für die **Übersetzung im Backend** steht die Erweiterung :ref:`rst_extended_translator-bridge` zur Verfügung, welche
 verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
 Eingabefeld erfolgen oder über einen Tastenkürzel für die aktive Eingabemaske.
 
