@@ -129,7 +129,7 @@ Sprache als die Fallbacksprache eingestellt ist, wird mit dem Speichern auf die 
 .. warning:: Das Speichern eines Datensatzes bzw. einer Eingabe erfolgt nicht automatisch bei der Umschaltung zu einer
    anderen Sprache - vor dem Umschalten müssen die Eingaben mit "Speichern" gesichert werden!
 
-.. warning:: Die folgenden Anzeigen wurden in MM 2.4 eingebaut bzw. angepasst.
+.. note:: Die folgenden Anzeigen wurden in MM 2.4 eingebaut bzw. angepasst.
 
 Nachdem die Felder in der Fallbacksprache befüllt und gespeichert sind, kann auf eine beliebige andere Sprache
 gewechselt werden. In den mehrsprachigen Feldern ist zunächst Inhalt aus der Fallbacksprache zu sehen. Zusätzlich wird
@@ -150,8 +150,8 @@ erfolgt der Austausch über das `XLIFF-Format <https://de.wikipedia.org/wiki/XML
 Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wieder importiert - für die
 Übersetzung können entsprechende Agenturen oder Tools eingebunden werden.
 
-Für die Übersetzung im Backend steht die Erweiterung ":ref:`rst_extended_translator-bridge`" zur
-Verfügung, welche verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
+Für die Übersetzung im Backend steht die Erweiterung ":ref:`rst_extended_translator-bridge`" zur Verfügung, welche
+verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
 Eingabefeld erfolgen oder über einen Tastenkürzel für die aktive Eingabemaske.
 
 
