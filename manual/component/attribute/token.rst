@@ -50,7 +50,7 @@ Varianten überschreiben) bietet das Token-Attribut folgende spezifische Optione
      - Zeichen, die für die zufällige Generierung verwendet werden. Mögliche
        Eingaben:
 
-       * Einfache Zeichen: ``ABC123`` (jedes Zeichen einzeln)
+       * Einfache Zeichen: ``123ABC`` (jedes Zeichen einzeln)
        * Bereichsangabe in eckigen Klammern: ``[a-z][A-Z][0-9]``
        * Sonderzeichen direkt: ``$%=``
        * Kombiniert: ``[A-F][0-9]`` (Hexadezimal)
@@ -63,6 +63,17 @@ Varianten überschreiben) bietet das Token-Attribut folgende spezifische Optione
      - Optionaler fester Text, der jedem Token vorangestellt wird
        (z. B. ``TKN-`` ergibt ``TKN-aB3xYq``). |br|
        Das Präfix wird nicht zur Tokenlänge hinzugerechnet.
+
+Beispiele für eindeutige Bezeichnungen sind die `Vorgaben bei deutschen Ausweisen und Pässen
+<https://de.wikipedia.org/wiki/Ausweisnummer>`_ mit aktuell den Zeichen ``123456789CFGHJKMNPRTVWXYZ`` und einer Länge
+von 26 Zeichen oder den `Record Locator <https://en.wikipedia.org/wiki/Record_locator>`_ wie man ihn von Flugtickets
+kenn mit sechs Zeichen aus ``23456789ABCDEFGHJKMNPQRSTXYZ`` - auf 0, 1, O, I, L wird zur besseren Lesbarkeit verzichtet.
+
+Die Anzahl der möglichen Kombinationen ``V``ergibt sich aus der Anzahl der möglichen Zeichen ``n`` und der Zeichenlänge
+des Tokens ``k`` - die Formel ist ``V = n**k``.
+
+Bei der Standardeinstellung ``[a-z][A-Z][0-9]`` sind es 62 Zeichen ``n`` und einer Zeichenlänge ``k`` von 8 ergeben
+sich ca. 218 Billionen Kombinationsmöglichkeiten - bei drei Zeichen sind es nur 238.328.
 
 
 Einstellungen bei den Render-Einstellungen

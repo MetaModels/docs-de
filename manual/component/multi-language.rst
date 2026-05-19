@@ -88,8 +88,9 @@ es möglich je Sprache nicht nur eine entsprechende Übersetzung zu liefern, son
 könnte eine Wanderung für englischsprachige Besucher "linksrum" und für deutschsprachige Besucher "rechtsrum" gehen.
 
 Bei einem mehrsprachigen MetaModel stehen bei allen Attributsdefinition für die Felder "Name" und "Beschreibung" je
-Sprache ein Feld zur Verfügung. Diese übersetzten Angaben werden in der Eingabemaske automatisch in der Sprache
-ausgegeben wenn die passende Backendsprache im Benutzerprofil ausgewählt ist.
+Sprache ein Feld zur Verfügung - die Fallback-Sprache ist hervorgehoben dargestellt. Diese übersetzten Angaben werden
+in der Eingabemaske automatisch in der Sprache ausgegeben wenn die passende Backendsprache im Benutzerprofil ausgewählt
+ist.
 
 Zudem kann im :ref:`Template des Renderings <component_templates_fe-list>` über den Knoten ``attributes`` auf
 den übersetzten Wert "Name" zugegriffen werden - es wird automatisch die Sprache der Contao Frontendausgabe oder der
