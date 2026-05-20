@@ -91,6 +91,8 @@ Ein Klick auf die Schaltfläche:
 2. sendet ihn an den Übersetzungsanbieter,
 3. und trägt das übersetzte Ergebnis direkt in das aktuelle Eingabefeld ein.
 
+|translator_01|
+
 Felder mit HTML-Inhalt (z. B. TinyMCE- oder Textarea-Felder mit Tags) werden
 automatisch erkannt und mit dem entsprechenden HTML-Modus übersetzt, sodass
 die Markup-Struktur erhalten bleibt.
@@ -170,6 +172,8 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 (Spenden in Netto)
 
+
+.. |translator_01| image:: /_img/screenshots/extended/translator-bridge/translator_01.png
 
 .. |br| raw:: html
 
