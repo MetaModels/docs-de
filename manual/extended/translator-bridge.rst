@@ -143,6 +143,18 @@ Das Interface verlangt folgende Methoden:
   führt die eigentliche Übersetzung durch
 * ``getSupportedLanguages(): array`` – Liste der unterstützten Zielsprachkürzel
 
+Das Icon des Providers wird über eine CSS-Anweisung in die Eingabemaske eingespielt:
+
+.. code-block:: css
+
+   button.mm-translate[data-provider="myprovider"]::after {
+       background-image: url(../mypath/icons/myprovider.svg);
+   }
+
+   html[data-color-scheme="dark"] button.mm-translate[data-provider="myprovider"]::after {
+       background-image: url(../mypath/icons/myprovider--dark.svg);
+   }
+
 
 Early-Adopter-Programm
 -----------------------
