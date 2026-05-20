@@ -152,7 +152,7 @@ Die Dateien werden über die Erweiterung exportiert und nach der Übersetzung wi
 
 Für die **Übersetzung im Backend** steht die Erweiterung :ref:`rst_extended_translator-bridge` zur Verfügung, welche
 verschiedene Übersetzungsprovider wie `DeepL <https://www.deepl.com>`_ einbindet. Eine Übersetzung kann je
-Eingabefeld erfolgen oder über einen Tastenkürzel für die aktive Eingabemaske.
+Eingabefeld erfolgen oder über einen Tastenkürzel für die aktive Eingabemaske der ausgewählten Sprache.
 
 
 BE-Listenansicht

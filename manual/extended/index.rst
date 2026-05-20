@@ -26,6 +26,7 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     file-usage
     metadata_extractor
     xliff_ex-import
+    translator-bridge
 
 
 weitere bekannte Erweiterungen

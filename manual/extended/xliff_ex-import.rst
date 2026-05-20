@@ -14,6 +14,8 @@ für eine Übersetzung exportiert und wieder importiert werden. Neben den
 normalen Inhalten von Contao werden auch die mehrsprachigen Inhalte von
 MetaModels exportiert bzw. importiert.
 
+Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`.
+
 Als Export wird eine `XLIFF-Datei <https://de.wikipedia.org/wiki/XML_Localization_Interchange_File_Format>`_
 erzeugt, die von gängigen Übersetzungstools eingelesen werden kann. Zum
 Beispiel mit dem Tool `Poedit <https://poedit.net/>`_. In der Zusammenarbeit

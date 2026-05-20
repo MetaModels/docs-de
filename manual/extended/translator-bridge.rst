@@ -1,0 +1,176 @@
+.. _rst_extended_translator-bridge:
+
+Translator-Bridge für MetaModels
+=================================
+
+.. warning:: Die Erweiterung Translator-Bridge ist noch im Fundraising
+   und wird erst nach Erreichen der Zielsumme von aktuell 1.827,50 € frei geschaltet. |br|
+   Eine Vorab-Installation über das "Early-Adopter-Programm" ist möglich –
+   `siehe unten <#early-adopter-programm>`_
+
+
+Mit der Translator-Bridge werden Schaltflächen für maschinelle Übersetzung
+direkt in die Bearbeitungsmaske des Contao-Backends integriert. Per Klick
+überträgt die Erweiterung den Feldinhalt der Fallback-Sprache an den
+konfigurierten Übersetzungsanbieter und trägt das Ergebnis automatisch
+in das gerade bearbeitete Übersetzungsfeld ein.
+
+Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`.
+
+Aktuell wird **DeepL** als Übersetzungsanbieter unterstützt – sowohl die
+kostenfreie Free-Tier-API als auch die Pro-API. Die Erweiterung ist offen
+gestaltet, sodass weitere Anbieter (z. B. ChatGPT, LibreTranslate) als
+eigene Symfony-Services ergänzt werden können –
+`siehe unten <#eigene-ubersetzungsanbieter>`_.
+
+Die Schaltfläche erscheint ausschließlich dann, wenn:
+
+* ein mehrsprachiges MetaModel bearbeitet wird,
+* die aktive Bearbeitungssprache **nicht** die Fallback-Sprache ist und
+* das Attributfeld übersetzbar und nicht schreibgeschützt ist.
+
+
+Voraussetzungen
+---------------
+
+* MetaModels core 2.4
+* Contao 5.3.x
+* Gültiger API-Schlüssel des jeweiligen Übersetzungsanbieters
+  (z. B. DeepL Free oder Pro)
+
+
+Installation per Contao-Manager oder Composer
+---------------------------------------------
+
+.. code-block:: bash
+
+   composer require metamodels/translator-bridge
+
+
+Konfiguration
+-------------
+
+Nach der Installation wird der API-Schlüssel des Übersetzungsanbieters
+in der Symfony-Konfiguration hinterlegt. Dazu legt man im Projektordner
+die Datei ``config/config.yaml`` an oder bearbeitet diese:
+
+.. code-block:: yaml
+
+   meta_models_translator_bridge:
+       deepl_api_key: '%env(DEEPL_API_KEY)%'
+
+Den eigentlichen Schlüssel trägt man in die Datei ``.env.local`` ein
+(nie direkt in die YAML-Datei, damit er nicht ins Repository gelangt):
+
+.. code-block:: bash
+
+   DEEPL_API_KEY=dein-deepl-schluessel-hier
+
+.. note:: Free-Tier-Schlüssel von DeepL enden auf ``:fx`` und nutzen automatisch
+   den kostenlosen API-Endpunkt ``api-free.deepl.com``. Pro-Schlüssel ohne
+   dieses Suffix verwenden ``api.deepl.com``. Die Erweiterung erkennt den
+   Schlüsseltyp selbstständig.
+
+Abschließend den Symfony-Cache leeren:
+
+.. code-block:: bash
+
+   php bin/console cache:clear
+
+
+Verwendung im Backend
+---------------------
+
+Sobald die Erweiterung konfiguriert ist, erscheint neben jedem
+übersetzten Attributfeld eine kleine Schaltfläche mit dem Logo des
+Übersetzungsanbieters (z. B. das DeepL-Logo).
+
+Ein Klick auf die Schaltfläche:
+
+1. liest den Inhalt des Feldes in der Fallback-Sprache aus,
+2. sendet ihn an den Übersetzungsanbieter,
+3. und trägt das übersetzte Ergebnis direkt in das aktuelle Eingabefeld ein.
+
+Felder mit HTML-Inhalt (z. B. TinyMCE- oder Textarea-Felder mit Tags) werden
+automatisch erkannt und mit dem entsprechenden HTML-Modus übersetzt, sodass
+die Markup-Struktur erhalten bleibt.
+
+Das Ergebnis kann vor dem Speichern manuell nachbearbeitet werden –
+die Erweiterung überschreibt niemals automatisch einen bereits gespeicherten
+Wert; sie befüllt nur das Eingabefeld im Browser.
+
+.. tip:: Mit dem Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) werden
+   alle übersetzten Felder der aktuellen Bearbeitungsmaske auf einmal
+   übersetzt – ohne jeden Button einzeln anklicken zu müssen.
+
+
+Unterstützte Attribute
+----------------------
+
+Die Schaltfläche wird für folgende übersetzte Attributtypen eingeblendet:
+
+* :ref:`Übersetzter Text <component_attribute_translatedtext>`
+* :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
+* :ref:`Übersetzter Alias <component_attribute_translatedalias>`
+* :ref:`Übersetzte URL <component_attribute_translatedurl>`
+* :ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`
+* :ref:`Übersetzte Multi-Tabelle (MCW) <component_attribute_translatedtablemulti>`
+
+
+Eigene Übersetzungsanbieter
+---------------------------
+
+Die Erweiterung ist über einen Symfony-Service-Tag erweiterbar. Eigene
+Anbieter implementieren das Interface
+``MetaModels\TranslatorBridge\Api\TranslatorProviderInterface`` und werden
+über den Tag ``metamodels.translator_provider`` registriert:
+
+.. code-block:: yaml
+
+   # config/services.yaml
+   App\Translation\MyProvider:
+       tags:
+           - { name: metamodels.translator_provider }
+
+Das Interface verlangt folgende Methoden:
+
+* ``getIdentifier(): string`` – eindeutiger Bezeichner (z. B. ``'myprovider'``)
+* ``getLabel(): string`` – Anzeigename für die Schaltfläche
+* ``isAvailable(): bool`` – gibt an, ob der Anbieter einsatzbereit ist
+* ``translate(string $text, string $sourceLang, string $targetLang): string`` –
+  führt die eigentliche Übersetzung durch
+* ``getSupportedLanguages(): array`` – Liste der unterstützten Zielsprachkürzel
+
+
+Early-Adopter-Programm
+-----------------------
+
+Das Projekt ist fertiggestellt, aber aktuell noch nicht frei verfügbar.
+Die Refinanzierung erfolgt über ein "Early-Adopter-Programm", d. h. man kann
+die Erweiterung bei Zahlung einer Spende sofort einsetzen. Die Zahlung
+berechtigt zum Einsatz für ein Projekt. Rechtsansprüche jedweder Art sind
+nach Zahlung einer Spende ausgeschlossen.
+
+Die Höhe der Spende sollte mindestens 130€*1 betragen.
+
+Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
+EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
+Bei Interesse oder weiteren Fragen bitte eine E-Mail an info@e-spin.de
+
+*1 Netto – ggf. zzgl. MwSt.
+
+
+Spenden
+-------
+
+Ein Dank für die Spenden* für die Erweiterung an:
+
+* N.N.
+
+
+(Spenden in Netto)
+
+
+.. |br| raw:: html
+
+   <br />
