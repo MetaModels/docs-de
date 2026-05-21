@@ -166,21 +166,33 @@ Filter
 ------
 
 Die meisten Filterregeln suchen in der Sprache, die im Frontend gerade die aktive (Contao-)Sprache ist. Bei einigen
-Filterregeln wie "Einfache Abfrage", "Einzelauswahl", "Mehrfachauswahl", "Textfilter" gibt es die Option
-"Alle Sprachen durchsuchen", sofern ein mehrsprachiges Attribut ausgewählt wurde. Diese Option kann man z. B. bei der
-Detailseite (s. u.) einsetzen.
+Filterregeln wie ":ref:`Einfache Abfrage <component_filter_simplelookup>`",
+":ref:`Einzelauswahl <component_filter_select>`", ":ref:`Mehrfachauswahl <component_filter_tags>`",
+":ref:`Textfilter <component_filter_text>`" gibt es die Option "Alle Sprachen durchsuchen", sofern ein mehrsprachiges
+Attribut ausgewählt wurde. Diese Option kann man z. B. bei der Detailseite (s. u.) einsetzen.
 
-Für das Attribut "Übersetzte Checkbox" gibt es eine eigene Filterregel "Übersetzter Checkbox-Status".
+Für das Attribut ":ref:`Übersetzte Checkbox <component_attribute_translatedcheckbox>`" gibt es eine eigene Filterregel
+":ref:`Übersetzter Checkbox-Status <component_filter_translated-checkbox>`".
 
-Bei der Filterregel "Levenshtein-gestützte Suche" ist es bei der Attributseinstellung "Attribute zum Indexieren" auch
-möglich, mehrsprachige Attribute auszuwählen.
+Bei der Filterregel ":ref:`Levenshtein-gestützte Suche <component_attribute_levenshtein>`" ist es bei der
+Attributseinstellung "Attribute zum Indexieren" auch möglich, mehrsprachige Attribute auszuwählen.
 
 Die Filterregel ":ref:`Loupe-gestützte Volltextsuche <rst_extended_loupe>`" unterstützt aktuell die mehrsprachigen
 Attribute Text und Langtext.
 
 
+.. _component_multi-language_fe-output:
 FE-Liste / Detailansicht
 ------------------------
+
+Im Frontend werden die Inhalte der Attribute analog zu den einsprachigen Attributen in den Templates ausgegeben. Ebenso
+werden die Attributsbezeichnungen übersetzt an das Template geliefert.
+
+.. note:: Ist ein Inhalt nicht übersetzt, wird der Inhalt der Fallbacksprache ausgespielt - das gilt nicht nur für die
+   Attribute mit Texteingaben, sondern auch für Attribute wie übersetzte Datei oder übersetzter Inhalt eines Artikels.
+
+Das bedeutet, wenn z. B. bei der Übersetzungssprache keine eigene, sprachenspezifische Datei ausgewählt, werden alle
+Dateien aus der Fallbacksprache ausgegeben.
 
 Hat man eine Detailseite bei der man üblicher Weise ein Datensatz per Alias anzeigen lassen möchte, soll man mit dem
 Sprachenwechsler zu der Detailseite in einer anderen Sprache wechseln können.
@@ -198,9 +210,9 @@ Zunächst müssen alle Detailseiten der einzelnen Sprachen über die Seiteneigen
 eingetragen werden (alias). Als URL-Parameter darf nicht "auto_item" eingetragen werden, da ChangeLanguage damit nicht
 arbeiten kann.
 
-Zudem wird die Filterregel "Einfache Abfrage" erstellt oder angepasst. Der URL-Parameter darf nicht als "auto_item"
-eingetragen sein und die Option "Alle Sprachen durchsuchen" muss aktiviert sein. Damit kann die Filterung mit allen
-Sprachvarianten erfolgen also mit
+Zudem wird die Filterregel ":ref:`Einfache Abfrage <component_filter_simplelookup>`" erstellt oder angepasst. Der
+URL-Parameter darf nicht als ``auto_item`` eingetragen sein und die Option "Alle Sprachen durchsuchen" muss aktiviert
+sein. Damit kann die Filterung mit allen Sprachvarianten erfolgen also mit
 
 ``https://my-domain.tld/en/dessert/details/alias/marinated-strawberries`` als auch mit |br|
 ``https://my-domain.tld/de/dessert/details/alias/marinated-strawberries`` bzw.
