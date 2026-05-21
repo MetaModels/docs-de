@@ -194,6 +194,9 @@ werden die Attributsbezeichnungen übersetzt an das Template geliefert.
 Das bedeutet, wenn z. B. bei der Übersetzungssprache keine eigene, sprachenspezifische Datei ausgewählt, werden alle
 Dateien aus der Fallbacksprache ausgegeben.
 
+Aus welcher Sprache der Inhalt kommt, kann im ``raw``-Knoten des :ref:`Ausgabearrays <component_templates_fe-list>` im
+Knoten ``langcode`` abgefragt werden.
+
 Hat man eine Detailseite bei der man üblicher Weise ein Datensatz per Alias anzeigen lassen möchte, soll man mit dem
 Sprachenwechsler zu der Detailseite in einer anderen Sprache wechseln können.
 

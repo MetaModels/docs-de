@@ -49,6 +49,25 @@ Für die Suche der verwendeten Dateien wird die Erweiterung "Contao File Usage" 
 :ref:`rst_extended_file-usage`.
 
 
+Mehrsprachigkeit
+----------------
+
+Mit MM 2.4 sind einige Designvorgaben zur Mehrsprachigkeit konsequenter umgesetzt bzw. wurden korrigiert - :ref:`hier
+mehr zum Aufbau der Mehrsprachigkeit in MetaModels <component_multi-language>`
+
+Zu den Anpassungen gehört die strikte Ausgabe der Inhalte der Fallbacksprache, sofern die zu übersetzende Sprache keine
+eigenen Inhalte hat - das gilt z. B. auch für Attribute Datei und Inhalte eines Artikels.
+
+Werden mehrsprachige Datensätze kopiert, werden nun neben der Fallbacksprache auch alle weiteren Sprachen mit kopiert.
+
+Verbessert wurde die Anzeige im Backend welche Sprache die Fallbacksprache ist. Wenn in der Eingabemaske von der
+Fallbacksprache auf die zu übersetzende Sprache wechselt, wird nun bei den Attributen angezeigt, welche Inhalte
+ausgegeben werden - also ob |img_fallback| oder |img_translated|.
+
+Für Übersetzungen ist zum :ref:`XLIFF-Ex-Import <rst_extended_xliff_ex-import>` ein :ref:`Übersetzungstool für DeepL&Co.
+<rst_extended_translator-bridge>` hinzu gekommen.
+
+
 Attribute
 ---------
 
@@ -68,6 +87,7 @@ Attribute
     * Support für Einsatz mit Popup-Widget in einer Kindtabelle
 * Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
+    * Änderung der Templates - Übergabe eines Arrays mit Content-Objekten
 * Kombinierte Werte
     * Option "Immer speichern" (alwaysSave) aktiviert - speichern auch ohne Werteänderung
 * Land
@@ -96,6 +116,7 @@ Attribute
 * Übersetzter Inhalt eines Artikels
     * Support für Einsatz in einer Kindtabelle
     * Spalte ``mm_lang`` auf ``varchar(64)``
+    * Änderung der Templates - Übergabe eines Arrays mit Content-Objekten
 * Übersetzte Kombinierte Werte
     * Option "Immer speichern" (alwaysSave) aktiviert - speichern auch ohne Werteänderung
 * Übersetzter Langtext
@@ -205,6 +226,9 @@ im Blick behalten werden:
 * bei eigenen Abfragen für die Umkreissuche bzw. Ermittlung der Geokoordinaten, bei dem Map-Provider ein
   ``HttpClientInterface`` als Parameter mit übergeben
 * bei Filterregeln die Einstellung "URL-Typ für den Parameter" prüfen und auf Slug ODER GET einstellen
+* neue Templates für Inhalt eines Artikels (auch mehrsprachig) mit Übergabe eines Arrays mit Content-Objekten
+* Ausgabe der Inhalte der Fallbacksprache, wenn keine übersetzten Inhalte vorliegen
+
 
 
 Re-Finanzierung
@@ -215,6 +239,9 @@ Re-Finanzierung
    das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
+
+.. |img_fallback| image:: /_img/icons/fallback.png
+.. |img_translated| image:: /_img/icons/translated.png
 
 .. |br| raw:: html
 
