@@ -137,7 +137,7 @@ bei dem Titel der Hinweis |img_fallback| eingeblendet, solange kein Inhalt gespe
 Fallbackwerten unterscheidet. Damit soll der Status der Übersetzung leichter erkennbar werden.
 
 Diese angezeigten Fallback-Inhalte werden aber beim Speichern nicht in der jeweiligen Übersetzungssprache in der DB
-gespeichert - siehe ":ref`component_multi-language_save`".
+gespeichert - siehe ":ref:`component_multi-language_save`".
 
 Werden Inhalte in der Übersetzungssprache angelegt und gespeichert, wechselt der Hinweis bei den entsprechenden
 Eingabefeldern auf |img_translated|.
