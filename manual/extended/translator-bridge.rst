@@ -114,6 +114,11 @@ Felder mit HTML-Inhalt (z. B. TinyMCE- oder Textarea-Felder mit Tags) werden
 automatisch erkannt und mit dem entsprechenden HTML-Modus übersetzt, sodass
 die Markup-Struktur erhalten bleibt.
 
+Contao-Inserttags (z. B. ``{{link::123}}`` oder ``{{env::request}}``) werden
+vor der Übersetzung automatisch durch interne Platzhalter ersetzt und danach
+wiederhergestellt – sie werden also **nicht** mit übersetzt und bleiben
+unverändert im Ergebnis erhalten.
+
 Das Ergebnis kann vor dem Speichern manuell nachbearbeitet werden –
 die Erweiterung überschreibt niemals automatisch einen bereits gespeicherten
 Wert; sie befüllt nur das Eingabefeld im Browser.
