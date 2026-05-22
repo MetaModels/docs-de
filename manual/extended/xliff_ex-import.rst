@@ -3,18 +3,17 @@
 XLIFF-Ex-Import für MetaModels
 ==============================
 
-.. warning:: Das Tool XLIFF-Ex-Import ist noch im Fundraising 
-   und wird erst nach Erreichen der Zielsumme von z.Z. 5.397,50 € frei
-   geschaltet. |br|
-   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
-
-
 Mit dem Tool XLIFF-Ex-Import können die Inhalte einer Contao-Installation
 für eine Übersetzung exportiert und wieder importiert werden. Neben den
 normalen Inhalten von Contao werden auch die mehrsprachigen Inhalte von
 MetaModels exportiert bzw. importiert.
 
 Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`.
+
+.. note:: Das Tool XLIFF-Ex-Import ist noch im Fundraising 
+   und wird erst nach Erreichen der Zielsumme von z.Z. 5.397,50 € frei
+   geschaltet. |br|
+   Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Als Export wird eine `XLIFF-Datei <https://de.wikipedia.org/wiki/XML_Localization_Interchange_File_Format>`_
 erzeugt, die von gängigen Übersetzungstools eingelesen werden kann. Zum

@@ -3,19 +3,18 @@
 Translator-Bridge für MetaModels
 =================================
 
-.. warning:: Die Erweiterung Translator-Bridge ist noch im Fundraising
-   und wird erst nach Erreichen der Zielsumme von aktuell 1.827,50 € frei geschaltet. |br|
-   Eine Vorab-Installation über das "Early-Adopter-Programm" ist möglich –
-   `siehe unten <#early-adopter-programm>`_
-
-
-Mit der Translator-Bridge werden Schaltflächen für maschinelle Übersetzung
+Mit der Translator-Bridge werden Schaltflächen für maschinelle Übersetzung wie z. B. DeepL
 direkt in die Bearbeitungsmaske des Contao-Backends integriert. Per Klick
 überträgt die Erweiterung den Feldinhalt der Fallback-Sprache an den
 konfigurierten Übersetzungsanbieter und trägt das Ergebnis automatisch
 in das gerade bearbeitete Übersetzungsfeld ein.
 
 Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`.
+
+.. note:: Die Erweiterung Translator-Bridge ist noch im Fundraising und wird erst nach Erreichen der Zielsumme
+   von aktuell 1.827,50 € frei geschaltet. |br|
+   Eine Vorab-Installation über das "Early-Adopter-Programm" ist möglich –
+   `siehe unten <#early-adopter-programm>`_
 
 Aktuell wird **DeepL** als Übersetzungsanbieter unterstützt – sowohl die
 kostenfreie Free-Tier-API als auch die Pro-API. Die Erweiterung ist offen
