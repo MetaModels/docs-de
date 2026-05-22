@@ -58,7 +58,7 @@ die Datei ``config/config.yaml`` an oder bearbeitet diese:
        deepl_api_key: '%env(DEEPL_API_KEY)%'
 
 Den eigentlichen Schlüssel trägt man in die Datei ``.env.local`` ein
-(nie direkt in die YAML-Datei, damit er nicht ins Repository gelangt):
+(nie direkt in die YAML-Datei, damit dieser nicht veröffentlicht wird z. B. über ein Repository):
 
 .. code-block:: bash
 
@@ -68,6 +68,25 @@ Den eigentlichen Schlüssel trägt man in die Datei ``.env.local`` ein
    den kostenlosen API-Endpunkt ``api-free.deepl.com``. Pro-Schlüssel ohne
    dieses Suffix verwenden ``api.deepl.com``. Die Erweiterung erkennt den
    Schlüsseltyp selbstständig.
+
+
+Contao-Inhaltselemente übersetzen
+---------------------------------
+
+Standardmäßig erscheinen Übersetzungsschaltflächen nur in MetaModels-Attributfeldern.
+Für das Attribut *Übersetzter Inhaltsartikel* (``attribute_translatedcontentarticle``)
+werden die Schaltflächen **immer** eingeblendet – das Popup-Fenster des
+Inhaltselements wird dabei automatisch unterstützt, ohne weitere Konfiguration.
+
+Um die Schaltflächen zusätzlich auf allgemeine Contao-Tabellen auszuweiten
+(``tl_content`` mit normalem Artikel-Parent, ``tl_article``, ``tl_page``),
+setzt man den Schalter ``translate_contao``:
+
+.. code-block:: yaml
+
+   meta_models_translator_bridge:
+     deepl_api_key: '%env(DEEPL_API_KEY)%'
+     translate_contao: true   # Standard: false
 
 Abschließend den Symfony-Cache leeren:
 
@@ -104,6 +123,44 @@ Wert; sie befüllt nur das Eingabefeld im Browser.
    übersetzt – ohne jeden Button einzeln anklicken zu müssen.
 
 
+Inhaltselemente im Popup übersetzen
+-----------------------------------
+
+Das Attribut *Übersetzter Inhaltsartikel* öffnet die Inhaltselemente in einem
+Popup-Fenster. Auch dort werden die Übersetzungsschaltflächen automatisch neben
+allen geeigneten Feldern eingeblendet. Die Zielsprache wird dabei direkt aus dem
+``mm_lang``-Feld des Inhaltselements gelesen, die Quellsprache aus der
+Fallback-Sprache des MetaModels.
+
+Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
+``listWizard``. Felder mit Validierungsausdruck (``rgxp``) sowie ACE-Editor-Felder
+werden ausgeschlossen.
+
+
+Fehlermeldungen
+---------------
+
+Schlägt eine Übersetzung fehl, erscheint eine rote Hinweismeldung direkt unterhalb
+des betroffenen Feldes. Sie verschwindet nach 8 Sekunden automatisch oder durch
+einen Klick darauf. Die technische Meldung wird zusätzlich in der Browser-Konsole
+protokolliert.
+
+Typische Ursachen und Meldungen:
+
+.. list-table::
+   :header-rows: 0
+   :widths: 50 50
+
+   * - Kein oder falscher API-Schlüssel
+     - *DeepL: Autorisierung fehlgeschlagen – bitte API-Schlüssel prüfen.*
+   * - Zu viele Anfragen (Rate-Limit)
+     - *DeepL: Zu viele Anfragen – bitte kurz warten.*
+   * - Übersetzungskontingent aufgebraucht
+     - *DeepL: Übersetzungskontingent aufgebraucht.*
+   * - Server nicht erreichbar
+     - *DeepL: Verbindung zum Übersetzungsdienst nicht möglich.*
+
+
 Unterstützte Attribute
 ----------------------
 
@@ -115,6 +172,8 @@ Die Schaltfläche wird für folgende übersetzte Attributtypen eingeblendet:
 * :ref:`Übersetzte URL <component_attribute_translatedurl>`
 * :ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`
 * :ref:`Übersetzte Multi-Tabelle (MCW) <component_attribute_translatedtablemulti>`
+* :ref:`Übersetzter Inhaltsartikel <component_attribute_translatedcontentarticle>`
+  – Schaltflächen erscheinen im Popup-Fenster des Inhaltselements
 
 
 Eigene Übersetzungsanbieter
@@ -138,8 +197,24 @@ Das Interface verlangt folgende Methoden:
 * ``getLabel(): string`` – Anzeigename für die Schaltfläche
 * ``isAvailable(): bool`` – gibt an, ob der Anbieter einsatzbereit ist
 * ``translate(string $text, string $sourceLang, string $targetLang): string`` –
-  führt die eigentliche Übersetzung durch
+  führt die eigentliche Übersetzung durch; im Fehlerfall muss eine
+  ``\RuntimeException`` mit einer **nutzerlesbaren** Meldung geworfen werden
+  (keine rohen HTTP-Exceptions)
 * ``getSupportedLanguages(): array`` – Liste der unterstützten Zielsprachkürzel
+
+
+Reihenfolge bei mehreren Anbietern
+----------------------------------
+
+Sind mehrere Anbieter aktiv, erscheint für jeden eine eigene Schaltfläche je Feld.
+Die Reihenfolge lässt sich über das Attribut ``priority`` steuern –
+ein höherer Wert erscheint weiter links (Standardwert: ``0``):
+
+.. code-block:: yaml
+
+   App\Translation\MyProvider:
+       tags:
+           - { name: metamodels.translator_provider, priority: 10 }
 
 Das Icon des Providers wird über eine CSS-Anweisung in die Eingabemaske eingespielt:
 

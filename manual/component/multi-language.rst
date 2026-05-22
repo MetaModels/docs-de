@@ -230,7 +230,7 @@ sein. Damit kann die Filterung mit allen Sprachvarianten erfolgen also mit
 
 **2. Hook "changelanguageNavigation"**
 
-Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren oder mit "auto_item" als "URL-Parameter" arbeiten,
+Möchte man die Option "Alle Sprachen durchsuchen" nicht aktivieren oder mit ``auto_item`` als "URL-Parameter" arbeiten,
 so kann man bei dem Sprachenwechsler "ChangeLanguage" für jede Sprache der Filterparameter (z. B. Alias) über einen
 Hook passend austauschen - `siehe
 Doku <https://extensions.terminal42.ch/docs/changelanguage/en/developers/#rewriting-an-url-parameter>`_
@@ -247,7 +247,8 @@ Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
        // ...
 
        // Right page?
-       if (!\in_array($targetPageId = $event->getNavigationItem()->getTargetPage()->id, [3, 15, 36], true)) {
+       $listPageIds = [3, 15, 36];
+       if (!\in_array($targetPageId = $event->getNavigationItem()->getTargetPage()->id, $listPageIds, true)) {
            return;
        }
 
