@@ -140,7 +140,9 @@ Diese angezeigten Fallback-Inhalte werden aber beim Speichern nicht in der jewei
 gespeichert - siehe ":ref:`component_multi-language_save`".
 
 Werden Inhalte in der Übersetzungssprache angelegt und gespeichert, wechselt der Hinweis bei den entsprechenden
-Eingabefeldern auf |img_translated|.
+Eingabefeldern auf |img_translated|. Bei einem Eingabefeld sieht das dann z. B. so aus:
+
+|translator_01|
 
 **Erweiterungen zum Übersetzen:**
 
@@ -264,6 +266,7 @@ Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten 
 .. |img_locale| image:: /_img/icons/locale.png
 .. |img_fallback| image:: /_img/icons/fallback.png
 .. |img_translated| image:: /_img/icons/translated.png
+.. |translator_01| image:: /_img/screenshots/extended/translator-bridge/translator_01.png
 
 .. |br| raw:: html
 
