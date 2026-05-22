@@ -94,6 +94,13 @@ Abschließend den Symfony-Cache leeren:
 
    php bin/console cache:clear
 
+.. note:: Die Quellsprache wird automatisch anhand des Contao-Seitenbaums ermittelt:
+   Die Erweiterung liest die Spracheinstellung des als **Fallback-Startpunkt**
+   markierten Wurzelknotens aus und übergibt sie als explizite Quellsprache
+   an den Übersetzungsanbieter.
+   Schaltflächen erscheinen nur in Seiten- oder Artikelbäumen, die **nicht**
+   der Fallback-Baum selbst sind – im Fallback-Baum gibt es nichts zu übersetzen.
+
 
 Verwendung im Backend
 ---------------------
