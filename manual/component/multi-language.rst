@@ -140,7 +140,9 @@ Diese angezeigten Fallback-Inhalte werden aber beim Speichern nicht in der jewei
 gespeichert - siehe ":ref:`component_multi-language_save`".
 
 Werden Inhalte in der Übersetzungssprache angelegt und gespeichert, wechselt der Hinweis bei den entsprechenden
-Eingabefeldern auf |img_translated|. Bei einem Eingabefeld sieht das dann z. B. so aus:
+Eingabefeldern auf |img_translated|.
+
+Ja nach Status bei einem Eingabefeld sieht das dann z. B. so aus:
 
 |translation-hints|
 
