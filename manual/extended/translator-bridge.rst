@@ -72,6 +72,99 @@ Den eigentlichen Schlüssel trägt man in die Datei ``.env.local`` ein
    Schlüsseltyp selbstständig.
 
 
+Verwendung in der Eingabemaske eines Datensatzes
+------------------------------------------------
+
+Sobald die Erweiterung konfiguriert ist, erscheint neben jedem
+übersetzten Attributfeld eine kleine Schaltfläche mit dem Logo des
+Übersetzungsanbieters (z. B. das DeepL-Logo).
+
+Ein Klick auf die Schaltfläche |deepl_icon|:
+
+1. liest den Inhalt des Feldes in der Fallback-Sprache aus,
+2. sendet ihn an den Übersetzungsanbieter,
+3. und trägt das übersetzte Ergebnis direkt in das aktuelle Eingabefeld ein.
+
+|translator_01|
+
+Felder mit HTML-Inhalt (z. B. TinyMCE- oder Textarea-Felder mit Tags) werden
+automatisch erkannt und mit dem entsprechenden HTML-Modus übersetzt, sodass
+die Markup-Struktur erhalten bleibt.
+
+Contao-Inserttags (z. B. ``{{link::123}}`` oder ``{{env::request}}``) werden
+vor der Übersetzung automatisch durch interne Platzhalter ersetzt und danach
+wiederhergestellt – sie werden also **nicht** mit übersetzt und bleiben
+unverändert im Ergebnis erhalten.
+
+Das Ergebnis kann vor dem Speichern manuell nachbearbeitet werden –
+die Erweiterung überschreibt niemals automatisch einen bereits gespeicherten
+Wert; sie befüllt nur das Eingabefeld im Browser.
+
+.. tip:: Mit dem Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) werden
+   alle übersetzten Felder der aktuellen Bearbeitungsmaske auf einmal
+   übersetzt – ohne jeden Button einzeln anklicken zu müssen.
+
+
+Unterstützte Attribute
+----------------------
+
+Die Schaltfläche wird für folgende übersetzte Attributtypen eingeblendet:
+
+* :ref:`Übersetzter Text <component_attribute_translatedtext>`
+* :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
+* :ref:`Übersetzter Alias <component_attribute_translatedalias>`
+* :ref:`Übersetzte URL <component_attribute_translatedurl>`
+* :ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`
+* :ref:`Übersetzte Multi-Tabelle (MCW) <component_attribute_translatedtablemulti>`
+* :ref:`Übersetzter Inhaltsartikel <component_attribute_translatedcontentarticle>`
+  – Schaltflächen erscheinen im Popup-Fenster des Inhaltselements
+
+
+Inhaltselemente im Popup übersetzen
+------------------------------------
+
+Das Attribut *Übersetzter Inhaltsartikel* öffnet die Inhaltselemente in einem
+Popup-Fenster. Auch dort werden die Übersetzungsschaltflächen automatisch neben
+allen geeigneten Feldern eingeblendet. Die Zielsprache wird dabei direkt aus dem
+``mm_lang``-Feld des Inhaltselements gelesen, die Quellsprache aus der
+Fallback-Sprache des MetaModels.
+
+.. note:: das Inhaltselement im Popup muss nach dem Neuanlegen einmal gespeichert werden, damit die Sprachenzuordnung
+   erstellt werden kann. Nach dem Speichern sind auch die Übersetzungsbuttons sichtbar.
+
+Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
+``listWizard``. Dabei gilt:
+
+* Felder mit **technischem Validierungsausdruck** (``rgxp``) werden ausgeschlossen,
+  sofern es sich um nicht-sprachlichen Inhalt handelt – z. B. Datum, E-Mail,
+  Telefon, Zahlen oder Sprachkürzel. Alias-Felder (``rgxp=alias``) erhalten
+  dagegen **immer** eine Schaltfläche.
+* **ACE-Editor-Felder** (``rte=ace|…``) werden nur dann ausgeschlossen, wenn
+  eine Code-Syntax hinterlegt ist (z. B. ``ace|php``, ``ace|css``,
+  ``ace|json``). Die Syntaxen ``ace|html`` und ``ace|markdown`` gelten als
+  übersetzbarer Inhalt – entsprechende Felder (z. B. CE *HTML* oder
+  CE *Markdown*) erhalten ebenfalls eine Schaltfläche.
+
+
+MetaModels-Administration mit mehrsprachigen Eingaben
+-----------------------------------------------------
+
+In der **MetaModels-Verwaltung** – z. B. beim Anlegen oder Bearbeiten von
+Attributen – erscheinen Felder wie *Legende* oder *Beschreibungstext* als
+Mehrsprachentabelle (MultiColumnWizard mit Sprachzeilen). Dort wird die
+Übersetzungsschaltfläche direkt in jeder Nicht-Fallback-Sprachzeile eingebunden.
+
+Ein Klick auf die Schaltfläche in einer Sprachzeile:
+
+1. liest den Wert der **Fallback-Sprachzeile** desselben Feldes,
+2. sendet ihn an den Übersetzungsanbieter,
+3. und trägt das übersetzte Ergebnis in das Eingabefeld der jeweiligen
+   Zielsprachzeile ein – die Fallback-Zeile bleibt unverändert.
+
+.. tip:: Das Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) übersetzt ebenfalls alle Zeilen
+   solcher Mehrsprachentabellen auf der aktuellen Seite auf einmal.
+
+
 Contao-Inhaltselemente übersetzen
 ---------------------------------
 
@@ -104,84 +197,6 @@ Abschließend den Symfony-Cache leeren:
    der Fallback-Baum selbst sind – im Fallback-Baum gibt es nichts zu übersetzen.
 
 
-Verwendung im Backend
----------------------
-
-Sobald die Erweiterung konfiguriert ist, erscheint neben jedem
-übersetzten Attributfeld eine kleine Schaltfläche mit dem Logo des
-Übersetzungsanbieters (z. B. das DeepL-Logo).
-
-Ein Klick auf die Schaltfläche |deepl_icon|:
-
-1. liest den Inhalt des Feldes in der Fallback-Sprache aus,
-2. sendet ihn an den Übersetzungsanbieter,
-3. und trägt das übersetzte Ergebnis direkt in das aktuelle Eingabefeld ein.
-
-|translator_01|
-
-Felder mit HTML-Inhalt (z. B. TinyMCE- oder Textarea-Felder mit Tags) werden
-automatisch erkannt und mit dem entsprechenden HTML-Modus übersetzt, sodass
-die Markup-Struktur erhalten bleibt.
-
-Contao-Inserttags (z. B. ``{{link::123}}`` oder ``{{env::request}}``) werden
-vor der Übersetzung automatisch durch interne Platzhalter ersetzt und danach
-wiederhergestellt – sie werden also **nicht** mit übersetzt und bleiben
-unverändert im Ergebnis erhalten.
-
-Das Ergebnis kann vor dem Speichern manuell nachbearbeitet werden –
-die Erweiterung überschreibt niemals automatisch einen bereits gespeicherten
-Wert; sie befüllt nur das Eingabefeld im Browser.
-
-.. tip:: Mit dem Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) werden
-   alle übersetzten Felder der aktuellen Bearbeitungsmaske auf einmal
-   übersetzt – ohne jeden Button einzeln anklicken zu müssen.
-
-
-MetaModels-Administration mit mehrsprachigen Eingaben
------------------------------------------------------
-
-In der **MetaModels-Verwaltung** – z. B. beim Anlegen oder Bearbeiten von
-Attributen – erscheinen Felder wie *Legende* oder *Beschreibungstext* als
-Mehrsprachentabelle (MultiColumnWizard mit Sprachzeilen). Dort wird die
-Übersetzungsschaltfläche direkt in jeder Nicht-Fallback-Sprachzeile eingebunden.
-
-Ein Klick auf die Schaltfläche in einer Sprachzeile:
-
-1. liest den Wert der **Fallback-Sprachzeile** desselben Feldes,
-2. sendet ihn an den Übersetzungsanbieter,
-3. und trägt das übersetzte Ergebnis in das Eingabefeld der jeweiligen
-   Zielsprachzeile ein – die Fallback-Zeile bleibt unverändert.
-
-.. tip:: Das Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) übersetzt ebenfalls alle Zeilen
-   solcher Mehrsprachentabellen auf der aktuellen Seite auf einmal.
-
-
-Inhaltselemente im Popup übersetzen
-------------------------------------
-
-Das Attribut *Übersetzter Inhaltsartikel* öffnet die Inhaltselemente in einem
-Popup-Fenster. Auch dort werden die Übersetzungsschaltflächen automatisch neben
-allen geeigneten Feldern eingeblendet. Die Zielsprache wird dabei direkt aus dem
-``mm_lang``-Feld des Inhaltselements gelesen, die Quellsprache aus der
-Fallback-Sprache des MetaModels.
-
-.. note:: das Inhaltselement im Popup muss nach dem Neuanlegen einmal gespeichert werden, damit die Sprachenzuordnung
-   erstellt werden kann. Nach dem Speichern sind auch die Übersetzungsbuttons sichtbar.
-
-Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
-``listWizard``. Dabei gilt:
-
-* Felder mit **technischem Validierungsausdruck** (``rgxp``) werden ausgeschlossen,
-  sofern es sich um nicht-sprachlichen Inhalt handelt – z. B. Datum, E-Mail,
-  Telefon, Zahlen oder Sprachkürzel. Alias-Felder (``rgxp=alias``) erhalten
-  dagegen **immer** eine Schaltfläche.
-* **ACE-Editor-Felder** (``rte=ace|…``) werden nur dann ausgeschlossen, wenn
-  eine Code-Syntax hinterlegt ist (z. B. ``ace|php``, ``ace|css``,
-  ``ace|json``). Die Syntaxen ``ace|html`` und ``ace|markdown`` gelten als
-  übersetzbarer Inhalt – entsprechende Felder (z. B. CE *HTML* oder
-  CE *Markdown*) erhalten ebenfalls eine Schaltfläche.
-
-
 Fehlermeldungen
 ---------------
 
@@ -204,21 +219,6 @@ Typische Ursachen und Meldungen:
      - *DeepL: Übersetzungskontingent aufgebraucht.*
    * - Server nicht erreichbar
      - *DeepL: Verbindung zum Übersetzungsdienst nicht möglich.*
-
-
-Unterstützte Attribute
-----------------------
-
-Die Schaltfläche wird für folgende übersetzte Attributtypen eingeblendet:
-
-* :ref:`Übersetzter Text <component_attribute_translatedtext>`
-* :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
-* :ref:`Übersetzter Alias <component_attribute_translatedalias>`
-* :ref:`Übersetzte URL <component_attribute_translatedurl>`
-* :ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`
-* :ref:`Übersetzte Multi-Tabelle (MCW) <component_attribute_translatedtablemulti>`
-* :ref:`Übersetzter Inhaltsartikel <component_attribute_translatedcontentarticle>`
-  – Schaltflächen erscheinen im Popup-Fenster des Inhaltselements
 
 
 Eigene Übersetzungsanbieter
