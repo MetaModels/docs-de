@@ -161,6 +161,8 @@ Ein Klick auf die Schaltfläche in einer Sprachzeile:
 3. und trägt das übersetzte Ergebnis in das Eingabefeld der jeweiligen
    Zielsprachzeile ein – die Fallback-Zeile bleibt unverändert.
 
+|translation-attributes|
+
 .. tip:: Das Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) übersetzt ebenfalls alle Zeilen
    solcher Mehrsprachentabellen auf der aktuellen Seite auf einmal.
 
@@ -307,6 +309,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
    :height: 16px
 
 .. |translator_01| image:: /_img/screenshots/extended/translator-bridge/translator_01.png
+.. |translation-attributes| image:: /_img/screenshots/extended/translator-bridge/translation-attributes.png
 
 .. |br| raw:: html
 
