@@ -135,8 +135,27 @@ Wert; sie befüllt nur das Eingabefeld im Browser.
    übersetzt – ohne jeden Button einzeln anklicken zu müssen.
 
 
+MetaModels-Administration mit mehrsprachigen Eingaben
+-----------------------------------------------------
+
+In der **MetaModels-Verwaltung** – z. B. beim Anlegen oder Bearbeiten von
+Attributen – erscheinen Felder wie *Legende* oder *Beschreibungstext* als
+Mehrsprachentabelle (MultiColumnWizard mit Sprachzeilen). Dort wird die
+Übersetzungsschaltfläche direkt in jeder Nicht-Fallback-Sprachzeile eingebunden.
+
+Ein Klick auf die Schaltfläche in einer Sprachzeile:
+
+1. liest den Wert der **Fallback-Sprachzeile** desselben Feldes,
+2. sendet ihn an den Übersetzungsanbieter,
+3. und trägt das übersetzte Ergebnis in das Eingabefeld der jeweiligen
+   Zielsprachzeile ein – die Fallback-Zeile bleibt unverändert.
+
+.. tip:: Das Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) übersetzt ebenfalls alle Zeilen
+   solcher Mehrsprachentabellen auf der aktuellen Seite auf einmal.
+
+
 Inhaltselemente im Popup übersetzen
------------------------------------
+------------------------------------
 
 Das Attribut *Übersetzter Inhaltsartikel* öffnet die Inhaltselemente in einem
 Popup-Fenster. Auch dort werden die Übersetzungsschaltflächen automatisch neben
@@ -145,8 +164,17 @@ allen geeigneten Feldern eingeblendet. Die Zielsprache wird dabei direkt aus dem
 Fallback-Sprache des MetaModels.
 
 Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
-``listWizard``. Felder mit Validierungsausdruck (``rgxp``) sowie ACE-Editor-Felder
-werden ausgeschlossen.
+``listWizard``. Dabei gilt:
+
+* Felder mit **technischem Validierungsausdruck** (``rgxp``) werden ausgeschlossen,
+  sofern es sich um nicht-sprachlichen Inhalt handelt – z. B. Datum, E-Mail,
+  Telefon, Zahlen oder Sprachkürzel. Alias-Felder (``rgxp=alias``) erhalten
+  dagegen **immer** eine Schaltfläche.
+* **ACE-Editor-Felder** (``rte=ace|…``) werden nur dann ausgeschlossen, wenn
+  eine Code-Syntax hinterlegt ist (z. B. ``ace|php``, ``ace|css``,
+  ``ace|json``). Die Syntaxen ``ace|html`` und ``ace|markdown`` gelten als
+  übersetzbarer Inhalt – entsprechende Felder (z. B. CE *HTML* oder
+  CE *Markdown*) erhalten ebenfalls eine Schaltfläche.
 
 
 Fehlermeldungen
