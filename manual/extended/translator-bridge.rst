@@ -154,7 +154,7 @@ Attributen – erscheinen Felder wie *Legende* oder *Beschreibungstext* als
 Mehrsprachentabelle (MultiColumnWizard mit Sprachzeilen). Dort wird die
 Übersetzungsschaltfläche direkt in jeder Nicht-Fallback-Sprachzeile eingebunden.
 
-Ein Klick auf die Schaltfläche in einer Sprachzeile:
+Ein Klick auf die Schaltfläche |deepl_icon| in einer Sprachzeile:
 
 1. liest den Wert der **Fallback-Sprachzeile** desselben Feldes,
 2. sendet ihn an den Übersetzungsanbieter,
