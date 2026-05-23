@@ -112,7 +112,7 @@ Factory Interface:
 ..................
 
 Mit dem Factory Interface können Instanzen eines MetaModel erstellt und bestimmte
-Eigenschafen abgefragt werden.
+Eigenschaften abgefragt werden.
 
 Die Erstellung eines neuen MetaModel ist nicht vorgesehen - wenn auch möglich - da
 für die Erstellung sehr komplexe Parameter mit übergeben werden müssten und die 
@@ -249,7 +249,7 @@ gibt die Instanz des Attributes mit der gegebenen Attribut-ID zurück
 
 ``findById($id, $attrOnly = [])``  |br|
 gibt das Item mit der gegebenen ID zurück; optional kann ein Array mit 
-Attributnamen angegben werden, deren Werte zurück zu gegeben werden sollen
+Attributnamen angegeben werden, deren Werte zurückgegeben werden sollen
 
 ``getEmptyFilter()``  |br|
 erzeugt ein "leeres" Filterobjekt ohne Filterregeln
@@ -290,7 +290,7 @@ und Sortierrichtung können angegeben werden
 gibt die Anzahl der Items zurück, die nach einem gegebenen Filter ermittelt werden
 
 ``findVariantBase($filter)``  |br|
-gibt alle Items einer Varianten-Basis zürück, die nach einem gegebenen Filter ermittelt werden
+gibt alle Items einer Varianten-Basis zurück, die nach einem gegebenen Filter ermittelt werden
 
 ``findVariants($ids, $filter)``  |br|
 gibt alle Varianten-Items eines Arrays mit IDs und einem gegebenen Filter zurück

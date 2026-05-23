@@ -111,7 +111,7 @@ Wird bei der Datenübergabe im Frontendfilter neben der Adresse auch die konkret
 Koordinaten übergeben - z. B. mit einer GPS-Bestimmung per JavaScript - sollte bei
 den LookUp-Services die Auswahl Koordinaten an erster Stelle stehen.
 
-Die Auflösung einer Adresse zu Längen- und Breitengerad bei der Eingabe im Backend
+Die Auflösung einer Adresse zu Längen- und Breitengrad bei der Eingabe im Backend
 ist auch über den LookUp-Service realisierbar -
 `siehe Vortrag zur CK23 <https://www.e-spin.de/contao-metamodels/metamodels-vortrag-contao-konferenz-2023.html>`_
 

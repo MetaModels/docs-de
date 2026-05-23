@@ -140,7 +140,7 @@ Filter
 
 Alle Filterregeln, die eine URL erzeugen haben eine neue Einstellung ("URL-Typ für den Parameter") ob die Parameter
 als Slug- oder als GET-Parameter in der URL erscheinen sollen. Aus Gründen der Rückwärtskompatibilität ist die
-Einstellung nach einem Upgrade "Slug oder GET" - diese Einstellung ist deprechated und sollte für jede entsprechende
+Einstellung nach einem Upgrade "Slug oder GET" - diese Einstellung ist deprecated und sollte für jede entsprechende
 Filterregel entweder auf Slug ODER auf GET eingestellt werden. Mehr dazu bei den
 :ref:`SEO-Tipps <rst_cookbook_tips_seo_filter-url>`
 

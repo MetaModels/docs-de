@@ -8,7 +8,7 @@ in einer Eingabemaske, so kann das über den folgenden Event-Listener
 eingebaut werden.
 
 Um diesen einzubauen bzw. für das Feld in der Eingabemaske zu aktivieren,
-muss die Prüfung mit "Contao-Boardmitteln" zunächst zur Verfügung stehen.
+muss die Prüfung mit "Contao-Bordmitteln" zunächst zur Verfügung stehen.
 
 Dafür wird der Hook "addCustomRegex" wie folgt angelegt - siehe
 `API: addCustomRegex <https://docs.contao.org/books/api/extensions/hooks/addCustomRegexp.html>`_

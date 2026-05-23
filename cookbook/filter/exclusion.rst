@@ -1,6 +1,6 @@
 .. _rst_cookbook_filter_exclusion:
 
-Filterregel als Ausschluß
+Filterregel als Ausschluss
 =========================
 
 Möchte man einen Filter erstellen welcher das Attribut nicht "eingrenzt"

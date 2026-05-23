@@ -3,7 +3,7 @@
 Arbeitsablauf bei MetaModels
 ============================
 
-Der Arbeitsablauf zum Abbilden der eigenen Datenstruktur in Metamodels untergliedert sich in einzelne Arbeitsschritte,
+Der Arbeitsablauf zum Abbilden der eigenen Datenstruktur in MetaModels untergliedert sich in einzelne Arbeitsschritte,
 die nacheinander für jedes MetaModel durchgeführt werden müssen. Die folgende Beschreibung richtet sich an Einsteiger
 in MetaModels, die aufgrund einer "best practice" erstellt wurde - versierte Benutzer werden bestimmte Schritte weiter
 zusammenfassen und gleich ergänzen.
@@ -23,7 +23,7 @@ sowohl bei der Erstellung als auch bei der Dokumentation.
 In MetaModels stehen neben den klassischen Relationen wie Einfach- (1:n) oder Mehrfachverknüpfung (m:n) auch weitere
 Optionen zur Verfügung - mehr dazu in dem Artikel :ref:`component_relations`.
 
-Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gib aber auch diverse Tools wie z. B.
+Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gibt aber auch diverse Tools wie z. B.
 `yEd <https://www.yworks.com/products/yed>`_ oder die Online-Variante `yEd live <https://www.yworks.com/yed-live/>`_.
 
 Als Beispiel eine Struktur für Mitarbeiter inkl. Verknüpfungen zu Abteilung und Projekten sowie eine Eigenreferenz
@@ -55,7 +55,7 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
     * bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
 * 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
     * Grundeinstellung für Eingabemaske
-* 4.b: |img_dca_setting| :ref:`Attribute in für Eingabemaske anlegen <component_dca>`
+* 4.b: |img_dca_setting| :ref:`Attribute für Eingabemaske anlegen <component_dca>`
     * bestimmt, welche Attribute in der jeweiligen Eingabemaske für eine Ansicht zur Verfügung stehen
 * 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
     * angelegte Render-Einstellung und Eingabemaske auswählen und speichern

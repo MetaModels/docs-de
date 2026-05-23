@@ -4,7 +4,7 @@ MetaModels "Kochbuch"
 =====================
 
 In dem MetaModels "Kochbuch" sind verschiedene Snippets, Tipps und
-Tricks rund um den Einsatz mit Metamodels zusammengefasst.
+Tricks rund um den Einsatz mit MetaModels zusammengefasst.
 
 In die Auflistung können gern interessante oder ungewöhnliche Lösungen
 aufgenommen werden - bitte eigene "Rezepte" oder Links zum Forum bzw.

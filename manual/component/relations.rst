@@ -3,7 +3,7 @@
 Relationen in MetaModels
 ========================
 
-Eines der Hauptaufgaben bei MM ist es, über einen geeigneten Aufbau der Models eine passende Datenstruktur zu erstellen.
+Eine der Hauptaufgaben bei MM ist es, über einen geeigneten Aufbau der Models eine passende Datenstruktur zu erstellen.
 Dazu gehört die Aufteilung gleichartiger Werte in separate Models und eine Relation (Verknüpfung) zwischen den Models
 herzustellen. Üblicher Weise spricht man dann von einer
 `Normalisierung <https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)>`_ bei relationalen Datenbanken.
@@ -32,10 +32,10 @@ Planung nachträgliche Änderungen vermeiden.
 Es ist zu empfehlen, dass die Struktur der MetaModels und deren Verknüpfungen grafisch festgehalten wird. Das hilft sowohl
 bei der Erstellung als auch bei der Dokumentation.
 
-Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gib aber auch diverse Tools wie z. B.
+Im einfachsten Fall kann man das Schema mit Papier und Stift aufzeichnen - es gibt aber auch diverse Tools wie z. B.
 `yEd <https://www.yworks.com/products/yed>`_ oder die Online-Variante `yEd live <https://www.yworks.com/yed-live/>`_.
 
-Als Beispiel eine Struktur für Mitarbeiten inkl. Verknüpfungen zu Abteilung und Projekten sowie eine Eigenreferenz
+Als Beispiel eine Struktur für Mitarbeiter inkl. Verknüpfungen zu Abteilung und Projekten sowie eine Eigenreferenz
 für eine Urlaubsvertretung:
 
 |img_db-schema_01|
@@ -48,7 +48,7 @@ Standard-Relationen
 Zu den Standard-Relationen einer relationalen Datenbank gehören Einfach- und Mehrfachverknüpfungen. Dafür gibt es in
 MM entsprechende Attribute, welche man in seinem Basismodel einbindet.
 
-Man kann damit sowohl Verknüpfung zu MM-Tabellen als auch zu allen anderen Tabellen von Contao wie zum Beispiel zur den
+Man kann damit sowohl Verknüpfungen zu MM-Tabellen als auch zu allen anderen Tabellen von Contao wie zum Beispiel zu den
 Mitgliedern (tl_member) oder Seiten (tl_pages) erstellen. Bei Verknüpfungen zu einem MM-Model kann das auch mehrsprachig
 sein - MM kümmert sich um die passenden Übersetzungen.
 
@@ -69,7 +69,7 @@ Zur einfachen Übernahme des "Array-Pfades" kann man sich eine Ausgabe über den
 
 Im Backend können die Auswahlen der beiden Standard-Relationen Einzel- bzw. Mehrfachauswahl über Filter eingegrenzt
 werden - zum Beispiel wenn man in der Eingabemaske eines Mitarbeiters die Urlaubsvertretung auswählen möchte und in
-der Liste alle Mitarbeite aufgelistet sind. Die Auswahl könnte man eingrenzen auf Mitarbeiter der eigenen Abteilung und
+der Liste alle Mitarbeiter aufgelistet sind. Die Auswahl könnte man eingrenzen auf Mitarbeiter der eigenen Abteilung und
 sich selbst ausschließen. Ein weiteres Beispiel sind abhängige Relationen wie ein Select auf Land und ein weiteres auf
 Bundesland, wobei dann bei den Bundesländern nur noch die zugehörigen Datensätze angezeigt werden sollen.
 
@@ -168,7 +168,7 @@ nach Mitarbeitern aus Abteilung Vertrieb".
 Wird ein Elterndatensatz gelöscht, so werden nicht automatisch auch die Kinddatensätze mit gelöscht. Möchte man dieses
 Verhalten, so kann man das einstellen - siehe :ref:`rst_cookbook_tips_delete_child_items`.
 
-Ebenso gibt es keinen Automatismus, dass die Kinddatensätze mit kopiert werden, wenn Elterdatensätze kopiert werden. Möchte
+Ebenso gibt es keinen Automatismus, dass die Kinddatensätze mit kopiert werden, wenn Elterndatensätze kopiert werden. Möchte
 man dieses Verhalten, so kann man das z. B. mit dem PostDuplicateModelEvent des DC_G erreichen - siehe
 `"MM DeepCopy Feature" <https://github.com/w3scout/mm-deepcopy-eventlistener>`_.
 
@@ -183,7 +183,7 @@ Der Aufbau mit Varianten ist dann anzuwenden, wenn es zu einem Datensatz bei ein
 Abweichungen/Variationen gibt. Das könnten zum Beispiel ein Produktkatalog sein, in dem es einzelne Produkte in
 unterschiedlichen oder abweichenden Farben oder Materialien gibt aber die meisten Attribute identisch bleiben.
 
-Um Varianten für ein Model zu aktivieren, muss man die die entsprechende Checkbox bei dem Model setzen. Anschließend
+Um Varianten für ein Model zu aktivieren, muss man die entsprechende Checkbox bei dem Model setzen. Anschließend
 ist bei den Attributen die Checkbox "Variant" aktiv und kann gesetzt werden. Für alle Attribute die variant/variable
 sein sollen, ist die Checkbox zu setzen - in dem Beispiel oben die Farbe und/oder Material.
 
@@ -220,7 +220,7 @@ Die Relation in der hierarchischen Struktur wird klassisch über ``id`` ``pid`` 
 Ebene bei ``pid`` die jeweilige ``id`` der übergeordneten Ebene enthält.
 
 Wird ein Model mit Hierarchie von einem anderen Model über eine Relation eingebunden (Einzel- oder Mehrfachauswahl),
-so spiegelt sich die Hierarchie nicht im Aufbau der Selectauswahl oder Checkboxliste wieder.
+so spiegelt sich die Hierarchie nicht im Aufbau der Selectauswahl oder Checkboxliste wider.
 
 Models mit einer Hierarchie / Baumstruktur können (aktuell) nicht als Kind-Tabelle eingesetzt werden, da die ``pid``
 als Relation zum Elterndatensatz verwendet wird.

@@ -19,7 +19,7 @@ die folgenden Schritte abarbeiten:
 * das Template umbenennen in "mm_attr_text_email.html5"
 * in das neue Template den Quelltext |br|
   ``<span class="text<?= $this->additional_class ?>">{{email::<?= $this->raw ?>}}</span>``
-* in den Render-Einstellungen des entsprechenden Textattibutes das neue Template "mm_attr_text_email" auswählen
+* in den Render-Einstellungen des entsprechenden Textattributes das neue Template "mm_attr_text_email" auswählen
 
 |img_encrypt-email|
 

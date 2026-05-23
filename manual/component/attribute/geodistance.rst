@@ -86,7 +86,7 @@ aufgeteilt sind:
        * **Google Maps** – Adressauflösung über die Google Maps API
        * **OpenStreetMap** – Adressauflösung über die Nominatim-API
 
-       Für dienste, die einen API-Token benötigen, kann dieser im Feld
+       Für Dienste, die einen API-Token benötigen, kann dieser im Feld
        "API Token" eingetragen werden.
 
 

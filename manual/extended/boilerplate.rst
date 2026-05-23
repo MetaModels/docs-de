@@ -15,7 +15,7 @@ sowie an die vorhandenen MetaModel angepasst werden. Als
 Vorlagen sind die folgenden Punkte vorbereitet:
 
 * eigener Navigationspunkt für das Backend (aktiv)
-* Vorlage für eienen Contao-Hook (inaktiv)
+* Vorlage für einen Contao-Hook (inaktiv)
 * Vorlage für einen (MM/DCG) Event (inaktiv)
 * Vorlage für Standardvorgaben der Eingabemaske (inaktiv)
 
@@ -71,7 +71,7 @@ ist der folgende Eintrag abzuändern:
    $GLOBALS['TL_LANG']['MOD']['metamodelsboilerplate'] = 'Mitarbeiter';
 
 Die Position der neuen Navigationsgruppe wird in der Datei "config.php" im 
-Ornder "/config" bestimmt. Mit dem folgenden Code
+Ordner "/config" bestimmt. Mit dem folgenden Code
 
 .. code-block:: php
    :linenos:

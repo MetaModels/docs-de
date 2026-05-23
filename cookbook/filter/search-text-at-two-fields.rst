@@ -6,7 +6,7 @@ Textsuche über zwei Felder
 Möchte man eine Textsuche über zwei (oder mehr) Felder einbauen, gibt 
 es die Möglichkeit, spezielle Filter wie `metamodelsfilter_textcombine
 <https://github.com/cogizz/metamodelsfilter_textcombine>`_
-einzusetzen oder dies mit "Boardmitteln" zu lösen.
+einzusetzen oder dies mit "Bordmitteln" zu lösen.
  
 Für die Lösung mit "Boardmitteln" müssen folgende Schritte als Filterregeln
 angelegt werden:

@@ -7,7 +7,7 @@ Die Eingabefelder der Eingabemasken können mit Standardwerten automatisch vorbe
 Eingabemasken erleichtert werden, wenn ein Datensatz neu angelegt wird.
 
 Über den `BuildDataDefinitionEvent <https://github.com/contao-community-alliance/dc-general/blob/efe5e2de934946e1d51df56797b18d74b1683d12/src/Factory/Event/BuildDataDefinitionEvent.php>`_
-des DCG kann der Deafultwert gesetzt werden - folgend ein Beispiel für einen entsprechenden EventListener um bei dem
+des DCG kann der Defaultwert gesetzt werden - folgend ein Beispiel für einen entsprechenden EventListener um bei dem
 Model ``mm_employees`` das Attribut ``name`` mit "Moin" vorzubelegen.
 
 .. code-block:: php

@@ -408,7 +408,7 @@ Inhaltselement, sondern das Kartenelement holt sich die Daten über einen eigene
 von den Filterdaten aus der URL aber nichts mit.
 
 Daher muss aktuell diesem Aufruf die Filterparameter mit auf den Weg gegeben werden. Je nach Finanzierung der Erweiterung
-kännte man auch allgemeingültige Aufrufe versuchen - bis dahin muss man selbständig die Parameter über ``map-uri``
+könnte man auch allgemeingültige Aufrufe versuchen - bis dahin muss man selbständig die Parameter über ``map-uri``
 übergeben.
 
 Für die Übergabe kann das Template des Cowegis-Content-Elements wie folgt angepasst werden:

@@ -6,7 +6,7 @@ DcGeneral\DataDefinition Interfaces
 .. warning:: Noch im Aufbau!
 
 Die DataDefinition Interfaces setzen Werte zur Definition eines
-Metamodel oder fragt diese Eigenschaft ab.
+MetaModel oder fragt diese Eigenschaft ab.
 
 
 .. _ref_api_interf_dcgeneral_imetamodeldatadefinition:

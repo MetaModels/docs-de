@@ -26,7 +26,7 @@ Die Installationsvoraussetzungen für MetaModels 2.2 sind:
 Höhere Versionen von Contao können möglich sein, werden aber nicht offiziell supportet.
 
 * kompatibel zum `strict mode` von MySQL und MariaDB; alle Queries auf queryBuilder umgeschrieben und bei den
-  Abfragen einen Tabellenpräfix eingefügt - damit fällt die prüfung auf die von MySQL-Reservierten Wörter weg
+  Abfragen einen Tabellenpräfix eingefügt - damit fällt die Prüfung auf die von MySQL-Reservierten Wörter weg
 * verschiedene Optimierungen für eine schnellere Anzeige von Daten
 * Backend von MM "aufgeräumt" und typische Einstellungen als Default gesetzt (ca. 30% weniger Klicks beim Erstellen)
 * alle Repos sind auf Github-Actions für eine automatische Codeprüfung umgestellt
@@ -40,7 +40,7 @@ Höhere Versionen von Contao können möglich sein, werden aber nicht offiziell 
 * Entfernung der nicht mehr von Contao unterstützten xhtml-Templatedateien; in der Migration kommt ein Hinweis,
   wenn alte von Contao nicht mehr unterstützte xhtml-Templatedateien von MM gefunden werden - automatisch können
   diese leider nicht angepasst werden.
-* In Liste der Attributen Suche und Filterung nach Name bzw. Typ
+* In der Liste der Attribute Suche und Filterung nach Name bzw. Typ
 * In Einstellung Eingabemaske (fehlerhafte) DCA-Popups entfernt - dafür Helper-Popup ("Verkehrszeichen")
 * Unterstützung des Cachings (ESI-Tags)
 * Verbesserte Anzeige bei Auswahl von Attributen - nun im Schema 'Attribut-Name [Typ, "Spaltenname"]'
@@ -120,7 +120,7 @@ Attribute
       werden soll, damit z. B. die Zeit ohne eine Tagesangabe bzw. ein Datum ohne Zeitergänzung gespeichert werden
       soll - das kann für eine korrekte Filterung nach Zeit oder Datum wichtig sein
 * Einzelauswahl [select]
-    * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
+    * Mit dem neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
     * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
@@ -141,7 +141,7 @@ Attribute
       kann aber auch per Checkbox abgeschaltet werden - zusätzlich kann aktiviert werden, dass bei Klick auf ein
       Autosubmit-Eintrag das Formular abgesendet wird
 * Mehrfachauswahl [tags]
-    * Mit dem neuen neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
+    * Mit dem neuen Interface ITranslatedMetaModel kann bei den Einstellungen des Attributs bei Alias nun
       ein translated Alias verwendet werden - bisher musste das ein Attribut mit "unique" Werten sein
     * mit Umstellung auf Interface ITranslatedMetaModel erwartet die API bei Methode `widgetToValue` den Datenwert
       der beim Attribut bei Alias ausgewählt wurde - bisher fix auf `id`
@@ -200,9 +200,9 @@ Filter
       "true" wenn das Widget benutzt wird
     * die Zählerausgabe bei den Widgets im FE-Filter nicht mehr unterstützt - die Templates wurden entsprechend angepasst.
       `Erklärung siehe Github <https://github.com/MetaModels/core/issues/312#issuecomment-686963070>`_
-    * Beim CE/Modul MM-Filter kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an
+    * Beim CE/Modul MM-Filter kann nun ein URL-Fragment angegeben werden - damit springt nach dem Reload die Seite an
       den Ankerpunkt (bei eigenen Templates als Linkliste diese ggf. anpassen)
-    * Beim CE/Modul MM-Filterreset kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite
+    * Beim CE/Modul MM-Filterreset kann nun ein URL-Fragment angegeben werden - damit springt nach dem Reload die Seite
       an den Ankerpunkt
     * Die Templates für die Ausgabe der Filterwidgets wurden für eine sauberes Markup umgebaut - `siehe Github-Issue <https://github.com/MetaModels/core/issues/374>`_
       - ggf. eigene Templates anpassen
@@ -297,7 +297,7 @@ oder nur sehr schwer abzufangen sind. Aus dem Grund sollten bei der Umstellungen
 im Blick behalten werden:
 
 * eigene Programmierungen sollten dahingehend geprüft werden ob die Methode "widgetToValue" bei Attribut Select und
-  Tags den Wert für "Alias" bekommt, wie es bei der Attributseinstelltung ausgewählt wurde - z.B. bei der Verarbeitung
+  Tags den Wert für "Alias" bekommt, wie es bei der Attributseinstellung ausgewählt wurde - z.B. bei der Verarbeitung
   Formulardaten; bisher wurde immer eine ID erwartet
 * bei der Paginierung ist der GET-Parameter nicht mehr nur "page" sondern es wird ein für jede Paginierung eindeutigen
   Key ausgegeben - wer möchte, kann das über die neuen Einstellungen der Paginierung überschreiben
@@ -310,7 +310,7 @@ im Blick behalten werden:
   Filterregel gesetzt werden
 * bei Attribut Select und Tags eingestellte Filter gelten nun auch für die FE-Ausgabe; sind diese nur für eine Filterung
   der Eingabemaske zuständig, muss ggf. das Query angepasst werden - `siehe hier <https://metamodels.readthedocs.io/de/latest/cookbook/filter/custom-sql.html#filterunterscheidung-von-frontend-und-backend>`_
-* die JavaScript-Unterstützung ist nun im Core, den Attributen und Filtern auf "Vanilla-Script" umgestellt - Abhängikeiten
+* die JavaScript-Unterstützung ist nun im Core, den Attributen und Filtern auf "Vanilla-Script" umgestellt - Abhängigkeiten
   zu jQuery oder Mootools sind damit entfallen. Bitte eigene Scripte ggf. anpassen.
 * bei den Attributen Select und Tags kann - wenn die Relation auf eine nicht-MM-Tabelle geht - eine WHERE-Einschränkung
   angegeben werden. Dort ist bei Tags der Tabellenalias "t" und bei Select "sourceTable" zu verwenden.

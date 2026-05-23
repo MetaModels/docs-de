@@ -26,7 +26,7 @@ Was mit MetaModels in der Praxis entstanden ist, zeigt der
 `MetaModels Showcase <https://now.metamodel.me/de/showcase>`_ oder der
 `Vortrag zur CK17 <https://www.e-spin.de/metamodels-vortrag-contao-konferenz-2017.html>`_.
 
-Eine `aktives Team in MetaModels <https://now.metamodel.me/de/ueber-uns/team>`_ hilft bei der Umsetzung mit diesem
+Ein `aktives Team in MetaModels <https://now.metamodel.me/de/ueber-uns/team>`_ hilft bei der Umsetzung mit diesem
 Handbuch oder auch dem `Contao-Forum <https://community.contao.org/de/forumdisplay.php?149-MetaModels>`_ und
 `Slack-Channel <https://contao.slack.com/archives/CKGEBDV60>`_.
 

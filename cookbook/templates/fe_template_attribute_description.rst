@@ -6,7 +6,7 @@ Ausgabe der Attributs-Beschreibung im Template
 Im Listentemplate steht über den Knoten ``attributes`` der Name bzw. die Bezeichnung eines Attributs zur Verfügung.
 
 Möchte man aber zusätzlich auch einen Zugriff auf die Beschreibung aus den Attributseinstellungen haben, so kann man
-folgende Anpassung im Template ``metamodles_prerendered.html5`` vornehmen:
+folgende Anpassung im Template ``metamodels_prerendered.html5`` vornehmen:
 
 .. code-block:: php
    :linenos:
@@ -49,7 +49,7 @@ Handhabung im weiteren Template. Das Ganze könnte man auch schöner in einen He
 In der weiteren Ausgabe kann man die Beschreibung über den Spaltennamen des Attributs ausgeben - |br|
 z. B. ``<?= $attributeDescriptions['firstname'] ?? '' ?>``
 
-Bei mehrsprachingen Models wird die zur FE-Sprache passende Beschreibung ausgegeben.
+Bei mehrsprachigen Models wird die zur FE-Sprache passende Beschreibung ausgegeben.
 
 
 .. |br| raw:: html

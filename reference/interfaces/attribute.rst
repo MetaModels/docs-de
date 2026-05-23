@@ -110,13 +110,13 @@ gibt die konvertierten Daten bezüglich des gegebenen Ausgabeformates zurück
 gibt Attributwerte nach der Verwendung einer Filter-URL zurück
 
 ``sortIds($strListIds, $strDirection)`` |br|
-gibt ein nach der Sortierrichtung ("ASC|DESC") soertieres Array an IDs zurück
+gibt ein nach der Sortierrichtung ("ASC|DESC") sortiertes Array an IDs zurück
 
 ``getFilterOptions($strListIds, $usedOnly, &$arrCount = null)`` |br|
 gibt Attribute nach dem Schema "id => value" zurück
 
 ``searchFor($strPattern)`` |br|
-gibt alle Items zu einem Suchmuster (z.B. Wildcard * oder ? für ein Buchtaben)
+gibt alle Items zu einem Suchmuster (z.B. Wildcard * oder ? für einen Buchstaben)
 zurück
 
 ``filterGreaterThan($varValue, $blnInclusive = false)`` |br|

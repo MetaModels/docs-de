@@ -16,7 +16,7 @@ zur Verfügung. Diese können sowohl als Inhaltselement als auch
 als FE-Modul in Contao genutzt werden. Einen Unterschied in den
 Einstellungsoptionen zwischen Inhaltselement und Modul gibt es nicht.
 
-Module zu verwenden bietet sich an, wenn man die selbe Liste/Filter an
+Module zu verwenden bietet sich an, wenn man dieselbe Liste/Filter an
 mehreren Stellen ausgeben aber die Einstellungen nur einmal eingeben möchte.
 
 Für die Listendarstellung gehört zu den wichtigsten Auswahloptionen
@@ -84,11 +84,11 @@ Optionen CE/Modul Filter
 ------------------------
 
 * **MetaModel**: |br|
-  Auswahl des MetaModel welche die Grundlage der Filterung darstellt
+  Auswahl des MetaModel, welches die Grundlage der Filterung darstellt
 * **Anzuwendendes Filtereinstellungen**: |br|
   Auswahl eines erstellten Filtersets
 * **Attribute**: |br|
-  Filterregeln der Filtereinstellung, die im im Frontend angezeigt werden sollen
+  Filterregeln der Filtereinstellung, die im Frontend angezeigt werden sollen
 * **Bei Änderung aktualisieren**: |br|
   Ist die Option gesetzt, wird statt des Submitbuttons das Filterformular direkt
   nach einer Eingabe/Auswahl abgesendet.
@@ -105,14 +105,14 @@ Die bisherige Variante, den Filter als Modul einzubinden, kann in MM 2.3 auch we
 
 .. note:: Einstellungen Weiterleitungsseite bis MM 2.3
 
-Möchte man auf der Weiterleitungsseite den selben Filter ebenfalls einbauen, so muss das per
+Möchte man auf der Weiterleitungsseite denselben Filter ebenfalls einbauen, so muss das per
 Modul erfolgen. Man kann einen Filter und die Liste auf verschiedene Seiten setzen und beim Filterelement
 eine Weiterleitungsseite definieren. Damit jedoch aus den POST-Parametern des Filterelementes
-die GET-Parameter für die Liste entstehen, muss auf der Seite der Liste das selbe Filterelement
+die GET-Parameter für die Liste entstehen, muss auf der Seite der Liste dasselbe Filterelement
 eingebaut sein - es reicht, wenn das Filterelement als ausgeblendetes Contentelement vorhanden ist.
 
-Es gibt einen Sicherheitscheck von Contao, dass nur identische Formulare die
-selben Daten verarbeiten dürfen, d. h. das Filterelement muss als Modul erstellt werden und jeweils
+Es gibt einen Sicherheitscheck von Contao, dass nur identische Formulare
+dieselben Daten verarbeiten dürfen, d. h. das Filterelement muss als Modul erstellt werden und jeweils
 auf die Seite mit dem sichtbaren Filter und die Listenseite eingebaut werden.
 
 Das Auslösen des Filters kann per Button erfolgen oder automatisch per Javascript, wenn Filterwerte

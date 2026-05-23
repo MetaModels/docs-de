@@ -39,7 +39,7 @@ Items zu einem Elternitem erfolgen soll. Anderenfalls sind alle Kindelitems bei
 allen Elternitems aufgelistet.
 
 Die Anzeige des Eingabefeldes kann über weitere Steuerungsparameter beeinflusst
-werden. Jede Rendereinstellungen hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
+werden. Jede Rendereinstellung hat ein Bearbeitungsicon zur Erstellung von Abhängigkeiten
 der Anzeige bzw. Sichtbarkeit ("Ansichtsbedingungen"). So kann ein oder mehrere
 Eingabefelder in der Eingabemaske nur sichtbar sein, wenn z.B. eine bestimmte
 Checkbox gesetzt ist.
@@ -74,7 +74,7 @@ Optionen der Eingabemaske
 * **Bearbeitung/Erstellen/Löschen erlauben**: |br|
   Freigabe zum Ändern, Erstellen, Löschen von Eingaben
 
-Optionen der Eingabefeldes
+Optionen des Eingabefeldes
 --------------------------
 * **Typ**: |br|
   Legende: Unterteilung des Eingabepanels ("Grüne Linie") |br|
@@ -85,7 +85,7 @@ Optionen der Eingabefeldes
 * **Anzeigeoptionen**: |br|
   Angabe der Contao-CSS-Backendklassen z.B. "w50" für eine 50%-Breite
 * **Auflistung, Filterung und Sortierung im Backend**: |br|
-  Checkboxen für Filterbar und/oder Suchbar - abhängig vom Attribusttyp
+  Checkboxen für Filterbar und/oder Suchbar - abhängig vom Attributtyp
 
 Optionen der Anzeigebedingungen des Eingabewidgets
 --------------------------------------------------

@@ -53,8 +53,8 @@ entsprechendes Template werden die Daten als Tabelle ausgegeben - z. B.
     <?php endif; ?>
 
 In den Einstellungen des CE/FE-Moduls MM-Liste sollte keine Paginierung eingerichtet werden. Bei vielen Datensätzen
-kann die Laufzeit der Tabellenausgabe mit setzten der Checkbox "Keine geparsten Items über "$data" ausgeben"
-beschleunigt werden oder mit  Setzen eines Index in der MM-Tabelle - mehr dazu unter :ref:`rst_cookbook_tips_speedup_backend`
+kann die Laufzeit der Tabellenausgabe mit Setzen der Checkbox "Keine geparsten Items über "$data" ausgeben"
+beschleunigt werden oder mit Setzen eines Index in der MM-Tabelle - mehr dazu unter :ref:`rst_cookbook_tips_speedup_backend`
 
 
 Daten in Excel

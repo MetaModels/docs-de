@@ -52,7 +52,7 @@ Allgemein und Core
 * Behandlung der Routenpriorität - siehe :ref:`rst_cookbook_tips_set-route-priority`
 * Auswahlmöglichkeit der Widget-Templates für die Eingabemaske (BE) - siehe Attribute
 * Models, die als Kindtabelle verknüpft sind, können nun Varianten beinhalten (`#1054 <https://github.com/MetaModels/core/issues/1054>`_)
-* Liste im BE kann nach nach Kalenderwoche gruppiert werden - die Formatierung über einen Sprachschlüssen individuell je
+* Liste im BE kann nach Kalenderwoche gruppiert werden - die Formatierung über einen Sprachschlüssen individuell je
   Sprache angepasst möglich
 * Übersetzungen wurde vom `CCA-Translator <https://github.com/contao-community-alliance/translator>`_ und den
   `Global-Lang-Arrays <https://symfony.com/doc/current/translation.html>`_ zum Symfony-Translator umgestellt. Damit
@@ -70,7 +70,7 @@ Allgemein und Core
   bei den Eingabe- und Renderzuordnungen ("letztes Icon") als auch bei den Benutzergruppen-Einstellungen von Contao
   entsprechende Klicks durchgeführt werden - die Einstellungen bei Contao sind weg gefallen und man muss nur noch in
   MM die Rechte zuteilen (Eingabemaske + Zuordnungen). |br|
-  Mit dem neuen Routing gibt es ein Probleme mit dem Umschalten des Debugmodus im BE - Contao erwartet den wert für den
+  Mit dem neuen Routing gibt es ein Problem mit dem Umschalten des Debugmodus im BE - Contao erwartet den wert für den
   Referer in einer bestimmten Form, den wir aktuell nicht einfach umschreiben können; nach dem Umschalten landet man auf
   einer "Defaultseite" von Contao - weitere Auswirkungen hat das nicht (siehe "Known-Issues").
 * bei den Rendereinstellungen kann nun für die Links der Weiterleitungen (jumpTo) der Referenztyp zur Generierung der
@@ -178,7 +178,7 @@ Filter
     * das Template für die Ausgabe der Filterung als Linkliste wurde überarbeitet, so dass der Contao-Crawler den
       Links für die Suche-Indexierung nicht mehr folgt (``data-escargot-ignore``)
     * im Template sind Blocks für `formlabel` und `formfield` eingefügt
-    * es kann nun ein URL-Fragment angegeben werden - damit springt nach dem Relaod die Seite an den Ankerpunkt
+    * es kann nun ein URL-Fragment angegeben werden - damit springt nach dem Reload die Seite an den Ankerpunkt
 
 
 Frontend-Editing (FEE)

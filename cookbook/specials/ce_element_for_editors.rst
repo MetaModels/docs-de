@@ -7,7 +7,7 @@ Für die Anzeige von Datensätzen eines MetaModel steht die MM-Liste als Content
 Verfügung. Hier muss man verschiedene Auswahlen wie das MetaModel, Rendersetting, Filterung usw. treffen - das kann
 für Redakteure unter Umständen nicht gewünscht sein.
 
-Gibt es den Wunsch, dass Redeakteure bei einem festgelegten MetaModel einfach ein oder mehrere Datensätze auswählen
+Gibt es den Wunsch, dass Redakteure bei einem festgelegten MetaModel einfach ein oder mehrere Datensätze auswählen
 und diese angezeigt werden sollen, kann man das zum Beispiel mit den folgenden Methoden durchführen.
 
 
@@ -272,7 +272,7 @@ Ausgabe im Twig-Template:
 Auswahl und Anzeige mit eigenem Content-Element
 -----------------------------------------------
 
-Möchte man die Funktionalität mit "Contao-Boardmitteln" statt mit einer Erweiterung implementieren, so kann man ein
+Möchte man die Funktionalität mit "Contao-Bordmitteln" statt mit einer Erweiterung implementieren, so kann man ein
 eigenes Inhaltselement erstellen.
 
 In dem Beispiel soll eine Liste von MM-Datensätzen als Produkte auswählbar sein und auf der Webseite dargestellt werden.

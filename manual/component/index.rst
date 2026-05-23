@@ -37,7 +37,7 @@ Reihenfolge abgearbeitet werden. Mit zunehmender Komplexität des MetaModels - a
 Zusammenspiel mehrerer MetaModel miteinander - kommt man nicht umhin, einzelne Eingaben
 in einem vorhandenen MetaModel weiter zu ergänzen oder abzuändern.
 
-Neben den Hauptkomponenten gibt es weitere Einstellungsmöglichkeiten wie das Anlegen von Guppierung/Sortierung der Items
+Neben den Hauptkomponenten gibt es weitere Einstellungsmöglichkeiten wie das Anlegen von Gruppierung/Sortierung der Items
 in einer BE-Liste oder :ref:`Anzeigebedingungen der Eingabewidgets einer Eingabemaske <component_dca_visibility-conditions>`.
 
 .. _rst_component_index_mm_lageplan:

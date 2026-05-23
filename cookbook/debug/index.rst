@@ -1,7 +1,7 @@
 .. _rst_cookbook_debug_index:
 
-Debuging
-========
+Debugging
+=========
 
 Tipps zum Debugging von MM bzw. Contao.
 

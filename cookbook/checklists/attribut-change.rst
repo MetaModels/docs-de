@@ -3,7 +3,7 @@
 Attribut nach Änderung wird nicht angezeigt
 ===========================================
 
-Nach Änderung eines Attributs (z.B. Attributtyp) wird wird 
+Nach Änderung eines Attributs (z.B. Attributtyp) wird
 dies auf der Webseite nicht (mehr) angezeigt.
 
 Achtung: Bei Änderung des Attributtyps werden die vorhandenen

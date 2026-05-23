@@ -88,7 +88,7 @@ Typen von Filterregeln
   erzeugt einen Volltext-Index von ausgewählten Attributen inkl. Ähnlichkeitssuche und Autovervollständigung; eigenes
   Template mm_filteritem_levenshtein(.html5)
 * **Filter-by-related** (filter_by_related) [ab MM 2.4]: |br|
-  ermöglicht Items mit Eigenschaften aus einem verknüpften (Relation) MetaMdel zu filtern; Relationen können per
+  ermöglicht Items mit Eigenschaften aus einem verknüpften (Relation) MetaModel zu filtern; Relationen können per
   Kindtabelle oder Einzelauswahl (Select) aufgebaut sein |br|
   siehe :ref:`rst_extended_filter_by_related`
 * **Loupe** (filter_loupe) [ab MM 2.4]: |br|

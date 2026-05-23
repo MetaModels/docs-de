@@ -60,10 +60,6 @@ spezifische Optionen:
 Einstellungen bei den Render-Einstellungen
 -------------------------------------------
 
-Das Attribut besitzt keine eigenen Render-Einstellungen. In der Attributliste
-einer Render-Einstellung stehen die üblichen Optionen (Template, CSS-Klasse)
-zur Verfügung.
-
 In der Attributliste
 einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
 
@@ -79,7 +75,7 @@ einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
        oder ```` bei Inaktiv).
 
        Primär für die Listenanzeige im BE ist das Template ``mm_attr_checkbox_icon``, welches den
-       Staus mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
+       Status mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
    * - CSS-Klasse
      - Optionale CSS-Klasse, die dem Ausgabeelement hinzugefügt wird.
 

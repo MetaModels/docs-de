@@ -67,7 +67,7 @@ Varianten überschreiben) bietet das Token-Attribut folgende spezifische Optione
 Beispiele für eindeutige Bezeichnungen sind die `Vorgaben bei deutschen Ausweisen und Pässen
 <https://de.wikipedia.org/wiki/Ausweisnummer>`_ mit aktuell den Zeichen ``123456789CFGHJKMNPRTVWXYZ`` und einer Länge
 von 26 Zeichen oder den `Record Locator <https://en.wikipedia.org/wiki/Record_locator>`_ wie man ihn von Flugtickets
-kenn mit sechs Zeichen aus ``23456789ABCDEFGHJKMNPQRSTXYZ`` - auf 0, 1, O, I, L wird zur besseren Lesbarkeit verzichtet.
+kennt mit sechs Zeichen aus ``23456789ABCDEFGHJKMNPQRSTXYZ`` - auf 0, 1, O, I, L wird zur besseren Lesbarkeit verzichtet.
 
 Die Anzahl der möglichen Kombinationen ``V`` ergibt sich aus der Anzahl der möglichen Zeichen ``n`` und der Zeichenlänge
 des Tokens ``k`` - die Formel ist ``V = n**k``.

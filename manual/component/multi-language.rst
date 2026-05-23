@@ -5,7 +5,7 @@ Mehrsprachigkeit in MetaModels
 
 MetaModels ist sehr gut auf mehrsprachige Inhalte ausgerichtet. MM stellt für die mehrsprachigen Inhalte eigene
 Attribute wie z. B. `Übersetzter Text`, `Übersetzter Alias`, `Übersetzte Datei` usw. zur Verfügung. Für Attribute deren
-Werte unabhängig von einer Sprachen sind, wie z. B. Zahlenwerte Produkt-IDs usw. , gibt es diese Varianten nicht.
+Werte unabhängig von einer Sprache sind, wie z. B. Zahlenwerte Produkt-IDs usw. , gibt es diese Varianten nicht.
 
 Die Mehrsprachigkeit in MetaModels ist so konzipiert, dass die mehrsprachigen Felder neben der Fallback-Sprache auch in
 den gewünschten Übersetzungen ausgefüllt werden. Sollte das bei einem Feld mal nicht der Fall sein, wird im Frontend
@@ -16,7 +16,7 @@ Bevor man mit der Erstellung der Models startet gilt es gut zu überlegen, ob di
 sollen. Die mehrsprachigen Inhalte werden in separaten Tabellen gespeichert und nicht in der eigenen ``mm_*``, so dass
 ein späterer Wechsel zu einer Mehrsprachigkeit mit entsprechender Nachpflege verbunden ist.
 
-Wenn man einsprachige Werte hat, die man speichern möchte aber die in verschiedenen Sprachen im Frontend ausgegeben
+Wenn man einsprachige Werte hat die man speichern möchte, aber die in verschiedenen Sprachen im Frontend ausgegeben
 werden sollen, ist eine Umstellung auf eine Mehrsprachigkeit unkritisch. Es werden lediglich die Attributsbezeichnungen
 entsprechend den Sprachen erweitert - :ref:`siehe unten "Attribute" <component_multi-language_attribute>`.
 
@@ -32,8 +32,8 @@ wie ``de_DE``, ``de_AT``, ``de_CH`` usw. in der Liste freigeschaltet.
 Eine Sprache ist als Fallbacksprache festzulegen, für die dann auch immer alle Datensätze vorhanden sein müssen. Sollte
 die Fallbacksprache später gewechselt werden, muss das entsprechend in der DB geprüft und korrigiert werden.
 
-Legt man mehrere Models an, die auch noch durch Relationen verbunden sind, ist es ratsam, bei allen Models das selbe
-Sprachenschema und die selbe Fallbacksprache zu definieren. Es ist auch sinnvoll nur die Sprachen anzulegen, die Contao
+Legt man mehrere Models an, die auch noch durch Relationen verbunden sind, ist es ratsam, bei allen Models dasselbe
+Sprachenschema und dieselbe Fallbacksprache zu definieren. Es ist auch sinnvoll nur die Sprachen anzulegen, die Contao
 über seine Startpunkte definiert hat.
 
 Die mehrsprachigen MetaModels sind mit einer farbigen Länderfahne hervorgehoben |img_locale|.
@@ -142,7 +142,7 @@ gespeichert - siehe ":ref:`component_multi-language_save`".
 Werden Inhalte in der Übersetzungssprache angelegt und gespeichert, wechselt der Hinweis bei den entsprechenden
 Eingabefeldern auf |img_translated|.
 
-Ja nach Status bei einem Eingabefeld sieht das dann z. B. so aus:
+Je nach Status bei einem Eingabefeld sieht das dann z. B. so aus:
 
 |translation-hints|
 

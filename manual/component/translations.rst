@@ -61,7 +61,7 @@ zu den gefundenen und nicht gefundenen Übersetzungen sowie den Fallbacks aufgel
 Eigene Anpassung von Übersetzungen
 ----------------------------------
 
-Neue Überschreibungen müssen als XLIFF-Datei angelegt werden. Den Aufbau kann man sich bei der Datei ansehen, dessen
+Neue Überschreibungen müssen als XLIFF-Datei angelegt werden. Den Aufbau kann man sich bei der Datei ansehen, deren
 Wert man abändern möchte. Dabei ist zu beachten, dass die XLIFF-Dateien beim DCG in Version 2.0 vorliegen und bei
 MetaModels in Version 1.2 - der Aufbau unterscheidet sich etwas.
 

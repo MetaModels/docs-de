@@ -56,7 +56,7 @@ Render-Einstellungen angelegt werden.
 Ein Filter muss ausgewählt werden, wenn bestimmte URLs von Detailseiten nicht mit in der sitemap.xml erscheinen
 sollen - z. B. um nur veröffentlichte Datensätze aufzunehmen.
 
-Die Erstellung der sitemap.xml erfolgt seit Contao 4.11 dynamisch beim Aufruf und wird nicht mehr im Order `share`
+Die Erstellung der sitemap.xml erfolgt seit Contao 4.11 dynamisch beim Aufruf und wird nicht mehr im Ordner `share`
 abgelegt.
 
 Tipps

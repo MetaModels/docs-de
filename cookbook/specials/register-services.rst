@@ -75,7 +75,7 @@ Methoden in einer Klasse zu verschiedenen Events vorhanden sind, muss der Attrib
 Methodennamen.
 
 Diese Variante funktioniert in dieser einfachen Form nur, wenn nicht weitere Events o. ä. über die ``services.yml``
-registiert werden. Ist dies der Fall, kann man entweder ganz auf die Registrierung über die ``services.yml`` umsteigen -
+registriert werden. Ist dies der Fall, kann man entweder ganz auf die Registrierung über die ``services.yml`` umsteigen -
 siehe Punkt 2 - oder man fügt folgende Zeilen in die ``services.yml``, um ein automatisches Laden zu erwirken:
 
 .. code-block:: yaml

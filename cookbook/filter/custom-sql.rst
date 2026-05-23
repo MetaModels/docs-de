@@ -131,7 +131,7 @@ Archivfilter für vergangene Items der letzten 12 Monate:
 Filterung nach Kind-Elementen eines Eltern-Elements
 ***************************************************
 
-"Suche alle Kind-Elemente für ein gegebens Eltern-Element über den Alias-Parameter
+"Suche alle Kind-Elemente für ein gegebenes Eltern-Element über den Alias-Parameter
 - z.B. um auf einer Detailseite alle zugehörigen 'Kind-Elemente' auszugeben."
 
 .. code-block:: sql
@@ -151,7 +151,7 @@ Filterung nach Kind-Elementen eines Eltern-Elements
 Filterung nach Eltern-Element eines Kind-Elements
 *************************************************
 
-"Suche das Eltern-Element für ein gegebens Kind-Element über den Alias-Parameter
+"Suche das Eltern-Element für ein gegebenes Kind-Element über den Alias-Parameter
 - z.B. um auf einer Detailseite das zugehörige 'Eltern-Element' auszugeben."
 
 .. code-block:: sql
@@ -269,7 +269,7 @@ Defaultwert ''
 
 Bei dem eigenen SQL sind Defaultwerte per 'default=<wert>' möglich,
 die verwendet werden, wenn der Filterparameter nicht gesetzt ist. Im Param-Tag
-ist aktuell wird akltuell die Eingabe von `''` oder `""` gecastet, so dass die
+ist aktuell wird aktuell die Eingabe von `''` oder `""` gecastet, so dass die
 Filterung nicht korrekt erfolgt; anzuwenden ist dies z.B. bei Checkboxwerten.
 
 .. code-block:: sql
@@ -326,7 +326,7 @@ Items nach Einfachauswahl-Eigenschaft filtern
 *********************************************
 
 Die Mitarbeiter haben eine Einfachauswahl zum MetaModels "Abteilung".
-Für eine Listnsicht der Mitarbeiter, sollen nur diejenigen ausgegeben
+Für eine Listenansicht der Mitarbeiter, sollen nur diejenigen ausgegeben
 werden, die in einer Abteilung arbeiten deren "Score" größer als 99 ist.
 
 
@@ -396,7 +396,7 @@ ID aus GET-Parameter nach '::' abtrennen
 Bei Filterungen im Backend oder für das Frontend-Editing benötigt man ggf. Zugriff
 auf die ID aus dem GET-Parameter der URL. Dieser ist aber mit '::' an einen
 Tabellennamen gekoppelt und muss für die Verwendung in einem eigenen SQL-Query
-separiert werden. Das erfolgt z.B. über den den Befehl `SUBSTRING_INDEX` im Query,
+separiert werden. Das erfolgt z.B. über den Befehl `SUBSTRING_INDEX` im Query,
 wie das folgende Beispiel zeigt:
 
 .. code-block:: sql

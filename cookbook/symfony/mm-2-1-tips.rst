@@ -19,7 +19,7 @@ Auf der Konsole kann man das abfragen mit:
 ``php -v``
 
 Ist die PHP-Version nicht gleich, muss man jeweils mit einem Pfad zum PHP-Binary
-die Befehle aufrufen. Den Pfad erhlt man z.B. beim Systemcheck des
+die Befehle aufrufen. Den Pfad erhält man z.B. beim Systemcheck des
 Contao-Managers mit angezeigt oder aus der Doku/Wiki des Providers.
 
 ``/usr/bin/php82 -v``
@@ -36,12 +36,12 @@ oder mit Speicher- und Laufzeitzuweisung
 
 ``/usr/bin/php82 -d memory_limit=-1 -d max_execution_time=900 public/contao-manager.phar.php composer update -v``
 
-bzw. bei älteren Instalationen mit dem Pfad `web`
+bzw. bei älteren Installationen mit dem Pfad `web`
 
 ``/usr/bin/php82 -d memory_limit=-1 -d max_execution_time=900 web/contao-manager.phar.php composer update -v``
 
-Mit dem Parameter "-v" bzw. "-vv" oder "-vvv" erhalt man verschiedene Detailstufen der Ausgabe. Mit dem
-zusätzlichen Parameter "--dry-run" wird ein "Trockenlauf" als Test durchegführt.
+Mit dem Parameter "-v" bzw. "-vv" oder "-vvv" erhält man verschiedene Detailstufen der Ausgabe. Mit dem
+zusätzlichen Parameter "--dry-run" wird ein "Trockenlauf" als Test durchgeführt.
 
 Nach einem Update ggf. das Installtool aufrufen, damit Datenbankänderungen
 durchgeführt werden (wird gern vergessen :D).

@@ -79,7 +79,7 @@ einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
        oder ``''`` bei Inaktiv).
 
        Primär für die Listenanzeige im BE ist das Template ``mm_attr_checkbox_icon``, welches den
-       Staus mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
+       Status mit UTF8-Icons als ☐ bzw. ☑ angezeigt (ab MM 2.4)
    * - CSS-Klasse
      - Optionale CSS-Klasse, die dem Ausgabeelement hinzugefügt wird.
 

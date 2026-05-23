@@ -16,7 +16,7 @@ eine neue, eigene Tabelle zur Aufnahme der abzuspeichernden Werte angelegt.
 Für die Speicherung des neuen MetaModel sind deshalb zwei Eingaben Pflichtfelder: der Name des
 MetaModel sowie der Tabellenname.
 
-Der Name des Metamodel dient der Bezeichnung im Backend und kann frei gewählt werden. Die
+Der Name des MetaModel dient der Bezeichnung im Backend und kann frei gewählt werden. Die
 Bezeichnung sollte jedoch für die weitere Arbeit sinnvoll auf den Inhalt schließen z.B.
 "Adressen".
 
@@ -54,7 +54,7 @@ Listendarstellung der Eltern-Elemente.
 
 Mit den Varianten entsteht eine "Eltern-Kind-Beziehung" innerhalb einer MetaModel-Datenbanktabelle, die
 über verschiedene Werte in der Tabelle nachvollzogen werden können - z.B. bei einem eigenen SQL-Filter.
-Die Eltern-Datensätze sind dadurch gekennzeichnet, das in der Datenbanktabelle der Eltern-Datensätze
+Die Eltern-Datensätze sind dadurch gekennzeichnet, dass in der Datenbanktabelle der Eltern-Datensätze
 die Werte für varbase gleich 1 und vargroup gleich der eigenen ID haben. Die Kind-Datensätze haben
 die Werte varbase gleich 0 und vargroup gleich der ID des Eltern-Datensatzes.
 

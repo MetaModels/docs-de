@@ -10,7 +10,7 @@
 Einleitung
 ----------
 
-Die Komponente "Attribute" ist eine der grundlegendsten Einstellung in einem MetaModel.
+Die Komponente "Attribute" ist eine der grundlegendsten Einstellungen in einem MetaModel.
 Mit den Attributen werden die eigenen, spezifischen Datenfelder definiert und in der
 Datenbanktabelle als Spalten angelegt. Auf der Seite :ref:`component_data-in-attributes` ist aufgeführt, welches
 Attribut für welchen Datentyp der Datenbank eingesetzt werden kann. Neben den üblichen Datentypen wie ``varchar``,
@@ -44,9 +44,9 @@ spezifischen Optionen:
   notwendig - :ref:`mehr... <component_attribute_alias>`
 * **Kontrollkästchen (Checkbox)**: einzelne Checkbox für Boolsche-Werte |br|
   mit der Checkbox können Boolsche-Werte (0|1) gesetzt werden; eine spezielle Variante
-  ist das   "Veröffentlichen" - damit erscheint im Backend das Icon "Auge" wobei die
+  ist das "Veröffentlichen" - damit erscheint im Backend das Icon "Auge" wobei die
   Filterung für die Veröffentlichung selbst erstellt werden muss; als Spaltenname
-  für den Wert Veröffenlichung wird allgemein "published" verwendet; über die Option
+  für den Wert Veröffentlichung wird allgemein "published" verwendet; über die Option
   "Listview checkbox" kann ein eigenes Icon im Backend zur Anzeige des Status
   Verwendung finden - :ref:`mehr... <component_attribute_checkbox>`
 * **Kombinierte Einträge**: Kombination verschiedener Attribute |br|
@@ -102,7 +102,7 @@ Ist im MetaModel die Option "Übersetzung" aktiviert, sind die folgenden Attribu
 zusätzlich für eine Mehrsprachigkeit vorhanden:
 
 * Übersetzte Checkbox - :ref:`mehr... <component_attribute_translatedcheckbox>`
-* Translated kombinierte Werte - :ref:`mehr... <component_attribute_translatedcombinedvalues>`
+* Übersetzte kombinierte Werte - :ref:`mehr... <component_attribute_translatedcombinedvalues>`
 * Übersetzte Datei - :ref:`mehr... <component_attribute_translatedfile>`
 * Übersetzter Langtext - :ref:`mehr... <component_attribute_translatedlongtext>`
 * Übersetzter Select - :ref:`mehr... <component_attribute_translatedselect>`
@@ -116,8 +116,8 @@ Attribute werden spezielle Tabellen der Erweiterung verwendet und nicht die von 
 MetaModel-Erstellung erzeugten Tabelle.
 
 Zu beachten ist, dass bei Relationen per "Einfachauswahl" oder "Mehrfachauswahl" zwischen
-zwei Metamodel mit Übersetzungen üblicher Weise *nicht* die Optionen "Übersetzter Einzelauswahl [select]"
-und "Übersetzte Mehrfachauswahl [tags]" auszuwählen ist. Das Erkennen bzw. das Umschaltung der Sprache
+zwei MetaModel mit Übersetzungen üblicher Weise *nicht* die Optionen "Übersetzter Einzelauswahl [select]"
+und "Übersetzte Mehrfachauswahl [tags]" auszuwählen ist. Das Erkennen bzw. die Umschaltung der Sprache
 macht MetaModels mit den Attributen "Einfachauswahl" und "Mehrfachauswahl" automatisch.
 
 Die beiden "übersetzten Varianten" sind hauptsächlich für die Anbindung von Tabellen bestimmt,
@@ -134,7 +134,7 @@ installiert oder wie normale Contao-Erweiterungen per Kopie in den Ordner "modul
 Beispiele für zusätzliche Attribute sind:
 
 * **Bewertung**: Bewertungsmodul mit Sternen |br|
-  das Attributmodul dient zur Ausgabe ein "Sternchen-Bewertung" im Frontend;
+  das Attributmodul dient zur Ausgabe einer "Sternchen-Bewertung" im Frontend;
   im Backend können verschiedene Optionen wie Anzahl der Sterne usw. gesetzt
   werden - :ref:`mehr... <component_attribute_rating>`
 * **Color-Picker**: Auswahl von Webfarben und Transparenz - :ref:`mehr... <component_attribute_color>`
