@@ -3,7 +3,7 @@
 Translator-Bridge für MetaModels
 =================================
 
-Mit der Translator-Bridge werden Schaltflächen für **maschinelle Übersetzung wie z. B. DeepL |deepl_icon|** direkt in die
+Mit der Translator-Bridge werden Schaltflächen für **maschinelle Übersetzung wie z. B. DeepL |deepl_icon| ** direkt in die
 Bearbeitungsmaske des Contao-Backends integriert. Per Klick überträgt die Erweiterung den Feldinhalt der
 Fallback-Sprache an den konfigurierten Übersetzungsanbieter und trägt das Ergebnis automatisch in das gerade
 bearbeitete Übersetzungsfeld ein.
@@ -303,6 +303,9 @@ Ein Dank für die Spenden* für die Erweiterung an:
 (Spenden in Netto)
 
 .. |deepl_icon| image:: /_img/screenshots/extended/translator-bridge/deepl.svg
+   :width: 16px
+   :height: 16px
+
 .. |translator_01| image:: /_img/screenshots/extended/translator-bridge/translator_01.png
 
 .. |br| raw:: html
