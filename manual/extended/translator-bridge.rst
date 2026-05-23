@@ -28,7 +28,7 @@ Die Schaltfläche erscheint ausschließlich dann, wenn:
 * das Attributfeld übersetzbar und nicht schreibgeschützt ist.
 
 .. note:: Als Option kann die Übersetzung auch für Contao-Inhalte frei geschaltet werden -
-   siehe `ref:`rst_extended_translator-bridge_ce`
+   `siehe unten <#contao-inhaltselemente-ubersetzen>`_
 
 Voraussetzungen
 ---------------
@@ -166,7 +166,7 @@ Ein Klick auf die Schaltfläche |deepl_icon| in einer Sprachzeile:
 .. tip:: Das Tastenkürzel :kbd:`Alt+T` (macOS: :kbd:`Option+T`) übersetzt ebenfalls alle Zeilen
    solcher Mehrsprachentabellen auf der aktuellen Seite auf einmal.
 
-.. _rst_extended_translator-bridge_ce
+
 Contao-Inhaltselemente übersetzen
 ---------------------------------
 
