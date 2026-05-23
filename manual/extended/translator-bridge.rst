@@ -11,7 +11,7 @@ bearbeitete Übersetzungsfeld ein.
 Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`.
 
 .. note:: Die Erweiterung Translator-Bridge ist noch im Fundraising und wird erst nach Erreichen der Zielsumme
-   von aktuell 1.827,50 € frei geschaltet. |br|
+   von aktuell 3.442,50 € frei geschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" ist möglich –
    `siehe unten <#early-adopter-programm>`_
 
@@ -162,6 +162,9 @@ Popup-Fenster. Auch dort werden die Übersetzungsschaltflächen automatisch nebe
 allen geeigneten Feldern eingeblendet. Die Zielsprache wird dabei direkt aus dem
 ``mm_lang``-Feld des Inhaltselements gelesen, die Quellsprache aus der
 Fallback-Sprache des MetaModels.
+
+.. note:: das Inhaltselement im Popup muss nach dem Neuanlegen einmal gespeichert werden, damit die Sprachenzuordnung
+   erstellt werden kann. Nach dem Speichern sind auch die Übersetzungsbuttons sichtbar.
 
 Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
 ``listWizard``. Dabei gilt:
