@@ -27,6 +27,8 @@ Die Schaltfläche erscheint ausschließlich dann, wenn:
 * die aktive Bearbeitungssprache **nicht** die Fallback-Sprache ist und
 * das Attributfeld übersetzbar und nicht schreibgeschützt ist.
 
+.. note:: Als Option kann die Übersetzung auch für Contao-Inhalte frei geschaltet werden -
+   siehe `ref:`#contao-inhaltselemente-ubersetzen`
 
 Voraussetzungen
 ---------------
