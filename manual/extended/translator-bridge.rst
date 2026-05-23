@@ -129,7 +129,7 @@ allen geeigneten Feldern eingeblendet. Die Zielsprache wird dabei direkt aus dem
 ``mm_lang``-Feld des Inhaltselements gelesen, die Quellsprache aus der
 Fallback-Sprache des MetaModels.
 
-.. note:: das Inhaltselement im Popup muss nach dem Neuanlegen einmal gespeichert werden, damit die Sprachenzuordnung
+.. note:: Das Inhaltselement im Popup muss nach dem Neuanlegen einmal gespeichert werden, damit die Sprachenzuordnung
    erstellt werden kann. Nach dem Speichern sind auch die Übersetzungsbuttons sichtbar.
 
 Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
