@@ -266,6 +266,13 @@ Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten 
 :ref:`siehe SEO <rst_cookbook_tips_seo_metadata-hreflang>`.
 
 
+Frontend-Editing (FEE)
+----------------------
+
+Mit MM 2.4 wird auch die Mehrsprachigkeit bei der Frontendbearbeitung unterstützt - :ref:`mehr zu dem Thema
+<extended_frontend_editing_multilanguage>`.
+
+
 .. |img_locale| image:: /_img/icons/locale.png
 .. |img_fallback| image:: /_img/icons/fallback.png
 .. |img_translated| image:: /_img/icons/translated.png

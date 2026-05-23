@@ -225,6 +225,8 @@ automatisch entfernt.
 
 |img_fee-multilanguage|
 
+Mehr zum Thema :ref:`component_multi-language`.
+
 
 Einstellen der Zugangsberechtigung für die Bearbeitung
 ------------------------------------------------------
