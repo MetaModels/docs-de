@@ -225,6 +225,20 @@ automatisch entfernt.
 
 |img_fee-multilanguage|
 
+**Sprachhinweise in der Eingabemaske** |br|
+Analog zum Backend werden in der FE-Eingabemaske mehrere Hinweise zur aktuellen Bearbeitungssprache angezeigt:
+
+* Im **Sprachauswahl-Dropdown** ist die Fallbacksprache mit dem Zusatz ``[Fallback]`` gekennzeichnet.
+* In der **Überschrift** (sub_headline) wird der Name der aktuell bearbeiteten Sprache ausgegeben;
+  befindet man sich in der Fallbacksprache, erscheint dort zusätzlich ein farbiges ``[Fallback]``-Badge.
+* An jedem **Widget-Label** eines übersetzten Attributes erscheint ein farbiges Badge:
+
+  * **[Fallback]** (orange): Der Wert stammt aus der Fallbacksprache – es gibt noch keine eigene Übersetzung
+    in der aktuellen Sprache.
+  * **[Translated]** (grün): Das Feld hat eine eigene Übersetzung in der aktuellen Sprache.
+
+|img_fee-multilanguage2|
+
 Mehr zum Thema :ref:`component_multi-language`.
 
 
@@ -440,6 +454,7 @@ Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
 .. |img_fee-own-headline2| image:: /_img/screenshots/extended/frontend_editing/fee-own-headline2.png
 
 .. |img_fee-multilanguage| image:: /_img/screenshots/extended/frontend_editing/fee-multilanguage.png
+.. |img_fee-multilanguage2| image:: /_img/screenshots/extended/frontend_editing/fee-multilanguage2.png
 
 .. |img_fee-rights-at-inputmask| image:: /_img/screenshots/extended/frontend_editing/fee-rights-at-inputmask.png
 .. |img_fee-member-filterrule| image:: /_img/screenshots/extended/frontend_editing/fee-member-filterrule.png
