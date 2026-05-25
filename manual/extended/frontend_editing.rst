@@ -223,8 +223,6 @@ Möchte man einen "Deeplink" für eine Bearbeitung inkl. Sprachenauswahl setzen,
 ``domain.com/en/fee-processing?act=edit&id=mm_employees_trans%::42&__setlng=de``- der Parameter wird nach einem Reload
 automatisch entfernt.
 
-|img_fee-multilanguage|
-
 **Sprachhinweise in der Eingabemaske** |br|
 Analog zum Backend werden in der FE-Eingabemaske mehrere Hinweise zur aktuellen Bearbeitungssprache angezeigt:
 
