@@ -270,7 +270,7 @@ Frontend-Editing (FEE)
 ----------------------
 
 Mit MM 2.4 wird auch die Mehrsprachigkeit bei der Frontendbearbeitung unterstützt - :ref:`mehr zu dem Thema
-<extended_frontend_editing_multilanguage>` - inkl. der Anzeige der fallbacksprache und Übersetzungsstatus -
+<extended_frontend_editing_multilanguage>` - inkl. der Anzeige der Fallbacksprache und Übersetzungsstatus -
 siehe :ref:`Frontend-Editing <extended_frontend_editing_multilanguage>`.
 
 
