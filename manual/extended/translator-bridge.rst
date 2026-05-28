@@ -285,7 +285,7 @@ die Erweiterung bei Zahlung einer Spende sofort einsetzen. Die Zahlung
 berechtigt zum Einsatz für ein Projekt. Rechtsansprüche jedweder Art sind
 nach Zahlung einer Spende ausgeschlossen.
 
-Die Höhe der Spende sollte mindestens 150€*1 betragen.
+Die Höhe der Spende sollte mindestens 200€*1 betragen.
 
 Für die Spende wird eine Rechnung mit ausgewiesener MwSt. bzw. bei vorhandener
 EU-Tax-ID für das EU-Ausland in Netto erstellt. |br|
