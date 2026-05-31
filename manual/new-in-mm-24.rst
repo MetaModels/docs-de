@@ -100,7 +100,7 @@ Attribute
     * Support für ``'inputType' => 'fileTree'`` mit ``'multiple' => 'true'`` inkl. Verschieben von Dateien
 * Text
     * Migration für  `basicEntities` - `siehe Contao-Handbuch <https://docs.contao.org/manual/de/artikelverwaltung/insert-tags/#basic-entities>`_
-* Token (Neu)
+* Token (NEU)
     * erzeugt beim erstmaligen Speichern eines Datensatzes eine kryptographisch zufällige, unveränderliche Zeichenfolge
       (Token) - siehe :ref:`component_attribute_token`
 * Übersetzter Alias
