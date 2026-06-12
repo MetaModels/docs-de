@@ -33,8 +33,8 @@ Die Schaltfläche erscheint ausschließlich dann, wenn:
 Voraussetzungen
 ---------------
 
-* MetaModels core 2.4
-* Contao 5.3.x
+* ab MetaModels core 2.4
+* ab Contao 5.3.x
 * Gültiger API-Schlüssel des jeweiligen Übersetzungsanbieters
   (z. B. DeepL Free oder Pro)
 
@@ -70,6 +70,39 @@ Den eigentlichen Schlüssel trägt man in die Datei ``.env.local`` ein
    den kostenlosen API-Endpunkt ``api-free.deepl.com``. Pro-Schlüssel ohne
    dieses Suffix verwenden ``api.deepl.com``. Die Erweiterung erkennt den
    Schlüsseltyp selbstständig.
+
+
+Bevorzugte Sprachvarianten
+--------------------------
+
+DeepL unterscheidet bei einigen Sprachen regionale Varianten – z. B. britisches
+Englisch (``EN-GB``), amerikanisches Englisch (``EN-US``) oder brasilianisches
+Portugiesisch (``PT-BR``). Mit der Einstellung ``preferred_language_variant``
+legt man fest, welche Variante für eine Zielsprache angefordert werden soll:
+
+.. code-block:: yaml
+
+   meta_models_translator_bridge:
+       deepl_api_key: '%env(DEEPL_API_KEY)%'
+       preferred_language_variant:
+           en: en-GB
+           pt: pt-BR
+
+Der Schlüssel ist der Zielsprach-Code (wie er z. B. im ``mm_lang``-Feld bzw. als
+aktive Bearbeitungssprache verwendet wird), der Wert die gewünschte DeepL-Variante.
+Die Zuordnung wirkt **ausschließlich** auf die Zielsprache der Übersetzung.
+
+.. note:: Es müssen gültige DeepL-Zielsprach-Codes verwendet werden. Die vollständige
+   Liste findet sich in der
+   `DeepL-Dokumentation <https://developers.deepl.com/docs/getting-started/supported-languages>`_.
+   Ein ungültiger Wert (z. B. ``en-BR``) führt dazu, dass DeepL die Anfrage mit
+   einem Fehler (HTTP 400) ablehnt.
+
+Nach Änderungen an der Konfiguration den Symfony-Cache leeren:
+
+.. code-block:: bash
+
+   php bin/console cache:clear
 
 
 Verwendung in der Eingabemaske eines Datensatzes
@@ -199,6 +232,32 @@ Abschließend den Symfony-Cache leeren:
    der Fallback-Baum selbst sind – im Fallback-Baum gibt es nichts zu übersetzen.
 
 
+Zeichen-Nutzung anzeigen
+------------------------
+
+Anbieter, die es unterstützen (z. B. DeepL), können den aktuellen Verbrauch ihres
+Zeichen-Kontingents anzeigen – an zwei Stellen:
+
+**In der Konsole** gibt der Befehl ``<verwendet> / <Limit> (<Prozent>)`` aus:
+
+.. code-block:: bash
+
+   php vendor/bin/contao-console metamodels:translator:deepl:usage
+   # Beispielausgabe: 497 / 500.000 (< 1%)
+
+Der Befehlsname folgt dem Muster ``metamodels:translator:<bezeichner>:usage`` und
+wird für jeden Anbieter mit Nutzungs-Unterstützung automatisch bereitgestellt.
+
+**Im Backend** öffnet das Tastenkürzel :kbd:`Alt+U` (macOS: :kbd:`Option+U`) auf
+einer Übersetzungs-Bearbeitungsseite ein Popup mit der Anzeige
+*„<verwendet> verwendete Zeichen von <Limit> (<Prozent>)"*. Das Popup schließt sich
+über das ``×``, einen Klick außerhalb des Popups oder die Taste :kbd:`Esc`.
+
+.. note:: Die Zahlen werden mit den Tausendertrennern der jeweiligen Sprache
+   dargestellt. Wurde bereits etwas verbraucht, der gerundete Wert liegt aber bei
+   0 %, wird ``< 1%`` angezeigt (statt ``0%``).
+
+
 Fehlermeldungen
 ---------------
 
@@ -248,6 +307,24 @@ Das Interface verlangt folgende Methoden:
   ``\RuntimeException`` mit einer **nutzerlesbaren** Meldung geworfen werden
   (keine rohen HTTP-Exceptions)
 * ``getSupportedLanguages(): array`` – Liste der unterstützten Zielsprachkürzel
+
+Optional kann ein Anbieter zusätzlich das Interface
+``MetaModels\TranslatorBridge\Api\UsageAwareTranslatorInterface`` implementieren.
+Dieses verlangt die Methode ``getUsage(): TranslatorUsage`` und schaltet damit den
+Konsolen-Befehl ``metamodels:translator:<bezeichner>:usage`` sowie die
+:kbd:`Alt+U`-Anzeige im Backend für diesen Anbieter frei (siehe
+`Zeichen-Nutzung anzeigen <#zeichen-nutzung-anzeigen>`_).
+
+Damit der Konsolen-Befehl korrekt benannt werden kann, muss der Service-Tag dabei
+das Attribut ``identifier`` enthalten (passend zum Rückgabewert von
+``getIdentifier()``):
+
+.. code-block:: yaml
+
+   # config/services.yaml
+   App\Translation\MyProvider:
+       tags:
+           - { name: metamodels.translator_provider, identifier: myprovider }
 
 
 Reihenfolge bei mehreren Anbietern

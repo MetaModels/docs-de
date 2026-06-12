@@ -1,3 +1,5 @@
+Deutsch (DE)
+
 # MetaModels
 
 > MetaModels ist die führende Erweiterung für das Contao CMS, um beliebige strukturierte Daten ohne Programmierung zu verwalten und im Frontend auszugeben. Datenmodelle, Eingabemasken, Listen- und Detailansichten sowie Filter werden vollständig im Contao-Backend konfiguriert.
@@ -43,3 +45,51 @@ MetaModels (Abkürzung: MM) ist ein Open-Source-Projekt und wird aktiv weiterent
 - [Contao-Forum MetaModels](https://community.contao.org/de/forumdisplay.php?149-MetaModels): Community-Support und Diskussionen
 - [Slack-Channel #metamodels](https://contao.slack.com/archives/CKGEBDV60): Direkter Austausch mit dem MetaModels-Team
 - [Contao Extensions – MetaModels](https://extensions.contao.org/?q=metamodels): Alle verfügbaren MetaModels-Pakete im Contao Manager
+
+English (EN)
+
+# MetaModels
+
+> MetaModels is the leading extension for the Contao CMS to manage any kind of structured data without programming and render it in the frontend. Data models, input masks, list and detail views, and filters are configured entirely within the Contao backend.
+
+MetaModels (abbreviation: MM) is an open-source project under active development. Typical use cases include product catalogs, event calendars, staff directories, rental listings, and menu plans.
+
+## Manual
+
+- [Introduction to MetaModels](https://metamodels.readthedocs.io/en/latest/manual/introduction.html): What is MetaModels, use cases, comparison with other tools, getting started, history
+- [Feature overview](https://metamodels.readthedocs.io/en/latest/manual/features.html): Data models, input masks, multilingualism, filters, dynamic views, extensions
+- [Installation](https://metamodels.readthedocs.io/en/latest/manual/install.html): Installation via Contao Manager or Composer, version overview, packages and bundles
+- [Components](https://metamodels.readthedocs.io/en/latest/manual/component/index.html): Attributes, filters, input masks, render settings, relations, templates, multilingualism
+- [Creating your first MetaModel](https://metamodels.readthedocs.io/en/latest/manual/metamodel-first/index.html): Step-by-step guide for getting started with a concrete example
+- [Extended packages](https://metamodels.readthedocs.io/en/latest/manual/extended/index.html): Proximity search, watchlist, frontend editing, Isotope interface and further add-on packages
+- [New in MM 2.4](https://metamodels.readthedocs.io/en/latest/manual/new-in-mm-24.html): Changes and new features in version 2.4 (Contao 5.3, PHP 8.2)
+- [New in MM 2.5](https://metamodels.readthedocs.io/en/latest/manual/install.html#ubersicht-der-versionen): Changes and new features in version 2.5 (Contao 5.7, PHP 8.4)
+- [Planning MM 3.0](https://metamodels.readthedocs.io/en/latest/manual/planning-mm-30.html): Roadmap and planned features for the next major version
+
+## Cookbook
+
+- [Checklists](https://metamodels.readthedocs.io/en/latest/cookbook/checklists/index.html): Checklists for getting started with MetaModels and for upgrades
+- [Debugging](https://metamodels.readthedocs.io/en/latest/cookbook/debug/index.html): Tips and tricks for troubleshooting and diagnostics
+- [Input masks](https://metamodels.readthedocs.io/en/latest/cookbook/inputmask/index.html): Recipes and best practices for backend input masks
+- [Filters](https://metamodels.readthedocs.io/en/latest/cookbook/filter/index.html): Filter recipes, examples and SQL filters
+- [Frontend](https://metamodels.readthedocs.io/en/latest/cookbook/frontend/index.html): Frontend output, templates and tips for rendering
+- [Templates](https://metamodels.readthedocs.io/en/latest/cookbook/templates/index.html): Template hierarchy, customizations and examples
+- [Tips and tricks](https://metamodels.readthedocs.io/en/latest/cookbook/tips/index.html): General tips for everyday use of MetaModels
+- [Special topics](https://metamodels.readthedocs.io/en/latest/cookbook/specials/index.html): Special use cases such as registering services, hooks and events
+- [Symfony tips](https://metamodels.readthedocs.io/en/latest/cookbook/symfony/mm-2-1-tips.html): Tips on Symfony integration and PHP CLI usage
+- [Further tutorials and videos](https://metamodels.readthedocs.io/en/latest/cookbook/other-tutorials/index.html): Video guides and external tutorials
+
+## Reference
+
+- [API and interfaces](https://metamodels.readthedocs.io/en/latest/reference/index.html): MetaModels API, PHP interfaces (IMetaModels, IAttribute, IFilter, DC_General), examples
+- [FAQ](https://metamodels.readthedocs.io/en/latest/reference/faq.html): Frequently asked questions
+- [Glossary](https://metamodels.readthedocs.io/en/latest/reference/glossary.html): Explanation of the most important terms related to MetaModels
+
+## Optional
+
+- [MetaModels project website](https://now.metamodel.me): News, showcase, team, donations, Early Adopter Programme (EAP)
+- [GitHub organisation MetaModels](https://github.com/MetaModels): Source code of all MetaModels packages (core, attributes, filters, extensions)
+- [Documentation on GitHub](https://github.com/MetaModels/docs): Source code of this documentation (branch en-2.0)
+- [Contao forum MetaModels](https://community.contao.org/en/forumdisplay.php?149-MetaModels): Community support and discussions
+- [Slack channel #metamodels](https://contao.slack.com/archives/CKGEBDV60): Direct exchange with the MetaModels team
+- [Contao Extensions – MetaModels](https://extensions.contao.org/?q=metamodels): All available MetaModels packages in the Contao Manager
