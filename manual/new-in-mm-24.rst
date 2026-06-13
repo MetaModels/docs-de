@@ -238,7 +238,16 @@ im Blick behalten werden:
 * neue Templates für Inhalt eines Artikels (auch mehrsprachig) mit Übergabe eines Arrays mit Content-Objekten
 * Ausgabe der Inhalte der Fallbacksprache, wenn keine übersetzten Inhalte vorliegen
 * bei Übersetzte Checkbox die Option "Fallback-Modus deaktivieren" (Attributseinstellungen) setzen für Beibehaltung
-  der bisherigen Filterungen
+  der bisherigen Filterungen - Attribute ermitteln:
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT mm.name AS metamodel, a.colname
+   FROM `tl_metamodel_attribute` AS a
+   JOIN `tl_metamodel` AS mm ON mm.id = a.pid
+   WHERE a.type = 'translatedcheckbox'
+   ORDER BY mm.name, a.colname;
 
 
 
