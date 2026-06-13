@@ -43,6 +43,9 @@ spezifische Optionen:
 
    * - Option
      - Beschreibung
+   * - Fallback-Modus deaktivieren
+     - Mit aktiver Option werden Wertes für eine Sprache gespeichert, auch wenn dieser gleich dem
+       Fallbackwert ist - damit sind die typischen Filterungen nach Veröffentlichung je Sprache gewährleistet
    * - Wechsel-Icon
      - Fügt ein zusätzliches Icon ("Auge") in der Backend-Listenansicht ein,
        um den Status direkt umzuschalten (sprachabhängig). Als Spaltenname

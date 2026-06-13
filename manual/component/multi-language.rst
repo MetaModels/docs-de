@@ -68,6 +68,9 @@ Kennzeichnung im Abschnitt ":ref:`component_multi-language_input`".
 .. note:: Werden mehrsprachige Models oder Attribute gelöscht, werden nicht alle Inhalte mit gelöscht - :ref:`hier
    Hinweise zum Prüfen und Löschen <rst_cookbook_specials_delete-superfluous-data>`
 
+Seit MM 2.4 gibt es den Parameter "Fallback-Modus deaktivieren" - ist dieser aktiv, wird ein Wert für eine Sprache
+dennoch gespeichert, auch wenn dieser gleich dem Fallbackwert ist. Aktiviert ist diese Option z. B. beim Attribut
+:ref:`Übersetzte Checkbox <component_attribute_translatedcheckbox>`.
 
 .. _component_multi-language_attribute:
 Attribute

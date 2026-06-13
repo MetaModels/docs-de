@@ -58,6 +58,10 @@ mehr zum Aufbau der Mehrsprachigkeit in MetaModels <component_multi-language>`
 Zu den Anpassungen gehört die strikte Ausgabe der Inhalte der Fallbacksprache, sofern die zu übersetzende Sprache keine
 eigenen Inhalte hat - das gilt z. B. auch für Attribute Datei und Inhalte eines Artikels.
 
+Dieses Vorgehen kann über die Option "Fallback-Modus deaktivieren" ausgesetzt werden - z. B. steht diese Option bei dem
+Attribut :ref:`Übersetzte Checkbox <component_attribute_translatedcheckbox>` zur Verfügung. Das bedeutet, dass ein
+Wert für eine Sprache gespeichert wird, auch wenn dieser gleich dem Fallbackwert ist.
+
 Werden mehrsprachige Datensätze kopiert, werden nun neben der Fallbacksprache auch alle weiteren Sprachen mit kopiert.
 
 Verbessert wurde die Anzeige im Backend welche Sprache die Fallbacksprache ist. Wenn in der Eingabemaske von der
@@ -109,6 +113,8 @@ Attribute
     * Unterstützung des Dark-Mode bei den Icons - dazu eine weitere Icon-Datei mit dem Suffix "--dark" anlegen
     * Template ``mm_attr_translatedcheckbox_icon.html5`` für Anzeige im Backend als ☑ bzw. ☐ in der Listenansicht
     * Spalte ``langcode`` auf ``varchar(64)``
+    * Option "Fallback-Modus deaktivieren" zum Speichern eines Wertes für eine Sprache, auch wenn dieser gleich dem
+      Fallbackwert ist.
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
     * zwei neue Templates ``mm_attr_file_contao_image.html5`` für die Standardausgabe wie in Contao, was auch die
@@ -231,6 +237,8 @@ im Blick behalten werden:
 * bei Filterregeln die Einstellung "URL-Typ für den Parameter" prüfen und auf Slug ODER GET einstellen
 * neue Templates für Inhalt eines Artikels (auch mehrsprachig) mit Übergabe eines Arrays mit Content-Objekten
 * Ausgabe der Inhalte der Fallbacksprache, wenn keine übersetzten Inhalte vorliegen
+* bei Übersetzte Checkbox die Option "Fallback-Modus deaktivieren" (Attributseinstellungen) setzen für Beibehaltung
+  der bisherigen Filterungen
 
 
 
