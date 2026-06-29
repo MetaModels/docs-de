@@ -182,6 +182,7 @@ den klassischen Elementen von Contao inklusive der üblichen Möglichkeiten,
 wie den Zugriffsschutz zu aktivieren oder CSS-ID/Klassen anzugeben.
 
 .. seealso:: Im Kochbuch:
+
    * :ref:`rst_cookbook_specials_ce_element_for_editors`
    * :ref:`rst_cookbook_templates_fe_redirect_to_list`
 
