@@ -12,27 +12,14 @@ gegeben.
 Für die Anzeige der Bilder, die in den Datensätzen von MetaModels eingebunden sind, wurden entsprechende Provider
 erstellt. Aktuell werden folgende Attribute unterstützt:
 
-* Inhalt eines Artikels (ContentArticle)
-* Datei
-* Langtext
-* Multi-Table (MCW)
-* Übersetzter Inhalt eines Artikels (ContentArticle)
-* Übersetzte Datei
-* Übersetzter Langtext
-* übersetzte Multi-Table (MCW)
-
-.. seealso::
-
-   Dokumentation der unterstützten Attribute:
-
-   * :ref:`Inhalt eines Artikels <component_attribute_contentarticle>`
-   * :ref:`Datei <component_attribute_file>`
-   * :ref:`Langtext <component_attribute_longtext>`
-   * :ref:`Multi-Tabelle (MCW) <component_attribute_tablemulti>`
-   * :ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`
-   * :ref:`Übersetzte Datei <component_attribute_translatedfile>`
-   * :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
-   * :ref:`Übersetzte Multi-Tabelle (MCW) <component_attribute_translatedtablemulti>`
+* :ref:`Inhalt eines Artikels <component_attribute_contentarticle>`
+* :ref:`Datei <component_attribute_file>`
+* :ref:`Langtext <component_attribute_longtext>`
+* :ref:`Multi-Tabelle (MCW) <component_attribute_tablemulti>`
+* :ref:`Übersetzter Inhalt eines Artikels <component_attribute_translatedcontentarticle>`
+* :ref:`Übersetzte Datei <component_attribute_translatedfile>`
+* :ref:`Übersetzter Langtext <component_attribute_translatedlongtext>`
+* :ref:`Übersetzte Multi-Tabelle (MCW) <component_attribute_translatedtablemulti>`
 
 Je nach Attribut wird nach der/den gespeicherten UUID(s) der Datei bzw. Dateien gesucht oder nach vorhandenen Inserttags
 mit Dateieinbindungen (`file`, `picture`, `figure`).
