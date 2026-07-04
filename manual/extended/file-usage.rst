@@ -52,10 +52,10 @@ Spenden
 
 Ein Dank für die Spenden* für die Erweiterung an (Zielsumme 2.613,75€):
 
-* `GUTcert <https://www.gut-cert.de/>`_: 340 €
 * `AntwortInternet <https://www.antwortinternet.com/>`_: 340 €
 * `AntwortInternet <https://www.antwortinternet.com/>`_: 340 €
 * `P KREATIV <https://p-kreativ.at/>`_: 250 €
+* `GUTcert <https://www.gut-cert.de/>`_: 340 €
 
 (*Spenden in Netto)
 
