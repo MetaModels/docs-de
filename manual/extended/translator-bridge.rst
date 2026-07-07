@@ -11,7 +11,7 @@ bearbeitete Übersetzungsfeld ein.
 Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`.
 
 .. note:: Die Erweiterung Translator-Bridge ist noch im Fundraising und wird erst nach Erreichen der Zielsumme
-   von aktuell 2.762,50 € frei geschaltet. |br|
+   von aktuell 2.562,50 € frei geschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" ist möglich –
    `siehe unten <#early-adopter-programm>`_
 
@@ -377,6 +377,7 @@ Spenden
 Ein Dank für die Spenden* für die Erweiterung an:
 
 * `AntwortInternet <https://www.antwortinternet.com/>`_: 680€
+* `GUTcert Berlin <https://www.gut-cert.de/>`_: 680€
 
 
 (Spenden in Netto)
