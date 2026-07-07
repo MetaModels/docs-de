@@ -70,7 +70,7 @@ aufgerufenen Klassen sollten als qualifizierter Import per "use" eingebunden wer
    $attribute  = $model->getAttribute('division');
    $filter->addFilterRule(new \MetaModels\Filter\Rules\SearchAttribute($attribute, $value, $languages));
 
-   // eigenes SQL:
+   // eigenes SQL *1:
    $query = \sprintf('SELECT * FROM %s WHERE published = 1', $modelName);
    $filter->addFilterRule(new \MetaModels\Filter\Rules\SimpleQuery($query));
    // Alternativ siehe https://www.doctrine-project.org/projects/doctrine-dbal/en/4.2/reference/data-retrieval-and-manipulation.html
@@ -92,6 +92,37 @@ aufgerufenen Klassen sollten als qualifizierter Import per "use" eingebunden wer
    $items    = $model->findByFilter($filter);
    $arrItems = $items->parseAll('text');
    //dump($arrItems);
+
+*1: Eigenes SQL kann auch über den
+`Doctrine DBAL queryBuilder <https://www.doctrine-project.org/projects/doctrine-dbal/en/4.4/reference/query-builder.html>`_
+erzeugt und SimpleQuery übergeben werden. Mit dem queryBuilder kann ein Query elegant aufgebaut werden, wenn z. B.
+verschiedene Abhängigkeiten abgefangen werden sollen. Folgend ein Beispiel:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+
+   use Doctrine\DBAL\Connection;
+   use MetaModels\Filter\Rules\SimpleQuery;
+
+   // ...
+
+   $modelName = 'mm_employees';
+   $model     = $factory->getMetaModel($modelName);
+   $filter    = $model->getEmptyFilter();
+
+   $builder = $this->connection->createQueryBuilder()
+               ->select('t.id')
+               ->from($metaModel->getTableName(), 't');
+
+   if ($checkUpload) {
+       $builder->andWhere('t.upload_allowed = 1');
+   }
+
+   $filter = $metaModel->getEmptyFilter();
+   $filter->addFilterRule(SimpleQuery::createFromQueryBuilder($builder));
+   $items = $metaModel->findByFilter($filter, 'name');
 
 
 .. |br| raw:: html
