@@ -256,7 +256,7 @@ Beispiele von Services und deren Einbindung
 
 .. note:: Vorausgesetzt für die Beispiele wird mind. Contao 5.3 und PHP 8.2.
 
-In den zwei Dateien sind typische Services aufgeführt und wie diese eingebunden werden können:
+Mit den zwei Dateien sind typische Services aufgeführt und wie diese eingebunden werden können:
 
 .. literalinclude:: ./register-services/service.yaml
    :language: yaml
