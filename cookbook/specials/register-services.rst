@@ -274,7 +274,7 @@ Den aktuellen Benutzer ermitteln (Security)
 Um den aktuell eingeloggten Frontend-Benutzer zu ermitteln, gibt es im Beispiel drei Wege, die auf
 unterschiedlichen Ebenen arbeiten. Empfohlen ist der erste Weg über den ``security.helper``.
 
-**Empfohlen: `security.helper`**
+**Empfohlen: ``security.helper``**
 
 Der ``security.helper`` (``Symfony\Bundle\SecurityBundle\Security``) bündelt den ``AuthorizationChecker``
 und die ``TokenStorage``. Er ist der einzige der drei Wege, der sowohl **Rechte prüfen** (``isGranted()``)
@@ -284,7 +284,7 @@ Contao-``MemberModel`` mit allen Datenbankfeldern lädt man anschließend per ``
 * *Vorteil:* moderner Standard, deckt Rechteprüfung und User-Ermittlung ab.
 * *Nachteil:* für die reinen DB-Felder ist ein zusätzlicher Query nötig.
 
-**Alternative 1: `contao.framework` (Legacy)**
+**Alternative 1: ``contao.framework`` (Legacy)**
 
 Der klassische Contao-Weg über den Framework-Adapter. Wichtig: Für den *aktuellen* Benutzer ist das
 Singleton ``getInstance()`` gedacht - ``createInstance()`` würde eine neue, leere Instanz erzeugen und wäre
@@ -294,7 +294,7 @@ damit falsch.
   zusätzlichen Query.
 * *Nachteil:* Contao-spezifisch, keine Rechteprüfung, veraltetes Muster, nur im Frontend-Scope sinnvoll.
 
-**Alternative 2: `security.token_storage` (Low-Level)**
+**Alternative 2: ``security.token_storage`` (Low-Level)**
 
 Die reine Symfony-Variante liefert nur Token bzw. User - **ohne** ``AuthorizationChecker``. Sie ist genau die
 Basis, auf der der ``security.helper`` intern aufsetzt.
