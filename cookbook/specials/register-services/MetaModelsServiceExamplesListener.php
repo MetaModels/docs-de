@@ -124,8 +124,8 @@ final readonly class MetaModelsServiceExamplesListener
         $request->getSession()->set('MM-DATA', $sessionData);      // Set session data.
         $sessionData = $request->getSession()->get('MM-DATA', []); // Get session data.
 
-        // Security - Further explanation can be found in the text following the example.
-        // Empfohlen: security.helper - kann Rechte pruefen UND den User holen.
+        // Security - mehr Erklärungen in dem anschließenden Textabschnitt.
+        // Empfohlen: security.helper - kann Rechte prüfen UND den User holen.
         if (!$this->security->isGranted('ROLE_MEMBER')) {
             return;
         }
@@ -136,7 +136,7 @@ final readonly class MetaModelsServiceExamplesListener
         $member = MemberModel::findByUsername($user->getUserIdentifier());
 
         // Alternative 1: Contao-Framework (Legacy). getInstance() liefert den aktuellen
-        // Frontend-User als Contao-Objekt inkl. DB-Feldern - createInstance() waere eine
+        // Frontend-User als Contao-Objekt inkl. DB-Feldern - createInstance() wäre eine
         // neue, leere Instanz und damit falsch.
         $member = $this->framework->getAdapter(FrontendUser::class)->getInstance();
 
