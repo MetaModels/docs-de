@@ -278,7 +278,7 @@ unterschiedlichen Ebenen arbeiten. Empfohlen ist der erste Weg über den ``secur
 
 Der ``security.helper`` (``Symfony\Bundle\SecurityBundle\Security``) bündelt den ``AuthorizationChecker``
 und die ``TokenStorage``. Er ist der einzige der drei Wege, der sowohl **Rechte prüfen** (``isGranted()``)
-*als auch* den User holen (``getUser()``) kann. ``getUser()`` liefert das Symfony-User-Objekt; das
+*als auch* den **User holen** (``getUser()``) kann. ``getUser()`` liefert das Symfony-User-Objekt; das
 Contao-``MemberModel`` mit allen Datenbankfeldern lädt man anschließend per ``findByUsername()`` nach.
 
 * *Vorteil:* moderner Standard, deckt Rechteprüfung und User-Ermittlung ab.
