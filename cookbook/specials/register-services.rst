@@ -25,7 +25,9 @@ Event können z. B. eingegebene Daten manipuliert oder neue dynamisch generiert 
 Die EventListener oder auch andere Services werden analog den
 `Contao-Hooks registriert <https://docs.contao.org/dev/framework/hooks/#registering-hooks>`_.
 
-.. note:: Vorausgesetzt wird mind. Contao 4.13 und PHP 8
+.. note:: Vorausgesetzt wird mind. Contao 4.13 und PHP 8. Das ausführliche Beispiel am Ende der Seite nutzt
+   allerdings Funktionen (z. B. den ``ContentUrlGenerator`` sowie ``readonly`` Klassen) und setzt daher
+   mind. Contao 5.3 und PHP 8.2 voraus.
 
 
 .. _register-services-with-attribute:
@@ -93,7 +95,7 @@ siehe Punkt 2 - oder man fügt folgende Zeilen in die ``services.yml``, um ein a
 
 
 .. _register-services-with-services:
-2 Registrierung ohne Attribut per services.yml
+2. Registrierung ohne Attribut per services.yml
 ----------------------------------------------
 
 Als Alternative zur Registrierung per Attribut kann man den Aufruf über die `services.yml` einbinden - insbesondere,
@@ -247,7 +249,64 @@ Namespaces arbeiten möchte. In dem Fall, würde man weitere Unterordner z. B. `
 
 Ist dies nicht der Fall, können alle Dateien direkt in ``src/`` mit dem Namespace z. B. ``AppBundle``.
 
-Mehr dazu: demnächst...
+
+.. _register-services-example-of-services:
+Beispiele von Services und deren Einbindung
+-------------------------------------------
+
+.. note:: Vorausgesetzt für die Beispiele wird mind. Contao 5.3 und PHP 8.2.
+
+In den zwei Dateien sind typische Services aufgeführt und wie diese eingebunden werden können:
+
+.. literalinclude:: ./register-services/service.yaml
+   :language: yaml
+   :linenos:
+
+.. literalinclude:: ./register-services/MetaModelsServiceExamplesListener.php
+   :language: php
+   :linenos:
+
+
+.. _register-services-security:
+Den aktuellen Benutzer ermitteln (Security)
+-------------------------------------------
+
+Um den aktuell eingeloggten Frontend-Benutzer zu ermitteln, gibt es im Beispiel drei Wege, die auf
+unterschiedlichen Ebenen arbeiten. Empfohlen ist der erste Weg über den ``security.helper``.
+
+**Empfohlen: `security.helper`**
+
+Der ``security.helper`` (``Symfony\Bundle\SecurityBundle\Security``) bündelt den ``AuthorizationChecker``
+und die ``TokenStorage``. Er ist der einzige der drei Wege, der sowohl **Rechte prüfen** (``isGranted()``)
+*als auch* den User holen (``getUser()``) kann. ``getUser()`` liefert das Symfony-User-Objekt; das
+Contao-``MemberModel`` mit allen Datenbankfeldern lädt man anschließend per ``findByUsername()`` nach.
+
+* *Vorteil:* moderner Standard, deckt Rechteprüfung und User-Ermittlung ab.
+* *Nachteil:* für die reinen DB-Felder ist ein zusätzlicher Query nötig.
+
+**Alternative 1: `contao.framework` (Legacy)**
+
+Der klassische Contao-Weg über den Framework-Adapter. Wichtig: Für den *aktuellen* Benutzer ist das
+Singleton ``getInstance()`` gedacht - ``createInstance()`` würde eine neue, leere Instanz erzeugen und wäre
+damit falsch.
+
+* *Vorteil:* liefert direkt das Contao-User-Objekt inkl. DB-Feldern (z. B. ``$member->email``) ohne
+  zusätzlichen Query.
+* *Nachteil:* Contao-spezifisch, keine Rechteprüfung, veraltetes Muster, nur im Frontend-Scope sinnvoll.
+
+**Alternative 2: `security.token_storage` (Low-Level)**
+
+Die reine Symfony-Variante liefert nur Token bzw. User - **ohne** ``AuthorizationChecker``. Sie ist genau die
+Basis, auf der der ``security.helper`` intern aufsetzt.
+
+* *Vorteil:* minimal, funktioniert überall.
+* *Nachteil:* kann keine Rechte prüfen; das null-Handling (nicht eingeloggt = kein Token) muss selbst
+  behandelt werden.
+
+Kurz: ``security.helper`` als Standard verwenden. ``token_storage`` nur, wenn man bewusst *nur* das Token
+braucht, und ``framework``/``getInstance()`` nur für Legacy oder wenn man direkt das Contao-Model mit seinen
+Feldern benötigt.
+
 
 .. |img_register-services_01.png| image:: /_img/screenshots/cookbook/specials/register-services_01.png
 .. |img_register-services_02.png| image:: /_img/screenshots/cookbook/specials/register-services_02.png

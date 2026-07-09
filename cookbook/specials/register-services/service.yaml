@@ -1,0 +1,25 @@
+services:
+  # Example of a listener..
+  AppBundle\EventListener\MetaModelsServiceExamplesListener:
+    public: true
+    arguments:
+      $factory: '@metamodels.factory'
+      $filterFactory: '@metamodels.filter_setting_factory'
+      $renderFactory: '@metamodels.render_setting_factory'
+      $connection: '@database_connection'
+      $logger: '@monolog.logger.contao'
+      $mailer: '@mailer'
+      $notificationCenter: '@Terminal42\NotificationCenterBundle\NotificationCenter'
+      $requestStack: '@request_stack'
+      $security: '@security.helper'
+      $tokenStorage: '@security.token_storage'
+      $framework: '@contao.framework'
+      $scopeMatcher: '@contao.routing.scope_matcher'
+      $scopeDeterminator: '@cca.dc-general.scope-matcher'
+      $urlGenerator: '@contao.routing.content_url_generator'
+      $httpClient: '@http_client'
+      $tokenParser: '@contao.string.simple_token_parser'
+      $inserttagParser: '@contao.insert_tag.parser'
+      $rootPath: '%kernel.project_dir%'
+    tags:
+      - { name: kernel.event_listener, event: dc-general.model.pre-persist, method: onMetaModelsServiceExamples }
