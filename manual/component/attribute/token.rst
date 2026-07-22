@@ -11,17 +11,17 @@ kryptographisch zufällige, unveränderliche Zeichenfolge (Token). Typische Eins
 * Interne Referenz-IDs, die stabil bleiben müssen
 
 Das Token wird genau einmal generiert — beim ersten Speichern, solange das Feld noch
-leer ist. Jede weitere Speicherung des Datensatzes lässt den bestehenden Token
-unverändert. Auch ein direkter Aufruf von ``setDataFor()`` überschreibt einen
-vorhandenen Token nicht (Write-once-Schutz auf Datenbankebene).
+leer ist. Jede weitere Speicherung des Datensatzes lässt das bestehende Token
+unverändert. Auch ein direkter Aufruf von ``setDataFor()`` überschreibt ein
+vorhandenes Token nicht (Write-once-Schutz auf Datenbankebene).
 
 .. note:: Das Token ist immer eindeutig. Die Option "Eindeutige Werte" in den
    allgemeinen Attribut-Einstellungen ist deshalb fest aktiv und kann nicht
    deaktiviert werden.
 
 .. warning:: Beim Duplizieren (Kopieren) eines Datensatzes im Backend wird kein
-   Token übernommen. Das neue Item erhält beim Speichern automatisch einen eigenen,
-   neuen Token.
+   Token übernommen. Das neue Item erhält beim Speichern automatisch ein eigenes,
+   neues Token.
 
 
 Installation
@@ -163,7 +163,7 @@ kann projektspezifisch in der ``config/config.yaml`` angepasst werden:
    meta_models_attribute_token:
        max_retries: 5   # Standard: 3
 
-Bei jedem Versuch wird geprüft, ob der generierte Token bereits in der Datenbank
+Bei jedem Versuch wird geprüft, ob das generierte Token bereits in der Datenbank
 vorhanden ist. Schlägt die Eindeutigkeitsprüfung dreimal (oder so oft wie konfiguriert)
 fehl, wird eine ``RuntimeException`` geworfen.
 
@@ -215,9 +215,9 @@ Die verfügbaren Methoden des Events:
    * - ``getItem(): IItem``
      - Das MetaModel-Item, das gerade gespeichert wird.
    * - ``setToken(string $token)``
-     - Setzt einen eigenen Token; verhindert die eingebaute Generierung.
+     - Setzt ein eigenes Token; verhindert die eingebaute Generierung.
    * - ``getToken(): ?string``
-     - Gibt den vom Listener gesetzten Token zurück, oder ``null``.
+     - Gibt das vom Listener gesetzte Token zurück, oder ``null``.
    * - ``isTokenProvided(): bool``
      - ``true``, wenn ein Listener bereits ``setToken()`` aufgerufen hat.
 
@@ -230,7 +230,7 @@ bleibt.
 
 **Datenbank-Speicherung**
 
-Der Token wird als ``varchar(255) NULL`` in der MetaModel-Tabelle gespeichert. Ein
+Das Token wird als ``varchar(255) NULL`` in der MetaModel-Tabelle gespeichert. Ein
 leerer Wert wird als ``NULL`` abgelegt (kompatibel mit MySQL Strict Mode).
 
 
