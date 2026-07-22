@@ -40,7 +40,7 @@ Voraussetzungen für die Installation:
 **Contao 5.3:**
 
 .. note:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
-   Fundrasingsumme von 3.685€ frei geschaltet. |br|
+   Fundrasingsumme von 4.685 frei geschaltet. |br|
    Für einen Zugang bitte eine E-Mail an info@e-spin.de
 
 * ^PHP 8.2
@@ -106,7 +106,7 @@ z.B. mit dem folgenden Code ausgegeben werden (Ziffer entspricht der ID der Merk
 .. code-block:: html
    :linenos:
 
-   <a href="<?= $arrItem['actions']['notelist_1']['href'] ?>" class="<?= $arrItem['actions']['notelist_1']['class'] ?>"><?= $arrItem['actions']['notelist_1']['label'] ?></a>
+   <a href="<?= $arrItem['actions']['notelist_1_button']['href'] ?>" class="<?= $arrItem['actions']['notelist_1_button']['class'] ?>"><?= $arrItem['actions']['notelist_1_button']['label'] ?></a>
 
 |img_notelist_fe_list|
 
@@ -357,6 +357,8 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 * `dpmed GmbH <https://www.dpmed.de>`_: 350 €
 * `afm werbestudio & agentur <https://www.afm-werbestudio.de/>`_: 350 €
+* `Nationalfonds AT <https://www.nationalfonds.org/>`_: 350 €
+* `AntwortInternet <https://www.antwortinternet.com/>`_: 350 €
 
 
 **Version 2.0 bis 2.3:**
