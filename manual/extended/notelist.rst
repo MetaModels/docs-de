@@ -67,10 +67,16 @@ gelangt.
 |img_notelist_icon|
 
 Legt man eine neue Merkliste an, so kann ein Name für die Merkliste vergeben werden.
-Als "Storage adapter" stehen z.Z. die PHP-Session und die Contao-Session zur Verfügung.
+Als "Speicheradapter" stehen z.Z. die "PHP-Session" und die "Contao-Session" zur Verfügung.
 Bei der Contao-Session werden die Werte einer Merkliste bei eingeloggten Mitgliedern
 automatisch in den Sessionwerten der Datenbank gespeichert und stehen bei erneutem
 Login wieder zur Verfügung.
+
+.. note:: Änderung ab Version 2.4 (Contao 5.3): In Contao 5.3 wurde das Sessionhandling umgebaut, so dass beim
+   Speicheradapter nur noch "Contao-Session" oder eigene Implementierungen zur Verfügung stehen. Wenn man als
+   Mitglied im Frontend eingeloggt ist, werden die Merklistendaten automatisch in der eigenen Contao-Session
+   persistent abgelegt. Diese Daten haben auch Vorrang, wenn ein Seitenbesucher die Merkliste befüllt und sich
+   anschließend einloggt - nach dem Login werden die Daten aus den Mitgliederdaten angezeigt.
 
 Über die Filterauswahl kann die Aufnahme auf Datensätze mit bestimmten Eigenschaften
 wie z.B. die "Abteilung" oder Mitgliedergruppen eingeschränkt werden. Die Filterung
