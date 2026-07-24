@@ -9,6 +9,43 @@ können als eigene Templatevarianten angepasst und geladen werden.
 Neben den hier aufgeführten Templates können einzelne Attribute oder Erweiterungen separate Templates mitbringen.
 
 
+.. _component_templates_twig:
+Twig-Templates (ab MetaModels 2.5)
+----------------------------------
+
+Ab MetaModels 2.5 kann jedes der unten beschriebenen Templates zusätzlich als **Twig-Template**
+(``.html.twig``) bereitgestellt werden. Existiert eine Twig-Variante, hat sie **Vorrang** vor dem
+klassischen ``.html5`` (Frontend und Backend, nur für die HTML-Ausgabe - das ``.text``-Format bleibt
+auf der bisherigen Engine). Fehlt die Twig-Variante, wird unverändert das ``.html5`` verwendet.
+
+Namensschema:
+
+* Das MetaModels-eigene Rendering (Listen-/Item- und Attribut-Templates sowie die Filter-Widgets) liegt
+  im Contao-Namespace ``@Contao`` unter der Untergruppe ``metamodels/``:
+
+  * Item/Liste ``metamodel_prerendered`` → ``@Contao/metamodels/item/prerendered.html.twig``
+  * Attribut ``mm_attr_text`` → ``@Contao/metamodels/attribute/text.html.twig``
+  * Filter-Widget ``mm_filteritem_default`` → ``@Contao/metamodels/filter/default.html.twig``
+
+* Die Contao-Inhaltselement-/Modul-Wrapper behalten ihren flachen Namen im ``@Contao``-Namespace, z. B.
+  ``@Contao/ce_metamodel_list.html.twig``, ``@Contao/mm_filter_default.html.twig``,
+  ``@Contao/mm_clearall_default.html.twig``, ``@Contao/mm_pagination.html.twig`` sowie das separate
+  ``@Contao/mm_actionbutton.html.twig`` (die Listen-Templates binden es per ``include`` ein, sodass
+  eigene Action-Button-Templates es weiterhin überschreiben können).
+
+In den Twig-Templates stehen dieselben Variablen wie im ``.html5`` zur Verfügung (z. B. ``{{ raw }}``,
+``{{ data }}``, ``{{ additional_class }}``). Weil die Templates im gemanagten ``@Contao``-Namespace
+liegen, sind sie im **Template Studio** von Contao bearbeitbar und über Theme-Ordner sowie das
+Projekt-``templates/``-Verzeichnis überschreibbar. Ein bestehendes Override am flachen ``.html5``-Namen
+(z. B. ``templates/metamodel_prerendered.html5``) behält übergangsweise Vorrang - diese Rücksichtnahme
+entfällt in MetaModels 3.0.
+
+Eigene Twig-Templates eines Pakets liegen - wie in Contaos Bundles - unter einem Namespace-Root
+(Ordner ``twig/`` mit leerer Marker-Datei ``.twig-root``); im Projekt genügt der Ordner ``templates/``.
+
+Siehe auch :ref:`new_in_mm250`.
+
+
 .. _component_templates_fe-list:
 Frontend-Liste
 --------------
