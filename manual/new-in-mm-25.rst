@@ -99,6 +99,16 @@ Mehrsprachigkeit
 Attribute
 ---------
 
+Für die Attribut-Templates werden schrittweise **Twig-Varianten** unter
+``metamodels/attribute/<typ>`` ergänzt (siehe Abschnitt „Twig-Templates"). Die bisherigen
+``.html5``-Templates bleiben als Fallback erhalten.
+
+* Bewertung (rating)
+    * die **MooTools-Variante wurde entfernt** (Template ``mm_attr_rating_moo.html5`` sowie die
+      MooTools-JS-Dateien ``moostarrating.js``/``moostarrating_src.js``) - es bleibt die
+      Vanilla-Star-Rating-Variante
+    * neue Twig-Templates ``metamodels/attribute/rating`` (bindet das JS via ``{% add … to body %}``
+      ein) und ``metamodels/attribute/rating_raw``
 
 
 Filter
