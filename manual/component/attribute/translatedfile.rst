@@ -199,7 +199,14 @@ Sonderfunktionen
 
 Die Dateireferenzen werden sprachspezifisch in ``tl_metamodel_translatedlongblob``
 gespeichert (Felder: ``att_id``, ``item_id``, ``langcode``, ``value`` als
-``blob``). Die MetaModel-Tabelle erhält keine eigene Spalte.
+``blob``). Die MetaModel-Tabelle erhält keine eigene Spalte. Die manuell
+festgelegte Reihenfolge mehrerer Dateien steckt im Wert selbst.
+
+.. note:: Bis MetaModels 2.4 hielt das Feld ``value_sorting`` derselben Tabelle die
+   Sortierreihenfolge. Contao hat die zugehörige Widget-Option ``orderField`` mit
+   Version 5.0 entfernt, daher entfällt das Feld mit MetaModels 2.5 - eine Migration
+   überführt die vorhandene Reihenfolge in den Wert und löscht das Feld anschließend.
+   Siehe :ref:`new_in_mm250`.
 
 **Sprachabhängige Dateien**
 
@@ -216,6 +223,12 @@ zurück.
 Die Reihenfolge von mehreren Dateien kann in den Render-Einstellungen (für die
 Ausgabe) und in den Eingabemaske-Einstellungen (für den Frontend-Upload)
 unabhängig voneinander konfiguriert werden.
+
+Unabhängig davon lässt sich die Reihenfolge in der Eingabemaske **je Sprache
+manuell per Drag & Drop** festlegen: In den Widget-Modi *Galerie* und *Downloads*
+sind die ausgewählten Dateien bei aktiver *Mehrfachauswahl* sortierbar. An den
+Vorschaubildern befindet sich außerdem ein roter Button, mit dem sich eine
+einzelne Datei aus der Auswahl entfernen lässt, ohne den Dateipicker zu öffnen.
 
 
 .. |br| raw:: html

@@ -87,6 +87,12 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   bleibt erhalten.
 * **Contao-Altlasten entfernt:** Nicht mehr benötigte Klassen und Pfade aus Contao-Versionen kleiner 5.7 wurden
   entfernt (u. a. ``TreeSelect``, ``FileSelect`` sowie der tote File-Selector-Pfad im ``FileTree``-Widget).
+* **Sortierbare Auswahllisten auf Contao-5-Technik umgestellt:** Das ``fileTree``-Widget und die Baum-Picker
+  nutzen jetzt die Stimulus-Controller ``contao--sortable`` und ``contao--input-map`` von Contao anstelle des
+  mit Contao 5.7 als veraltet markierten ``Backend.makeMultiSrcSortable()``. Der Button zum Entfernen einer
+  Datei wird dabei serverseitig gerendert statt per JavaScript nachgerüstet. Zusätzlich wertet das
+  ``fileTree``-Widget die Widget-Option ``isSortable`` aus, mit der Contao seit Version 5.0 die entfallene
+  Option ``orderField`` ersetzt - letztere wird weiterhin unterstützt. An der Bedienung ändert sich nichts.
 * **Tooltips der Operations-Buttons korrigiert:** In den Listenansichten wurde die Anzeige der Tooltips (inkl. der
   Icons zum Öffnen von Kindtabellen) korrigiert.
 
@@ -109,6 +115,22 @@ Für die Attribut-Templates werden schrittweise **Twig-Varianten** unter
       Vanilla-Star-Rating-Variante
     * neue Twig-Templates ``metamodels/attribute/rating`` (bindet das JS via ``{% add … to body %}``
       ein) und ``metamodels/attribute/rating_raw``
+
+* Datei (file) und Übersetzte Datei (translatedfile)
+    * die **separate Spalte für die Sortierung entfällt** - die Reihenfolge mehrerer Dateien steckt nun im Wert
+      selbst, genau wie Contao es seit Version 5.0 handhabt
+    * bisher legte MetaModels bei gesetzter Option *Mehrere Dateien* (``file_multiple``) eine zusätzliche Spalte
+      ``<spaltenname>__sort`` in der Item-Tabelle an; bei *Übersetzte Datei* übernahm die Spalte ``value_sorting``
+      in ``tl_metamodel_translatedlongblob`` diese Aufgabe
+    * Hintergrund: Contao hat die Widget-Option ``orderField`` mit Version 5.0 entfernt - das ``fileTree``-Widget
+      kennt nur noch ``isSortable`` und legt die Reihenfolge direkt im Feldwert ab. Die manuelle Sortierung war
+      damit unter Contao 5 faktisch wirkungslos geworden
+    * eine **Migration** überführt die vorhandene Reihenfolge in den Wert und löscht die Spalte anschließend:
+      Einträge aus der Sortier-Spalte zuerst, danach die restlichen Dateien in ihrer bisherigen Reihenfolge
+    * die virtuellen Hilfsattribute ``<spaltenname>__sort`` entfallen; die Klassen ``FileOrder`` bzw.
+      ``TranslatedFileOrder`` sind als *deprecated* markiert und werden in MM 3.0 entfernt
+    * an der Bedienung ändert sich nichts: mehrere Dateien werden in der Eingabemaske weiterhin per
+      Drag & Drop sortiert und über den Button am Vorschaubild einzeln aus der Auswahl entfernt
 
 
 Filter
@@ -154,6 +176,13 @@ im Blick behalten werden:
   ``metamodels/<gruppe>/<leaf>.html.twig`` verwenden
 * **DC_General:** Anpassungen zum Referer-Handling und der Wegfall des Buttons „Speichern und zurück" (saveNback)
   beachten; eigene Templates/Programmierungen, die auf ``saveNback`` bauen, anpassen
+* **Datei-Attribute:** die Sortier-Spalten ``<spaltenname>__sort`` bzw. ``value_sorting`` werden per Migration in
+  den Wert überführt und danach **gelöscht** - vorher unbedingt eine Datensicherung anlegen, das Löschen der
+  Spalten ist nicht umkehrbar. Eigene Programmierungen oder Auswertungen, die direkt auf diese Spalten zugreifen,
+  müssen angepasst werden; die Reihenfolge steht jetzt im Wert selbst. Im geparsten Wert bleiben die bisherigen
+  Schlüssel ``bin_sorted``/``value_sorted``/``path_sorted``/``meta_sorted`` (Datei) und ``value_sorting``
+  (Übersetzte Datei) erhalten, sie entsprechen nun dem unsortierten Pendant. Der bereits seit 2.1 als veraltet
+  markierte Schlüssel ``sort`` entfällt
 
 
 Re-Finanzierung

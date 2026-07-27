@@ -200,15 +200,26 @@ Sonderfunktionen
 **Datenbank-Speicherung**
 
 Einzelne Dateien werden als binäre UUID gespeichert. Mehrere Dateien werden als
-serialisiertes Array von UUIDs in einem ``blob NULL``-Feld abgelegt. Optional
-wird eine zweite Spalte ``<spaltenname>__sort`` für die Sortierreihenfolge
-angelegt.
+serialisiertes Array von UUIDs in einem ``blob NULL``-Feld abgelegt. Die manuell
+festgelegte Reihenfolge steckt dabei im Wert selbst.
+
+.. note:: Bis MetaModels 2.4 wurde bei gesetzter Option *Mehrfachauswahl* zusätzlich
+   die Spalte ``<spaltenname>__sort`` für die Sortierreihenfolge angelegt. Contao hat
+   die zugehörige Widget-Option ``orderField`` mit Version 5.0 entfernt, daher entfällt
+   die Spalte mit MetaModels 2.5 - eine Migration überführt die vorhandene Reihenfolge
+   in den Wert und löscht die Spalte anschließend. Siehe :ref:`new_in_mm250`.
 
 **Sortierung bei Mehrfachdateien**
 
 Die Reihenfolge von mehreren Dateien kann sowohl in den Render-Einstellungen
 (für die Ausgabe) als auch in den Eingabemaske-Einstellungen (für den Frontend-
 Upload) unabhängig voneinander konfiguriert werden.
+
+Unabhängig davon lässt sich die Reihenfolge in der Eingabemaske **manuell per
+Drag & Drop** festlegen: In den Widget-Modi *Galerie* und *Downloads* sind die
+ausgewählten Dateien bei aktiver *Mehrfachauswahl* sortierbar. An den
+Vorschaubildern befindet sich außerdem ein roter Button, mit dem sich eine
+einzelne Datei aus der Auswahl entfernen lässt, ohne den Dateipicker zu öffnen.
 
 
 .. |img_file| image:: /_img/icons/file.png
