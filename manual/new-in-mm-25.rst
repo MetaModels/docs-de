@@ -116,6 +116,26 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
 Mehrsprachigkeit
 ----------------
 
+* **Kopieren von Elementen mit übersetzten Attributen korrigiert:** Wurde ein Element über die Zwischenablage
+  kopiert oder eingefügt, blieben die Werte der übersetzten Attribute leer. Dahinter steckten zwei voneinander
+  unabhängige Ursachen: Das Ereignis ``post-duplicate`` wird ausgelöst, **bevor** die Kopie gespeichert ist - das
+  neue Element hatte also noch keine ID, an der die Übersetzungen hätten hängen können. Die Übernahme läuft daher
+  nun im Anschluss an das Einfügen. Zusätzlich erfasste die Prüfung nur Attribute **mit** Fallback-Steuerung
+  (``ITranslatedWithFallbackControl``), sodass Attribute übersprungen wurden, die lediglich ``ITranslated``
+  implementieren; sie wird nun auf alle übersetzten Attribute angewendet.
+* **Kopieren nicht übersetzter Attribute korrigiert:** Im selben Zusammenhang gefunden - beim Kopieren wurde das
+  neue Element direkt über den Konstruktor aufgebaut, wodurch kein Attribut als geändert markiert war und das
+  Speichern anschließend **sämtliche** Werte übersprang.
+* **Sprachen außerhalb der Contao-Sprachliste:** Unterstützt ein MetaModel eine Sprache, die in den
+  Contao-Einstellungen nicht als Sprache aktiviert ist (z. B. ``en_DE``), erzeugte die Sprachauswahl der
+  Eingabemaske eine PHP-Warnung und einen leeren Eintrag. Es wird nun der ICU-Anzeigename herangezogen und
+  zuletzt das Sprachkürzel selbst, sodass die Sprache in jedem Fall auswählbar bleibt.
+* **Eigene Übersetzungsschlüssel für die Sortier-Links:** Die Beschriftung der Sortier-Links in Listen im Frontend
+  nutzt nicht mehr Contaos Schlüssel ``MSC.orderMetaModelListByAscending``/``…Descending``, sondern eigene in der
+  Domain ``metamodels_default``: ``sorting_direction_label`` mit den **benannten** Parametern
+  ``%attribute_name%`` und ``%direction%`` sowie ``sorting_direction_asc`` und ``sorting_direction_desc``. Wer die
+  bisherigen Contao-Schlüssel überschrieben hatte, muss auf die neuen umstellen. Die französischen Übersetzungen
+  wurden dabei ergänzt.
 
 
 Attribute
@@ -192,6 +212,10 @@ im Blick behalten werden:
   ``metamodels/<gruppe>/<leaf>.html.twig`` verwenden
 * **DC_General:** Anpassungen zum Referer-Handling und der Wegfall des Buttons „Speichern und zurück" (saveNback)
   beachten; eigene Templates/Programmierungen, die auf ``saveNback`` bauen, anpassen
+* **Sortier-Links:** wer die Contao-Schlüssel ``MSC.orderMetaModelListByAscending``/``…Descending`` für die
+  Beschriftung der Sortier-Links überschrieben hatte, stellt auf ``sorting_direction_label`` (mit
+  ``%attribute_name%`` und ``%direction%``), ``sorting_direction_asc`` und ``sorting_direction_desc`` in der
+  Domain ``metamodels_default`` um
 * **DC_General-Backend-JavaScript:** wer eigene DC_General-Templates überschreibt, eigenes JavaScript gegen deren
   Markup laufen lässt oder die mitgelieferten JS-Dateien direkt einbindet, muss nachziehen - MooTools ist raus,
   die Marker-Klassen (``click2edit``, ``picker_selector``, ``sbtog``) und die ``onclick``-Attribute sind ersetzt,
