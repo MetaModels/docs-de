@@ -18,15 +18,23 @@ MetaModels 2.5 setzt auf **Contao 5.7** und **PHP 8.4** auf.
 Das wichtigste neue Feature ist die Unterstützung von **Twig-Templates** zusätzlich zu den bisherigen
 ``.html5``-Templates.
 
+
 Twig-Templates (NEU)
-^^^^^^^^^^^^^^^^^^^^^
+....................
 
 Jedes MetaModels-Template kann nun zusätzlich als **Twig-Template** angeboten werden. Existiert für ein Template
 eine Twig-Variante, hat sie **Vorrang** vor dem klassischen ``.html5``-Template - genau wie in Contao selbst.
 Fehlt die Twig-Variante, wird unverändert das ``.html5`` gerendert (voller Rückwärtskompatibilitäts-Fallback).
 
-Der Vorrang gilt sowohl im **Frontend als auch im Backend**. Nur die sichtbare Ausgabe (Format ``html5``) wird
-über Twig gerendert; die Textausgabe für Suchindex und Sortierung bleibt auf der bisherigen Engine.
+Der Vorrang gilt sowohl im **Frontend als auch im Backend** und für **beide Ausgabeformate**: die sichtbare
+Ausgabe (Format ``html5``) und die Textausgabe (Format ``text``, genutzt für Suchindex und Sortierung).
+Die Textausgabe wird über ein eigenes Template mit der Endung ``.text.html.twig`` gerendert - aus dem
+bisherigen ``mm_attr_text.text`` wird also ``@Contao/metamodels/attribute/text.text.html.twig``. Die
+Doppelung im Namen des Text-Attributs ist kein Tippfehler: der erste Teil ist der Attributtyp, der zweite
+das Format. Fehlt eine Twig-Variante, wird auch hier unverändert das Legacy-Template genutzt.
+
+.. note:: Twig-Textvarianten werden von MetaModels **nur für die Gruppe** ``attribute`` ausgeliefert - dort
+   entsteht der Inhalt des Suchindex. Für ``filter`` und ``item`` gibt es keine.
 
 **Namensschema:** Die Twig-Templates liegen im gemanagten ``@Contao``-Namespace in einer eigenen Untergruppe
 ``metamodels/``. Aus dem bisherigen (flachen) Template-Namen wird der Twig-Identifier gebildet, indem das
@@ -95,6 +103,14 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   Option ``orderField`` ersetzt - letztere wird weiterhin unterstützt. An der Bedienung ändert sich nichts.
 * **Tooltips der Operations-Buttons korrigiert:** In den Listenansichten wurde die Anzeige der Tooltips (inkl. der
   Icons zum Öffnen von Kindtabellen) korrigiert.
+* **MooTools vollständig entfernt:** Das gesamte Backend-JavaScript des DC_General ist auf Vanilla-JS und die
+  Stimulus-Controller von Contao 5.7 umgestellt. Das betrifft auch das **Markup**: die veralteten Marker-Klassen
+  ``click2edit``, ``picker_selector`` und die ID ``sbtog`` sind aus den Templates verschwunden, ebenso sämtliche
+  ``onclick``-Attribute mit ``Backend.*``-Aufrufen. Die mitgelieferten JS-Dateien wurden dabei umbenannt
+  (``dcGeneralAjax.js`` → ``generalAjax.js``, ``vanillaGeneral.js`` → ``generalBase.js``,
+  ``generalDriver_src.js`` → ``generalDriver.js``); einen Build-Schritt gibt es nicht mehr, die ausgelieferte
+  Datei **ist** die Quelle. Wer eigene DC_General-Templates überschreibt oder diese Dateien direkt einbindet,
+  muss nachziehen - Details in ``docs/upgrade-2.5.md`` des DC_General.
 
 
 Mehrsprachigkeit
@@ -176,6 +192,10 @@ im Blick behalten werden:
   ``metamodels/<gruppe>/<leaf>.html.twig`` verwenden
 * **DC_General:** Anpassungen zum Referer-Handling und der Wegfall des Buttons „Speichern und zurück" (saveNback)
   beachten; eigene Templates/Programmierungen, die auf ``saveNback`` bauen, anpassen
+* **DC_General-Backend-JavaScript:** wer eigene DC_General-Templates überschreibt, eigenes JavaScript gegen deren
+  Markup laufen lässt oder die mitgelieferten JS-Dateien direkt einbindet, muss nachziehen - MooTools ist raus,
+  die Marker-Klassen (``click2edit``, ``picker_selector``, ``sbtog``) und die ``onclick``-Attribute sind ersetzt,
+  die JS-Dateien umbenannt
 * **Datei-Attribute:** die Sortier-Spalten ``<spaltenname>__sort`` bzw. ``value_sorting`` werden per Migration in
   den Wert überführt und danach **gelöscht** - vorher unbedingt eine Datensicherung anlegen, das Löschen der
   Spalten ist nicht umkehrbar. Eigene Programmierungen oder Auswertungen, die direkt auf diese Spalten zugreifen,
