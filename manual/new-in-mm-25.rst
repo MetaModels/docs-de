@@ -103,6 +103,13 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   Option ``orderField`` ersetzt - letztere wird weiterhin unterstützt. An der Bedienung ändert sich nichts.
 * **Tooltips der Operations-Buttons korrigiert:** In den Listenansichten wurde die Anzeige der Tooltips (inkl. der
   Icons zum Öffnen von Kindtabellen) korrigiert.
+* **Dienste werden über den Konstruktor übergeben:** Mehrere Klassen des DC_General holten benötigte Dienste
+  bisher zur Laufzeit aus dem Symfony-Container; sie bekommen sie nun als Konstruktor-Argument. Für den Betrieb
+  ändert sich nichts, und **kein MetaModels-Paket ist betroffen**. Relevant ist es nur für **eigene
+  Erweiterungen**, die auf dem DC_General aufsetzen: Der Ereignis-Empfänger ``WidgetBuilder`` ist von einer
+  statischen auf eine gewöhnliche Methode umgestellt und sein Konstruktor nimmt jetzt vier Pflichtargumente.
+  Wer ``WidgetBuilder::handleEvent()`` statisch aufruft oder die Klasse mit zwei Argumenten erzeugt, muss
+  anpassen - Einzelheiten in ``docs/upgrade-2.5.md`` des DC_General.
 * **MooTools vollständig entfernt:** Das gesamte Backend-JavaScript des DC_General ist auf Vanilla-JS und die
   Stimulus-Controller von Contao 5.7 umgestellt. Das betrifft auch das **Markup**: die veralteten Marker-Klassen
   ``click2edit``, ``picker_selector`` und die ID ``sbtog`` sind aus den Templates verschwunden, ebenso sämtliche
@@ -226,6 +233,9 @@ im Blick behalten werden:
   Beschriftung der Sortier-Links überschrieben hatte, stellt auf ``sorting_direction_label`` (mit
   ``%attribute_name%`` und ``%direction%``), ``sorting_direction_asc`` und ``sorting_direction_desc`` in der
   Domain ``metamodels_default`` um
+* **Eigene DC_General-Erweiterungen:** der Ereignis-Empfänger ``WidgetBuilder`` hat eine geänderte Signatur
+  (``handleEvent()`` nicht mehr statisch, vier Pflichtargumente im Konstruktor). Nur betroffen, wer ihn selbst
+  aufruft oder erzeugt - die mitgelieferten MetaModels-Pakete tun das nicht
 * **DC_General-Backend-JavaScript:** wer eigene DC_General-Templates überschreibt, eigenes JavaScript gegen deren
   Markup laufen lässt oder die mitgelieferten JS-Dateien direkt einbindet, muss nachziehen - MooTools ist raus,
   die Marker-Klassen (``click2edit``, ``picker_selector``, ``sbtog``) und die ``onclick``-Attribute sind ersetzt,
