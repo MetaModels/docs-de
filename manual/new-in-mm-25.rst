@@ -125,6 +125,15 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   bis die Seite neu geladen wurde. Der Schalter ist nun ein gewöhnlicher Link: Der Server speichert den neuen
   Zustand und liefert die Liste neu aus, sodass **alle** betroffenen Zeilen sofort richtig angezeigt werden. An
   der Bedienung ändert sich nichts.
+* **Seitenleiste unter Listenansichten (NEU):** Umfasst eine Liste mehr Datensätze, als der
+  Seitenblock zeigt, erscheint unter der Tabelle eine Leiste mit „Seite x von y" und den
+  Seitenzahlen - wie man es aus dem Contao-Backend kennt. Zusätzlich führen „Anfang", „Zurück",
+  „Vorwärts" und „Ende" zu den Randseiten. Der Seitenblock-Wähler im Panel bleibt unverändert;
+  die Leiste kommt hinzu, ohne etwas zu ersetzen. Passt alles auf eine Seite, wird sie nicht
+  angezeigt. Die gewählte Seite bleibt wie die übrigen Panel-Einstellungen erhalten, wird aber
+  bewusst zurückgesetzt, sobald ein Filter oder die Blockgröße geändert wird - andernfalls
+  landete man auf einer Seite, die es nach der neuen Auswahl gar nicht mehr gibt. Die
+  Baumansicht hat noch keine Seitenleiste.
 * **Turbo Drive ist im Backend aktiv:** Die Navigation zwischen den MetaModels-Backend-Seiten läuft über Contaos
   Turbo Drive, das heißt ohne vollständigen Seitenaufbau; die Scrollposition bleibt dabei erhalten. Die
   **Formulare** des DC_General sind bewusst ausgenommen (``data-turbo="false"``), weil das automatische Absenden
