@@ -132,8 +132,15 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   die Leiste kommt hinzu, ohne etwas zu ersetzen. Passt alles auf eine Seite, wird sie nicht
   angezeigt. Die gewählte Seite bleibt wie die übrigen Panel-Einstellungen erhalten, wird aber
   bewusst zurückgesetzt, sobald ein Filter oder die Blockgröße geändert wird - andernfalls
-  landete man auf einer Seite, die es nach der neuen Auswahl gar nicht mehr gibt. Die
-  Baumansicht hat noch keine Seitenleiste.
+  landete man auf einer Seite, die es nach der neuen Auswahl gar nicht mehr gibt.
+
+  **Auch die Baumansicht** hat nun eine Seitenleiste, und dort ist zusätzlich der
+  Seitenblock-Wähler neu - bisher war er ausgeblendet und der Baum wurde stets vollständig
+  geladen. Gezählt werden dabei ausschließlich die **Datensätze der obersten Ebene**, bei
+  Varianten also die Basen. Jede Basis erscheint mit allen ihren Varianten; „Seite 1 von 3"
+  bedeutet demnach „Basis 1-3 von 7" und nicht „Zeile 1-3 von 20". Über alle Knoten zu
+  blättern würde Basen von ihren Varianten trennen. Was aufgeklappt ist, bleibt beim Blättern
+  aufgeklappt.
 * **Turbo Drive ist im Backend aktiv:** Die Navigation zwischen den MetaModels-Backend-Seiten läuft über Contaos
   Turbo Drive, das heißt ohne vollständigen Seitenaufbau; die Scrollposition bleibt dabei erhalten. Die
   **Formulare** des DC_General sind bewusst ausgenommen (``data-turbo="false"``), weil das automatische Absenden
