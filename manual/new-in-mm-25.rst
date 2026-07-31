@@ -118,6 +118,19 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   ``generalDriver_src.js`` → ``generalDriver.js``); einen Build-Schritt gibt es nicht mehr, die ausgelieferte
   Datei **ist** die Quelle. Wer eigene DC_General-Templates überschreibt oder diese Dateien direkt einbindet,
   muss nachziehen - Details in ``docs/upgrade-2.5.md`` des DC_General.
+* **Eingabemaske und Speichern beschleunigt:** Beim Aufbau der Eingabemaske wurde das Datenmodell bisher für
+  **jedes einzelne Feld** komplett neu zusammengesetzt - bei einer Maske mit 27 Feldern also 27-mal. Das geschieht
+  nun einmal je Durchlauf. Die Zahl der Attribut-Umwandlungen sinkt dadurch erheblich, im Testfall von 1.785 auf
+  221 Aufrufe je Speichervorgang. Ebenfalls entschärft: Die Ermittlung, ob eine Anfrage aus dem Backend stammt,
+  wurde je Speichervorgang rund 6.000-mal neu durchgeführt und wird jetzt einmal je Anfrage gemerkt. An der
+  Bedienung und am Ergebnis ändert sich nichts, es geht ausschließlich um Laufzeit.
+
+.. note:: **Wer das Backend als langsam empfindet, sollte zuerst die Umgebung prüfen** - nicht MetaModels. In
+   einer Messung an derselben Eingabemaske dauerte ein Speichervorgang im Symfony-**dev**-Modus mit aktivem
+   Xdebug rund 10,9 Sekunden, im dev-Modus ohne Xdebug 4,2 Sekunden und im **prod**-Modus 0,75 Sekunden. Ein
+   dauerhaft eingeschaltetes ``xdebug.mode=debug`` mit ``start_with_request=yes`` allein kostet den Faktor 2,6,
+   weil bei **jeder** Anfrage ein Verbindungsversuch zum Debugger unternommen wird. Auf Produktivsystemen gehört
+   Xdebug abgeschaltet und ``APP_ENV=prod`` gesetzt.
 
 
 Mehrsprachigkeit
