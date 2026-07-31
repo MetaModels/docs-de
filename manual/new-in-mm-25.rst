@@ -118,6 +118,17 @@ Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen
   ``generalDriver_src.js`` → ``generalDriver.js``); einen Build-Schritt gibt es nicht mehr, die ausgelieferte
   Datei **ist** die Quelle. Wer eigene DC_General-Templates überschreibt oder diese Dateien direkt einbindet,
   muss nachziehen - Details in ``docs/upgrade-2.5.md`` des DC_General.
+* **Sichtbarkeits-Schalter folgt jetzt Contaos Modell:** Bisher tauschte der Schalter nach dem Klick per
+  JavaScript nur das Symbol des angeklickten Eintrags aus. Das konnte nur für genau diesen einen Eintrag
+  stimmen: In einer **Variantenhierarchie** erben die Varianten den Wert vom nicht-varianten Datensatz - schaltete
+  man den Elternsatz um, änderte sich der Zustand der Varianten fachlich mit, ihre Symbole blieben aber stehen,
+  bis die Seite neu geladen wurde. Der Schalter ist nun ein gewöhnlicher Link: Der Server speichert den neuen
+  Zustand und liefert die Liste neu aus, sodass **alle** betroffenen Zeilen sofort richtig angezeigt werden. An
+  der Bedienung ändert sich nichts.
+* **Turbo Drive ist im Backend aktiv:** Die Navigation zwischen den MetaModels-Backend-Seiten läuft über Contaos
+  Turbo Drive, das heißt ohne vollständigen Seitenaufbau; die Scrollposition bleibt dabei erhalten. Die
+  **Formulare** des DC_General sind bewusst ausgenommen (``data-turbo="false"``), weil das automatische Absenden
+  bei Anzeigebedingungen die Maske ohne Weiterleitung neu rendert - eine Antwort, die Turbo verwerfen würde.
 * **Eingabemaske und Speichern beschleunigt:** Beim Aufbau der Eingabemaske wurde das Datenmodell bisher für
   **jedes einzelne Feld** komplett neu zusammengesetzt - bei einer Maske mit 27 Feldern also 27-mal. Das geschieht
   nun einmal je Durchlauf. Die Zahl der Attribut-Umwandlungen sinkt dadurch erheblich, im Testfall von 1.785 auf
