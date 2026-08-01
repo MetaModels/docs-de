@@ -34,7 +34,8 @@ Doppelung im Namen des Text-Attributs ist kein Tippfehler: der erste Teil ist de
 das Format. Fehlt eine Twig-Variante, wird auch hier unverändert das Legacy-Template genutzt.
 
 .. note:: Twig-Textvarianten werden von MetaModels **nur für die Gruppe** ``attribute`` ausgeliefert - dort
-   entsteht der Inhalt des Suchindex. Für ``filter`` und ``item`` gibt es keine.
+   entsteht der Inhalt für den ``text``-Knoten in ``raw`` oder für den Suchindex. Für ``filter`` und ``item``
+   gibt es keine.
 
 **Namensschema:** Die Twig-Templates liegen im gemanagten ``@Contao``-Namespace in einer eigenen Untergruppe
 ``metamodels/``. Aus dem bisherigen (flachen) Template-Namen wird der Twig-Identifier gebildet, indem das
@@ -84,7 +85,7 @@ einem mitgelieferten Twig-Template. Bestehende Anpassungen funktionieren also na
 DC_General
 ----------
 
-Der DC_General wurde auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen:
+Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wesentlichen Änderungen:
 
 * **Referer-Handling neu:** Contao 5.7 ermittelt die Referenzseite nicht mehr über die Session, sondern über den
   ``DcaUrlAnalyzer``. Für die MetaModels-Tabellen greift das nicht, daher werden die Links für „Zurück" und
