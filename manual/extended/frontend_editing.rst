@@ -213,7 +213,10 @@ Mehrsprachigkeit
 .. note:: Das Feature steht ab MM 2.4 zur Verfügung.
 
 Bei mehrsprachigen MetaModels wird in der Eingabemaske im Frontend ein Sprachenwechsler wie im Backend ausgegeben. Man
-kann den Sprachenwechsler über das Template ``dcfe_general_edit.html5`` anpassen.
+kann den Sprachenwechsler über das Template ``dcfe_general_edit`` anpassen - ab MM 2.5 wahlweise als ``.html5``
+oder als ``.html.twig``. Dasselbe gilt für die Widgets der Eingabemaske: ``form_upload-on-steroids`` (Dateien),
+``form_mcw`` (MultiColumnWizard) und ``form_text_multiple`` (Mehrfach-Textfeld). Liegen beide Varianten vor, hat
+die Twig-Fassung Vorrang; ein eigenes ``.html5``-Override in höherer Priorität behält seinen.
 
 Es ist zu beachten, dass wie im Backend beim Erstellen eines neuen Datensatzes immer erst die Fallbacksprache
 ausgefüllt werden muss - die Eingabemaske springt automatisch auf die entsprechende Sprache.
