@@ -252,7 +252,15 @@ Filter
 Frontend-Editing (FEE)
 ----------------------
 
+Am Frontend-Editing selbst hat sich in MM 2.5 nichts geändert - der Funktionsumfang entspricht dem aus MM 2.4.
+Zwei Punkte betreffen es aber mittelbar und sind an anderer Stelle beschrieben:
 
+* Die **Templates der Eingabemaske und ihrer Widgets** lassen sich nun auch als Twig-Templates überschreiben -
+  siehe Abschnitt „Twig-Templates".
+* Die **Kennzeichnung übersetzter Felder** durch ein farbiges Abzeichen funktioniert unverändert, musste für
+  Contao 5.7 aber neu gebaut werden - siehe Abschnitt „Mehrsprachigkeit".
+
+Zur Bedienung des Frontend-Editings insgesamt: :ref:`rst_extended_frontend_editing`.
 
 
 Known-Issues
