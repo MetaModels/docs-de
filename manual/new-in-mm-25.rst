@@ -178,16 +178,18 @@ Mehrsprachigkeit
   Contao-Einstellungen nicht als Sprache aktiviert ist (z. B. ``en_DE``), erzeugte die Sprachauswahl der
   Eingabemaske eine PHP-Warnung und einen leeren Eintrag. Es wird nun der ICU-Anzeigename herangezogen und
   zuletzt das Sprachkürzel selbst, sodass die Sprache in jedem Fall auswählbar bleibt.
-* **Fallback-Hinweis im Frontend-Editing wird anders dargestellt:** Die Kennzeichnung, ob ein Feld eine eigene
-  Übersetzung hat oder den Wert aus der Fallback-Sprache zeigt, erschien bisher als farbiges Abzeichen hinter der
-  Beschriftung, mit dem erklärenden Satz als Tooltip. Im Frontend ist daraus eine **farbige Beschriftung** mit
-  angehängtem Kurztext (``[Übersetzt]`` bzw. ``[Fallback]``) und einem **Hilfetext unter dem Feld** geworden -
-  grün für eine eigene Übersetzung, gelb für einen geerbten Wert, wie gehabt.
+* **Fallback-Hinweis im Frontend-Editing:** Die Kennzeichnung, ob ein Feld eine eigene Übersetzung hat oder den
+  Wert aus der Fallback-Sprache zeigt, bleibt wie gewohnt ein **farbiges Abzeichen hinter der Beschriftung** -
+  grün für eine eigene Übersetzung, orange für einen geerbten Wert, der erklärende Satz als Tooltip. An der
+  Darstellung ändert sich für Redakteure also nichts, im Frontend wie im Backend.
 
-  Hintergrund: Contao 5.7 rendert die Formularfelder im Frontend über Twig-Templates, die die Beschriftung
-  escapen. Bis Contao 5.3 gaben die alten ``.html5``-Templates sie unverändert aus, weshalb dort HTML in der
-  Beschriftung möglich war. Ohne die Umstellung wäre das Abzeichen als Quelltext neben jedem übersetzten Feld
-  erschienen. **Im Backend ändert sich nichts** - dort bleibt das Abzeichen samt Tooltip.
+  Unter der Haube war dafür Arbeit nötig: Contao 5.7 rendert die Formularfelder im Frontend über
+  Twig-Templates, welche die Beschriftung escapen - HTML im Label erschiene dort als Quelltext. Bis Contao 5.3
+  gaben die alten ``.html5``-Templates sie unverändert aus, weshalb das Abzeichen einfach im Label stehen
+  konnte. Es wird nun über ein eigenes Template ausgegeben, das MetaModels nur den betroffenen Feldern zuweist;
+  Formulare außerhalb des Frontend-Editings bleiben unberührt. Felder, die noch über ein
+  ``.html5``-Template ausgegeben werden - etwa das Datei-Widget -, bekommen das Abzeichen weiterhin direkt
+  im Label.
 * **Eigene Übersetzungsschlüssel für die Sortier-Links:** Die Beschriftung der Sortier-Links in Listen im Frontend
   nutzt nicht mehr Contaos Schlüssel ``MSC.orderMetaModelListByAscending``/``…Descending``, sondern eigene in der
   Domain ``metamodels_default``: ``sorting_direction_label`` mit den **benannten** Parametern

@@ -233,7 +233,10 @@ Analog zum Backend werden in der FE-Eingabemaske mehrere Hinweise zur aktuellen 
 
   * **[Fallback]** (orange): Der Wert stammt aus der Fallbacksprache – es gibt noch keine eigene Übersetzung
     in der aktuellen Sprache.
-  * **[Translated]** (grün): Das Feld hat eine eigene Übersetzung in der aktuellen Sprache.
+  * **[Übersetzt]** (grün): Das Feld hat eine eigene Übersetzung in der aktuellen Sprache.
+
+  Der erklärende Satz steht als Tooltip am Badge. In der Fallbacksprache selbst gibt es nichts zu
+  kennzeichnen, dort erscheinen keine Badges.
 
 |img_fee-multilanguage2|
 
