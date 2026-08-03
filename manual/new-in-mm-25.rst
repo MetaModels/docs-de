@@ -94,6 +94,9 @@ Für die Praxis heißt das: Wer eines dieser Templates überschreiben will, legt
 ``.html5`` an oder neuerdings ein ``.html.twig`` unter demselben Namen. Ein vorhandenes ``.html5``-Override in
 höherer Priorität behält seinen Vorrang, bestehende Anpassungen laufen also unverändert weiter.
 
+Für eigene Twig-Fassungen der Widget-Templates gibt es dabei eine Regel zu beachten - der ``label``-Block wird
+bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
+
 
 DC_General
 ----------

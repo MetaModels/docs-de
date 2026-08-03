@@ -218,6 +218,13 @@ oder als ``.html.twig``. Dasselbe gilt für die Widgets der Eingabemaske: ``form
 ``form_mcw`` (MultiColumnWizard) und ``form_text_multiple`` (Mehrfach-Textfeld). Liegen beide Varianten vor, hat
 die Twig-Fassung Vorrang; ein eigenes ``.html5``-Override in höherer Priorität behält seinen.
 
+.. important:: Wer ein eigenes Twig-Template für ein Widget schreibt, sollte in dessen ``label``-Block
+   ausschließlich das Label selbst ausgeben. Trägt ein Feld ein Sprach-Badge (siehe „Sprachhinweise in der
+   Eingabemaske" weiter unten), erweitert MetaModels das Template und **ersetzt dessen ``label``-Block
+   vollständig** - alles andere, was dort steht, entfällt bei genau diesen Feldern. Inhalte wie Dateilisten
+   oder ``{% add … to stylesheets %}`` gehören deshalb in den ``field``-Block; an der Ausgabereihenfolge
+   ändert das nichts, da Contao den ``label``-Block ohnehin vor dem ``field``-Block rendert.
+
 Es ist zu beachten, dass wie im Backend beim Erstellen eines neuen Datensatzes immer erst die Fallbacksprache
 ausgefüllt werden muss - die Eingabemaske springt automatisch auf die entsprechende Sprache.
 
