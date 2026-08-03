@@ -120,6 +120,10 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Option ``orderField`` ersetzt - letztere wird weiterhin unterstützt. An der Bedienung ändert sich nichts.
 * **Tooltips der Operations-Buttons korrigiert:** In den Listenansichten wurde die Anzeige der Tooltips (inkl. der
   Icons zum Öffnen von Kindtabellen) korrigiert.
+* **Sprachen außerhalb der Contao-Sprachliste:** Unterstützt ein MetaModel eine Sprache, die in den
+  Contao-Einstellungen nicht als Sprache aktiviert ist (z. B. ``en_DE``), erzeugte die Sprachauswahl der
+  Eingabemaske eine PHP-Warnung und einen leeren Eintrag. Es wird nun der ICU-Anzeigename herangezogen und
+  zuletzt das Sprachkürzel selbst, sodass die Sprache in jedem Fall auswählbar bleibt.
 * **Dienste werden über den Konstruktor übergeben:** Mehrere Klassen des DC_General holten benötigte Dienste
   bisher zur Laufzeit aus dem Symfony-Container; sie bekommen sie nun als Konstruktor-Argument. Für den Betrieb
   ändert sich nichts, und **kein MetaModels-Paket ist betroffen**. Relevant ist es nur für **eigene
@@ -177,43 +181,6 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
    Xdebug abgeschaltet und ``APP_ENV=prod`` gesetzt.
 
 
-Mehrsprachigkeit
-----------------
-
-* **Kopieren von Elementen mit übersetzten Attributen korrigiert:** Wurde ein Element über die Zwischenablage
-  kopiert oder eingefügt, blieben die Werte der übersetzten Attribute leer. Dahinter steckten zwei voneinander
-  unabhängige Ursachen: Das Ereignis ``post-duplicate`` wird ausgelöst, **bevor** die Kopie gespeichert ist - das
-  neue Element hatte also noch keine ID, an der die Übersetzungen hätten hängen können. Die Übernahme läuft daher
-  nun im Anschluss an das Einfügen. Zusätzlich erfasste die Prüfung nur Attribute **mit** Fallback-Steuerung
-  (``ITranslatedWithFallbackControl``), sodass Attribute übersprungen wurden, die lediglich ``ITranslated``
-  implementieren; sie wird nun auf alle übersetzten Attribute angewendet.
-* **Kopieren nicht übersetzter Attribute korrigiert:** Im selben Zusammenhang gefunden - beim Kopieren wurde das
-  neue Element direkt über den Konstruktor aufgebaut, wodurch kein Attribut als geändert markiert war und das
-  Speichern anschließend **sämtliche** Werte übersprang.
-* **Sprachen außerhalb der Contao-Sprachliste:** Unterstützt ein MetaModel eine Sprache, die in den
-  Contao-Einstellungen nicht als Sprache aktiviert ist (z. B. ``en_DE``), erzeugte die Sprachauswahl der
-  Eingabemaske eine PHP-Warnung und einen leeren Eintrag. Es wird nun der ICU-Anzeigename herangezogen und
-  zuletzt das Sprachkürzel selbst, sodass die Sprache in jedem Fall auswählbar bleibt.
-* **Fallback-Hinweis im Frontend-Editing:** Die Kennzeichnung, ob ein Feld eine eigene Übersetzung hat oder den
-  Wert aus der Fallback-Sprache zeigt, bleibt wie gewohnt ein **farbiges Abzeichen hinter der Beschriftung** -
-  grün für eine eigene Übersetzung, orange für einen geerbten Wert, der erklärende Satz als Tooltip. An der
-  Darstellung ändert sich für Redakteure also nichts, im Frontend wie im Backend.
-
-  Unter der Haube war dafür Arbeit nötig: Contao 5.7 rendert die Formularfelder im Frontend über
-  Twig-Templates, welche die Beschriftung escapen - HTML im Label erschiene dort als Quelltext. Bis Contao 5.3
-  gaben die alten ``.html5``-Templates sie unverändert aus, weshalb das Abzeichen einfach im Label stehen
-  konnte. Es wird nun über ein eigenes Template ausgegeben, das MetaModels nur den betroffenen Feldern zuweist;
-  Formulare außerhalb des Frontend-Editings bleiben unberührt. Felder, die noch über ein
-  ``.html5``-Template ausgegeben werden - etwa das Datei-Widget -, bekommen das Abzeichen weiterhin direkt
-  im Label.
-* **Eigene Übersetzungsschlüssel für die Sortier-Links:** Die Beschriftung der Sortier-Links in Listen im Frontend
-  nutzt nicht mehr Contaos Schlüssel ``MSC.orderMetaModelListByAscending``/``…Descending``, sondern eigene in der
-  Domain ``metamodels_default``: ``sorting_direction_label`` mit den **benannten** Parametern
-  ``%attribute_name%`` und ``%direction%`` sowie ``sorting_direction_asc`` und ``sorting_direction_desc``. Wer die
-  bisherigen Contao-Schlüssel überschrieben hatte, muss auf die neuen umstellen. Die französischen Übersetzungen
-  wurden dabei ergänzt.
-
-
 Attribute
 ---------
 
@@ -256,12 +223,20 @@ Frontend-Editing (FEE)
 ----------------------
 
 Am Frontend-Editing selbst hat sich in MM 2.5 nichts geändert - der Funktionsumfang entspricht dem aus MM 2.4.
-Zwei Punkte betreffen es aber mittelbar und sind an anderer Stelle beschrieben:
+Zwei Punkte betreffen es aber mittelbar:
 
 * Die **Templates der Eingabemaske und ihrer Widgets** lassen sich nun auch als Twig-Templates überschreiben -
   siehe Abschnitt „Twig-Templates".
-* Die **Kennzeichnung übersetzter Felder** durch ein farbiges Abzeichen funktioniert unverändert, musste für
-  Contao 5.7 aber neu gebaut werden - siehe Abschnitt „Mehrsprachigkeit".
+* Die **Kennzeichnung übersetzter Felder** durch ein farbiges Abzeichen hinter der Beschriftung funktioniert
+  unverändert - grün für eine eigene Übersetzung, orange für einen aus der Fallbacksprache geerbten Wert, der
+  erklärende Satz als Tooltip. Für Redakteure ändert sich nichts.
+
+  Unter der Haube war dafür Arbeit nötig: Contao 5.7 rendert die Formularfelder im Frontend über
+  Twig-Templates, welche die Beschriftung escapen - HTML im Label erschiene dort als Quelltext. Bis Contao 5.3
+  gaben die alten ``.html5``-Templates sie unverändert aus, weshalb das Abzeichen einfach im Label stehen
+  konnte. Es wird nun über ein eigenes Template ausgegeben, das MetaModels nur den betroffenen Feldern zuweist;
+  Formulare außerhalb des Frontend-Editings bleiben unberührt. Felder, die noch über ein
+  ``.html5``-Template ausgegeben werden, bekommen das Abzeichen weiterhin direkt im Label.
 
 Zur Bedienung des Frontend-Editings insgesamt: :ref:`rst_extended_frontend_editing`.
 
