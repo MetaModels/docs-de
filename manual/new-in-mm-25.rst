@@ -204,6 +204,20 @@ Für die Attribut-Templates werden schrittweise **Twig-Varianten** unter
       wird - dorthin führt kein eigener Aufruf, sondern die Operation in der Elternliste.
     * Im **Frontend-Editing** erscheint das Symbol nicht.
 
+* Levenshtein (levenshtein)
+    * **Schreibweise durchgängig korrigiert:** Der Attributtyp hieß seit seiner ersten Fassung
+      ``levensthein`` - mit vertauschtem ``h`` und ``t``. Klassennamen, Composer-Paket und Template
+      waren schon früher richtiggestellt worden, der Typname selbst, die beiden Index-Tabellen und
+      zwei Spalten in ``tl_metamodel_attribute`` aber nicht. Das ist nun nachgeholt: überall steht
+      ``levenshtein``.
+    * Betroffen sind die Tabellen ``tl_metamodel_levensthein`` und ``tl_metamodel_levensthein_index``,
+      die Spalten ``levensthein_distance`` und ``levensthein_attributes`` sowie der in
+      ``tl_metamodel_attribute`` und ``tl_metamodel_filtersetting`` gespeicherte Typname. Auch die
+      Filterregel des Attributs trug den falschen Namen.
+    * Eine **Migration** benennt beides um und zieht die gespeicherten Typnamen nach - der vorhandene
+      Suchindex bleibt dabei erhalten und muss **nicht** neu aufgebaut werden. Es ist nichts von Hand
+      zu tun.
+
 * Bewertung (rating)
     * die **MooTools-Variante wurde entfernt** (Template ``mm_attr_rating_moo.html5`` sowie die
       MooTools-JS-Dateien ``moostarrating.js``/``moostarrating_src.js``) - es bleibt die
@@ -298,6 +312,12 @@ im Blick behalten werden:
   Markup laufen lässt oder die mitgelieferten JS-Dateien direkt einbindet, muss nachziehen - MooTools ist raus,
   die Marker-Klassen (``click2edit``, ``picker_selector``, ``sbtog``) und die ``onclick``-Attribute sind ersetzt,
   die JS-Dateien umbenannt
+* **Levenshtein-Attribut:** die durchgängige Korrektur von ``levensthein`` auf ``levenshtein`` wird per Migration
+  erledigt, der Suchindex bleibt erhalten. Anpassen muss nur, wer die alten Namen **selbst** verwendet: eigene
+  SQL-Auswertungen oder Exporte auf ``tl_metamodel_levensthein``/``tl_metamodel_levensthein_index`` bzw. auf die
+  Spalten ``levensthein_distance``/``levensthein_attributes``, sowie eigener PHP-Code, der den Typnamen
+  ``levensthein`` hart prüft. Die Klasse ``LevenstheinSearchRule`` bleibt übergangsweise als *deprecated* Alias
+  erhalten und entfällt in MM 3.0
 * **Datei-Attribute:** die Sortier-Spalten ``<spaltenname>__sort`` bzw. ``value_sorting`` werden per Migration in
   den Wert überführt und danach **gelöscht** - vorher unbedingt eine Datensicherung anlegen, das Löschen der
   Spalten ist nicht umkehrbar. Eigene Programmierungen oder Auswertungen, die direkt auf diese Spalten zugreifen,

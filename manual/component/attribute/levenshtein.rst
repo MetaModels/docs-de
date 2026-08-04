@@ -98,9 +98,16 @@ Sonderfunktionen
 **Speicherung**
 
 Das Attribut speichert keine eigenen Werte in der MetaModel-Tabelle. Der
-Suchindex wird in einer eigenen Tabelle ``tl_metamodel_levensthein_index``
-abgelegt (Spalten: ``word``, ``transliterated``). Die MetaModel-Tabelle
-erhält keine eigene Spalte.
+Suchindex wird in zwei eigenen Tabellen abgelegt: ``tl_metamodel_levenshtein``
+enthält je indiziertem Datensatz einen Eintrag, ``tl_metamodel_levenshtein_index``
+die daraus gewonnenen Wörter (Spalten: ``word``, ``transliterated``). Die
+MetaModel-Tabelle erhält keine eigene Spalte.
+
+.. note:: Bis MetaModels 2.4 waren der Attributtyp, die beiden Tabellen und zwei Spalten
+   in ``tl_metamodel_attribute`` als ``levensthein`` fehlgeschrieben (``h`` und ``t``
+   vertauscht). Ab MetaModels 2.5 heißt alles einheitlich ``levenshtein``; eine Migration
+   benennt Bestandsinstallationen automatisch um und erhält dabei den Suchindex, siehe
+   :ref:`new_in_mm250`.
 
 **Index-Aktualisierung**
 

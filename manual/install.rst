@@ -196,7 +196,7 @@ und Filter abfragen:
    
    -- Attribute
    SELECT type FROM `tl_metamodel_attribute` GROUP BY type ORDER BY type
-   -- Attribut "levensthein" wurde umbenannt nach "levenshtein"
+   -- Attribut "levensthein" heißt seit MM 2.5 "levenshtein" (Migration benennt Bestände um)
    
    -- Filter
    SELECT type FROM `tl_metamodel_filtersetting` GROUP BY type ORDER BY type
