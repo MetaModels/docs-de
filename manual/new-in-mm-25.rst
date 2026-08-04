@@ -188,6 +188,22 @@ Für die Attribut-Templates werden schrittweise **Twig-Varianten** unter
 ``metamodels/attribute/<typ>`` ergänzt (siehe Abschnitt „Twig-Templates"). Die bisherigen
 ``.html5``-Templates bleiben als Fallback erhalten.
 
+* Auswahl (select), Übersetzte Auswahl (translatedselect), Tags und Übersetzte Tags
+    * **Sprung in die Relationstabelle (NEU):** Neben der Feldbeschriftung steht im Backend ein
+      Symbol, das die Tabelle öffnet, auf die das Attribut verweist - in einem neuen Tab, damit
+      die ungespeicherte Eingabemaske erhalten bleibt.
+    * Verweist das Attribut auf ein **MetaModel**, führt der Sprung in dessen Backend-Modul;
+      verweist es auf eine **Contao-Tabelle**, in das zuständige Contao-Modul. Für Letztere ist
+      eine Zuordnung hinterlegt (u. a. ``tl_page``, ``tl_article``, ``tl_news``,
+      ``tl_calendar_events``, ``tl_faq``, ``tl_member``, ``tl_user``).
+    * **Die Berechtigungen werden beachtet.** Das Symbol erscheint immer, ist aber ausgegraut und
+      nicht anklickbar, wenn die Zieltabelle für die eigene Benutzergruppe nicht freigegeben ist,
+      wenn das Feld schreibgeschützt ist oder wenn für eine Contao-Tabelle kein Modul hinterlegt
+      ist. Der Grund steht jeweils im Tooltip. Administratoren sehen alles.
+    * Kein Symbol gibt es, wenn das Ziel-MetaModel ausschließlich als **Kindtabelle** gepflegt
+      wird - dorthin führt kein eigener Aufruf, sondern die Operation in der Elternliste.
+    * Im **Frontend-Editing** erscheint das Symbol nicht.
+
 * Bewertung (rating)
     * die **MooTools-Variante wurde entfernt** (Template ``mm_attr_rating_moo.html5`` sowie die
       MooTools-JS-Dateien ``moostarrating.js``/``moostarrating_src.js``) - es bleibt die
