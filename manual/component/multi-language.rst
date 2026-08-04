@@ -277,6 +277,14 @@ Mit MM 2.4 wird auch die Mehrsprachigkeit bei der Frontendbearbeitung unterstüt
 siehe :ref:`Frontend-Editing <extended_frontend_editing_multilanguage>`.
 
 
+Eigene Anpassungen von Übersetzungen
+------------------------------------
+
+Die Texte in MetaModels wie z. B. das Label von Buttons können mit eigenen Texten überschrieben werden - mehr dazu unter
+":ref:`component_translations_modifications`".
+
+
+
 .. |img_locale| image:: /_img/icons/locale.png
 .. |img_fallback| image:: /_img/icons/fallback.png
 .. |img_translated| image:: /_img/icons/translated.png

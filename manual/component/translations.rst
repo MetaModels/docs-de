@@ -58,6 +58,7 @@ Die Übersetzungen kann man nun leicht über die Symfony-Toolbar nachvollziehen.
 zu den gefundenen und nicht gefundenen Übersetzungen sowie den Fallbacks aufgelistet.
 
 
+.. _component_translations_modifications:
 Eigene Anpassung von Übersetzungen
 ----------------------------------
 
