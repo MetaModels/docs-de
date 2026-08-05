@@ -139,6 +139,17 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   ``generalDriver_src.js`` → ``generalDriver.js``); einen Build-Schritt gibt es nicht mehr, die ausgelieferte
   Datei **ist** die Quelle. Wer eigene DC_General-Templates überschreibt oder diese Dateien direkt einbindet,
   muss nachziehen - Details in ``docs/upgrade-2.5.md`` des DC_General.
+* **Varianten folgen jetzt der Sortierung ihrer Basis:** In Baumansichten wurden die Kindeinträge
+  bisher immer nach der internen Spalte ``sorting`` ausgegeben, während die oberste Ebene der in
+  der Eingabemaske eingestellten Sortierung folgte. Bei einer nach einem Attribut sortierten Liste
+  standen die Basisdatensätze daher in der gewünschten Reihenfolge und ihre Varianten darunter
+  scheinbar willkürlich. Beide Ebenen nutzen nun dieselbe Sortierung.
+
+  Betroffen sind ausschließlich Listen mit einer **Attributsortierung**. Bei manueller Sortierung
+  ändert sich nichts, ebenso wenig, wenn gar keine Sortierung hinterlegt ist – dann bleibt es wie
+  bisher bei der Reihenfolge aus ``sorting``. Die Änderung wirkt auf alle Baumansichten des
+  DC_General, nicht nur auf Varianten.
+
 * **Sichtbarkeits-Schalter folgt jetzt Contaos Modell:** Bisher tauschte der Schalter nach dem Klick per
   JavaScript nur das Symbol des angeklickten Eintrags aus. Das konnte nur für genau diesen einen Eintrag
   stimmen: In einer **Variantenhierarchie** erben die Varianten den Wert vom nicht-varianten Datensatz - schaltete
