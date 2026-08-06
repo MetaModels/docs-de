@@ -112,8 +112,14 @@ einstellbar:
   in die URL eingebaut, sondern nur der Wert ausgegeben - ``auto_item`` kann nur für eine Filterregel
   verwendet werden. Die Schlüsselwörter ``language`` und ``items`` sind von Contao reserviert - ab
   MM 2.3 werden diese automatisch umgeschrieben und ein ``__`` angehangen, sofern als Spaltenname angelegt.
-* **URL-Typ für den Parameter:** (ab MM 2.4) hier kann eingestellt werden, ob der Filterparameter als Slug- oderrst_cookbook_tips_seo_filter-url
-  GET-Parameter an die URL übergeben wird - mehr dazu bei den :ref:`SEO-Tipps <rst_cookbook_tips_seo_filter-url>`
+* **URL-Typ für den Parameter:** (ab MM 2.4) hier kann eingestellt werden, ob der Filterparameter als Slug- oder
+  als GET-Parameter an die URL übergeben wird. Zur Auswahl stehen "Nur Slug", "Nur GET" sowie "Slug oder GET erlaubt".
+  Die letzte Einstellung ist deprecated und sollte auf einen der beiden eindeutigen Werte umgestellt werden; das
+  Backend weist bei ihrer Verwendung darauf hin. Neu angelegte Filterregeln starten mit "Nur Slug", bereits
+  bestehende wurden bei der Einführung der Einstellung auf "Slug oder GET erlaubt" gesetzt, damit sich ihr
+  Verhalten nicht ändert. Wird ein Parameter über den jeweils anderen URL-Typ übergeben als eingestellt, bleibt er
+  ab MM 2.4.25 unbeachtet - genau wie jeder andere unbekannte Parameter; zuvor führte das zu einem 404.
+  Mehr dazu bei den :ref:`SEO-Tipps <rst_cookbook_tips_seo_filter-url>`
 * **Template:** Auswahl des Widget-Templates für die FE-Anzeige; neben dem Template ``mm_filteritem_default`` bringen
   verschiedene Filterregeln ihre eigenen Templates mit wie z. B. Checkbox, Levenshtein, Register usw. Die
   Templates können auf dem üblichen Weg von Contao angepasst oder individualisiert werden. Das umschließende
