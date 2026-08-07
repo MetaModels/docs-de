@@ -134,7 +134,7 @@ Ab MM 2.5 gibt das **Attributstemplate** ("dritte Stufe") diesen Block selbst au
 nicht nur der Wert, sondern auch sein Container anpassen.
 
 Für bestehende Ausgaben ändert sich dadurch **nichts**: In den Rendersettings gibt es die neue Option
-"Wrapper im Item-Template (Altverhalten, Deprecated)". Eine Migration setzt sie beim Upgrade für **alle vorhandenen**
+"Wrapper im Listen-Template (Altverhalten, Deprecated)". Eine Migration setzt sie beim Upgrade für **alle vorhandenen**
 Rendersettings, deren Ausgabe damit unverändert bleibt. Nur **neu angelegte** Rendersettings starten ohne die Option
 und bekommen den Block aus dem Attributstemplate.
 

@@ -209,7 +209,7 @@ entfallen sie.
   selbst aus.
 
   **Für bestehende Ausgaben ändert sich nichts.** In den Rendersettings gibt es dafür die Option
-  „Wrapper im Item-Template (Altverhalten, Deprecated)", und eine Migration setzt sie beim Upgrade
+  „Wrapper im Listen-Template (Altverhalten, Deprecated)", und eine Migration setzt sie beim Upgrade
   für alle vorhandenen Rendersettings. Nur neu angelegte Rendersettings starten ohne die Option.
   Sie ist von Anfang an als deprecated gekennzeichnet und entfällt in 3.0.
 
