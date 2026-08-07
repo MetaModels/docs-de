@@ -195,9 +195,11 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
 Attribute
 ---------
 
-Für die Attribut-Templates werden schrittweise **Twig-Varianten** unter
-``metamodels/attribute/<typ>`` ergänzt (siehe Abschnitt „Twig-Templates"). Die bisherigen
-``.html5``-Templates bleiben als Fallback erhalten.
+Für die Attribut-Templates gibt es durchgängig **Twig-Varianten** unter
+``metamodels/attribute/<typ>`` (siehe Abschnitt „Twig-Templates"). Die bisherigen
+``.html5``-Templates bleiben als Fallback erhalten und werden nur noch dann verwendet,
+wenn sie im Projekt-``templates/``-Verzeichnis überschrieben wurden; in MetaModels 3.0
+entfallen sie.
 
 * **Der umschließende Block kommt jetzt aus dem Attributstemplate:** Bis 2.4 gab das Listentemplate
   um jeden Wert den Block ``<div class="field …"><div class="label">…</div><div class="value">…</div></div>``
