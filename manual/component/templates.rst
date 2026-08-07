@@ -34,7 +34,9 @@ Namensschema:
   eigene Action-Button-Templates es weiterhin überschreiben können).
 
 In den Twig-Templates stehen dieselben Variablen wie im ``.html5`` zur Verfügung (z. B. ``{{ raw }}``,
-``{{ data }}``, ``{{ additional_class }}``). Weil die Templates im gemanagten ``@Contao``-Namespace
+``{{ data }}``, ``{{ additional_class }}``). Attributstemplates bekommen ab MM 2.5 zusätzlich ``{{ label }}``,
+``{{ colName }}``, ``{{ hideLabels }}`` und ``{{ legacyAttributeWrapper }}`` - siehe
+:ref:`component_templates_attribute-wrapper`. Weil die Templates im gemanagten ``@Contao``-Namespace
 liegen, sind sie im **Template Studio** von Contao bearbeitbar und über Theme-Ordner sowie das
 Projekt-``templates/``-Verzeichnis überschreibbar. Ein bestehendes Override am flachen ``.html5``-Namen
 (z. B. ``templates/metamodel_prerendered.html5``) behält übergangsweise Vorrang - diese Rücksichtnahme
@@ -154,6 +156,36 @@ Was dabei zu beachten ist:
 
 Die Beschriftung läuft in beiden Fällen über denselben Übersetzungsschlüssel wie zuvor, weshalb der Doppelpunkt
 erhalten bleibt.
+
+Damit ein Attributstemplate den Block ausgeben kann, bekommt es seit MM 2.5 zusätzlich diese Werte:
+
+* ``label``: der übersetzte Name des Attributes (bei Mehrsprachigkeit in der aktiven Sprache)
+* ``colName``: der Spaltenname, der auch als CSS-Klasse am Container dient
+* ``hideLabels``: ob in den Rendersettings "Labels verbergen" gesetzt ist
+* ``legacyAttributeWrapper``: ob das Listentemplate den Block ausgibt - siehe oben
+
+.. note:: Diese Werte werden im Core aufgelöst und fertig übergeben. Ein Template soll sie **nicht** selbst über
+   ``settings.getParent()`` holen: Twig kennt kein ``try``/``catch``, und die Render-Einstellung hat nicht in jedem
+   Fall eine übergeordnete Sammlung - der Aufruf würde die Ausgabe dann zerlegen.
+
+Ein eigenes Attributstemplate folgt damit diesem Muster - der Inhalt wird zuerst eingesammelt, damit bei leerem
+Ergebnis gar kein Block entsteht:
+
+.. code-block:: twig
+
+   {% set mmFieldContent %}<span class="text meintyp{{ additional_class|default('') }}">{{ raw|default('')|raw }}</span>{% endset %}
+   {% if mmFieldContent|trim is not empty %}
+       {%- if legacyAttributeWrapper -%}
+           {{- mmFieldContent|raw -}}
+       {%- else -%}
+           <div class="field {{ colName }}">
+               {%- if not hideLabels %}<div class="label">{{ 'field_label'|trans({'%field_label%': label}, 'metamodels_list') }}</div>{% endif -%}
+               <div class="value">{{ mmFieldContent|raw }}</div>
+           </div>
+       {%- endif -%}
+   {% endif %}
+
+Die ``.text``-Templates bekommen den Block **nicht** - sie liefern die reine Textdarstellung.
 
 Für die Listen- und Attributstemplates ("Stufe zwei und drei") gibt es die **Templates in den Typen bzw. Extension**
 ``.text`` **und** ``.html5`` sowie immer gleichlautendem Dateinamen. Das Rendering als ``.text`` ist immer vorhanden und

@@ -218,7 +218,10 @@ entfallen sie.
   Backend-Liste wird bewusst kein Block ausgegeben, weil die Spaltenüberschrift die Beschriftung
   bereits trägt. Und wer den Knoten ``html5`` außerhalb des Listentemplates verwendet, etwa über
   ``parseAll()`` in eigenem Code, bekommt für neue Rendersettings andere Werte; ``text``, ``raw``
-  und ``attributes`` bleiben unverändert. Details unter
+  und ``attributes`` bleiben unverändert.
+
+  Für eigene Attributstemplates gibt es dafür vier neue Werte: ``label``, ``colName``,
+  ``hideLabels`` und ``legacyAttributeWrapper``. Das Muster samt Beispiel steht unter
   :ref:`component_templates_attribute-wrapper`.
 
 * Auswahl (select), Übersetzte Auswahl (translatedselect), Tags und Übersetzte Tags
