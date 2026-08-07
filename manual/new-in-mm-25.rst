@@ -199,6 +199,26 @@ Für die Attribut-Templates werden schrittweise **Twig-Varianten** unter
 ``metamodels/attribute/<typ>`` ergänzt (siehe Abschnitt „Twig-Templates"). Die bisherigen
 ``.html5``-Templates bleiben als Fallback erhalten.
 
+* **Der umschließende Block kommt jetzt aus dem Attributstemplate:** Bis 2.4 gab das Listentemplate
+  um jeden Wert den Block ``<div class="field …"><div class="label">…</div><div class="value">…</div></div>``
+  aus, das Attributstemplate lieferte nur den innersten Schnipsel. Wer die Ausgabe gestalten wollte,
+  kam damit an den umschließenden Container nicht heran (`core#660
+  <https://github.com/MetaModels/core/issues/660>`_). Ab 2.5 gibt das Attributstemplate den Block
+  selbst aus.
+
+  **Für bestehende Ausgaben ändert sich nichts.** In den Rendersettings gibt es dafür die Option
+  „Wrapper im Item-Template (Altverhalten, Deprecated)", und eine Migration setzt sie beim Upgrade
+  für alle vorhandenen Rendersettings. Nur neu angelegte Rendersettings starten ohne die Option.
+  Sie ist von Anfang an als deprecated gekennzeichnet und entfällt in 3.0.
+
+  Zu beachten: Eigene Attributstemplates geben den Block nicht aus, solange sie nicht angepasst
+  wurden - in einer neu angelegten Rendersetting fehlt er dort also. Im Spaltenmodus der
+  Backend-Liste wird bewusst kein Block ausgegeben, weil die Spaltenüberschrift die Beschriftung
+  bereits trägt. Und wer den Knoten ``html5`` außerhalb des Listentemplates verwendet, etwa über
+  ``parseAll()`` in eigenem Code, bekommt für neue Rendersettings andere Werte; ``text``, ``raw``
+  und ``attributes`` bleiben unverändert. Details unter
+  :ref:`component_templates_attribute-wrapper`.
+
 * Auswahl (select), Übersetzte Auswahl (translatedselect), Tags und Übersetzte Tags
     * **Sprung in die Relationstabelle (NEU):** Neben der Feldbeschriftung steht im Backend ein
       Symbol, das die Tabelle öffnet, auf die das Attribut verweist - in einem neuen Tab, damit

@@ -110,6 +110,51 @@ Rendersettings zum Tragen kommt - z. B. gibt es für das Attribut Datei ein Temp
 In den Templates von MM können auch die Templates von Contao eingebunden werden um zum Beispiel beim Attribut Text
 eine Ausgabe als You-Tube-ContentElement zu erhalten - siehe ":ref:`rst_cookbook_templates_fe_template_ce_elements`".
 
+
+.. _component_templates_attribute-wrapper:
+
+Der umschließende Block (ab MetaModels 2.5)
+...........................................
+
+Bis MM 2.4 kam der Block um jeden Attributwert aus dem **Listentemplate** ("zweite Stufe"):
+
+.. code-block:: html
+
+   <div class="field <spaltenname>">
+     <div class="label">Beschriftung:</div>   <!-- entfällt bei "Labels verbergen" -->
+     <div class="value">…</div>
+   </div>
+
+Das Attributstemplate lieferte nur den innersten Schnipsel, meist ein ``<span class="text …">``. Wer die Ausgabe
+gestalten wollte, saß damit im DOM zu tief und kam an den umschließenden Container nicht heran.
+
+Ab MM 2.5 gibt das **Attributstemplate** ("dritte Stufe") diesen Block selbst aus. Damit lässt sich pro Attributstyp
+nicht nur der Wert, sondern auch sein Container anpassen.
+
+Für bestehende Ausgaben ändert sich dadurch **nichts**: In den Rendersettings gibt es die neue Option
+"Wrapper im Item-Template (Altverhalten, Deprecated)". Eine Migration setzt sie beim Upgrade für **alle vorhandenen**
+Rendersettings, deren Ausgabe damit unverändert bleibt. Nur **neu angelegte** Rendersettings starten ohne die Option
+und bekommen den Block aus dem Attributstemplate.
+
+.. note:: Die Option ist von Anfang an als deprecated gekennzeichnet und entfällt in MetaModels 3.0. Bis dahin
+   sollten eigene Templates umgestellt werden.
+
+Was dabei zu beachten ist:
+
+* **Eigene Attributstemplates** geben den Block nicht aus, solange sie nicht angepasst wurden. Legt man eine neue
+  Rendersetting an, fehlt er dort. Entweder das Template nachziehen oder in dieser Rendersetting die Option setzen.
+* **Im Spaltenmodus** der Backend-Liste ("Spalten anzeigen") wird kein Block ausgegeben - dort trägt bereits die
+  Spaltenüberschrift die Beschriftung. Das Listentemplate wird in diesem Modus ohnehin übersprungen.
+* **Leere Werte** verhalten sich wie bisher. Die Option "Leere Einträge verbergen" wirkt unverändert, sie wird
+  anhand des Rohwertes ausgewertet, bevor irgendein Template läuft.
+* **Der Knoten** ``html5`` enthält den Block danach mit. Wer ihn außerhalb des Listentemplates verwendet - etwa in
+  eigenem PHP-Code über ``parseAll()`` oder ``parseValue()`` - bekommt für neue Rendersettings andere Werte. Die
+  Knoten ``text``, ``raw`` und ``attributes`` bleiben unverändert; wer strukturierte Daten braucht, ist dort
+  ohnehin besser aufgehoben.
+
+Die Beschriftung läuft in beiden Fällen über denselben Übersetzungsschlüssel wie zuvor, weshalb der Doppelpunkt
+erhalten bleibt.
+
 Für die Listen- und Attributstemplates ("Stufe zwei und drei") gibt es die **Templates in den Typen bzw. Extension**
 ``.text`` **und** ``.html5`` sowie immer gleichlautendem Dateinamen. Das Rendering als ``.text`` ist immer vorhanden und
 wird in der Ausgabe im Knoten ``text`` als auch in ``raw`` verwendet. Ob auch ``.html5`` verwendet wird, hängt von den
