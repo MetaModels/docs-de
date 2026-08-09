@@ -298,6 +298,9 @@ Filter
   nicht nötig. Zu beachten ist lediglich: Wer ein Element speichert, dessen Wert er in fremder Sprache vorfand,
   schreibt ihn dabei auf seine eigene Sprache um — gleichwertig, aber der gespeicherte Wert wandert mit.
 
+  Dasselbe gilt für die Vorauswahl in den **Sucheinstellungen** eines MetaModels, die dieselben Filterparameter
+  verwendet.
+
 
 Frontend-Editing (FEE)
 ----------------------
