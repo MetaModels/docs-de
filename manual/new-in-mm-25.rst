@@ -283,6 +283,20 @@ Filter
 
 * Die Filter-Widgets im Frontend werden nun über die MetaModels-Template-Engine gerendert und folgen damit demselben
   ``@Contao/metamodels/filter/<name>``-Schema wie Attribute und Items (siehe Abschnitt „Twig-Templates").
+* **Statischer Parameter bei mehrsprachigen Attributen:** Die Filterregel „einfache Abfrage" mit gesetztem
+  „Statischer Parameter" erlaubt eine Vorauswahl im Content-Element bzw. FE-Modul. Steckt hinter der Regel ein
+  Attribut, dessen Werte übersetzt sind, war diese Vorauswahl bisher an die Sprache gebunden, in der sie gesetzt
+  wurde: Wer sie auf Deutsch einstellte und das Element später mit englischer Profilsprache öffnete, sah statt der
+  Auswahl einen unlesbaren Eintrag „Unknown option: …" — und verlor die Einstellung, sobald er das Feld anfasste.
+
+  Die Auswahl wird jetzt über den referenzierten Datensatz aufgelöst, nicht über den Wert selbst. Damit zeigt das
+  Feld unabhängig von der Profilsprache den passenden Eintrag. Das gilt auch, wenn das MetaModel eine Sprache führt,
+  für die es gar keine Backend-Profilsprache gibt — dann greift die Rückfallsprache.
+
+  **Die Filterung war nie betroffen.** Der gespeicherte Wert wird vor der Abfrage in die ID des referenzierten
+  Datensatzes umgewandelt, unabhängig von der Sprache. Bestehende Vorauswahlen bleiben gültig, eine Migration ist
+  nicht nötig. Zu beachten ist lediglich: Wer ein Element speichert, dessen Wert er in fremder Sprache vorfand,
+  schreibt ihn dabei auf seine eigene Sprache um — gleichwertig, aber der gespeicherte Wert wandert mit.
 
 
 Frontend-Editing (FEE)
