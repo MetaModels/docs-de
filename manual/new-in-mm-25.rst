@@ -81,6 +81,47 @@ einem mitgelieferten Twig-Template. Bestehende Anpassungen funktionieren also na
    gemeinsam mit den ``.html5``-Templates. Eigene Anpassungen sollten daher nach ``templates/metamodels/<gruppe>/…``
    umgezogen werden - entweder als ``.html.twig`` oder (übergangsweise) als ``.html5`` unter dem neuen Pfad.
 
+Breadcrumb bei Kind-Tabellen (NEU)
+..................................
+
+Steht man in der Liste einer **Kind-Tabelle**, zeigte die Kopfzeile bisher nur den Namen des Moduls. Woher man kam und
+zu welchem Datensatz die Liste gehört, stand nirgends - bei mehrfacher Schachtelung verlor man schnell die Orientierung.
+
+Dort erscheint nun der ganze Weg, vom Basismodell bis zur aktuellen Ebene:
+
+.. code-block:: text
+
+   Mitarbeiter: Mayer, Herbert  ›  Dienstreisen
+
+Jedes Glied ist verlinkt und führt auf die Listenansicht seiner Ebene, so dass ein Wechsel zwischen den Ebenen nicht
+mehr über die Gesamtliste aller MetaModels führt. Bei tiefer Schachtelung bleiben Basismodell, letzte Elternebene und
+aktuelle Ebene sichtbar; was dazwischen liegt, klappt zu ``…`` ein und lässt sich aufklappen:
+
+.. code-block:: text
+
+   Mitarbeiter  ›  …  ›  Kind 3: Drittes Kind  ›  Dienstreisen
+
+In der **Bearbeitungsmaske** tritt der bearbeitete Datensatz als letztes Glied hinzu.
+
+Womit ein Datensatz im Pfad benannt wird, legt die Eingabemaske seiner Ebene unter **"Ergänzungen zur
+Maskenüberschrift"** fest - dasselbe Feld, das schon bisher die Überschrift der Bearbeitungsmaske ergänzte. Es nimmt
+Simple Tokens über die Attribute auf, ``##model_id##`` gibt die ID aus:
+
+.. code-block:: text
+
+   ##model_name##, ##model_firstname##
+   ##model_city## [##model_id##]
+
+Ohne Angabe erscheint an der Stelle nur der Name des MetaModels. Ein neues Feld gibt es also nicht, und bereits
+gepflegte Angaben wirken sofort mit.
+
+.. note:: Listen **ohne** Elternschaft behalten ihre bisherige Überschrift. Contao zeigt an dieser Stelle entweder eine
+   Breadcrumb oder eine Überschrift, und auf der obersten Ebene sagte die Breadcrumb dasselbe wie die Überschrift.
+
+Aussehen und Bedienung stammen von Contao selbst - es ist dieselbe Breadcrumb wie in den Kernmodulen, samt Aufklappmenü
+hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabellen.
+
+
 **Auch die Templates des Frontend-Editings sind nun Twig-fähig.** Betroffen sind die Eingabemaske selbst
 (``dcfe_general_edit``) sowie die Widgets für Dateien (``form_upload-on-steroids``), den MultiColumnWizard
 (``form_mcw``) und das Mehrfach-Textfeld (``form_text_multiple``).

@@ -21,6 +21,7 @@ Einsatzmöglichkeiten und Besonderheiten vorgestellt.
 Bei allen Varianten ist es zu empfehlen, sich die Daten in der Datenbank mit einem geeigneten Tool wie phpMyAdmin o. ä.
 anzusehen.
 
+
 .. _component_relations_database_structure:
 Datenbankstruktur
 -----------------
@@ -135,6 +136,7 @@ Spezial-Relationen bei MetaModels
 Zusätzlich zu den Standard-Relationen gibt es weitere Implementierungen in MetaModels, die aufgrund von Anwenderwünschen
 implementiert wurden.
 
+
 .. _component_relations_child-tables:
 Kind-Tabellen - "n:1"
 .....................
@@ -156,6 +158,15 @@ von ``pid`` zu ``id`` beim Anlegen des Kinddatensatzes erzeugt.
 
 Der Zugriff auf die Liste der Kinddatensätze erfolgt über ein Icon in der Zeile der Elterndatensätze bei den
 Bearbeitungsicons - optional ist die Auswahl eines eigenen Icons möglich.
+
+Mit MM 2.5 zeigt die Kopfzeile des Backends den Weg dorthin - vom Basismodell über alle Zwischenebenen bis zur
+aktuellen. Jedes Glied ist verlinkt, so dass man ohne Umweg über die Gesamtliste zwischen den Ebenen wechseln kann.
+Bei tiefer Schachtelung wird die Mitte zu "…" eingeklappt und lässt sich aufklappen.
+
+Womit die einzelnen Datensätze im Pfad benannt werden, legt man je Eingabemaske unter "Ergänzungen zur
+Maskenüberschrift" fest - dasselbe Feld, das auch die Überschrift der Bearbeitungsmaske ergänzt. Es nimmt Simple
+Tokens über die Attribute des Datensatzes auf, etwa ``##model_name##`` oder ``##model_name##, ##model_firstname##``;
+``##model_id##`` gibt die ID aus. Ohne Angabe erscheint an der Stelle nur der Name des MetaModels.
 
 Bei der Arbeit mit Kind-Tabellen ist zu beachten, dass "Eltern nicht wissen, dass sie Kinder haben", d. h. in der
 Ausgabe im FE gibt es keine automatische Ausgabe der Kinddaten. Man kann die Kinddatensätze eines Elterndatensatzes
