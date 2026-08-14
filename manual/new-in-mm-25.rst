@@ -81,6 +81,23 @@ einem mitgelieferten Twig-Template. Bestehende Anpassungen funktionieren also na
    gemeinsam mit den ``.html5``-Templates. Eigene Anpassungen sollten daher nach ``templates/metamodels/<gruppe>/…``
    umgezogen werden - entweder als ``.html.twig`` oder (übergangsweise) als ``.html5`` unter dem neuen Pfad.
 
+**Auch die Templates des Frontend-Editings sind nun Twig-fähig.** Betroffen sind die Eingabemaske selbst
+(``dcfe_general_edit``) sowie die Widgets für Dateien (``form_upload-on-steroids``), den MultiColumnWizard
+(``form_mcw``) und das Mehrfach-Textfeld (``form_text_multiple``).
+
+Diese folgen **nicht** dem oben beschriebenen ``metamodels/<gruppe>/<leaf>``-Schema, sondern Contaos eigener
+Konvention mit flachem Namen: Ein ``@Contao/dcfe_general_edit.html.twig`` hat Vorrang vor dem gleichnamigen
+``.html5``. Das ist kein MetaModels-Mechanismus, sondern Contaos eingebauter Twig-Vorrang für Legacy-Templates -
+er gilt für jedes Template, das über Contaos Template-Klasse ausgegeben wird.
+
+Für die Praxis heißt das: Wer eines dieser Templates überschreiben will, legt entweder wie bisher ein
+``.html5`` an oder neuerdings ein ``.html.twig`` unter demselben Namen. Ein vorhandenes ``.html5``-Override in
+höherer Priorität behält seinen Vorrang, bestehende Anpassungen laufen also unverändert weiter.
+
+Für eigene Twig-Fassungen der Widget-Templates gibt es dabei eine Regel zu beachten - der ``label``-Block wird
+bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
+
+
 Breadcrumb bei Kind-Tabellen (NEU)
 ..................................
 
@@ -120,23 +137,6 @@ gepflegte Angaben wirken sofort mit.
 
 Aussehen und Bedienung stammen von Contao selbst - es ist dieselbe Breadcrumb wie in den Kernmodulen, samt Aufklappmenü
 hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabellen.
-
-
-**Auch die Templates des Frontend-Editings sind nun Twig-fähig.** Betroffen sind die Eingabemaske selbst
-(``dcfe_general_edit``) sowie die Widgets für Dateien (``form_upload-on-steroids``), den MultiColumnWizard
-(``form_mcw``) und das Mehrfach-Textfeld (``form_text_multiple``).
-
-Diese folgen **nicht** dem oben beschriebenen ``metamodels/<gruppe>/<leaf>``-Schema, sondern Contaos eigener
-Konvention mit flachem Namen: Ein ``@Contao/dcfe_general_edit.html.twig`` hat Vorrang vor dem gleichnamigen
-``.html5``. Das ist kein MetaModels-Mechanismus, sondern Contaos eingebauter Twig-Vorrang für Legacy-Templates -
-er gilt für jedes Template, das über Contaos Template-Klasse ausgegeben wird.
-
-Für die Praxis heißt das: Wer eines dieser Templates überschreiben will, legt entweder wie bisher ein
-``.html5`` an oder neuerdings ein ``.html.twig`` unter demselben Namen. Ein vorhandenes ``.html5``-Override in
-höherer Priorität behält seinen Vorrang, bestehende Anpassungen laufen also unverändert weiter.
-
-Für eigene Twig-Fassungen der Widget-Templates gibt es dabei eine Regel zu beachten - der ``label``-Block wird
-bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
 
 
 DC_General
