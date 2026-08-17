@@ -46,6 +46,49 @@ Für die leichte Übernahme der Array-Angaben in ein FE-Template, gibt es den
 :ref:`rst_cookbook_frontend_array-helper`, die eine Ausgabe im Quelltext für ein
 `Copy&Paste` erstellt.
 
+Man kann die Debug-Ausgabe auch weiter eingrenzen oder umleiten - z. B.
+
+- Ausgabe nur auf HTML-Anfragen beschränken:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // Debug – nicht bei API-/JSON-Antworten, sonst zerschießt dump() die Ausgabe.
+   $request = \Contao\System::getContainer()->get('request_stack')->getCurrentRequest();
+   if (
+       \Contao\System::getContainer()->get('kernel')->isDebug()
+       && 'html' === $request?->getRequestFormat()
+   ) {
+       dump($this->data);
+   }
+   ?>
+
+- Ausgabe für einen Pfad gezielt ausschließen:
+
+.. code-block:: php
+   :linenos:
+
+   <?php
+   // Debug – nicht bei API-/JSON-Antworten, sonst zerschießt dump() die Ausgabe.
+   $request = \Contao\System::getContainer()->get('request_stack')->getCurrentRequest();
+   if (
+       \Contao\System::getContainer()->get('kernel')->isDebug()
+       && !str_starts_with($request?->getPathInfo() ?? '', '/cowegis/api')
+   ) {
+       dump($this->data);
+   }
+   ?>
+
+- ganz umleiten in das Log-Verzeichnis von Contao - üblicherweise ``var/logs/`` - über einen Eintrag in der config.yaml:
+
+.. code-block:: yaml
+   :linenos:
+
+   when@dev:
+      debug:
+          dump_destination: "%kernel.logs_dir%/dump.log"
+
 
 Debug in MM 2.0
 ---------------
