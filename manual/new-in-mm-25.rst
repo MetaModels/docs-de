@@ -98,6 +98,54 @@ Für eigene Twig-Fassungen der Widget-Templates gibt es dabei eine Regel zu beac
 bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
 
 
+Symbole im Backend (überarbeitet)
+.................................
+
+Sämtliche Symbole des Backends wurden von **PNG auf SVG** umgestellt. Sie bleiben damit in jeder
+Größe scharf - auch bei vergrößerter Browser-Darstellung oder auf hochauflösenden Bildschirmen.
+
+**Die sechs Bereiche eines MetaModels sind an der Farbe zu unterscheiden:** Attribute (blau),
+Render-Einstellungen (grün), Eingabemaske (orange), Sucheinstellungen (violett), Filter (rot) und
+Zuordnungen (magenta). Die Symbole der einzelnen Attribut- und Filtertypen bleiben bewusst
+einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur unruhig wirkt.
+
+**Der Dunkelmodus wird durchgängig bedient.** Für jedes Symbol, dessen Farbe im dunklen Design
+nicht trägt, liegt eine eigene Fassung bereit; Contao blendet die passende ein. Deaktivierte
+Schaltflächen erscheinen in einer blassen Fassung desselben Symbols, ebenfalls für beide Designs.
+
+Drei Stellen haben darüber hinaus neue Symbole bekommen:
+
+* **Bedingungen in der Eingabemaske** trugen bisher alle dasselbe Symbol. Jetzt hat jeder Typ ein
+  eigenes - UND, ODER, NICHT, „Eigenschaft ist sichtbar", „Eigenschaft hat den Wert" und
+  „Eigenschaft enthält eines von". In einer verschachtelten Bedingung ist damit auf einen Blick
+  erkennbar, wie sie aufgebaut ist.
+* **Das Checkbox-Attribut** wird in der Item-Liste nicht mehr mit einem Auge umgeschaltet, sondern
+  mit einer angehakten bzw. leeren Checkbox. Ein Auge behauptet Sichtbarkeit, ein Checkbox-Attribut
+  kann aber alles Mögliche bedeuten - „bezahlt", „geprüft", „Mitglied". Die Farben entsprechen
+  denen, die Contao für veröffentlicht und nicht veröffentlicht verwendet.
+* **Die Notizliste** zeigt am MetaModel, ob überhaupt Notizlisten eingerichtet sind: Das Symbol ist
+  gefüllt, sobald welche vorhanden sind, und bleibt sonst leer. Es gilt in der Liste der MetaModels
+  ebenso wie in der Breadcrumb.
+
+.. seealso:: Wem die Symbole im Backend grundsätzlich zu klein sind, kann sie mit der Erweiterung
+   `contao-backend-size-bundle <https://github.com/e-spin/contao-backend-size-bundle>`_ im eigenen
+   Benutzerprofil vergrößern - die Einstellung gilt pro Benutzer, nicht für die ganze Installation.
+   Die Erweiterung gehört **nicht** zu MetaModels und ist unabhängig davon einsetzbar; durch die
+   Umstellung auf SVG bleiben die MetaModels-Symbole dabei aber scharf.
+
+
+Deaktivierte Einträge sind durchgestrichen
+..........................................
+
+In den Listen des Backends war bisher schwer zu sehen, ob ein Eintrag abgeschaltet ist - das
+Symbol am Zeilenende sagte es, der Name selbst nicht. Der Name eines deaktivierten Eintrags wird
+nun **durchgestrichen** dargestellt. Das betrifft die Render-Einstellungen, die Eingabemaske, die
+Filterregeln und die Auswahl von Dateien.
+
+Bei den Dateilisten steht der Zusatz „[Standard]" hinter dem Namen. Er bleibt lesbar und wird
+nicht mit durchgestrichen, damit die beiden Angaben nicht ineinanderlaufen.
+
+
 Breadcrumb bei Kind-Tabellen (NEU)
 ..................................
 
@@ -137,6 +185,26 @@ gepflegte Angaben wirken sofort mit.
 
 Aussehen und Bedienung stammen von Contao selbst - es ist dieselbe Breadcrumb wie in den Kernmodulen, samt Aufklappmenü
 hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabellen.
+
+
+Kurzwahl zu den Bereichen eines MetaModels (NEU)
+................................................
+
+Wer ein MetaModel konfiguriert, springt ständig zwischen seinen Bereichen hin und her: von den
+Attributen in die Eingabemaske, von dort zu den Render-Einstellungen, dann zu den Filtern. Bisher
+führte jeder dieser Wechsel über die Gesamtliste aller MetaModels zurück.
+
+Rechts in der Breadcrumb stehen nun die Symbole **aller Bereiche des MetaModels**, in dem man sich
+gerade befindet - Attribute, Render-Einstellungen, Eingabemaske, Sucheinstellungen, Filter,
+Zuordnungen und, sofern installiert, die Notizlisten. Ein Klick führt direkt hinüber.
+
+Die Kurzwahl erscheint überall dort, wo klar ist, um welches MetaModel es geht: in den Listen der
+einzelnen Bereiche ebenso wie in den Bearbeitungsmasken darin. In der **Gesamtliste** aller
+MetaModels erscheint sie nicht - dort ist kein einzelnes MetaModel gemeint. Ein neu angelegtes
+MetaModel hat sie, sobald es gespeichert ist.
+
+Welche Symbole erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über eine Erweiterung
+ein weiterer hinzu, steht er automatisch mit in der Reihe.
 
 
 DC_General
@@ -412,6 +480,10 @@ im Blick behalten werden:
   Spalten ``levensthein_distance``/``levensthein_attributes``, sowie eigener PHP-Code, der den Typnamen
   ``levensthein`` hart prüft. Die Klasse ``LevenstheinSearchRule`` bleibt übergangsweise als *deprecated* Alias
   erhalten und entfällt in MM 3.0
+* **Symbole:** die Symbole liegen nun als SVG vor, die abgelösten PNG-Dateien wurden **entfernt**. Für die Bedienung
+  ändert sich nichts. Anpassen muss nur, wer die alten Dateien selbst verwendet: eigenes CSS, das ein
+  MetaModels-Symbol als Hintergrundbild einbindet, oder eigene DCA-Angaben, die auf einen ``.png``-Pfad unterhalb von
+  ``bundles/metamodels…/images/`` zeigen. Dort ist die Endung auf ``.svg`` zu ändern
 * **Datei-Attribute:** die Sortier-Spalten ``<spaltenname>__sort`` bzw. ``value_sorting`` werden per Migration in
   den Wert überführt und danach **gelöscht** - vorher unbedingt eine Datensicherung anlegen, das Löschen der
   Spalten ist nicht umkehrbar. Eigene Programmierungen oder Auswertungen, die direkt auf diese Spalten zugreifen,
