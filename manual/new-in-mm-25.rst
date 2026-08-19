@@ -109,6 +109,8 @@ Render-Einstellungen (grün), Eingabemaske (orange), Sucheinstellungen (violett)
 Zuordnungen (magenta). Die Symbole der einzelnen Attribut- und Filtertypen bleiben bewusst
 einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur unruhig wirkt.
 
+|mm_list_with_icons|
+
 **Der Dunkelmodus wird durchgängig bedient.** Für jedes Symbol, dessen Farbe im dunklen Design
 nicht trägt, liegt eine eigene Fassung bereit; Contao blendet die passende ein. Deaktivierte
 Schaltflächen erscheinen in einer blassen Fassung desselben Symbols, ebenfalls für beide Designs.
@@ -133,6 +135,26 @@ Drei Stellen haben darüber hinaus neue Symbole bekommen:
    Die Erweiterung gehört **nicht** zu MetaModels und ist unabhängig davon einsetzbar; durch die
    Umstellung auf SVG bleiben die MetaModels-Symbole dabei aber scharf.
 
+Kurzwahl zu den Bereichen eines MetaModels (NEU)
+................................................
+
+Wer ein MetaModel konfiguriert, springt ständig zwischen seinen Bereichen hin und her: von den
+Attributen in die Eingabemaske, von dort zu den Render-Einstellungen, dann zu den Filtern. Bisher
+führte jeder dieser Wechsel über die Gesamtliste aller MetaModels zurück.
+
+Rechts in der Breadcrumb stehen nun die Symbole **aller Bereiche des MetaModels**, in dem man sich
+gerade befindet - Attribute, Render-Einstellungen, Eingabemaske, Sucheinstellungen, Filter,
+Zuordnungen und, sofern installiert, die Notizlisten. Ein Klick führt direkt hinüber.
+
+|mm_breadcrumb_icons|
+
+Die Kurzwahl erscheint überall dort, wo klar ist, um welches MetaModel es geht: in den Listen der
+einzelnen Bereiche ebenso wie in den Bearbeitungsmasken darin. In der **Gesamtliste** aller
+MetaModels erscheint sie nicht - dort ist kein einzelnes MetaModel gemeint. Ein neu angelegtes
+MetaModel hat sie, sobald es gespeichert ist.
+
+Welche Symbole erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über eine Erweiterung
+ein weiterer hinzu, steht er automatisch mit in der Reihe.
 
 Deaktivierte Einträge sind durchgestrichen
 ..........................................
@@ -185,26 +207,6 @@ gepflegte Angaben wirken sofort mit.
 
 Aussehen und Bedienung stammen von Contao selbst - es ist dieselbe Breadcrumb wie in den Kernmodulen, samt Aufklappmenü
 hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabellen.
-
-
-Kurzwahl zu den Bereichen eines MetaModels (NEU)
-................................................
-
-Wer ein MetaModel konfiguriert, springt ständig zwischen seinen Bereichen hin und her: von den
-Attributen in die Eingabemaske, von dort zu den Render-Einstellungen, dann zu den Filtern. Bisher
-führte jeder dieser Wechsel über die Gesamtliste aller MetaModels zurück.
-
-Rechts in der Breadcrumb stehen nun die Symbole **aller Bereiche des MetaModels**, in dem man sich
-gerade befindet - Attribute, Render-Einstellungen, Eingabemaske, Sucheinstellungen, Filter,
-Zuordnungen und, sofern installiert, die Notizlisten. Ein Klick führt direkt hinüber.
-
-Die Kurzwahl erscheint überall dort, wo klar ist, um welches MetaModel es geht: in den Listen der
-einzelnen Bereiche ebenso wie in den Bearbeitungsmasken darin. In der **Gesamtliste** aller
-MetaModels erscheint sie nicht - dort ist kein einzelnes MetaModel gemeint. Ein neu angelegtes
-MetaModel hat sie, sobald es gespeichert ist.
-
-Welche Symbole erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über eine Erweiterung
-ein weiterer hinzu, steht er automatisch mit in der Reihe.
 
 
 DC_General
@@ -528,8 +530,9 @@ Re-Finanzierung
    ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
 
 
-.. |img_fallback| image:: /_img/icons/fallback.png
-.. |img_translated| image:: /_img/icons/translated.png
+.. |mm_list_with_icons| image:: /_img/screenshots/new_in_2-5/mm_list_with_icons.png
+.. |mm_breadcrumb_icons| image:: /_img/screenshots/new_in_2-5/mm_breadcrumb_icons.png
+
 
 .. |br| raw:: html
 
