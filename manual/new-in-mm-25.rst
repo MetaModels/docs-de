@@ -98,15 +98,15 @@ Für eigene Twig-Fassungen der Widget-Templates gibt es dabei eine Regel zu beac
 bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
 
 
-Symbole im Backend (überarbeitet)
-.................................
+Icons im Backend (überarbeitet)
+...............................
 
-Sämtliche Symbole des Backends wurden von **PNG auf SVG** umgestellt. Sie bleiben damit in jeder
+Sämtliche Icons des Backends wurden von **PNG auf SVG** umgestellt. Sie bleiben damit in jeder
 Größe scharf - auch bei vergrößerter Browser-Darstellung oder auf hochauflösenden Bildschirmen.
 
 **Die sechs Bereiche eines MetaModels sind an der Farbe zu unterscheiden:** Attribute (blau),
 Render-Einstellungen (grün), Eingabemaske (orange), Sucheinstellungen (violett), Filter (rot) und
-Zuordnungen (magenta). Die Symbole der einzelnen Attribut- und Filtertypen bleiben bewusst
+Zuordnungen (magenta). Die Icons der einzelnen Attribut- und Filtertypen bleiben bewusst
 einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur unruhig wirkt.
 
 |mm_list_with_icons|
@@ -115,7 +115,7 @@ einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur un
 nicht trägt, liegt eine eigene Fassung bereit; Contao blendet die passende ein. Deaktivierte
 Schaltflächen erscheinen in einer blassen Fassung desselben Symbols, ebenfalls für beide Designs.
 
-Drei Stellen haben darüber hinaus neue Symbole bekommen:
+Drei Stellen haben darüber hinaus neue Icons bekommen:
 
 * **Bedingungen in der Eingabemaske** trugen bisher alle dasselbe Symbol. Jetzt hat jeder Typ ein
   eigenes - UND, ODER, NICHT, „Eigenschaft ist sichtbar", „Eigenschaft hat den Wert" und
@@ -129,11 +129,11 @@ Drei Stellen haben darüber hinaus neue Symbole bekommen:
   gefüllt, sobald welche vorhanden sind, und bleibt sonst leer. Es gilt in der Liste der MetaModels
   ebenso wie in der Breadcrumb.
 
-.. seealso:: Wem die Symbole im Backend grundsätzlich zu klein sind, kann sie mit der Erweiterung
+.. seealso:: Wem die Icons im Backend grundsätzlich zu klein sind, kann sie mit der Erweiterung
    `contao-backend-size-bundle <https://github.com/e-spin/contao-backend-size-bundle>`_ im eigenen
    Benutzerprofil vergrößern - die Einstellung gilt pro Benutzer, nicht für die ganze Installation.
    Die Erweiterung gehört **nicht** zu MetaModels und ist unabhängig davon einsetzbar; durch die
-   Umstellung auf SVG bleiben die MetaModels-Symbole dabei aber scharf.
+   Umstellung auf SVG bleiben die MetaModels-Icons dabei aber scharf.
 
 Kurzwahl zu den Bereichen eines MetaModels (NEU)
 ................................................
@@ -142,7 +142,7 @@ Wer ein MetaModel konfiguriert, springt ständig zwischen seinen Bereichen hin u
 Attributen in die Eingabemaske, von dort zu den Render-Einstellungen, dann zu den Filtern. Bisher
 führte jeder dieser Wechsel über die Gesamtliste aller MetaModels zurück.
 
-Rechts in der Breadcrumb stehen nun die Symbole **aller Bereiche des MetaModels**, in dem man sich
+Rechts in der Breadcrumb stehen nun die Icons **aller Bereiche des MetaModels**, in dem man sich
 gerade befindet - Attribute, Render-Einstellungen, Eingabemaske, Sucheinstellungen, Filter,
 Zuordnungen und, sofern installiert, die Notizlisten. Ein Klick führt direkt hinüber.
 
@@ -153,7 +153,7 @@ einzelnen Bereiche ebenso wie in den Bearbeitungsmasken darin. In der **Gesamtli
 MetaModels erscheint sie nicht - dort ist kein einzelnes MetaModel gemeint. Ein neu angelegtes
 MetaModel hat sie, sobald es gespeichert ist.
 
-Welche Symbole erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über eine Erweiterung
+Welche Icons erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über eine Erweiterung
 ein weiterer hinzu, steht er automatisch mit in der Reihe.
 
 Deaktivierte Einträge sind durchgestrichen
@@ -270,7 +270,7 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
 * **Sichtbarkeits-Schalter folgt jetzt Contaos Modell:** Bisher tauschte der Schalter nach dem Klick per
   JavaScript nur das Symbol des angeklickten Eintrags aus. Das konnte nur für genau diesen einen Eintrag
   stimmen: In einer **Variantenhierarchie** erben die Varianten den Wert vom nicht-varianten Datensatz - schaltete
-  man den Elternsatz um, änderte sich der Zustand der Varianten fachlich mit, ihre Symbole blieben aber stehen,
+  man den Elternsatz um, änderte sich der Zustand der Varianten fachlich mit, ihre Icons blieben aber stehen,
   bis die Seite neu geladen wurde. Der Schalter ist nun ein gewöhnlicher Link: Der Server speichert den neuen
   Zustand und liefert die Liste neu aus, sodass **alle** betroffenen Zeilen sofort richtig angezeigt werden. An
   der Bedienung ändert sich nichts.
@@ -508,7 +508,7 @@ im Blick behalten werden:
   Spalten ``levensthein_distance``/``levensthein_attributes``, sowie eigener PHP-Code, der den Typnamen
   ``levensthein`` hart prüft. Die Klasse ``LevenstheinSearchRule`` bleibt übergangsweise als *deprecated* Alias
   erhalten und entfällt in MM 3.0
-* **Symbole:** die Symbole liegen nun als SVG vor, die abgelösten PNG-Dateien wurden **entfernt**. Für die Bedienung
+* **Icons:** die Icons liegen nun als SVG vor, die abgelösten PNG-Dateien wurden **entfernt**. Für die Bedienung
   ändert sich nichts. Anpassen muss nur, wer die alten Dateien selbst verwendet: eigenes CSS, das ein
   MetaModels-Symbol als Hintergrundbild einbindet, oder eigene DCA-Angaben, die auf einen ``.png``-Pfad unterhalb von
   ``bundles/metamodels…/images/`` zeigen. Dort ist die Endung auf ``.svg`` zu ändern
