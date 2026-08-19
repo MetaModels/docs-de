@@ -227,6 +227,12 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Datei wird dabei serverseitig gerendert statt per JavaScript nachgerüstet. Zusätzlich wertet das
   ``fileTree``-Widget die Widget-Option ``isSortable`` aus, mit der Contao seit Version 5.0 die entfallene
   Option ``orderField`` ersetzt - letztere wird weiterhin unterstützt. An der Bedienung ändert sich nichts.
+* **Baum-Wähler lassen sich einschränken (NEU):** Ein Baum-Wähler baut sich seine eigene Sicht auf die
+  Zieltabelle und bot deshalb immer alle Datensätze an - auch dort, wo die Liste daneben nur eine
+  gefilterte Auswahl zeigte. Über die neue Widget-Option ``sourceFilter`` kann der Aufrufer die
+  erlaubten IDs mitgeben; der Wähler beschränkt sich dann darauf. Eine leere Liste bedeutet dabei
+  „nichts passt" und nicht „kein Filter" - wer eine Einschränkung angibt, bekommt sie auch dann.
+  Ohne die Option ändert sich nichts. Genutzt wird sie von den Attributen Auswahl und Tags, siehe dort.
 * **Tooltips der Operations-Buttons korrigiert:** In den Listenansichten wurde die Anzeige der Tooltips (inkl. der
   Icons zum Öffnen von Kindtabellen) korrigiert.
 * **Sprachen außerhalb der Contao-Sprachliste:** Unterstützt ein MetaModel eine Sprache, die in den
@@ -348,6 +354,26 @@ entfallen sie.
     * Kein Symbol gibt es, wenn das Ziel-MetaModel ausschließlich als **Kindtabelle** gepflegt
       wird - dorthin führt kein eigener Aufruf, sondern die Operation in der Elternliste.
     * Im **Frontend-Editing** erscheint das Symbol nicht.
+    * **Der eingestellte Filter gilt jetzt auch im Baum-Wähler (NEU):** Ist das Attribut als
+      Baum-Wähler eingestellt, öffnete das Popup bisher die vollständige Zieltabelle - die
+      Einschränkung wirkte nur auf die Auswahlliste daneben. Auswählbar war damit auch, was gar
+      nicht zur Auswahl stehen sollte. Das Popup hält sich nun an dieselbe Einschränkung.
+    * Das gilt für **beide Wege**, ein Ziel einzugrenzen: die *Filtereinstellung*, wenn das Attribut
+      auf ein MetaModel verweist, und die *Bedingung* (SQL) bei einer Contao-Tabelle. Beide werden
+      aus derselben Abfrage bedient, aus der auch die Auswahlliste ihre Einträge zieht - die beiden
+      Ansichten können daher nicht auseinanderlaufen.
+    * Bei der Bedingung ist der **Tabellen-Alias** zu beachten; er unterscheidet sich zwischen den
+      Attributtypen. Bei Tags ist es ``t.``, bei Auswahl ``sourceTable.`` - also etwa
+      ``sourceTable.username='tester'``. Der jeweils gültige Alias steht in der Beschreibung des
+      Eingabefeldes.
+    * Ist **kein** Filter eingestellt, ändert sich nichts. Die Einschränkung wird dann gar nicht
+      erst ermittelt - ein Baum-Wähler wird ja gerade dort verwendet, wo die Zieltabelle zu groß
+      für eine Auswahlliste ist.
+    * **Zu beachten:** Wird eine Einschränkung nachträglich verschärft, verschwinden bereits
+      gespeicherte Werte, die ihr nicht mehr entsprechen, aus der Maske - im Wähler ebenso wie in
+      der Auswahlliste, wo es schon bisher so war. Beim nächsten Speichern des Datensatzes sind sie
+      dann auch im Datenbestand fort. Vor einer Verschärfung lohnt daher ein Blick darauf, ob
+      Datensätze betroffen sind.
 
 * Levenshtein (levenshtein)
     * **Schreibweise durchgängig korrigiert:** Der Attributtyp hieß seit seiner ersten Fassung
