@@ -548,13 +548,13 @@ Zustands- und Frontend-Symbole, die nicht für einen Typ stehen.
      - Neu
      - Hinweis
    * - Checkbox aktiv (Listenansicht)
-     - —
+     - |alt_visible_svg|
      - |neu_checkbox_active_svg|
      - bisher Contaos eigenes ``visible.svg``, jetzt ein eigenes
    * - Checkbox inaktiv (Listenansicht)
-     - —
+     - |alt_invisible_svg|
      - |neu_checkbox_inactive_svg|
-     - neu hinzugekommen - der Aus-Zustand hatte bisher kein Vorgabe-Icon
+     - bisher Contaos eigenes ``invisible.svg``, jetzt ein eigenes
    * - Bewertung – leerer Stern
      - |alt_star_empty_png|
      - |neu_star_empty_svg|
@@ -683,6 +683,8 @@ mit der Erweiterung teilt.
    :width: 22px
 .. |alt_geodistance_png| image:: /_img/icons/geodistance.png
    :width: 22px
+.. |alt_invisible_svg| image:: /_img/icons/invisible.svg
+   :width: 22px
 .. |alt_langcode_png| image:: /_img/icons/langcode.png
    :width: 22px
 .. |alt_levenshtein_index_png| image:: /_img/icons/levenshtein_index.png
@@ -744,6 +746,8 @@ mit der Erweiterung teilt.
 .. |alt_variants_png| image:: /_img/icons/variants.png
    :width: 22px
 .. |alt_visible_png| image:: /_img/icons/visible.png
+   :width: 22px
+.. |alt_visible_svg| image:: /_img/icons/visible.svg
    :width: 22px
 .. |neu_alias_svg| image:: /_img/icons_svg/alias.svg
    :width: 22px
