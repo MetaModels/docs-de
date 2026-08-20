@@ -115,7 +115,7 @@ einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur un
 nicht trägt, liegt eine eigene Fassung bereit; Contao blendet die passende ein. Deaktivierte
 Schaltflächen erscheinen in einer blassen Fassung desselben Symbols, ebenfalls für beide Designs.
 
-Eine **Übersichtsseite** ist hier :ref:`manual_new_icons-25`.
+Eine **Übersichtsseite** ist hier: :ref:`manual_new_icons-25`.
 
 Drei Stellen haben darüber hinaus neue Icons bekommen:
 
