@@ -1,14 +1,14 @@
 .. _component_searchable-pages:
 
-|img_searchable_pages_32| Indexierungen
-=======================================
+|img_searchable_pages_32| Sucheeinstellungen
+============================================
 
 .. note:: Detailseiten eines MetaModel in der sitemap.xml von Contao aufnehmen
 
 Einleitung
 ----------
 
-Mit den Indexierungen können die Detailseiten eines MetaModel-Renderings (Liste) in die Generierung der sitemap.xml
+Mit den Sucheeinstellungen können die Detailseiten eines MetaModel-Renderings (Liste) in die Generierung der sitemap.xml
 eingebunden werden.
 
 Diese "Sonderbehandlung" der Detailseiten gegenüber den normalen Listenanzeigen ergibt sich aus
@@ -48,7 +48,7 @@ Optionen
 Ablauf
 ------
 
-Eine neue Indexierung wird über das Icon "|img_new| Neue Indexierung" angelegt und nach der Eingabe des Namens die
+Eine neue Sucheeinstellungen wird über das Icon "|img_new| Neue Sucheeinstellungen" angelegt und nach der Eingabe des Namens die
 Render-Einstellung ausgewählt. Die Render-Einstellung ist üblicherweise die gleiche, wie sie für das CE/Modul
 MetaModel-Liste der Frontendausgabe der "Übersichtsliste" gewählt wird - es kann aber auch eine eigene
 Render-Einstellungen angelegt werden.
