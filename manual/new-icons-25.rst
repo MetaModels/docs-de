@@ -593,17 +593,17 @@ mit der Erweiterung teilt.
      - |neu_notelist_svg|
      - die Merkliste selbst - gelb, weil das Icon für die Einheit steht
    * - Merkliste – Eintrag enthalten
-     - —
+     - |alt_notelist_png|
      - |neu_notelist_filled_svg|
-     - neu hinzugekommen
+     - bisher dasselbe Icon wie die Merkliste selbst - der gefüllte Zustand ist neu
    * - Merkliste-Filterregel
      - |alt_notelist_png|
      - |neu_filter_notelist_svg|
      - eigenes graues Typ-Icon
    * - Cowegis – MetaModels-Layer
-     - —
+     - |alt_metamodels_marker_svg|
      - |neu_metamodels_marker_svg|
-     - Layer-Typ in der Cowegis-Karte
+     - Layer-Typ in der Cowegis-Karte; war schon vorher SVG
    * - Cowegis – Marker
      - |alt_marker_png|
      - |neu_marker_svg|
@@ -693,6 +693,8 @@ mit der Erweiterung teilt.
 .. |alt_longtext_png| image:: /_img/icons/longtext.png
    :width: 22px
 .. |alt_marker_png| image:: /_img/icons/marker.png
+   :width: 22px
+.. |alt_metamodels_marker_svg| image:: /_img/icons/metamodels_marker.svg
    :width: 22px
 .. |alt_metamodels_png| image:: /_img/icons/metamodels.png
    :width: 22px
