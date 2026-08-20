@@ -140,6 +140,7 @@ Drei Stellen haben darüber hinaus neue Icons bekommen:
    Die Erweiterung gehört **nicht** zu MetaModels und ist unabhängig davon einsetzbar; durch die
    Umstellung auf SVG bleiben die MetaModels-Icons dabei aber scharf.
 
+
 Kurzwahl zu den Bereichen eines MetaModels (NEU)
 ................................................
 
@@ -160,6 +161,7 @@ MetaModel hat sie, sobald es gespeichert ist.
 
 Welche Icons erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über eine Erweiterung
 ein weiterer hinzu, steht er automatisch mit in der Reihe.
+
 
 Deaktivierte Einträge sind durchgestrichen
 ..........................................
