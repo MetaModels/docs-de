@@ -111,6 +111,9 @@ einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur un
 
 |mm_list_with_icons|
 
+Die gewählten Farben sind so gewählt, dass sie in das Farbschema von Contao passen, untereinander unterscheidbar sind,
+möglichst sowohl für Hell- als auch Dunkelmodus gehen, auch bei Rot-Grün-Farbschwäche unterscheidbar sind.
+
 **Der Dunkelmodus wird durchgängig bedient.** Für jedes Symbol, dessen Farbe im dunklen Design
 nicht trägt, liegt eine eigene Fassung bereit; Contao blendet die passende ein. Deaktivierte
 Schaltflächen erscheinen in einer blassen Fassung desselben Symbols, ebenfalls für beide Designs.

@@ -22,6 +22,9 @@ die Attribute in Blau, die Filter in Rot, die Ansichten in Grün. Die Icons der 
 Attribut-, Filter- und Bedingungstypen bleiben bewusst neutral dunkelgrau - sie stehen für den
 Inhalt, nicht für den Bereich.
 
+Die gewählten Farben sind so gewählt, dass sie in das Farbschema von Contao passen, untereinander unterscheidbar sind,
+möglichst sowohl für Hell- als auch Dunkelmodus gehen, auch bei Rot-Grün-Farbschwäche unterscheidbar sind.
+
 **Eigene Variante für den Dark Mode.** Zu jedem Icon gehört eine Datei mit dem Zusatz
 ``--dark``. Contao wählt sie selbst aus, wenn das Backend im dunklen Farbschema läuft; es ist
 also keine Einstellung nötig.
