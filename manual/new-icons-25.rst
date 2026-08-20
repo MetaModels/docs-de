@@ -118,9 +118,9 @@ Filtersets und Ansichten kennzeichnet.
      - |neu_locale_svg|
      -
    * - Kindtabelle ohne eigenes Icon
-     - —
+     - |alt_metamodels_png|
      - |neu_child_table_svg|
-     - neu hinzugekommen
+     - bisher das Standard-Icon eines MetaModels, das hier nichts aussagte
    * - Standard-Icon eines MetaModels
      - |alt_metamodels_png|
      - |neu_metamodels_svg|
@@ -547,11 +547,11 @@ Zustands- und Frontend-Symbole, die nicht für einen Typ stehen.
    * - Checkbox aktiv (Listenansicht)
      - —
      - |neu_checkbox_active_svg|
-     - neu hinzugekommen
+     - bisher Contaos eigenes ``visible.svg``, jetzt ein eigenes
    * - Checkbox inaktiv (Listenansicht)
      - —
      - |neu_checkbox_inactive_svg|
-     - neu hinzugekommen
+     - neu hinzugekommen - der Aus-Zustand hatte bisher kein Vorgabe-Icon
    * - Bewertung – leerer Stern
      - |alt_star_empty_png|
      - |neu_star_empty_svg|
