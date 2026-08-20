@@ -53,18 +53,6 @@ Filtersets und Ansichten kennzeichnet.
      - Bisher
      - Neu
      - Hinweis
-   * - MetaModel (Datensatz-Definition)
-     - |alt_dca_png|
-     - |neu_dca_svg|
-     -
-   * - Standard-Icon eines MetaModels
-     - |alt_metamodels_png|
-     - |neu_metamodels_svg|
-     - Fallback, wenn ein MetaModel kein eigenes Icon gesetzt hat
-   * - Menügruppe „MetaModels" im Backend-Menü
-     - —
-     - |neu_mm_group_icon_svg|
-     - neu hinzugekommen
    * - MetaModels im Breadcrumb
      - —
      - |neu_mm_logo_small_svg|
@@ -73,11 +61,27 @@ Filtersets und Ansichten kennzeichnet.
      - |alt_fields_png|
      - |neu_fields_svg|
      -
-   * - Eingabemaske
+   * - Render-Einstellungen
+     - |alt_rendersettings_png|
+     - |neu_rendersettings_svg|
+     -
+   * - Felder einer Render-Einstellung
+     - |alt_rendersetting_png|
+     - |neu_rendersetting_svg|
+     -
+   * - „Alle hinzufügen" in der Render-Einstellung
+     - |alt_rendersettings_add_png|
+     - |neu_rendersettings_add_svg|
+     -
+   * - Eingabemasken
+     - |alt_dca_png|
+     - |neu_dca_svg|
+     -
+   * - Felder einer Eingabemaske
      - |alt_dca_setting_png|
      - |neu_dca_setting_svg|
      -
-   * - Bedingung in der Eingabemaske
+   * - Ansichtsbedingung eines Feldes
      - |alt_dca_condition_png|
      - |neu_dca_condition_svg|
      -
@@ -89,33 +93,20 @@ Filtersets und Ansichten kennzeichnet.
      - |alt_dca_add_png|
      - |neu_dca_add_svg|
      -
-   * - Rechte-Zuordnung
-     - |alt_dca_combine_png|
-     - |neu_dca_combine_svg|
-     -
+   * - Sucheinstellungen
+     - |alt_searchable_pages_png|
+     - |neu_searchable_pages_svg|
    * - Filterset
      - |alt_filter_png|
      - |neu_filter_svg|
      -
-   * - Filterregel
+   * - Filterregeln
      - |alt_filter_setting_png|
      - |neu_filter_setting_svg|
      -
-   * - Ansichten (Render-Einstellungen)
-     - |alt_rendersettings_png|
-     - |neu_rendersettings_svg|
-     -
-   * - einzelne Ansicht
-     - |alt_rendersetting_png|
-     - |neu_rendersetting_svg|
-     -
-   * - „Alle hinzufügen" in der Ansicht
-     - |alt_rendersettings_add_png|
-     - |neu_rendersettings_add_svg|
-     -
-   * - Durchsuchbare Seiten
-     - |alt_searchable_pages_png|
-     - |neu_searchable_pages_svg|
+   * - Rechte-Zuordnung
+     - |alt_dca_combine_png|
+     - |neu_dca_combine_svg|
      -
    * - Varianten
      - |alt_variants_png|
@@ -125,14 +116,18 @@ Filtersets und Ansichten kennzeichnet.
      - |alt_locale_png|
      - |neu_locale_svg|
      -
-   * - Untertabelle im Breadcrumb
+   * - Kindtabelle ohne eigenes Icon
      - —
      - |neu_child_table_svg|
      - neu hinzugekommen
-   * - Filterregel ohne eigenes Icon
-     - |alt_filter_default_png|
-     - |neu_filter_default_svg|
-     - Rückfallwert; die Typen ``idlist`` und ``simplelookup`` haben jetzt eigene Icons
+   * - Standard-Icon eines MetaModels
+     - |alt_metamodels_png|
+     - |neu_metamodels_svg|
+     - Fallback, wenn ein MetaModel kein eigenes Icon gesetzt hat
+   * - Menügruppe „MetaModels" im Backend-Menü
+     - —
+     - |neu_mm_group_icon_svg|
+     - neu hinzugekommen
 
 
 Attribute
@@ -419,11 +414,6 @@ welchem Paket sie stammen.
      - |alt_filter_member_png|
      - |neu_filter_member_svg|
      - aus contao-frontend-editing
-   * - ``notelist``
-     - Merkliste
-     - |alt_notelist_png|
-     - |neu_notelist_svg|
-     -
    * - ``perimetersearch``
      - Umkreissuche
      - |alt_filter_perimetersearch_png|
@@ -474,6 +464,10 @@ welchem Paket sie stammen.
      - |alt_visible_png|
      - |neu_filter_checkbox_svg|
      - teilt sich das Icon mit ``checkbox_published``
+   * - Filterregel ohne eigenes Icon
+     - |alt_filter_default_png|
+     - |neu_filter_default_svg|
+     - Rückfallwert; die Typen ``idlist`` und ``simplelookup`` haben jetzt eigene Icons
 
 
 Ansichtsbedingungen
@@ -568,18 +562,50 @@ Zustands- und Frontend-Symbole, die nicht für einen Typ stehen.
      - |alt_star_hover_png|
      - |neu_star_hover_svg|
      - Frontend-Darstellung
-   * - Merkliste – Eintrag enthalten
-     - —
-     - |neu_notelist_filled_svg|
-     - neu hinzugekommen
    * - Levenshtein – Index
      - |alt_levenshtein_index_png|
      - |neu_levenshtein_index_svg|
      -
+
+Erweiterungen
+-------------
+
+Zwei Erweiterungen bringen Symbole mit, die für die Erweiterung selbst stehen und nicht für
+einen Attribut- oder Filtertyp. Sie folgen derselben Regel wie der Kern: was eine Einheit
+bezeichnet, ist eingefärbt.
+
+Ihre Typ-Icons stehen in den Tabellen weiter oben - das Attribut ``marker_icon`` bei den
+Attributen, die Filterregel ``notelist`` bei den Filterregeln - und werden hier nicht
+wiederholt.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 44 9 9 38
+
+   * - Bedeutung
+     - Bisher
+     - Neu
+     - Hinweis
+   * - Merkliste
+     - |alt_notelist_png|
+     - |neu_notelist_svg|
+     - die Merkliste selbst - gelb, weil das Icon für die Einheit steht
+   * - Merkliste – Eintrag enthalten
+     - —
+     - |neu_notelist_filled_svg|
+     - neu hinzugekommen
+   * - Merkliste-Filterregel
+     - |alt_notelist_png|
+     - |neu_filter_notelist_svg|
+     - eigenes graues Typ-Icon
    * - Cowegis – MetaModels-Layer
      - —
      - |neu_metamodels_marker_svg|
-     -
+     - Layer-Typ in der Cowegis-Karte
+   * - Cowegis – Marker
+     - |alt_marker_png|
+     - |neu_marker_svg|
+     - zugleich das Typ-Icon des Attributs ``marker_icon``
 
 
 .. Bild-Ersetzungen
@@ -779,6 +805,8 @@ Zustands- und Frontend-Symbole, die nicht für einen Typ stehen.
 .. |neu_filter_levenshtein_svg| image:: /_img/icons_svg/filter_levenshtein.svg
    :width: 22px
 .. |neu_filter_member_svg| image:: /_img/icons_svg/filter_member.svg
+   :width: 22px
+.. |neu_filter_notelist_svg| image:: /_img/icons_svg/filter_notelist.svg
    :width: 22px
 .. |neu_filter_or_svg| image:: /_img/icons_svg/filter_or.svg
    :width: 22px

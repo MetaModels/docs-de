@@ -115,6 +115,8 @@ einfarbig grau - sie stehen in langen Listen untereinander, wo Farbigkeit nur un
 nicht trägt, liegt eine eigene Fassung bereit; Contao blendet die passende ein. Deaktivierte
 Schaltflächen erscheinen in einer blassen Fassung desselben Symbols, ebenfalls für beide Designs.
 
+Eine **Übersichtsseite** ist hier :ref:`manual_new_icons-25`.
+
 Drei Stellen haben darüber hinaus neue Icons bekommen:
 
 * **Bedingungen in der Eingabemaske** trugen bisher alle dasselbe Symbol. Jetzt hat jeder Typ ein
@@ -125,7 +127,7 @@ Drei Stellen haben darüber hinaus neue Icons bekommen:
   mit einer angehakten bzw. leeren Checkbox. Ein Auge behauptet Sichtbarkeit, ein Checkbox-Attribut
   kann aber alles Mögliche bedeuten - „bezahlt", „geprüft", „Mitglied". Die Farben entsprechen
   denen, die Contao für veröffentlicht und nicht veröffentlicht verwendet.
-* **Die Notizliste** zeigt am MetaModel, ob überhaupt Notizlisten eingerichtet sind: Das Symbol ist
+* **Die Merkliste** zeigt am MetaModel, ob überhaupt eine Merkliste eingerichtet ist: Das Symbol ist
   gefüllt, sobald welche vorhanden sind, und bleibt sonst leer. Es gilt in der Liste der MetaModels
   ebenso wie in der Breadcrumb.
 
