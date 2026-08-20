@@ -39,7 +39,7 @@ der Spalte *Bisher* heißt, dass es für diesen Typ vorher kein eigenes Icon gab
    und werden beim Vergrößern weich, die neuen SVGs bleiben scharf.
 
 
-Kern und Struktur
+Core und Struktur
 -----------------
 
 Die Symbole der Baumstruktur und der Menüs - alles, was ein MetaModel selbst, seine Eingabemasken,
@@ -54,9 +54,9 @@ Filtersets und Ansichten kennzeichnet.
      - Neu
      - Hinweis
    * - MetaModels im Breadcrumb
-     - —
+     - |alt_logo_png|
      - |neu_mm_logo_small_svg|
-     - ersetzt das alte ``logo_big.png``
+     -
    * - Attribute
      - |alt_fields_png|
      - |neu_fields_svg|
@@ -126,9 +126,9 @@ Filtersets und Ansichten kennzeichnet.
      - |neu_metamodels_svg|
      - Fallback, wenn ein MetaModel kein eigenes Icon gesetzt hat
    * - Menügruppe „MetaModels" im Backend-Menü
-     - —
+     - |alt_mm_group_icon_contour_svg|
      - |neu_mm_group_icon_svg|
-     - neu hinzugekommen
+     - bisher nur der Umriss, jetzt gefüllt
 
 
 Attribute
@@ -573,7 +573,7 @@ Zustands- und Frontend-Symbole, die nicht für einen Typ stehen.
 Erweiterungen
 -------------
 
-Zwei Erweiterungen bringen eigene Symbole mit. Sie folgen derselben Regel wie der Kern: was
+Zwei Erweiterungen bringen eigene Symbole mit. Sie folgen derselben Regel wie der Core: was
 eine Einheit bezeichnet, ist eingefärbt; was für einen Typ steht, bleibt neutral grau. Bei der
 Merkliste ist beides zu sehen - die Merkliste selbst in Gelb, ihre Filterregel in Grau.
 
@@ -688,11 +688,15 @@ mit der Erweiterung teilt.
    :width: 22px
 .. |alt_locale_png| image:: /_img/icons/locale.png
    :width: 22px
+.. |alt_logo_png| image:: /_img/icons/logo.png
+   :width: 22px
 .. |alt_longtext_png| image:: /_img/icons/longtext.png
    :width: 22px
 .. |alt_marker_png| image:: /_img/icons/marker.png
    :width: 22px
 .. |alt_metamodels_png| image:: /_img/icons/metamodels.png
+   :width: 22px
+.. |alt_mm_group_icon_contour_svg| image:: /_img/icons/mm_group_icon_contour.svg
    :width: 22px
 .. |alt_notelist_png| image:: /_img/icons/notelist.png
    :width: 22px
