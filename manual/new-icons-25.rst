@@ -96,6 +96,7 @@ Filtersets und Ansichten kennzeichnet.
    * - Sucheinstellungen
      - |alt_searchable_pages_png|
      - |neu_searchable_pages_svg|
+     -
    * - Filterset
      - |alt_filter_png|
      - |neu_filter_svg|
@@ -464,7 +465,8 @@ welchem Paket sie stammen.
      - |alt_visible_png|
      - |neu_filter_checkbox_svg|
      - teilt sich das Icon mit ``checkbox_published``
-   * - Filterregel ohne eigenes Icon
+   * - —
+     - Filterregel ohne eigenes Icon
      - |alt_filter_default_png|
      - |neu_filter_default_svg|
      - Rückfallwert; die Typen ``idlist`` und ``simplelookup`` haben jetzt eigene Icons
@@ -567,16 +569,16 @@ Zustands- und Frontend-Symbole, die nicht für einen Typ stehen.
      - |neu_levenshtein_index_svg|
      -
 
+
 Erweiterungen
 -------------
 
-Zwei Erweiterungen bringen Symbole mit, die für die Erweiterung selbst stehen und nicht für
-einen Attribut- oder Filtertyp. Sie folgen derselben Regel wie der Kern: was eine Einheit
-bezeichnet, ist eingefärbt.
+Zwei Erweiterungen bringen eigene Symbole mit. Sie folgen derselben Regel wie der Kern: was
+eine Einheit bezeichnet, ist eingefärbt; was für einen Typ steht, bleibt neutral grau. Bei der
+Merkliste ist beides zu sehen - die Merkliste selbst in Gelb, ihre Filterregel in Grau.
 
-Ihre Typ-Icons stehen in den Tabellen weiter oben - das Attribut ``marker_icon`` bei den
-Attributen, die Filterregel ``notelist`` bei den Filterregeln - und werden hier nicht
-wiederholt.
+Das Attribut ``marker_icon`` steht zusätzlich oben bei den Attributen, weil es sich sein Icon
+mit der Erweiterung teilt.
 
 .. list-table::
    :header-rows: 1
