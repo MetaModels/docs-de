@@ -70,7 +70,10 @@ Ein Dank für die Spenden* für die Erweiterung an:
 
 * N.N.: 400 €
 * N.N.: 400 €
-* Agentur `Markenzoo <https://markenzoo.de/>`_: 200€
+* `Agentur Markenzoo <https://markenzoo.de/>`_: 200€
+* `GUTcert GmbH <https://www.gut-cert.de/>`_: 212,50€
+* `Naturpark Dümmer <https://www.naturpark-duemmer.de/>`_: 350€
+* `RSM certification GmbH <https://www.rsm-certification.de/>`_: 350€
 
 
 (Spenden in Netto)
