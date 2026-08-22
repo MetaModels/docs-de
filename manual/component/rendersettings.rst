@@ -1,7 +1,7 @@
 .. _component_rendersettings:
 
-|img_rendersettings_32| Render-Einstellungen
-============================================
+|svg_rendersettings_32| | |img_rendersettings_32| Render-Einstellungen
+=======================================================================
 
 .. note:: Listenansichten für Backend und Frontend erstellen;
   Attribute hinzufügen und aktivieren
@@ -97,6 +97,8 @@ CSS-Klasse eingetragen werden ("|img_edit| Bearbeiten").
 .. seealso:: :ref:`rst_cookbook_rendering_encrypt-email`
 
 
+.. |svg_rendersettings_32| image:: /_img/icons_svg/rendersettings.svg
+   :width: 32px
 .. |img_rendersettings_32| image:: /_img/icons/rendersettings_32.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
 .. |img_rendersetting| image:: /_img/icons/rendersetting.png

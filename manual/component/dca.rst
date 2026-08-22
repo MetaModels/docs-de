@@ -1,7 +1,7 @@
 .. _component_dca:
 
-|img_dca_32| Eingabemasken
-==========================
+|svg_dca_32| | |img_dca_32| Eingabemasken
+==========================================
 
 .. note:: Eingabemasken für Dateneingabe erstellen;
   Attribute hinzufügen, aktivieren und konfigurieren; optional
@@ -153,6 +153,8 @@ für die Sortierung und Gruppierung der gespeicherten Items angelegt werden.
    * :ref:`rst_cookbook_inputmask_regex`
 
 
+.. |svg_dca_32| image:: /_img/icons_svg/dca.svg
+   :width: 32px
 .. |img_dca_32| image:: /_img/icons/dca_32.png
 .. |img_dca| image:: /_img/icons/dca.png
 .. |img_dca_setting| image:: /_img/icons/dca_setting.png

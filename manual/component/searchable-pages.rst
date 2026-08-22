@@ -1,14 +1,14 @@
 .. _component_searchable-pages:
 
-|img_searchable_pages_32| Sucheeinstellungen
-============================================
+|svg_searchable_pages_32| | |img_searchable_pages_32| Sucheinstellungen
+========================================================================
 
 .. note:: Detailseiten eines MetaModel in der sitemap.xml von Contao aufnehmen
 
 Einleitung
 ----------
 
-Mit den Sucheeinstellungen können die Detailseiten eines MetaModel-Renderings (Liste) in die Generierung der sitemap.xml
+Mit den Sucheinstellungen können die Detailseiten eines MetaModel-Renderings (Liste) in die Generierung der sitemap.xml
 eingebunden werden.
 
 Diese "Sonderbehandlung" der Detailseiten gegenüber den normalen Listenanzeigen ergibt sich aus
@@ -48,7 +48,7 @@ Optionen
 Ablauf
 ------
 
-Eine neue Sucheeinstellungen wird über das Icon "|img_new| Neue Sucheeinstellungen" angelegt und nach der Eingabe des Namens die
+Eine neue Sucheinstellungen wird über das Icon "|img_new| Neue Sucheinstellungen" angelegt und nach der Eingabe des Namens die
 Render-Einstellung ausgewählt. Die Render-Einstellung ist üblicherweise die gleiche, wie sie für das CE/Modul
 MetaModel-Liste der Frontendausgabe der "Übersichtsliste" gewählt wird - es kann aber auch eine eigene
 Render-Einstellungen angelegt werden.
@@ -68,6 +68,8 @@ Tipps
 * :ref:`rst_cookbook_specials_add_items_at_navigation`
 
 
+.. |svg_searchable_pages_32| image:: /_img/icons_svg/searchable_pages.svg
+   :width: 32px
 .. |img_searchable_pages_32| image:: /_img/icons/searchable_pages_32.png
 .. |img_searchable_pages| image:: /_img/icons/searchable_pages.png
 .. |img_new| image:: /_img/icons/new.gif

@@ -1,7 +1,7 @@
 .. _component_dca-combine:
 
-|img_dca_combine_32| Eingabe-/Render-Zuordnungen
-================================================
+|svg_dca_combine_32| | |img_dca_combine_32| Eingabe-/Render-Zuordnungen
+========================================================================
 
 .. note:: Zugriffsoptionen auf die Render-Einstellungen und Eingabemasken definieren;
   Zugriff der BE-Eingabe(n) sollte mindestens für Benutzergruppe 'Administrator'
@@ -42,5 +42,7 @@ In den vorgebenden Spalten der Eingabe-/Render-Zuordnungen die Auswahlen treffen
 sollten die Eingabemöglichkeiten der MetaModel im Backend sichtbar sein.
 
 
+.. |svg_dca_combine_32| image:: /_img/icons_svg/dca_combine.svg
+   :width: 32px
 .. |img_dca_combine_32| image:: /_img/icons/dca_combine_32.png
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
