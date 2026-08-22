@@ -10,6 +10,9 @@ zusammenfassen und gleich ergänzen.
 
 Die einzelnen Schritte sind ausführlicher in den weiteren Artikeln des Bereiches :ref:`component_index` ausgeführt.
 
+.. note:: Achtung: in MM 2.5 wurden neue SVG-Icons bei MetaModels eingeführt. In einer Übergangszeit, werden im Handbuch
+   beide Varianten angezeigt - erst neu, dann alt - eine Übersicht ist hier zu finden: :ref:`manual_new_icons-25`
+
 Schritt 0: Konzept der Datenstruktur
 ------------------------------------
 
@@ -46,18 +49,18 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
 * 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>`
     * :ref:`Mehrsprachigkeit <component_multi-language>` einstellen sofern notwendig
     * nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
-* 2: |img_fields| :ref:`Attribute anlegen <mm_first_attribute>`
+* 2: |svg_fields_22| |img_fields| :ref:`Attribute anlegen <mm_first_attribute>`
     * nach dem Anlegen aller Attribute unbedingt :ref:`DB-Migration <component_schema-manager>` (Contao-Manager oder Konsole)
       ausführen und Cache leeren
-* 3.a: |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>`
+* 3.a: |svg_rendersettings_22| |img_rendersettings| :ref:`Render-Einstellung anlegen <component_rendersettings>`
     * Grundeinstellung für die Listenansicht
-* 3.b: |img_rendersetting| :ref:`Attribute in Render-Einstellung hinzufügen <component_rendersettings>`
+* 3.b: |svg_rendersetting_22| |img_rendersetting| :ref:`Attribute in Render-Einstellung hinzufügen <component_rendersettings>`
     * bestimmt, welche Attribute in der jeweiligen Liste für eine Ansicht zur Verfügung stehen
-* 4.a: |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
+* 4.a: |svg_dca_22| |img_dca| :ref:`Eingabemaske anlegen <component_dca>`
     * Grundeinstellung für Eingabemaske
-* 4.b: |img_dca_setting| :ref:`Attribute für Eingabemaske anlegen <component_dca>`
+* 4.b: |svg_dca_setting_22| |img_dca_setting| :ref:`Attribute für Eingabemaske anlegen <component_dca>`
     * bestimmt, welche Attribute in der jeweiligen Eingabemaske für eine Ansicht zur Verfügung stehen
-* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
+* 5: |svg_dca_combine_22| |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
     * angelegte Render-Einstellung und Eingabemaske auswählen und speichern
 
 Ist Punkt 5 abgeschlossen, sollte das neue MetaModel links in der Contao-Navigation in der Sektion "METAMODELS"
@@ -80,32 +83,32 @@ Schritt 3: Einstellungen aus Schritt 1 anpassen
 
 * 1: |img_new| :ref:`MetaModel anpassen <mm_first_new-mm>`
     * :ref:`Varianten <component_relations_variants>` aktivieren, wenn für Datenstruktur erforderlich
-* 3.a: |img_rendersettings| :ref:`Render-Einstellung anpassen <component_rendersettings>`
+* 3.a: |svg_rendersettings_22| |img_rendersettings| :ref:`Render-Einstellung anpassen <component_rendersettings>`
     * spezifische Render-Einstellung anlegen z. B. für Listenausgabe im FE
     * :ref:`Variante des Templates "metamodels_prerendered" <component_templates>` auswählen für individuelle Ausgabe
     * Einstellung der "jumpTo"-Seite für :ref:`Detailansicht <component_contentelements>`
-* 3.b: |img_rendersetting| :ref:`Attribute in Render-Einstellung anpassen <component_rendersettings>`
+* 3.b: |svg_rendersetting_22| |img_rendersetting| :ref:`Attribute in Render-Einstellung anpassen <component_rendersettings>`
     * spezifische Einstellungen bei den Attributen vornehmen - z. B. :ref:`Ausgabe von Bildern inkl. Bildgröße <rst_cookbook_templates_fe_work_with_images>`
     * :ref:`Variante des Templates "mm_attr_<typ>" <component_templates>` auswählen für individuelle Ausgabe
-* 4.a: |img_dca| :ref:`Eingabemaske anpassen <component_dca>`
+* 4.a: |svg_dca_22| |img_dca| :ref:`Eingabemaske anpassen <component_dca>`
     * Keys für Ausgabe von Filter, Suche, Sortierung, Limit angeben
     * Auswahl des Backendbereiches, wo das MetaModel auftauchen soll z. B. Inhalte oder eigener Bereich
     * Anzeige als Tabelle im Backend
     * Berechtigungen für Bearbeitung
-* 4.b: |img_dca_setting| :ref:`Attribute für Eingabemaske anpassen <component_dca>`
+* 4.b: |svg_dca_setting_22| |img_dca_setting| :ref:`Attribute für Eingabemaske anpassen <component_dca>`
     * CSS-Klasse wie w50
     * Pflichtfeld, Nur lesen (Readonly)
     * Option, ob das Attribut in BE-Liste filterbar und/oder suchbar sein soll
     * Legenden hinzufügen, um größere Eingabemasken logisch zu unterteilen
-* 4.c: |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>`
+* 4.c: |svg_dca_groupsortsettings_22| |img_dca_groupsortsettings| :ref:`Sortierung/Gruppierung anlegen <component_dca>`
     * Standard-Sortierung anlegen oder weitere Sortierungen für Auswahl in Liste
-* 4.d: |img_dca_condition| :ref:`Ansichtsbedingungen anlegen <component_dca_visibility-conditions>`
+* 4.d: |svg_dca_condition_22| |img_dca_condition| :ref:`Ansichtsbedingungen anlegen <component_dca_visibility-conditions>`
     * Eingabewidgets können anhand von Werten anderer Widgets ein bzw. ausgeblendet werden
-* 5: |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
+* 5: |svg_dca_combine_22| |img_dca_combine| :ref:`Eingabe-/Render-Zuordnungen anlegen <component_dca-combine>`
     * Auswahl an Render-Einstellungen und Eingabemasken für Benutzergruppen (BE) oder Mitgliedergruppen (FE) zuweisen
-* 6.a: |img_filter| :ref:`Filter anlegen <component_filter>`
+* 6.a: |svg_filter_22| |img_filter| :ref:`Filter anlegen <component_filter>`
     * Name für Filter vergeben
-* 6.b: |img_filter_setting| :ref:`Filterregeln anlegen <component_filter>`
+* 6.b: |svg_filter_setting_22| |img_filter_setting| :ref:`Filterregeln anlegen <component_filter>`
     * Filterregeln einfügen
     * Verschachtelungen mit AND bzw. OR möglich
     * ohne weitere Angabe sind alle Filterregeln automatisch mit AND verknüpft
@@ -167,14 +170,34 @@ Tipps:
 
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_fields| image:: /_img/icons/fields.png
+.. |svg_fields_22| image:: /_img/icons_svg/fields.svg
+   :width: 22px
 .. |img_workflow_01| image:: /_img/screenshots/workflow/workflow_01.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
+.. |svg_rendersettings_22| image:: /_img/icons_svg/rendersettings.svg
+   :width: 22px
 .. |img_rendersetting| image:: /_img/icons/rendersetting.png
+.. |svg_rendersetting_22| image:: /_img/icons_svg/rendersetting.svg
+   :width: 22px
 .. |img_dca| image:: /_img/icons/dca.png
+.. |svg_dca_22| image:: /_img/icons_svg/dca.svg
+   :width: 22px
 .. |img_dca_setting| image:: /_img/icons/dca_setting.png
+.. |svg_dca_setting_22| image:: /_img/icons_svg/dca_setting.svg
+   :width: 22px
 .. |img_dca_groupsortsettings| image:: /_img/icons/dca_groupsortsettings.png
+.. |svg_dca_groupsortsettings_22| image:: /_img/icons_svg/dca_groupsortsettings.svg
+   :width: 22px
 .. |img_dca_condition| image:: /_img/icons/dca_condition.png
+.. |svg_dca_condition_22| image:: /_img/icons_svg/dca_condition.svg
+   :width: 22px
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
+.. |svg_dca_combine_22| image:: /_img/icons_svg/dca_combine.svg
+   :width: 22px
 .. |img_filter| image:: /_img/icons/filter.png
+.. |svg_filter_22| image:: /_img/icons_svg/filter.svg
+   :width: 22px
 .. |img_filter_setting| image:: /_img/icons/filter_setting.png
+.. |svg_filter_setting_22| image:: /_img/icons_svg/filter_setting.svg
+   :width: 22px
 
