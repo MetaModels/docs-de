@@ -221,9 +221,10 @@ erscheinen.
      -
    * - ``rating``
      - Bewertung
-     - —
+     - |alt_star_full_png|
      - |neu_star_svg|
-     - bekommt erstmals ein eigenes Typ-Icon
+     - bis MM 2.4 dasselbe Icon wie der gefüllte Frontend-Stern (``star-full``); bekommt mit 2.5
+       eine eigene Datei
    * - ``select``
      - Einzelauswahl [select]
      - |alt_select_png|
