@@ -244,6 +244,18 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Ohne die Option ändert sich nichts. Genutzt wird sie von den Attributen Auswahl und Tags, siehe dort.
 * **Tooltips der Operations-Buttons korrigiert:** In den Listenansichten wurde die Anzeige der Tooltips (inkl. der
   Icons zum Öffnen von Kindtabellen) korrigiert.
+* **Zyklus bei Sichtbarkeits-Bedingungen abgefangen:** Verwiesen die Sichtbarkeits-Bedingungen zweier Felder
+  gegenseitig aufeinander (Feld A nur sichtbar, wenn Feld B es ist, und umgekehrt), brach die Eingabemaske
+  bisher mit einem Fatalen Fehler ab. Ein solcher Zyklus wird jetzt erkannt; die beteiligten Felder bleiben
+  schlicht ausgeblendet, die Maske bleibt bedienbar.
+* **Verständliche Rückmeldung bei fehlender Berechtigung:** Durfte ein Datensatz nicht gelöscht, angelegt oder
+  bearbeitet werden, zeigte der DC_General bisher einen technischen Fehlerbildschirm mit englischem
+  Entwicklertext. Angemeldete Redakteure ohne die nötige Berechtigung sehen jetzt eine verständliche
+  Meldung, nicht angemeldete Besucher (z. B. im Frontend-Editing) stattdessen die Anmeldeseite.
+* **Technischer Fehler beim automatischen Neuladen bleibt sichtbar:** Löste eine Eingabemaske beim
+  automatischen Neuladen (etwa durch eine Sichtbarkeits-Bedingung) beim Verarbeiten eines Feldwerts einen
+  technischen Fehler aus - z. B. durch eine fehlerhafte Erweiterung -, verschwand die Meldung bisher
+  stillschweigend beim Neuaufbau der Maske. Sie bleibt jetzt stehen, bis das Feld erneut bearbeitet wird.
 * **Sprachen außerhalb der Contao-Sprachliste:** Unterstützt ein MetaModel eine Sprache, die in den
   Contao-Einstellungen nicht als Sprache aktiviert ist (z. B. ``en_DE``), erzeugte die Sprachauswahl der
   Eingabemaske eine PHP-Warnung und einen leeren Eintrag. Es wird nun der ICU-Anzeigename herangezogen und
@@ -378,11 +390,17 @@ entfallen sie.
     * Ist **kein** Filter eingestellt, ändert sich nichts. Die Einschränkung wird dann gar nicht
       erst ermittelt - ein Baum-Wähler wird ja gerade dort verwendet, wo die Zieltabelle zu groß
       für eine Auswahlliste ist.
-    * **Zu beachten:** Wird eine Einschränkung nachträglich verschärft, verschwinden bereits
-      gespeicherte Werte, die ihr nicht mehr entsprechen, aus der Maske - im Wähler ebenso wie in
-      der Auswahlliste, wo es schon bisher so war. Beim nächsten Speichern des Datensatzes sind sie
-      dann auch im Datenbestand fort. Vor einer Verschärfung lohnt daher ein Blick darauf, ob
-      Datensätze betroffen sind.
+    * **Bei Auswahl und Übersetzter Auswahl zu beachten:** Wird eine Einschränkung nachträglich
+      verschärft, verschwinden bereits gespeicherte Werte, die ihr nicht mehr entsprechen, aus der
+      Maske - im Wähler ebenso wie in der Auswahlliste, wo es schon bisher so war. Beim nächsten
+      Speichern des Datensatzes sind sie dann auch im Datenbestand fort. Vor einer Verschärfung
+      lohnt daher ein Blick darauf, ob Datensätze betroffen sind.
+    * **Bei Tags und Übersetzten Tags gilt das nicht mehr (NEU):** Verweise, die eine Filtereinstellung
+      der Maske verbirgt, überstehen jetzt das Speichern unverändert - unabhängig davon, ob die
+      Einschränkung gerade erst verschärft wurde oder schon länger besteht. Bisher löschte jedes
+      Speichern eines Datensatzes alle Verweise, die im aktuell sichtbaren Ausschnitt fehlten, auch
+      wenn sie dem Redakteur nie zur Auswahl standen und er sie folglich auch nicht abwählen konnte.
+      Betroffen war das Attribut ``tags`` ebenso wie Tags-Bezüge auf ein anderes MetaModel.
 
 * Levenshtein (levenshtein)
     * **Schreibweise durchgängig korrigiert:** Der Attributtyp hieß seit seiner ersten Fassung
