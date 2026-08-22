@@ -48,7 +48,7 @@ Auswahlen erfolgen müssen. Für eine leichtere Übersicht wo was zu finden ist,
 
 * 1: |img_new| :ref:`Neues MetaModel anlegen <mm_first_new-mm>`
     * :ref:`Mehrsprachigkeit <component_multi-language>` einstellen sofern notwendig
-    * nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |img_workflow_01|
+    * nach dem Speichern können die Icons von links nach rechts wie folgt angesteuert werden |svg_workflow_01| |img_workflow_01|
 * 2: |svg_fields_22| |img_fields| :ref:`Attribute anlegen <mm_first_attribute>`
     * nach dem Anlegen aller Attribute unbedingt :ref:`DB-Migration <component_schema-manager>` (Contao-Manager oder Konsole)
       ausführen und Cache leeren
@@ -173,6 +173,7 @@ Tipps:
 .. |svg_fields_22| image:: /_img/icons_svg/fields.svg
    :width: 22px
 .. |img_workflow_01| image:: /_img/screenshots/workflow/workflow_01.png
+.. |svg_workflow_01| image:: /_img/screenshots/workflow/svg_workflow_01.png
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
 .. |svg_rendersettings_22| image:: /_img/icons_svg/rendersettings.svg
    :width: 22px
