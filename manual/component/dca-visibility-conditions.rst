@@ -1,7 +1,7 @@
 .. _component_dca_visibility-conditions:
 
-|img_dca_condition| Anzeigeeigenschaften / Sub-Paletten
-=======================================================
+|svg_dca_condition_22| | |img_dca_condition| Anzeigeeigenschaften / Sub-Paletten
+=================================================================================
 
 Die Anzeigeeigenschaften werden auch unter dem Begriff "Sub-Paletten" geführt, da es hiermit möglich ist, ein
 Eingabewidget eines Attributs in einer Eingabemaske aufgrund von Werten eines anderen Widgets gezielt ein- oder
@@ -43,25 +43,25 @@ Bei Widgets, die eine Anzeigebedingung implementiert haben, ist das Icon farblic
 
 Folgende Typen von Bedingungen sind implementiert:
 
-* **Eigenschaftswert ist...** |br|
+* |svg_condition_propertyvalueis_22| **Eigenschaftswert ist...** |br|
   Die Bedingung ist erfüllt, wenn der Attributwert gleich dem festgelegten Wert ist.
   Als Attribute können diejenigen mit Einfachauswahl wie z.B. Select oder Checkbox
   ausgewählt werden. \*
-* **Eigenschaftswert kann beinhalten...** |br|
+* |svg_condition_propertycontainanyof_22| **Eigenschaftswert kann beinhalten...** |br|
   Die Bedingung ist erfüllt, wenn ein beliebiger Attributwert gleich dem jeweils
   festgelegten Wert ist (Schnittmenge bzw. ODER). Als Attribute können diejenigen
   mit Mehrfachauswahl wie z.B. Tags ausgewählt werden.
-* **Eigenschaft ist sichtbar...** |br|
+* |svg_condition_propertyvisible_22| **Eigenschaft ist sichtbar...** |br|
   Die Bedingung ist erfüllt, wenn alle Bedingungen für ein ausgewähltes Attribut
   erfüllt sind. Mit anderen Worten, das Attribut ist sichtbar, und nur dann, wenn
   das ausgewählte (oder "referenzierte") Attribut auch sichtbar ist. Mit diesem
   Bedingungstyp erspart man sich das Duplizieren von erstellten Ansichtsbedingungen
   eines Attributs.
-* **ODER** |br|
+* |svg_condition_or_22| **ODER** |br|
   Eine beliebige Bedingung muss erfüllt sein.
-* **UND** |br|
+* |svg_condition_and_22| **UND** |br|
   Alle Bedingungen müssen erfüllt sein.
-* **NICHT** |br|
+* |svg_condition_not_22| **NICHT** |br|
   Kehrt das Ergebnis einer vorgegebenen Bedingung um.
 
 .. note:: \* ab Version 2.3 kann auch die Leere bzw. nicht ausgefüllte Bedingung eines Select- oder Checkbox-Widgets
@@ -70,7 +70,21 @@ Folgende Typen von Bedingungen sind implementiert:
    gleichwertig sind, so dass das Select nach dem Speichern wieder auf den ersten Wert "-" zurück springt
 
 
+.. |svg_dca_condition_22| image:: /_img/icons_svg/dca_condition.svg
+   :width: 22px
 .. |img_dca_condition| image:: /_img/icons/dca_condition.png
+.. |svg_condition_propertyvalueis_22| image:: /_img/icons_svg/condition_propertyvalueis.svg
+   :width: 22px
+.. |svg_condition_propertycontainanyof_22| image:: /_img/icons_svg/condition_propertycontainanyof.svg
+   :width: 22px
+.. |svg_condition_propertyvisible_22| image:: /_img/icons_svg/condition_propertyvisible.svg
+   :width: 22px
+.. |svg_condition_or_22| image:: /_img/icons_svg/condition_or.svg
+   :width: 22px
+.. |svg_condition_and_22| image:: /_img/icons_svg/condition_and.svg
+   :width: 22px
+.. |svg_condition_not_22| image:: /_img/icons_svg/condition_not.svg
+   :width: 22px
 .. |img_dca_condition_1| image:: /_img/icons/dca_condition_1.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_about| image:: /_img/icons/about.png

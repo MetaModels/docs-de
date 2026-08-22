@@ -1,7 +1,7 @@
 .. _component_attribute_color:
 
-Farbwähler
-==========
+|svg_attr_color_22| Farbwähler
+==============================
 
 Das Attribut "Farbwähler" ermöglicht die Auswahl einer Webfarbe inkl. Sättigungswert
 über ein integriertes Colorpicker-Widget. Typische Einsatzbereiche:
@@ -142,6 +142,8 @@ in numerische Sortierschlüssel, sodass Farben sinnvoll nach ihrem numerischen
 Farbwert geordnet werden können.
 
 
+.. |svg_attr_color_22| image:: /_img/icons_svg/color.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

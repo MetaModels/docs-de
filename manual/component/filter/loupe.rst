@@ -1,7 +1,7 @@
 .. _component_filter_loupe:
 
-|img_filter_default| Loupe
-===========================
+|svg_filt_loupe_22| | |img_filter_default| Loupe
+================================================
 
 Die Filterregel "Loupe" (Paket ``filter_loupe``, ab MM 2.4) erzeugt einen
 Volltext-Index über ausgewählte Attribute in einer eigenen SQLite-Datenbank und
@@ -117,6 +117,8 @@ Contao-Hauptdatenbank). Dies ermöglicht schnelle Volltextsuchen auch bei große
 Datenmengen.
 
 
+.. |svg_filt_loupe_22| image:: /_img/icons_svg/loupe-emblem.svg
+   :width: 22px
 .. |img_filter_default| image:: /_img/icons/filter_default.png
 
 .. |br| raw:: html

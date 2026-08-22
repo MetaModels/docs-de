@@ -1,7 +1,7 @@
 .. _component_attribute_tags:
 
-Mehrfachauswahl [tags]
-======================
+|svg_attr_tags_22| Mehrfachauswahl [tags]
+=========================================
 
 Das Attribut "Mehrfachauswahl [tags]" erstellt eine :ref:`m:n-Relation <component_relations_standard-relation-mton>` zu
 einer anderen Tabelle — entweder einer MetaModels-Tabelle oder einer beliebigen Contao-Tabelle
@@ -192,6 +192,8 @@ zur Filterung auf veröffentlichte Einträge:
    t.published = '1'
 
 
+.. |svg_attr_tags_22| image:: /_img/icons_svg/tags.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

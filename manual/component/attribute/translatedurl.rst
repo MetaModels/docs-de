@@ -1,7 +1,7 @@
 .. _component_attribute_translatedurl:
 
-Übersetzte URL
-==============
+|svg_attr_translatedurl_22| Übersetzte URL
+==========================================
 
 Das Attribut "Übersetzte URL" ist die mehrsprachige Variante des
 :ref:`URL-Attributs <component_attribute_url>`. Es speichert je Sprache einen
@@ -153,6 +153,8 @@ eingeblendet, über den interne Contao-Seiten ausgewählt werden können. Bei
 aktiviertem "Titel entfernen" steht nur ein einfaches Textfeld zur Verfügung.
 
 
+.. |svg_attr_translatedurl_22| image:: /_img/icons_svg/url.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

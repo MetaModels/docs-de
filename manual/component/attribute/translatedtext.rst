@@ -1,7 +1,7 @@
 .. _component_attribute_translatedtext:
 
-Übersetzter Text
-================
+|svg_attr_translatedtext_22| Übersetzter Text
+=============================================
 
 Das Attribut "Übersetzter Text" ist die mehrsprachige Variante des
 :ref:`Text-Attributs <component_attribute_text>`. Es speichert je Sprache einen
@@ -186,6 +186,8 @@ Ist "Eindeutige Werte" aktiv, prüft MetaModels die Eindeutigkeit je Sprache
 separat.
 
 
+.. |svg_attr_translatedtext_22| image:: /_img/icons_svg/text.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

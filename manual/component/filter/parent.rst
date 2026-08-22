@@ -1,7 +1,7 @@
 .. _component_filter_parent:
 
-|img_filter_default| Parent-Filter
-====================================
+|svg_filt_parent_22| | |img_filter_default| Parent-Filter
+=========================================================
 
 .. note:: Diese Filterregel wird nicht weiter entwickelt - Nachfolger ist Filterregel :ref:`component_filter_by-related`,
    welcher diese Funktionalität mit abdeckt.
@@ -109,6 +109,8 @@ MetaModels, das die Relation zum Eltern-MetaModel herstellt:
 * :ref:`Einzelauswahl [select] <component_attribute_select>`
 
 
+.. |svg_filt_parent_22| image:: /_img/icons_svg/filter_default.svg
+   :width: 22px
 .. |img_filter_default| image:: /_img/icons/filter_default.png
 
 .. |br| raw:: html

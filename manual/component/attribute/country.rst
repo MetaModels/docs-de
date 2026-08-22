@@ -1,7 +1,7 @@
 .. _component_attribute_country:
 
-|img_country| Land
-==================
+|svg_attr_country_22| | |img_country| Land
+==========================================
 
 Das Attribut "Land" stellt eine Auswahliste aller Länder der Welt zur Verfügung.
 Die Ländernamen werden in der jeweils aktiven Sprache des Backends angezeigt und
@@ -144,6 +144,8 @@ Der Länderwert wird als ``varchar(2) NULL`` (zweistelliger ISO-Code) gespeicher
 Ein leerer Wert wird als ``NULL`` abgelegt (kompatibel mit MySQL Strict Mode).
 
 
+.. |svg_attr_country_22| image:: /_img/icons_svg/country.svg
+   :width: 22px
 .. |img_country| image:: /_img/icons/country.png
 
 .. |br| raw:: html

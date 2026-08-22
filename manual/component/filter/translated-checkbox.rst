@@ -1,7 +1,7 @@
 .. _component_filter_translated-checkbox:
 
-|img_filter_checkbox| Übersetzter Checkbox-Status
-==================================================
+|svg_filt_translated_checkbox_22| | |img_filter_checkbox| Übersetzter Checkbox-Status
+=====================================================================================
 
 Die Filterregel "Übersetzter Checkbox-Status" (Paket ``filter_checkbox``) prüft, ob
 der Wert eines übersetzten Checkbox-Attributs gleich ``1`` (aktiv) ist. Sie entspricht
@@ -74,6 +74,8 @@ Attribute geeignet:
 * :ref:`Übersetzte Checkbox <component_attribute_translatedcheckbox>`
 
 
+.. |svg_filt_translated_checkbox_22| image:: /_img/icons_svg/filter_checkbox.svg
+   :width: 22px
 .. |img_filter_checkbox| image:: /_img/icons/filter_checkbox.png
 
 .. |br| raw:: html

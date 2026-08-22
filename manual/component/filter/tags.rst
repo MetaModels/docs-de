@@ -1,7 +1,7 @@
 .. _component_filter_tags:
 
-|img_filter_tags| Mehrfachauswahl
-==================================
+|svg_filt_tags_22| | |img_filter_tags| Mehrfachauswahl
+======================================================
 
 Die Filterregel "Mehrfachauswahl" (Paket ``filter_tags``) gibt ein Frontend-Widget
 aus, über das Besucher mehrere Werte gleichzeitig aus einer Liste auswählen können.
@@ -118,6 +118,8 @@ Tag (ODER-Filterung). Dies beeinflusst die Ergebnismenge bei mehrfacher Auswahl
 erheblich.
 
 
+.. |svg_filt_tags_22| image:: /_img/icons_svg/filter_tags.svg
+   :width: 22px
 .. |img_filter_tags| image:: /_img/icons/filter_tags.png
 
 .. |br| raw:: html

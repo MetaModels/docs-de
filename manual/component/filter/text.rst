@@ -1,7 +1,7 @@
 .. _component_filter_text:
 
-|img_filter_text| Textfilter
-=============================
+|svg_filt_text_22| | |img_filter_text| Textfilter
+=================================================
 
 Die Filterregel "Textfilter" (Paket ``filter_text``) filtert Items anhand einer
 Texteingabe im Frontend. Besucher geben einen Suchbegriff in ein Texteingabefeld
@@ -115,6 +115,8 @@ des konfigurierten Trennzeichens in einzelne Wörter zerlegt, bevor jedes Wort
 separat gesucht wird.
 
 
+.. |svg_filt_text_22| image:: /_img/icons_svg/filter_text.svg
+   :width: 22px
 .. |img_filter_text| image:: /_img/icons/filter_text.png
 
 .. |br| raw:: html

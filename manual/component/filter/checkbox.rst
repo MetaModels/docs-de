@@ -1,7 +1,7 @@
 .. _component_filter_checkbox:
 
-|img_filter_checkbox| Checkbox-Status
-======================================
+|svg_filt_checkbox_22| | |img_filter_checkbox| Checkbox-Status
+==============================================================
 
 Die Filterregel "Checkbox-Status" (Paket ``filter_checkbox``) prüft, ob der Wert
 eines Checkbox-Attributs gleich ``1`` (aktiv) ist. Sie wird typischerweise für
@@ -109,6 +109,8 @@ Das mitgelieferte Template ``mm_filteritem_checkbox.html5`` bietet eine
 checkboxspezifische Ausgabe für das Filterwidget.
 
 
+.. |svg_filt_checkbox_22| image:: /_img/icons_svg/filter_checkbox.svg
+   :width: 22px
 .. |img_filter_checkbox| image:: /_img/icons/filter_checkbox.png
 
 .. |br| raw:: html

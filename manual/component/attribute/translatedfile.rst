@@ -1,7 +1,7 @@
 .. _component_attribute_translatedfile:
 
-Übersetzte Datei
-================
+|svg_attr_translatedfile_22| Übersetzte Datei
+=============================================
 
 Das Attribut "Übersetzte Datei" ist die mehrsprachige Variante des
 :ref:`Datei-Attributs <component_attribute_file>`. Es stellt je Sprache einen
@@ -231,6 +231,8 @@ Vorschaubildern befindet sich außerdem ein roter Button, mit dem sich eine
 einzelne Datei aus der Auswahl entfernen lässt, ohne den Dateipicker zu öffnen.
 
 
+.. |svg_attr_translatedfile_22| image:: /_img/icons_svg/file.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

@@ -1,7 +1,7 @@
 .. _component_filter_by-related:
 
-|img_filter_default| Filter-by-related
-=======================================
+|svg_filt_by_related_22| | |img_filter_default| Filter-by-related
+=================================================================
 
 Die Filterregel "Filter-by-related" (Paket ``filter_by_related``, ab MM 2.4) ermöglicht
 es, Items anhand von Eigenschaften eines verknüpften (relationierten) MetaModels zu
@@ -126,6 +126,8 @@ Die Relation zum Haupt-MetaModel kann über folgende Attributtypen aufgebaut sei
 * Kindtabellenrelation (pid/ptable)
 
 
+.. |svg_filt_by_related_22| image:: /_img/icons_svg/filter_by_related.svg
+   :width: 22px
 .. |img_filter_default| image:: /_img/icons/filter_default.png
 
 .. |br| raw:: html

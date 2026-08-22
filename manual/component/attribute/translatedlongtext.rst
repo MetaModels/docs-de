@@ -1,7 +1,7 @@
 .. _component_attribute_translatedlongtext:
 
-Übersetzter Langtext
-====================
+|svg_attr_translatedlongtext_22| Übersetzter Langtext
+=====================================================
 
 Das Attribut "Übersetzter Langtext" ist die mehrsprachige Variante des
 :ref:`Langtext-Attributs <component_attribute_longtext>`. Es speichert je Sprache
@@ -169,6 +169,8 @@ Fehlt für eine Sprache ein Wert, greift MetaModels auf die Fallback-Sprache
 zurück.
 
 
+.. |svg_attr_translatedlongtext_22| image:: /_img/icons_svg/longtext.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

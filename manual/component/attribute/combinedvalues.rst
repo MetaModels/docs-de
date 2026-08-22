@@ -1,7 +1,7 @@
 .. _component_attribute_combinedvalues:
 
-|img_combinedvalues| Kombinierte Einträge
-=========================================
+|svg_attr_combinedvalues_22| | |img_combinedvalues| Kombinierte Einträge
+========================================================================
 
 Das Attribut "Kombinierte Einträge" fügt Werte aus mehreren vorhandenen Attributen
 zu einem neuen, gespeicherten Textwert zusammen. Typische Einsatzbereiche:
@@ -190,6 +190,8 @@ Der kombinierte Wert wird als ``text NULL`` gespeichert. Ein leerer Wert wird al
 ``NULL`` abgelegt (kompatibel mit MySQL Strict Mode).
 
 
+.. |svg_attr_combinedvalues_22| image:: /_img/icons_svg/combinedvalues.svg
+   :width: 22px
 .. |img_combinedvalues| image:: /_img/icons/combinedvalues.png
 
 .. |br| raw:: html

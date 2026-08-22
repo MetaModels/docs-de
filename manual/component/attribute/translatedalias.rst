@@ -1,7 +1,7 @@
 .. _component_attribute_translatedalias:
 
-Übersetzter Alias
-=================
+|svg_attr_translatedalias_22| Übersetzter Alias
+===============================================
 
 Das Attribut "Übersetzter Alias" ist die mehrsprachige Variante des
 :ref:`Alias-Attributs <component_attribute_alias>`. Es erzeugt je Sprache einen
@@ -165,6 +165,8 @@ Bei aktivierter Eindeutigkeit prüft MetaModels je Sprache separat und hängt
 bei Duplikaten automatisch einen Zähler an (``mein-produkt-2`` usw.).
 
 
+.. |svg_attr_translatedalias_22| image:: /_img/icons_svg/alias.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

@@ -1,7 +1,7 @@
 .. _component_attribute_tabletext:
 
-Text-Tabelle
-============
+|svg_attr_tabletext_22| Text-Tabelle
+====================================
 
 Das Attribut "Text-Tabelle" ermöglicht die Eingabe von Textdaten in einer
 tabellarischen Struktur mit konfigurierten Spalten und beliebig vielen Zeilen.
@@ -146,6 +146,8 @@ Im Frontend-Template stehen die Werte als verschachteltes Array zur Verfügung:
 die Spaltennamen automatisch aus der Spalteneinstellung generiert werden.
 
 
+.. |svg_attr_tabletext_22| image:: /_img/icons_svg/tabletext.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

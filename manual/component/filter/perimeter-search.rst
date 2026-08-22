@@ -1,7 +1,7 @@
 .. _component_filter_perimeter-search:
 
-|img_filter_perimetersearch| Umkreissuche
-==========================================
+|svg_filt_perimeter_search_22| | |img_filter_perimetersearch| Umkreissuche
+==========================================================================
 
 Die Filterregel "Umkreissuche" (Paket ``filter_perimetersearch``) filtert Items anhand
 ihrer geografischen Position. Besucher geben eine Adresse oder Koordinaten ein und
@@ -115,6 +115,8 @@ Zusätzlich kann das Attribut :ref:`Geo-Entfernung <component_attribute_geodista
 für die Anzeige und Sortierung nach Entfernung verwendet werden.
 
 
+.. |svg_filt_perimeter_search_22| image:: /_img/icons_svg/filter_perimetersearch.svg
+   :width: 22px
 .. |img_filter_perimetersearch| image:: /_img/icons/filter_default.png
 
 .. |br| raw:: html

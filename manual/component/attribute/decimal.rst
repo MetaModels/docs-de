@@ -1,7 +1,7 @@
 .. _component_attribute_decimal:
 
-|img_decimal| Dezimal
-=====================
+|svg_attr_decimal_22| | |img_decimal| Dezimal
+=============================================
 
 Das Attribut "Dezimal" speichert Dezimalzahlen (Gleitkommazahlen doppelter
 Genauigkeit). Typische Einsatzbereiche:
@@ -145,6 +145,8 @@ Das Eingabefeld ist mit der Regex-Prüfung ``digit`` belegt, die ausschließlich
 numerische Eingaben (inkl. Dezimalpunkt und Vorzeichen) akzeptiert.
 
 
+.. |svg_attr_decimal_22| image:: /_img/icons_svg/decimal.svg
+   :width: 22px
 .. |img_decimal| image:: /_img/icons/decimal.png
 
 .. |br| raw:: html

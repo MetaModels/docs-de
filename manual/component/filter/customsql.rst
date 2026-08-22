@@ -1,7 +1,7 @@
 .. _component_filter_customsql:
 
-|img_filter_customsql| Eigenes SQL
-===================================
+|svg_filt_customsql_22| | |img_filter_customsql| Eigenes SQL
+============================================================
 
 Die Filterregel "Eigenes SQL" ermöglicht die Verwendung einer selbst geschriebenen SQL-Abfrage zur Filterung von Items.
 Die Abfrage muss eine Liste von Item-IDs zurückgeben. Diese Filterregel richtet sich an fortgeschrittene Anwender, die
@@ -204,6 +204,8 @@ Bei der URL ``https://example.org/list.html`` (kein Parameter): |br|
 ``SELECT t.id FROM mm_demo AS t WHERE t.catname = 'defaultcat'``
 
 
+.. |svg_filt_customsql_22| image:: /_img/icons_svg/filter_customsql.svg
+   :width: 22px
 .. |img_filter_customsql| image:: /_img/icons/filter_customsql.png
 
 .. |br| raw:: html

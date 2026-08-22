@@ -1,7 +1,7 @@
 .. _component_filter_simplelookup:
 
-|img_filter_default| Einfache Abfrage
-======================================
+|svg_filt_simplelookup_22| | |img_filter_default| Einfache Abfrage
+==================================================================
 
 Die Filterregel "Einfache Abfrage" filtert Items anhand eines einzelnen Attributwerts.
 Der Filterwert kann entweder über einen URL-Parameter (GET/Slug) dynamisch übergeben
@@ -134,6 +134,8 @@ Einstellung eignet sich für Seiten, die immer eine bestimmte Kategorie anzeigen
 sollen, ohne dass ein URL-Parameter benötigt wird - siehe :ref:`rst_cookbook_filter_filter-with-static-parameter`.
 
 
+.. |svg_filt_simplelookup_22| image:: /_img/icons_svg/filter_simplelookup.svg
+   :width: 22px
 .. |img_filter_default| image:: /_img/icons/filter_default.png
 
 .. |br| raw:: html

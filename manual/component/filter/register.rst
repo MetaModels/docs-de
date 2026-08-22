@@ -1,7 +1,7 @@
 .. _component_filter_register:
 
-|img_filter_default| Register
-==============================
+|svg_filt_register_22| | |img_filter_default| Register
+======================================================
 
 Die Filterregel "Register" (Paket ``filter_register``) filtert Items nach dem
 Anfangsbuchstaben eines Attributwerts. Sie generiert eine Liste aller vorhandenen
@@ -102,6 +102,8 @@ kann auf dem üblichen Contao-Weg (Template-Vererbung) angepasst werden, um z. B
 eine andere Darstellung oder Sonderzeichen zu integrieren.
 
 
+.. |svg_filt_register_22| image:: /_img/icons_svg/filter_register.svg
+   :width: 22px
 .. |img_filter_default| image:: /_img/icons/filter_default.png
 
 .. |br| raw:: html

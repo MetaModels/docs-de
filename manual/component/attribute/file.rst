@@ -1,7 +1,7 @@
 .. _component_attribute_file:
 
-|img_file| Datei
-================
+|svg_attr_file_22| | |img_file| Datei
+=====================================
 
 Das Attribut "Datei" stellt einen Dateipicker zur Auswahl von einer oder mehreren
 Dateien aus dem Contao-Dateiverzeichnis bereit. Typische Einsatzbereiche:
@@ -222,6 +222,8 @@ Vorschaubildern befindet sich außerdem ein roter Button, mit dem sich eine
 einzelne Datei aus der Auswahl entfernen lässt, ohne den Dateipicker zu öffnen.
 
 
+.. |svg_attr_file_22| image:: /_img/icons_svg/file.svg
+   :width: 22px
 .. |img_file| image:: /_img/icons/file.png
 
 .. |br| raw:: html

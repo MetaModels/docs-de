@@ -1,7 +1,7 @@
 .. _component_attribute_alias:
 
-|img_alias| Alias
-=================
+|svg_attr_alias_22| | |img_alias| Alias
+=======================================
 
 Das Attribut "Alias" erzeugt einen eindeutigen, URL-tauglichen Kurzbezeichner, der aus einem oder mehreren vorhandenen
 Attributen erzeugt wird. Typische Einsatzbereiche sind:
@@ -216,6 +216,8 @@ Trennzeichen, die in Contao zur Textformatierung genutzt werden) werden vor der
 Slug-Generierung automatisch entfernt, damit sie nicht im Alias erscheinen.
 
 
+.. |svg_attr_alias_22| image:: /_img/icons_svg/alias.svg
+   :width: 22px
 .. |img_alias| image:: /_img/icons/alias.png
 
 .. |br| raw:: html

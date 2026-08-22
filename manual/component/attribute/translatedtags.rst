@@ -1,7 +1,7 @@
 .. _component_attribute_translatedtags:
 
-Übersetzte Mehrfachauswahl [tags]
-==================================
+|svg_attr_translatedtags_22| Übersetzte Mehrfachauswahl [tags]
+==============================================================
 
 Das Attribut "Übersetzte Mehrfachauswahl" ist eine Erweiterung des
 :ref:`Mehrfachauswahl-Attributs <component_attribute_tags>`. Es wird verwendet,
@@ -203,6 +203,8 @@ zur Filterung auf veröffentlichte Einträge:
    t.published = '1'
 
 
+.. |svg_attr_translatedtags_22| image:: /_img/icons_svg/tags.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

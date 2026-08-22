@@ -1,7 +1,7 @@
 .. _component_attribute_translatedselect:
 
-Übersetzte Einzelauswahl [select]
-==================================
+|svg_attr_translatedselect_22| Übersetzte Einzelauswahl [select]
+================================================================
 
 Das Attribut "Übersetzte Einzelauswahl" ist eine Erweiterung des
 :ref:`Einzelauswahl-Attributs <component_attribute_select>`. Es wird verwendet,
@@ -202,6 +202,8 @@ Beispiel zur Filterung auf veröffentlichte Einträge:
    sourceTable.published = '1'
 
 
+.. |svg_attr_translatedselect_22| image:: /_img/icons_svg/select.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

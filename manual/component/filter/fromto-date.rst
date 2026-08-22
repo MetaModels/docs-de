@@ -1,7 +1,7 @@
 .. _component_filter_fromto-date:
 
-|img_filter_fromto| Wert von/bis für ein Datumsfeld
-=====================================================
+|svg_filt_fromto_date_22| | |img_filter_fromto| Wert von/bis für ein Datumsfeld
+===============================================================================
 
 Die Filterregel "Wert von/bis für ein Datumsfeld" (Paket ``filter_fromto``) filtert
 Items anhand eines Datumsbereichs für ein einzelnes Datum-Attribut. Besucher können
@@ -108,6 +108,8 @@ Die Filterregel "Wert von/bis für ein Datumsfeld" eignet sich für :ref:`Attrib
 "Handhabung von Datum und Uhrzeit" die Auswahl auf "Nur Datum ohne Uhrzeit speichern" stellen.
 
 
+.. |svg_filt_fromto_date_22| image:: /_img/icons_svg/filter_fromto_date.svg
+   :width: 22px
 .. |img_filter_fromto| image:: /_img/icons/filter_fromto.png
 
 .. |br| raw:: html

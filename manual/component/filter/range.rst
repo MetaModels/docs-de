@@ -1,7 +1,7 @@
 .. _component_filter_range:
 
-|img_filter_range| Wert von/bis für zwei Felder
-================================================
+|svg_filt_range_22| | |img_filter_range| Wert von/bis für zwei Felder
+=====================================================================
 
 Die Filterregel "Wert von/bis für zwei Felder" (Paket ``filter_range``) filtert Items
 anhand eines Wertebereichs, der über zwei separate Attribute definiert wird. Das erste
@@ -105,6 +105,8 @@ numerischen Werten:
 * :ref:`Dezimal <component_attribute_decimal>`
 
 
+.. |svg_filt_range_22| image:: /_img/icons_svg/filter_range.svg
+   :width: 22px
 .. |img_filter_range| image:: /_img/icons/filter_range.png
 
 .. |br| raw:: html

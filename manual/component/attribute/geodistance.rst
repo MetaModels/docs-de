@@ -1,7 +1,7 @@
 .. _component_attribute_geodistance:
 
-Geo-Entfernung
-==============
+|svg_attr_geodistance_22| Geo-Entfernung
+========================================
 
 Das Attribut "Geo-Entfernung" berechnet bei einer Umkreissuche die geografische
 Entfernung zwischen dem gespeicherten Koordinatenpaar eines Items und einem
@@ -163,6 +163,8 @@ MetaModels-Listensicht verwendet werden, sodass die nächstgelegenen
 Ergebnisse oben erscheinen.
 
 
+.. |svg_attr_geodistance_22| image:: /_img/icons_svg/geodistance.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />

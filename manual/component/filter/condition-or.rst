@@ -1,7 +1,7 @@
 .. _component_filter_condition-or:
 
-|img_filter_or| ODER-Bedingung (OR)
-=====================================
+|svg_filt_condition_or_22| | |img_filter_or| ODER-Bedingung (OR)
+================================================================
 
 Die Filterregel "ODER-Bedingung" ist ein Container, der mehrere Unterfilterregeln
 aufnehmen kann. Die enthaltenen Filterregeln werden mit einer ODER-Verknüpfung
@@ -76,6 +76,8 @@ Beispiel einer dreigliedrigen ODER-Verknüpfung mit je zwei UND-Bedingungen:
        └── Filterregel D (z. B. Status = veröffentlicht)
 
 
+.. |svg_filt_condition_or_22| image:: /_img/icons_svg/filter_or.svg
+   :width: 22px
 .. |img_filter_or| image:: /_img/icons/filter_or.png
 
 .. |br| raw:: html

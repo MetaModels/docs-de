@@ -1,7 +1,7 @@
 .. _component_filter_condition-and:
 
-|img_filter_and| UND-Bedingung (AND)
-=====================================
+|svg_filt_condition_and_22| | |img_filter_and| UND-Bedingung (AND)
+==================================================================
 
 Die Filterregel "UND-Bedingung" ist ein Container, der mehrere Unterfilterregeln
 aufnehmen kann. Alle enthaltenen Filterregeln werden mit einer UND-Verknüpfung
@@ -58,6 +58,8 @@ verschachtelte Filterstruktur, die nahezu beliebig komplexe logische Ausdrücke
 abbilden kann.
 
 
+.. |svg_filt_condition_and_22| image:: /_img/icons_svg/filter_and.svg
+   :width: 22px
 .. |img_filter_and| image:: /_img/icons/filter_and.png
 
 .. |br| raw:: html

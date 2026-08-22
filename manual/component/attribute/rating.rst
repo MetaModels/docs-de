@@ -1,7 +1,7 @@
 .. _component_attribute_rating:
 
-Bewertung
-=========
+|svg_attr_rating_22| Bewertung
+==============================
 
 Das Attribut "Bewertung" stellt ein Sternchen-Bewertungssystem bereit. Besucher
 können Items über ein AJAX-Widget im Frontend bewerten. Im Backend werden
@@ -141,6 +141,8 @@ entscheidet die Anzahl der Stimmen. Items ohne Bewertung werden am Ende der
 Liste eingereiht.
 
 
+.. |svg_attr_rating_22| image:: /_img/icons_svg/star.svg
+   :width: 22px
 .. |br| raw:: html
 
    <br />
