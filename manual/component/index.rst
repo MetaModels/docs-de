@@ -24,7 +24,7 @@ Gedanken über einen "eleganten" Aufbau - insbesondere der Relationen der Models
 eine Übersichtsseite ":ref:`component_relations`".
 
 .. note:: Achtung: in MM 2.5 wurden neue SVG-Icons bei MetaModels eingeführt. In einer Übergangszeit, werden im Handbuch
-   beide Varianten angezeigt - erst neu, dann alt - eine Übersicht ist hier zu finden :ref:`manual_new_icons-25`
+   beide Varianten angezeigt - erst neu, dann alt - eine Übersicht ist hier zu finden: :ref:`manual_new_icons-25`
 
 Nach dem Erstellen eines MetaModel stehen die folgenden Hauptkomponenten zur Bearbeitung zur Verfügung:
 
