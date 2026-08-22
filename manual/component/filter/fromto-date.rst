@@ -1,7 +1,7 @@
 .. _component_filter_fromto-date:
 
-|svg_filt_fromto_date_22| | |img_filter_fromto| Wert von/bis für ein Datumsfeld
-===============================================================================
+|svg_filt_fromto_date_22| |img_filter_fromto| Wert von/bis für ein Datumsfeld
+=============================================================================
 
 Die Filterregel "Wert von/bis für ein Datumsfeld" (Paket ``filter_fromto``) filtert
 Items anhand eines Datumsbereichs für ein einzelnes Datum-Attribut. Besucher können

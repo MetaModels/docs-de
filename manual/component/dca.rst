@@ -1,7 +1,7 @@
 .. _component_dca:
 
-|svg_dca_32| | |img_dca_32| Eingabemasken
-==========================================
+|svg_dca_32| |img_dca_32| Eingabemasken
+=======================================
 
 .. note:: Eingabemasken für Dateneingabe erstellen;
   Attribute hinzufügen, aktivieren und konfigurieren; optional

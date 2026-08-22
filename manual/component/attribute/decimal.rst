@@ -1,7 +1,7 @@
 .. _component_attribute_decimal:
 
-|svg_attr_decimal_22| | |img_decimal| Dezimal
-=============================================
+|svg_attr_decimal_22| |img_decimal| Dezimal
+===========================================
 
 Das Attribut "Dezimal" speichert Dezimalzahlen (Gleitkommazahlen doppelter
 Genauigkeit). Typische Einsatzbereiche:

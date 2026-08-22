@@ -1,7 +1,7 @@
 .. _component_filter_loupe:
 
-|svg_filt_loupe_22| | |img_filter_default| Loupe
-================================================
+|svg_filt_loupe_22| |img_filter_default| Loupe
+==============================================
 
 Die Filterregel "Loupe" (Paket ``filter_loupe``, ab MM 2.4) erzeugt einen
 Volltext-Index über ausgewählte Attribute in einer eigenen SQLite-Datenbank und

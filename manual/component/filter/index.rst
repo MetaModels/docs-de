@@ -2,8 +2,8 @@
 
 .. _component_filter_index:
 
-|svg_filter_32| | |img_filter_32| Liste der Filterregeln
-=========================================================
+|svg_filter_32| |img_filter_32| Liste der Filterregeln
+=======================================================
 
 Alle Filterregeln sind unter :ref:`component_filter` aufgelistet und dokumentiert.
 

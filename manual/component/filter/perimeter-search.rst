@@ -1,7 +1,7 @@
 .. _component_filter_perimeter-search:
 
-|svg_filt_perimeter_search_22| | |img_filter_perimetersearch| Umkreissuche
-==========================================================================
+|svg_filt_perimeter_search_22| |img_filter_perimetersearch| Umkreissuche
+========================================================================
 
 Die Filterregel "Umkreissuche" (Paket ``filter_perimetersearch``) filtert Items anhand
 ihrer geografischen Position. Besucher geben eine Adresse oder Koordinaten ein und

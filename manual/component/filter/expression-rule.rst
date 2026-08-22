@@ -1,7 +1,7 @@
 .. _component_filter_expression-rule:
 
-|svg_filt_expression_rule_22| | |img_filter_expression| Expression-Regel
-========================================================================
+|svg_filt_expression_rule_22| |img_filter_expression| Expression-Regel
+======================================================================
 
 Die Filterregel "Expression-Regel" (ab MM 2.4) ermöglicht es, die Ausführung
 weiterer Filterregeln an eine Bedingung zu knüpfen. Es wird ein Knoten in der

@@ -1,7 +1,7 @@
 .. _component_filter_yes-no:
 
-|svg_filt_yes_no_22| | |img_filter_checkbox| Ja / Nein
-======================================================
+|svg_filt_yes_no_22| |img_filter_checkbox| Ja / Nein
+====================================================
 
 Die Filterregel "Ja / Nein" (Paket ``filter_checkbox``) gibt ein Frontend-Widget
 aus, über das Besucher zwischen zwei Zuständen wählen können: "Ja" (Wert ``1``)

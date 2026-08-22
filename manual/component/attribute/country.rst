@@ -1,7 +1,7 @@
 .. _component_attribute_country:
 
-|svg_attr_country_22| | |img_country| Land
-==========================================
+|svg_attr_country_22| |img_country| Land
+========================================
 
 Das Attribut "Land" stellt eine Auswahliste aller Länder der Welt zur Verfügung.
 Die Ländernamen werden in der jeweils aktiven Sprache des Backends angezeigt und

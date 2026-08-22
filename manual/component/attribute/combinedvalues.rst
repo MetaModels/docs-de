@@ -1,7 +1,7 @@
 .. _component_attribute_combinedvalues:
 
-|svg_attr_combinedvalues_22| | |img_combinedvalues| Kombinierte Einträge
-========================================================================
+|svg_attr_combinedvalues_22| |img_combinedvalues| Kombinierte Einträge
+======================================================================
 
 Das Attribut "Kombinierte Einträge" fügt Werte aus mehreren vorhandenen Attributen
 zu einem neuen, gespeicherten Textwert zusammen. Typische Einsatzbereiche:

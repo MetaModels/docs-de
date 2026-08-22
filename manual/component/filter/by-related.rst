@@ -1,7 +1,7 @@
 .. _component_filter_by-related:
 
-|svg_filt_by_related_22| | |img_filter_default| Filter-by-related
-=================================================================
+|svg_filt_by_related_22| |img_filter_default| Filter-by-related
+===============================================================
 
 Die Filterregel "Filter-by-related" (Paket ``filter_by_related``, ab MM 2.4) ermöglicht
 es, Items anhand von Eigenschaften eines verknüpften (relationierten) MetaModels zu

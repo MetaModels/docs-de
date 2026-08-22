@@ -1,7 +1,7 @@
 .. _component_filter_levenshtein:
 
-|svg_filt_levenshtein_22| | |img_filter_default| Levenshtein-gestützte Suche
-============================================================================
+|svg_filt_levenshtein_22| |img_filter_default| Levenshtein-gestützte Suche
+==========================================================================
 
 Die Filterregel "Levenshtein-gestützte Suche" (Paket ``attribute_levenshtein``)
 erzeugt einen Volltext-Index über ausgewählte Attribute und ermöglicht eine

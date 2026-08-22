@@ -1,7 +1,7 @@
 .. _component_filter:
 
-|svg_filter_32| | |img_filter_32| Filtersets
-=============================================
+|svg_filter_32| |img_filter_32| Filtersets
+==========================================
 
 .. note:: optionale Filtersets für Backend und Frontend erstellen;
   Filterset erstellen und in Komponenten oder Inhaltselementen/Modulen

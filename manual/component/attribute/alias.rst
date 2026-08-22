@@ -1,7 +1,7 @@
 .. _component_attribute_alias:
 
-|svg_attr_alias_22| | |img_alias| Alias
-=======================================
+|svg_attr_alias_22| |img_alias| Alias
+=====================================
 
 Das Attribut "Alias" erzeugt einen eindeutigen, URL-tauglichen Kurzbezeichner, der aus einem oder mehreren vorhandenen
 Attributen erzeugt wird. Typische Einsatzbereiche sind:

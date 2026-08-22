@@ -1,7 +1,7 @@
 .. _component_attribute_token:
 
-|svg_attr_token_22| | |img_token| Token (ab MM 2.4)
-===================================================
+|svg_attr_token_22| |img_token| Token (ab MM 2.4)
+=================================================
 
 Das Attribut "Token" erzeugt beim erstmaligen Speichern eines Datensatzes eine
 kryptographisch zufällige, unveränderliche Zeichenfolge (Token). Typische Einsatzbereiche:

@@ -1,7 +1,7 @@
 .. _component_filter_range-date:
 
-|svg_filt_range_date_22| | |img_filter_range| Wert von/bis für zwei Datumsfelder
-================================================================================
+|svg_filt_range_date_22| |img_filter_range| Wert von/bis für zwei Datumsfelder
+==============================================================================
 
 Die Filterregel "Wert von/bis für zwei Datumsfelder" (Paket ``filter_range``) filtert
 Items anhand eines Datumsbereichs, der über zwei separate Datum-Attribute definiert

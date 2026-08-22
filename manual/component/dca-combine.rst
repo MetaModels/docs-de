@@ -1,7 +1,7 @@
 .. _component_dca-combine:
 
-|svg_dca_combine_32| | |img_dca_combine_32| Eingabe-/Render-Zuordnungen
-========================================================================
+|svg_dca_combine_32| |img_dca_combine_32| Eingabe-/Render-Zuordnungen
+=====================================================================
 
 .. note:: Zugriffsoptionen auf die Render-Einstellungen und Eingabemasken definieren;
   Zugriff der BE-Eingabe(n) sollte mindestens für Benutzergruppe 'Administrator'

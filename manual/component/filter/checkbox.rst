@@ -1,7 +1,7 @@
 .. _component_filter_checkbox:
 
-|svg_filt_checkbox_22| | |img_filter_checkbox| Checkbox-Status
-==============================================================
+|svg_filt_checkbox_22| |img_filter_checkbox| Checkbox-Status
+============================================================
 
 Die Filterregel "Checkbox-Status" (Paket ``filter_checkbox``) prüft, ob der Wert
 eines Checkbox-Attributs gleich ``1`` (aktiv) ist. Sie wird typischerweise für

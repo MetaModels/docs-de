@@ -1,7 +1,7 @@
 .. _component_filter_register:
 
-|svg_filt_register_22| | |img_filter_default| Register
-======================================================
+|svg_filt_register_22| |img_filter_default| Register
+====================================================
 
 Die Filterregel "Register" (Paket ``filter_register``) filtert Items nach dem
 Anfangsbuchstaben eines Attributwerts. Sie generiert eine Liste aller vorhandenen

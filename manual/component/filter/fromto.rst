@@ -1,7 +1,7 @@
 .. _component_filter_fromto:
 
-|svg_filt_fromto_22| | |img_filter_fromto| Wert von/bis für ein Feld
-====================================================================
+|svg_filt_fromto_22| |img_filter_fromto| Wert von/bis für ein Feld
+==================================================================
 
 Die Filterregel "Wert von/bis für ein Feld" (Paket ``filter_fromto``) filtert Items
 anhand eines Wertebereichs für ein einzelnes numerisches oder textbasiertes Attribut.

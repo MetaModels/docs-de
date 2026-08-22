@@ -1,7 +1,7 @@
 .. _component_dca_visibility-conditions:
 
-|svg_dca_condition_22| | |img_dca_condition| Anzeigeeigenschaften / Sub-Paletten
-=================================================================================
+|svg_dca_condition_22| |img_dca_condition| Anzeigeeigenschaften / Sub-Paletten
+==============================================================================
 
 Die Anzeigeeigenschaften werden auch unter dem Begriff "Sub-Paletten" geführt, da es hiermit möglich ist, ein
 Eingabewidget eines Attributs in einer Eingabemaske aufgrund von Werten eines anderen Widgets gezielt ein- oder

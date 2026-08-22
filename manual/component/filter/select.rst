@@ -1,7 +1,7 @@
 .. _component_filter_select:
 
-|svg_filt_select_22| | |img_filter_select| Einzelauswahl
-========================================================
+|svg_filt_select_22| |img_filter_select| Einzelauswahl
+======================================================
 
 Die Filterregel "Einzelauswahl" (Paket ``filter_select``) gibt ein Frontend-Widget
 aus, über das Besucher einen einzelnen Wert aus einer Auswahlliste auswählen können.

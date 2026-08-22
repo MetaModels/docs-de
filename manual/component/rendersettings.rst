@@ -1,7 +1,7 @@
 .. _component_rendersettings:
 
-|svg_rendersettings_32| | |img_rendersettings_32| Render-Einstellungen
-=======================================================================
+|svg_rendersettings_32| |img_rendersettings_32| Render-Einstellungen
+====================================================================
 
 .. note:: Listenansichten für Backend und Frontend erstellen;
   Attribute hinzufügen und aktivieren

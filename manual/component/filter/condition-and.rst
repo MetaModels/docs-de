@@ -1,7 +1,7 @@
 .. _component_filter_condition-and:
 
-|svg_filt_condition_and_22| | |img_filter_and| UND-Bedingung (AND)
-==================================================================
+|svg_filt_condition_and_22| |img_filter_and| UND-Bedingung (AND)
+================================================================
 
 Die Filterregel "UND-Bedingung" ist ein Container, der mehrere Unterfilterregeln
 aufnehmen kann. Alle enthaltenen Filterregeln werden mit einer UND-Verknüpfung

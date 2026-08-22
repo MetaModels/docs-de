@@ -1,7 +1,7 @@
 .. _component_filter_idlist:
 
-|svg_filt_idlist_22| | |img_filter_default| Vordefiniertes Itemset
-==================================================================
+|svg_filt_idlist_22| |img_filter_default| Vordefiniertes Itemset
+================================================================
 
 Die Filterregel "Vordefiniertes Itemset" ermöglicht es, eine fest definierte Liste
 von Item-IDs als Filtergrundlage anzugeben. Das Filterset gibt nur jene Items aus,

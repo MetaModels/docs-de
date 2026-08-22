@@ -1,7 +1,7 @@
 .. _component_filter_simplelookup:
 
-|svg_filt_simplelookup_22| | |img_filter_default| Einfache Abfrage
-==================================================================
+|svg_filt_simplelookup_22| |img_filter_default| Einfache Abfrage
+================================================================
 
 Die Filterregel "Einfache Abfrage" filtert Items anhand eines einzelnen Attributwerts.
 Der Filterwert kann entweder über einen URL-Parameter (GET/Slug) dynamisch übergeben

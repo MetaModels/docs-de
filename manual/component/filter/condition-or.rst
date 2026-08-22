@@ -1,7 +1,7 @@
 .. _component_filter_condition-or:
 
-|svg_filt_condition_or_22| | |img_filter_or| ODER-Bedingung (OR)
-================================================================
+|svg_filt_condition_or_22| |img_filter_or| ODER-Bedingung (OR)
+==============================================================
 
 Die Filterregel "ODER-Bedingung" ist ein Container, der mehrere Unterfilterregeln
 aufnehmen kann. Die enthaltenen Filterregeln werden mit einer ODER-Verknüpfung

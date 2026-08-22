@@ -1,7 +1,7 @@
 .. _component_attribute_checkbox:
 
-|svg_attr_checkbox_22| | |img_checkbox| Kontrollkästchen (Checkbox)
-===================================================================
+|svg_attr_checkbox_22| |img_checkbox| Kontrollkästchen (Checkbox)
+=================================================================
 
 Das Attribut "Kontrollkästchen (Checkbox)" speichert einen booleschen Wert (0 oder 1).
 Typische Einsatzbereiche:

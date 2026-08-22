@@ -1,7 +1,7 @@
 .. _component_attribute:
 
-|svg_fields_32| | |img_fields_32| Attribute
-============================================
+|svg_fields_32| |img_fields_32| Attribute
+=========================================
 
 .. note:: eigene Spalten der Datenbanktabelle als Attribute erstellen und diese konfigurieren |br|
    Zum Anlegen der Attributsspalten in der mm_*-Tabelle eine DB-Migration durchführen - :ref:`siehe Schemamanager <component_schema-manager>`

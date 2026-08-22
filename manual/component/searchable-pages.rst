@@ -1,7 +1,7 @@
 .. _component_searchable-pages:
 
-|svg_searchable_pages_32| | |img_searchable_pages_32| Sucheinstellungen
-========================================================================
+|svg_searchable_pages_32| |img_searchable_pages_32| Sucheinstellungen
+=====================================================================
 
 .. note:: Detailseiten eines MetaModel in der sitemap.xml von Contao aufnehmen
 

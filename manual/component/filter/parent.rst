@@ -1,7 +1,7 @@
 .. _component_filter_parent:
 
-|svg_filt_parent_22| | |img_filter_default| Parent-Filter
-=========================================================
+|svg_filt_parent_22| |img_filter_default| Parent-Filter
+=======================================================
 
 .. note:: Diese Filterregel wird nicht weiter entwickelt - Nachfolger ist Filterregel :ref:`component_filter_by-related`,
    welcher diese Funktionalität mit abdeckt.
