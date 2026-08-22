@@ -1,7 +1,7 @@
 .. _component_attribute_translatedcheckbox:
 
-|svg_attr_translatedcheckbox_22| Übersetzte Checkbox
-====================================================
+|svg_attr_translatedcheckbox_22| |img_checkbox| Übersetzte Checkbox
+===================================================================
 
 Das Attribut "Übersetzte Checkbox" ist die mehrsprachige Variante des
 :ref:`Checkbox-Attributs <component_attribute_checkbox>`. Es speichert je Sprache
@@ -170,6 +170,7 @@ behandelt.
 
 .. |svg_attr_translatedcheckbox_22| image:: /_img/icons_svg/checkbox.svg
    :width: 22px
+.. |img_checkbox| image:: /_img/icons/checkbox.png
 .. |br| raw:: html
 
    <br />

@@ -1,7 +1,7 @@
 .. _component_attribute_translatedtablemulti:
 
-|svg_attr_translatedtablemulti_22| Übersetzte Multi-Tabelle (MCW)
-=================================================================
+|svg_attr_translatedtablemulti_22| |img_translatedtablemulti| Übersetzte Multi-Tabelle (MCW)
+============================================================================================
 
 Das Attribut "Übersetzte Multi-Tabelle (MCW)" ist die mehrsprachige Variante des
 :ref:`Multi-Tabellen-Attributs <component_attribute_tablemulti>`. Es ermöglicht
@@ -134,6 +134,7 @@ Methoden.
 
 .. |svg_attr_translatedtablemulti_22| image:: /_img/icons_svg/translatedtablemulti.svg
    :width: 22px
+.. |img_translatedtablemulti| image:: /_img/icons/translatedtablemulti.png
 .. |br| raw:: html
 
    <br />

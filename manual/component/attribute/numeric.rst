@@ -1,7 +1,7 @@
 .. _component_attribute_numeric:
 
-|svg_attr_numeric_22| Numerisch
-===============================
+|svg_attr_numeric_22| |img_numeric| Numerisch
+=============================================
 
 Das Attribut "Numerisch" speichert ganzzahlige Werte (Integer). Typische
 Einsatzbereiche:
@@ -140,6 +140,7 @@ wird als ``NULL`` abgelegt (kompatibel mit MySQL Strict Mode).
 
 .. |svg_attr_numeric_22| image:: /_img/icons_svg/numeric.svg
    :width: 22px
+.. |img_numeric| image:: /_img/icons/numeric.png
 .. |br| raw:: html
 
    <br />

@@ -1,7 +1,7 @@
 .. _component_attribute_translatedurl:
 
-|svg_attr_translatedurl_22| Übersetzte URL
-==========================================
+|svg_attr_translatedurl_22| |img_url| Übersetzte URL
+====================================================
 
 Das Attribut "Übersetzte URL" ist die mehrsprachige Variante des
 :ref:`URL-Attributs <component_attribute_url>`. Es speichert je Sprache einen
@@ -155,6 +155,7 @@ aktiviertem "Titel entfernen" steht nur ein einfaches Textfeld zur Verfügung.
 
 .. |svg_attr_translatedurl_22| image:: /_img/icons_svg/url.svg
    :width: 22px
+.. |img_url| image:: /_img/icons/url.png
 .. |br| raw:: html
 
    <br />

@@ -1,7 +1,7 @@
 .. _component_attribute_text:
 
-|svg_attr_text_22| Text
-=======================
+|svg_attr_text_22| |img_text| Text
+==================================
 
 Das Attribut "Text" ist das einfachste Textfeld in MetaModels und speichert kurze
 Texte bis zu 255 Zeichen. Typische Einsatzbereiche:
@@ -178,6 +178,7 @@ Sonderzeichen werden beim Speichern und Ausgeben korrekt kodiert und dekodiert.
 
 .. |svg_attr_text_22| image:: /_img/icons_svg/text.svg
    :width: 22px
+.. |img_text| image:: /_img/icons/text.png
 .. |br| raw:: html
 
    <br />

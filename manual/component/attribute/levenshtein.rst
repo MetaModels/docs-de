@@ -1,7 +1,7 @@
 .. _component_attribute_levenshtein:
 
-|svg_attr_levenshtein_22| Levenshtein
-=====================================
+|svg_attr_levenshtein_22| |img_levenshtein| Levenshtein
+=======================================================
 
 Das Attribut "Levenshtein" erstellt einen Volltext-Suchindex für ausgewählte
 MetaModels-Attribute und ermöglicht eine Ähnlichkeitssuche mit konfigurierbarer
@@ -136,6 +136,7 @@ die aktive Sprache beim Aufbau des Index berücksichtigt.
 
 .. |svg_attr_levenshtein_22| image:: /_img/icons_svg/levenshtein.svg
    :width: 22px
+.. |img_levenshtein| image:: /_img/icons/levenshtein.png
 .. |br| raw:: html
 
    <br />

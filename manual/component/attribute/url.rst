@@ -1,7 +1,7 @@
 .. _component_attribute_url:
 
-|svg_attr_url_22| URL
-=====================
+|svg_attr_url_22| |img_url| URL
+===============================
 
 Das Attribut "URL" speichert einen Link bestehend aus einem Titel und einer
 URL-Adresse. Alternativ kann es auf reine URL-Ausgabe (ohne Titel) umgestellt
@@ -138,6 +138,7 @@ aktiviertem "Titel entfernen" steht nur ein einfaches Textfeld zur Verfügung.
 
 .. |svg_attr_url_22| image:: /_img/icons_svg/url.svg
    :width: 22px
+.. |img_url| image:: /_img/icons/url.png
 .. |br| raw:: html
 
    <br />

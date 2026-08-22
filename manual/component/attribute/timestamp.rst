@@ -1,7 +1,7 @@
 .. _component_attribute_timestamp:
 
-|svg_attr_timestamp_22| Datum
-=============================
+|svg_attr_timestamp_22| |img_timestamp| Datum
+=============================================
 
 Das Attribut "Datum" speichert Datum, Uhrzeit oder beides als Unix-Zeitstempel
 (``bigint``). Im Backend wird ein Datumspicker mit dem konfigurierten Contao-
@@ -167,6 +167,7 @@ Templates steht der formatierte Wert direkt als ``$arrData['html5']`` oder
 
 .. |svg_attr_timestamp_22| image:: /_img/icons_svg/timestamp.svg
    :width: 22px
+.. |img_timestamp| image:: /_img/icons/timestamp.png
 .. |br| raw:: html
 
    <br />

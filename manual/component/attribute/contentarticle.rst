@@ -1,7 +1,7 @@
 .. _component_attribute_contentarticle:
 
-|svg_attr_contentarticle_22| Inhalt eines Artikels
-==================================================
+|svg_attr_contentarticle_22| |img_article| Inhalt eines Artikels
+================================================================
 
 Das Attribut "Inhalt eines Artikels" ermöglicht es, einem MetaModels-Datensatz
 Contao-Inhaltselemente (Content Elements) zuzuordnen — analog zu den Inhaltselementen
@@ -133,6 +133,7 @@ falls Inhaltselemente selbst MetaModels-Inhalte referenzieren.
 
 .. |svg_attr_contentarticle_22| image:: /_img/icons_svg/article.svg
    :width: 22px
+.. |img_article| image:: /_img/icons/article.png
 .. |br| raw:: html
 
    <br />

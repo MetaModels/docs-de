@@ -1,7 +1,7 @@
 .. _component_attribute_langcode:
 
-|svg_attr_langcode_22| Sprachschlüssel
-======================================
+|svg_attr_langcode_22| |img_langcode| Sprachschlüssel
+=====================================================
 
 Das Attribut "Sprachschlüssel" stellt eine Auswahlliste von ISO-Sprachcodes
 (Locales) zur Verfügung. Die Sprachnamen werden in der jeweils aktiven Backend-Sprache
@@ -147,6 +147,7 @@ MySQL Strict Mode).
 
 .. |svg_attr_langcode_22| image:: /_img/icons_svg/langcode.svg
    :width: 22px
+.. |img_langcode| image:: /_img/icons/langcode.png
 .. |br| raw:: html
 
    <br />

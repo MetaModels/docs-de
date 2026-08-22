@@ -1,7 +1,7 @@
 .. _component_attribute_select:
 
-|svg_attr_select_22| Einzelauswahl [select]
-===========================================
+|svg_attr_select_22| |img_select| Einzelauswahl [select]
+========================================================
 
 Das Attribut "Einzelauswahl [select]" erstellt eine :ref:`1:n-Relation <component_relations_standard-relation-1ton>` zu
 einer anderen Tabelle — entweder einer MetaModels-Tabelle oder einer beliebigen Contao-Tabelle
@@ -200,6 +200,7 @@ Beispiel zur Filterung auf veröffentlichte Einträge:
 
 .. |svg_attr_select_22| image:: /_img/icons_svg/select.svg
    :width: 22px
+.. |img_select| image:: /_img/icons/select.png
 .. |br| raw:: html
 
    <br />

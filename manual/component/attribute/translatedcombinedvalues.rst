@@ -1,7 +1,7 @@
 .. _component_attribute_translatedcombinedvalues:
 
-|svg_attr_translatedcombinedvalues_22| Übersetzte kombinierte Einträge
-======================================================================
+|svg_attr_translatedcombinedvalues_22| |img_combinedvalues| Übersetzte kombinierte Einträge
+===========================================================================================
 
 Das Attribut "Übersetzte kombinierte Einträge" ist die mehrsprachige Variante des
 :ref:`Attributs "Kombinierte Einträge" <component_attribute_combinedvalues>`. Es
@@ -192,6 +192,7 @@ angehängt: ``Müller, Hans (2)``, ``Müller, Hans (3)`` usw.
 
 .. |svg_attr_translatedcombinedvalues_22| image:: /_img/icons_svg/combinedvalues.svg
    :width: 22px
+.. |img_combinedvalues| image:: /_img/icons/combinedvalues.png
 .. |br| raw:: html
 
    <br />

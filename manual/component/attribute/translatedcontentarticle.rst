@@ -1,7 +1,7 @@
 .. _component_attribute_translatedcontentarticle:
 
-|svg_attr_translatedcontentarticle_22| Übersetzter Inhalt eines Artikels
-========================================================================
+|svg_attr_translatedcontentarticle_22| |img_article| Übersetzter Inhalt eines Artikels
+======================================================================================
 
 Das Attribut "Übersetzter Inhalt eines Artikels" ist die mehrsprachige Variante
 des :ref:`Attributs "Inhalt eines Artikels" <component_attribute_contentarticle>`.
@@ -132,6 +132,7 @@ der Fallback-Sprache ausgegeben.
 
 .. |svg_attr_translatedcontentarticle_22| image:: /_img/icons_svg/article.svg
    :width: 22px
+.. |img_article| image:: /_img/icons/article.png
 .. |br| raw:: html
 
    <br />

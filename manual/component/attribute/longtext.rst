@@ -1,7 +1,7 @@
 .. _component_attribute_longtext:
 
-|svg_attr_longtext_22| Langtext
-===============================
+|svg_attr_longtext_22| |img_longtext| Langtext
+==============================================
 
 Das Attribut "Langtext" ist für längere Texteingaben vorgesehen. Es wird als
 Textarea-Widget im Backend angezeigt und kann optional mit einem Rich-Text-Editor
@@ -171,6 +171,7 @@ Datenbankebene notwendig sein — dies ist im Kochbuch unter
 
 .. |svg_attr_longtext_22| image:: /_img/icons_svg/longtext.svg
    :width: 22px
+.. |img_longtext| image:: /_img/icons/longtext.png
 .. |br| raw:: html
 
    <br />

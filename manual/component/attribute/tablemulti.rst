@@ -1,7 +1,7 @@
 .. _component_attribute_tablemulti:
 
-|svg_attr_tablemulti_22| Multi-Tabelle (MCW)
-============================================
+|svg_attr_tablemulti_22| |img_tablemulti| Multi-Tabelle (MCW)
+=============================================================
 
 Das Attribut "Multi-Tabelle (MCW)" ist eine erweiterte Variante des
 :ref:`Text-Tabellen-Attributs <component_attribute_tabletext>`. Statt reiner
@@ -154,6 +154,7 @@ deserialisiert.
 
 .. |svg_attr_tablemulti_22| image:: /_img/icons_svg/tablemulti.svg
    :width: 22px
+.. |img_tablemulti| image:: /_img/icons/tablemulti.png
 .. |br| raw:: html
 
    <br />

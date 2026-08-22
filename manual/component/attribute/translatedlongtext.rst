@@ -1,7 +1,7 @@
 .. _component_attribute_translatedlongtext:
 
-|svg_attr_translatedlongtext_22| Übersetzter Langtext
-=====================================================
+|svg_attr_translatedlongtext_22| |img_longtext| Übersetzter Langtext
+====================================================================
 
 Das Attribut "Übersetzter Langtext" ist die mehrsprachige Variante des
 :ref:`Langtext-Attributs <component_attribute_longtext>`. Es speichert je Sprache
@@ -171,6 +171,7 @@ zurück.
 
 .. |svg_attr_translatedlongtext_22| image:: /_img/icons_svg/longtext.svg
    :width: 22px
+.. |img_longtext| image:: /_img/icons/longtext.png
 .. |br| raw:: html
 
    <br />

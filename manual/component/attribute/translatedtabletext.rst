@@ -1,7 +1,7 @@
 .. _component_attribute_translatedtabletext:
 
-|svg_attr_translatedtabletext_22| Übersetzte Text-Tabelle
-=========================================================
+|svg_attr_translatedtabletext_22| |img_translatedtabletext| Übersetzte Text-Tabelle
+===================================================================================
 
 Das Attribut "Übersetzte Text-Tabelle" ist die mehrsprachige Variante des
 :ref:`Text-Tabellen-Attributs <component_attribute_tabletext>`. Es ermöglicht
@@ -160,6 +160,7 @@ die Spaltennamen automatisch aus der Spaltenanzahl generiert werden. Die
 
 .. |svg_attr_translatedtabletext_22| image:: /_img/icons_svg/translatedtabletext.svg
    :width: 22px
+.. |img_translatedtabletext| image:: /_img/icons/translatedtabletext.png
 .. |br| raw:: html
 
    <br />
