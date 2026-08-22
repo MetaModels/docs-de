@@ -25,7 +25,7 @@ eine Übersichtsseite ":ref:`component_relations`".
 
 Nach dem Erstellen eines MetaModel stehen die folgenden Hauptkomponenten zur Bearbeitung zur Verfügung:
 
- |img_fields|  :ref:`component_attribute` |br|
+ |svg_fields_22| | |img_fields|  :ref:`component_attribute` |br|
  |img_rendersettings|  :ref:`component_rendersettings` |br|
  |img_dca|  :ref:`component_dca` |br|
  |img_searchable_pages|  :ref:`component_searchable-pages` |br|
@@ -89,6 +89,8 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
    :trim:
 
 .. |img_fields| image:: /_img/icons/fields.png
+.. |svg_fields_22| image:: /_img/icons_svg/fields.svg
+   :width: 22px
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
 .. |img_dca| image:: /_img/icons/dca.png
 .. |img_searchable_pages| image:: /_img/icons/searchable_pages.png
