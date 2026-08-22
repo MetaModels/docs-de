@@ -104,5 +104,5 @@ auszugeben, stehen verschiedene :ref:`Insert-Tags <component_inserttags>` zur Ve
 .. |svg_filter_22| image:: /_img/icons_svg/filter.svg
    :width: 22px
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
-.. |svg_dca_combine_22| image:: /_img/icons_svg/dca_combin.svg
+.. |svg_dca_combine_22| image:: /_img/icons_svg/dca_combine.svg
    :width: 22px
