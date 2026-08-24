@@ -462,6 +462,11 @@ Filter
 
   Dasselbe gilt für die Vorauswahl in den **Sucheinstellungen** eines MetaModels, die dieselben Filterparameter
   verwendet.
+* **Umkreissuche: Radius verschwindet mit der Adresse.** Wurde das Adressfeld geleert, blieb die zuvor gewählte
+  Umkreisauswahl im Widget bisher sichtbar stehen - obwohl sie ohne Adresse ohnehin nie ausgewertet wurde
+  (`Issue #31 <https://github.com/MetaModels/filter_perimetersearch/issues/31>`_). Sie wird jetzt zusammen mit der
+  Adresse zurückgesetzt. Betrifft nur die Anzeige im Widget, die Filterung war nie falsch. Siehe auch
+  :ref:`component_filter_perimeter-search`.
 
 
 Frontend-Editing (FEE)

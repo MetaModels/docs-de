@@ -16,6 +16,12 @@ Google Maps API).
 .. seealso:: Detaillierte Dokumentation zur Umkreissuche:
    :ref:`extended_perimetersearch`
 
+.. note:: **Ab MM 2.5:** Wird das Adressfeld geleert, verschwindet auch die zuvor gewählte
+   Umkreisauswahl aus dem Widget - vorher blieb sie sichtbar stehen, obwohl sie ohne Adresse
+   keine Wirkung mehr hatte (`Issue #31
+   <https://github.com/MetaModels/filter_perimetersearch/issues/31>`_). In MM 2.4 bleibt das
+   bisherige Verhalten bestehen.
+
 
 Installation
 ------------
