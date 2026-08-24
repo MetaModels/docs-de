@@ -1,7 +1,7 @@
 .. _mm_first_rendersettings:
 
-|img_rendersettings_32| Render-Einstellungen
-============================================
+|svg_rendersettings_32| |img_rendersettings_32| Render-Einstellungen
+=====================================================================
 
 In diesem Schritt werden die Render-Einstellungen für das MetaModel
 "Mitarbeiterliste" angelegt. Es wird eine Render-Einstellung für das Backend
@@ -9,7 +9,7 @@ In diesem Schritt werden die Render-Einstellungen für das MetaModel
 
 Zum Aufruf der Render-Einstellungen wird die Übersicht MetaModels aktiviert,
 so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
-auf das Icon "|img_rendersettings| Render-Einstellungen" und die Ansicht
+auf das Icon "|svg_rendersettings_22| |img_rendersettings| Render-Einstellungen" und die Ansicht
 wechselt zur Übersicht der Render-Einstellungen - diese ist aktuell noch leer.
 
 Nach einem Klick auf "|img_new| Neu" öffnet sich sofort die Eingabemaske der
@@ -24,13 +24,13 @@ In der Übersicht der Render-Einstellungen sollte nun der erste Eintrag mit
 
 |img_rendersettings_02|
 
-Über einen Klick auf das Icon "|img_rendersetting| Render-Einstellungen der Attribute"
+Über einen Klick auf das Icon "|svg_rendersetting_22| |img_rendersetting| Render-Einstellungen der Attribute"
 wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden 
 die in der jeweiligen Liste der Render-Einstellungen anzuzeigenden
 Attribute ausgewählt bzw. aktiviert.
 
 Ein einfacher Weg, um die angelegten Attribute hinzuzufügen ist über Icon
-in der Kopfzeile "|img_rendersettings_add| Alle hinzufügen" - nach Klick auf
+in der Kopfzeile "|svg_rendersettings_add_22| |img_rendersettings_add| Alle hinzufügen" - nach Klick auf
 die Buttons "Weiter" und "Speichern und schließen" sind alle vorhandenen
 Attribute der Render-Einstellung hinzugefügt. Per Standard sind die
 Attribute nicht aktiviert - dies kann leicht über das "Auge-Icon" erfolgen.
@@ -63,9 +63,17 @@ und die Übersicht der Render-Einstellungen sollte nun die zwei Listen anzeigen
 |img_rendersettings_06|
 
 
+.. |svg_rendersettings_32| image:: /_img/icons_svg/rendersettings.svg
+   :width: 32px
 .. |img_rendersettings_32| image:: /_img/icons/rendersettings_32.png
+.. |svg_rendersettings_22| image:: /_img/icons_svg/rendersettings.svg
+   :width: 22px
 .. |img_rendersettings| image:: /_img/icons/rendersettings.png
+.. |svg_rendersetting_22| image:: /_img/icons_svg/rendersetting.svg
+   :width: 22px
 .. |img_rendersetting| image:: /_img/icons/rendersetting.png
+.. |svg_rendersettings_add_22| image:: /_img/icons_svg/rendersettings_add.svg
+   :width: 22px
 .. |img_rendersettings_add| image:: /_img/icons/rendersettings_add.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_edit| image:: /_img/icons/edit.gif

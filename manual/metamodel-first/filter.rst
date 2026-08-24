@@ -1,7 +1,7 @@
 .. _mm_first_filter:
 
-|img_filter_32| Filtersets
-==========================
+|svg_filter_32| |img_filter_32| Filtersets
+===========================================
 
 Der Schritt "Filtersets" zählt zu den optionalen Komponenten und steuert verschiedene
 Parameter der Ausgabe. In unserem Beispiel soll ein Filter angelegt werden,
@@ -9,7 +9,7 @@ der für die Frontendausgabe nur die Einträge mit aktiviertem "Veröffentlicht"
 
 Zum Aufruf der Filter wird wieder die Übersicht MetaModels aktiviert,
 so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
-auf das Icon "|img_filter| Filter" und die Ansicht wechselt zur 
+auf das Icon "|svg_filter_22| |img_filter| Filter" und die Ansicht wechselt zur 
 Übersicht der Filter - diese ist aktuell noch leer.
 
 Nach einem Klick auf "|img_new| Neu" öffnet sich sofort die Maske
@@ -24,7 +24,7 @@ In der Übersicht der Filter sollte nun der erste Eintrag mit
 
 |img_filter_02|
 
-Über einen Klick auf das Icon "|img_filter_setting| Attribute"
+Über einen Klick auf das Icon "|svg_filter_setting_22| |img_filter_setting| Attribute"
 wird die nächste Ebene für die Filterattribute geöffnet. An dieser Stelle
 wird der Filter mit seinen Filterattributen konfiguriert. Die Filterattribute
 können in verschiedener Kombination und Verschachtelung miteinander verknüpft
@@ -50,8 +50,14 @@ Der Filter ist damit definiert und kann in verschiedenen Komponenten
 aktiviert werden.
 
 
+.. |svg_filter_32| image:: /_img/icons_svg/filter.svg
+   :width: 32px
 .. |img_filter_32| image:: /_img/icons/filter_32.png
+.. |svg_filter_22| image:: /_img/icons_svg/filter.svg
+   :width: 22px
 .. |img_filter| image:: /_img/icons/filter.png
+.. |svg_filter_setting_22| image:: /_img/icons_svg/filter_setting.svg
+   :width: 22px
 .. |img_filter_setting| image:: /_img/icons/filter_setting.png
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_about| image:: /_img/icons/about.png

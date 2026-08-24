@@ -103,7 +103,7 @@ In diesem wählt man das MetaModel aus, welches bearbeitet werden soll.
 
 Als letzter Schritt muss die Eingabemaske, die für das Backend konfiguriert wurde,
 noch für das Frontend freigeschaltet werden. Dazu öffnet man im Backend die 
-Seite der "Eingabe-/Render-Zuordnungen" |img_dca_combine| und wählt in der
+Seite der "Eingabe-/Render-Zuordnungen" |svg_dca_combine_22| |img_dca_combine| und wählt in der
 Spalte "Mitgliedergruppe" einen passenden Eintrag für die Rechte im Frontend - bitte
 die :ref:`Ausführungen zu den Einstellungen <component_dca-combine>` beachten.
 
@@ -155,7 +155,7 @@ Die Erstellung der Eingabemaske erfolgt analog der Maske für das Backend.
 Über die Auswahl bzw. Aktivierung der Attribute werden die
 Formularfelder für die Bearbeitung definiert.
 
-Die Eingabemaske kann nun über die "Eingabe-/Render-Zuordnungen" |img_dca_combine|
+Die Eingabemaske kann nun über die "Eingabe-/Render-Zuordnungen" |svg_dca_combine_22| |img_dca_combine|
 für das FE ausgewählt werden.
 
 |img_fee-dca-zuordnung2|
@@ -459,6 +459,8 @@ Die Ausgabe in der FE-Maske kann zum Beispiel wie folgt aussehen:
 .. |img_fee-dca-zuordnung| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung.png
 .. |img_fee-dca-zuordnung2| image:: /_img/screenshots/extended/frontend_editing/fee-dca-zuordnung2.png
 
+.. |svg_dca_combine_22| image:: /_img/icons_svg/dca_combine.svg
+   :width: 22px
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
 
 .. |img_fee-own-headline| image:: /_img/screenshots/extended/frontend_editing/fee-own-headline.png

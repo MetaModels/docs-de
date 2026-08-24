@@ -1,7 +1,7 @@
 .. _mm_first_dca-combine:
 
-|img_dca_combine_32| Eingabe-/Render-Zuordnungen
-================================================
+|svg_dca_combine_32| |img_dca_combine_32| Eingabe-/Render-Zuordnungen
+======================================================================
 
 In dem Schritt "Eingabe-/Render-Zuordnungen" wird bei dem einfachen Beispiel
 die Render-Einstellung mit der Eingabemaske für das Backend frei
@@ -10,7 +10,7 @@ ist nicht notwendig.
 
 Zum Aufruf der Eingabe-/Render-Zuordnungen wird wieder die Übersicht MetaModels
 aktiviert, so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt
-ein Klick auf das Icon "|img_dca_combine| Eingabe-/Render-Zuordnungen" und die
+ein Klick auf das Icon "|svg_dca_combine_22| |img_dca_combine| Eingabe-/Render-Zuordnungen" und die
 Ansicht wechselt zur Options-Übersicht.
 
 Die Einstellungsoptionen sind als Liste ausgeführt, welche bei Bedarf
@@ -33,7 +33,11 @@ abgeschlossen und Daten können eingegeben bzw. die Frontendausgabe
 konfiguriert werden.
 
 
+.. |svg_dca_combine_32| image:: /_img/icons_svg/dca_combine.svg
+   :width: 32px
 .. |img_dca_combine_32| image:: /_img/icons/dca_combine_32.png
+.. |svg_dca_combine_22| image:: /_img/icons_svg/dca_combine.svg
+   :width: 22px
 .. |img_dca_combine| image:: /_img/icons/dca_combine.png
 
 .. |img_dca-combine_01| image:: /_img/screenshots/metamodel_first/dca-combine_01.png

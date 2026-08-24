@@ -1,12 +1,12 @@
 .. _mm_first_attribute:
 
-|img_fields_32| Attribute
-=========================
+|svg_fields_32| |img_fields_32| Attribute
+==========================================
 
 Nachdem die Tabelle "mm_mitarbeiterliste" in der Datenbank erstellt wurde, müssen in dieser
 nun die Felder bzw. Tabellenspalten zur Speicherung der Daten erzeugt werden - sprich
 die Attribute. Dieser Schritt erfolgt über die gleichnamige Komponente
-"|img_fields| Attribute".
+"|svg_fields_22| |img_fields| Attribute".
 
 Anhand der Aufgabenstellung werden die folgenden Felder benötigt:
 
@@ -25,7 +25,7 @@ Anhand der Aufgabenstellung werden die folgenden Felder benötigt:
 +-----------------+----------------+----------+
 
 Im ersten Schritt wechselt man in dem MetaModel "Mitarbeiterliste" in die Komponente
-"Attribute", in dem auf das Icon |img_fields| geklickt wird. Anschließend kann über
+"Attribute", in dem auf das Icon |svg_fields_22| |img_fields| geklickt wird. Anschließend kann über
 "|img_new| Neues Attribut" das erste Attribut erstellt werden. Mit dem Klick auf
 "|img_new| Neues Attribut" wird nicht sofort die Eingabemaske geöffnet, sondern
 ein "|img_pasteafter| Klemmmappenicon" - auf dieses wird geklickt (siehe Screenshot).
@@ -60,6 +60,10 @@ werden.
 
 .. |img_fields_32| image:: /_img/icons/fields_32.png
 .. |img_fields| image:: /_img/icons/fields.png
+.. |svg_fields_22| image:: /_img/icons_svg/fields.svg
+   :width: 22px
+.. |svg_fields_32| image:: /_img/icons_svg/fields.svg
+   :width: 32px
 .. |img_new| image:: /_img/icons/new.gif
 .. |img_pasteafter| image:: /_img/icons/pasteafter.gif
 

@@ -1,7 +1,7 @@
 .. _mm_first_dca:
 
-|img_dca_32| Eingabemasken
-==========================
+|svg_dca_32| |img_dca_32| Eingabemasken
+========================================
 
 In diesem Schritt wird die Eingabemaske für das MetaModel
 "Mitarbeiterliste" angelegt, über welche die Daten der Attribute in der
@@ -9,7 +9,7 @@ Datenbank gespeichert werden.
 
 Zum Aufruf der Eingabemasken wird wieder die Übersicht MetaModels aktiviert,
 so dass der Eintrag der "Mitarbeiterliste" zu sehen ist. Nun erfolgt ein Klick
-auf das Icon "|img_dca| Eingabemasken" und die Ansicht wechselt zur
+auf das Icon "|svg_dca_22| |img_dca| Eingabemasken" und die Ansicht wechselt zur
 Übersicht der Eingabemasken - diese ist aktuell noch leer.
 
 Nach einem Klick auf "|img_new| Neue Eingabemaske" öffnet sich sofort die Maske
@@ -28,13 +28,13 @@ In der Übersicht der Eingabemasken sollte nun der erste Eintrag mit
 
 |img_dca_02|
 
-Über einen Klick auf das Icon "|img_dca_setting| Einstellungen"
+Über einen Klick auf das Icon "|svg_dca_setting_22| |img_dca_setting| Einstellungen"
 wird die nächste Ebene für die Attribute geöffnet. An dieser Stelle werden
 die in der Eingabemaske anzuzeigenden Attribute ausgewählt bzw. aktiviert.
 
 Wie bei den Render-Einstellungen können auch hier die angelegten Attribute
 in einem Schritt hinzugefügt werden. Dazu ist das Icon in der Kopfzeile
-"|img_dca_add| Alle hinzufügen" zu klicken und anschließend die Buttons
+"|svg_dca_add_22| |img_dca_add| Alle hinzufügen" zu klicken und anschließend die Buttons
 "Weiter" und "Speichern und schließen" zu bestätigen. Nun sind alle
 vorhandenen Attribute der Eingabemaske hinzu gefügt. Per Standard sind die
 Attribute nicht aktiviert - dies kann leicht über das "Auge-Icon" erfolgen.
@@ -48,10 +48,18 @@ Die Eingabemaske ist im Backend immer noch nicht sichtbar. Dies erfolgt erst,
 wenn der Punkt :ref:`component_dca-combine` abgeschlossen ist.
 
 
+.. |svg_dca_32| image:: /_img/icons_svg/dca.svg
+   :width: 32px
 .. |img_dca_32| image:: /_img/icons/dca_32.png
+.. |svg_dca_22| image:: /_img/icons_svg/dca.svg
+   :width: 22px
 .. |img_dca| image:: /_img/icons/dca.png
+.. |svg_dca_setting_22| image:: /_img/icons_svg/dca_setting.svg
+   :width: 22px
 .. |img_dca_setting| image:: /_img/icons/dca_setting.png
 .. |img_dca_setting_add| image:: /_img/icons/dca_setting_add.png
+.. |svg_dca_add_22| image:: /_img/icons_svg/dca_add.svg
+   :width: 22px
 .. |img_dca_add| image:: /_img/icons/dca_add.png
 .. |img_dca_groupsortsettings| image:: /_img/icons/dca_groupsortsettings.png
 .. |img_dca_condition| image:: /_img/icons/dca_condition.png
