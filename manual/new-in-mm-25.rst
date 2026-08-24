@@ -299,6 +299,12 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   dabei aber nicht neu berechnet und blieben auf dem alten Stand, bis der Kinddatensatz selbst bearbeitet wurde
   (`Issue #657 <https://github.com/MetaModels/core/issues/657>`_). Siehe auch
   :ref:`component_relations_variants`.
+* **„Alle umschalten" in der Baumansicht (NEU):** Neben dem Wurzeleintrag steht jetzt ein Link,
+  der alle Knoten der Baumansicht auf einmal auf- bzw. zuklappt - analog zu dem, was Contao selbst
+  im eigenen Seitenbaum anbietet. Betrifft die Varianten-Ansicht ebenso wie MetaModels mit
+  Render-Modus „Hierarchie" (`Issue #560
+  <https://github.com/contao-community-alliance/dc-general/issues/560>`_). Siehe auch
+  :ref:`component_relations_variants`.
 * **Seitenleiste unter Listenansichten (NEU):** Umfasst eine Liste mehr Datensätze, als der
   Seitenblock zeigt, erscheint unter der Tabelle eine Leiste mit „Seite x von y" und den
   Seitenzahlen - wie man es aus dem Contao-Backend kennt. Zusätzlich führen „Anfang", „Zurück",

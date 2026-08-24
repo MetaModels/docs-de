@@ -203,6 +203,10 @@ Icon, um Kinddatensätze anzulegen. Die Eingabemaske zum Editieren eines Kinddat
 Maske des Elterndatensatzes, jedoch sind nur die Attribute bearbeitbar, die als Variant spezifiziert wurden - alle
 anderen (invarianten) Widgets sind automatisch nur-lesend (readonly).
 
+.. note:: **Ab MM 2.5:** Neben dem Wurzeleintrag der Liste steht ein Link "Alle öffnen"/"Alle
+   schließen", der alle Varianten-Gruppen auf einmal auf- bzw. zuklappt, statt jede einzeln
+   anklicken zu müssen.
+
 Das besondere an Varianten ist, dass alle nicht-varianten Werte aus dem Elterndatensatz automatisch an die
 Kinddatensätze übertragen werden - und das nicht nur beim Erstellen, sondern auch bei Änderungen. In den Kinddatensätzen
 sind somit immer die aktuellen Werte des Elterndatensatzes vorhanden und müssen von dort nicht extra abgefragt werden.
