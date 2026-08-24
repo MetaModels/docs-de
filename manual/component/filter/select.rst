@@ -40,9 +40,14 @@ Einstellungen beim Anlegen der Filterregel
      - Freitextfeld zur Beschreibung des Zwecks dieser Filterregel.
    * - Attribut
      - Das Attribut, nach dessen Wert gefiltert werden soll.
-   * - Label-Attribut
-     - Optionales Attribut, dessen Wert als Anzeigetext der Optionen im Widget
-       verwendet wird (z. B. ein Name- oder Titelattribut).
+   * - Attribut für Labeltext
+     - Optionales zweites Attribut, dessen Wert als Anzeigetext der Optionen im Widget
+       verwendet wird (z. B. ein Name- oder Titelattribut) – ab MM 2.4.12.
+
+       Die Einstellung erscheint nur, wenn das gefilterte Attribut den Anzeigetext nicht
+       selbst liefert – also bei Attributen ohne Relation. Bei Einzelauswahl (MetaModel),
+       Tags und übersetzten Tags entfällt sie, da diese den Anzeigetext bereits über ihren
+       Alias bereitstellen.
 
 
 Einstellungen für das Frontend-Widget
