@@ -62,6 +62,11 @@ per Einzelauswahl das entsprechende Attribut auszuwählen.
 
 Die übrigen Einstellungsparameter sind analog der Filterregel "Einfache Abfrage".
 
+Wird als Widget-Typ "Text" gewählt, erscheint zusätzlich die Einstellung "Suchtyp". Damit wird festgelegt, wie der
+eingegebene Suchbegriff mit dem Wert des verknüpften Attributs verglichen wird – standardmäßig muss der Wert den
+Suchbegriff enthalten, wahlweise auch genau übereinstimmen, mit ihm beginnen oder enden. Ein vom Besucher
+eingegebener Stern (``*``) wirkt als Platzhalter und übersteuert die Einstellung.
+
 
 Spenden
 -------

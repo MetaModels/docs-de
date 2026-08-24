@@ -91,6 +91,17 @@ Einstellungen für das Frontend-Widget
        * **Text** – Texteingabefeld
        * **Radio** – Radio-Buttons
        * **Checkbox** – Checkboxen
+   * - Suchtyp
+     - Nur beim Widget-Typ **Text**: Legt fest, wie der Suchbegriff mit dem Wert des
+       verknüpften Attributs verglichen wird:
+
+       * **Enthält Suchbegriff** – Der Attributwert muss den Suchbegriff enthalten (Standard).
+       * **Genaue Suche** – Der Suchbegriff muss exakt mit dem Attributwert übereinstimmen.
+       * **Beginnt mit Suchbegriff** – Der Attributwert muss mit dem Suchbegriff beginnen.
+       * **Endet mit Suchbegriff** – Der Attributwert muss mit dem Suchbegriff enden.
+
+       Ein vom Besucher eingegebener Stern (``*``) wirkt als Platzhalter und übersteuert
+       den eingestellten Suchtyp.
    * - Leeren Wert erlauben
      - Ist die Option aktiv und der URL-Parameter leer, ist kein Filter aktiv.
    * - Label
