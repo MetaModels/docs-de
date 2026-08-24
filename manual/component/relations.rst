@@ -207,6 +207,13 @@ Das besondere an Varianten ist, dass alle nicht-varianten Werte aus dem Elternda
 Kinddatensätze übertragen werden - und das nicht nur beim Erstellen, sondern auch bei Änderungen. In den Kinddatensätzen
 sind somit immer die aktuellen Werte des Elterndatensatzes vorhanden und müssen von dort nicht extra abgefragt werden.
 
+.. note:: **Ab MM 2.5:** Wurde ein nicht-variabler Wert nachträglich im Elterndatensatz geändert, wurde dieser zwar an
+   die Kinddatensätze übertragen - abgeleitete variable Attribute wie :ref:`Kombinierte Werte
+   <component_attribute_combinedvalues>` oder :ref:`Alias <component_attribute_alias>`, die diesen Wert einbeziehen,
+   wurden in den Kinddatensätzen dabei aber nicht neu berechnet und blieben auf dem alten Stand, bis der
+   Kinddatensatz selbst bearbeitet wurde (`Issue #657 <https://github.com/MetaModels/core/issues/657>`_). In MM 2.4
+   bleibt das bisherige Verhalten bestehen.
+
 Dadurch muss man Attributen, die eindeutige Werte (unique) enthalten (z. B. Alias) etwas mehr Beachtung schenken. Die
 Prüfung auf Eindeutigkeit bezieht sich auf alle Datensätze in der Tabelle und nicht nur auf Elterndatensätze. Bei
 nicht unterstützten Kombinationen aus "Variant" und "Eindeutige Werte" erfolgt eine entsprechende Fehlermeldung.

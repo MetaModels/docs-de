@@ -293,6 +293,12 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   bis die Seite neu geladen wurde. Der Schalter ist nun ein gewöhnlicher Link: Der Server speichert den neuen
   Zustand und liefert die Liste neu aus, sodass **alle** betroffenen Zeilen sofort richtig angezeigt werden. An
   der Bedienung ändert sich nichts.
+* **Abgeleitete Werte in Varianten folgen jetzt Änderungen am Elterndatensatz:** Wurde ein nicht-variabler Wert
+  nachträglich im Elterndatensatz geändert, wurde er zwar wie gehabt an die Kinddatensätze übertragen - abgeleitete
+  variable Attribute wie Kombinierte Werte oder Alias, die diesen Wert einbeziehen, wurden in den Kinddatensätzen
+  dabei aber nicht neu berechnet und blieben auf dem alten Stand, bis der Kinddatensatz selbst bearbeitet wurde
+  (`Issue #657 <https://github.com/MetaModels/core/issues/657>`_). Siehe auch
+  :ref:`component_relations_variants`.
 * **Seitenleiste unter Listenansichten (NEU):** Umfasst eine Liste mehr Datensätze, als der
   Seitenblock zeigt, erscheint unter der Tabelle eine Leiste mit „Seite x von y" und den
   Seitenzahlen - wie man es aus dem Contao-Backend kennt. Zusätzlich führen „Anfang", „Zurück",
