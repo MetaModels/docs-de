@@ -47,8 +47,9 @@ Einstellungen beim Anlegen der Filterregel
 
        Die Einstellung erscheint nur, wenn das gefilterte Attribut den Anzeigetext nicht
        selbst liefert – also bei Attributen ohne Relation. Bei Einzelauswahl (MetaModel),
-       Tags und übersetzten Tags entfällt sie, da diese den Anzeigetext bereits über ihren
-       Alias bereitstellen.
+       Tags und übersetzten Tags entfällt sie, da dort der Anzeigetext bereits über die
+       Werte-Spalte des Attributs bestimmt wird; die Alias-Spalte liefert den Schlüssel
+       für die URL.
 
 
 Einstellungen für das Frontend-Widget
