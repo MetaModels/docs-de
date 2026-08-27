@@ -15,7 +15,7 @@ einen Kauf (Checkout) zu übergeben.
 **Aktuelle Unterstützungen:**
 
 * Contao 5.7 + MM 2.5 + Isotope 3.0-dev
-* contao 4.13 + MM 2.3 + Isotope 2.9
+* Contao 4.13 + MM 2.3 + Isotope 2.9
 
 Die Übergabe aus MetaModels heraus erfolgt über den Warenkorb von Isotope. Anschließend
 wird der weitere Kaufprozess so durchgeführt, wie es in der Konfiguration von
