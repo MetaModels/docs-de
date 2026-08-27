@@ -4,13 +4,18 @@ MetaModels-2-Isotope
 ####################
 
 .. warning:: MetaModels-2-Isotope ist noch im Fundraising und wird erst nach
-   Erreichen der Zielsumme von aktuell 7.374 € freigeschaltet. |br|
+   Erreichen des offenen Fundraising von aktuell 6.431,75 € freigeschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
 Projekt MetaModels (ab 2.1) zur Verfügung gestellt, um aus MetaModels heraus Items (Artikel, Produkt) an den
 Onlineshop `Isotopeecommerce <https://isotopeecommerce.org>`_ (Isotope) für
 einen Kauf (Checkout) zu übergeben.
+
+**Aktuelle Unterstützungen:**
+
+* Contao 5.7 + MM 2.5 + Isotope 3.0-dev
+* contao 4.13 + MM 2.3 + Isotope 2.9
 
 Die Übergabe aus MetaModels heraus erfolgt über den Warenkorb von Isotope. Anschließend
 wird der weitere Kaufprozess so durchgeführt, wie es in der Konfiguration von
@@ -22,8 +27,8 @@ sein, bei Verwendung von MetaModels eine zusätzliche Kaufoption anzubieten zu k
 oder auch Isotope mit den umfangreichen Konfigurations- und Filtermöglichkeiten
 aus MetaModels zu ergänzen.
 
-Zum Testen und Vergleichen der Erweiterung gegenüber dem normalen Isotope, wurde
-ein Demoshop eingerichtet: `https://isotope.metamodel.me <https://isotope.metamodel.me>`_
+**Zum Testen und Vergleichen** der Erweiterung gegenüber dem normalen Isotope, wurde
+ein **Demoshop** eingerichtet: `https://isotope.metamodel.me <https://isotope.metamodel.me>`_
 
 Das Projekt wurde von Richard Henkenjohann, Carsten Merz und Ingolf Steinhardt
 umgesetzt.
@@ -32,7 +37,7 @@ umgesetzt.
 Early-Adopter-Programm
 ----------------------
 
-Das Projekt ist in Version 2.3 fertig aber aktuell noch nicht frei verfügbar.
+Das Projekt ist in Version 2.5 für Contao 5.7 und Isotope 3.0-dev fertig aber aktuell noch nicht frei verfügbar.
 Die Refinanzierung erfolgt über ein "Early-Adopter-Programm", d.h. man kann
 die Erweiterung(en) bei Zahlung einer Spende sofort einsetzen. Die Zahlung
 berechtigt zum Einsatz für ein Projekt. Rechtsansprüche jedweder Art sind
@@ -228,6 +233,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 390 €
 * ghost.company - `ghostcompany.com <http://www.ghostcompany.com>`_: 490 €
 * iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 390 €
+* Hallenberger - `hallenberger.com <https://hallenberger.com/>`_: 390 €
 
 (*Spenden in Netto)
 
