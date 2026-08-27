@@ -179,6 +179,7 @@ wie Warenkorb und Checkout erfolgen in Isotope.
 
 Wurde ein Item gekauft, ist dieses im Backend wie bei Isotope nicht mehr löschbar.
 
+
 Demoshop
 --------
 
@@ -208,12 +209,13 @@ Folgend noch einige Hinweise zu den einzelnen Produktgruppen:
 Voraussetzungen
 ---------------
 
-Für die Installation der Module gelten aktuell folgende
-Voraussetzungen:
+Für die Installation der Module gelten aktuell folgende Voraussetzungen:
 
-* Contao 4.4.x/4.9.x || 4.13
-* Isotope ab 2.5 und MetaModels 2.1/2.2 || Isotope ab 2.8 und MetaModels 2.3
-* PHP ab 7.2/7.4 || PHP ab 8.1
+* Contao 5.7 + Isotope 3.0-dev + MetaModels 2.5
+* Contao 4.13 + Isotope ab 2.8 + MetaModels 2.3
+* Contao 4.4.x/4.9.x + Isotope ab 2.5 + MetaModels 2.1/2.2
+
+(Für Contao 5.3 gibt es kein Isotope)
 
 
 Known Issues and Next Features
