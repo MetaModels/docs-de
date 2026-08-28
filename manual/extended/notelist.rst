@@ -37,6 +37,18 @@ Installation per Contao-Manager oder Composer
 
 Voraussetzungen für die Installation:
 
+**Contao 5.7:**
+
+.. note:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
+   Fundrasingsumme von 4.335 frei geschaltet. |br|
+   Für einen Zugang bitte eine E-Mail an info@e-spin.de
+
+* ^PHP 8.4
+* MetaModels 2.5
+* Notelist 2.5
+* optional Notification Center 2.3 oder NCPro
+* Zugang zum geschützten Repository - Daten nach Spende
+
 **Contao 5.3:**
 
 .. note:: Die Merkliste ist sofort einsatzbereit wird aber erst nach Erreichen der aktuellen
@@ -358,6 +370,8 @@ Spenden
 -------
 
 Ein Dank für die Spenden* für die Erweiterung an:
+
+**Version 2.5:**
 
 **Version 2.4:**
 
