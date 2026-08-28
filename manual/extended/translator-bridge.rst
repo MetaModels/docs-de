@@ -165,6 +165,10 @@ Fallback-Sprache des MetaModels.
 .. note:: Das Inhaltselement im Popup muss nach dem Neuanlegen einmal gespeichert werden, damit die Sprachenzuordnung
    erstellt werden kann. Nach dem Speichern sind auch die Übersetzungsbuttons sichtbar.
 
+.. note:: Auch **verschachtelte** Inhaltselemente - etwa innerhalb eines Akkordeons, einer Elementgruppe
+   oder eines Sliders - erhalten die Übersetzungsschaltflächen. Die Zielsprache wird dabei über die
+   Elternkette bis zum eigentlich zugehörigen Datensatz ermittelt, nicht nur am direkten Eltern-Inhaltselement.
+
 Als geeignete Feldtypen gelten: ``text``, ``textarea``, ``inputUnit`` und
 ``listWizard``. Dabei gilt:
 
@@ -230,6 +234,9 @@ Abschließend den Symfony-Cache leeren:
    an den Übersetzungsanbieter.
    Schaltflächen erscheinen nur in Seiten- oder Artikelbäumen, die **nicht**
    der Fallback-Baum selbst sind – im Fallback-Baum gibt es nichts zu übersetzen.
+   Das gilt auch für **verschachtelte** Inhaltselemente - etwa innerhalb eines Akkordeons, einer
+   Elementgruppe oder eines Sliders: Die Quellsprache wird über die Elternkette bis zur eigentlich
+   zugehörigen Seite bzw. zum Artikel ermittelt, nicht nur am direkten Eltern-Inhaltselement.
 
 
 Zeichen-Nutzung anzeigen
