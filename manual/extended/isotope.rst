@@ -218,12 +218,6 @@ Für die Installation der Module gelten aktuell folgende Voraussetzungen:
 (Für Contao 5.3 gibt es kein Isotope)
 
 
-Known Issues and Next Features
-------------------------------
-
-* Übersetzungen in DE (wenn Projekt freigeschaltet per Transifex)
-
-
 Spenden
 -------
 
