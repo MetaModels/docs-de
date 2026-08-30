@@ -1,6 +1,6 @@
 .. _component_attribute_latlong:
 
-|svg_attr_latlong_22| |img_latlong| LatLong (ab MM 2.5)
+|svg_attr_latlong_22| LatLong (ab MM 2.5)
 =======================================================
 
 Das Attribut "LatLong" speichert ein Koordinatenpaar (Breiten- und Längengrad) in einer
@@ -169,7 +169,7 @@ Bounding-Box-Vorfilter obendrauf nochmal etwa das 13-fache.
 
 .. |svg_attr_latlong_22| image:: /_img/icons_svg/latlong.svg
    :width: 22px
-.. |img_latlong| image:: /_img/icons/latlong.png
+
 .. |br| raw:: html
 
    <br />
