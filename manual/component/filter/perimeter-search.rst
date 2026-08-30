@@ -8,10 +8,10 @@ ihrer geografischen Position. Besucher geben eine Adresse oder Koordinaten ein u
 wählen einen Suchradius; die Filterregel ermittelt alle Items, deren Geokoordinaten
 (Latitude/Longitude) innerhalb des angegebenen Umkreises liegen.
 
-Voraussetzung ist, dass die Items Geokoordinaten in zwei separaten Dezimal-Attributen
-(Latitude und Longitude) gespeichert haben. Für die Geocodierung von Adressen in
-Koordinaten werden externe Lookup-Dienste verwendet (z. B. OpenStreetMap/Nominatim,
-Google Maps API).
+Voraussetzung ist, dass die Items ihre Geokoordinaten entweder in einem einzelnen
+:ref:`LatLong-Attribut <component_attribute_latlong>` oder in zwei separaten Dezimal-Attributen
+(Latitude und Longitude) gespeichert haben. Für die Geocodierung von Adressen in Koordinaten werden
+externe Lookup-Dienste verwendet (z. B. OpenStreetMap/Nominatim, Google Maps API).
 
 .. seealso:: Detaillierte Dokumentation zur Umkreissuche:
    :ref:`extended_perimetersearch`
@@ -21,6 +21,12 @@ Google Maps API).
    keine Wirkung mehr hatte (`Issue #31
    <https://github.com/MetaModels/filter_perimetersearch/issues/31>`_). In MM 2.4 bleibt das
    bisherige Verhalten bestehen.
+
+.. note:: **Ab MM 2.5:** Wird ein :ref:`LatLong-Attribut <component_attribute_latlong>` mit
+   aktiviertem räumlichen Index verwendet (Einzelnes Attribut), nutzt die Umkreissuche automatisch
+   einen indexgestützten Bounding-Box-Vorfilter - je nach Datenmenge ein Vielfaches schneller als
+   ohne Index. Details und Benchmark-Zahlen: :ref:`Sonderfunktionen beim LatLong-Attribut
+   <component_attribute_latlong_special>`.
 
 
 Installation
@@ -51,9 +57,9 @@ Einstellungen beim Anlegen der Filterregel
    * - Datenmodus
      - Legt fest, wie die Geokoordinaten der Items gespeichert sind:
 
-       * **Einzelnes Attribut** – Die Koordinaten sind in einem einzigen kombinierten
-         Attribut gespeichert (z. B. "lat,long" als Text). Zusätzliche Option:
-         **Attribut (Einzeln)** – Auswahl des Attributs.
+       * **Einzelnes Attribut** – Die Koordinaten sind in einem einzigen
+         :ref:`LatLong-Attribut <component_attribute_latlong>` gespeichert. Zusätzliche Option:
+         **Attribut (Einzeln)** – Auswahl des Attributs (nur LatLong-Attribute wählbar).
        * **Zwei Attribute** – Latitude und Longitude sind in zwei separaten
          Attributen gespeichert. Zusätzliche Optionen:
          **Erstes Attribut (Lat)** und **Zweites Attribut (Long)**.
@@ -113,9 +119,11 @@ Einstellungen für das Frontend-Widget
 Passende Attribute
 ------------------
 
-Die Filterregel "Umkreissuche" benötigt Geokoordinaten in Dezimalform:
+Je nach gewähltem Datenmodus benötigt die Filterregel "Umkreissuche" eines der folgenden Attribute:
 
-* :ref:`Dezimal <component_attribute_decimal>` (für Latitude und Longitude separat)
+* :ref:`LatLong <component_attribute_latlong>` (Einzelnes Attribut – empfohlen, unterstützt einen
+  räumlichen Index für eine deutlich schnellere Umkreissuche)
+* :ref:`Dezimal <component_attribute_decimal>` (Zwei Attribute – für Latitude und Longitude separat)
 
 Zusätzlich kann das Attribut :ref:`Geo-Entfernung <component_attribute_geodistance>`
 für die Anzeige und Sortierung nach Entfernung verwendet werden.

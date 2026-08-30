@@ -148,6 +148,9 @@ Beispiele für zusätzliche Attribute sind:
   auch als übersetzte Variante - :ref:`mehr... <component_attribute_tablemulti>`
 * **Geo-Entfernung**: berechnet bei einer Umkreissuche die geogr. Entfernung zum Suchpunkt |br|
   mit dem Wert können Listen nach der Entfernung sortiert werden - :ref:`mehr... <component_attribute_geodistance>`
+* **LatLong**: Koordinatenpaar (Breite/Länge) als natives ``POINT`` in einer Spalte |br|
+  optional mit räumlichem Index für eine schnellere Umkreissuche; Eingabe wahlweise über eine
+  Adresssuche mit Karte - :ref:`mehr... <component_attribute_latlong>`
 
 Die Reihenfolge, wie die Attribute angelegt werden, ist frei wählbar -
 lediglich bei Attributen, die sich auf andere Attribute beziehen wie z.B.
@@ -224,6 +227,7 @@ Details aller Attribute
    attribute/translatedurl
    attribute/color
    attribute/geodistance
+   attribute/latlong
    attribute/levenshtein
    attribute/rating
 

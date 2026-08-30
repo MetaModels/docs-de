@@ -146,18 +146,24 @@ MetaModels Daten erstellen
 Möchte man Datensätze als Marker auf einer Karte anzeigen, so sind verschiedene Daten in MetaModels zu pflegen. Für
 folgende Angaben können bzw. sollten entsprechende Attribute in MM vorhanden sein (inkl. Angabe unterstützter Attribute):
 
-* Koordinaten (Latitude und Longitude Pflicht, Altitude optional) - Dezimal bei Einzelangabe bzw. Text für
+* Koordinaten (Latitude und Longitude Pflicht, Altitude optional) - :ref:`LatLong
+  <component_attribute_latlong>` (empfohlen), Dezimal bei Einzelangabe je Koordinate bzw. Text für
   kommaseparierte Angabe
 * Title-Attribut (optional) - Text, Kombinierte Werte, Übersetzter Text, Übersetzte kombinierte Werte
 * Alt-Attribut (optional) - Text, Kombinierte Werte, Übersetzter Text, Übersetzte kombinierte Werte
 * Popup (optional) - Text, Langtext, Kombinierte Werte, Übersetzter Text, Übersetzter Langtext, Übersetzte
   kombinierte Werte
 
-Die Koordinaten des Markers können in einem Wert als kommaseparierte Zahlen oder als Einzelwerte gespeichert werden. Für
-den ersten Fall sollte ein Attribut Text angelegt sein, welches das Tupel (``52.510885,13.3989367``) oder Tripel
-(``52.510885,13.3989367,36``) aufnimmt. Sollten die Koordinaten einzeln gespeichert werden, so sind zwei bzw. drei
-Attribute "Dezimal" anzulegen. Die Variante mit einzelnen Koordinatenwerten ist zu verwenden, sofern die Datensätze
-mit einer :ref:`Umkreissuche aus MetaModels <extended_perimetersearch>` gefiltert werden sollen.
+Die Koordinaten des Markers können auf drei Arten gespeichert werden:
+
+* **Attribut LatLong** (ab MM 2.5, empfohlen) - ein einzelnes Attribut speichert das Koordinatenpaar als
+  natives ``POINT``. Diese Variante unterstützt optional einen räumlichen Index und ist auch mit einer
+  :ref:`Umkreissuche aus MetaModels <extended_perimetersearch>` filterbar - inzwischen sogar deutlich
+  schneller als die Variante mit einzelnen Dezimal-Attributen, sofern der Index aktiviert ist.
+* **Kommaseparierter Text** - ein Attribut Text nimmt das Tupel (``52.510885,13.3989367``) oder Tripel
+  (``52.510885,13.3989367,36``) auf. Nicht mit einer Umkreissuche filterbar.
+* **Einzelwerte** - zwei bzw. drei Attribute "Dezimal" für Latitude, Longitude und optional Altitude.
+  Unterstützt ebenfalls eine Umkreissuche aus MetaModels.
 
 Dem Marker-Icon kann optional ein Text für das Title- bzw. Alt-Attribut übergeben werden. Dafür wird ein entsprechendes
 Attribut "Text" benötigt. Der Text darf keine HTML-Formatierung beinhalten, welches die HTML-Ausgabe stört.
@@ -404,19 +410,34 @@ Häufig wird eine Karte in Verbindung mit einer gefilterten MM-Liste eingebaut -
 Filterung auch auf die angezeigten Marker auswirkt.
 
 Die Cowegis bezieht seine Daten für die Generierung der Karte und aller weiterer Elemente nicht direkt über das
-Inhaltselement, sondern das Kartenelement holt sich die Daten über einen eigenen Pfad. Dieser Aufruf bekommt aber
-von den Filterdaten aus der URL aber nichts mit.
+Inhaltselement, sondern das Kartenelement holt sich die Daten über einen eigenen Pfad. Dieser Aufruf bekommt von den
+Filterdaten aus der URL aber nichts mit.
 
-Daher muss aktuell diesem Aufruf die Filterparameter mit auf den Weg gegeben werden. Je nach Finanzierung der Erweiterung
-könnte man auch allgemeingültige Aufrufe versuchen - bis dahin muss man selbständig die Parameter über ``map-uri``
-übergeben.
+.. note:: **Ab MM 2.5:** Cowegis-Layer liefert dafür ein eigenes Template mit, das die Filterparameter
+   automatisch übernimmt - siehe unten. Der bisher notwendige, manuell angepasste Template-Override ist damit
+   für den Regelfall nicht mehr nötig.
 
-Für die Übergabe kann das Template des Cowegis-Content-Elements wie folgt angepasst werden:
+**Mitgeliefertes Template ``ce_cowegis_map_mm-filter``**
+
+Cowegis-Layer bringt ein zweites Template für das Karten-Content-Element mit. Es liest über die im
+Content-Element ausgewählte Karte automatisch aus, welche URL-Parameter die dort eingebundenen
+"MetaModels Marker"-Layer für ihre Filtereinstellung erwarten und hängt deren aktuelle Werte selbständig an
+den Aufruf der Karte an - ganz ohne eigene Anpassung.
+
+Um es zu verwenden, im Karten-Content-Element unter "Template-Einstellungen" das Template
+``ce_cowegis_map_mm-filter`` statt des Standardtemplates auswählen. Voraussetzung ist, dass beim
+Marker-Layer unter "MetaModel" bei "Anzuwendende Filtereinstellungen" mindestens eine
+:ref:`Filtereinstellung <component_filter>` hinterlegt ist - deren URL-Parameternamen werden
+automatisch ermittelt.
+
+Für Sonderfälle - z. B. eigene URL-Parameter, die nicht aus einer MM-Filtereinstellung stammen - lässt sich
+weiterhin ein eigenes Template mit fest angegebenen Parameternamen anlegen, nach demselben Muster wie
+bisher:
 
 .. code-block:: html
    :linenos:
 
-   <!-- templates/ce_cowegis_map.html5 -->
+   <!-- templates/ce_cowegis_map_eigene-parameter.html5 -->
    <?php $this->extend('ce_cowegis_map'); ?>
 
    <?php $this->block('content') ?>

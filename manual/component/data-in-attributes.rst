@@ -45,7 +45,8 @@ Zahlen
     "Ganzzahlige Werte", ":ref:`Numerisch <component_attribute_numeric>`", `attribute_numeric <https://github.com/MetaModels/attribute_numeric>`_, "Wert von/bis für ein Attribut, |br| Wert von/bis für zwei Attribute", "✔", "für PLZ oder Telefonnummern Attribut |br| Text verwenden"
     "Dezimalzahlen", ":ref:`Dezimal <component_attribute_decimal>`", `attribute_decimal <https://github.com/MetaModels/attribute_decimal>`_, "Wert von/bis für ein Attribut, |br| Wert von/bis für zwei Attribute", "✔", "Eingabe mit Punkt als Dezimaltrenner"
     "Datum oder Zeit", ":ref:`Datum <component_attribute_timestamp>`", `attribute_timestamp <https://github.com/MetaModels/attribute_timestamp>`_, "Wert von/bis für ein Datumsattribut, |br| Wert von/bis für zwei Datumsattribute", "✔", "Speicherung als UNIX-Zeitstempel; |br| Eingabe kann auf nur Datum oder nur |br| Zeit eingegrenzt werden"
-    "Geokoordinaten", "siehe Dezimal", , "Umkreissuche", "**—**", "für Latitude und Longitude jeweils |br| ein Attribut anlegen"
+    "Geokoordinaten (kombiniert)", ":ref:`LatLong <component_attribute_latlong>`", `attribute_latlong <https://github.com/MetaModels/attribute_latlong>`_, "Umkreissuche", "**—**", "Speicherung als natives ``POINT``; |br| optional räumlicher Index für schnellere |br| Umkreissuche; Eingabe wahlweise über |br| Adresssuche mit Karte"
+    "Geokoordinaten (getrennt)", "siehe Dezimal", , "Umkreissuche", "**—**", "für Latitude und Longitude jeweils |br| ein Attribut anlegen"
 
 Dateien
 -------

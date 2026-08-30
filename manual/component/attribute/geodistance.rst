@@ -72,11 +72,18 @@ aufgeteilt sind:
        sind:
 
        * **Einzelmodus** – Breitengrad und Längengrad sind in einem einzigen
-         Attribut (z. B. vom Typ "Geolocation") kombiniert gespeichert.
+         Attribut kombiniert gespeichert. Auswählbar ist ausschließlich ein
+         Attribut vom Typ :ref:`LatLong <component_attribute_latlong>`.
          Unterfeld: Auswahl des Attributs.
        * **Multimodus** – Breitengrad und Längengrad sind in zwei separaten
          Attributen gespeichert. Unterfelder: Attribut für Breite (Lat) und
          Attribut für Länge (Lng).
+   * - Rundungsschritt (km)
+     - Die berechnete Entfernung wird auf ein Vielfaches dieses Wertes
+       gerundet (in Kilometern) - z. B. rundet ``0.001`` auf 1 Meter genau,
+       ``1`` auf ganze Kilometer, ``5`` auf 5-Kilometer-Schritte. Wirkt sich
+       nur auf den angezeigten Wert aus, nicht auf die Sortierreihenfolge -
+       diese bleibt immer exakt.
    * - LookUp-Services
      - Mehrspaltiger Assistent zur Konfiguration der Dienste, die eine
        Adresse in Geokoordinaten umwandeln. Verfügbare Dienste (je nach
@@ -139,10 +146,13 @@ Sonderfunktionen
 
 **Berechnung**
 
-Die Entfernung zwischen Suchpunkt und gespeichertem Koordinatenpaar wird
-mit der Haversine-Formel berechnet, die die Erdkrümmung berücksichtigt.
-Das Ergebnis steht im Template als Entfernungswert (in km oder Meilen) zur
-Verfügung.
+Die Entfernung zwischen Suchpunkt und gespeichertem Koordinatenpaar wird über die native
+räumliche Funktion ``ST_Distance_Sphere()`` von MySQL/MariaDB berechnet (Kugelabstand, berücksichtigt
+die Erdkrümmung). Im Einzelmodus wird dabei direkt die ``POINT``-Spalte des
+:ref:`LatLong-Attributs <component_attribute_latlong>` verwendet - ist dort ein räumlicher Index
+angelegt, profitiert davon nur die :ref:`Umkreissuche <component_filter_perimeter-search>` selbst,
+nicht die Sortierung hier (die läuft anhand der bereits durch die Umkreissuche eingegrenzten
+Ergebnismenge).
 
 **Caching**
 

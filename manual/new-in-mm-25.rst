@@ -451,6 +451,27 @@ entfallen sie.
     * an der Bedienung ändert sich nichts: mehrere Dateien werden in der Eingabemaske weiterhin per
       Drag & Drop sortiert und über den Button am Vorschaubild einzeln aus der Auswahl entfernt
 
+* **LatLong (NEU):** neues Attribut ``metamodels/attribute_latlong`` - speichert ein Koordinatenpaar
+  (Breite/Länge) als natives ``POINT`` in einer einzigen Spalte statt in zwei Dezimal-Attributen
+  oder einem Text-Attribut mit kommaseparierten Werten - :ref:`mehr... <component_attribute_latlong>`
+
+    * optional ein **räumlicher Index** auf der Spalte, den die :ref:`Umkreissuche
+      <component_filter_perimeter-search>` automatisch für eine deutlich schnellere Suche nutzt
+      (siehe unten bei "Filter")
+    * ist `cowegis/cowegis-contao-geocode-widget-bundle
+      <https://github.com/cowegis/cowegis-contao-geocode-widget-bundle>`_ installiert, kann die
+      manuelle Koordinateneingabe durch eine **Adresssuche mit Kartenauswahl** ersetzt werden -
+      wahlweise weiterhin als zwei Felder oder als ein kommaseparierter Wert
+
+* Geo-Entfernung (geodistance)
+    * die Entfernungsberechnung nutzt jetzt die native räumliche Funktion ``ST_Distance_Sphere()``
+      statt der bisherigen Formel - diese hieß zwar "Haversine", war aber tatsächlich nur eine
+      flache Näherung ohne echte Erdkrümmung
+    * im Einzelmodus ist ausschließlich ein :ref:`LatLong-Attribut <component_attribute_latlong>`
+      wählbar (bisher unbenutzbar - der Select filterte auf einen nie existierenden Attributtyp)
+    * neue Option **Rundungsschritt (km)** - rundet den angezeigten Entfernungswert auf ein
+      Vielfaches dieses Werts, ohne die Sortierung zu beeinflussen (die bleibt immer exakt)
+
 
 Filter
 ------
@@ -479,6 +500,13 @@ Filter
   (`Issue #31 <https://github.com/MetaModels/filter_perimetersearch/issues/31>`_). Sie wird jetzt zusammen mit der
   Adresse zurückgesetzt. Betrifft nur die Anzeige im Widget, die Filterung war nie falsch. Siehe auch
   :ref:`component_filter_perimeter-search`.
+* **Umkreissuche: deutlich schneller mit dem neuen LatLong-Attribut.** Die Entfernungsberechnung nutzt jetzt
+  ``ST_Distance_Sphere()`` statt der bisherigen Formel (siehe „Attribute" oben) - das allein bringt bereits gut
+  das Doppelte an Geschwindigkeit. Wird als Datenmodus "Einzelnes Attribut" mit einem
+  :ref:`LatLong-Attribut <component_attribute_latlong>` verwendet, auf dem ein räumlicher Index angelegt ist,
+  kombiniert die Umkreissuche zusätzlich einen indexgestützten Bounding-Box-Vorfilter mit der exakten Berechnung.
+  Gemessen an 500.000 Datensätzen und einer 50-km-Suche: von 0,40 s auf 0,014 s - **rund 28× schneller** als vorher.
+  Details: :ref:`Sonderfunktionen beim LatLong-Attribut <component_attribute_latlong_special>`.
 
 
 Frontend-Editing (FEE)
