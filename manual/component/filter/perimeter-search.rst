@@ -9,7 +9,7 @@ wählen einen Suchradius; die Filterregel ermittelt alle Items, deren Geokoordin
 (Latitude/Longitude) innerhalb des angegebenen Umkreises liegen.
 
 Voraussetzung ist, dass die Items ihre Geokoordinaten entweder in einem einzelnen
-:ref:`LatLong-Attribut <component_attribute_latlong>` oder in zwei separaten Dezimal-Attributen
+:ref:`LatLong-Attribut <component_attribute_latlong>` oder in zwei separaten Dezimal- bzw. Text-Attributen
 (Latitude und Longitude) gespeichert haben. Für die Geocodierung von Adressen in Koordinaten werden
 externe Lookup-Dienste verwendet (z. B. OpenStreetMap/Nominatim, Google Maps API).
 
