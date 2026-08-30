@@ -94,7 +94,7 @@ eine Adresssuche mit Kartenauswahl ersetzt bzw. ergänzt werden kann:
      - Legt unabhängig von der Adressermittlung fest, ob die Koordinaten in zwei getrennten Feldern
        (Breite, Länge - Standard) oder in einem einzelnen Feld als kommaseparierter Wert
        (``Breite,Länge``) angezeigt werden.
-   * - Koordinaten anhand einer Adresse ermitteln
+   * - Koordinaten anhand einer Adresse ermitteln |br| (Cowegis Geocode-Widget notwendig)
      - Fügt ein Popup mit Adresssuche und Karte hinzu, über das sich die Koordinaten anhand einer
        eingegebenen Adresse ermitteln und auf der Karte anpassen lassen (``submitOnChange`` - blendet
        die folgenden Optionen sofort ein).

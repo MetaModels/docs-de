@@ -69,9 +69,6 @@ spezifischen Optionen:
   für eine (direkte) Anzeige von Vorschaubildern im Backend bzw. im Frontend die
   Option "Als Bildfeld mit Vorschaubild benutzen" in den Render-Einstellungen des
   Dateiattributs gesetzt werden muss - :ref:`mehr... <component_attribute_file>`
-* **Sprachschlüssel**: Auswahl von ISO-Sprachcodes |br|
-  mit dem Attribut steht eine Auswahl von Sprachcodes zur Verfügung; die Sprachcodes
-  können per Checkbox ausgewählt werden - :ref:`mehr... <component_attribute_langcode>`
 * **Langtext**: Texteingabe |br|
   Attribut für längere Texteingaben - :ref:`mehr... <component_attribute_longtext>`
 * **Numerisch**: Eingabe von ganzzahligen Werten (Integer) - :ref:`mehr... <component_attribute_numeric>`
@@ -95,8 +92,6 @@ spezifischen Optionen:
 * **URL**: Linktext und URL |br|
   Eingabe von externen Links (inkl. "\http://" eingeben) oder über den Seitenpicker
   interne Links; optional kann mit "Titel entfernen" nur die URL ausgegeben werden - :ref:`mehr... <component_attribute_url>`
-* **Token** (ab MM 2.4): Eindeutige Zeichenfolge |br|
-  Erstellung von eindeutigen Zeichenfolgen, die sich nicht wieder ändern - :ref:`mehr... <component_attribute_token>`
 
 Ist im MetaModel die Option "Übersetzung" aktiviert, sind die folgenden Attribute
 zusätzlich für eine Mehrsprachigkeit vorhanden:
@@ -141,16 +136,22 @@ Beispiele für zusätzliche Attribute sind:
 * **Levenshtein**: Wortsuche nach Levenshtein |br|
   mit dem Attribut wird eine Wortähnlichkeit für eine flexible Suche ermittelt - :ref:`mehr... <component_attribute_levenshtein>`
 * **Länderauswahl**: Auswahlliste mit Ländern - :ref:`mehr... <component_attribute_country>`
+* **Sprachschlüssel**: Auswahl von ISO-Sprachcodes |br|
+  mit dem Attribut steht eine Auswahl von Sprachcodes zur Verfügung; die Sprachcodes
+  können per Checkbox ausgewählt werden - :ref:`mehr... <component_attribute_langcode>`
 * **ContentArtikel**: Möglichkeit Contao-Contentelemente analog wie ein Artikel in |br|
-  einem Widget anzulegen - gibt es auch als übersetzte Variante - :ref:`mehr... <component_attribute_contentarticle>`
+  einem Widget anzulegen :ref:`mehr... <component_attribute_contentarticle>` |br|
+  gibt es auch als übersetzte Variante :ref:`mehr... <component_attribute_translatedcontentarticle>`
 * **Multi-Tabelle**: Ähnlich Attribut "Text-Tabelle" nur das in jede "Zelle" ein eigener |br|
-  Widgettyp wie Select, Radiobuttons, Checkboxen usw. eingebaut werden kann - gibt es |br|
-  auch als übersetzte Variante - :ref:`mehr... <component_attribute_tablemulti>`
+  Widgettyp wie Select, Radiobuttons, Checkboxen usw. eingebaut werden kann :ref:`mehr... <component_attribute_tablemulti>` |br|
+  gibt es auch als übersetzte Variante :ref:`mehr... <component_attribute_translatedtablemulti>`
 * **Geo-Entfernung**: berechnet bei einer Umkreissuche die geogr. Entfernung zum Suchpunkt |br|
   mit dem Wert können Listen nach der Entfernung sortiert werden - :ref:`mehr... <component_attribute_geodistance>`
-* **LatLong**: Koordinatenpaar (Breite/Länge) als natives ``POINT`` in einer Spalte |br|
+* **LatLong** (ab MM 2.5): Koordinatenpaar (Breite/Länge) als natives ``POINT`` in einer Spalte |br|
   optional mit räumlichem Index für eine schnellere Umkreissuche; Eingabe wahlweise über eine
   Adresssuche mit Karte - :ref:`mehr... <component_attribute_latlong>`
+* **Token** (ab MM 2.4): Eindeutige Zeichenfolge |br|
+  Erstellung von eindeutigen Zeichenfolgen, die sich nicht wieder ändern - :ref:`mehr... <component_attribute_token>`
 
 Die Reihenfolge, wie die Attribute angelegt werden, ist frei wählbar -
 lediglich bei Attributen, die sich auf andere Attribute beziehen wie z.B.
@@ -198,38 +199,38 @@ Details aller Attribute
    attribute/alias
    attribute/checkbox
    attribute/combinedvalues
-   attribute/contentarticle
-   attribute/country
    attribute/decimal
    attribute/file
-   attribute/langcode
    attribute/longtext
    attribute/numeric
    attribute/select
    attribute/tabletext
-   attribute/tablemulti
    attribute/tags
    attribute/text
    attribute/timestamp
-   attribute/token
    attribute/url
    attribute/translatedalias
    attribute/translatedcheckbox
    attribute/translatedcombinedvalues
-   attribute/translatedcontentarticle
    attribute/translatedfile
    attribute/translatedlongtext
    attribute/translatedselect
    attribute/translatedtabletext
-   attribute/translatedtablemulti
    attribute/translatedtags
    attribute/translatedtext
    attribute/translatedurl
+   attribute/rating
    attribute/color
+   attribute/levenshtein
+   attribute/country
+   attribute/langcode
+   attribute/contentarticle
+   attribute/translatedcontentarticle
+   attribute/tablemulti
+   attribute/translatedtablemulti
    attribute/geodistance
    attribute/latlong
-   attribute/levenshtein
-   attribute/rating
+   attribute/token
 
 
 .. |svg_fields_32| image:: /_img/icons_svg/fields.svg
