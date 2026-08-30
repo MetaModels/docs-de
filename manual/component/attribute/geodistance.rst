@@ -96,6 +96,10 @@ aufgeteilt sind:
        Für Dienste, die einen API-Token benötigen, kann dieser im Feld
        "API Token" eingetragen werden.
 
+       Die Lookup-Dienste werden der Reihenfolge nach von oben nach unten abgearbeitet und stoppen beim ersten Treffer.
+       Wenn im Frontend neben einer Adresseingabe auch Koordinaten erlaubt sein sollen, muss dieser Dienst an erster
+       Stelle stehen.
+
 
 Einstellungen bei den Render-Einstellungen
 -------------------------------------------

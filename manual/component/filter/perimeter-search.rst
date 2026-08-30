@@ -61,7 +61,8 @@ Einstellungen beim Anlegen der Filterregel
          :ref:`LatLong-Attribut <component_attribute_latlong>` gespeichert. Zusätzliche Option:
          **Attribut (Einzeln)** – Auswahl des Attributs (nur LatLong-Attribute wählbar).
        * **Zwei Attribute** – Latitude und Longitude sind in zwei separaten
-         Attributen gespeichert. Zusätzliche Optionen:
+         Attributen gespeichert (:ref:`Dezimal- <component_attribute_decimal>` oder
+         :ref:`Text-Attribut <component_attribute_text>`. Zusätzliche Optionen:
          **Erstes Attribut (Lat)** und **Zweites Attribut (Long)**.
    * - URL-Parameter
      - Der Schlüssel (Key) des URL-Parameters für die Adress-/Koordinateneingabe.
@@ -109,11 +110,22 @@ Einstellungen für das Frontend-Widget
        * **Vorgabe** – Festes Land (ISO-Code). Zusätzliche Option: **Land-Vorgabe**.
        * **GET-Parameter** – Das Land wird über einen URL-Parameter übergeben.
          Zusätzliche Option: **Land-GET-Parameter**.
-   * - Lookup-Dienst
-     - Konfiguration des Geocodierungsdienstes (MCW-Tabelle):
+   * - Lookup-Services
+     - Mehrspaltiger Assistent zur Konfiguration der Dienste, die eine
+       Adresse in Geokoordinaten umwandeln. Verfügbare Dienste (je nach
+       Installation):
 
-       * **Dienst** – Auswahl des Geocodierungsdienstes (z. B. Nominatim, Google Maps).
-       * **API-Token** – Optionaler API-Schlüssel für kostenpflichtige Dienste.
+       * **Koordinaten** – Direkte Koordinateneingabe
+       * **Google Maps** – Adressauflösung über die Google Maps API
+       * **OpenStreetMap** – Adressauflösung über die Nominatim-API
+
+       Für Dienste, die einen API-Token benötigen, kann dieser im Feld
+       "API Token" eingetragen werden.
+
+       Die Lookup-Dienst werden der Reihenfolge nach von oben nach unten abgearbeitet und stoppen beim ersten Treffer.
+       Wenn im Frontend neben einer Adresseingabe auch Koordinaten erlaubt sein sollen, muss dieser Dienst an erster
+       Stelle stehen. Die Lat-Long-Werte für die Eingabe können bei Mobilgeräten per JavaScript vom Gerät ausgelesen
+       werden.
 
 
 Passende Attribute
@@ -123,7 +135,8 @@ Je nach gewähltem Datenmodus benötigt die Filterregel "Umkreissuche" eines der
 
 * :ref:`LatLong <component_attribute_latlong>` (Einzelnes Attribut – empfohlen, unterstützt einen
   räumlichen Index für eine deutlich schnellere Umkreissuche)
-* :ref:`Dezimal <component_attribute_decimal>` (Zwei Attribute – für Latitude und Longitude separat)
+* :ref:`Dezimal <component_attribute_decimal>` oder :ref:`Text <component_attribute_text>` (Zwei
+  Attribute – für Latitude und Longitude separat)
 
 Zusätzlich kann das Attribut :ref:`Geo-Entfernung <component_attribute_geodistance>`
 für die Anzeige und Sortierung nach Entfernung verwendet werden.
