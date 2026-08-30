@@ -417,7 +417,7 @@ Filterdaten aus der URL aber nichts mit.
    automatisch übernimmt - siehe unten. Der bisher notwendige, manuell angepasste Template-Override ist damit
    für den Regelfall nicht mehr nötig.
 
-**Mitgeliefertes Template ``ce_cowegis_map_mm-filter``**
+**Mitgeliefertes Template** ``ce_cowegis_map_mm-filter``
 
 Cowegis-Layer bringt ein zweites Template für das Karten-Content-Element mit. Es liest über die im
 Content-Element ausgewählte Karte automatisch aus, welche URL-Parameter die dort eingebundenen
@@ -457,6 +457,7 @@ bisher:
 
 Soll sich die Karte auf die geänderte Anzahl an Markern anpassen, so muss die Option "Grenzen anpassen" bei der
 MM-Karte aktiviert sein (s.o.).
+
 
 Individuelle Anpassungen per JavaScript
 ---------------------------------------
