@@ -1,7 +1,7 @@
 .. _component_attribute_latlong:
 
-|svg_attr_latlong_22| |img_latlong| LatLong
-============================================
+|svg_attr_latlong_22| |img_latlong| LatLong (ab MM 2.5)
+=======================================================
 
 Das Attribut "LatLong" speichert ein Koordinatenpaar (Breiten- und Längengrad) in einer
 einzigen Spalte vom nativen MySQL/MariaDB-Datentyp ``POINT``. Im Gegensatz zu zwei
