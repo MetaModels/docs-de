@@ -372,6 +372,24 @@ entfallen sie.
   ``hideLabels`` und ``legacyAttributeWrapper``. Das Muster samt Beispiel steht unter
   :ref:`component_templates_attribute-wrapper`.
 
+* **Attribute nur bei Bedarf rendern (NEU):** Neue Option „Attribute nur bei Bedarf rendern (Lazy)"
+  je Render-Einstellung. Bisher rendert MetaModels für jedes Attribut immer beide Ausgabeformate
+  (HTML5 und Text), unabhängig davon, ob das Listentemplate sie überhaupt verwendet. Ist Lazy
+  aktiviert, wird ein Attribut erst beim tatsächlichen Zugriff des Templates gerendert - und zwar
+  je Format einzeln, so dass der Zugriff auf nur ein Format nicht auch das andere mit rendert.
+
+  Das lohnt sich für Templates, die nur einen Teil der konfigurierten Attribute ausgeben oder
+  konsequent nur ein Ausgabeformat nutzen - je nachdem, wie groß der ungenutzte Anteil ist, ein
+  spürbarer bis deutlicher Geschwindigkeitsgewinn. Greift ein Template dagegen ohnehin auf alle
+  Attribute in beiden Formaten zu, bringt die Option nichts und kann einen kleinen Mehraufwand
+  bedeuten, weil Twigs allgemeiner Objekt-Zugriff etwas langsamer ist als ein reines Array.
+
+  Anders als beim Wrapper-Block oben ist die Option **kein** Altverhalten, das per Migration auf
+  vorhandene Rendersettings gesetzt wird, und **nicht** deprecated: Ob sich Lazy lohnt, hängt vom
+  jeweiligen Template ab, es gibt also keine grundsätzlich "bessere" Seite. Standard ist deshalb
+  für neue wie bestehende Rendersettings gleichermaßen aus - siehe
+  :ref:`component_rendersettings`.
+
 * Auswahl (select), Übersetzte Auswahl (translatedselect), Tags und Übersetzte Tags
     * **Sprung in die Relationstabelle (NEU):** Neben der Feldbeschriftung steht im Backend ein
       Symbol, das die Tabelle öffnet, auf die das Attribut verweist - in einem neuen Tab, damit

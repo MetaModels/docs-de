@@ -70,6 +70,13 @@ Optionen
   Label der Attribute mit ausgegeben werden
 * **Labels verbergen** |br|
   die Attributnamen werden als "Label" nicht ausgegeben
+* **Attribute nur bei Bedarf rendern (Lazy)** |br|
+  ein Attribut wird erst gerendert, wenn das Template tatsächlich darauf zugreift, statt wie
+  bisher sofort beide Ausgabeformate (HTML5 und Text) für jedes Attribut zu erzeugen; lohnt sich,
+  wenn ein Template nur einen Teil der Attribute oder konsequent nur ein Ausgabeformat nutzt -
+  greift ein Template dagegen auf alle Attribute in beiden Formaten zu, bringt die Option keinen
+  Vorteil und kann einen kleinen Mehraufwand bedeuten; Standard ist aus, je Render-Einstellung
+  passend zum verwendeten Template wählbar
 * **Zusätzliche CSS/Javascript-Dateien** |br|
   zur Ausgabeformatierung und Interaktion können CSS- und/oder Javascript-Dateien mit in
   der Liste ausgegeben werden; die Einbindung erfolgt aber nur, wenn mindestens ein Item
