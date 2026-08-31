@@ -138,6 +138,19 @@ Die Koordinaten werden als natives ``POINT`` gespeichert (WKB-Binärformat inkl.
 zwei Dezimalwerte oder als Text. Damit stehen alle räumlichen Funktionen von MySQL/MariaDB (z. B.
 ``ST_Distance_Sphere()``, ``ST_X()``, ``ST_Y()``) direkt auf der Spalte zur Verfügung.
 
+Bestehende Daten können einfach in das neue Attribut übernommen werden - z. B.
+
+.. code-block:: mysql
+   :linenos:
+
+   -- kopieren von geo_lat/geo_long in neues Feld geo_latlong_single
+   UPDATE mm_map
+   SET geo_latlong_single = POINT(geo_long, geo_lat)
+   WHERE geo_lat IS NOT NULL
+     AND geo_long IS NOT NULL
+     AND geo_latlong_single IS NULL;
+
+
 **Performance mit räumlichem Index**
 
 Ein einfaches ``WHERE ST_Distance_Sphere(...) <= x`` kann grundsätzlich **keinen** räumlichen Index
