@@ -94,7 +94,7 @@ Für die Praxis heißt das: Wer eines dieser Templates überschreiben will, legt
 ``.html5`` an oder neuerdings ein ``.html.twig`` unter demselben Namen. Ein vorhandenes ``.html5``-Override in
 höherer Priorität behält seinen Vorrang, bestehende Anpassungen laufen also unverändert weiter.
 
-Für eigene Twig-Fassungen der Widget-Templates gibt es dabei eine Regel zu beachten - der ``label``-Block wird
+Für eigene Twig-Version der Widget-Templates gibt es dabei eine Regel zu beachten - der ``label``-Block wird
 bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
 
 
@@ -236,7 +236,7 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Datei wird dabei serverseitig gerendert statt per JavaScript nachgerüstet. Zusätzlich wertet das
   ``fileTree``-Widget die Widget-Option ``isSortable`` aus, mit der Contao seit Version 5.0 die entfallene
   Option ``orderField`` ersetzt - letztere wird weiterhin unterstützt. An der Bedienung ändert sich nichts.
-* **Baum-Wähler lassen sich einschränken (NEU):** Ein Baum-Wähler baut sich seine eigene Sicht auf die
+* **Tree-Picker lassen sich einschränken (NEU):** Ein Tree-Picker baut sich seine eigene Sicht auf die
   Zieltabelle und bot deshalb immer alle Datensätze an - auch dort, wo die Liste daneben nur eine
   gefilterte Auswahl zeigte. Über die neue Widget-Option ``sourceFilter`` kann der Aufrufer die
   erlaubten IDs mitgeben; der Wähler beschränkt sich dann darauf. Eine leere Liste bedeutet dabei
@@ -314,8 +314,8 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Bearbeiten wird - wie bei Contaos eigenen Tabellen auch - bewusst nicht protokolliert, dafür gibt es die
   Versionierung. Über eine Option am MetaModel lässt sich die Protokollierung abschalten, ist aber standardmäßig
   aktiv.
-* **Fassungsverwaltung endlich funktionsfähig (NEU):** Die Eingabemaske zeigt jetzt eine Auswahl früherer
-  Fassungen eines Datensatzes mit Datum und Bearbeiter, über die sich ein älterer Stand wiederherstellen lässt -
+* **Versionsverwaltung endlich funktionsfähig (NEU):** Die Eingabemaske zeigt jetzt eine Auswahl früherer
+  Versionen eines Datensatzes mit Datum und Bearbeiter, über die sich ein älterer Stand wiederherstellen lässt -
   wie man es aus Contaos eigenen Tabellen kennt. Das betrifft die MetaModel-Datensätze selbst ebenso wie die
   Konfiguration von Eingabemasken, Rendereinstellungen und Filterregeln. Bisher blieb dieser Schalter trotz
   vorhandener Option ohne Wirkung (`Issue #52 <https://github.com/contao-community-alliance/dc-general/issues/52>`_,
@@ -422,8 +422,8 @@ entfallen sie.
     * Kein Symbol gibt es, wenn das Ziel-MetaModel ausschließlich als **Kindtabelle** gepflegt
       wird - dorthin führt kein eigener Aufruf, sondern die Operation in der Elternliste.
     * Im **Frontend-Editing** erscheint das Symbol nicht.
-    * **Der eingestellte Filter gilt jetzt auch im Baum-Wähler (NEU):** Ist das Attribut als
-      Baum-Wähler eingestellt, öffnete das Popup bisher die vollständige Zieltabelle - die
+    * **Der eingestellte Filter gilt jetzt auch im Tree-Picker-Popup (NEU):** Ist das Attribut als
+      Tree-Picker eingestellt, öffnete das Popup bisher die vollständige Zieltabelle - die
       Einschränkung wirkte nur auf die Auswahlliste daneben. Auswählbar war damit auch, was gar
       nicht zur Auswahl stehen sollte. Das Popup hält sich nun an dieselbe Einschränkung.
     * Das gilt für **beide Wege**, ein Ziel einzugrenzen: die *Filtereinstellung*, wenn das Attribut
@@ -435,7 +435,7 @@ entfallen sie.
       ``sourceTable.username='tester'``. Der jeweils gültige Alias steht in der Beschreibung des
       Eingabefeldes.
     * Ist **kein** Filter eingestellt, ändert sich nichts. Die Einschränkung wird dann gar nicht
-      erst ermittelt - ein Baum-Wähler wird ja gerade dort verwendet, wo die Zieltabelle zu groß
+      erst ermittelt - ein Tree-Picker wird ja gerade dort verwendet, wo die Zieltabelle zu groß
       für eine Auswahlliste ist.
     * **Bei Auswahl und Übersetzter Auswahl zu beachten:** Wird eine Einschränkung nachträglich
       verschärft, verschwinden bereits gespeicherte Werte, die ihr nicht mehr entsprechen, aus der
