@@ -305,6 +305,15 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Render-Modus „Hierarchie" (`Issue #560
   <https://github.com/contao-community-alliance/dc-general/issues/560>`_). Siehe auch
   :ref:`component_relations_variants`.
+* **Datensatz-Änderungen im Systemlog (NEU):** Anlegen, Duplizieren und Löschen von MetaModels-Datensätzen
+  erscheinen jetzt unter „System → Protokoll" - genau wie Contao es für seine eigenen Tabellen schon immer tut.
+  Bisher tauchten Änderungen an MetaModels-Daten dort gar nicht auf (`Issue #577
+  <https://github.com/contao-community-alliance/dc-general/issues/577>`_,
+  `Issue #1461 <https://github.com/MetaModels/core/issues/1461>`_). Der Eintrag nennt den Namen des Datensatzes,
+  nicht nur Tabelle und ID - denselben Namen, den auch die Eingabemaske und die Brotkrümel-Navigation anzeigen.
+  Bearbeiten wird - wie bei Contaos eigenen Tabellen auch - bewusst nicht protokolliert, dafür gibt es die
+  Versionierung. Über eine Option am MetaModel lässt sich die Protokollierung abschalten, ist aber standardmäßig
+  aktiv.
 * **Seitenleiste unter Listenansichten (NEU):** Umfasst eine Liste mehr Datensätze, als der
   Seitenblock zeigt, erscheint unter der Tabelle eine Leiste mit „Seite x von y" und den
   Seitenzahlen - wie man es aus dem Contao-Backend kennt. Zusätzlich führen „Anfang", „Zurück",
