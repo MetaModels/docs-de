@@ -404,7 +404,7 @@ entfallen sie.
   Anders als beim Wrapper-Block oben ist die Option **kein** Altverhalten, das per Migration auf
   vorhandene Rendersettings gesetzt wird, und **nicht** deprecated: Ob sich Lazy lohnt, hängt vom
   jeweiligen Template ab, es gibt also keine grundsätzlich "bessere" Seite. Standard ist deshalb
-  für neue wie bestehende Rendersettings gleichermaßen aus - siehe
+  für neue wie bestehende Rendersettings gleichermaßen aus - mehr zum Aufbau und Benchmarks siehe
   :ref:`component_rendersettings`.
 
 * Auswahl (select), Übersetzte Auswahl (translatedselect), Tags und Übersetzte Tags
