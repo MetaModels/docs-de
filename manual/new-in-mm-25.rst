@@ -314,6 +314,14 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Bearbeiten wird - wie bei Contaos eigenen Tabellen auch - bewusst nicht protokolliert, dafür gibt es die
   Versionierung. Über eine Option am MetaModel lässt sich die Protokollierung abschalten, ist aber standardmäßig
   aktiv.
+* **Fassungsverwaltung endlich funktionsfähig (NEU):** Die Eingabemaske zeigt jetzt eine Auswahl früherer
+  Fassungen eines Datensatzes mit Datum und Bearbeiter, über die sich ein älterer Stand wiederherstellen lässt -
+  wie man es aus Contaos eigenen Tabellen kennt. Das betrifft die MetaModel-Datensätze selbst ebenso wie die
+  Konfiguration von Eingabemasken, Rendereinstellungen und Filterregeln. Bisher blieb dieser Schalter trotz
+  vorhandener Option ohne Wirkung (`Issue #52 <https://github.com/contao-community-alliance/dc-general/issues/52>`_,
+  seit 2014 offen) - für MetaModel-Datensätze gab es die Anbindung bislang gar nicht. Lässt sich pro Tabelle wie
+  gewohnt über die eigene DCA abschalten. Bei übersetzten MetaModels teilen sich alle Sprachvarianten eines
+  Datensatzes eine gemeinsame Fassungshistorie.
 * **Seitenleiste unter Listenansichten (NEU):** Umfasst eine Liste mehr Datensätze, als der
   Seitenblock zeigt, erscheint unter der Tabelle eine Leiste mit „Seite x von y" und den
   Seitenzahlen - wie man es aus dem Contao-Backend kennt. Zusätzlich führen „Anfang", „Zurück",
