@@ -70,7 +70,14 @@ Optionen
   Label der Attribute mit ausgegeben werden
 * **Labels verbergen** |br|
   die Attributnamen werden als "Label" nicht ausgegeben
-* **Attribute nur bei Bedarf rendern (Lazy)** |br|
+* **Wrapper im Listen-Template [Altverhalten, Deprecated] (ab MM 2.5)** |br|
+  gibt den umschließenden Block (Feld, Label, Wert) wie bis MM 2.4 im Listen-Template aus statt -
+  wie ab 2.5 üblich - in den Attribut-Templates selbst; bei bestehenden Render-Einstellungen beim
+  Upgrade automatisch aktiviert, damit sich an der Ausgabe nichts ändert, neu angelegte
+  Render-Einstellungen starten ohne die Option; von Anfang an als Altverhalten markiert und
+  entfällt in MetaModels 3.0 - Muster und Beispiel für eigene Attribut-Templates unter
+  :ref:`component_templates_attribute-wrapper`
+* **Attribute nur bei Bedarf rendern [Lazy] (ab MM 2.5)** |br|
   ein Attribut wird erst gerendert, wenn das Template tatsächlich darauf zugreift, statt wie
   bisher sofort beide Ausgabeformate (HTML5 und Text) für jedes Attribut zu erzeugen; lohnt sich,
   wenn ein Template nur einen Teil der Attribute oder konsequent nur ein Ausgabeformat nutzt -
