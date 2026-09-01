@@ -187,7 +187,9 @@ anlegen:
 
 ``products`` ist der eindeutige Alias des Bereichs. ``name`` und ``tooltip`` sind Sprachkarten -
 angezeigt wird die aktuelle Backend-Sprache, sonst Englisch, sonst der erste vorhandene Eintrag.
-``icon`` ist ein Web-Pfad (typischerweise unterhalb der Contao-Dateiverwaltung ``files/…``). Unter
+``icon`` ist ein Web-Pfad (typischerweise unterhalb der Contao-Dateiverwaltung ``files/…``); ohne Angabe
+oder bei nicht auffindbarer Datei erscheint stattdessen das graue MetaModels-Standardicon (dasselbe, das
+auch die eigenen Bereiche „MetaModels" nutzen, dort aber in Blau). Unter
 ``add`` legt genau eine der beiden Angaben ``before`` oder ``after`` die Position relativ zu einem
 bestehenden Navigationseintrag fest (z. B. ``design``, ``content``, ``accounts`` oder ein anderer
 per Konfiguration angelegter Bereich); ``collapsed: true`` lässt den Bereich beim ersten Aufruf

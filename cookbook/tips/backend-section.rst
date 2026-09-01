@@ -39,7 +39,8 @@ Code:
 * ``tooltip`` (optional) - Sprachkarte für den Tooltip, genauso aufgelöst wie ``name``. Ohne Angabe wird
   ``name`` verwendet.
 * ``icon`` (optional) - Web-Pfad zu einem Icon, typischerweise unterhalb der Contao-Dateiverwaltung
-  ``files/…``. Ohne Angabe erscheint der Bereich ohne eigenes Icon.
+  ``files/…``. Ohne Angabe - oder wenn die angegebene Datei nicht gefunden wird - erscheint das graue
+  MetaModels-Standardicon.
 * ``add`` (Pflicht) - legt die Position relativ zu einem bestehenden Navigationseintrag fest, über genau eine
   der beiden Angaben ``before`` oder ``after``.
 * ``collapsed`` (optional, Standard ``false``) - lässt den Bereich beim ersten Aufruf eingeklappt starten.
