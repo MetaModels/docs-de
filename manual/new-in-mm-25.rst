@@ -163,6 +163,47 @@ Welche Icons erscheinen, ergibt sich aus den vorhandenen Bereichen; kommt über 
 ein weiterer hinzu, steht er automatisch mit in der Reihe.
 
 
+Eigene Backend-Bereiche per Konfiguration (NEU)
+...............................................
+
+Ein eigener Bereich (Gruppe) in der Backend-Navigation - bisher nur über einen eigenen
+``MenuEvent``-Listener plus SVG-Icon von Hand zu bauen - lässt sich jetzt direkt per Konfiguration
+anlegen:
+
+.. code-block:: yaml
+
+   meta_models_core:
+       be_sections:
+           products:
+               name:
+                   de: 'Produkte'
+                   en: 'Products'
+               tooltip:
+                   de: 'Produkte erstellen'
+                   en: 'Create products'
+               icon: 'files/theme/mm/products.svg'
+               add:
+                   before: design
+
+``products`` ist der eindeutige Alias des Bereichs. ``name`` und ``tooltip`` sind Sprachkarten -
+angezeigt wird die aktuelle Backend-Sprache, sonst Englisch, sonst der erste vorhandene Eintrag.
+``icon`` ist ein Web-Pfad (typischerweise unterhalb der Contao-Dateiverwaltung ``files/…``). Unter
+``add`` legt genau eine der beiden Angaben ``before`` oder ``after`` die Position relativ zu einem
+bestehenden Navigationseintrag fest (z. B. ``design``, ``content``, ``accounts`` oder ein anderer
+per Konfiguration angelegter Bereich); ``collapsed: true`` lässt den Bereich beim ersten Aufruf
+eingeklappt starten.
+
+.. note:: Der Ziel-Alias ist der **interne** Contao-Gruppenname, nicht die angezeigte Beschriftung -
+   der frühere Bereich „Layout" heißt intern seit Contao 4/5 ``design``, nicht ``layout``. Findet sich
+   der angegebene Alias nicht in der Navigation, wird der eigene Bereich stattdessen ans Ende gehängt.
+
+Diese Konfiguration legt ausschließlich die **leere Gruppe** an - befüllt wird sie wie gehabt: über
+eigene Module oder, für eigenständige MetaModels-Bildschirme, über die Angabe des Bereichs am
+Eingabemaske selbst.
+
+.. seealso:: `core#1519 <https://github.com/MetaModels/core/issues/1519>`_
+
+
 Deaktivierte Einträge sind durchgestrichen
 ..........................................
 

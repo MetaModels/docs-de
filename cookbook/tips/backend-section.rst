@@ -4,13 +4,68 @@ Eigene Sektion in der Backend-Navigation
 ========================================
 
 Den Zugriff auf die Eingabe der MetaModel-Daten möchte man häufig in einer eigenen Sektion in der Backendnavigation
-unterbringen. Dafür muss man eine entsprechende Gruppe anlegen, der man in den Eigenschaften der Eingabe unter
+unterbringen. Dafür muss man eine entsprechende Gruppe anlegen, der man in den Eigenschaften der Eingabemaske unter
 "Backend-Bereich" das oder die gewünschten Model zuweisen kann.
 
 |img_be-section|
 
-Dafür benötigt man ein SVG-Icon sowie eine Zuweisung per Contao-MenuEvent - geplant ist, das zukünftig über einen
-`Eintrag in der config.yaml konfigurieren <https://github.com/MetaModels/core/issues/1519>`_ zu können.
+
+Per Konfiguration (ab MM 2.5, empfohlen)
+-----------------------------------------
+
+Seit MetaModels 2.5 lässt sich eine solche Gruppe direkt über die ``config.yaml`` anlegen - ganz ohne eigenen
+Code:
+
+.. code-block:: yaml
+
+   meta_models_core:
+       be_sections:
+           products:
+               name:
+                   de: 'Produkte'
+                   en: 'Products'
+               tooltip:
+                   de: 'Produkte erstellen'
+                   en: 'Create products'
+               icon: 'files/theme/mm/products.svg'
+               add:
+                   before: design
+
+``products`` ist dabei der eindeutige Alias des Bereichs - er wird später bei der Eingabemaske unter
+"Backend-Bereich" ausgewählt.
+
+* ``name`` (Pflicht) - Sprachkarte für die Beschriftung. Angezeigt wird die aktuelle Backend-Sprache, sonst
+  Englisch, sonst der erste vorhandene Eintrag.
+* ``tooltip`` (optional) - Sprachkarte für den Tooltip, genauso aufgelöst wie ``name``. Ohne Angabe wird
+  ``name`` verwendet.
+* ``icon`` (optional) - Web-Pfad zu einem Icon, typischerweise unterhalb der Contao-Dateiverwaltung
+  ``files/…``. Ohne Angabe erscheint der Bereich ohne eigenes Icon.
+* ``add`` (Pflicht) - legt die Position relativ zu einem bestehenden Navigationseintrag fest, über genau eine
+  der beiden Angaben ``before`` oder ``after``.
+* ``collapsed`` (optional, Standard ``false``) - lässt den Bereich beim ersten Aufruf eingeklappt starten.
+
+.. note:: Der Ziel-Alias unter ``add`` ist der **interne** Contao-Gruppenname, nicht die angezeigte
+   Beschriftung - der Bereich „Layout" heißt intern seit Contao 4/5 ``design``, nicht ``layout``. Gebräuchliche
+   Ziele sind ``content``, ``design``, ``accounts``, ``system`` oder der Alias eines anderen, selbst per
+   Konfiguration angelegten Bereichs. Findet sich der angegebene Alias nicht in der Navigation, wird der eigene
+   Bereich stattdessen ans Ende gehängt.
+
+Diese Konfiguration legt ausschließlich die **leere Gruppe** an. Befüllt wird sie wie gewohnt: in den
+Eigenschaften der Eingabemaske eines MetaModels unter "Backend-Bereich" den gewählten Alias (hier ``products``)
+eintragen.
+
+.. seealso:: `core#1519 <https://github.com/MetaModels/core/issues/1519>`_, sowie der Abschnitt
+   „Eigene Backend-Bereiche per Konfiguration" in :ref:`new_in_mm250`.
+
+
+Manuell per Event-Listener (für Sonderfälle)
+----------------------------------------------
+
+Reicht die Konfiguration oben nicht aus - etwa weil die Sichtbarkeit oder Beschriftung des Bereichs von
+Laufzeitbedingungen abhängen soll (angemeldeter Benutzer, Datenbankinhalt o. ä.) - lässt sich derselbe Bereich
+weiterhin per eigenem ``MenuEvent``-Listener bauen, so wie es vor MM 2.5 der einzige Weg war.
+
+Dafür benötigt man ein SVG-Icon sowie eine Zuweisung per Contao-MenuEvent.
 
 SVG-Icons kann man sich z. B. bei `material.io <https://material.io/tools/icons/>`_ downloaden - Breite (width),
 Höhe (height) und Farbe (fill) sollte man wie in dem Beispiel in einem Text-Editor anpassen:
