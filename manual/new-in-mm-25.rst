@@ -77,9 +77,10 @@ Standard-Template mit ``{% extends "@Contao/metamodels/filter/default.html.twig"
 (oder in einem Theme-Ordner) - z. B. ``templates/metamodel_prerendered.html5`` - behält weiterhin **Vorrang** vor
 einem mitgelieferten Twig-Template. Bestehende Anpassungen funktionieren also nach dem Upgrade unverändert weiter.
 
-.. note:: Diese Rücksichtnahme auf Flach-Overrides ist eine **Übergangslösung** und entfällt in MetaModels 3.0
-   gemeinsam mit den ``.html5``-Templates. Eigene Anpassungen sollten daher nach ``templates/metamodels/<gruppe>/…``
-   umgezogen werden - entweder als ``.html.twig`` oder (übergangsweise) als ``.html5`` unter dem neuen Pfad.
+.. note:: Diese Rücksichtnahme auf Flach-Overrides ist eine **Übergangslösung** und entfällt in MetaModels 2.6
+   (Contao 6.3) gemeinsam mit den ``.html5``-Templates. Eigene Anpassungen sollten daher nach
+   ``templates/metamodels/<gruppe>/…`` umgezogen werden - entweder als ``.html.twig`` oder (übergangsweise) als
+   ``.html5`` unter dem neuen Pfad.
 
 **Auch die Templates des Frontend-Editings sind nun Twig-fähig.** Betroffen sind die Eingabemaske selbst
 (``dcfe_general_edit``) sowie die Widgets für Dateien (``form_upload-on-steroids``), den MultiColumnWizard
