@@ -169,7 +169,7 @@ Eigene Backend-Bereiche per Konfiguration (NEU)
 
 Ein eigener Bereich (Gruppe) in der Backend-Navigation - bisher nur über einen eigenen
 ``MenuEvent``-Listener plus SVG-Icon von Hand zu bauen - lässt sich jetzt direkt per Konfiguration
-anlegen:
+anlegen (`Ticket core#1519 <https://github.com/MetaModels/core/issues/1519>`_):
 
 .. code-block:: yaml
 
@@ -204,7 +204,7 @@ Diese Konfiguration legt ausschließlich die **leere Gruppe** an - befüllt wird
 eigene Module oder, für eigenständige MetaModels-Bildschirme, über die Angabe des Bereichs am
 Eingabemaske selbst.
 
-.. seealso:: `core#1519 <https://github.com/MetaModels/core/issues/1519>`_
+.. seealso::
 
 
 Deaktivierte Einträge sind durchgestrichen
