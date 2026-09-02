@@ -13,7 +13,7 @@ Für einen Check nach einem Upgrade zu MM 2.5 sind :ref:`unten weitere Hinweise 
 Allgemein und Core
 ------------------
 
-MetaModels 2.5 setzt auf **Contao 5.7** und **PHP 8.4** auf.
+MetaModels 2.5 setzt auf **Contao 5.7** und **PHP 8.4** voraus.
 
 Die wichtigsten neuen Features sind:
 
