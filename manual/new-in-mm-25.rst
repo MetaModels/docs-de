@@ -15,8 +15,11 @@ Allgemein und Core
 
 MetaModels 2.5 setzt auf **Contao 5.7** und **PHP 8.4** auf.
 
-Das wichtigste neue Feature ist die Unterstützung von **Twig-Templates** zusätzlich zu den bisherigen
-``.html5``-Templates.
+Die wichtigsten neuen Features sind:
+
+- Unterstützung von **Twig-Templates** zusätzlich zu den bisherigen ``.html5``-Templates
+- neue SVG Icons
+-
 
 
 Twig-Templates (NEU)
