@@ -152,6 +152,18 @@ Drei Stellen haben darüber hinaus neue Icons bekommen:
    Umstellung auf SVG bleiben die MetaModels-Icons dabei aber scharf.
 
 
+Deaktivierte Einträge sind durchgestrichen
+..........................................
+
+In den Listen des Backends war bisher schwer zu sehen, ob ein Eintrag abgeschaltet ist - das
+Symbol am Zeilenende sagte es, der Name selbst nicht. Der Name eines deaktivierten Eintrags wird
+nun **durchgestrichen** dargestellt. Das betrifft die Render-Einstellungen, die Eingabemaske, die
+Filterregeln und die Auswahl von Dateien.
+
+Bei den Dateilisten steht der Zusatz „[Standard]" hinter dem Namen. Er bleibt lesbar und wird
+nicht mit durchgestrichen, damit die beiden Angaben nicht ineinanderlaufen.
+
+
 Kurzwahl zu den Bereichen eines MetaModels (NEU)
 ................................................
 
@@ -215,18 +227,6 @@ eigene Module oder, für eigenständige MetaModels-Bildschirme, über die Angabe
 Eingabemaske selbst.
 
 .. seealso::
-
-
-Deaktivierte Einträge sind durchgestrichen
-..........................................
-
-In den Listen des Backends war bisher schwer zu sehen, ob ein Eintrag abgeschaltet ist - das
-Symbol am Zeilenende sagte es, der Name selbst nicht. Der Name eines deaktivierten Eintrags wird
-nun **durchgestrichen** dargestellt. Das betrifft die Render-Einstellungen, die Eingabemaske, die
-Filterregeln und die Auswahl von Dateien.
-
-Bei den Dateilisten steht der Zusatz „[Standard]" hinter dem Namen. Er bleibt lesbar und wird
-nicht mit durchgestrichen, damit die beiden Angaben nicht ineinanderlaufen.
 
 
 Breadcrumb bei Kind-Tabellen (NEU)
