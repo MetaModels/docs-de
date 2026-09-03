@@ -18,8 +18,15 @@ MetaModels 2.5 setzt **Contao 5.7** und **PHP 8.4** voraus.
 Die wichtigsten neuen Features sind:
 
 - Unterstützung von **Twig-Templates** zusätzlich zu den bisherigen ``.html5``-Templates
-- neue SVG Icons
--
+- neue SVG Icons für das Backend
+- kein MooTools mehr
+- eigene Backend-Bereiche per Konfiguration
+- Breadcrumb bei Kind-Tabellen
+- Attribut-Templates mit Ausgabe des Labels zum Wert
+- neues Attribut für Lat/Long-Werte
+- Varianten mit Paginierung
+- Datensatz-Änderungen im Systemlog
+- Versionsverwaltung bei MM-Konfiguration und MM-Items
 
 
 Twig-Templates (NEU)
@@ -361,7 +368,7 @@ Der DC_General wurde als **Version 2.5** auf **Contao 5.7** umgestellt. Die wese
   Bearbeiten wird - wie bei Contaos eigenen Tabellen auch - bewusst nicht protokolliert, dafür gibt es die
   Versionierung. Über eine Option am MetaModel lässt sich die Protokollierung abschalten, ist aber standardmäßig
   aktiv.
-* **Versionsverwaltung endlich funktionsfähig (NEU):** Die Eingabemaske zeigt jetzt eine Auswahl früherer
+* **Versionsverwaltung in MM-Konfiguration und Items (NEU):** Die Eingabemaske zeigt jetzt eine Auswahl früherer
   Versionen eines Datensatzes mit Datum und Bearbeiter, über die sich ein älterer Stand wiederherstellen lässt -
   wie man es aus Contaos eigenen Tabellen kennt. Das betrifft die MetaModel-Datensätze selbst ebenso wie die
   Konfiguration von Eingabemasken, Rendereinstellungen und Filterregeln. Bisher blieb dieser Schalter trotz

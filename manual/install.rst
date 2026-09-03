@@ -58,42 +58,41 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 -----------------------
 
 * C 6.x + MM 3.0 + PHP 8.x - aktuell in Planung...
-* C 6.0 + MM 2.6 + PHP 8.4 - aktuell in Arbeit und Test mit Contao 6.0
-* C 5.7 + MM 2.5 + PHP 8.4 - aktuell Test mit Contao 5.7
+* C 6.3 + MM 2.6 + PHP 8.4 - aktuell in Arbeit und Test mit Contao 6.0
+* :ref:`C 5.7 + MM 2.5 + PHP 8.4 <install_mm250>`- aktuell Test mit Contao 5.7
 * :ref:`C 5.3 + MM 2.4 + PHP 8.2 <install_mm240>` - Zugang per "EAP"
 * :ref:`C 4.13 + MM 2.3 + PHP 8.1 <install_mm230>`
 * :ref:`C 4.9 + MM 2.2 + PHP 7.4 <install_mm-old>`
 * :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <install_mm-old>`
 * :ref:`C 3.5 + MM 2.0 + PHP 5.6 <install_mm-old>`
 
-.. _install_mm240:
-Installation von MM 2.4 für Contao 5.3 und PHP 8
--------------------------------------------------
+.. _install_mm250:
+Installation von MM 2.5 für Contao 5.7 und PHP 8.4
+--------------------------------------------------
 
-MetaModels 2.4 bringt eine volle Kompatibilität zu Contao 5.3 und PHP 8.2. MM 2.4 ist eine Anpassung der
-Version 2.3 an die neue Contao- und PHP-Version und bringt natürlich
-:ref:`alle Änderungen und Features aus MM 2.3 mit <new_in_mm230>`.
+MetaModels 2.5 bringt eine volle Kompatibilität zu Contao 5.7 und PHP 8.4. - MM 2.5 ist eine Anpassung der
+Version 2.4 an die neue Contao- und PHP-Version und bringt natürlich
+:ref:`alle Änderungen und Features aus MM 2.4 mit <new_in_mm240>`.
 
-Die Installationsvoraussetzungen für MetaModels 2.4 sind:
+Die Installationsvoraussetzungen für MetaModels 2.5 sind:
 
-* ein laufendes Contao 5.3.x (LTS)
-* ab PHP 8.2
-* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+* ein laufendes Contao 5.7.x (LTS)
+* ab PHP 8.4
+* Mindestens MySQL 5.7.6 bzw. MariaDB 10.4.3
 * ``memory_limit`` 512MB oder mehr (Empfehlung)
-* bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
-  - `MM Core <https://github.com/MetaModels/core/tree/release/2.4.0>`_ ist schon frei verfügbar
-* für kleinere Projekte steht `Paket "Basic 1" zur Verfügung <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
+* bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_
+* für kleinere Projekte steht `Paket "Basic 1" zur Verfügung <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_
 
 Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
 
-Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Funktionen von MM 2.4 <new_in_mm240>` zu
+Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Funktionen von MM 2.5 <new_in_mm250>` zu
 beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-manager>` und XLIFF-Übersetzungen
 :ref:`component_translations`.
 
 .. toctree::
     :maxdepth: 1
 
-    new-in-mm-24.rst
+    new-in-mm-25.rst
 
 
 .. seealso::
@@ -124,6 +123,45 @@ beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-ma
    `session` auf `NULL` setzen. Die Fehlermeldung sieht i. E. so aus:|br|
    ``Cannot assign null to property ContaoCommunityAlliance\DcGeneral\Panel\DefaultLimitElement::$intAmount of type int``
 
+Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.5 kann über den Composer (Konsole)
+oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
+"**early adopter Programm**" - mehr dazu unter Fundraising auf der
+`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_.
+
+**Weitere Features von MM 2.5:** |br|
+Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.5 <new_in_mm250>` zusammengestellt - bitte
+beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm240>`.
+
+
+.. _install_mm240:
+Installation von MM 2.4 für Contao 5.3 und PHP 8.2
+--------------------------------------------------
+
+MetaModels 2.4 bringt eine volle Kompatibilität zu Contao 5.3 und PHP 8.2. - MM 2.4 ist eine Anpassung der
+Version 2.3 an die neue Contao- und PHP-Version und bringt natürlich
+:ref:`alle Änderungen und Features aus MM 2.3 mit <new_in_mm230>`.
+
+Die Installationsvoraussetzungen für MetaModels 2.4 sind:
+
+* ein laufendes Contao 5.3.x (LTS)
+* ab PHP 8.2
+* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
+* ``memory_limit`` 512MB oder mehr (Empfehlung)
+* bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
+  - `MM Core <https://github.com/MetaModels/core/tree/release/2.4.0>`_ ist schon frei verfügbar
+* für kleinere Projekte steht `Paket "Basic 1" zur Verfügung <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-4>`_
+
+Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
+
+Bei einem Upgrade oder Neuinstallation, sind die :ref:`Änderungen und neuen Funktionen von MM 2.4 <new_in_mm240>` zu
+beachten sowie die Arbeitsweise mit dem :ref:`Schemamanager <component_schema-manager>` und XLIFF-Übersetzungen
+:ref:`component_translations`.
+
+.. toctree::
+    :maxdepth: 1
+
+    new-in-mm-24.rst
+
 Vor einem Produktiveinsatz sollte die Seite vollständig durchgetestet werden. MM 2.4 kann über den Composer (Konsole)
 oder den Contao-Manager installiert werden. Zugang zu dem aktuell noch geschütztem Repository erhält man über unser
 "**early adopter Programm**" - mehr dazu unter Fundraising auf der
@@ -134,51 +172,11 @@ Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2
 beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm240>`.
 
 
-.. _install_mm230:
-Installation von MM 2.3 für Contao 4.13 und PHP 8
--------------------------------------------------
-
-MetaModels 2.3 bringt eine volle Kompatibilität zu Contao 4.13 und PHP 8.1. MM 2.3 ist eine Anpassung der
-Version 2.2 an die neue Contao- und PHP-Version und bringt natürlich
-:ref:`alle Änderungen und Features aus MM 2.2 mit <new_in_mm220>`.
-
-Mit dem neuen Schemamanager und den XLIFF-Dateien muss der Workflow mit MM angepasst werden - siehe
-:ref:`Schemamanager <component_schema-manager>` und :ref:`component_translations`.
-
-Die Installationsvoraussetzungen für MetaModels 2.3 sind:
-
-* ein laufendes Contao 4.13.x (LTS)
-* ab PHP 8.1
-* MySQL ab 5.5.5 (InnoDB), MariaDB (inkl. "strict mode")
-* ``memory_limit`` 512MB oder mehr (Empfehlung)
-* bis zur Veröffentlichung Zugangskey über das `EAP <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3>`_
-  - `MM Core <https://github.com/MetaModels/core/tree/release/2.3.0>`_ ist schon frei verfügbar
-
-Höhere Versionen von Contao und/oder PHP können möglich sein, werden aber nicht offiziell supportet.
-
-Wir haben eine :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.3 <new_in_mm230>` zusammengestellt - bitte
-beachtet bei einem Upgrade die :ref:`Checkliste <check_upgrade_mm230>`.
-
-.. toctree::
-    :maxdepth: 1
-
-    new-in-mm-23.rst
-
-Das MM-Team unterstützt mit der Arbeit/Finanzierung auch die Arbeiten am
-`DC_General <https://github.com/contao-community-alliance/dc-general/>`_, der u. a. bei MM für die Anzeigen
-im Backend zuständig ist und viele tolle Funktionen mitbringt.
-
-.. seealso:: Für eine Re-Finanzierung der umfangreichen Arbeiten, bittet das MM-Team um finanzielle
-   Zuwendung. Als Richtgröße sollte der Umfang des zu realisierenden Projektes genommen werden
-   und etwa 10% einkalkuliert werden - aufgrund der Erfahrung der letzten Zuwendungen, sind
-   das Beträge zwischen 100€ und 500€ (Netto) - eine Rechnung inkl. MwSt wird natürlich immer
-   ausgestellt. `Mehr... <https://now.metamodel.me/de/unterstuetzer/spenden>`_
-
-
 .. _install_mm-old:
 Hinweise und Anleitungen für ältere Contao- und MM-Versionen
 ------------------------------------------------------------
 
+* :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.3 <new_in_mm230>`
 * :ref:`Übersichtsseite mit den Änderungen und Funktionen zu MM 2.2 <new_in_mm220>`
 * :ref:`cookbook_move_mm2.0_to_2.1`
 * :ref:`cookbook_install_mm2.0-and-older`
