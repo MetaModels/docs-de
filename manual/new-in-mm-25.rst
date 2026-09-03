@@ -18,15 +18,16 @@ MetaModels 2.5 setzt **Contao 5.7** und **PHP 8.4** voraus.
 Die wichtigsten neuen Features sind:
 
 - Unterstützung von **Twig-Templates** zusätzlich zu den bisherigen ``.html5``-Templates
-- neue SVG Icons für das Backend
+- **neue SVG Icons** für das Backend
 - kein MooTools mehr
 - eigene Backend-Bereiche per Konfiguration
-- Breadcrumb bei Kind-Tabellen
+- **Breadcrumb bei Kind-Tabellen**
 - Attribut-Templates mit Ausgabe des Labels zum Wert
-- neues Attribut für Lat/Long-Werte
-- Varianten mit Paginierung
+- neues **Attribut für Lat/Long-Werte**
+- **Varianten mit Paginierung**
 - Datensatz-Änderungen im Systemlog
-- Versionsverwaltung bei MM-Konfiguration und MM-Items
+- **Versionsverwaltung** bei MM-Konfiguration und MM-Items
+- **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
 
 
 Twig-Templates (NEU)
