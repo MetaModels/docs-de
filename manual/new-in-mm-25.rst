@@ -25,6 +25,7 @@ Die wichtigsten neuen Features sind:
 - Attribut-Templates mit Ausgabe des Labels zum Wert
 - neues **Attribut für Lat/Long-Werte**
 - **Varianten mit Paginierung**
+- MetaModels-Datensätze in Contaos Backend-Suche auffindbar
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -269,6 +270,39 @@ gepflegte Angaben wirken sofort mit.
 
 Aussehen und Bedienung stammen von Contao selbst - es ist dieselbe Breadcrumb wie in den Kernmodulen, samt Aufklappmenü
 hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabellen.
+
+
+Backend-Suche findet MetaModels-Datensätze (NEU)
+................................................
+
+Contaos globale Backend-Suche (Suchfeld oben rechts im Header, Tastenkürzel Strg+K) durchsucht seit
+Contao 5.5 auch die Dateneinträge einzelner Tabellen - vorausgesetzt, deren ``dataContainer`` ist
+exakt ``Contao\DC_Table``. Jede MetaModels-Tabelle - sowohl die ``tl_metamodel_*``-Konfigurationstabellen
+als auch jede erzeugte Item-Tabelle - nutzt stattdessen den DC_General, weshalb dort bislang **nichts**
+auftauchte. MetaModels 2.5 liefert dafür einen eigenen Suchanbieter, der die **Item-Tabellen** abdeckt -
+also die eigentlichen Datensätze eines MetaModels, nicht dessen Konfiguration.
+
+**Was durchsucht wird:** genau die Attribute, die in der Eingabemaske bereits als „Suchbar" markiert
+sind - dasselbe Kontrollkästchen, das schon bisher die Feldauswahl der Listensuche im Backend speist.
+Es gibt also **keine zusätzliche Einstellung**: Ist ein Attribut dort angehakt, erscheint es automatisch
+auch im globalen Suchindex.
+
+**Übersetzte MetaModels:** Für jede Sprache, in der ein Datensatz tatsächlich einen eigenen Wert hat,
+erscheint ein eigener Treffer mit eigenem Bearbeiten-Link - der Klick öffnet die Maske direkt im
+richtigen Sprach-Tab. Eine Sprache, die für den Datensatz nie übersetzt wurde und deshalb nur den Wert
+der Fallback-Sprache zeigt, erzeugt **keinen** eigenen (doppelten) Treffer - genau die Fälle, die in der
+Eingabemaske selbst am orangen „Fallback"-Abzeichen zu erkennen sind.
+
+**Titel und Berechtigung:** Der Treffer zeigt den Namen des MetaModels und den Datensatz-Titel (dasselbe
+Muster wie unter „Ergänzungen zur Maskenüberschrift", siehe oben), bei Übersetzungen zusätzlich das
+Sprachkürzel. Ob ein angemeldeter Benutzer einen Treffer überhaupt sieht, richtet sich nach den
+bestehenden MetaModels-Zugriffsrechten am jeweiligen Bereich - eine eigene Berechtigung dafür gibt es
+nicht.
+
+.. note:: Contaos Backend-Suche braucht einen dauerhaft laufenden Hintergrund-Worker
+   (``messenger:consume``), der den Suchindex aufbaut und aktuell hält. Ohne ihn erscheint das Suchfeld
+   im Header überhaupt nicht - unabhängig von MetaModels, das betrifft jede durchsuchbare Contao-Tabelle
+   gleichermaßen.
 
 
 DC_General
