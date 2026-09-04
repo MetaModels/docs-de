@@ -25,7 +25,7 @@ Die wichtigsten neuen Features sind:
 - Attribut-Templates mit Ausgabe des Labels zum Wert
 - neues **Attribut für Lat/Long-Werte**
 - **Varianten mit Paginierung**
-- MetaModels-Datensätze in Contaos Backend-Suche auffindbar
+- **MetaModels-Datensätze in Backend-Suche von Contao** auffindbar
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -275,7 +275,7 @@ hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabelle
 Backend-Suche findet MetaModels-Datensätze (NEU)
 ................................................
 
-Contaos globale Backend-Suche (Suchfeld oben rechts im Header, Tastenkürzel Strg+K) durchsucht seit
+Die globale Backend-Suche von Contao (Suchfeld oben rechts im Header, Tastenkürzel Strg+K) durchsucht seit
 Contao 5.5 auch die Dateneinträge einzelner Tabellen - vorausgesetzt, deren ``dataContainer`` ist
 exakt ``Contao\DC_Table``. Jede MetaModels-Tabelle - sowohl die ``tl_metamodel_*``-Konfigurationstabellen
 als auch jede erzeugte Item-Tabelle - nutzt stattdessen den DC_General, weshalb dort bislang **nichts**
