@@ -6,7 +6,7 @@ ChangeLanguage-Bridge für MetaModels
 Macht die Erweiterung `"ChangeLanguage" <https://github.com/terminal42/contao-changelanguage>`_ auf
 Detailseiten eines MetaModels item-bezogen: Statt beim Sprachwechsel auf die Sprachstartseite
 zurückzufallen, verlinkt der Sprachenwechsler direkt auf denselben Datensatz in der Zielsprache -
-inklusive des dort passenden Slugs (z. B. Alias).
+inklusive der dort passenden Filterparameter (z. B. Alias).
 
 Mehr zum Thema :ref:`Mehrsprachigkeit in MetaModels <component_multi-language>`, insbesondere der
 Abschnitt ":ref:`component_multi-language_fe-output`" - dort sind auch die beiden bisherigen

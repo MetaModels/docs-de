@@ -270,7 +270,7 @@ Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten 
 :ref:`siehe SEO <rst_cookbook_tips_seo_metadata-hreflang>`.
 
 
-**3. Erweiterung "changelanguage-bridge"**
+**3. Erweiterung "ChangeLanguage-bridge" (ab MM 2.5)**
 
 Die Erweiterung :ref:`metamodels/changelanguage-bridge <rst_extended_changelanguage-bridge>` nimmt einem
 den Hook aus Variante 2 ab: Pro Rendereinstellung genügt ein Häkchen bei "Sprachumschalter
