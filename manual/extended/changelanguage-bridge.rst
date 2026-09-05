@@ -17,7 +17,7 @@ Behelfslösungen (Filterregel "Alle Sprachen durchsuchen" bzw. ein eigener
 Voraussetzungen
 ----------------
 
-* ab MetaModels core 2.5
+* ab MetaModels 2.5
 * `terminal42/contao-changelanguage <https://github.com/terminal42/contao-changelanguage>`_
 * je Sprache eine eigene "Springe zu Seite"-Zeile samt Filtereinstellung in der Rendereinstellung -
   die übliche Konfiguration für mehrsprachige Sprung-Links
@@ -49,5 +49,3 @@ angezeigte Datensatz ermittelt, die MetaModel-Sprache auf die jeweilige Zielspra
 über dieselbe interne Funktion, mit der MetaModels auch sonst seine Sprung-Links erzeugt, Zielseite
 und Slug für diese Sprache bestimmt. Die Rendereinstellung mit ihrer Filterkonfiguration bleibt damit
 die einzige Stelle, an der das Sprungziel gepflegt wird.
-
-.. seealso:: `Quellcode auf GitLab <https://gitlab.com/metamodels/changelanguage-bridge>`_
