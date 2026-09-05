@@ -275,7 +275,7 @@ hinter der Auslassung. Siehe auch :ref:`component_relations` zu den Kind-Tabelle
 Backend-Suche findet MetaModels-Datensätze (NEU)
 ................................................
 
-Die globale Backend-Suche von Contao (Suchfeld oben rechts im Header, Tastenkürzel Strg+K) durchsucht seit
+Die globale Backend-Suche von Contao (Suchfeld oben im Header, Tastenkürzel Strg+K) durchsucht seit
 Contao 5.5 auch die Dateneinträge einzelner Tabellen - vorausgesetzt, deren ``dataContainer`` ist
 exakt ``Contao\DC_Table``. Jede MetaModels-Tabelle - sowohl die ``tl_metamodel_*``-Konfigurationstabellen
 als auch jede erzeugte Item-Tabelle - nutzt stattdessen den DC_General, weshalb dort bislang **nichts**
@@ -291,7 +291,7 @@ auch im globalen Suchindex.
 erscheint ein eigener Treffer mit eigenem Bearbeiten-Link - der Klick öffnet die Maske direkt im
 richtigen Sprach-Tab. Eine Sprache, die für den Datensatz nie übersetzt wurde und deshalb nur den Wert
 der Fallback-Sprache zeigt, erzeugt **keinen** eigenen (doppelten) Treffer - genau die Fälle, die in der
-Eingabemaske selbst am orangen „Fallback"-Abzeichen zu erkennen sind.
+Eingabemaske selbst am orangefarbenen „Fallback"-Abzeichen zu erkennen sind.
 
 **Titel und Berechtigung:** Der Treffer zeigt den Namen des MetaModels und den Datensatz-Titel (dasselbe
 Muster wie unter „Ergänzungen zur Maskenüberschrift", siehe oben), bei Übersetzungen zusätzlich das
