@@ -26,6 +26,7 @@ Die wichtigsten neuen Features sind:
 - neues **Attribut für Lat/Long-Werte**
 - **Varianten mit Paginierung**
 - **MetaModels-Datensätze in Backend-Suche von Contao** auffindbar
+- neue Erweiterung **changelanguage-bridge** für den Sprachenwechsler auf Detailseiten
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -303,6 +304,18 @@ nicht.
    (``messenger:consume``), der den Suchindex aufbaut und aktuell hält. Ohne ihn erscheint das Suchfeld
    im Header überhaupt nicht - unabhängig von MetaModels, das betrifft jede durchsuchbare Contao-Tabelle
    gleichermaßen.
+
+
+Sprachenwechsler auf Detailseiten (NEU)
+........................................
+
+Die neue, separat zu installierende Erweiterung :ref:`metamodels/changelanguage-bridge
+<rst_extended_changelanguage-bridge>` macht `"changelanguage"
+<https://github.com/terminal42/contao-changelanguage>`_ auf MetaModels-Detailseiten item-bezogen: Der
+Sprachenwechsler verlinkt dann direkt auf denselben Datensatz in der Zielsprache samt passendem Slug,
+statt auf die Sprachstartseite zurückzufallen. Ersetzt die beiden bisherigen Behelfslösungen (Filterregel
+„Alle Sprachen durchsuchen" bzw. ein eigener ``changelanguageNavigation``-Hook) durch ein einzelnes
+Häkchen je Rendereinstellung. Mehr dazu unter :ref:`Mehrsprachigkeit <component_multi-language_fe-output>`.
 
 
 DC_General

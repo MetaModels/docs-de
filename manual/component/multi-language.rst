@@ -211,7 +211,8 @@ Erweiterungen wie `"ChangeLanguage" <https://github.com/terminal42/contao-change
 Contao angelegte Seite - z. B. ``https://my-domain.tld/en/dessert/details`` - ohne den Alias der Filterung.
 
 Um der Erweiterung den Wert für die anderen Sprachen mit auf den Weg zu geben und entsprechend zu filtern, gibt
-es mehrere Möglichkeiten:
+es mehrere Möglichkeiten - am wenigsten Aufwand macht dabei die Erweiterung
+:ref:`metamodels/changelanguage-bridge <rst_extended_changelanguage-bridge>` weiter unten.
 
 **1. Filterregel "Einfache Abfrage" die Option "Alle Sprachen durchsuchen"**
 
@@ -267,6 +268,15 @@ Der Hook wird für jede Sprache in dem Sprachenwechsler einmal aufgerufen.
 
 Mit dieser Variante werden auch die Angaben für ``hreflang`` in den Meta-Daten korrekt gesetzt -
 :ref:`siehe SEO <rst_cookbook_tips_seo_metadata-hreflang>`.
+
+
+**3. Erweiterung "changelanguage-bridge"**
+
+Die Erweiterung :ref:`metamodels/changelanguage-bridge <rst_extended_changelanguage-bridge>` nimmt einem
+den Hook aus Variante 2 ab: Pro Rendereinstellung genügt ein Häkchen bei "Sprachumschalter
+unterstützen", der passende Filterparameter für die jeweilige Zielsprache wird dann automatisch über
+die ohnehin gepflegte Sprung-Konfiguration der Rendereinstellung ermittelt - keine feste Liste von
+Seiten-IDs und kein eigener PHP-Code nötig.
 
 
 Frontend-Editing (FEE)
