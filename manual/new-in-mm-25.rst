@@ -310,7 +310,7 @@ Sprachenwechsler auf Detailseiten (NEU)
 ........................................
 
 Die neue, separat zu installierende Erweiterung :ref:`metamodels/changelanguage-bridge
-<rst_extended_changelanguage-bridge>` macht `"changelanguage"
+<rst_extended_changelanguage-bridge>` macht `"ChangeLanguage"
 <https://github.com/terminal42/contao-changelanguage>`_ auf MetaModels-Detailseiten item-bezogen: Der
 Sprachenwechsler verlinkt dann direkt auf denselben Datensatz in der Zielsprache samt passendem Slug,
 statt auf die Sprachstartseite zurückzufallen. Ersetzt die beiden bisherigen Behelfslösungen (Filterregel

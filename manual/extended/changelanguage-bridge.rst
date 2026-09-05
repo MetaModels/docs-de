@@ -1,6 +1,6 @@
 .. _rst_extended_changelanguage-bridge:
 
-Changelanguage-Bridge für MetaModels
+ChangeLanguage-Bridge für MetaModels
 =====================================
 
 Macht die Erweiterung `"changelanguage" <https://github.com/terminal42/contao-changelanguage>`_ auf
