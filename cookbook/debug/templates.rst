@@ -89,6 +89,10 @@ Man kann die Debug-Ausgabe auch weiter eingrenzen oder umleiten - z. B.
       debug:
           dump_destination: "%kernel.logs_dir%/dump.log"
 
+.. note:: Im Debug-Modus wird im Quelltext für html5-Templates im FE ein Kommentar für Start und Ende sowie den
+   Templatenamen ausgegeben - damit kann man sehen, welches Template wo etwas ausgibt. Für Twig-Templates gibt es diese
+   Angaben mit der Erweiterung `contao-twig-debug-marker-bundle <https://github.com/e-spin/contao-twig-debug-marker-bundle>`_
+   auch.
 
 Debug in MM 2.0
 ---------------
