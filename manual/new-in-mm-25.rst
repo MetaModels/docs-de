@@ -20,13 +20,13 @@ Die wichtigsten neuen Features sind:
 - Unterstützung von **Twig-Templates** zusätzlich zu den bisherigen ``.html5``-Templates
 - **neue SVG Icons** für das Backend
 - kein MooTools mehr
-- eigene Backend-Bereiche per Konfiguration
+- eigene **Backend-Bereiche per Konfiguration**
 - **Breadcrumb bei Kind-Tabellen**
 - Attribut-Templates mit Ausgabe des Labels zum Wert
 - neues **Attribut für Lat/Long-Werte**
 - **Varianten mit Paginierung**
-- **MetaModels-Datensätze in Backend-Suche von Contao** auffindbar
-- neue Erweiterung **changelanguage-bridge** für den Sprachenwechsler auf Detailseiten
+- MetaModels-Datensätze in **Backend-Suche von Contao** auffindbar
+- neue Erweiterung **ChangeLanguage-Bridge** für den Sprachenwechsler auf Detailseiten
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -110,6 +110,11 @@ höherer Priorität behält seinen Vorrang, bestehende Anpassungen laufen also u
 
 Für eigene Twig-Version der Widget-Templates gibt es dabei eine Regel zu beachten - der ``label``-Block wird
 bei Feldern mit Sprach-Badge ersetzt, siehe :ref:`rst_extended_frontend_editing`.
+
+.. seealso:: Im Debug-Modus wird im Quelltext für html5-Templates im FE ein Kommentar für Start und Ende sowie den
+   Templatenamen ausgegeben - damit kann man sehen, welches Template wo etwas ausgibt. Für Twig-Templates gibt es diese
+   Angaben mit der Erweiterung `contao-twig-debug-marker-bundle <https://github.com/e-spin/contao-twig-debug-marker-bundle>`_
+   auch.
 
 
 Icons im Backend (überarbeitet)
