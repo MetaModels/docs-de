@@ -66,6 +66,7 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 * :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <install_mm-old>`
 * :ref:`C 3.5 + MM 2.0 + PHP 5.6 <install_mm-old>`
 
+
 .. _install_mm250:
 Installation von MM 2.5 für Contao 5.7 und PHP 8.4
 --------------------------------------------------
