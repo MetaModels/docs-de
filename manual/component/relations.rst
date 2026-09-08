@@ -41,6 +41,12 @@ für eine Urlaubsvertretung:
 
 |img_db-schema_01|
 
+.. note:: **Ab MM 2.5:** Die separat zu installierende Erweiterung :ref:`metamodels/erd-viewer
+   <rst_extended_erd-viewer>` erzeugt eine solche Grafik automatisch aus der Datenbank - direkt im
+   Backend, mit Filter, Klick-Details und Export als SVG/PNG/Graphviz/GraphML. Das ersetzt die
+   händische Pflege nicht in jedem Fall (z. B. für eine kuratierte Doku-Grafik), erspart sie aber
+   für den täglichen Überblick.
+
 
 .. _component_relations_standard-relations:
 Standard-Relationen

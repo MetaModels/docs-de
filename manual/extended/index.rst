@@ -28,6 +28,7 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     xliff_ex-import
     translator-bridge
     changelanguage-bridge
+    erd-viewer
 
 
 weitere bekannte Erweiterungen

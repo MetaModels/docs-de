@@ -27,6 +27,7 @@ Die wichtigsten neuen Features sind:
 - **Varianten mit Paginierung**
 - MetaModels-Datensätze in **Backend-Suche von Contao** auffindbar
 - neue Erweiterung **ChangeLanguage-Bridge** für den Sprachenwechsler auf Detailseiten
+- neue Erweiterung **ERD-Ansicht** aller MetaModels-Tabellen und ihrer Beziehungen
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -321,6 +322,22 @@ Sprachenwechsler verlinkt dann direkt auf denselben Datensatz in der Zielsprache
 statt auf die Sprachstartseite zurückzufallen. Ersetzt die beiden bisherigen Behelfslösungen (Filterregel
 „Alle Sprachen durchsuchen" bzw. ein eigener ``changelanguageNavigation``-Hook) durch ein einzelnes
 Häkchen je Rendereinstellung. Mehr dazu unter :ref:`Mehrsprachigkeit <component_multi-language_fe-output>`.
+
+
+ERD-Ansicht aller MetaModels-Tabellen (NEU)
+............................................
+
+Die neue, separat zu installierende Erweiterung :ref:`metamodels/erd-viewer
+<rst_extended_erd-viewer>` zeigt eine automatisch aus der Datenbank erzeugte
+`Entity-Relationship-Grafik <https://de.wikipedia.org/wiki/Entity-Relationship-Modell>`_ aller
+MetaModels-Tabellen im Backend - erreichbar über einen neuen Menüpunkt in der Liste "Alle
+MetaModels". Dargestellt werden sowohl die Attribut-Beziehungen (Auswahl, Tags und deren
+übersetzte Varianten, jeweils mit Kardinalität) als auch die :ref:`Eltern-Kind-Beziehungen
+<component_relations_child-tables>`. Die Ansicht lässt sich filtern, gefilterte Auswahlen können
+als "Ansicht" für alle Backend-Benutzer gespeichert werden, und der aktuelle Ausschnitt bzw. die
+aktuelle Auswahl sind als SVG, PNG, Graphviz-``.dot`` oder GraphML exportierbar - Letzteres z. B.
+zur Weiterbearbeitung im kostenlosen `yEd Live <https://www.yworks.com/yed-live/>`_. Siehe auch
+:ref:`Datenbankstruktur <component_relations_database_structure>`.
 
 
 DC_General
