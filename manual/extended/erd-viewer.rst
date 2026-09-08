@@ -9,6 +9,13 @@ Beziehungen im Backend an - als Ergänzung zu der unter :ref:`Datenbankstruktur
 <component_relations_database_structure>` empfohlenen, von Hand gepflegten Skizze. Die Grafik wird
 bei jedem Aufruf frisch aus der Datenbank erzeugt und ist damit immer aktuell.
 
+Die Ansicht ist hilfreich um z. B. bei einem übernommenen Projekt oder an einem Projekt, an dem man
+lange nicht gearbeitet hat, schnell den Überblick der vorhanden Tabellen und deren Relationen zu gewinnen.
+
+Es ist zu beachten, dass nicht alle Tabellen aus der Datenbank hier dargestellt werden - z. B. ist beim
+Attribut Tags (Mehrfachauswahl) zwischen den beiden verknüpften Tabellen eine Relationstabelle - diese wird nicht
+mit in der Grafik dargestellt.
+
 
 Voraussetzungen
 ----------------
@@ -34,6 +41,8 @@ Menüpunkt "ERD-Ansicht" neben "Neues MetaModel" und "Mehrere bearbeiten".
 |img_erd-button|
 
 Der "Zurück"-Pfeil auf der ERD-Seite führt wieder auf genau diese Liste zurück.
+
+Wie die die gesamte MetaModel-Administration ist auch die **ERD-Ansicht nur für Admins erreichbar**.
 
 
 Die Ansicht
@@ -61,8 +70,8 @@ Ausschnitt der Tabellen einschränken - beides wirkt gemeinsam und live auf die 
 Schaltflächen "Alle"/"Keine" setzen alle Haken auf einmal.
 
 **Ansichten:** Eine gerade eingestellte Tabellenauswahl lässt sich unter einem selbstgewählten
-Namen speichern. Gespeicherte Ansichten sind **für alle Backend-Benutzer** sichtbar und nutzbar,
-mit Klick auf den Namen anwendbar und über das "×" daneben wieder löschbar.
+Namen speichern. Gespeicherte Ansichten sind **für alle Admins im Backend** sichtbar und nutzbar,
+mit Klick auf den Namen anwendbar und über das "×" daneben für den **erstellenden Benutzer** wieder löschbar.
 
 **Pan/Zoom:** Mit dem Mausrad wird gezoomt, bei gedrückter Maustaste im leeren Bereich verschoben
 (Cursor wird zur Hand); zusätzlich stehen Zoom-Buttons und ein "Alles zurücksetzen"-Symbol zur
