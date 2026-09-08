@@ -26,9 +26,9 @@ Die wichtigsten neuen Features sind:
 - neues **Attribut für Lat/Long-Werte**
 - **Varianten mit Paginierung**
 - MetaModels-Datensätze in **Backend-Suche von Contao** auffindbar
-- neue Erweiterung **ChangeLanguage-Bridge** für den Sprachenwechsler auf Detailseiten
 - neue Erweiterung **ERD-Ansicht** aller MetaModels-Tabellen und ihrer Beziehungen
 - neue Erweiterung **Health-Check** zum Aufspüren und Bereinigen verwaister MetaModels-Daten
+- neue Erweiterung **ChangeLanguage-Bridge** für den Sprachenwechsler auf Detailseiten
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
