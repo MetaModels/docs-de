@@ -6,6 +6,12 @@ Löschen von überflüssigen Daten
 .. note:: Vor dem Löschen unbedingt eine Datensicherung durchführen! - |br|
    z. B. mit ``php vendor/bin/contao-console contao:backup:create``
 
+.. tip:: Seit MetaModels 2.5 übernimmt die Erweiterung :ref:`metamodels/health-check
+   <rst_extended_health-check>` genau diese Aufgabe direkt im Backend - mit Vorschau vor dem
+   Löschen, Bereinigungs-Protokoll und Backup-Button auf derselben Seite, ganz ohne Shell-Zugriff,
+   und deckt alle unten aufgeführten Tabellen ab. Das ist der empfohlene, komfortablere Weg; das
+   Script hier funktioniert aber weiterhin unverändert.
+
 Werden Models oder Attribute gelöscht, kann es vorkommen, dass nicht alle Datensätze mitgelöscht werden. Das ist bei
 allen Attributen der Fall, die ihre Daten nicht direkt in der MetaModel-Tabelle ``mm_*`` speichern, sondern eigene
 Tabellen verwenden. Das ist bei folgenden Attributen der Fall:

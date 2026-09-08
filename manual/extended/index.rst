@@ -29,6 +29,7 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     translator-bridge
     changelanguage-bridge
     erd-viewer
+    health-check
 
 
 weitere bekannte Erweiterungen

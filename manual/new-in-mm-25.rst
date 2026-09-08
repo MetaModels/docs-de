@@ -28,6 +28,7 @@ Die wichtigsten neuen Features sind:
 - MetaModels-Datensätze in **Backend-Suche von Contao** auffindbar
 - neue Erweiterung **ChangeLanguage-Bridge** für den Sprachenwechsler auf Detailseiten
 - neue Erweiterung **ERD-Ansicht** aller MetaModels-Tabellen und ihrer Beziehungen
+- neue Erweiterung **Health-Check** zum Aufspüren und Bereinigen verwaister MetaModels-Daten
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -338,6 +339,23 @@ als "Ansicht" für alle Backend-Benutzer gespeichert werden, und der aktuelle Au
 aktuelle Auswahl sind als SVG, PNG, Graphviz-``.dot`` oder GraphML exportierbar - Letzteres z. B.
 zur Weiterbearbeitung im kostenlosen `yEd Live <https://www.yworks.com/yed-live/>`_. Siehe auch
 :ref:`Datenbankstruktur <component_relations_database_structure>`.
+
+
+Health-Check zum Bereinigen verwaister Daten (NEU)
+...................................................
+
+Die neue, separat zu installierende Erweiterung :ref:`metamodels/health-check
+<rst_extended_health-check>` findet und bereinigt
+inkonsistente MetaModels-Daten - z. B. Zeilen in den Attribut-eigenen Speichertabellen (Tags,
+Mehrfach-/Tabellentext, Bewertungen und deren übersetzte Varianten), die nach dem Löschen eines
+Attributs oder Datensatzes zurückbleiben, weil der DCG diese Zusatztabellen nie zu Gesicht bekommt.
+Erreichbar über einen neuen Menüpunkt in der Liste "Alle MetaModels", genau wie die ERD-Ansicht nur
+für Admins. Die Prüfungen sind modular aufgebaut (eigene per ``services.yml`` ergänzbar) und
+erscheinen nur, wenn sie für die eigene Installation überhaupt zutreffen können; jede Bereinigung
+hat eine Vorschau (dry-run) vor dem tatsächlichen Löschen, jede tatsächlich ausgeführte Bereinigung
+wird protokolliert, ein Backup lässt sich direkt von der Seite aus anstoßen - zurückgespielt wird
+es wie gewohnt über den Contao-Manager oder die Konsole - und jede Prüfung lässt sich auch per
+Konsolenkommando ausführen (z. B. für Cronjobs).
 
 
 DC_General
