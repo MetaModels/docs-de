@@ -42,7 +42,7 @@ Menüpunkt "ERD-Ansicht" neben "Neues MetaModel" und "Mehrere bearbeiten".
 
 Der "Zurück"-Pfeil auf der ERD-Seite führt wieder auf genau diese Liste zurück.
 
-Wie die die gesamte MetaModel-Administration ist auch die **ERD-Ansicht nur für Admins erreichbar**.
+Wie die gesamte MetaModel-Administration ist auch die **ERD-Ansicht nur für Admins erreichbar**.
 
 
 Die Ansicht
