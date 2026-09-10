@@ -10,7 +10,8 @@ Löschen von überflüssigen Daten
    <rst_extended_health-check>` genau diese Aufgabe direkt im Backend - mit Vorschau vor dem
    Löschen, Bereinigungs-Protokoll und Backup-Button auf derselben Seite, ganz ohne Shell-Zugriff,
    und deckt alle unten aufgeführten Tabellen ab. Das ist der empfohlene, komfortablere Weg; das
-   Script hier funktioniert aber weiterhin unverändert.
+   Script hier funktioniert aber weiterhin unverändert - oder verwendet die separaten Commands der
+   Erweiterung.
 
 Werden Models oder Attribute gelöscht, kann es vorkommen, dass nicht alle Datensätze mitgelöscht werden. Das ist bei
 allen Attributen der Fall, die ihre Daten nicht direkt in der MetaModel-Tabelle ``mm_*`` speichern, sondern eigene
