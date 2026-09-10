@@ -322,7 +322,9 @@ Die neue, separat zu installierende Erweiterung :ref:`metamodels/changelanguage-
 Sprachenwechsler verlinkt dann direkt auf denselben Datensatz in der Zielsprache samt passendem Slug,
 statt auf die Sprachstartseite zurückzufallen. Ersetzt die beiden bisherigen Behelfslösungen (Filterregel
 „Alle Sprachen durchsuchen" bzw. ein eigener ``changelanguageNavigation``-Hook) durch ein einzelnes
-Häkchen je Rendereinstellung. Mehr dazu unter :ref:`Mehrsprachigkeit <component_multi-language_fe-output>`.
+Häkchen je Rendereinstellung. Zusätzlich werden GET-Filterparameter (z. B. ``?alias=...``) ganz ohne
+dieses Häkchen automatisch mitgenommen - auch bei einsprachigen Modellen, ohne Eintrag bei
+"Query-Parameter beibehalten". Mehr dazu unter :ref:`Mehrsprachigkeit <component_multi-language_fe-output>`.
 
 
 ERD-Ansicht aller MetaModels-Tabellen (NEU)

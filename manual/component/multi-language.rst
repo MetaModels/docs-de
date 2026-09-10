@@ -278,6 +278,12 @@ unterstützen", der passende Filterparameter für die jeweilige Zielsprache wird
 die ohnehin gepflegte Sprung-Konfiguration der Rendereinstellung ermittelt - keine feste Liste von
 Seiten-IDs und kein eigener PHP-Code nötig.
 
+Zusätzlich übernimmt dieselbe Erweiterung GET-Filterparameter (z. B. ``?alias=...``) ganz ohne
+dieses Häkchen automatisch in den Sprachenwechsler - ein manueller Eintrag bei "Query-Parameter
+beibehalten" wie in Variante 1 entfällt damit auch für einsprachige Modelle. Warum ChangeLanguage
+Pfadsegmente (``/alias/...``) von sich aus mitnimmt, GET-Parameter aber nicht, ist unter
+":ref:`rst_extended_changelanguage-bridge_slug-get`" erklärt.
+
 
 Frontend-Editing (FEE)
 ----------------------
