@@ -61,7 +61,8 @@ Dargestellt werden zwei Arten von Beziehungen:
 
 * **Attribut-Beziehungen** über die Attribute Auswahl, Tags sowie deren übersetzte Varianten
   (Einzelauswahl, Mehrfachauswahl) - beschriftet mit dem Attributnamen und der Kardinalität in
-  eckigen Klammern: ``[1:n]`` für Auswahl/Übersetzte Auswahl, ``[m:n]`` für Tags/Übersetzte Tags.
+  eckigen Klammern: ``[1:n]`` für Einzelauswahl/Übersetzte Einzelauswahl (Select), ``[m:n]``
+  für Mehrfachauswahl/Übersetzte Mehrfachauswahl (Tags).
 * **Eltern-Kind-Beziehungen** (:ref:`Kind-Tabellen <component_relations_child-tables>`) als
   gestrichelter, orangener Pfeil mit der Beschriftung "Kind von [n:1]".
 
