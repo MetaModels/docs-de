@@ -719,7 +719,8 @@ Known-Issues
   MetaModels-Backend-Seiten (z. B. ``/contao/metamodel/mm_employees``) bleibt der ``referer``-Parameter **leer**,
   sodass Contao nach dem Umschalten auf das Backend-Dashboard statt zur Ausgangsseite zurückführt. Das betrifft
   Contaos eigenen Debug-Umschalter und wird vom neuen Referer-Handling des DC_General (eigene „Zurück"-Buttons)
-  nicht erfasst - Contao bietet an dieser Stelle keine Möglichkeit, den Referer zu beeinflussen.
+  nicht erfasst - Contao bietet an dieser Stelle keine Möglichkeit, den Referer zu beeinflussen. |br|
+  Ein Fix wurde vorgeschlagen: `contao/contao PR #10206 <https://github.com/contao/contao/pull/10206>`_.
 
 
 .. _check_upgrade_mm250:
