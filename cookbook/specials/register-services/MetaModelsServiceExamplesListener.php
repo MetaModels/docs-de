@@ -182,7 +182,7 @@ final readonly class MetaModelsServiceExamplesListener
 
         // Inserttag.
         $content = '<a href="{{link_url::4711}}">read more</a>';
-        $content = $this->inserttagParser->parse($content);
+        $content = $this->inserttagParser->replaceInline($content);
 
         // Root path.
         $filePath = 'files/my_folder/moinmoin.pdf';
