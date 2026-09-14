@@ -150,12 +150,12 @@ final readonly class MetaModelsServiceExamplesListener
         // Scope.
         // Contao.
         $currentRequest = $this->requestStack->getCurrentRequest();
-        $isFrontend     = $this->scopeMatcher->isFrontend($currentRequest);
-        $isBackend      = $this->scopeMatcher->isBackend($currentRequest);
+        $isFrontend     = $this->scopeMatcher->isFrontendRequest($currentRequest);
+        $isBackend      = $this->scopeMatcher->isBackendRequest($currentRequest);
 
         // DC_General.
-        $isFrontend = $this->scopeDeterminator->isFrontend();
-        $isBackend  = $this->scopeDeterminator->isBackend();
+        $isFrontend = $this->scopeDeterminator->currentScopeIsFrontend();
+        $isBackend  = $this->scopeDeterminator->currentScopeIsBackend();
 
         // URL.
         if (null === ($page = PageModel::findByPk(42))) {
