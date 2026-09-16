@@ -651,18 +651,19 @@ entfallen sie.
     * neue Option **Rundungsschritt (km)** - rundet den angezeigten Entfernungswert auf ein
       Vielfaches dieses Werts, ohne die Sortierung zu beeinflussen (die bleibt immer exakt)
 
-* Alias (alias)
-    * **Mehrsprachige Alias-Felder bauen jetzt aus der Fallback-Sprache:** Ist unter den Feldern, aus denen sich
-      der Alias zusammensetzt, ein übersetztes Attribut, änderte sich der erzeugte Alias bisher je nachdem, in
-      welcher Sprache der Datensatz gerade bearbeitet und gespeichert wurde - ein Datensatz, der zuletzt auf
-      Englisch gespeichert wurde, bekam einen Alias aus den englischen Werten, obwohl die Fallback-Sprache
-      Deutsch war.
+* Alias (alias) und Kombinierte Werte (combinedvalues)
+    * **Mehrsprachige Quellfelder bauen jetzt aus der Fallback-Sprache:** Ist unter den Feldern, aus denen sich
+      der Alias bzw. der kombinierte Wert zusammensetzt, ein übersetztes Attribut, änderte sich der erzeugte
+      Wert bisher je nachdem, in welcher Sprache der Datensatz gerade bearbeitet und gespeichert wurde - ein
+      Datensatz, der zuletzt auf Englisch gespeichert wurde, bekam einen Wert aus den englischen Feldern,
+      obwohl die Fallback-Sprache Deutsch war. Betroffen waren beide Attributtypen gleichermaßen, da sie
+      demselben Muster folgen.
     * Solche Felder werden nun immer aus der **Hauptsprache** (Fallback) des MetaModels gelesen, unabhängig
-      davon, welche Sprache gerade bearbeitet wird. Der Alias bleibt damit stabil. Betroffen sind nur
+      davon, welche Sprache gerade bearbeitet wird. Der erzeugte Wert bleibt damit stabil. Betroffen sind nur
       übersetzte Felder; nicht-übersetzte Felder und Meta-Spalten (z. B. ``id``) verhalten sich unverändert.
-    * Wirkt sich nur auf mehrsprachige MetaModels mit einem übersetzten Feld unter den Alias-Feldern aus. Ein
-      bereits vorhandener Alias wird dadurch nicht rückwirkend geändert - erst das nächste Speichern (bei
-      erzwungenem Alias) baut ihn neu aus der Fallback-Sprache auf.
+    * Wirkt sich nur auf mehrsprachige MetaModels mit einem übersetzten Feld unter den Quellfeldern aus. Ein
+      bereits vorhandener Wert wird dadurch nicht rückwirkend geändert - erst das nächste Speichern (bei
+      erzwungenem Alias bzw. erzwungenen Kombinierten Werten) baut ihn neu aus der Fallback-Sprache auf.
 
 
 Filter
