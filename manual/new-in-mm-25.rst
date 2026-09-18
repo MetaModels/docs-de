@@ -33,6 +33,8 @@ Die wichtigsten neuen Features sind:
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
+- Handbuch komplett in `Englisch <https://metamodels.readthedocs.io/en/latest/>`_ und
+  `Französisch <https://metamodels.readthedocs.io/fr/latest/>`_
 
 
 Twig-Templates (NEU)
