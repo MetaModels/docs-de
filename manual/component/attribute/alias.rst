@@ -215,6 +215,14 @@ Die Zeichenfolgen ``[-]``, ``[zwsp]``, ``&shy;`` und ``&ZeroWidthSpace;`` (bedin
 Trennzeichen, die in Contao zur Textformatierung genutzt werden) werden vor der
 Slug-Generierung automatisch entfernt, damit sie nicht im Alias erscheinen.
 
+**Mehrsprachige Alias-Felder (seit MM 2.5)**
+
+Ist eines der ausgewählten Alias-Felder ein übersetztes Attribut, wird dessen Wert immer
+aus der **Hauptsprache** (Fallback) des MetaModels gelesen - unabhängig davon, in welcher
+Sprache der Datensatz gerade bearbeitet wird. Der erzeugte Alias bleibt damit stabil und
+ändert sich nicht je nach bearbeiteter Sprache. Nicht-übersetzte Felder und Meta-Spalten
+(z. B. ``id``) sind davon nicht betroffen.
+
 
 .. |svg_attr_alias_22| image:: /_img/icons_svg/alias.svg
    :width: 22px

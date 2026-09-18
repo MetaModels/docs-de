@@ -189,6 +189,14 @@ Die Anzahl der Platzhalter muss der Anzahl der ausgewählten Felder entsprechen.
 Der kombinierte Wert wird als ``text NULL`` gespeichert. Ein leerer Wert wird als
 ``NULL`` abgelegt (kompatibel mit MySQL Strict Mode).
 
+**Mehrsprachige Quellfelder (seit MM 2.5)**
+
+Ist eines der ausgewählten Felder ein übersetztes Attribut, wird dessen Wert immer aus
+der **Hauptsprache** (Fallback) des MetaModels gelesen - unabhängig davon, in welcher
+Sprache der Datensatz gerade bearbeitet wird. Der erzeugte kombinierte Wert bleibt damit
+stabil und ändert sich nicht je nach bearbeiteter Sprache. Nicht-übersetzte Felder und
+Meta-Spalten (z. B. ``id``) sind davon nicht betroffen.
+
 
 .. |svg_attr_combinedvalues_22| image:: /_img/icons_svg/combinedvalues.svg
    :width: 22px
