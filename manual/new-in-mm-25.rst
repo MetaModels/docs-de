@@ -4,8 +4,8 @@
 ==================================
 
 Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.5, die durch das
-"early adopter Programm" ermöglicht wurden - mehr dazu unter Fundraising auf der
-`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_.
+"early adopter Programm" ermöglicht wurden/werden - mehr dazu unter **Fundraising auf der
+`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_.**
 
 Für einen Check nach einem Upgrade zu MM 2.5 sind :ref:`unten weitere Hinweise <check_upgrade_mm250>`.
 
