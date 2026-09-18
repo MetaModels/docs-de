@@ -13,7 +13,7 @@ Für einen **Check nach einem Upgrade** zu MM 2.5 sind :ref:`unten weitere Hinwe
 Allgemein und Core
 ------------------
 
-MetaModels 2.5 setzt **Contao 5.7** und **PHP 8.4** voraus - sowie aktuell einen
+MetaModels 2.5 setzt **Contao 5.7** und **PHP 8.4** voraus - sowie aktuell noch einen
 `EAP-Zugangskey <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_.
 
 Die wichtigsten neuen Features sind:
