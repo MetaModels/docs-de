@@ -77,6 +77,13 @@ vornehmen - siehe :ref:`component_templates`. Die Ausgabe kann z.B. mit folgende
 Den ``$htmlHeadBag`` könnte man auch über eine Helper-Klasse zur Verfügung stellen und die eingebundenen Services
 injecten.
 
+.. hint:: Title und Description lassen sich nicht über ``$GLOBALS['TL_HEAD']`` setzen. Das Seitenlayout (``fe_page``)
+          gibt ``<title>`` und ``<meta name="description">`` immer selbst aus den Werten der ``HtmlHeadBag`` aus. Ein
+          Eintrag in ``TL_HEAD`` würde nur ein zweites Tag zusätzlich erzeugen, sodass im Quelltext doppelte Angaben
+          stehen. Die ``HtmlHeadBag`` wird erst nach dem Rendern der Module ausgelesen. Werte aus dem Rendertemplate
+          überschreiben daher die Angaben aus den Seiteneigenschaften. Für Tags, die Contao selbst nicht ausgibt (z.B.
+          ``og:``-Tags), ist ``$GLOBALS['TL_HEAD']`` dagegen der richtige Weg.
+
 
 .. _rst_cookbook_tips_seo_breadcrumb:
 Breadcrumb (Navigationspfad)
