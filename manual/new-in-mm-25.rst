@@ -797,11 +797,11 @@ im Blick behalten werden:
   ändert sich nichts. Anpassen muss nur, wer die alten Dateien selbst verwendet: eigenes CSS, das ein
   MetaModels-Symbol als Hintergrundbild einbindet, oder eigene DCA-Angaben, die auf einen ``.png``-Pfad unterhalb von
   ``bundles/metamodels…/images/`` zeigen. Dort ist die Endung auf ``.svg`` zu ändern
-* **Auswahl (select) und Tags mit MetaModel als Quelle:** die Attribute des gewählten Datensatzes im Knoten ``raw``
-  bzw. ``text`` werden pro Render-Einstellung gewählt (Feld „Weitere Attribute"). Es ist nichts zu tun: Ohne
-  Auswahl werden wie bisher alle Attribute geladen. Anpassen muss nur, wer die Ausgabe beschleunigen will und dafür
-  Attribute abwählt - Templates dürfen dann nur noch auf die gewählten Attribute zugreifen. Die neue Spalte
-  ``select_attributes`` bzw. ``tag_attributes`` in ``tl_metamodel_rendersetting`` legt das Datenbank-Update an
+* **Einzelauswahl [Select] und Mehrfachauswahl [Tags] mit MetaModel als Quelle:** die Attribute des gewählten
+  Datensatzes im Knoten ``raw`` bzw. ``text`` werden pro Render-Einstellung gewählt (Feld „Weitere Attribute"). Es ist
+  nichts zu tun: Ohne Auswahl werden wie bisher alle Attribute geladen. Anpassen muss nur, wer die Ausgabe beschleunigen
+  will und dafür Attribute abwählt - Templates dürfen dann nur noch auf die gewählten Attribute zugreifen. Die neue
+  Spalte ``select_attributes`` bzw. ``tag_attributes`` in ``tl_metamodel_rendersetting`` legt das Datenbank-Update an
 * **Datei-Attribute:** die Sortier-Spalten ``<spaltenname>__sort`` bzw. ``value_sorting`` werden per Migration in
   den Wert überführt und danach **gelöscht** - vorher unbedingt eine Datensicherung anlegen, das Löschen der
   Spalten ist nicht umkehrbar. Eigene Programmierungen oder Auswertungen, die direkt auf diese Spalten zugreifen,
