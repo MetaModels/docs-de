@@ -16,6 +16,8 @@ Ist noch kein eigenes Template im Einsatz, muss eine Kopie von
 
 Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
 
+HTML5:
+
 .. code-block:: php
    :linenos:
 
@@ -25,6 +27,14 @@ Das jeweilige Template wird mit den folgenden Zeilen oben ergänzt:
        dump($this->data);
    }
    ?>
+
+Twig (ab MM 2.5):
+
+.. code-block:: twig
+   :linenos:
+
+   {# The dump tag sends the output to the Symfony toolbar, the dump() function would print it into the page. #}
+   {% dump data %}
 
 Anschließend muss man die Seite im Frontend im Debugmodus ansehen. Dazu im
 Backend den Debugmodus im Header einschalten, oder für einen dauerhaften Debugmodus
