@@ -75,8 +75,7 @@ Varianten überschreiben) bietet das Attribut folgende spezifische Optionen:
 Einstellungen bei den Render-Einstellungen
 -------------------------------------------
 
-Das Einzelauswahl-Attribut besitzt keine eigenen Render-Einstellungen. In der
-Attributliste einer Render-Einstellung stehen die üblichen Optionen zur Verfügung:
+In der Attributliste einer Render-Einstellung stehen folgende Optionen zur Verfügung:
 
 .. list-table::
    :header-rows: 1
@@ -88,6 +87,24 @@ Attributliste einer Render-Einstellung stehen die üblichen Optionen zur Verfüg
      - Auswahl eines eigenen Templates für die Ausgabe des verknüpften Wertes.
    * - CSS-Klasse
      - Optionale CSS-Klasse, die dem Ausgabeelement hinzugefügt wird.
+   * - Weitere Attribute (seit MM 2.5)
+     - Nur bei einem MetaModel als Quelltabelle: Attribute des Ziel-MetaModels, die zusätzlich zu den
+       Basisattributen (Werte-, Alias-, ID- und Auswahl-Sortierung) geladen und im Wert des ausgewählten
+       Eintrags bereitgestellt werden (Knoten ``raw`` und ``text``). Siehe unten.
+
+**Weitere Attribute (seit MM 2.5)**
+
+Aus dem ausgewählten Datensatz des Ziel-MetaModels werden immer die **Basisattribute** geladen - die Spalten,
+die bei den Einstellungen des Attributs als Werte-Spalte, Alias-Spalte, ID-Spalte und Auswahl-Sortierung
+gewählt sind. Alle weiteren Attribute des Ziel-MetaModels lassen sich je Render-Einstellung anhaken, damit
+sie ebenfalls zur Verfügung stehen, z. B. für die Ausgabe in der Detailansicht. Weil die Auswahl bei der
+Render-Einstellung getroffen wird, können Liste und Detailseite unterschiedliche Attribute laden.
+
+* Ist noch **keine Auswahl** gespeichert (bei bestehenden und bei gesammelt angelegten Render-Einstellungen),
+  werden wie bisher **alle** Attribute geladen; im Backend sind dann alle angehakt.
+* Werden **keine** Attribute angehakt und so gespeichert, werden nur die Basisattribute geladen. Das ist
+  am schnellsten, ein Template darf dann nur noch auf diese zugreifen.
+* Bei einer Contao-Tabelle als Quelltabelle gibt es die Option nicht, dort wird immer die komplette Zeile geladen.
 
 
 Einstellungen bei der Eingabemaske

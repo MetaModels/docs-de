@@ -596,6 +596,24 @@ entfallen sie.
       wenn sie dem Redakteur nie zur Auswahl standen und er sie folglich auch nicht abwählen konnte.
       Betroffen war das Attribut ``tags`` ebenso wie Tags-Bezüge auf ein anderes MetaModel.
 
+* Auswahl (select) und Tags mit einem **MetaModel** als Quelle
+    * **Weitere Attribute je Render-Einstellung (NEU):** Bis 2.4 hat MetaModels vom gewählten Datensatz des
+      Ziel-MetaModels immer **alle** Attribute geladen und jedes davon mit seinem Standardtemplate gerendert -
+      auch wenn die Ausgabe nur einen Teil davon braucht. Ab 2.5 werden zunächst nur die **Basisattribute**
+      geladen (Werte-, Alias-, ID- und Sortierspalte des Attributs). Welche weiteren Attribute des Ziel-MetaModels
+      in den Knoten ``raw`` und ``text`` des Eintrags zur Verfügung stehen, wird in der Render-Einstellung beim
+      Attribut gewählt (Feld „Weitere Attribute", Abschnitt „Erweitert").
+    * Weil die Auswahl **je Render-Einstellung** gilt, können Liste und Detailseite unterschiedliche Attribute
+      laden: die Liste nur das Nötigste, die Detailseite mehr.
+    * **Für bestehende Ausgaben ändert sich nichts.** Hat eine Render-Einstellung noch keine Auswahl - das gilt
+      für alle bestehenden, aber auch für gesammelt neu angelegte -, werden wie bisher alle Attribute geladen. Im
+      Backend sind dann alle Attribute angehakt. Wird die Auswahl gespeichert, gilt sie genau so; sind **keine**
+      Attribute angehakt, werden nur die Basisattribute geladen (am schnellsten).
+    * Zu beachten: Wer Attribute abwählt, bekommt sie im Eintrag nicht mehr geliefert - ein Template darf dann
+      nur noch auf die gewählten Attribute zugreifen (z. B. ``raw`` des Auswahl-Attributs).
+    * Gilt nur, wenn das Attribut auf ein **MetaModel** verweist. Bei einer **Contao-Tabelle** und bei Übersetzte
+      Auswahl bzw. Übersetzte Tags wird immer die komplette Zeile geladen, dort gibt es die Option nicht.
+
 * Levenshtein (levenshtein)
     * **Schreibweise durchgängig korrigiert:** Der Attributtyp hieß seit seiner ersten Fassung
       ``levensthein`` - mit vertauschtem ``h`` und ``t``. Klassennamen, Composer-Paket und Template
@@ -779,6 +797,11 @@ im Blick behalten werden:
   ändert sich nichts. Anpassen muss nur, wer die alten Dateien selbst verwendet: eigenes CSS, das ein
   MetaModels-Symbol als Hintergrundbild einbindet, oder eigene DCA-Angaben, die auf einen ``.png``-Pfad unterhalb von
   ``bundles/metamodels…/images/`` zeigen. Dort ist die Endung auf ``.svg`` zu ändern
+* **Auswahl (select) und Tags mit MetaModel als Quelle:** die Attribute des gewählten Datensatzes im Knoten ``raw``
+  bzw. ``text`` werden pro Render-Einstellung gewählt (Feld „Weitere Attribute"). Es ist nichts zu tun: Ohne
+  Auswahl werden wie bisher alle Attribute geladen. Anpassen muss nur, wer die Ausgabe beschleunigen will und dafür
+  Attribute abwählt - Templates dürfen dann nur noch auf die gewählten Attribute zugreifen. Die neue Spalte
+  ``select_attributes`` bzw. ``tag_attributes`` in ``tl_metamodel_rendersetting`` legt das Datenbank-Update an
 * **Datei-Attribute:** die Sortier-Spalten ``<spaltenname>__sort`` bzw. ``value_sorting`` werden per Migration in
   den Wert überführt und danach **gelöscht** - vorher unbedingt eine Datensicherung anlegen, das Löschen der
   Spalten ist nicht umkehrbar. Eigene Programmierungen oder Auswertungen, die direkt auf diese Spalten zugreifen,
