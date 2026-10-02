@@ -596,7 +596,7 @@ entfallen sie.
       wenn sie dem Redakteur nie zur Auswahl standen und er sie folglich auch nicht abwählen konnte.
       Betroffen war das Attribut ``tags`` ebenso wie Tags-Bezüge auf ein anderes MetaModel.
 
-* Auswahl (select) und Tags mit einem **MetaModel** als Quelle
+* Einzelauswahl [Select] und Mehrfachauswahl [Tags] mit **MetaModel** als Quelle
     * **Weitere Attribute je Render-Einstellung (NEU):** Bis 2.4 hat MetaModels vom gewählten Datensatz des
       Ziel-MetaModels immer **alle** Attribute geladen und jedes davon mit seinem Standardtemplate gerendert -
       auch wenn die Ausgabe nur einen Teil davon braucht. Ab 2.5 werden zunächst nur die **Basisattribute**
