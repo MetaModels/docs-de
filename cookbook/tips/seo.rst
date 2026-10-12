@@ -94,9 +94,16 @@ den :ref:`Seitentitel dynamisch aus einem MM Attribut <rst_cookbook_tips_seo_met
 in der Breadcrumb nicht angezeigt. Das liegt darin begründet, dass das FE-Modul für die Breadrumb üblicherweise vor
 der MM-Liste eingebaut ist und diese Information zu spät bzw. gar nicht erhält.
 
+Contao kann Elemente mit dem Attribut ``shouldPreload`` vorab rendern, so dass der Titel bereits gesetzt ist, wenn die
+Breadcrumb ausgegeben wird (so arbeitet z. B. der News-Leser). Das funktioniert aber nur für Frontend-Module in der
+Layout-Spalte, nicht für Inhaltselemente. Zudem ist das Attribut seit Contao 5.3 als veraltet markiert und entfällt in
+Contao 6. Die MM-Liste setzt es daher nicht.
+
 Abhilfe schafft ein "BreadcrumbController", der die Breadcrumb erst später dem Rendering der Seite hinzufügt. Aktuell
-kann man `hier einen Beispielcode <https://gist.github.com/fritzmg/e7df2804365fe676b1d88f053a234707?permalink_comment_id=5698503#gistcomment-5698503>`_
-finden - `in Contao 5.7 wird das Problem gefixt sein <https://youtu.be/nvIPd3OzXhs?t=1787>`_.
+sollte man dafür `den Beispielcode von Fritz <https://gist.github.com/fritzmg/e7df2804365fe676b1d88f053a234707?permalink_comment_id=5698503#gistcomment-5698503>`_
+verwenden.
+
+Eine dauerhafte Lösung auf Basis des neuen Page-Type-Controllers von Contao wird für MetaModels 2.6 geprüft.
 
 
 .. _rst_cookbook_tips_seo_metadata-hreflang:
