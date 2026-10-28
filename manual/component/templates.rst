@@ -84,6 +84,24 @@ zur Verfügung. Damit lässt sich das Markup pro Widget anpassen, ohne die Schle
 
 Mit ``{{ parent() }}`` wird der ursprüngliche Inhalt eines Blocks übernommen und ergänzt.
 
+**CSS-Klasse am Submit-Button ergänzen:** Soll der Button nur zusätzliche Klassen erhalten (z. B. ``btn btn-primary``
+für Bootstrap), muss das Markup nicht neu geschrieben werden. ``{{ parent() }}`` liefert die Standard-Ausgabe des
+Blocks, in der die Klasse per ``replace`` erweitert wird:
+
+.. code-block:: twig
+
+   {% extends "@Contao/mm_filter_default.html.twig" %}
+
+   {% block submit %}
+       {{ parent()|replace({'class="submit"': 'class="submit btn btn-primary"'})|raw }}
+   {% endblock %}
+
+Aus ``<input type="submit" class="submit" …>`` wird so ``<input type="submit" class="submit btn btn-primary" …>``;
+die Klasse ``submit`` und der umgebende ``submit_container`` bleiben erhalten. Das Beispiel setzt voraus, dass das
+Standard-Markup unverändert ``class="submit"`` enthält. Wurde der Block bereits von einem anderen Template
+überschrieben, wirkt ``replace`` auf dessen Ausgabe. Wer das Markup des Buttons komplett selbst bestimmen möchte,
+gibt es wie im Beispiel oben vollständig in einem eigenen Block aus.
+
 .. warning:: Der Block ``form_hidden`` enthält das Request-Token und ``FORM_SUBMIT``. Ohne diese Felder lässt
    sich das Filterformular nicht absenden - überschreiben Sie ihn nur bewusst und geben Sie beide Felder weiterhin aus.
 
