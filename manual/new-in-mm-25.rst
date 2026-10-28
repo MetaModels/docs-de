@@ -91,6 +91,11 @@ Attribut). Die aus den ``.html5`` bekannten Blöcke sind echte Twig-Blöcke - z.
 Standard-Template mit ``{% extends "@Contao/metamodels/filter/default.html.twig" %}`` und überschreibt die Blöcke
 ``formlabel`` und ``formfield``.
 
+**Blöcke in den Wrapper-Templates (ab 2.5.2):** Auch die Templates ``mm_filter_default``, ``mm_clearall_default`` und
+``mm_pagination`` sind in Blöcke unterteilt (beim Filter z. B. ``headline``, ``filter`` und ``submit``). Ein eigenes
+Template kann das Standard-Template per ``{% extends "@Contao/mm_filter_default.html.twig" %}`` erweitern und nur den
+gewünschten Block überschreiben. Details und Beispiel: :ref:`component_templates_twig-blocks`.
+
 **Bestehende Overrides:** Ein vorhandenes Override eines **flachen** Template-Namens im Projekt-``templates/``-Ordner
 (oder in einem Theme-Ordner) - z. B. ``templates/metamodel_prerendered.html5`` - behält weiterhin **Vorrang** vor
 einem mitgelieferten Twig-Template. Bestehende Anpassungen funktionieren also nach dem Upgrade unverändert weiter.

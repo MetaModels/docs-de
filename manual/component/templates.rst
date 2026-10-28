@@ -45,6 +45,48 @@ entfällt in MetaModels 3.0.
 Eigene Twig-Templates eines Pakets liegen - wie in Contaos Bundles - unter einem Namespace-Root
 (Ordner ``twig/`` mit leerer Marker-Datei ``.twig-root``); im Projekt genügt der Ordner ``templates/``.
 
+.. _component_templates_twig-blocks:
+
+Blöcke in den Wrapper-Templates (ab MetaModels 2.5.2)
+.....................................................
+
+Die Wrapper-Templates für Filter, Filter-Zurücksetzen und Blätterfunktion sind in Twig-Blöcke unterteilt. Ein
+eigenes Template muss daher nicht mehr das gesamte Template ersetzen, sondern erweitert es und überschreibt nur
+den gewünschten Block. Die Ausgabe der Standard-Templates ändert sich dadurch nicht.
+
+==============================  =====================================================================
+Template                        Blöcke
+==============================  =====================================================================
+``mm_filter_default``           ``section``, ``headline``, ``form``, ``form_hidden``, ``filters``,
+                                ``filter``, ``submit``
+``mm_clearall_default``         ``section``, ``link``
+``mm_pagination``               ``nav``, ``info``, ``first``, ``previous``, ``pages``, ``next``,
+                                ``last``
+==============================  =====================================================================
+
+Der Block ``filter`` liegt innerhalb der Schleife über alle Filter-Widgets; die Variable ``filter`` steht dort
+zur Verfügung. Damit lässt sich das Markup pro Widget anpassen, ohne die Schleife zu kopieren. Beispiel
+(``templates/mm_filter_default.html.twig`` im Projekt):
+
+.. code-block:: twig
+
+   {% extends "@Contao/mm_filter_default.html.twig" %}
+
+   {% block filter %}
+       <div class="col-md-4 {{ filter.class|default('') }}">
+           {{ filter.value|raw }}
+       </div>
+   {% endblock %}
+
+   {% block submit %}
+       <button type="submit" class="btn btn-primary">{{ submit }}</button>
+   {% endblock %}
+
+Mit ``{{ parent() }}`` wird der ursprüngliche Inhalt eines Blocks übernommen und ergänzt.
+
+.. warning:: Der Block ``form_hidden`` enthält das Request-Token und ``FORM_SUBMIT``. Ohne diese Felder lässt
+   sich das Filterformular nicht absenden - überschreiben Sie ihn nur bewusst und geben Sie beide Felder weiterhin aus.
+
 Siehe auch :ref:`new_in_mm250`.
 
 
