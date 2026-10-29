@@ -63,7 +63,7 @@ Es folgen weitere Informationen zu den einzelnen Versionen von MetaModels.
 * :ref:`C 5.3 + MM 2.4 + PHP 8.2 <install_mm240>` - Zugang per "EAP"
 * :ref:`C 4.13 + MM 2.3 + PHP 8.1 <install_mm-old>`
 * :ref:`C 4.9 + MM 2.2 + PHP 7.4 <install_mm-old>`
-* :ref:`C 4.4 + MM 2.1 + PHP 7.2/7.4 <install_mm-old>`
+* :ref:`C 4.4 + MM 2.1 + PHP 7.2 <install_mm-old>`
 * :ref:`C 3.5 + MM 2.0 + PHP 5.6 <install_mm-old>`
 
 
