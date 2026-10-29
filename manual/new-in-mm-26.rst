@@ -5,9 +5,9 @@
 
 Folgend eine Übersicht der Änderungen und Features zu MetaModels 2.6, die durch das
 "**early adopter Programm**" (EAP) ermöglicht wurden/werden - mehr dazu unter **Fundraising** auf der
-`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-5>`_.
+`MM Webseite <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-6>`_.
 
-Für einen **Check nach einem Upgrade** zu MM 2.5 sind :ref:`unten weitere Hinweise <check_upgrade_mm250>`.
+Für einen **Check nach einem Upgrade** zu MM 2.6 sind :ref:`unten weitere Hinweise <check_upgrade_mm260>`.
 
 
 Allgemein und Core
