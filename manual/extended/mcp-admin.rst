@@ -22,6 +22,22 @@ die ebenfalls über diesen Server angeboten wird.
    Konfiguration ist deshalb standardmäßig ausgeschaltet** und für Entwicklungssysteme gedacht - nicht für
    Live-Seiten.
 
+.. admonition:: Kurzanleitung für KI-Clients (z. B. Codex oder Claude Code)
+
+   Ein KI-Programm findet den MCP-Server nicht von selbst, die Adresse muss ihm einmal mitgeteilt werden. Die
+   Erweiterung muss dafür auf der Seite installiert sein, siehe :ref:`unten <rst_extended_mcp-admin_install>`.
+
+   * **Adresse des Servers:** ``https://<Domain>/contao/mcp``
+   * **Codex:** ``codex mcp add contao --url https://<Domain>/contao/mcp`` und danach ``codex mcp login contao``
+   * **Claude Code:** ``claude mcp add --transport http contao https://<Domain>/contao/mcp`` und danach im Programm
+     ``/mcp`` aufrufen und den Server anmelden
+   * **Anmeldung:** Der Client öffnet das Backend im Browser. Dort anmelden (Passwort tippt immer der Mensch) und auf der
+     Seite *„Connect … with Contao?“* zustimmen. Das Passwort und Tokens werden nie in den Chat des Agenten kopiert.
+   * **Danach:** Eine neue Sitzung des Clients starten, die Werkzeuge ``metamodels_*`` und ``contao_api_*`` erscheinen dann.
+
+   Wer einen Agenten bittet, die Seite zu lesen: Nicht jeder Client kann Handbuchseiten abrufen. In dem Fall hilft es, den Text
+   dieser Kurzanleitung in den Chat zu kopieren.
+
 Voraussetzungen
 ---------------
 
@@ -31,6 +47,8 @@ Voraussetzungen
 * für den Zugriff auf Datensätze zusätzlich :ref:`metamodels/contao-api <rst_extended_contao-api>`
 * Ein Administrator-Konto im Backend - alle Werkzeuge erfordern die Rolle ``ROLE_ADMIN``
 
+
+.. _rst_extended_mcp-admin_install:
 
 Installation per Composer
 -------------------------
