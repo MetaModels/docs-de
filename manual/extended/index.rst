@@ -30,6 +30,8 @@ sind auf `Github <https://github.com/MetaModels>`_ zu finden.
     changelanguage-bridge
     erd-viewer
     health-check
+    contao-api
+    mcp-admin
 
 
 weitere bekannte Erweiterungen
