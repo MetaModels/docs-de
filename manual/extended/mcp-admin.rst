@@ -27,8 +27,14 @@ die ebenfalls über diesen Server angeboten wird.
    Ein KI-Programm findet den MCP-Server nicht von selbst, die Adresse muss ihm einmal mitgeteilt werden. Die
    Erweiterung muss dafür auf der Seite installiert sein, siehe :ref:`unten <rst_extended_mcp-admin_install>`.
 
-   * **Adresse des Servers:** ``https://<Domain>/contao/mcp``
-   * **Codex:** ``codex mcp add contao --url https://<Domain>/contao/mcp`` und danach ``codex mcp login contao``
+   **Die Einrichtung führt der Mensch selbst im Terminal aus.** Ein Agent im Chat kann das nicht für dich tun: Er läuft
+   meist in einer Sandbox ohne Zugriff auf deinen Rechner und die Konfiguration des Clients, und die Anmeldung im Backend
+   bestätigst du im Browser. Der Agent kann dir die Befehle erklären, ausführen musst du sie.
+
+   * **Adresse des Servers:** ``https://<Domain>/contao/mcp`` - bei einer lokalen Entwicklungsumgebung z. B.
+     ``http://127.0.0.1:8027/contao/mcp``
+   * **Codex:** ``codex mcp add contao --url https://<Domain>/contao/mcp`` und danach ``codex mcp login contao`` -
+     lokal also z. B. ``codex mcp add contao --url http://127.0.0.1:8027/contao/mcp``
    * **Claude Code:** ``claude mcp add --transport http contao https://<Domain>/contao/mcp`` und danach im Programm
      ``/mcp`` aufrufen und den Server anmelden
    * **Anmeldung:** Der Client öffnet das Backend im Browser. Dort anmelden (Passwort tippt immer der Mensch) und auf der
