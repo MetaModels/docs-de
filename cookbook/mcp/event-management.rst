@@ -178,3 +178,18 @@ Bei Korrekturen fordert man den Agenten auf, **die Hilfe und die Hinweise des Pl
 Solange Datensätze in den Tabellen stehen, verweigert ``metamodels_undo`` das Zurücknehmen der MetaModels. Seiten,
 Artikel und Inhaltselemente stehen nicht im Journal, sie entstehen über die Contao-API. Mehr dazu unter
 :ref:`Zurücknehmen <rst_extended_mcp-admin>`.
+
+
+Wie es weitergehen kann
+-----------------------
+
+Das Rezept endet bei der **Einrichtung**: MetaModels, Eingabemaske, Render-Einstellungen, Filter, Seiten und
+Beispieldaten. Die **Anpassung der Templates** ist nicht Teil davon und wurde im Test nicht behandelt. Sie ist der
+nächste Schritt, denn die Ausgabe im Frontend entspricht danach dem Standard der Render-Einstellung. Zum Beispiel:
+
+* ein Hinweis "Abgesagt" bei Events mit gesetzter Checkbox ``cancelled``, in der Liste und auf der Detailseite,
+* die Darstellung von Bild, Datum und Ort in der Liste und der Aufbau der Detailseite,
+* Klassen und Gestaltung für das eigene Layout.
+
+Die Werkzeuge schreiben keine Templates. Man legt sie von Hand an, siehe :ref:`Templates <rst_cookbook_templates_index>`,
+oder bespricht sie mit dem Agenten in einem eigenen Schritt, mit den Angaben, was das Template zeigen soll.
