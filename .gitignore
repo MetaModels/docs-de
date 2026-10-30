@@ -4,3 +4,4 @@
 .idea/
 *.docx
 *.tmp
+/.claude/
