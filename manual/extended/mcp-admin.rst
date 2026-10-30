@@ -22,28 +22,6 @@ die ebenfalls über diesen Server angeboten wird.
    Konfiguration ist deshalb standardmäßig ausgeschaltet** und für Entwicklungssysteme gedacht - nicht für
    Live-Seiten.
 
-.. admonition:: Kurzanleitung für KI-Clients (z. B. Codex oder Claude Code)
-
-   Ein KI-Programm findet den MCP-Server nicht von selbst, die Adresse muss ihm einmal mitgeteilt werden. Die
-   Erweiterung muss dafür auf der Seite installiert sein, siehe :ref:`unten <rst_extended_mcp-admin_install>`.
-
-   **Die Einrichtung führt der Mensch selbst im Terminal aus.** Ein Agent im Chat kann das nicht für dich tun: Er läuft
-   meist in einer Sandbox ohne Zugriff auf deinen Rechner und die Konfiguration des Clients, und die Anmeldung im Backend
-   bestätigst du im Browser. Der Agent kann dir die Befehle erklären, ausführen musst du sie.
-
-   * **Adresse des Servers:** ``https://<Domain>/contao/mcp`` - bei einer lokalen Entwicklungsumgebung z. B.
-     ``http://127.0.0.1:8027/contao/mcp``
-   * **Codex:** ``codex mcp add contao --url https://<Domain>/contao/mcp`` und danach ``codex mcp login contao`` -
-     lokal also z. B. ``codex mcp add contao --url http://127.0.0.1:8027/contao/mcp``
-   * **Claude Code:** ``claude mcp add --transport http contao https://<Domain>/contao/mcp`` und danach im Programm
-     ``/mcp`` aufrufen und den Server anmelden
-   * **Anmeldung:** Der Client öffnet das Backend im Browser. Dort anmelden (Passwort tippt immer der Mensch) und auf der
-     Seite *„Connect … with Contao?“* zustimmen. Das Passwort und Tokens werden nie in den Chat des Agenten kopiert.
-   * **Danach:** Eine neue Sitzung des Clients starten, die Werkzeuge ``metamodels_*`` und ``contao_api_*`` erscheinen dann.
-
-   Wer einen Agenten bittet, die Seite zu lesen: Nicht jeder Client kann Handbuchseiten abrufen. In dem Fall hilft es, den Text
-   dieser Kurzanleitung in den Chat zu kopieren.
-
 Voraussetzungen
 ---------------
 
@@ -53,8 +31,6 @@ Voraussetzungen
 * für den Zugriff auf Datensätze zusätzlich :ref:`metamodels/contao-api <rst_extended_contao-api>`
 * Ein Administrator-Konto im Backend - alle Werkzeuge erfordern die Rolle ``ROLE_ADMIN``
 
-
-.. _rst_extended_mcp-admin_install:
 
 Installation per Composer
 -------------------------
@@ -249,7 +225,7 @@ ihren Attribut- und Filtertypen kommen deshalb aus einer Metadaten-Datei des Rep
   - nur ein Verweis, der Text bleibt im Handbuch.
 
 Die Datei wird unter ``https://metamodels.github.io/mcp-metadata/metadata.json`` veröffentlicht. Die Erweiterung holt sie
-von dort (nur über https), behält sie einen Tag und merkt sich die letzte gute Fassung. Ist der Server nicht erreichbar,
+von dort (nur über https), behält sie einen Tag und merkt sich die letzte valide Fassung. Ist der Server nicht erreichbar,
 wird die Datei verwendet, die mit der Erweiterung ausgeliefert wird.
 
 Ein System ohne Internetzugang oder eines, das solche Anfragen nicht senden darf, schaltet das Abrufen aus:
