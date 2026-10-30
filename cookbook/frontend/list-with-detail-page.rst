@@ -22,10 +22,12 @@ Der Eintrag auf der Detailseite wird über einen Alias gefunden, der in der URL 
 ``/veranstaltung/forum-fuer-sport-2026-11-07``. Dafür legt man ein Attribut :ref:`Alias <component_attribute_alias>` an
 - bei einem mehrsprachigen MetaModel :ref:`Übersetzter Alias <component_attribute_translatedalias>`.
 
-Wichtig sind drei Einstellungen:
+Wichtig sind vier Einstellungen:
 
 * **Felder für den Alias**: Titel und Startdatum. Das Datum macht den Alias auch dann unterscheidbar, wenn zwei Events
   den gleichen Titel haben.
+* **Pflichtfelder**: Die Attribute, aus denen der Alias entsteht, setzt man in der Eingabemaske auf "Pflichtfeld". Bleibt eines
+  leer, ist der Alias unvollständig und ändert sich, sobald es später gefüllt wird - und mit ihm der Link zur Detailseite.
 * **Eindeutige Werte**: Die Option in den allgemeinen Attribut-Einstellungen stellt sicher, dass der Alias nur einmal
   vorkommt.
 * **Immer aktualisieren**: Der Alias wird bei jedem Speichern neu erzeugt. Ohne diese Option bleibt ein einmal

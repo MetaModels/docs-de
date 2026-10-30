@@ -20,11 +20,11 @@ andere Webseiten an die folgende E-Mail senden: |manual@metamodel.me|
     inputmask/index.rst
     filter/index.rst
     frontend/index.rst
+    mcp/index.rst
     templates/index.rst
     tips/index.rst
     specials/index.rst
     other-tutorials/index.rst
-    reference/index.rst
 
 .. _manual@metamodel.me: manual\@metamodel.me?Subject=Mein%20Rezept%20f%FCr%20das%20MM-Kochbuch&Body=Mein%20Rezept%3A%0A
 

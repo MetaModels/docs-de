@@ -102,7 +102,7 @@ Typen von Filterregeln
 
 
 Einstellungsparameter
---------------------
+---------------------
 
 Die unterschiedlichen Filterregeln können über spezifische Einstellungsmöglichkeiten an die
 individuellen Vorgaben angepasst werden. Bei den meisten Filterregeln sind folgende Parameter
@@ -148,6 +148,7 @@ eingefügt werden.
 
 
 .. _component_filter_list:
+
 Details aller Filterregeln
 --------------------------
 

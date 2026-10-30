@@ -119,7 +119,8 @@ Die MCP-Administration ergänzt den Server von Contao um folgende Elemente:
        Filter.
    * - ``metamodels_describe``
      - Werkzeug
-     - Die Konfiguration eines MetaModels: Attribute, Eingabemasken mit Feldern, Render-Einstellungen, Filter.
+     - Die Konfiguration eines MetaModels: Attribute, Eingabemasken mit Feldern und Ansichtsbedingungen,
+       Render-Einstellungen, Filter.
    * - ``metamodels_check_types``
      - Werkzeug
      - Prüft die Typen, die eine Aufgabe braucht: Fehlende werden mit dem ``composer require``-Befehl genannt.
@@ -148,6 +149,8 @@ Beispiele für Aufträge an den Agenten:
 * *„Ich brauche ein MetaModel für Veranstaltungen mit Titel, Datum, Ort und einem Preis. Welche Pakete brauche ich?“*
 * *„Lege das MetaModel an und zeige mir vorher den Plan.“*
 * *„Zeige mir alle Mitarbeiter der Abteilung Vertrieb.“* (über die Contao-API)
+
+Ein ausführliches Beispiel steht im Kochbuch: :ref:`Eventverwaltung mit einem KI-Agenten <rst_cookbook_mcp_event-management>`.
 
 
 Pakete prüfen und Zugang
@@ -181,6 +184,16 @@ Der Ablauf besteht aus drei Schritten:
 Ein MetaModel braucht eine Eingabemaske und Render-Einstellungen, die den Backend-Benutzern zugeordnet sind, damit es
 im Backend geöffnet werden kann. Beides wird für das erste MetaModel automatisch angelegt.
 
+Ein Feld der Eingabemaske kann an eine :ref:`Ansichtsbedingung <component_dca_visibility-conditions>` geknüpft werden,
+z. B. das Enddatum eines Events nur dann, wenn die Checkbox "Mehrtägig" gesetzt ist. Der Agent legt sie beim Feld an
+(``conditions``). Dabei gilt:
+
+* Die Bedingungen einer Ebene sind mit UND verknüpft, ein Wrapper ``conditionand`` ist nicht nötig.
+* Das Feld des Attributs, auf das sich die Bedingung bezieht (hier "Mehrtägig"), braucht die Option "Absenden bei
+  Änderungen". Ohne sie zeigt das Backend die Wirkung erst nach dem Speichern. Der Planer weist darauf hin.
+* Die Typen kommen aus dem Core: *Eigenschaftswert ist*, *Eigenschaft enthält einen von*, *Eigenschaft ist sichtbar*
+  sowie die Container *UND*, *ODER* und *NICHT*.
+
 Nach dem Anlegen kennt die Contao-API das MetaModel sofort. Damit es im Frontend erscheint, legt der Agent Seite,
 Artikel und ein Inhaltselement vom Typ *MetaModel-Liste* (``metamodel_content``) an.
 
@@ -189,7 +202,7 @@ Die Beschreibung ist der **gewünschte Zustand**, auch für Vorhandenes: Der Pla
 alles andere bleibt unberührt.
 
 Nicht unterstützt (wird als Problem gemeldet): ein anderer Typ oder eine andere Spalte für ein vorhandenes Attribut,
-ein anderer Typ oder ein anderes Attribut für eine vorhandene Filterregel, Sprachen hinzufügen, Varianten umschalten
+ein anderer Typ oder ein anderes Attribut für eine vorhandene Filterregel oder Ansichtsbedingung, Sprachen hinzufügen, Varianten umschalten
 und die Reihenfolge ändern. Gelöscht wird nichts - außer beim Zurücknehmen eines Schreibvorgangs.
 
 
@@ -255,3 +268,57 @@ Konfiguration
            ttl: 86400
 
 ``journal_dir`` legt fest, wo die Journale der Schreibvorgänge liegen. Mit ``write`` wird das Schreiben freigegeben.
+
+
+Tipps und häufige Fragen
+------------------------
+
+Ein vollständiges Beispiel Schritt für Schritt steht im Kochbuch unter
+:ref:`Eventverwaltung mit einem KI-Agenten <rst_cookbook_mcp_event-management>`.
+
+**Wie geht man am besten vor?**
+
+* In kleinen Schritten, nach jedem Schritt das Ergebnis prüfen (Backend, Frontend).
+* Zuerst **planen** lassen ("Plane …, schreibe noch nichts"), den Plan lesen und korrigieren, erst dann anwenden.
+* Sagen, was **nicht** geschehen soll ("Seiten und Datensätze kommen erst im nächsten Schritt").
+* Den Agenten nach jedem Schreibvorgang die ``journal_id`` nennen lassen.
+* Bei Unklarheiten fragen lassen: "Wo etwas nicht mit den Werkzeugen geht, sag es mir."
+
+**Der Agent findet die Werkzeuge nicht.**
+Manche Agenten laden die Werkzeuge erst nach einigen Sekunden. Im Prompt nennt man den Server beim Namen (z. B. "nutze
+den MCP-Server contao") und die Adresse des Servers. Bei einer abgelaufenen Anmeldung hilft eine erneute Anmeldung
+(bei Codex ``codex mcp login contao``).
+
+**Der Agent meldet, ein Typ sei nicht installiert.**
+Dann fehlt ein Paket, zum Beispiel für Mehrsprachigkeit (``attribute_translated*``). Der Agent nennt das Paket und
+den Zugang. Man installiert es selbst und lässt die Typen mit ``metamodels_check_types`` erneut prüfen. Der Agent soll
+nicht auf eine Variante ausweichen, die die Aufgabe verfehlt (etwa einsprachig statt mehrsprachig).
+
+**Soll man "mehrsprachig" sagen?**
+Ja, mit den Sprachen und der Standardsprache ("DE, EN, FR - DE ist Standard"). Dazu gehört, welche Felder übersetzt
+werden sollen und welche für alle Sprachen gelten (z. B. Kontaktfelder).
+
+**Was kann der Agent nicht?**
+
+* Templates schreiben (z. B. ein Badge "Abgesagt" in der Ausgabe),
+* die Reihenfolge von Attributen und Feldern ändern, etwas löschen und Spalten umbenennen,
+* Sprachen hinzufügen und Varianten umschalten,
+* Pakete installieren.
+
+Er soll das sagen und einen Weg im Backend nennen. Tut er es nicht, fragt man danach.
+
+**Die Daten stehen im Backend, aber die Detail-Links fehlen.**
+Den Alias erzeugt MetaModels beim Speichern im Backend. Wer Datensätze über die Contao-API anlegt, muss den
+Alias-Wert mitgeben. Die Attribute, aus denen der Alias entsteht (z. B. Titel und Datum), sollten Pflichtfelder sein, sonst
+ist der Alias unvollständig und ändert sich später (siehe :ref:`Liste mit Detailseite <rst_cookbook_frontend_list-with-detail-page>`).
+
+**Die Liste zeigt auch unveröffentlichte Einträge.**
+Der Filter braucht die Regel *Checkbox-Status* (Paket ``attribute_checkbox``) auf das Attribut "veröffentlicht". Die Regel
+"Ja / Nein" (``filter_checkbox``) ist ein Widget für die Besucher und filtert nur, wenn jemand sie bedient.
+
+**Was ist, wenn sich die Antwort des Agenten nach einem Update ändert?**
+Die Hilfe (``metamodels://guide/overview``) und die Hinweise des Planers werden beim Start des Gesprächs geladen.
+Man bittet den Agenten, sie neu zu laden, wenn das System oder die Erweiterung aktualisiert wurde.
+
+**Ist das für Live-Seiten geeignet?**
+Nein, das Schreiben ist für Entwicklungssysteme gedacht. Der Agent handelt mit den Rechten des Backend-Benutzers.
