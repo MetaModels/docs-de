@@ -54,13 +54,14 @@ Typen von Filterregeln
 * **ODER-Bedingung (OR)** (core): |br|
   Container für weitere Filterregeln mit ODER-Verknüpfung; Option, dass nur erste Regel ausgeführt wird
   (Checkbox "Nach erstem Treffer beenden")
-* **Checkbox-Status** (filter_checkbox): |br|
-  prüft ein Attributwert auf 1; (ehem. "Veröffentlichungsstatus"); eigenes Template mm_filteritem_checkbox(.html5)
-* **Übersetzter Checkbox-Status** (filter_checkbox): |br|
-  prüft ein übersetzten Attributwert auf 1; (ehem. "Übersetzter Veröffentlichungsstatus"); eigenes Template
-  mm_filteritem_checkbox(.html5)
+* **Checkbox-Status** (attribute_checkbox): |br|
+  prüft ein Attributwert auf 1; (ehem. "Veröffentlichungsstatus"); die Regel für "nur veröffentlichte Items", ohne
+  Frontend-Widget
+* **Übersetzter Checkbox-Status** (attribute_translatedcheckbox): |br|
+  prüft ein übersetzten Attributwert auf 1; (ehem. "Übersetzter Veröffentlichungsstatus"); ohne Frontend-Widget
 * **Ja / Nein** (filter_checkbox): |br|
-  Ja/Nein-Auswahl z.B. als Radio-Buttons
+  Ja/Nein-Auswahl für die Besucher z.B. als Radio-Buttons; ein Widget, das erst filtert, wenn gewählt wird;
+  eigenes Template mm_filteritem_checkbox(.html5)
 * **Wert von/bis für ein Feld** (filter_fromto): |br|
   von/bis-Auswahl für Werte eines Attributwerts
 * **Wert von/bis für ein Datumsfeld** (filter_fromto): |br|

@@ -46,7 +46,7 @@ Varianten überschreiben) bietet das Checkbox-Attribut folgende spezifische Opti
        eines Datensatzes direkt per Klick umgeschaltet werden. Als Spaltenname wird
        hierfür üblicherweise ``published`` verwendet. Die eigentliche Filterung der
        veröffentlichten Datensätze im Frontend muss separat über ein Filterset mit
-       der Filterregel "Checkbox-Status" eingerichtet werden.
+       der Filterregel :ref:`"Checkbox-Status" <component_filter_checkbox>` eingerichtet werden.
    * - Invertierte Anzeigeoption
      - Kehrt den Umschaltstatus des Icons um: Ein aktiviertes Kontrollkästchen
        (Wert ``1``) zeigt dann das inaktive Symbol, ein deaktiviertes zeigt das
@@ -145,9 +145,9 @@ Das Checkbox-Attribut kann mit folgenden Filterregeln verwendet werden:
 
    * - Filterregel
      - Hinweis
-   * - Checkbox-Status
-     - Prüft, ob der Checkbox-Wert gleich ``1`` ist. Wird typischerweise für die
-       Veröffentlichungssteuerung eingesetzt. Die Filterregel bietet zwei
+   * - :ref:`Checkbox-Status <component_filter_checkbox>`
+     - Prüft, ob der Checkbox-Wert gleich ``1`` ist (Paket ``attribute_checkbox``). Wird für die
+       Veröffentlichungssteuerung eingesetzt, ohne Frontend-Widget. Die Filterregel bietet zwei
        Zusatzoptionen:
 
        * **Überschreiben erlauben** – Ein URL-Parameter kann die Filterregel
@@ -158,6 +158,9 @@ Das Checkbox-Attribut kann mit folgenden Filterregeln verwendet werden:
    * - Einfache Abfrage
      - Filtert nach einem bestimmten Checkbox-Wert über einen URL-Parameter;
        sinnvoll wenn Besucher selbst nach aktiv/inaktiv filtern sollen.
+   * - Ja / Nein
+     - Widget für die Besucher (Paket ``filter_checkbox``, :ref:`siehe Filterregel <component_filter_yes-no>`): Die
+       Besucher wählen selbst Ja oder Nein. Nicht für die Veröffentlichungssteuerung geeignet.
 
 
 Sonderfunktionen
@@ -169,7 +172,8 @@ Ist "Wechselicon" aktiv, registriert MetaModels eine Toggle-Operation in der
 Backend-Listenansicht. Ein Klick auf das Icon wechselt den Wert des Datensatzes
 direkt zwischen ``1`` und ``''``, ohne das Bearbeitungsformular öffnen zu müssen.
 Die Filterung der veröffentlichten Datensätze im Frontend muss über ein eigenes
-Filterset mit der Filterregel "Checkbox-Status" (Paket ``filter_checkbox``) erfolgen.
+Filterset mit der Filterregel :ref:`"Checkbox-Status" <component_filter_checkbox>` (Paket ``attribute_checkbox``)
+erfolgen - nicht mit der Regel "Ja / Nein", die ein Widget für die Besucher ist.
 
 **Invertierter Modus**
 

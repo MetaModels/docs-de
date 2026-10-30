@@ -3,7 +3,8 @@
 |svg_filt_translated_checkbox_22| |img_filter_checkbox| Übersetzter Checkbox-Status
 ===================================================================================
 
-Die Filterregel "Übersetzter Checkbox-Status" (Paket ``filter_checkbox``) prüft, ob
+Die Filterregel "Übersetzter Checkbox-Status" (Paket ``attribute_translatedcheckbox``, im Backend als "Übersetzter
+Veröffentlichungsstatus" bezeichnet) prüft, ob
 der Wert eines übersetzten Checkbox-Attributs gleich ``1`` (aktiv) ist. Sie entspricht
 in ihrer Funktion der Filterregel :ref:`component_filter_checkbox`, ist jedoch
 für den Einsatz mit dem Attributtyp
@@ -12,7 +13,11 @@ MetaModels vorgesehen.
 
 Der übersetzte Checkbox-Status wird sprachabhängig ausgewertet: In der aktiven
 Sprache wird der Wert der übersetzten Checkbox geprüft. Damit können
-Veröffentlichungszustände pro Sprache gesteuert werden.
+Veröffentlichungszustände pro Sprache gesteuert werden. Wie beim :ref:`Checkbox-Status <component_filter_checkbox>`
+gibt die Regel kein Widget im Frontend aus und fügt der URL keinen Parameter hinzu.
+
+.. warning:: Die Regel "Ja / Nein" (Paket ``filter_checkbox``) ist dagegen ein Widget für die Besucher und für die
+   Veröffentlichungssteuerung nicht geeignet, siehe :ref:`component_filter_yes-no`.
 
 .. seealso:: Für einsprachige MetaModels steht die Filterregel
    :ref:`component_filter_checkbox` zur Verfügung.
@@ -25,14 +30,13 @@ Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
 
 .. code-block:: bash
 
-   composer require metamodels/filter_checkbox
+   composer require metamodels/attribute_translatedcheckbox
 
 
 Einstellungen beim Anlegen der Filterregel
 ------------------------------------------
 
-Die Einstellungen entsprechen vollständig denen der Filterregel
-:ref:`component_filter_checkbox`. Lediglich der Attributtyp muss ein
+Die Einstellungen entsprechen denen der Filterregel :ref:`component_filter_checkbox`. Lediglich der Attributtyp muss ein
 :ref:`component_attribute_translatedcheckbox` sein.
 
 .. list-table::
@@ -49,20 +53,10 @@ Die Einstellungen entsprechen vollständig denen der Filterregel
      - Freitextfeld zur Beschreibung des Zwecks dieser Filterregel.
    * - Attribut
      - Das übersetzte Checkbox-Attribut, dessen Wert geprüft werden soll.
-   * - URL-Parameter
-     - Der Schlüssel (Key) des URL-Parameters für die Übergabe des Filterwerts.
-       Ohne Angabe wird der Spaltenname des Attributs verwendet. Mit ``auto_item``
-       wird nur der Wert – ohne Schlüssel – in die URL eingebaut.
-   * - URL-Typ für den Parameter
-     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
-       SEO <rst_cookbook_tips_seo_filter-url>`
-
-Einstellungen für das Frontend-Widget
---------------------------------------
-
-Identisch mit den Einstellungen der Filterregel
-:ref:`component_filter_checkbox` – es stehen dieselben Optionen
-(URL-Parameter, Modus, Template usw.) zur Verfügung.
+   * - Überschreiben erlauben
+     - Ein URL-Parameter kann die Filterregel außer Kraft setzen (z. B. für Vorschaulinks).
+   * - Filter nicht in Frontendvorschau nutzen
+     - Die Filterregel wird übersprungen, wenn ein Backend-Benutzer die Contao-Frontend-Vorschau nutzt.
 
 
 Passende Attribute

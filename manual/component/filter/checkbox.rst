@@ -3,14 +3,15 @@
 |svg_filt_checkbox_22| |img_filter_checkbox| Checkbox-Status
 ============================================================
 
-Die Filterregel "Checkbox-Status" (Paket ``filter_checkbox``) prüft, ob der Wert
-eines Checkbox-Attributs gleich ``1`` (aktiv) ist. Sie wird typischerweise für
-die Veröffentlichungssteuerung eingesetzt: Nur Items mit aktivierter Checkbox
-(z. B. ``published = 1``) werden im Frontend angezeigt.
+Die Filterregel "Checkbox-Status" (Paket ``attribute_checkbox``) prüft, ob der Wert eines Checkbox-Attributs gleich
+``1`` (aktiv) ist. Sie wird für die Veröffentlichungssteuerung eingesetzt: Nur Items mit aktivierter Checkbox (z. B.
+``published = 1``) werden im Frontend angezeigt. Die Regel gibt **kein** Widget im Frontend aus und fügt der URL keinen
+Parameter hinzu.
 
-Diese Filterregel agiert in der Regel ohne Frontend-Widgetausgabe, kann aber
-auch so konfiguriert werden, dass Besucher den Checkbox-Status über ein
-Frontend-Widget selbst wählen können.
+.. warning:: Nicht verwechseln mit der Filterregel :ref:`"Ja / Nein" <component_filter_yes-no>` (Paket
+   ``filter_checkbox``): Das ist ein Widget für die Besucher. Es filtert erst, wenn jemand etwas auswählt, und es setzt
+   einen Parameter wie ``published/1`` in jede URL, die der Filter erzeugt, auch in die Links einer Liste zur
+   Detailseite. Für "nur veröffentlichte Items" ist immer der "Checkbox-Status" richtig.
 
 .. seealso:: Für mehrsprachige MetaModels steht die Filterregel
    :ref:`component_filter_translated-checkbox` zur Verfügung.
@@ -23,7 +24,7 @@ Die Filterregel wird über den **Contao Manager** oder **Composer** installiert:
 
 .. code-block:: bash
 
-   composer require metamodels/filter_checkbox
+   composer require metamodels/attribute_checkbox
 
 
 Einstellungen beim Anlegen der Filterregel
@@ -36,52 +37,18 @@ Einstellungen beim Anlegen der Filterregel
    * - Einstellung
      - Beschreibung
    * - Typ
-     - Auswahl des Filterregeltyps – hier: "Checkbox-Status" (bzw. "Ja / Nein"
-       im Backend-Auswahlmenü).
+     - Auswahl des Filterregeltyps – hier: "Checkbox-Status".
    * - Aktiviert
      - Aktiviert oder deaktiviert diese Filterregel.
    * - Kommentar
      - Freitextfeld zur Beschreibung des Zwecks dieser Filterregel.
    * - Attribut
      - Das Checkbox-Attribut, dessen Wert geprüft werden soll.
-
-
-Einstellungen für das Frontend-Widget
---------------------------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 75
-
-   * - Einstellung
-     - Beschreibung
-     - Der Schlüssel (Key) des URL-Parameters für die Übergabe des Filterwerts.
-       Ohne Angabe wird der Spaltenname des Attributs verwendet. Mit ``auto_item``
-       wird nur der Wert – ohne Schlüssel – in die URL eingebaut.
-   * - URL-Typ für den Parameter
-     - Legt fest, ob der Parameter als Slug (sprechende URL), als GET-Parameter übergeben wird (ab MM 2.4) - :ref:`siehe
-       SEO <rst_cookbook_tips_seo_filter-url>`
-   * - Label
-     - Beschriftung des Filterwidgets im Frontend.
-   * - Label beim Filterwidget ausblenden
-     - Unterdrückt die Ausgabe des Labels im Frontend.
-   * - Template
-     - Template für die Ausgabe des Filterwidgets. Standard: ``mm_filteritem_default``;
-       für Checkbox-spezifische Ausgaben: ``mm_filteritem_checkbox``.
-   * - Modus
-     - Legt fest, ob die Filterregel als Ja-Checkbox, Nein-Checkbox oder als
-       Radio-Buttons (Ja/Nein-Auswahl) konfiguriert ist:
-
-       * **Ja-Checkbox** – Filtert auf ``1`` (aktiv)
-       * **Nein-Checkbox** – Filtert auf ``0`` bzw. leer (inaktiv)
-       * **Radio-Buttons** – Gibt Ja/Nein-Radio-Buttons aus; zusätzliche Option
-         "Leere Auswahl ermöglichen" (``blankoption``) erscheint
-   * - "Ja/Nein" anstatt Attribut-Name
-     - Zeigt "Ja/Nein" anstelle des Attributnamens im Widget an.
-   * - Optionsbezeichnung als Parameter
-     - Der URL-Parameterwert ist die Bezeichnung der Option (Text) statt einer Zahl.
-   * - CSS-ID/Klasse
-     - Setzt eine CSS-ID oder -Klasse am Filterwidget-Element.
+   * - Überschreiben erlauben
+     - Ein URL-Parameter kann die Filterregel außer Kraft setzen (z. B. für Vorschaulinks).
+   * - Filter nicht in Frontendvorschau nutzen
+     - Die Filterregel wird übersprungen, wenn ein Backend-Benutzer die Contao-Frontend-Vorschau nutzt. Die Option
+       "Unveröffentlichte Elemente anzeigen" wird dann ignoriert.
 
 
 Passende Attribute
@@ -97,16 +64,14 @@ Sonderfunktionen
 
 **Veröffentlichungssteuerung**
 
-Der häufigste Einsatzfall ist die Filterregel als "Veröffentlichungsfilter":
-Ein Checkbox-Attribut (typischer Spaltenname: ``published``) mit aktivierter
-"Wechselicon"-Option im Backend erlaubt das schnelle Aktivieren/Deaktivieren von
-Items. Im Frontend filtert die Filterregel "Checkbox-Status" die inaktiven Items
-heraus.
+Der häufigste Einsatzfall ist die Filterregel als "Veröffentlichungsfilter": Ein Checkbox-Attribut (typischer
+Spaltenname: ``published``) mit aktivierter "Wechselicon"-Option im Backend erlaubt das schnelle
+Aktivieren/Deaktivieren von Items. Im Frontend filtert die Filterregel "Checkbox-Status" die inaktiven Items heraus -
+auch dann, wenn ein Besucher den Link zu einem Item als Lesezeichen gespeichert hat und der Filter zur Detailseite
+gehört.
 
-**Template mm_filteritem_checkbox**
-
-Das mitgelieferte Template ``mm_filteritem_checkbox.html5`` bietet eine
-checkboxspezifische Ausgabe für das Filterwidget.
+Die Filterregeln einer Ebene sind immer mit UND verknüpft: Der "Checkbox-Status" steht also einfach neben den anderen
+Regeln des Filters, es braucht dafür keine Regel "UND".
 
 
 .. |svg_filt_checkbox_22| image:: /_img/icons_svg/filter_checkbox.svg
