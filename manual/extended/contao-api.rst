@@ -116,6 +116,9 @@ Die Werte werden pro Attributtyp in ein passendes JSON-Format umgewandelt, z. B.
 Mehrfachauswahlen als Liste und Dateien als Liste der UUIDs. Die Antwort ist eine Hydra-Collection mit
 ``totalItems`` und den Links zu den Seiten.
 
+Attribute vom Typ *Zeitstempel* (Datum, Uhrzeit) werden als **Unix-Zeitstempel** ausgegeben und erwartet: eine Ganzzahl
+in Sekunden, z. B. ``1798675200`` für den 31.12.2026, 00:00 Uhr UTC.
+
 
 Mehrsprachige MetaModels
 ------------------------
@@ -147,6 +150,11 @@ wird der Inhalt geprüft:
   und der Worker läuft), ebenso der Index des :ref:`Loupe-Filters <rst_extended_loupe>`. Ein Fehler dabei bricht das
   Speichern nicht ab, er wird im Log als Warnung vermerkt.
 
+* Der **HTTP-Cache** wird wie im Backend informiert: Nach dem Speichern und Löschen verfallen die Cache-Tags der Tabelle
+  (``contao.db.<Tabelle>``) und des Items (``contao.db.<Tabelle>.<id>``). Die Listen von MetaModels (Modul und
+  Inhaltselement) tragen beide Tags, damit auch neue Items, Items, die erst durch eine Änderung zum Filter passen, und
+  leere Listen im Cache ablaufen. Ohne HTTP-Cache mit Tag-Unterstützung geschieht nichts.
+
 Andere Erweiterungen können auf das Speichern und Löschen reagieren: Die Schnittstelle löst dafür die Symfony-Ereignisse
 ``metamodels.contao-api.item-saved`` (Argumente ``metamodel`` und ``created``) und
 ``metamodels.contao-api.item-deleted`` (Argument ``metamodel``) aus. Das Item ist jeweils das Subject des Ereignisses.
@@ -163,6 +171,26 @@ Basis-Item) und ``vargroup`` (die ID des Basis-Items).
 * Die **geteilten Attribute** werden am Basis-Item geändert und an die Varianten weitergegeben.
 * Die ``vargroup`` eines vorhandenen Items kann nicht geändert werden.
 * Beim Löschen eines Basis-Items werden die Varianten mit gelöscht.
+
+
+Felder mit dem MultiColumnWizard
+--------------------------------
+
+Das API-Bundle von Contao kennt den MultiColumnWizard nicht. Das Bundle ``menatwork/contao-multicolumnwizard-bundle``
+bringt deshalb einen eigenen Konverter mit (ab Version 3.8, zurzeit der Zweig ``develop``), den es nur lädt, wenn das API-Bundle
+aktiv ist. Damit erscheinen Felder mit diesem Widget in den Ressourcen von Contao (``/contao/api/dc/…``), zum Beispiel
+die Parameter eines MetaModels-Moduls oder -Inhaltselements:
+
+* Ein Feld ist eine **Liste von Objekten**, eine Eigenschaft je Spalte. Jede Spalte wird so umgewandelt wie das Widget,
+  das sie im Backend benutzt (Text, Auswahl, Datei usw.). ``minCount`` und ``maxCount`` des Widgets gelten als Mindest-
+  und Höchstzahl der Zeilen.
+* Beim Schreiben prüft das Widget jede Zelle wie im Backend (z. B. Pflichtfelder); Fehler stehen mit dem Pfad der Zelle
+  in der Antwort (``422``).
+* Nicht unterstützt sind Felder, deren Spalten aus einer Funktion kommen (``columnsCallback``), und Felder mit einer
+  Spalte, für die es keinen Konverter gibt. Sie fehlen in der Schnittstelle, damit beim Schreiben keine Werte verloren
+  gehen.
+* Ist eine Spalte schreibgeschützt, ist das ganze Feld schreibgeschützt: Beim Hinzufügen, Entfernen oder Umsortieren von
+  Zeilen könnte der Wert dieser Spalte nicht erhalten bleiben.
 
 
 Bekannte Einschränkungen

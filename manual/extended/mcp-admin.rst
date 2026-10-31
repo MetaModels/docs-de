@@ -68,6 +68,13 @@ Bei Codex sieht das so aus:
    codex mcp add contao --url https://example.org/contao/mcp
    codex mcp login contao
 
+Bei Claude Code wird der Server als HTTP-Server eingetragen. Die Anmeldung startet man im Programm mit ``/mcp``: Server
+auswählen, *Authenticate*, im Browser anmelden und zustimmen.
+
+.. code-block:: bash
+
+   claude mcp add --transport http contao https://example.org/contao/mcp
+
 Contao erlaubt nur Clients, die sich mit einem öffentlichen Dokument (*Client ID Metadata Document*) ausweisen und
 deren Domain freigegeben ist. Vorbelegt sind ``chatgpt.com`` (Codex), ``claude.ai`` und ``vscode.dev``. Weitere Clients
 werden freigegeben mit:
@@ -79,7 +86,8 @@ werden freigegeben mit:
        cimd_trusted_domains: ['example.org']
 
 Der Server holt das Dokument des Clients selbst aus dem Internet - das System braucht dafür eine ausgehende
-Verbindung. Getestet ist die Anmeldung und der Ablauf mit Codex; ein Test mit Claude steht noch aus.
+Verbindung. Getestet sind die Anmeldung und der Ablauf mit Codex und mit Claude Code (lesen, schreiben, planen,
+anwenden und zurücknehmen).
 
 .. note:: Für den Aufruf von ``contao_api_execute`` (Daten lesen und schreiben) verlangt Codex je Aufruf eine
    Bestätigung, weil das Werkzeug nicht als *schreibgeschützt* gekennzeichnet ist.
@@ -184,6 +192,12 @@ Der Ablauf besteht aus drei Schritten:
 Ein MetaModel braucht eine Eingabemaske und Render-Einstellungen, die den Backend-Benutzern zugeordnet sind, damit es
 im Backend geöffnet werden kann. Beides wird für das erste MetaModel automatisch angelegt.
 
+Soll das MetaModel im Backend in einer **eigenen Navigationsgruppe** erscheinen, setzt der Agent an der Eingabemaske den
+Backend-Bereich. Die Gruppe selbst ist Konfiguration (``meta_models_core.be_sections`` in der ``config/config.yaml``,
+siehe :ref:`Eigene Sektion in der Backend-Navigation <rst_cookbook_tips_backend-section>`) und kann der Agent nicht
+schreiben. Er nennt, was einzutragen ist. Danach den Cache leeren. Ohne die Gruppe erscheint das MetaModel nicht in der
+Navigation.
+
 Ein Feld der Eingabemaske kann an eine :ref:`Ansichtsbedingung <component_dca_visibility-conditions>` geknüpft werden,
 z. B. das Enddatum eines Events nur dann, wenn die Checkbox "Mehrtägig" gesetzt ist. Der Agent legt sie beim Feld an
 (``conditions``). Dabei gilt:
@@ -222,6 +236,26 @@ zeigt es nur, was passieren würde. Es verweigert das Zurücknehmen und ändert 
 
 Tabellen und Spalten bleiben bestehen, die Datenbankaktualisierung löscht nichts. Ein Journal kann einmal
 zurückgenommen werden. Alle Schreibvorgänge stehen im System-Log von Contao.
+
+
+Templates
+---------
+
+Templates schreibt nicht die MCP-Administration, sondern der MCP-Server von Contao mit seinen Template-Werkzeugen
+(``contao_template_*``): Templates finden und lesen, den Code prüfen, die Nutzer eines Templates ermitteln, einen
+Override anlegen und speichern sowie Wiederherstellungspunkte anlegen, vergleichen und zurückspielen. Damit kann der
+Agent auch die Templates von MetaModels überschreiben, zum Beispiel einen Block der Seitennavigation
+(``mm_pagination``) oder des Filters (``mm_filter_default``). Die :ref:`Twig-Blöcke <component_templates_twig-blocks>`
+dieser Templates bleiben im Override erreichbar.
+
+Wichtig dabei:
+
+* Der Agent legt vor jeder Änderung einen **Wiederherstellungspunkt** an. Er gilt für das ganze Verzeichnis
+  ``templates/`` und liegt im Cache der Anwendung - er ist kein dauerhaftes Backup.
+* Die Prüfung des Codes zeigt nur, dass das Template übersetzt werden kann. Ob die Ausgabe stimmt, zeigt erst die
+  Seite im Frontend.
+* Die Analyse der Nutzer findet die Templates von MetaModels nicht: MetaModels lädt sie aus PHP, nicht über Twig. Der
+  Agent meldet dann nur nicht auflösbare Verweise. Welche Listen ein Template nutzen, muss man im Frontend prüfen.
 
 
 Wissensbasis (Metadaten)
@@ -300,7 +334,8 @@ werden sollen und welche für alle Sprachen gelten (z. B. Kontaktfelder).
 
 **Was kann der Agent nicht?**
 
-* Templates schreiben (z. B. ein Badge "Abgesagt" in der Ausgabe),
+* Templates anpassen kann er nur mit den Template-Werkzeugen von Contao (siehe oben), nicht mit der
+  MCP-Administration (z. B. ein Badge "Abgesagt" in der Ausgabe),
 * die Reihenfolge von Attributen und Feldern ändern, etwas löschen und Spalten umbenennen,
 * Sprachen hinzufügen und Varianten umschalten,
 * Pakete installieren.
