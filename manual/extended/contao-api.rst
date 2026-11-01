@@ -149,7 +149,11 @@ wird der Inhalt geprüft:
 * Der **Suchindex** der Backend-Suche von Contao wird aktualisiert (nur wenn ``contao.backend_search`` aktiviert ist
   und der Worker läuft), ebenso der Index des :ref:`Loupe-Filters <rst_extended_loupe>`. Ein Fehler dabei bricht das
   Speichern nicht ab, er wird im Log als Warnung vermerkt.
-
+* **Abgeleitete Attribute** (Alias, kombinierte Werte, Token, Index des Levenshtein-Filters) entstehen beim Anlegen eines
+  Items, auch wenn sie nicht in der Eingabemaske stehen und die Anfrage sie nicht nennt. Der Alias wird aus den
+  Quellfeldern des Attributs gebildet, wie im Backend. Das braucht MetaModels ab 2.6 (bzw. 2.5.4): Davor speicherte
+  ``saveItem()`` einem neuen Item nur die Attribute, die gesetzt waren, ein per API oder Skript angelegtes Item hatte
+  keinen Alias. Bei einem vorhandenen Item gilt wie im Backend die Einstellung des Attributs.
 * Der **HTTP-Cache** wird wie im Backend informiert: Nach dem Speichern und Löschen verfallen die Cache-Tags der Tabelle
   (``contao.db.<Tabelle>``) und des Items (``contao.db.<Tabelle>.<id>``). Die Listen von MetaModels (Modul und
   Inhaltselement) tragen beide Tags, damit auch neue Items, Items, die erst durch eine Änderung zum Filter passen, und
@@ -192,6 +196,127 @@ die Parameter eines MetaModels-Moduls oder -Inhaltselements:
 * Ist eine Spalte schreibgeschützt, ist das ganze Feld schreibgeschützt: Beim Hinzufügen, Entfernen oder Umsortieren von
   Zeilen könnte der Wert dieser Spalte nicht erhalten bleiben.
 
+
+Öffentlicher Lesezugriff
+------------------------
+
+Contao selbst bietet noch keine Schnittstelle für das Frontend: Alle Ressourcen des API-Bundles liegen unter
+``/contao/api`` und verlangen einen Backend-Benutzer. Für Seiten, die MetaModels ohne Anmeldung per JSON lesen sollen
+(z. B. mit Vue oder Stimulus), bringt die Erweiterung deshalb einen **nur lesenden Zugang** mit, der **nicht über die
+API-Plattform** läuft und außerhalb des Backends liegt:
+
+* ``GET /api/mm/<tabelle>`` liefert eine Liste, ``GET /api/mm/<tabelle>/<id>`` ein einzelnes Item.
+* Es ist **nichts öffentlich, solange es nicht in der Konfiguration steht**. Pro MetaModel werden eine
+  **Render-Einstellung** und eine **Filter-Einstellung** angegeben:
+
+  .. code-block:: yaml
+
+     # config/config.yaml
+     meta_models_contao_api:
+         public:
+             mm_veranstaltungen:
+                 render_setting: 35   # Id der Render-Einstellung
+                 filter: 16           # Id der Filter-Einstellung
+                 sort_by: startdate   # optional, Standard: id
+                 sort_direction: ASC  # optional
+                 per_page: 30         # optional, Obergrenze max_per_page (Standard 100)
+                 cache_ttl: 3600      # optional, Sekunden im gemeinsamen Cache
+
+* Die **Attribute** der Render-Einstellung sind die, die ausgegeben werden, und zwar als gerenderte Texte, wie sie auch
+  eine Liste im Frontend zeigt (z. B. ein Datum als Datum und eine Auswahl mit ihrem Label).
+* Die **Filter-Einstellung** ist Pflicht. Sie begrenzt die Items (z. B. mit der Regel *Veröffentlicht*, sonst wären
+  auch unveröffentlichte Items sichtbar) und legt die Parameter fest, die als Query-Parameter angenommen werden. Andere
+  Parameter werden ignoriert. Ein einzelnes Item muss denselben Filter erfüllen wie die Liste, sonst antwortet die
+  Schnittstelle mit ``404``.
+* Die Liste kennt ``page``, ``itemsPerPage`` und bei mehrsprachigen MetaModels ``lang``. Die Antwort enthält
+  ``total``, ``page``, ``itemsPerPage`` und ``items``. Fehler kommen ebenfalls als JSON.
+* Die Antworten sind für den HTTP-Cache freigegeben und mit ``contao.db.<tabelle>`` und
+  ``contao.db.<tabelle>.<id>`` markiert. Das Speichern eines Items im Backend oder über die Schnittstelle lässt sie
+  verfallen.
+* Es gibt keinen CORS-Header: Die Seite, die die Daten abruft, liegt auf demselben Host.
+
+Beispiel: Anzeige mit Vue
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Eine Liste mit Suche, Seitenwechsel und Detailansicht braucht nur ein wenig HTML und JavaScript, das das JSON abruft.
+Das Beispiel des Teams ist als Teil der Seitenstruktur aufgebaut, nicht als fertige HTML-Datei:
+
+* **Eine Seite** (z. B. „API Demo“) im Seitenbaum mit einem Inhaltselement **HTML**. Als Template des Elements wird
+  eine eigene Variante gewählt, ``ce_html_api_demo_events`` (Datei ``templates/ce_html_api_demo_events.html.twig``).
+  Sie enthält das Markup, die Styles und das Skript. Das Standard-Template des Elements würde ``<script>`` entfernen,
+  die Variante gibt ihren Inhalt unverändert aus. Das Feld *HTML* des Elements bleibt deshalb leer oder nimmt einen
+  Kommentar auf.
+* **Die Bibliothek** (``vue.global.prod.min.js``) liegt in einem öffentlichen Unterordner von ``files/`` (z. B.
+  ``files/api-demo/``). Der Ordner muss **öffentlich** sein: In der Dateiverwaltung den Schalter *Öffentlich* setzen, das
+  legt die Datei ``.public`` an. Danach ``contao:symlinks`` ausführen. So braucht das Beispiel kein CDN.
+* **Ausdrücke von Vue** schreibt man mit ``v-text`` und Bindungen (``:href``), nicht mit ``{{ … }}``: Contao hält diese
+  Klammern für Insert-Tags.
+* **Links mit ``#``:** Contao setzt ``<base href>`` in die Seite. Ein Link, der nur aus ``#/4`` besteht, führt deshalb auf
+  die Startseite. Das Beispiel hängt den Pfad der aktuellen Seite davor (``window.location.pathname``).
+* Die Seite ruft die Schnittstelle auf demselben Host ab, ohne Anmeldung:
+
+  .. code-block:: javascript
+
+     const query = new URLSearchParams({ page: 1, itemsPerPage: 5, q: 'api' });
+     const response = await fetch('/api/mm/mm_veranstaltungen?' + query);
+     const { total, items } = await response.json();
+
+     // Detailansicht eines Items
+     const item = await (await fetch('/api/mm/mm_veranstaltungen/4')).json();
+
+* ``q`` und weitere Parameter sind die Parameter der Filter-Einstellung (im Beispiel eine Textsuche im Titel und eine
+  im Ort). Ein unveröffentlichtes Item liefert ``404``, das Beispiel zeigt dann eine Meldung statt der Detailseite.
+
+.. warning:: Alles, was in der Render-Einstellung steht und der Filter durchlässt, ist für jeden abrufbar. Ein Attribut,
+   das nicht öffentlich sein soll, gehört nicht in die Render-Einstellung.
+
+
+Zugriff für angemeldete Mitglieder
+----------------------------------
+
+Mitglieder der Webseite können über dieselbe Schnittstelle ihre **eigenen Datensätze** lesen, anlegen, ändern und
+löschen, zum Beispiel für ein Frontend-Editing mit Vue oder Stimulus. Der Core von Contao kann (noch) keine Token für
+Mitglieder ausstellen, deshalb gilt die **Sitzung des angemeldeten Mitgliedes**: Die Seite ruft die Schnittstelle auf
+demselben Host auf, der Browser sendet das Sitzungs-Cookie mit.
+
+* Die Adressen: ``/api/member/mm/<tabelle>`` (Liste mit ``GET``, Anlegen mit ``POST``) und
+  ``/api/member/mm/<tabelle>/<id>`` (``GET``, ``PATCH``, ``DELETE``). ``GET /api/member/me`` nennt den Benutzernamen,
+  ohne Anmeldung antworten alle Adressen mit ``401``.
+* Auch hier ist **nichts erreichbar, solange es nicht in der Konfiguration steht**:
+
+  .. code-block:: yaml
+
+     # config/config.yaml
+     meta_models_contao_api:
+         member:
+             - mm_veranstaltungen
+
+* Die Rechte sind die des :ref:`Frontend-Editings <rst_extended_frontend_editing>`: Die **Eingabemaske**, die den
+  Mitgliedergruppen zugeordnet ist (:ref:`Eingabe-/Render-Zuordnungen <component_dca-combine>`), legt fest, welche
+  Attribute Mitglieder sehen und schreiben und ob sie Datensätze anlegen, bearbeiten und löschen dürfen.
+* Mit der Einstellung **Rechteprüfung** der Eingabemaske (Attribut für das Mitglied: eine Einfachauswahl auf
+  ``tl_member`` mit dem Alias ``username``) sehen und ändern Mitglieder nur Datensätze, die sie als Besitzer nennen.
+  Fremde Datensätze antworten mit ``404``. Ein angelegter Datensatz gehört dem angemeldeten Mitglied, der Inhalt der
+  Anfrage kann keinen anderen Besitzer nennen. Ohne diese Einstellung dürfen alle Mitglieder der Gruppe alle Datensätze
+  bearbeiten, wie im Frontend-Editing.
+* Das Schreiben läuft wie bei der Schnittstelle im Backend (Prüfung der Werte, Versionen, Suchindex, Cache). Fehler
+  in den Werten kommen mit ``422`` und einer Liste der Probleme. Der Alias eines neuen Datensatzes entsteht von selbst,
+  auch wenn das Attribut nicht in der Eingabemaske der Mitglieder steht.
+
+.. warning:: Eine Zuordnung für die Mitgliedergruppe ``*`` gilt für **jedes** Mitglied und gewinnt durch ihre Position.
+   Wer für die Backend-Benutzer eine eigene Zeile anlegt, gibt ihr deshalb eine Mitgliedergruppe, in der kein Mitglied
+   ist (z. B. „Gäste“), damit die Mitglieder ihre eigene Eingabemaske bekommen.
+
+Das Beispiel für Mitglieder ist eine **Unterseite einer geschützten Seite** (im Test „API Demo FEE“ unter „Mein Konto
+TEST“, geschützt für die Mitgliedergruppe). Die Unterseite erbt den Schutz, nur angemeldete Mitglieder kommen hin. Sie
+hat wie die öffentliche Seite ein Inhaltselement **HTML** mit einer Template-Variante (``ce_html_api_demo_member``), die das
+Formular zum Anlegen und Ändern und die Liste der eigenen Datensätze ausgibt. Läuft die Sitzung ab, zeigt die Seite einen
+Hinweis mit dem Link zur Anmeldung.
+
+Gegen das Einschleusen von Anfragen durch fremde Seiten (CSRF) verlangt jede ändernde Anfrage ``Content-Type:
+application/json`` und den Header ``X-Requested-With``. Beides löst bei einer fremden Seite eine Vorabprüfung aus, die
+die Schnittstelle nicht erlaubt (es gibt keinen CORS-Header). Ein Token ist dafür nicht nötig. Die Antworten sind nicht
+für den gemeinsamen Cache bestimmt.
 
 Bekannte Einschränkungen
 ------------------------

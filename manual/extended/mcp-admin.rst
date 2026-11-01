@@ -198,6 +198,15 @@ siehe :ref:`Eigene Sektion in der Backend-Navigation <rst_cookbook_tips_backend-
 schreiben. Er nennt, was einzutragen ist. Danach den Cache leeren. Ohne die Gruppe erscheint das MetaModel nicht in der
 Navigation.
 
+Für **Checkboxen** setzt der Agent zwei Dinge selbst:
+
+* Das Feld einer neuen Checkbox in der Eingabemaske bekommt die CSS-Klassen ``w50 cbx m12``, damit es mit den Feldern
+  daneben fluchtet. Eine ``tl_class``, die in den Einstellungen des Feldes steht, ersetzt sie.
+* Nutzt ein Filter die Checkbox als „veröffentlicht“ (Regel ``checkbox_published`` bzw. ``translatedcheckbox_published``),
+  schaltet der Agent am Attribut die Option **Wechselicon** (``check_publish``) ein. Die Liste im Backend zeigt dann das
+  übliche Auge zum Umschalten. Mit ``"check_publish": false`` in den Einstellungen des Attributs bleibt sie aus. Das gilt
+  auch für ein vorhandenes Attribut, an dem die Option noch fehlt.
+
 Ein Feld der Eingabemaske kann an eine :ref:`Ansichtsbedingung <component_dca_visibility-conditions>` geknüpft werden,
 z. B. das Enddatum eines Events nur dann, wenn die Checkbox "Mehrtägig" gesetzt ist. Der Agent legt sie beim Feld an
 (``conditions``). Dabei gilt:
