@@ -16,6 +16,9 @@ Allgemein und Core
 MetaModels 2.6 setzt **Contao 6.x** und **PHP 8.4** voraus - sowie aktuell noch einen
 `EAP-Zugangskey <https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-6>`_.
 
+.. note:: **Zielversion für MM 2.6 ist Contao 6.3 (LTS)** - bis zu der Version arbeiten wir an der Dev-Version, d. h.
+   alle Anpassungen sind unter Vorbehalt da sich in Contao noch was ändern kann.
+
 Die wichtigsten neuen Features sind:
 
 * **API und MCP für KI-Agenten**: Die Datensätze der MetaModels sind über die Contao-API erreichbar (lesen, anlegen,
