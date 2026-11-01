@@ -207,6 +207,11 @@ Für **Checkboxen** setzt der Agent zwei Dinge selbst:
   übliche Auge zum Umschalten. Mit ``"check_publish": false`` in den Einstellungen des Attributs bleibt sie aus. Das gilt
   auch für ein vorhandenes Attribut, an dem die Option noch fehlt.
 
+Ein neues **Alias**-Attribut (``alias`` und ``translatedalias``) startet wie im Backend mit den Optionen **Eindeutig**
+(``isunique``) und **Immer aktualisieren** (``force_alias``, beim übersetzten Alias ``force_talias``). In einem MetaModel
+mit Varianten setzt der Agent sie nicht, dort sind eindeutige Werte nicht möglich. Mit ``false`` in den Einstellungen des
+Attributs bleibt eine Option aus. Andere Attributtypen bekommen diese Vorgaben nicht.
+
 Ein Feld der Eingabemaske kann an eine :ref:`Ansichtsbedingung <component_dca_visibility-conditions>` geknüpft werden,
 z. B. das Enddatum eines Events nur dann, wenn die Checkbox "Mehrtägig" gesetzt ist. Der Agent legt sie beim Feld an
 (``conditions``). Dabei gilt:
