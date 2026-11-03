@@ -75,6 +75,18 @@ auswählen, *Authenticate*, im Browser anmelden und zustimmen.
 
    claude mcp add --transport http contao https://example.org/contao/mcp
 
+.. note:: **Claude: besser in der Konsole als in der Desktop-App.** Im Test lief die Verbindung in der Konsole (``claude``
+   im Projektordner) stabil, auch die Erneuerung des Tokens nach etwa einer Stunde. In der Desktop-App brach sie mehrfach
+   ab: über Nacht, nach einem Neustart der Datenbank und einmal mitten in der Sitzung, jeweils ohne Fehler im Server. Dort
+   gibt es kein ``/mcp``, und die Seite *Konnektoren* verlangt eine öffentliche https-Adresse - ein System auf
+   ``127.0.0.1`` lässt sich dort nicht eintragen. Wer die App nutzen will, trägt den Server mit ``claude mcp add`` ein (oder
+   legt im Projektordner eine ``.mcp.json`` an), meldet ihn einmal in der Konsole mit ``/mcp`` an und startet danach eine
+   **neue** Sitzung in der App.
+
+   Vor dem ersten Prompt prüft man in der Konsole mit ``/mcp``, ob der Server *connected* und *authenticated* meldet.
+   Eine laufende Sitzung lädt den Server nicht nach: Wurde er beim Start der Sitzung nicht erreicht (Datenbank neu
+   gestartet, Anmeldung abgelaufen), hilft auch ein *Reconnect* nicht, erst eine neue Sitzung.
+
 Contao erlaubt nur Clients, die sich mit einem öffentlichen Dokument (*Client ID Metadata Document*) ausweisen und
 deren Domain freigegeben ist. Vorbelegt sind ``chatgpt.com`` (Codex), ``claude.ai`` und ``vscode.dev``. Weitere Clients
 werden freigegeben mit:
@@ -251,6 +263,23 @@ zeigt es nur, was passieren würde. Es verweigert das Zurücknehmen und ändert 
 Tabellen und Spalten bleiben bestehen, die Datenbankaktualisierung löscht nichts. Ein Journal kann einmal
 zurückgenommen werden. Alle Schreibvorgänge stehen im System-Log von Contao.
 
+**Was das Journal nicht kennt.** Es enthält nur, was ``metamodels_apply`` geschrieben hat. Datensätze, Seiten, Artikel,
+Inhaltselemente, Bildgrößen und Template-Dateien entstehen über die Contao-API oder von Hand und stehen nicht darin.
+Soll ein Test **vollständig** zurückgenommen werden, geht man in dieser Reihenfolge vor und lässt den Agenten jeden
+Schritt zeigen, bevor er ihn ausführt:
+
+1. Inhaltselemente, Artikel und Seiten entfernen, die der Agent angelegt hat, ebenso eine angelegte Bildgröße und eine
+   Template-Datei. Vorhandenes, das der Agent nur mitbenutzt hat, bleibt.
+2. Die Datensätze der MetaModels löschen (bei übersetzten MetaModels je Sprache, mit ``lang``). Erst dann lässt
+   ``metamodels_undo`` die MetaModels zu.
+3. ``metamodels_undo`` mit dem **neuesten** Eintrag des Journals beginnen und rückwärts gehen. Zuerst ohne ``confirm``,
+   das zeigt, was passiert.
+4. Die leeren Tabellen (``DROP TABLE``) löscht man von Hand, wenn sie stören. ``metamodels_migrate_schema`` löscht nie,
+   und ein späteres ``contao:migrate`` kann sie als überzählig anzeigen.
+
+Der Agent soll vorher sagen, was er löschen will. Ein Auftrag „nimm alles zurück“ kann er so verstehen, dass auch die
+Beispieldaten und Seiten gehören, die er selbst angelegt hat.
+
 
 Templates
 ---------
@@ -270,6 +299,16 @@ Wichtig dabei:
   Seite im Frontend.
 * Die Analyse der Nutzer findet die Templates von MetaModels nicht: MetaModels lädt sie aus PHP, nicht über Twig. Der
   Agent meldet dann nur nicht auflösbare Verweise. Welche Listen ein Template nutzen, muss man im Frontend prüfen.
+* ``contao_template_create_override`` kennt **keinen Trockenlauf**. Schickt der Agent trotzdem ``dry_run: true`` mit, wird
+  der Parameter ohne Meldung ignoriert und die Datei entsteht. Im Test war das ein leeres Override für
+  ``checkbox.html.twig``, das alle Checkboxen der Seite betroffen hätte. Der Agent hat es bemerkt und gelöscht. Man weist
+  ihn an, vor jedem Anlegen zu sagen, welche Datei entsteht, und danach ``git status`` oder den Ordner ``templates/``
+  zu prüfen.
+* Für das Template eines **einzelnen Attributs** (z. B. ein Badge nur bei gesetzter Checkbox) bieten die Werkzeuge keine
+  Variante an. Der Agent schreibt die Datei dann selbst und trägt den Namen in der Render-Einstellung des Attributs ein
+  (Journal: eine Änderung, die Datei steht nicht darin). Im Test funktionierte beides: ein Twig-Template unter
+  ``templates/metamodels/attribute/`` und ein klassisches ``.html5`` direkt in ``templates/`` (Name ``mm_attr_<typ>_…``).
+  Die Datei liegt außerhalb des Journals und bleibt beim Zurücknehmen stehen.
 
 
 Wissensbasis (Metadaten)
@@ -336,6 +375,26 @@ Ein vollständiges Beispiel Schritt für Schritt steht im Kochbuch unter
 Manche Agenten laden die Werkzeuge erst nach einigen Sekunden. Im Prompt nennt man den Server beim Namen (z. B. "nutze
 den MCP-Server contao") und die Adresse des Servers. Bei einer abgelaufenen Anmeldung hilft eine erneute Anmeldung
 (bei Codex ``codex mcp login contao``).
+
+**Die Werkzeuge sind mitten im Gespräch weg.**
+Der Server ist erreichbar, aber die Sitzung hat die Werkzeuge verloren (am häufigsten in der Desktop-App, siehe oben).
+Man prüft in der Konsole mit ``/mcp`` den Status, meldet bei Bedarf neu an und startet eine **neue Sitzung**. Dort gibt man
+den Auftrag noch einmal **vollständig** mit, denn die neue Sitzung kennt weder den Wunsch noch den bisherigen Plan.
+Geschrieben ist bis dahin nur, was im Journal steht (``metamodels_journal``).
+
+**Der Plan ist plötzlich veraltet.**
+Schreibt der Agent mehrere Pläne nacheinander oder parallel, kann ein früher erstellter Plan ungültig werden (die
+Reihenfolge der Zeilen hat sich geändert). Der Agent erkennt das und plant neu, man muss nichts tun. Man lässt ihn die
+MetaModels deshalb nacheinander anwenden: erst Kategorien und Schlagworte, dann die Events.
+
+**Der Agent bietet eine Dummy-Spalte an (``fe_memberAttribut``).**
+Der Planer verlangt in der Eingabemaske ein Feld, das nur für Mitgliederrechte im Frontend gebraucht wird. Der Agent
+füllt es mit einer beliebigen Spalte, das hat keine Wirkung, solange die Mitgliederrechte aus sind.
+
+**Ein Test soll wiederholt werden.**
+Das Journal reicht dafür nicht (siehe :ref:`Zurücknehmen <rst_extended_mcp-admin>`). Auf einem Testsystem sichert man vorher
+Datenbank, ``files/`` und das Verzeichnis ``var/mm_mcp_admin/journal`` und spielt sie zurück - nicht, während eine
+Sitzung des Agenten läuft.
 
 **Der Agent meldet, ein Typ sei nicht installiert.**
 Dann fehlt ein Paket, zum Beispiel für Mehrsprachigkeit (``attribute_translated*``). Der Agent nennt das Paket und
