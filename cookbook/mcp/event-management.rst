@@ -1,7 +1,7 @@
 .. _rst_cookbook_mcp_event-management:
 
-Eventverwaltung mit einem KI-Agenten
-====================================
+Eventverwaltung mit einem KI-Agenten erstellen
+==============================================
 
 **Stand: 03.11.2026**
 
