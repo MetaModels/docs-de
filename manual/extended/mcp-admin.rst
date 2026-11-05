@@ -132,7 +132,7 @@ Die MCP-Administration ergänzt den Server von Contao um folgende Elemente:
      - Die Einstellungen, die ein Typ kennt: Eingabe, Regeln, Vorgaben, Auswahlwerte und Beschriftungen.
    * - ``metamodels_search_catalog``
      - Werkzeug
-     - Findet Typen, Erweiterungen und Handbuchseiten zu einer Aufgabe, aus wenigen Worten in jeder Sprache.
+     - Findet Typen, Erweiterungen und Handbuchseiten zu einer Aufgabe, aus wenigen Worten. Die Sprache der Worte wird im Parameter ``language`` angegeben (Vorgabe ``en``).
    * - ``metamodels_list``
      - Werkzeug
      - Alle MetaModels mit Tabelle, Sprachen und der Anzahl der Attribute, Eingabemasken, Render-Einstellungen und
@@ -319,10 +319,18 @@ ihren Attribut- und Filtertypen kommen deshalb aus einer Metadaten-Datei des Rep
 `MetaModels/mcp-metadata <https://github.com/MetaModels/mcp-metadata>`_:
 
 * je Paket: ob es frei verfügbar ist oder im Early-Adopter-Programm, wo man den Zugang erhält, eine Kurzbeschreibung,
-  Stichworte und die Seite im Handbuch,
-* je Typ: das Paket, eine Kurzbeschreibung, Stichworte in den Sprachen der Anwender und die Handbuchseite,
+  Stichworte (je Sprache) und die Seite im Handbuch,
+* je Typ: das Paket, eine Kurzbeschreibung, Stichworte je Sprache und die Handbuchseite,
 * je Artikel: eine Seite des Handbuchs zu einem Thema oder ein Rezept des Kochbuchs mit Titel, Pfad und Stichworten
   - nur ein Verweis, der Text bleibt im Handbuch.
+
+Die Stichworte stehen je Sprache in einer eigenen Liste, ``en`` ist Pflicht, jede Liste hat höchstens 12 Einträge::
+
+    "keywords": {"en": ["date", "time"], "de": ["datum", "uhrzeit", "termin"]}
+
+Die Listen werden bewusst nicht gemischt, denn ein Wort kann je nach Sprache etwas anderes bedeuten. Bei der Suche zählen die
+Stichworte der angegebenen Sprache voll, die englischen als Rückfall mit halbem Gewicht; Stichworte anderer Sprachen werden nicht
+durchsucht. Das frühere flache Array wird nicht mehr gelesen.
 
 Die Datei wird unter ``https://metamodels.github.io/mcp-metadata/metadata.json`` veröffentlicht. Die Erweiterung holt sie
 von dort (nur über https), behält sie einen Tag und merkt sich die letzte valide Fassung. Ist der Server nicht erreichbar,
