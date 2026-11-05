@@ -332,6 +332,20 @@ Die Listen werden bewusst nicht gemischt, denn ein Wort kann je nach Sprache etw
 Stichworte der angegebenen Sprache voll, die englischen als Rückfall mit halbem Gewicht; Stichworte anderer Sprachen werden nicht
 durchsucht. Das frühere flache Array wird nicht mehr gelesen.
 
+Auch die Texte (``summary``, ``title``) und die Links zum Zugang (``access``) gibt es je Sprache, ``en`` ist Pflicht. Das
+Werkzeug ``metamodels_search_catalog`` liefert sie in der Sprache aus dem Parameter ``language`` und fällt auf Englisch
+zurück, wenn es keine Fassung in dieser Sprache gibt. Die übrigen Werkzeuge und Ressourcen liefern Englisch.
+
+Der Zugang eines Pakets ist entweder eine Seite des Handbuchs oder eine externe Adresse::
+
+    "access": {"page": "manual/extended/notelist.html"}
+    "access": {"url": {"en": "https://example.org/en/support", "de": "https://example.org/de/unterstuetzer"}}
+
+Bei ``page`` steht nur der Pfad, ohne Domain. Er ist in jeder Sprache derselbe, die Adresse entsteht aus der Basisadresse
+der Sprache im Handbuch-Teil der Datei (``handbook.urls``). Eine Seite wird so nur einmal gepflegt und ist in jeder
+Sprache erreichbar. Für Seiten außerhalb des Handbuchs, etwa die Fundraising-Seite, gilt ``url`` mit einer Adresse je
+Sprache. Ein Paket hat entweder ``page`` oder ``url``.
+
 Die Datei wird unter ``https://metamodels.github.io/mcp-metadata/metadata.json`` veröffentlicht. Die Erweiterung holt sie
 von dort (nur über https), behält sie einen Tag und merkt sich die letzte valide Fassung. Ist der Server nicht erreichbar,
 wird die Datei verwendet, die mit der Erweiterung ausgeliefert wird.
