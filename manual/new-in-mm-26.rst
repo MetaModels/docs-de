@@ -24,7 +24,7 @@ Die wichtigsten neuen Features sind:
 * **API und MCP für KI-Agenten**: Die Datensätze der MetaModels sind über die Contao-API erreichbar (lesen, anlegen,
   ändern, löschen - mit den Rechten und der Validierung des Backends), siehe :ref:`Contao-API <rst_extended_contao-api>`.
   Über den MCP-Server von Contao kann ein KI-Agent MetaModels auch auslesen und einrichten, siehe
-  :ref:`MCP-Administration <rst_extended_mcp-admin>`.
+  :ref:`MCP-Administration <rst_extended_mcp-admin>` bzw. :ref:`rst_cookbook_mcp_event-management`
 * **Blöcke in den Wrapper-Templates**: Die Templates ``mm_filter_default``, ``mm_clearall_default`` und
   ``mm_pagination`` sind in Twig-Blöcke unterteilt (seit MetaModels 2.5.2, auch in 2.6 enthalten). Ein eigenes Template
   erweitert das Standard-Template und überschreibt nur den gewünschten Block, siehe
