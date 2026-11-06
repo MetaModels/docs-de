@@ -45,6 +45,33 @@ entfällt in MetaModels 3.0.
 Eigene Twig-Templates eines Pakets liegen - wie in Contaos Bundles - unter einem Namespace-Root
 (Ordner ``twig/`` mit leerer Marker-Datei ``.twig-root``); im Projekt genügt der Ordner ``templates/``.
 
+.. _component_templates_twig-variants:
+
+Eigene Varianten von Twig-Templates (ab MetaModels 2.5.4)
+.........................................................
+
+Eine eigene Variante eines Attribut- oder Listen-Templates ist ein zusätzliches Template, das in der
+Render-Einstellung ausgewählt wird. Im Namen steht die Variante als Anhang am Template-Namen, getrennt durch einen
+Unterstrich - **ohne** weiteren Unterordner:
+
+* Attribut ``mm_attr_file`` → Variante ``templates/metamodels/attribute/file_meinevariante.html.twig``
+* Item/Liste ``metamodel_prerendered`` → Variante ``templates/metamodels/item/prerendered_meinevariante.html.twig``
+
+In der Render-Einstellung erscheint die Variante unter dem klassischen Namen (``mm_attr_file_meinevariante`` bzw.
+``metamodel_prerendered_meinevariante``) und wird dort wie jedes andere Template ausgewählt.
+
+.. note:: Das **Template Studio** von Contao bietet für diese Templates keine Funktion „Variante anlegen“ an - Contao
+   kennt Varianten nur für Inhaltselemente, Frontend-Module und Seiten. Im Studio lässt sich das Standard-Template
+   überschreiben; eine Variante legen Sie als eigene Datei an, z. B. durch Kopieren des Standard-Templates in das
+   Verzeichnis ``templates/``.
+
+Hinweise:
+
+* Nach dem Anlegen einer neuen Twig-Datei muss der Contao-Cache neu aufgebaut werden (z. B. mit ``cache:clear``),
+  sonst kennt Contao die Datei noch nicht und sie fehlt in der Auswahl.
+* Die Auswahl in den Render-Einstellungen listet Twig-Templates für Attribute und Items/Listen. Die Filter-Widgets
+  (``metamodels/filter/…``) sind dort nicht enthalten.
+
 .. _component_templates_twig-blocks:
 
 Blöcke in den Wrapper-Templates (ab MetaModels 2.5.2)
