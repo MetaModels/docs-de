@@ -96,6 +96,12 @@ Standard-Template mit ``{% extends "@Contao/metamodels/filter/default.html.twig"
 Template kann das Standard-Template per ``{% extends "@Contao/mm_filter_default.html.twig" %}`` erweitern und nur den
 gewünschten Block überschreiben. Details und Beispiel: :ref:`component_templates_twig-blocks`.
 
+**Eigene Varianten in der Auswahl (ab 2.5.4):** Ein zusätzliches Twig-Template mit einem Anhang am Namen - z. B.
+``templates/metamodels/attribute/file_meinevariante.html.twig`` - erscheint in den Render- bzw. Filter-Einstellungen
+als ``mm_attr_file_meinevariante`` und kann dort gewählt werden. Das Template Studio von Contao legt für diese
+Templates keine Varianten an, die Datei wird von Hand erstellt; danach den Cache neu aufbauen. Details:
+:ref:`component_templates_twig-variants`.
+
 **Bestehende Overrides:** Ein vorhandenes Override eines **flachen** Template-Namens im Projekt-``templates/``-Ordner
 (oder in einem Theme-Ordner) - z. B. ``templates/metamodel_prerendered.html5`` - behält weiterhin **Vorrang** vor
 einem mitgelieferten Twig-Template. Bestehende Anpassungen funktionieren also nach dem Upgrade unverändert weiter.
