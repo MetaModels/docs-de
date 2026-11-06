@@ -69,8 +69,11 @@ Hinweise:
 
 * Nach dem Anlegen einer neuen Twig-Datei muss der Contao-Cache neu aufgebaut werden (z. B. mit ``cache:clear``),
   sonst kennt Contao die Datei noch nicht und sie fehlt in der Auswahl.
-* Die Auswahl in den Render-Einstellungen listet Twig-Templates für Attribute und Items/Listen. Die Filter-Widgets
-  (``metamodels/filter/…``) sind dort nicht enthalten.
+* Die Auswahl listet die Varianten für Attribute und Items/Listen (Render-Einstellung) sowie für Filter-Widgets
+  (Filter-Einstellung): ``templates/metamodels/filter/default_meinevariante.html.twig`` erscheint als
+  ``mm_filteritem_default_meinevariante``. Die Wrapper-Templates von Filter, Filter-Zurücksetzen und Blätterfunktion
+  (``mm_filter_default`` usw.) sind flache Templates ohne Varianten-Auswahl - sie werden wie oben beschrieben über
+  ``{% extends %}`` angepasst.
 
 .. _component_templates_twig-blocks:
 
