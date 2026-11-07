@@ -50,30 +50,55 @@ Eigene Twig-Templates eines Pakets liegen - wie in Contaos Bundles - unter einem
 Eigene Varianten von Twig-Templates (ab MetaModels 2.5.4)
 .........................................................
 
-Eine eigene Variante eines Attribut- oder Listen-Templates ist ein zusätzliches Template, das in der
-Render-Einstellung ausgewählt wird. Im Namen steht die Variante als Anhang am Template-Namen, getrennt durch einen
-Unterstrich - **ohne** weiteren Unterordner:
+Eine eigene Variante eines Attribut-, Listen- oder Filter-Templates ist ein zusätzliches Template, das in der
+Render- bzw. Filter-Einstellung ausgewählt wird. Sie liegt wie bei Contao in einem Unterordner mit dem Namen des
+Templates, der Dateiname ist der Name der Variante:
 
-* Attribut ``mm_attr_file`` → Variante ``templates/metamodels/attribute/file_meinevariante.html.twig``
-* Item/Liste ``metamodel_prerendered`` → Variante ``templates/metamodels/item/prerendered_meinevariante.html.twig``
+* Attribut ``mm_attr_file`` → ``templates/metamodels/attribute/file/meinevariante.html.twig``
+* Item/Liste ``metamodel_prerendered`` → ``templates/metamodels/item/prerendered/meinevariante.html.twig``
+* Filter-Widget ``mm_filteritem_default`` → ``templates/metamodels/filter/default/meinevariante.html.twig``
 
-In der Render-Einstellung erscheint die Variante unter dem klassischen Namen (``mm_attr_file_meinevariante`` bzw.
-``metamodel_prerendered_meinevariante``) und wird dort wie jedes andere Template ausgewählt.
+In der Einstellung erscheint die Variante unter dem klassischen Namen mit Schrägstrich (``mm_attr_file/meinevariante``,
+``metamodel_prerendered/meinevariante`` bzw. ``mm_filteritem_default/meinevariante``) und wird dort wie jedes andere
+Template ausgewählt.
 
-.. note:: Das **Template Studio** von Contao bietet für diese Templates keine Funktion „Variante anlegen“ an - Contao
-   kennt Varianten nur für Inhaltselemente, Frontend-Module und Seiten. Im Studio lässt sich das Standard-Template
-   überschreiben; eine Variante legen Sie als eigene Datei an, z. B. durch Kopieren des Standard-Templates in das
-   Verzeichnis ``templates/``.
+**Variante im Template Studio anlegen (empfohlen):**
+
+#. Im Backend das **Template Studio** öffnen und das Standard-Template suchen, z. B. ``metamodels/attribute/file``.
+#. Dort **„Variante anlegen“** wählen und einen Namen eingeben. Das Studio legt die Datei unter
+   ``templates/metamodels/attribute/file/<name>.html.twig`` an. Sie erweitert das Standard-Template; nur die
+   gewünschten Blöcke werden überschrieben.
+#. In der Render- bzw. Filter-Einstellung die Variante auswählen.
+
+Im Studio lässt sich die Variante auch **umbenennen** und **löschen**. Beim Umbenennen werden die Einstellungen, die
+sie verwenden, angepasst. Beim Löschen fallen diese Einstellungen auf das Standard-Template zurück.
+
+.. note:: „Template überschreiben“ im Studio ist **nicht** der richtige Weg für eine Variante: Es ersetzt das
+   Standard-Template für alle Einstellungen, statt eine auswählbare Variante zu erzeugen.
+
+**Variante von Hand anlegen:**
+
+#. Im Projekt unter ``templates/metamodels/<gruppe>/<template>/`` eine neue Datei mit dem Namen der Variante anlegen.
+   Der Inhalt erweitert das Standard-Template, z. B. ``{% extends "@Contao/metamodels/attribute/file.html.twig" %}``,
+   und überschreibt nur die gewünschten Blöcke. Alternativ den Inhalt des Standard-Templates kopieren; die
+   Standard-Templates liegen in den Paketen, z. B.
+   ``vendor/metamodels/attribute_file/src/Resources/contao/templates/twig/metamodels/attribute/file.html.twig`` oder
+   ``vendor/metamodels/core/src/CoreBundle/Resources/contao/templates/twig/metamodels/filter/default.html.twig``.
+#. Den Contao-Cache neu aufbauen (z. B. mit ``cache:clear``), sonst kennt Contao die neue Datei noch nicht und sie
+   fehlt in der Auswahl.
+#. In der Render- bzw. Filter-Einstellung die Variante auswählen.
 
 Hinweise:
 
-* Nach dem Anlegen einer neuen Twig-Datei muss der Contao-Cache neu aufgebaut werden (z. B. mit ``cache:clear``),
-  sonst kennt Contao die Datei noch nicht und sie fehlt in der Auswahl.
-* Die Auswahl listet die Varianten für Attribute und Items/Listen (Render-Einstellung) sowie für Filter-Widgets
-  (Filter-Einstellung): ``templates/metamodels/filter/default_meinevariante.html.twig`` erscheint als
-  ``mm_filteritem_default_meinevariante``. Die Wrapper-Templates von Filter, Filter-Zurücksetzen und Blätterfunktion
-  (``mm_filter_default`` usw.) sind flache Templates ohne Varianten-Auswahl - sie werden wie oben beschrieben über
-  ``{% extends %}`` angepasst.
+* Das Studio bietet „Variante anlegen“ für die Templates der Attribute, Items/Listen und Filter-Widgets an. Die
+  Wrapper-Templates von Filter, Filter-Zurücksetzen und Blätterfunktion (``mm_filter_default`` usw.) sind flache
+  Templates ohne Varianten - sie werden wie oben beschrieben über ``{% extends %}`` angepasst.
+* Eine Variante hat selbst keine Varianten: Der Name enthält keinen weiteren Unterordner.
+* Die flache Schreibweise mit Unterstrich (``file_meinevariante.html.twig``) funktioniert weiterhin und erscheint in
+  der Auswahl als ``mm_attr_file_meinevariante``. Das Studio kennt sie nicht als Variante.
+* Das Studio ist ein Contao-Bestandteil, seine Schnittstelle für Bundles ist bei Contao als nicht stabil
+  gekennzeichnet (siehe `contao/contao#10551 <https://github.com/contao/contao/issues/10551>`_). Bei einem
+  Contao-Update kann die Funktion daher vorübergehend fehlen; von Hand angelegte Varianten sind davon nicht betroffen.
 
 .. _component_templates_twig-blocks:
 
