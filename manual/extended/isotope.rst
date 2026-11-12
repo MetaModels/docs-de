@@ -4,7 +4,7 @@ MetaModels-2-Isotope
 ####################
 
 .. warning:: MetaModels-2-Isotope ist noch im Fundraising und wird erst nach
-   Erreichen des offenen Fundraising von aktuell 6.431,75 € freigeschaltet. |br|
+   Erreichen des offenen Fundraising von aktuell 9.413,75 € freigeschaltet. |br|
    Eine Vorab-Installation über das "Early-Adopter-Programm" möglich – `siehe unten <#early-adopter-programm>`_
 
 Mit dem Projekt "MetaModels-2-Isotope" werden verschiedene Komponenten für das
@@ -14,7 +14,7 @@ einen Kauf (Checkout) zu übergeben.
 
 **Aktuelle Unterstützungen:**
 
-* Contao 5.7 + MM 2.5 + Isotope 3.0-dev
+* Contao 5.7 + MM 2.5 + Isotope 3.0
 * Contao 4.13 + MM 2.3 + Isotope 2.9
 
 Die Übergabe aus MetaModels heraus erfolgt über den Warenkorb von Isotope. Anschließend
@@ -211,7 +211,7 @@ Voraussetzungen
 
 Für die Installation der Module gelten aktuell folgende Voraussetzungen:
 
-* Contao 5.7 + Isotope 3.0-dev + MetaModels 2.5
+* Contao 5.7 + Isotope 3.0 + MetaModels 2.5
 * Contao 4.13 + Isotope ab 2.8 + MetaModels 2.3
 * Contao 4.4.x/4.9.x + Isotope ab 2.5 + MetaModels 2.1/2.2
 
@@ -230,6 +230,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * ghost.company - `ghostcompany.com <http://www.ghostcompany.com>`_: 490 €
 * iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 390 €
 * Hallenberger - `hallenberger.com <https://hallenberger.com/>`_: 390 €
+* iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 2040 €
 
 (*Spenden in Netto)
 
