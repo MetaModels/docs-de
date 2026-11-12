@@ -230,7 +230,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * ghost.company - `ghostcompany.com <http://www.ghostcompany.com>`_: 490 €
 * iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 390 €
 * Hallenberger - `hallenberger.com <https://hallenberger.com/>`_: 390 €
-* iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 2040 €
+* iD visuelle Kommunikation - `id-kommunikation.ch <http://www.id-kommunikation.ch>`_: 2.040 €
 
 (*Spenden in Netto)
 
