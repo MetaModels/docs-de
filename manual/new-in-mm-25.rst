@@ -30,6 +30,7 @@ Die wichtigsten neuen Features sind:
 - neue Erweiterung **ERD-Ansicht** aller MetaModels-Tabellen und ihrer Beziehungen
 - neue Erweiterung **Health-Check** zum Aufspüren und Bereinigen verwaister MetaModels-Daten
 - neue Erweiterung **ChangeLanguage-Bridge** für den Sprachenwechsler auf Detailseiten
+- Unterstützung der **modernen Seitenlayouts (Slots)** von Contao 5.7
 - Datensatz-Änderungen im Systemlog
 - **Versionsverwaltung** bei MM-Konfiguration und MM-Items
 - **diverse Beschleunigungen** beim DCG, Umkreissuche/Geodistanz, Lazy-Rendering
@@ -372,6 +373,32 @@ hat eine Vorschau (dry-run) vor dem tatsächlichen Löschen, jede tatsächlich a
 wird protokolliert, ein Backup lässt sich direkt von der Seite aus anstoßen - zurückgespielt wird
 es wie gewohnt über den Contao-Manager oder die Konsole - und jede Prüfung lässt sich auch per
 Konsolenkommando ausführen (z. B. für Cronjobs).
+
+
+Moderne Seitenlayouts mit Slots (NEU)
+.....................................
+
+Contao 5.7 kennt neben dem bisherigen Layout-Typ "Standard" den Typ **"Modern"**, der ausschließlich auf Twig
+basiert: Die Module und Inhaltselemente werden nicht mehr in Spalten, sondern in **Slots** (``header``, ``main``,
+``footer``) einsortiert. MetaModels-Module und -Inhaltselemente - Liste, Filter, "Alle Filter zurücksetzen" usw. -
+lassen sich in diesen Slots genauso verwenden wie in einem Standard-Layout.
+
+.. note:: Der Filter **"Alle Filter zurücksetzen"** wird in modernen Layouts erst ab **MetaModels 2.5.5**
+   ausgegeben.
+
+Beim Umstellen eines bestehenden Layouts sind folgende Punkte zu beachten:
+
+* Ein modernes Layout bietet **keine Felder für CSS, JavaScript und Head-Code** (auch keine Seitenabschnitte,
+  Viewport, CSS-Klasse oder ``onload``). Diese Angaben gehören in ein eigenes **Twig-Template** als Variante von
+  ``page/layout`` (z. B. ``templates/page/layout/default_slots.html.twig``), das das Standard-Template per
+  ``{% extends "@Contao/page/layout.html.twig" %}`` erweitert und die Blöcke ``head`` und ``body_content`` anpasst. Es
+  erscheint danach im Layout bei "Template".
+* Ein modernes Layout gibt **kein** ``<base href>`` mehr aus. Relative Pfade in eigenen Templates und Skripten
+  (z. B. ``files/…``) sind deshalb mit führendem ``/`` als absolute Pfade anzugeben. Auch Erweiterungen, die relative
+  Pfade ausgeben, sind betroffen - so gibt das Cowegis-Kartenmodul in Version 1.0.6 den Pfad zu seinem
+  Skript und CSS relativ aus, die Karte wird dann nicht korrekt dargestellt. Die Korrektur auf absolute Pfade ist
+  im Cowegis-Projekt bereits umgesetzt, aber noch nicht veröffentlicht.
+* Die Option "Skripte zusammenfassen" gibt es im modernen Layout nicht.
 
 
 DC_General
