@@ -46,6 +46,14 @@ Model ``mm_employees`` das Attribut ``name`` mit "Moin" vorzubelegen.
          - { name: kernel.event_listener, event: dc-general.factory.build-data-definition }
 
 
+.. note:: Der EventListener gilt **auch für das Frontend-Editing** (:ref:`rst_extended_frontend_editing`), da dieses die
+          Eingabemaske über denselben DC-General-Event aufbaut - die Vorgabe erscheint dort ohne weitere Anpassung. Sie
+          wird nur beim **Anlegen** eines neuen Datensatzes gesetzt, bei vorhandenen Datensätzen bleiben die
+          gespeicherten Werte. Da der EventListener für Backend und Frontend gleichermaßen läuft, lässt sich eine
+          Vorgabe für nur eines von beiden erreichen, indem im EventListener zusätzlich geprüft wird, ob es sich um
+          einen Backend- oder Frontend-Request handelt.
+
+
 Vorgaben mit Legacy-Code
 ------------------------
 
@@ -60,6 +68,8 @@ der Felder in MetaModels durch den DC-General.
 
 Die Vorgaben für die Felder können durch die Ergänzung des DC-Array mit dem Key "default" erreicht
 werden - `siehe Contao-Handbuch <https://docs.contao.org/dev/reference/dca/fields/>`_.
+Die Vorgaben gelten ebenfalls im :ref:`Frontend-Editing <rst_extended_frontend_editing>` - auch dort beim Anlegen
+eines neuen Datensatzes.
 
 Für einen Eintrag einer Vorgabe muss der (interne) Name des MetaModel und der Spaltenname des Attributes bekannt sein.
 Diese Angaben können in einem Arrayeintrag mit der allgemeinen Form
