@@ -33,7 +33,7 @@ Texte
     "Text als Alias mehrsprachig", ":ref:`Übersetzter Alias <component_attribute_translatedalias>`", `attribute_translatedalias <https://github.com/MetaModels/attribute_translatedalias>`_, "siehe Alias", "✔", "siehe Alias"
     "Kombinierte |br| Werte mehrsprachig", ":ref:`Übersetzte Kombinierte Einträge <component_attribute_translatedcombinedvalues>`", `attribute_translatedcombinedvalues <https://github.com/MetaModels/attribute_translatedcombinedvalues>`_, "siehe |br| Kombinierte Einträge", "✔", "siehe Kombinierte Einträge"
     "Text als |br| Tabelle mehrsprachig", ":ref:`Übersetzte Text-Tabelle <component_attribute_translatedtabletext>`", `attribute_translatedtabletext <https://github.com/MetaModels/attribute_translatedtabletext>`_, "Levenshtein, |br| Loupe", ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "siehe Text-Tabelle"
-    "Text als |br| URL mehrsprachig", ":ref:`Übersetzte URL <component_attribute_translatedurl>`", `attribute_translateurl <https://github.com/MetaModels/attribute_translateurl>`_, "Levenshtein, |br| Loupe", ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "siehe URL"
+    "Text als |br| URL mehrsprachig", ":ref:`Übersetzte URL <component_attribute_translatedurl>`", `attribute_translatedurl <https://github.com/MetaModels/attribute_translatedurl>`_, "Levenshtein, |br| Loupe", ":ref:`🗹 <rst_extended_frontend_editing_installation>`", "siehe URL"
 
 Zahlen
 ------
