@@ -9,7 +9,7 @@ Was ist MetaModels?
 MetaModels ist eine Erweiterung für das CMS Contao, mit der sich beliebige strukturierte Inhalte ohne Programmierung
 verwalten lassen. Ob Produktkatalog, Veranstaltungskalender, Mitarbeiterliste, Mietobjekte oder Speiseplan — wer in
 Contao eine eigene Datenverwaltung mit individuellen Feldern, Filterung, Sortierung und mehrsprachiger Ausgabe
-benötigt, findet in MetaModels eine fertige Lösung.
+benötigt, findet in MetaModels einen fertigen Baukasten.
 
 Der entscheidende Vorteil: Statt für jede neue Anforderung eine eigene Erweiterung entwickeln zu lassen, können
 Administratoren neue Datenstrukturen vollständig im Contao-Backend einrichten — ohne Programmierung und ohne
@@ -113,7 +113,11 @@ Weiter ging es mit Version 2.1 als Migration von 2.0 für Contao 4.4. Bei diesen
 umgestellt. Eine Zusammenstellung für MM 2.2 ist :ref:`hier zu finden <new_in_mm220>`.
 
 Der weitere Weg führte über :ref:`MM 2.3 für Contao 4.13 <new_in_mm230>` zu :ref:`MM 2.4 für Contao 5.3
-<new_in_mm240>` mit mehr Standardkomponenten aus Symfony - ein MM 2.5 für Contao 5.7 ist in Arbeit.
+<new_in_mm240>` mit mehr Standardkomponenten aus Symfony - ein :ref:`MM 2.5 für Contao 5.7 <new_in_mm250>` ist
+fertig zum Installieren.
+
+Mit :ref:`MM 2.6 für Contao 6.3 <new_in_mm260>` steht ein MM bereit mit API und MCP-Service. Damit können die Models
+über eine KI sowohl angelegt als auch mit Daten befüllt und abgerufen werden.
 
 Für MM 3.0 gibt es auch schon Planungen - :ref:`siehe <planning_mm30>`.
 
