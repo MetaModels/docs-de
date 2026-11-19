@@ -3,10 +3,11 @@
 Mit einem KI-Agenten arbeiten
 =============================
 
-Rezepte für die Arbeit mit einem KI-Agenten über :ref:`MCP <rst_extended_mcp-admin>`.
+Rezepte für die Arbeit mit einem KI-Agenten, über :ref:`MCP <rst_extended_mcp-admin>` oder auch ohne MCP.
 
 
 .. toctree::
     :maxdepth: 1
 
     event-management.rst
+    project-planning.rst
