@@ -249,7 +249,7 @@ im Blick behalten werden:
    WHERE a.type = 'translatedcheckbox'
    ORDER BY mm.name, a.colname;
 
-  Option "Fallback-Modus deaktivieren" für alle Attribute vom Typ Übersetzte Checkbox setzen:
+Option "Fallback-Modus deaktivieren" für alle Attribute vom Typ Übersetzte Checkbox setzen:
 
 .. code-block:: sql
    :linenos:
