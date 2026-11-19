@@ -44,8 +44,15 @@ spezifische Optionen:
    * - Option
      - Beschreibung
    * - Fallback-Modus deaktivieren
-     - Mit aktiver Option werden Wertes für eine Sprache gespeichert, auch wenn dieser gleich dem
-       Fallbackwert ist - damit sind die typischen Filterungen nach Veröffentlichung je Sprache gewährleistet
+     - Mit aktiver Option wird der Wert für eine Sprache gespeichert, auch wenn er gleich dem
+       Fallbackwert ist - damit sind die typischen Filterungen nach Veröffentlichung je Sprache gewährleistet.
+
+       Beim Anlegen eines neuen Attributs ist die Option vorausgewählt, da ein Fallback bei einer
+       übersetzten Checkbox meist nicht sinnvoll ist. Bestehende Attribute werden nicht automatisch
+       geändert; für die Beibehaltung der bisherigen Filterungen die Option setzen (siehe
+       :doc:`Hinweise zum Update auf MM 2.4 </manual/new-in-mm-24>`). Wird die Option bei bestehenden Daten nachträglich
+       aktiviert, haben ältere Übersetzungen, die dem Fallbackwert entsprachen, keinen eigenen Eintrag
+       und müssen einmal neu gespeichert werden.
    * - Wechsel-Icon
      - Fügt ein zusätzliches Icon ("Auge") in der Backend-Listenansicht ein,
        um den Status direkt umzuschalten (sprachabhängig). Als Spaltenname
@@ -165,7 +172,8 @@ und eine GB-Flagge für die englische Veröffentlichung.
 
 Fehlt für eine Sprache ein Wert, greift MetaModels auf die Fallback-Sprache
 zurück. IDs ohne Wert in der Fallback-Sprache werden als inaktiv (``''``)
-behandelt.
+behandelt. Mit der Option "Fallback-Modus deaktivieren" wird der Wert jeder
+Sprache eigenständig gespeichert.
 
 
 .. |svg_attr_translatedcheckbox_22| image:: /_img/icons_svg/checkbox.svg

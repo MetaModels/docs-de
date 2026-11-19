@@ -249,6 +249,15 @@ im Blick behalten werden:
    WHERE a.type = 'translatedcheckbox'
    ORDER BY mm.name, a.colname;
 
+  Option "Fallback-Modus deaktivieren" für alle Attribute vom Typ Übersetzte Checkbox setzen:
+
+.. code-block:: sql
+   :linenos:
+
+   UPDATE `tl_metamodel_attribute`
+   SET `skip_fallback` = '1'
+   WHERE `type` = 'translatedcheckbox';
+
 
 
 Re-Finanzierung
