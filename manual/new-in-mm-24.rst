@@ -114,7 +114,8 @@ Attribute
     * Template ``mm_attr_translatedcheckbox_icon.html5`` für Anzeige im Backend als ☑ bzw. ☐ in der Listenansicht
     * Spalte ``langcode`` auf ``varchar(64)``
     * Option "Fallback-Modus deaktivieren" zum Speichern eines Wertes für eine Sprache, auch wenn dieser gleich dem
-      Fallbackwert ist.
+      Fallbackwert ist. Eine Migration ist nicht möglich, da Contao nur zwei Status kennt -
+      Anpassung :ref:`sieh unten Checkliste <check_upgrade_mm240>`
 * Übersetzte Datei
     * Anpassung der Templates für die Ausgabe `title`, `alt`, `caption` aus Knoten `metafile`
     * zwei neue Templates ``mm_attr_file_contao_image.html5`` für die Standardausgabe wie in Contao, was auch die
