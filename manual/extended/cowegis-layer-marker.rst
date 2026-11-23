@@ -9,7 +9,7 @@ konfiguriert und über `Leaflet <https://leafletjs.com/>`_ ausgegeben werden. Di
 mit einsprachigen als auch mit mehrsprachigen MetaModels zusammen.
 
 .. note:: Diese Erweiterung steht ab MM 2.4 mit Contao 5.3 zur Verfügung - für eine Freischaltung bitte
-   eine E-Mail an mail@metamodel.me senden. Aktuell offene Finanzierung: 3.181,25 €
+   eine E-Mail an mail@metamodel.me senden. Aktuell offene Finanzierung: 2.070 €
 
 
 Installation
@@ -529,6 +529,7 @@ Ein Dank für die Spenden* für die Erweiterung an:
 * `External IT Solutions <https://external.at/>`_: 200 €
 * `Klarika <https://www.klarika.de/>`_: 200 €
 * `AntwortInternet <https://www.antwortinternet.com/>`_: 600 €
+* `AntwortInternet <https://www.antwortinternet.com/>`_: 300 €
 
 (*Spenden in Netto)
 
